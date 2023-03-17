@@ -1,0 +1,37 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/v_Umbrella/Umbrella_Base1"
+	"$lightwarptexture"		"models/lightwarps/weapon_lightwarp"
+	"$glowcolor" "1"
+	"$phong" "1"
+	"$phongexponent" "10"
+	"$phongboost" "0"	
+	"$phongfresnelranges"	"[1.5 .5 3]"
+	"$halflambert" "1"
+
+	"$rimlight"		"1"
+	"$rimlightexponent"		"1"
+	"$rimlightboost"		"0.2"
+
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"ModelGlowColor"
+		{
+			"resultVar""$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"	"$glowcolor"
+			"resultVar"	"$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"	"$glowcolor"
+			"resultVar"	"$color2"
+		}
+		"spy_invis"
+		{
+		}
+	}
+}

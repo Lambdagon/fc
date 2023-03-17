@@ -1,0 +1,22 @@
+d1_canals_01_underwater
+{
+	player
+	{
+		addcond "107"
+		spawn_sound	"Icicle.TurnToIce"
+	}
+
+	entity
+	{
+		create 
+		{
+			classname "lfe_weapon_progress"
+			origin "0 0 0"
+			values 
+			{
+				targetname "wpnprogress"
+				wpnprogress "1"
+			} 
+		}
+	}
+}

@@ -1,0 +1,45 @@
+// envmaptint_fix
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitMaskedEnvMappedTexture
+	"$basetexture" "models/Antlion_Guard/bodyside"
+	"$bumpmap" "models/Antlion_Guard/bodyside_normal"
+	"$normalmapalphaenvmapmask" 1
+	"$envcontrast" "1"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .25 .25 .25 ]"
+	"$multipass" 1
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

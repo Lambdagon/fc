@@ -1,0 +1,61 @@
+"Water"
+{
+	"$abovewater" 1
+	"%tooltexture" "dev/water_normal"
+
+	"Water_DX90"
+	{
+		// Only used in dx90 and higher
+		// ALSO NOTE: This *cannot* exist in the root level, because the presence of this 
+		// is used to determine whether to do the reflection in the client DLL
+		"$reflecttexture" "_rt_WaterReflection"
+	}
+
+	"Water_DX60"
+	{
+		"$fallbackmaterial" "nature/water_dx70"
+	}
+
+	"$refractamount" ".8"
+	"$refracttint" "[0.95 1.0 0.97]"
+	"$refracttexture" "_rt_WaterRefraction"
+
+	"$reflectamount" ".8"
+	"$reflecttint" "[1 1 1]"
+
+	"$scale" "[1 1]"
+
+	"$bumpmap" "dev/water_dudv"
+	"$normalmap" "dev/water_normal"
+
+	"%compilewater" 1
+	"$surfaceprop" "water"
+	"$bottommaterial" "dev/dev_waterbeneath2"
+	"$bumpframe" "0"
+
+	"$fogenable" 1
+	"$fogcolor" "{22 20 10}"
+	"$fogstart" 1.00
+	"$fogend" 30.00
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$normalmap"
+			"animatedtextureframenumvar" "$bumpframe"
+			"animatedtextureframerate" 30.00
+		}
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$bumptransform"
+			"texturescrollrate" .05
+			"texturescrollangle" 45.00
+		}
+
+		"WaterLOD"
+		{
+		}
+	}
+}

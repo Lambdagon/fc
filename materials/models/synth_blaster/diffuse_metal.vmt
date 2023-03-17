@@ -1,0 +1,67 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/synth_blaster/diffuse"
+	"$bumpmap" "models/synth_blaster/normal"
+//	"$bumpmap" "normalclean"
+
+	"$surfaceprop" "flesh"
+
+
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models/synth_blaster/spec"
+	"$normalmapalphaenvmapmask" 1
+//	"$basemapalphaenvmapmask" 1
+	"$envmaptint" "[ .00512 .00512 .00512 ]"
+	"$envmapconstrast" "1"
+	"$envmapsaturation" ".51"
+	"$envmapfresnel" "1"
+//	"$nodecal" "1"
+	"$model" "1"
+//	"$halflambert" "1"
+
+	// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+	"$phong"     "1"
+//	"$phongexponenttexture" "models/synth_blaster/spec"
+	"$phongexponent"  "22"
+	"$phongboost"   "1.8"
+	"$phongfresnelranges"   "[1 .7 .5]"
+	"$phongwarptexture"  "models/synth_blaster/mini_iridescence"
+//	"$basemapalphaphongmask" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimlightboost" "1.6"
+	"$rimmask" "1"
+
+	"$selfillum"	"1"
+	"$selfillummask"	"models/synth_blaster/selfillum"
+	"$selfillumtint"	"[1.2 1.965 1.965]"
+	"Proxies"
+	{
+		"Sine" 
+		{
+			"resultVar"	"$selfillumtint[0]"
+			"sineperiod"	"3"
+			"sinemin"		"0.6"
+			"sinemax"	"2.4"
+		}
+		"Sine" 
+		{
+			"resultVar"	"$selfillumtint[1]"
+			"sineperiod"	"3"
+			"sinemin"		"1"
+			"sinemax"	"4"
+		}
+		"Sine" 
+		{
+			"resultVar"	"$selfillumtint[2]"
+			"sineperiod"	"3"
+			"sinemin"		"1"
+			"sinemax"	"4"
+
+		}
+
+	}
+
+
+}

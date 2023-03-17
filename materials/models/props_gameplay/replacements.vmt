@@ -1,0 +1,714 @@
+replacements
+{
+	templates
+	{
+		blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+					
+					$COLORBAR				"rj/colorbar_blue02"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		blue_light
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+		
+					$COLORBAR				"rj/colorbar_blue01"
+
+					$DIFFUSE_WHITE			0.5	
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		yellow_alpha
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$alphatest 1
+					$nocull 1
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+		
+					$COLORBAR				"rj/colorbar_peach02"
+
+					$DIFFUSE_WHITE			0.5	
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		resupply
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_gameplay/resupply_locker_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+
+					$DIFFUSE_WHITE			0.9
+					$DIFFUSE_BASE			0.0					
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		cap
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"Models/props_gameplay/cap_point_base_pyro"
+					$vertexcolor			$vertexcolor
+
+
+					$DIFFUSE_WHITE			0.9
+					$DIFFUSE_BASE			0.0					
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+		cap_blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+
+					$EFFECT				1
+					$VERTEX_LIT			1
+					$alphatest			1
+
+					$basetexture			"models/props_gameplay/cap_point_base_blue_pyro"
+
+
+				}
+			}
+		}
+		cap_blue_noalpha
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+
+					$EFFECT				1
+					$VERTEX_LIT			1
+					$alphatest			1
+
+					$basetexture			"models/props_gameplay/cap_point_base_blue_noalpha_pyro"
+
+				}
+			}
+		}
+		cap_red
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+				$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture	 "Models/props_gameplay/cap_point_base_red_pyro"
+					$bumpmap 	"Models/props_gameplay/cap_point_base_normal"
+
+					$selfillum				1
+	
+					$envmap				 "env_cubemap"
+					$normalmapalphaenvmapmask	1 
+					$envmaptint			 "[1 1 1]"
+
+
+					// Use separate self-illum mask on DX9 or later hardware
+					">=dx90_20b"
+				{
+					$baseTexture 		"Models/props_gameplay/cap_point_base_red_noalpha_pyro"
+					$selfillummask 	"Models/props_gameplay/cap_point_base_selfillum"
+				}
+
+					// Use redundant self-illum in base alpha on Pre DX9 hardware
+					"<dx90_20b"
+				{
+					"$baseTexture" 	"Models/props_gameplay/cap_point_base_red_pyro"
+				}
+
+					$DIFFUSE_WHITE			0.9
+					$DIFFUSE_BASE			0.0					
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		locker_blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_gameplay/unform_locker01_skin2_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+
+					$DIFFUSE_WHITE			0.9
+					$DIFFUSE_BASE			0.0					
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		locker_red
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_gameplay/unform_locker01_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+
+					$DIFFUSE_WHITE			0.9
+					$DIFFUSE_BASE			0.0					
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+					
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral2
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+					
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral_apha
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$alphatest			1
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+					
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.9
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		peach02
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+					
+					$COLORBAR				"rj/colorbar_peach02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.8
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		tree001
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_farm/tree001_pyro"
+					$vertexcolor			$vertexcolor
+					//					$alphatest
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+					
+					//					$COLORBAR				"rj/colorbar3"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+		tree001_card
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_farm/tree001_card_pyro"
+					$vertexcolor			$vertexcolor
+					$alphatest			1
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+					
+					//					$COLORBAR				"rj/colorbar3"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		wood3
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					$STRIPETEXTURE			"rj/stripe3"
+					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_wood02"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$VERTEX_LIT				1
+
+					//					$STRIPETEXTURE			"rj/stripe3"
+					//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_purple01"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			1.0
+					$GRAY_POWER				0.5
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		sign_gameplay_blu_odd
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_gameplay/sign_gameplay01_skin1_pyro"
+					$vertexcolor			$vertexcolor
+					$selfillum				1
+					//$alphatest			1
+
+
+					// $DIFFUSE_WHITE			0.9
+					// $GRAY_POWER				0.2
+					// $GRAY_STEP				"[ 0.0 1.0 ]"
+					// $LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		sign_gameplay_red_even
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_gameplay/sign_gameplay01_skin2_pyro"
+					$vertexcolor			$vertexcolor
+					$selfillum				1
+					//$alphatest			1
+
+
+					// $DIFFUSE_WHITE			0.9
+					// $GRAY_POWER				0.2
+					// $GRAY_STEP				"[ 0.0 1.0 ]"
+					// $LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		door
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+					
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+
+	}
+
+	patterns
+	{
+		ball001_
+		{
+			template	"neutral"
+		}
+		bar
+		{
+			template	"neutral"
+		}	
+		bottle
+		{
+			template  "peach02"
+		}
+		can
+		{
+			template	"peach02"
+		}
+		door_grate001_metalgrate
+		{
+			template	"yellow_alpha"
+		}	
+		door_grate
+		{
+			template	"peach02"
+		}	
+		door_slide_large_noentry
+		{
+			template  "neutral2"
+		}
+		door_slide_noentry
+		{
+			template "neutral2"
+		}
+		door_
+		{
+			template	"door"
+		}
+		elevator
+		{
+			template	"blue"
+		}
+		foot
+		{
+			template	"peach02"
+		}
+		pill
+		{
+			template	"peach02"
+		}
+		hay
+		{
+			template	"wood3"
+		}	
+		orange
+		{
+			template	"wood3"
+		}
+		sack
+		{
+			template	"neutral"
+		}
+		security_fence_light
+		{
+			template  "neutral"
+		}
+		security_fence
+		{
+			template  "yellow_alpha"
+		}
+		sewer
+		{
+			template	"neutral"
+		}
+		sign_b
+		{
+			template	"wood3"
+		}
+		sign_wood
+		{
+			template	"wood3"
+		}
+		tape
+		{
+			template  "neutral"
+		}
+		towel
+		{
+			template	"neutral"
+		}
+		uniform
+		{
+			template	"neutral"
+		}
+		weight
+		{
+			template	"wood3"
+		}
+		windowed_door
+		{
+			template	"neutral"
+		}
+		sign_gameplay01_skin10
+		{
+			template	"sign_gameplay_red_even"
+		}
+		sign_gameplay01_skin3
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin5
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin7
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin9
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin11
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin2
+		{
+			template	"sign_gameplay_red_even"
+		}
+		sign_gameplay01_skin4
+		{
+			template	"sign_gameplay_red_even"
+		}
+		sign_gameplay01_skin6
+		{
+			template	"sign_gameplay_red_even"
+		}
+		sign_gameplay01_skin8
+		{
+			template	"sign_gameplay_red_even"
+		}
+		sign_gameplay01_skin1
+		{
+			template	"sign_gameplay_blu_odd"
+		}
+		sign_gameplay01_skin12
+		{
+			template	"sign_gameplay_red_even"
+		}
+
+		resupply_
+		{
+			template	"resupply"
+		}
+
+		unform_locker01_skin2
+		{
+			template	"peach02"
+		}
+		unform_locker01
+		{
+			template	"peach02"
+		}
+
+		cap_point_base_blue_noalpha
+		{
+			template  "xXx"
+		}
+		cap_point_base_blue
+		{
+			template  "xXx"
+		}
+		cap_point_base_red_noalpha
+		{
+			template  "xXx"
+		}
+		cap_point_base_red
+		{
+			template  "xXx"
+		}
+		cap_point_base_selfillum
+		{
+			template  "xXx"
+		}
+		cap_point_base
+		{
+			template  "xXx"
+		}			
+
+
+	}
+}
+

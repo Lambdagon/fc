@@ -1,0 +1,48 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/Zombie_Fast/fast_zombie_sheet"
+	"$alphatest" 1
+	"$bumpmap" "models/zombie_fast/fast_zombie_sheet_normal"
+	"$surfaceprop" "flesh"
+	"$model" "1"
+	//"$halflambert" "1"
+	"$phong" "1"
+	"$phongboost" "5"
+	"$phongexponent" 25
+	//"$phongexponenttexture" "Models/zombie_fast/fast_zombie_phong"
+	//"$phongalbedotint" "1"										
+	"$phongfresnelranges"	"[.2 .6 1]"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

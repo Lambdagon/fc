@@ -1,0 +1,2557 @@
+// VOL_NORM		1.0f
+//
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+//
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+//
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	= 3.9
+//	SNDLVL_55dB		= 55,	= 3.0
+//	SNDLVL_IDLE		= 60,	= 2.0
+//	SNDLVL_TALKING		= 60,	= 2.0
+//	SNDLVL_60dB		= 60,	= 2.0
+//	SNDLVL_65dB		= 65,	= 1.5
+//	SNDLVL_STATIC		= 66,	= 1.25
+//	SNDLVL_70dB		= 70,	= 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	= 0.8
+//	SNDLVL_80dB		= 80,	= 0.7
+//	SNDLVL_85dB		= 85,	= 0.6
+//	SNDLVL_90dB		= 90,	= 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	= 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140, = 0.27
+//	SNDLVL_140dB	= 140,	= 0.2
+//	SNDLVL_150dB	= 150,	= 0.2
+//
+
+
+"ep2_rebel.reb_ammo01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo01.wav"
+}
+
+"ep2_rebel.reb_ammo02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo02.wav"
+}
+
+"ep2_rebel.reb_ammo03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo03.wav"
+}
+
+"ep2_rebel.reb_ammo04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo04.wav"
+}
+
+"ep2_rebel.reb_ammo05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo05.wav"
+}
+
+"ep2_rebel.reb_ammo06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo06.wav"
+}
+
+"ep2_rebel.reb_ammo07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_ammo07.wav"
+}
+
+"ep2_rebel.reb_antlions01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions01.wav"
+}
+
+"ep2_rebel.reb_antlions02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions02.wav"
+}
+
+"ep2_rebel.reb_antlions03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions03.wav"
+}
+
+"ep2_rebel.reb_antlions04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions04.wav"
+}
+
+"ep2_rebel.reb_antlions05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions05.wav"
+}
+
+"ep2_rebel.reb_antlions06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions06.wav"
+}
+
+"ep2_rebel.reb_antlions07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions07.wav"
+}
+
+"ep2_rebel.reb_antlions08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions08.wav"
+}
+
+"ep2_rebel.reb_antlions09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions09.wav"
+}
+
+"ep2_rebel.reb_antlions10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions10.wav"
+}
+
+"ep2_rebel.reb_antlions11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions11.wav"
+}
+
+"ep2_rebel.reb_antlions12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions12.wav"
+}
+
+"ep2_rebel.reb_antlions13"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_antlions13.wav"
+}
+
+
+"ep2_rebel.reb_buddykilled01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled01.wav"
+}
+
+"ep2_rebel.reb_buddykilled02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled02.wav"
+}
+
+"ep2_rebel.reb_buddykilled03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled03.wav"
+}
+
+"ep2_rebel.reb_buddykilled04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled04.wav"
+}
+
+"ep2_rebel.reb_buddykilled05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled05.wav"
+}
+
+"ep2_rebel.reb_buddykilled06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled06.wav"
+}
+
+"ep2_rebel.reb_buddykilled07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled07.wav"
+}
+
+"ep2_rebel.reb_buddykilled08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled08.wav"
+}
+
+"ep2_rebel.reb_buddykilled09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled09.wav"
+}
+
+"ep2_rebel.reb_buddykilled10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled10.wav"
+}
+
+"ep2_rebel.reb_buddykilled11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled11.wav"
+}
+
+"ep2_rebel.reb_buddykilled12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled12.wav"
+}
+
+"ep2_rebel.reb_buddykilled13"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_buddykilled13.wav"
+}
+
+"ep2_rebel.reb_die01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_die01.wav"
+}
+
+"ep2_rebel.reb_die02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_die02.wav"
+}
+
+"ep2_rebel.reb_die03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_die03.wav"
+}
+
+"ep2_rebel.reb_die04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_die04.wav"
+}
+
+"ep2_rebel.reb_die05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_die05.wav"
+}
+
+"ep2_rebel.reb_following01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_following01.wav"
+}
+
+"ep2_rebel.reb_following02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_following02.wav"
+}
+
+"ep2_rebel.reb_following03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_following03.wav"
+}
+
+"ep2_rebel.reb_following04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_following04.wav"
+}
+
+"ep2_rebel.reb_greet01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet01.wav"
+}
+
+"ep2_rebel.reb_greet02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet02.wav"
+}
+
+"ep2_rebel.reb_greet03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet03.wav"
+}
+
+"ep2_rebel.reb_greet04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet04.wav"
+}
+
+"ep2_rebel.reb_greet05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet05.wav"
+}
+
+"ep2_rebel.reb_greet06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet06.wav"
+}
+
+"ep2_rebel.reb_greet07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_greet07.wav"
+}
+
+"ep2_rebel.reb_headcrabs01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs01.wav"
+}
+
+"ep2_rebel.reb_headcrabs02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs02.wav"
+}
+
+"ep2_rebel.reb_headcrabs03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs03.wav"
+}
+
+"ep2_rebel.reb_headcrabs04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs04.wav"
+}
+
+"ep2_rebel.reb_headcrabs05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs05.wav"
+}
+
+"ep2_rebel.reb_headcrabs06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs06.wav"
+}
+
+"ep2_rebel.reb_headcrabs07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs07.wav"
+}
+
+"ep2_rebel.reb_headcrabs08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs08.wav"
+}
+
+"ep2_rebel.reb_headcrabs09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_headcrabs09.wav"
+}
+
+"ep2_rebel.reb_hunters01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters01.wav"
+}
+
+"ep2_rebel.reb_hunters02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters02.wav"
+}
+
+"ep2_rebel.reb_hunters03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters03.wav"
+}
+
+"ep2_rebel.reb_hunters04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters04.wav"
+}
+
+"ep2_rebel.reb_hunters05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters05.wav"
+}
+
+"ep2_rebel.reb_hunters06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_hunters06.wav"
+}
+
+"ep2_rebel.reb_idle01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle01.wav"
+}
+
+"ep2_rebel.reb_idle02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle02.wav"
+}
+"ep2_rebel.reb_idle03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle03.wav"
+}
+"ep2_rebel.reb_idle04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle04.wav"
+}
+"ep2_rebel.reb_idle05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle05.wav"
+}
+"ep2_rebel.reb_idle06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_idle06.wav"
+}
+
+"ep2_rebel.reb_imhurt01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_imhurt01.wav"
+}
+
+"ep2_rebel.reb_imhurt02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_imhurt02.wav"
+}
+
+"ep2_rebel.reb_killshots01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots01.wav"
+}
+"ep2_rebel.reb_killshots02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots02.wav"
+}
+"ep2_rebel.reb_killshots03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots03.wav"
+}
+"ep2_rebel.reb_killshots04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots04.wav"
+}
+"ep2_rebel.reb_killshots05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots05.wav"
+}
+"ep2_rebel.reb_killshots06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots06.wav"
+}
+"ep2_rebel.reb_killshots07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots07.wav"
+}
+"ep2_rebel.reb_killshots08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots08.wav"
+}
+"ep2_rebel.reb_killshots09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots09.wav"
+}
+"ep2_rebel.reb_killshots10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots10.wav"
+}
+"ep2_rebel.reb_killshots11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots11.wav"
+}
+"ep2_rebel.reb_killshots12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots12.wav"
+}
+"ep2_rebel.reb_killshots13"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots13.wav"
+}
+"ep2_rebel.reb_killshots14"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots14.wav"
+}
+"ep2_rebel.reb_killshots15"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots15.wav"
+}
+"ep2_rebel.reb_killshots16"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots16.wav"
+}
+"ep2_rebel.reb_killshots17"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots17.wav"
+}
+"ep2_rebel.reb_killshots18"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots18.wav"
+}
+"ep2_rebel.reb_killshots19"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots19.wav"
+}
+"ep2_rebel.reb_killshots20"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots20.wav"
+}
+"ep2_rebel.reb_killshots21"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots21.wav"
+}
+"ep2_rebel.reb_killshots22"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots22.wav"
+}
+"ep2_rebel.reb_killshots23"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots23.wav"
+}
+"ep2_rebel.reb_killshots24"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots24.wav"
+}
+"ep2_rebel.reb_killshots25"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots25.wav"
+}
+
+"ep2_rebel.reb_killshots26"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_killshots26.wav"
+}
+
+"ep2_rebel.reb_laugh01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_laugh01.wav"
+}
+
+"ep2_rebel.reb_laugh02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_laugh02.wav"
+}
+
+"ep2_rebel.reb_laugh03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_laugh03.wav"
+}
+
+"ep2_rebel.reb_laugh04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_laugh04.wav"
+}
+
+"ep2_rebel.reb_leading01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_leading01.wav"
+}
+
+"ep2_rebel.reb_leading02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_leading02.wav"
+}
+
+"ep2_rebel.reb_leading03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_leading03.wav"
+}
+
+"ep2_rebel.reb_leading04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_leading04.wav"
+}
+
+"ep2_rebel.reb_manhacks01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_manhacks01.wav"
+}
+
+"ep2_rebel.reb_manhacks02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_manhacks02.wav"
+}
+
+"ep2_rebel.reb_manhacks03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_manhacks03.wav"
+}
+
+"ep2_rebel.reb_medkit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit01.wav"
+}
+
+"ep2_rebel.reb_medkit02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit02.wav"
+}
+
+"ep2_rebel.reb_medkit03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit03.wav"
+}
+
+"ep2_rebel.reb_medkit04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit04.wav"
+}
+
+"ep2_rebel.reb_medkit05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit05.wav"
+}
+
+"ep2_rebel.reb_medkit06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit06.wav"
+}
+
+"ep2_rebel.reb_medkit07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit07.wav"
+}
+
+"ep2_rebel.reb_medkit08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit08.wav"
+}
+
+"ep2_rebel.reb_medkit09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_medkit09.wav"
+}
+
+"ep2_rebel.reb_nevergonnamakeit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_nevergonnamakeit01.wav"
+}
+
+"ep2_rebel.reb_nevergonnamakeit02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_nevergonnamakeit02.wav"
+}
+
+"ep2_rebel.reb_nevergonnamakeit03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_nevergonnamakeit03.wav"
+}
+
+"ep2_rebel.reb_nevergonnamakeit04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_nevergonnamakeit04.wav"
+}
+
+"ep2_rebel.reb_newweapon01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon01.wav"
+}
+
+"ep2_rebel.reb_newweapon02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon02.wav"
+}
+
+"ep2_rebel.reb_newweapon03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon03.wav"
+}
+
+"ep2_rebel.reb_newweapon04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon04.wav"
+}
+
+"ep2_rebel.reb_newweapon05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon05.wav"
+}
+
+"ep2_rebel.reb_newweapon06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon06.wav"
+}
+
+"ep2_rebel.reb_newweapon07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon07.wav"
+}
+
+"ep2_rebel.reb_newweapon08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon08.wav"
+}
+
+"ep2_rebel.reb_newweapon09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon09.wav"
+}
+
+"ep2_rebel.reb_newweapon10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon10.wav"
+}
+
+"ep2_rebel.reb_newweapon11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon11.wav"
+}
+
+"ep2_rebel.reb_newweapon12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_newweapon12.wav"
+}
+
+"ep2_rebel.reb_pain01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain01.wav"
+}
+
+"ep2_rebel.reb_pain02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain02.wav"
+}
+
+"ep2_rebel.reb_pain03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain03.wav"
+}
+
+"ep2_rebel.reb_pain04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain04.wav"
+}
+
+"ep2_rebel.reb_pain05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain05.wav"
+}
+
+"ep2_rebel.reb_pain06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain06.wav"
+}
+
+"ep2_rebel.reb_pain07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain07.wav"
+}
+
+"ep2_rebel.reb_pain08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain08.wav"
+}
+
+"ep2_rebel.reb_pain09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain09.wav"
+}
+
+"ep2_rebel.reb_pain10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain10.wav"
+}
+
+"ep2_rebel.reb_pain11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain11.wav"
+}
+
+"ep2_rebel.reb_pain12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain12.wav"
+}
+
+"ep2_rebel.reb_pain13"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain13.wav"
+}
+
+"ep2_rebel.reb_pain14"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain14.wav"
+}
+
+"ep2_rebel.reb_pain15"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain15.wav"
+}
+
+"ep2_rebel.reb_pain16"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain16.wav"
+}
+
+"ep2_rebel.reb_pain17"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain17.wav"
+}
+
+"ep2_rebel.reb_pain18"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain18.wav"
+}
+
+"ep2_rebel.reb_pain19"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain19.wav"
+}
+
+"ep2_rebel.reb_pain20"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain20.wav"
+}
+
+"ep2_rebel.reb_pain21"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain21.wav"
+}
+
+"ep2_rebel.reb_pain22"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain22.wav"
+}
+
+"ep2_rebel.reb_pain23"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain23.wav"
+}
+
+"ep2_rebel.reb_pain24"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain24.wav"
+}
+
+"ep2_rebel.reb_pain25"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain25.wav"
+}
+
+"ep2_rebel.reb_pain26"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain26.wav"
+}
+
+"ep2_rebel.reb_pain27"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain27.wav"
+}
+
+"ep2_rebel.reb_pain28"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pain28.wav"
+}
+
+"ep2_rebel.reb_pardon01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon01.wav"
+}
+
+"ep2_rebel.reb_pardon02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon02.wav"
+}
+
+"ep2_rebel.reb_pardon03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon03.wav"
+}
+
+"ep2_rebel.reb_pardon04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon04.wav"
+}
+
+"ep2_rebel.reb_pardon05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon05.wav"
+}
+
+"ep2_rebel.reb_pardon06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_pardon06.wav"
+}
+
+"ep2_rebel.reb_playerdeath01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath01.wav"
+}
+
+"ep2_rebel.reb_playerdeath02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath02.wav"
+}
+
+"ep2_rebel.reb_playerdeath03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath03.wav"
+}
+
+"ep2_rebel.reb_playerdeath04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath04.wav"
+}
+
+"ep2_rebel.reb_playerdeath05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath05.wav"
+}
+
+"ep2_rebel.reb_playerdeath06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath06.wav"
+}
+
+"ep2_rebel.reb_playerdeath07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath07.wav"
+}
+
+"ep2_rebel.reb_playerdeath08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath08.wav"
+}
+
+"ep2_rebel.reb_playerdeath09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_playerdeath09.wav"
+}
+
+"ep2_rebel.reb_reload01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload01.wav"
+}
+
+"ep2_rebel.reb_reload02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload02.wav"
+}
+
+"ep2_rebel.reb_reload03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload03.wav"
+}
+
+"ep2_rebel.reb_reload04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload04.wav"
+}
+
+"ep2_rebel.reb_reload05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload05.wav"
+}
+
+"ep2_rebel.reb_reload06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload06.wav"
+}
+
+"ep2_rebel.reb_reload07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload07.wav"
+}
+
+"ep2_rebel.reb_reload08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload08.wav"
+}
+
+"ep2_rebel.reb_reload09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_reload09.wav"
+}
+
+"ep2_rebel.reb_striders01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders01.wav"
+}
+
+"ep2_rebel.reb_striders02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders02.wav"
+}
+
+"ep2_rebel.reb_striders03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders03.wav"
+}
+
+"ep2_rebel.reb_striders04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders04.wav"
+}
+
+"ep2_rebel.reb_striders05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders05.wav"
+}
+
+"ep2_rebel.reb_striders06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders06.wav"
+}
+
+"ep2_rebel.reb_striders07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders07.wav"
+}
+
+"ep2_rebel.reb_striders08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders08.wav"
+}
+
+"ep2_rebel.reb_striders09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders09.wav"
+}
+
+"ep2_rebel.reb_striders10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_striders10.wav"
+}
+
+"ep2_rebel.reb_thatsitforme01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_thatsitforme01.wav"
+}
+
+"ep2_rebel.reb_thatsitforme02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_thatsitforme02.wav"
+}
+
+"ep2_rebel.reb_thatsitforme03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_thatsitforme03.wav"
+}
+
+"ep2_rebel.reb_turretdown01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_turretdown01.wav"
+}
+
+"ep2_rebel.reb_turretdown02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_turretdown02.wav"
+}
+
+"ep2_rebel.reb_turretdown03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_turretdown03.wav"
+}
+
+"ep2_rebel.reb_turretdown04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_turretdown04.wav"
+}
+
+"ep2_rebel.reb_turretdown05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_turretdown05.wav"
+}
+
+"ep2_rebel.reb_use_deny01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny01.wav"
+}
+
+"ep2_rebel.reb_use_deny02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny02.wav"
+}
+
+"ep2_rebel.reb_use_deny03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny03.wav"
+}
+
+"ep2_rebel.reb_use_deny04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny04.wav"
+}
+
+"ep2_rebel.reb_use_deny05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny05.wav"
+}
+
+"ep2_rebel.reb_use_deny06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny06.wav"
+}
+
+"ep2_rebel.reb_use_deny07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny07.wav"
+}
+
+"ep2_rebel.reb_use_deny08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny08.wav"
+}
+
+"ep2_rebel.reb_use_deny09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny09.wav"
+}
+
+"ep2_rebel.reb_use_deny10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_use_deny10.wav"
+}
+
+"ep2_rebel.reb_warnings01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings01.wav"
+}
+
+"ep2_rebel.reb_warnings02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings02.wav"
+}
+
+"ep2_rebel.reb_warnings03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings03.wav"
+}
+
+"ep2_rebel.reb_warnings04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings04.wav"
+}
+
+"ep2_rebel.reb_warnings05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings05.wav"
+}
+
+"ep2_rebel.reb_warnings06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings06.wav"
+}
+
+"ep2_rebel.reb_warnings07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings07.wav"
+}
+
+"ep2_rebel.reb_warnings08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings08.wav"
+}
+
+"ep2_rebel.reb_warnings09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings09.wav"
+}
+
+"ep2_rebel.reb_warnings10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings10.wav"
+}
+
+"ep2_rebel.reb_warnings11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_warnings11.wav"
+}
+
+"ep2_rebel.reb_zombies01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies01.wav"
+}
+
+"ep2_rebel.reb_zombies02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies02.wav"
+}
+
+"ep2_rebel.reb_zombies03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies03.wav"
+}
+
+"ep2_rebel.reb_zombies04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies04.wav"
+}
+
+"ep2_rebel.reb_zombies05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies05.wav"
+}
+
+"ep2_rebel.reb_zombies06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"*vo/npc/male02/reb2_zombies06.wav"
+}

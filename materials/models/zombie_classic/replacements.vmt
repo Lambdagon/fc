@@ -1,0 +1,44 @@
+replacements
+{
+	templates
+	{
+		zombie_classic_sheet
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/zombie_classic/zombie_classic_sheet_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+					"$envmap" "env_cubemap"
+					"$basealphaenvmapmask" 1
+					"$envmaptint" "[.5 .5 .5]"
+
+					$STRIPETEXTURE			"rj/stripe3"
+					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+	}
+
+	patterns
+	{
+		zombie_classic_sheet
+		{
+			template	"zombie_classic_sheet"
+		}
+	}
+}
+

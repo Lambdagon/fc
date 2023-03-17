@@ -1,0 +1,54 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/Zombie_Classic/Zombie_Classic_sheet"
+	"$bumpmap" "Models/zombie_classic/zombie_classic_sheet_normal"
+	"$model" "1"
+	"$phong" "1"
+	"$phongboost" "5"
+//	"$halflambert" "1"
+//	"$phongexponenttexture" "Models/zombie_classic/zombie_classic_phong"
+//	"$phongalbedotint" "1"										
+	"$phongfresnelranges"	"[0.1 .5  1]"
+	"$phongexponent" 30
+	
+//
+
+//rimlight disabled for now, sunlight areas wreaking havoc
+	//rimlight parameters
+	//"$rimlight" "1"
+	//"$rimlightexponent" "24"
+	//"$rimlightboost" "1"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

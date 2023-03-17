@@ -1,0 +1,229 @@
+replacements
+{
+	templates
+	{
+		blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_blue02"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral2
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		peach02
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_peach02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		pink
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+		
+					$COLORBAR				"rj/colorbar_pink01"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.3
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+
+		turbine_blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$VERTEX_LIT				1
+
+					$STRIPETEXTURE			"rj/stripe4"
+					$STRIPE_SCALE			"[ 0.003 0.003 0.004 ]"
+					$STRIPE_COLOR                   "[0.96 0.92 0.49]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_dirt01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		turbine_red
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$VERTEX_LIT				1
+
+					$STRIPETEXTURE			"rj/stripe4"
+					$STRIPE_SCALE			"[ 0.002 0.002 0.003 ]"
+					$STRIPE_COLOR                   "[0.96 0.76 0.49]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_blue01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+
+	}
+
+	patterns
+	{
+		hydraulic
+		{
+			template  "neutral2"
+		}
+		moon_cork
+		{
+			template  "peach02"
+		}
+		powerhouse_barrier_top
+		{
+			template	"blue"
+		}
+		powerhouse_entry
+		{
+			template  "peach02"
+		}
+		powerhouse_blast_doors_glass
+		{
+			template  "xxxx"
+		}
+		powerhouse_blast_doors
+		{
+			template  "pink"
+		}
+		powerhouse_blind
+		{
+			template  "neutral2"
+		}
+		powerhouse_desk
+		{
+			template  "neutral2"
+		}
+
+
+		powerhouse_turbine_base_blu
+		{
+			template  "turbine_blue"
+		}
+		powerhouse_turbine_base
+		{
+			template  "turbine_red"
+		}
+		powerhouse_turbine_grill_blu
+		{
+			template  "turbine_blue"
+		}
+		powerhouse_turbine_grill
+		{
+			template  "turbine_red"
+		}
+		powerhouse_turbine_trim
+		{
+			template  "neutral2"
+		}
+		powerhouse_turbine_blu
+		{
+			template  "turbine_blue"
+		}
+		powerhouse_turbine
+		{
+			template  "turbine_red"
+		}
+	}
+}
+

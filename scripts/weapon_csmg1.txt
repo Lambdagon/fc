@@ -1,0 +1,79 @@
+// Small Machine Gun 1
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"Combine SMG"
+	"viewmodel"				"models/weapons/v_hksmg2.mdl"
+	//"playermodel"			"models/weapons/w_smg2.mdl"	//FIXME:
+	"playermodel"			"models/weapons/w_striderg.mdl"	//FIXME: 
+	"anim_prefix"			"smg2"
+	"bucket"				"2"
+	"bucket_position"		"2"
+
+	"clip_size"				"45"
+	"clip2_size"			"-1"
+
+	"default_clip"			"45"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"SMG1"
+
+	"weight"				"3"
+	"item_flags"			"0"
+
+	"BuiltRightHanded" "0" 
+	"AllowFlipping" "1" 
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"reload"			"Weapon_CSMG1.Reload"
+		"reload_npc"		"Weapon_CSMG1.NPC_Reload"
+		"empty"				"Weapon_CSMG1.Empty"
+		"single_shot"		"Weapon_CSMG1.Single"
+		"single_shot_npc"	"Weapon_CSMG1.NPC_Single"
+		"special1"			"Weapon_CSMG1.Special1"
+		"special2"			"Weapon_CSMG1.Special2"
+		"double_shot"		"Weapon_CSMG1.Double"
+		"burst"				"Weapon_CSMG1.Burst"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"WeaponIcons"
+				"character"	"a"
+		}
+		"weapon_s"
+		{	
+				"font"		"WeaponIconsSelected"
+				"character"	"a"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"r"
+		}
+		"ammo2"
+		{
+				"font"		"WeaponIcons"
+				"character"	"t"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}

@@ -1,0 +1,1562 @@
+//
+//
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+//
+// VOL_NORM		1.0f
+//
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+//
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+//
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	= 3.9
+//	SNDLVL_55dB		= 55,	= 3.0
+//	SNDLVL_IDLE		= 60,	= 2.0
+//	SNDLVL_TALKING		= 60,	= 2.0
+//	SNDLVL_60dB		= 60,	= 2.0
+//	SNDLVL_65dB		= 65,	= 1.5
+//	SNDLVL_STATIC		= 66,	= 1.25
+//	SNDLVL_70dB		= 70,	= 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	= 0.8
+//	SNDLVL_80dB		= 80,	= 0.7
+//	SNDLVL_85dB		= 85,	= 0.6
+//	SNDLVL_90dB		= 90,	= 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	= 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140, = 0.27
+//	SNDLVL_140dB	= 140,	= 0.2
+//	SNDLVL_150dB	= 150,	= 0.2
+//
+
+
+
+
+"citadel_ep01.ambient_explosion1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.700000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"0"
+
+	"wave"			"ambient/explosions/exp1.wav"
+}
+
+"citadel_ep01.ambient_explosion2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"100"
+	"soundlevel"	"SNDLVL_140db"
+	"wave"			"ambient/explosions/explode_2.wav"
+}
+
+"citadel_ep01.terrain_rumble1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_100dB"
+
+	"wave"			"ambient/atmosphere/terrain_rumble1.wav"
+}
+
+"citadel_ep01.metal_impact_scrape1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/metal_big_impact_scrape1.wav"
+}
+"citadel_ep01.attack_battleloop_1"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.90000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"			"ambient/explosions/battle_loop2.wav"
+}
+
+"citadel_ep01.flash_thunder"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.8,1.0"
+	"pitch"			"80,110"
+
+	"soundlevel"	"0"
+
+		"rndwave"
+		{
+			"wave"	"ambient/atmosphere/thunder1.wav"
+			"wave"	"ambient/atmosphere/thunder2.wav"
+			"wave"	"ambient/atmosphere/thunder3.wav"
+			"wave"	"ambient/atmosphere/thunder4.wav"
+
+		}
+}
+
+"citadel_ep01.flash_light"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.1,0.2"
+	"pitch"			"30,50"
+	"soundlevel"		"SNDLVL_140dB"
+
+		"rndwave"
+		{
+			"wave"		"ambient/levels/labs/electric_explosion1.wav"
+			"wave"		"ambient/levels/labs/electric_explosion2.wav"
+			"wave"		"ambient/levels/labs/electric_explosion3.wav"
+			"wave"		"ambient/levels/labs/electric_explosion4.wav"
+			"wave"		"ambient/levels/labs/electric_explosion5.wav"
+		}
+}
+
+"citadel_ep01.intro_razortrain_horn"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.700000"
+	"pitch"			"100"
+
+	"soundlevel"	"SNDLVL_105dB"
+
+	"wave"			"ambient/alarms/razortrain_horn1.wav"
+}
+
+
+"citadel_ep01.bridge_breaker"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00000"
+	"pitch"			"90,110"
+
+	"soundlevel"	"SNDLVL_130dB"
+
+	"rndwave"
+	{
+		"wave"			"ambient/levels/citadel/citadel_breakershut1.wav"
+		"wave"			"ambient/levels/citadel/citadel_breakershut2.wav"
+	}
+}
+
+"citadel_ep01.bridge_beam"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.800000"
+	"pitch"			"90,110"
+
+	"soundlevel"	"SNDLVL_120dB"
+
+	"wave"			"ambient/levels/citadel/citadel_bridgebeam1.wav"
+}
+
+"citadel_ep01.socket_reset"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00000"
+	"pitch"			"145,155"
+
+	"soundlevel"	"SNDLVL_120dB"
+
+	"wave"			"npc/attack_helicopter/aheli_damaged_alarm1.wav"
+}
+
+
+
+"citadel_ep01.CaveInScrape"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/metal_big_impact_scrape1.wav"
+}
+
+"citadel_ep01.ScrapeSmooth"
+{
+	"soundlevel"		"SNDLVL_70dB"
+	"volume"		"1.0"
+	"pitch"		"96,104"
+	"wave"		"physics/plastic/plastic_box_scrape_smooth_loop2.wav"
+}
+
+"citadel_ep01.ATV_impact_heavy"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"pitch"		"95,110"
+	"rndwave"
+	{
+		"wave"	"vehicles/v8/vehicle_impact_heavy1.wav"
+		"wave"	"vehicles/v8/vehicle_impact_heavy2.wav"
+		"wave"	"vehicles/v8/vehicle_impact_heavy3.wav"
+		"wave"	"vehicles/v8/vehicle_impact_heavy4.wav"
+	}
+}
+
+"citadel_ep01.ATV_impact_medium"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"pitch"		"95,110"
+	"rndwave"
+	{
+		"wave"	"vehicles/v8/vehicle_impact_medium1.wav"
+		"wave"	"vehicles/v8/vehicle_impact_medium2.wav"
+		"wave"	"vehicles/v8/vehicle_impact_medium3.wav"
+		"wave"	"vehicles/v8/vehicle_impact_medium4.wav"
+	}
+}
+
+"citadel_ep01.Scrape_Car"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.75"
+	"pitch"			"100"
+	"soundlevel"	"SNDLVL_110dB"
+
+	"wave"	"vehicles/v8/vehicle_rollover1.wav"
+}
+"citadel_ep01.thumper_ambient"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"100"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"wave"			"ambient/machines/thumper_amb.wav"
+}
+
+
+"citadel_ep01.ambientSteam01"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"0.75"
+	"pitch"		"100"
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"		"ambient/gas/steam_loop1.wav"
+}
+	
+"citadel_ep01.rollerlift_startup"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.700000"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"wave"			"ambient/machines/thumper_startup1.wav"
+}
+
+"citadel_ep01.rollercounter_click"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"0.40"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"npc/turret_floor/click1.wav"
+}
+
+"citadel_ep01.ambientwhoosh_large_incoming1"
+{
+
+	"channel"	"CHAN_STATIC"
+	"volume"	"1.0"
+	//"pitch"		"100"
+
+	"soundlevel"	"SNDLVL_100DB"
+
+	"wave"	"physics/nearmiss/whoosh_large1.wav"
+}
+
+"citadel_ep01.BreakableMatConcrete"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"0.8"
+	"wave"	"physics/concrete/concrete_break2.wav"
+}
+
+"citadel_ep01.BreakableMatMetal"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.7"
+	"rndwave"
+	{
+		"wave"	"physics/metal/metal_box_break1.wav"
+		"wave"	"physics/metal/metal_box_break2.wav"
+	}
+}
+
+"citadel_ep01.BreakableMatWood"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.7"
+	"rndwave"
+	{
+		"wave"	"physics/wood/wood_plank_break1.wav"
+		"wave"	"physics/wood/wood_plank_break2.wav"
+		"wave"	"physics/wood/wood_plank_break3.wav"
+		"wave"	"physics/wood/wood_plank_break4.wav"
+	}
+}
+
+"citadel_ep01.ATV_skid_lowfriction"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.75"
+	//"wave"		"vehicles/atv_skid_lowfriction.wav"
+	"wave"		"vehicles/v8/skid_lowfriction.wav"
+}
+
+"citadel_ep01.Vortex_ChargeUp"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"VOL_NORM"
+	"pitch"			"95,105"
+
+	"soundlevel"	"SNDLVL_120dB"
+
+	"rndwave"
+	{
+	"wave"			"npc/attack_helicopter/aheli_charge_up.wav"
+	}
+}
+
+"citadel_ep01.d1_canals_01a_metal_groan"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.75"
+	//"pitch"			"100"
+	//"soundlevel"	"SNDLVL_90db"
+	"wave"			"ambient/materials/metal_groan.wav"
+}
+
+"citadel_ep01.d1_canals_01a_metal_stress1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.750"
+	//"pitch"			"100"
+	"soundlevel"	"SNDLVL_90db"
+	"wave"			"ambient/materials/metal_stress1.wav"
+}
+
+"citadel_ep01.SolidMetalStrain"
+{
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"PITCH_NORM"
+	"volume"		"0.80"
+	"rndwave"
+	{
+		"wave"		"physics/metal/metal_solid_strain1.wav"
+		"wave"		"physics/metal/metal_solid_strain4.wav"
+		"wave"		"physics/metal/metal_solid_strain5.wav"
+	}
+}
+
+"citadel_ep01.van_impact_heavy"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"	"SNDLVL_80dB"
+	"wave"	"vehicles/v8/vehicle_impact_heavy4.wav"
+}
+
+
+"citadel_ep01.d1_canals_01a_metal_large_debris2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	//"pitch"			"100"
+	//"soundlevel"	"SNDLVL_90db"
+	"wave"			"physics/metal/metal_large_debris2.wav"
+}
+
+
+"citadel_ep01.DogThrowVanImpact"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"		"0"
+	"wave"	"ambient/levels/intro/DogThrowVanImpact_0_19_11.wav"
+	
+}
+
+"citadel_ep01.Thrown_Car_Hits_Ground"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.25"
+	"pitch"			"80,120"
+	"soundlevel"	"0"
+	"rndwave"
+	{
+		"wave"	"npc/dog/car_impact1.wav"
+		"wave"	"npc/dog/car_impact2.wav"
+		"wave"	"vehicles/v8/vehicle_rollover2.wav"
+	}
+}
+
+"citadel_ep01.DogTearOffVanDoor"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.7"
+	"wave"	"ambient/levels/intro/DogTearOffVanDoor.wav"
+	
+}
+
+"citadel_ep01.DogDoorHitGround"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DogDoorHitGround_0_33_09.wav"
+	
+}
+
+"citadel_ep01.DoorImpact01"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DoorImpact01.wav"
+	
+}
+
+"citadel_ep01.DoorImpact02"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DoorImpact02.wav"
+	
+}
+
+
+"citadel_ep01.DoorImpact03"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DoorImpact03.wav"
+	
+}
+
+
+"citadel_ep01.DogPickUpVan"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_80dB"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DogPickUpVan_1_18_13.wav"
+}
+
+"citadel_ep01.DogShakeVan"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140dB"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/DogShakeVan1_25_00.WAV"
+}
+
+
+"citadel_ep01.DogThrowVan"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.75"
+	"wave"	"ambient/levels/intro/DogThrowVan1_33_21.wav"
+
+}
+
+"citadel_ep01.VanImpact"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.9"
+	"wave"	"ambient/levels/intro/VanImpact1_35_21.wav"
+
+	
+}
+
+"citadel_ep01.VanRumble"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/Rhumble_1_42_07.wav"
+}
+
+"citadel_ep01.VanShakes"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.3"
+	"wave"	"ambient/levels/intro/VanShakes_1_44_12.wav"
+}
+
+"citadel_ep01.VanRideStart"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.9"
+	"wave"	"ambient/levels/intro/VanRideStart_1_51_13.wav"
+}
+
+"citadel_ep01.VanRidePart2"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/VanRidePartII_2_02_11.wav"
+	
+}
+"citadel_ep01.VanRumble2"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"0.8"
+	"wave"	"ambient/levels/intro/Rhumble_2_12_13.wav"
+}
+
+"citadel_ep01.VanFall"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_80dB"
+	"volume"		"1.0"
+	"wave"	"ambient/levels/intro/VanFall_2_14_00.wav"
+}
+
+
+"lostcoast.bomb_beep"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"npc/turret_floor/ping.wav"
+}
+
+"crankwheel.punted"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"			"doors/door_metal_thin_move1.wav"
+}
+
+"citadel_ep01.stalk_GasEscape_loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_GasEscape_loop.wav"
+}
+
+"citadel_ep01.stalk_GravityGun_SheetMetal_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_GravityGun_SheetMetal_Loop.wav"
+}
+
+"citadel_ep01.stalk_HelmetClose"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_HelmetClose.wav"
+}
+
+"citadel_ep01.stalk_Opening_TrainArrive"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_Opening_TrainArrive.wav"
+}
+
+"citadel_ep01.stalk_PowerOff_On_17_10"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_PowerOff_On_17_10.wav"
+}
+
+"citadel_ep01.stalk_Spark_01"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_Spark_01.wav"
+}
+
+"citadel_ep01.stalk_Spark_02"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_Spark_02.wav"
+}
+
+"citadel_ep01.stalk_Sparks_01"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_Sparks_01.wav"
+}
+
+"citadel_ep01.stalk_StalkerShakes"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.900000"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_1_03_22.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_1_04_24.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_1_09_27.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_43_27.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_49_14.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_52_17.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerShakes_59_08.wav"
+	}
+}
+
+"citadel_ep01.stalk_StalkerTrainInterior_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_StalkerTrainInterior_Loop.wav"
+}
+
+"citadel_ep01.stalk_StalkerTrainStartUp"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_StalkerTrainStartUp.wav"
+}
+
+"citadel_ep01.stalk_StalkerTrainXtraBump01"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"	"ambient/levels/citadel/stalk_StalkerTrainXtraBump01.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerTrainXtraBump02.wav"
+		"wave"	"ambient/levels/citadel/stalk_StalkerTrainXtraBump03.wav"
+	}
+}
+
+"citadel_ep01.stalk_StalkerTrainRide_LR_36_06"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_StalkerTrainRide_L-R_36_06.wav"
+}
+
+"citadel_ep01.stalk_StalkerTrnRide_LR_1_13_05"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_StalkerTrnRide_L-R_1_13_05.wav"
+}
+
+"citadel_ep01.stalk_TrainDoorOpen"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/stalk_TrainDoorOpen.wav"
+}
+
+"citadel_ep01.citadel_5sirens"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.900000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/citadel_5sirens.wav"
+}
+
+"citadel_ep01.blast_shield.Move1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.000000"
+	"pitch"			"160"
+
+	"soundlevel"		"SNDLVL_120dB"
+
+	"wave"			"ambient/machines/floodgate_move_short1.wav"
+}
+"citadel_ep01.mo_dataRewind03"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.000000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/mo_dataRewind03.wav"
+}
+
+"citadel_ep01.DataTransmission01_loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.900000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransmission01_loop.wav"
+}
+
+"citadel_ep01.DataTransmission04_loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.500000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransmission04_loop.wav"
+}
+
+"citadel_ep01.DataTransFmaleVx01"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.600000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransFmaleVx01.wav"
+}
+
+"citadel_ep01.DataTransFMaleVx02.wav"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.600000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransFMaleVx02.wav"
+}
+
+"citadel_ep01.DataTransGarbledFMaleVx01"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.700000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransGarbledFMaleVx01.wav"
+}
+
+"citadel_ep01.DataTransRandom02"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransRandom02.wav"
+}
+
+"citadel_ep01.DataTransRandom03"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_90db"
+	"volume"		"0.800000"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/DataTransRandom03.wav"
+}
+
+// core sounds
+
+// plays on core, when player is near the unstable core
+
+"citadel_ep01.Core_NearPlayer_Unstable_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_130dB"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_near_uncontained_loop2.wav"
+}
+
+// plays from control room, when unstable core is first revealed
+
+"citadel_ep01.Core_Far_Unstable_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_150dB"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_far_uncontained_loop1.wav"
+}
+
+// plays when player touches core
+
+"citadel_ep01.Player_Hit_Core"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_110db"
+	"volume"		"0.7"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_playerhit1.wav"
+}
+
+// plays in main core room, when core is unstable
+
+"citadel_ep01.Core_Unstable_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_150dB"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_uncontained_loop2.wav"
+}
+
+// plays in main core room, when core is partialy stablized
+
+"citadel_ep01.Core_PartialStable_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_140db"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_partialcontain_loop1.wav"
+}
+
+// plays in main core room, when core is fully stabilized
+
+"citadel_ep01.Core_Stable_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_120db"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"ambient/levels/citadel/core_contained_loop1.wav"
+
+}
+
+"citadel_ep01.AdvisorTalk"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"soundlevel"  		"SNDLVL_120dB"
+	"pitch"			"70"
+	"rndwave"
+	{
+		"wave"	"npc/advisor/AdvisorScreenVx01.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx02.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx03.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx04.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx05.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx06.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx07.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx08.wav"
+	}
+
+}
+
+"citadel_ep01.AdvisorAlert"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"  		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"	"npc/advisor/AdvisorScreenVx01.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx02.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx03.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx04.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx05.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx06.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx07.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx08.wav"
+	}
+}
+
+"citadel_ep01.PodRoom_AdvisorTalk"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.95"
+	"soundlevel"  		"SNDLVL_120dB"
+	"pitch"			"70"
+	"rndwave"
+	{
+		"wave"	"npc/advisor/AdvisorScreenVx01.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx02.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx03.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx04.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx05.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx06.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx07.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx08.wav"
+	}
+
+}
+
+"citadel_ep01.PodRoom_AdvisorAlert"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"  		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"	"npc/advisor/AdvisorScreenVx01.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx02.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx03.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx04.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx05.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx06.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx07.wav"
+		"wave"	"npc/advisor/AdvisorScreenVx08.wav"
+	}
+}
+
+"citadel_ep01.PodRoom_AdvisorAmbient_Loop"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.5"
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"npc/advisor/AdvisorScreenVx01.wav"
+}
+
+"citadel_ep01.PodRoom_PodEnter_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"  		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"ambient/levels/citadel/Advisor_Enter_Loop.wav"
+}
+
+"citadel_ep01.PodRoom_PodLift"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"  		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"ambient/levels/citadel/Advisor_Lift.wav"
+}
+
+"citadel_ep01.PodRoom_PodLeave"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"  		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"ambient/levels/citadel/Advisor_Leave.wav"
+}
+
+"citadel_ep01.PodRoom_PodAmbient_Loop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"soundlevel"  		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"npc/antlion_guard/breathe_loop.wav"
+}
+
+"ep1_c17.DropBridgeLoop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"soundlevel"  		"SNDLVL_80dB"
+	"pitch"			"PITCH_NORM"
+	"wave"			"ambient/levels/city/citizen_bridge_wheel_loop1.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX01.wav"
+}
+
+"ep01_c17.CitadelOutsideFX02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX02.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX03"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX03.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX04"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX04.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX05"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX05.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX06"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX06.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX07"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX07.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX08"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX08.wav"
+}
+
+
+"ep01_c17.CitadelOutsideFX09"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/levels/city/CitadelOutsideFX09.wav"
+}
+
+
+"ep01_c17.ZombiDoorScrapeLoop01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_80dB"
+
+	"wave"			"*ambient/levels/city/ZombiDoorScrapeLoop01.wav"
+}
+
+
+"ep01_c17.ZombiDoorLoop01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_80dB"
+
+	"wave"			"*ambient/levels/city/ZombiDoorLoop01.wav"
+}
+
+"ep01_c17.ZombiDoorLoop02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_80dB"
+
+	"wave"			"*ambient/levels/city/ZombiDoorLoop02.wav"
+}
+
+
+"ep01_intro.CitadelPan"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/CitadelPan.wav"
+}
+
+"ep01_intro.Debris01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/Debris01.wav"
+}
+
+"ep01_intro.Debris02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/Debris02.wav"
+}
+
+"ep01_intro.Debris03"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/Debris03.wav"
+}
+
+"ep01_intro.Explosion01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/Explosion01.wav"
+}
+
+"ep01_intro.Explosion02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/Explosion02.wav"
+}
+
+"ep01_intro.LogoSFX"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/LogoSFX.wav"
+}
+
+"ep01_intro.VortigauntEnd-rearL-R"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/VortigauntEnd-rearL-R.wav"
+}
+
+"ep01_intro.VortigauntEnd-FrontL-R"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/VortigauntEnd-FrontL-R.wav"
+}
+
+"ep01_intro.VortigauntTrack01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/VortigauntTrack01.wav"
+}
+
+"ep01_intro.VortigauntTrack02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/VortigauntTrack02.wav"
+}
+
+"ep01_intro.EndScreenHits"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/EndScreenHits.wav"
+}
+
+"ep01_intro.AlyxRemove"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/intro/AlyxRemove.wav"
+}
+
+"ep01_outro.3rdAmb"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/3rdAmb.wav"
+}
+
+"ep01_outro.AdvisorAttack01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/AdvisorAttack01.wav"
+}
+
+"ep01_outro.AdvisorAttack02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/AdvisorAttack02.wav"
+}
+
+"ep01_outro.AdvisorAttack03"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/AdvisorAttack03.wav"
+}
+
+"ep01_outro.BeginningAmbience"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/BeginningAmbience.wav"
+}
+
+"ep01_outro.CircleExplosion01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/CircleExplosion01.wav"
+}
+
+"ep01_outro.CitadelFinale"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/CitadelFinale.wav"
+}
+
+"ep01_outro.EndAmbience"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/EndAmbience.wav"
+}
+
+"ep01_outro.Explosion02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/Explosion02.wav"
+}
+
+"ep01_outro.GunShipCrash"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/GunShipCrash.wav"
+}
+
+"ep01_outro.LowerCitadelExplosionGroup"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/LowerCitadelExplosionGroup.wav"
+}
+
+"ep01_outro.MessagePacket01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/MessagePacket01.wav"
+}
+
+"ep01_outro.MessagePacket02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/MessagePacket02.wav"
+}
+
+"ep01_outro.MessagePacketsMultiple"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/MessagePacketsMultiple.wav"
+}
+
+"ep01_outro.MessagePacketsMultiple02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/MessagePacketsMultiple02.wav"
+}
+
+"ep01_outro.OutOfTunnel2ndAmb"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/OutOfTunnel2ndAmb.wav"
+}
+
+"ep01_outro.PodPassby01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/PodPassby01.wav"
+}
+
+"ep01_outro.PodPassby02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"wave"			"*ambient/outro/PodPassby02.wav"
+}
+
+"ep01_outro.Thunder"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"0"
+
+	"rndwave"
+	{
+		"wave"		"*ambient/outro/Thunder01.wav"
+		"wave"		"*ambient/outro/Thunder02.wav"
+		"wave"		"*ambient/outro/Thunder03.wav"
+		"wave"		"*ambient/outro/Thunder04.wav"
+		"wave"		"*ambient/outro/Thunder05.wav"
+		"wave"		"*ambient/outro/Thunder06.wav"
+		"wave"		"*ambient/outro/Thunder07.wav"
+	}
+}
+
+
+

@@ -1,0 +1,49 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"models/combine_soldier/combine_elite_ep2_player"
+	"$bumpmap" "models/combine_soldier/combine_elite_normal"
+
+	"$phong" "1"
+	"$phongboost" "5"
+	"$phongexponenttexture" "models/combine_soldier/combine_elite_phong"
+	"$phongalbedotint" "1"									
+	"$phongfresnelranges"	"[.1 .5 1]"
+	
+	"$rimlight" "1"
+	"$rimlightexponent" "8"
+	"$rimlightboost" "2"
+
+	"$selfillum" "1"
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "1"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

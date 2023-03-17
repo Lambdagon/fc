@@ -1,0 +1,85 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "overlays/no_entry"
+	"$translucent" 1
+//	"$vertexcolor" "1"
+//	"$vertexalpha" "1"
+	"$nodecal" "1"
+	"%compiletrigger" 1
+	"%compilepassbullets" 1
+	"%keywords" "tf,lfe,no_entry,antirush,tool,tools"
+
+	$softedges 1
+	$edgesoftnessstart 0.6
+	$edgesoftnessend 0.5
+
+	$outline 1
+	$outlinecolor "[0 0 0]"
+	$outlinealpha 1
+
+	$outlinestart0 0.4
+	$outlinestart1 0.52
+	$outlineend0 0.8
+	$outlineend1 0.92
+
+	$nocull 1
+
+
+//	$alphatest 1
+//	$alphatestreference .5
+
+
+	"$playerdistance"	"0"
+	"$distanceclamped"	"0"
+	"$distanceinverted"	"0"
+	"$teammatch"		"0"
+	"$matchinverted"	"0"
+	"$endalpha"		"0"
+	"$one"			"2"
+	"$fadedistance"		"400"
+	$distancealpha 1
+
+	"Proxies"
+	{
+		"PlayerProximity"
+		{
+			"resultVar" "$playerdistance"
+			"scale"  1.0
+		}	
+		"Clamp"
+		{
+			"srcVar1"	"$playerdistance"
+			"min"		"0"
+			"max"		"$fadedistance"
+			"resultVar" 	"$distanceclamped"
+		}
+		"Subtract"
+		{
+			"srcVar1"	"$fadedistance"
+			"srcVar2"	"$distanceclamped"
+			"resultVar"	"$distanceinverted"
+		}
+		"PlayerTeamMatch"
+		{
+			"resultVar"	"$teammatch"
+		}
+		"Subtract"
+		{
+			"srcVar1"	"$one"
+			"srcVar2"	"$teammatch"
+			"resultVar"	"$matchinverted"	
+		}
+		"Divide"
+		{
+			"srcVar1"	"$distanceinverted"
+			"srcVar2"	"$fadedistance"
+			"resultVar" 	"$endalpha"		
+		}
+		"Multiply"
+		{
+			"srcVar1"	"$endalpha"		
+			"srcVar2"	"$matchinverted"	
+			"resultVar" 	"$alpha"	
+		}
+	}
+}

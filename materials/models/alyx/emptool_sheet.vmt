@@ -1,0 +1,61 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Alyx/emptool_sheet"
+	"$nodecal" "1"
+	"$selfillum" "1"
+
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "1"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"$glowcolor" "1"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

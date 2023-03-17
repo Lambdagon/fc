@@ -1,0 +1,413 @@
+// NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
+//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+// Multiplayer options script
+//
+// Format:
+//  Version [float]
+//  Options description followed by 
+//  Options defaults
+//
+// Option description syntax:
+//
+//  "cvar" { "Prompt" { type [ type info ] } { default } }
+//
+//  type = 
+//   BOOL   (a yes/no toggle)
+//   STRING
+//   NUMBER
+//   LIST
+//
+// type info:
+// BOOL                 no type info
+// NUMBER       min max range, use -1 -1 for no limits
+// STRING       no type info
+// LIST          delimited list of options value pairs
+//
+//
+// default depends on type
+// BOOL is "0" or "1"
+// NUMBER is "value"
+// STRING is "value"
+// LIST is "index", where index "0" is the first element of the list
+
+
+// Half-Life Server Configuration Layout Script (stores last settings chosen, too)
+// File generated:  Mon Jul 12 05:28:33 PM
+//
+//
+// Cvar	-	Setting
+
+VERSION 1.0
+
+DESCRIPTION SERVER_OPTIONS
+{
+	"category0"
+	{
+		"#TF_Paused_Title"
+		{ CATEGORY }
+	}
+
+	"hostname"
+	{
+		"#Valve_Hostname"
+		{ STRING }
+		{ "Lambda Fortress: Extended" }
+	}
+
+	"maxplayers"
+	{
+		"#Valve_Max_Players"
+		{
+			LIST
+			"#LFE_Maxplayer_One"		"1"
+			"#LFE_Maxplayer_Two"		"2"
+			"#LFE_Maxplayer_Four"		"4"
+			"#LFE_Maxplayer_Eight"		"8"
+			"#LFE_Maxplayer_Nine"		"9"
+			"#LFE_Maxplayer_Sixteen"	"16"
+			"#LFE_Maxplayer_ThirtyTwo"	"32"
+			"#LFE_Maxplayer_SixyFour"	"64"
+		}
+		{ "1" }
+	}
+
+	"sv_password"
+	{
+		"#Valve_Server_Password"
+		{ STRING }
+		{ "" }
+	}
+
+	"sv_lan"
+	{
+		"#LFE_LanServer"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"mp_timelimit"
+	{
+		"#TF_Timelimit"
+		{ NUMBER 0 -1 }
+		{ "0" }
+	}
+
+	"mp_winlimit"
+	{
+		"#TF_WinLimit"
+		{ NUMBER 0 -1 }
+		{ "0" }
+	}
+
+	"mp_maxrounds"
+	{
+		"#TF_MaxRounds"
+		{ NUMBER 0 -1 }
+		{ "0" }
+	}
+	
+	"mp_flashlight"
+	{
+		"#LFE_AllowFlashlight"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"mp_idledealmethod"
+	{
+		"#LFE_AutoKick"
+		{
+			LIST
+			"#LFE_SpectKick"		"1"
+			"#LFE_DirectKick"		"2"
+		}
+		{ "1" }
+	}
+	
+	"mp_idlemaxtime"
+	{
+		"#LFE_IdleKickTime"
+		{ NUMBER 0 60 }
+		{ "3" }
+	}
+
+	"tf_weapon_criticals"
+	{
+		"#LFE_TFWeaponCritical"
+		"#Tooltip_LFE_TFWeaponCritical"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"tf_weapon_criticals_melee"
+	{
+		"#LFE_TFWeaponMeleeCritical"
+		"#Tooltip_LFE_TFWeaponMeleeCritical"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"tf_gravetalk"
+	{
+		"#LFE_GraveTalk"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"category1"
+	{
+		"#TF_OptionCategory_Extended"
+		{ CATEGORY }
+	}
+	
+	"sv_difficulty"
+	{
+		"#LFE_Difficulty"
+		{
+			LIST
+			"#LFE_DifficultyOriginal"	"1"
+			"#LFE_DifficultyMedium"		"2"
+			"#LFE_DifficultyHard"		"3"
+			"#LFE_DifficultyUnusual"	"4"
+		}
+		{ "1" }
+	}
+
+	"lfe_player_bots"
+	{
+		"#LFE_PlayerBots"
+		{
+			LIST
+			"#NoOverride"		"0"
+			"#ForceDisable"		"1"
+			"#ForceEnable"		"2"
+		}
+		{ "0" }
+	}
+
+	"lfe_coop_spawn_search"
+	{
+		"#LFE_CoopSearchSpot"
+		"#Tooltip_LFE_CoopSearchSpot"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_npc_boss_addhealth_per_player"
+	{
+		"#LFE_NpcBossHealth"
+		{ BOOL }
+		{ "1" }
+	}	
+
+	"lfe_use_hl2_player_hull"
+	{
+		"#LFE_HL2Hull"
+		"#Tooltip_LFE_HL2Hull"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_force_legacy"
+	{
+		"#LFE_ForceLegacy"
+		"#Tooltip_LFE_ForceLegacy"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"sv_dynamicnpcs"
+	{
+		"#LFE_DynamicNPC"
+		"#Tooltip_LFE_DynamicNPC"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"sv_hl2_beta"
+	{
+		"#LFE_HL2BetaNpcs"
+		"#Tooltip_LFE_HL2BetaNpcs"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"lfe_allow_revive_marker"
+	{
+		"#LFE_AllowReviveMarker"
+		"#Tooltip_LFE_AllowReviveMarker"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_allow_ignite_prop"
+	{
+		"#LFE_AllowIgniteProp"
+		"#Tooltip_LFE_AllowIgniteProp"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_allow_spectate_npc"
+	{
+		"#LFE_AllowSpectateNPC"
+		"#Tooltip_LFE_AllowSpectateNPC"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"lfe_allow_team_weapons"
+	{
+		"#LFE_AllowTeamWeapons"
+		"#Tooltip_LFE_AllowTeamWeapons"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"lfe_allow_thirdperson"
+	{
+		"#LFE_AllowThirdperson"
+		"#Tooltip_LFE_AllowThirdperson"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"lfe_allow_special_classes"
+	{
+		"#LFE_SpecialClasses"
+		"#Tooltip_LFE_SpecialClasses"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"lfe_autojump"
+	{
+		"#LFE_AllowAutoJump"
+		"#Tooltip_LFE_AllowAutoJump"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"lfe_duckjump"
+	{
+		"#LFE_AllowDuckJump"
+		"#Tooltip_LFE_AllowDuckJump"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_hl2_weapon_criticals"
+	{
+		"#LFE_NPCCritical"
+		"#Tooltip_LFE_NPCCritical"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfe_hl2_weapon_criticals_melee"
+	{
+		"#LFE_NPCMeleeCritical"
+		"#Tooltip_LFE_NPCMeleeCritical"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"lfe_episodic_flashlight"
+	{
+		"#LFE_EpisodicFlashlight"
+		"#Tooltip_LFE_EpisodicFlashlight"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"category2"
+	{
+		"#LFE_ServerOptionCategory_HL1"
+		{ CATEGORY }
+	}
+
+	"sv_hl1_ff"
+	{
+		"#LFE_HL1FriendlyFire"
+		"#Tooltip_LFE_HL1FriendlyFire"
+		{ BOOL }
+		{ "0" }
+    }
+
+	"sv_hl1_hd"
+	{
+		"#LFE_HL1HDModels"
+		"#Tooltip_LFE_HL1HDModels"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"category3"
+	{
+		"#LFE_ServerOptionCategory_CoopClasslimit"
+		{ CATEGORY }
+	}
+
+	"lfe_classlimit_scout"
+	{
+		"#TF_Class_Name_Scout"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_sniper"
+	{
+		"#TF_Class_Name_Sniper"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_soldier"
+	{
+		"#TF_Class_Name_Soldier"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_demoman"
+	{
+		"#TF_Class_Name_Demoman"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_medic"
+	{
+		"#TF_Class_Name_Medic"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_heavy"
+	{
+		"#TF_Class_Name_HWGuy"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_pyro"
+	{
+		"#TF_Class_Name_Pyro"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+
+	"lfe_classlimit_spy"
+	{
+		"#TF_Class_Name_Spy"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfe_classlimit_engineer"
+	{
+		"#TF_Class_Name_Engineer"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+}

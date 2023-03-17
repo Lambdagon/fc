@@ -1,0 +1,355 @@
+replacements
+{
+	templates
+	{
+		blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_blue02"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral2
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		peach02
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_peach02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.8
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		pink01
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_pink01"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.3
+					$GRAY_POWER				0.24
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		white
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_white01"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		oildrum001
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_2fort/oildrum001_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+	}
+
+	patterns
+	{
+		column_light001a
+		{
+			template	"neutral"
+		}
+		column_light001a_on
+		{
+			template	"neutral"
+		}
+		boxcar
+		{
+			template	"blue"
+		}
+		boxcar
+		{
+			template	"boxcar02a"
+		}
+		boxcar02a
+		{
+			template	"clocklarge01"
+		}
+		flatcar
+		{
+			template	"peach02"
+		}
+		lobby_fixtures001a
+		{
+			template	"neutral"
+		}
+		lobby_fixtures002a
+		{
+			template	"neutral"
+		}
+		passengercar001
+		{
+			template	"neutral"
+		}
+		tanker
+		{
+			template	"neutral"
+		}
+		trackprops01a
+		{
+			template	"neutral2"
+		}
+		tracksigns01a
+		{
+			template	"neutral2"
+		}
+		train_boxcar
+		{
+			template	"blue"
+		}
+		train_boxcar_damaged
+		{
+			template	"blue"
+		}
+		train_engine_bottom
+		{
+			template	"pink01"
+		}
+		train_engine_top
+		{
+			template	"pink01"
+		}
+		train_lights001a
+		{
+			template	"neutral"
+		}
+		train_orecar
+		{
+			template	"peach02"
+		}
+		train_orecar_ore
+		{
+			template	"neutral"
+		}
+		train_utilities001a
+		{
+			template	"neutral"
+		}
+		train_wreck_train001
+		{
+			template	"neutral"
+		}
+		train001
+		{
+			template	"blue"
+		}
+		train002
+		{
+			template	"peach02"
+		}
+		train002b
+		{
+			template	"neutral"
+		}
+		train003
+		{
+			template	"neutral"
+		}
+		train003_damaged1
+		{
+			template	"neutral"
+		}
+		train003b
+		{
+			template	"neutral2"
+		}
+		train003c
+		{
+			template	"neutral2"
+		}
+		train004
+		{
+			template	"peach02"
+		}
+		traincar_bars
+		{
+			template	"neutral"
+		}
+		traincar_rack001
+		{
+			template	"neutral2"
+		}
+		traincar_seats001
+		{
+			template	"peach02"
+		}
+		trainstation_arch001
+		{
+			template	"pink01"
+		}
+		trainstation_bench001
+		{
+			template	"blue"
+		}
+		trainstation_ceiling01
+		{
+			template	"pink01"
+		}
+		trainstation_clock001
+		{
+			template	"neutral"
+		}
+		trainstation_column001
+		{
+			template	"pink01"
+		}
+		trainstation_ornament001
+		{
+			template	"pink01"
+		}
+		trainstation_post001
+		{
+			template	"neutral"
+		}
+		traintrack001a
+		{
+			template	"neutral"
+		}
+		wrecked_boxcar_gate
+		{
+			template	"neutral"
+		}
+	}
+}
+

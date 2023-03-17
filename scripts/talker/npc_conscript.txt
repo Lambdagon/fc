@@ -1,0 +1,140 @@
+response "ConscriptMad" sentence "CONSCRIPT_MAD"
+response "ConscriptShot" sentence "CONSCRIPT_SHOT"
+response "ConscriptKill" sentence "CONSCRIPT_KILL"
+response "ConscriptOutAmmo" sentence "CONSCRIPT_OUT_AMMO"
+response "ConscriptLineOfFire" sentence "CONSCRIPT_LINE_FIRE"
+response "ConscriptAttack" sentence "CONSCRIPT_ATTACK"
+response "ConscriptPain1" wav "npc/metropolice_new/pain1.wav"
+response "ConscriptPain2" wav "npc/metropolice_new/pain2.wav"
+response "ConscriptPain3" wav "npc/metropolice_new/pain3.wav"
+response "ConscriptDie1" wav "npc/metropolice_new/die1.wav"
+response "ConscriptDie2" wav "npc/metropolice_new/die2.wav"
+response "ConscriptDie3" wav "npc/metropolice_new/die3.wav"
+response "ConscriptOk" sentence "CONSCRIPT_OK"
+response "ConscriptWait" sentence "CONSCRIPT_WAIT"
+response "ConscriptPlayerHurt1" sentence "CONSCRIPT_CUREA" speakonce defaultdelay
+response "ConscriptPlayerHurt2" sentence "CONSCRIPT_CUREB" speakonce defaultdelay
+response "ConscriptPlayerHurt3" sentence "CONSCRIPT_CUREC" speakonce defaultdelay
+
+// Is this a conscript rule
+criterion "IsConscript" "classname" "npc_conscript" "required"
+
+criterion "ConscriptMad" "concept" 	"CONSCRIPT_MAD" "required"
+criterion "ConscriptShot" "concept" 	"CONSCRIPT_SHOT" "required"
+criterion "ConscriptKill" "concept" 	"CONSCRIPT_KILL" "required"
+criterion "ConscriptOutAmmo" "concept" 	"CONSCRIPT_OUT_AMMO" "required"
+criterion "ConscriptAttack" "concept" 	"CONSCRIPT_ATTACK" "required"
+criterion "ConscriptLineOfFire" "concept" 	"CONSCRIPT_LINE_FIRE" "required"
+criterion "ConscriptPOk" "concept" 	"CONSCRIPT_POK" "required"
+criterion "ConscriptPain1" "concept" 	"CONSCRIPT_PAIN1" "required"
+criterion "ConscriptPain2" "concept" 	"CONSCRIPT_PAIN2" "required"
+criterion "ConscriptPain3" "concept" 	"CONSCRIPT_PAIN3" "required"
+criterion "ConscriptDie1" "concept" 	"CONSCRIPT_DIE1" "required"
+criterion "ConscriptDie2" "concept" 	"CONSCRIPT_DIE2" "required"
+criterion "ConscriptDie3" "concept" 	"CONSCRIPT_DIE3" "required"
+criterion "ConscriptMad" "concept" 	"CONSCRIPT_MAD" "required"
+
+rule ConscriptMad
+{
+	criteria		IsConscript  ConscriptMad
+	response		ConscriptMad
+}
+
+rule ConscriptShot
+{
+	criteria		IsConscript ConscriptShot
+	response		ConscriptShot
+}
+rule ConscriptKill
+{
+	criteria		IsConscript ConscriptKill
+	response		ConscriptKill
+}
+rule ConscriptOutAmmo
+{
+	criteria		IsConscript ConscriptOutAmmo
+	response		ConscriptOutAmmo
+}
+rule ConscriptAttack
+{
+	criteria		IsConscript ConscriptAttack
+	response		ConscriptAttack
+}
+rule ConscriptLineOfFire
+{
+	criteria		IsConscript ConscriptLineOfFire
+	response		ConscriptLineOfFire
+}
+rule ConscriptPOk
+{
+	criteria		IsConscript ConscriptPOk
+	response		ConscriptLineOfFire
+}
+rule ConscriptPain1
+{
+	criteria		IsConscript ConscriptPain1
+	response		ConscriptPain1
+}
+rule ConscriptPain2
+{
+	criteria		IsConscript ConscriptPain2
+	response		ConscriptPain2
+}
+rule ConscriptPain3
+{
+	criteria		IsConscript ConscriptPain3
+	response		ConscriptPain3
+}
+rule ConscriptDie1
+{
+	criteria		IsConscript ConscriptDie1
+	response		ConscriptDie1
+}
+rule ConscriptDie2
+{
+	criteria		IsConscript ConscriptDie2
+	response		ConscriptDie2
+}
+rule ConscriptDie3
+{
+	criteria		IsConscript ConscriptDie3
+	response		ConscriptDie3
+}
+
+rule ConscriptTlkUse
+{
+	criteria		IsConscript ConceptTalkUse
+	response		ConscriptOk
+}
+rule ConscriptTlkUnUse
+{
+	criteria		IsConscript ConceptTalkUnUse
+	response		ConscriptWait
+}
+
+rule ConscriptPlayerHurt1
+{
+	criteria		IsConscript ConceptTalkPlayerHurt1
+	response		ConscriptPlayerHurt1
+}
+rule ConscriptPlayerHurt2
+{
+	criteria		IsConscript ConceptTalkPlayerHurt2
+	response		ConscriptPlayerHurt2
+}
+rule ConscriptPlayerHurt3
+{
+	criteria		IsConscript ConceptTalkPlayerHurt3
+	response		ConscriptPlayerHurt3
+}
+
+rule ConscriptPlayerHello
+{
+	criteria		IsConscript ConceptTalkPHello
+	response		NullResponse
+}
+rule ConscriptPlayerIdle
+{
+	criteria		IsConscript ConceptTalkPIdle
+	response		NullResponse
+}

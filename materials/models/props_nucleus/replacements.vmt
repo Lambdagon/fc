@@ -1,0 +1,274 @@
+replacements
+{
+	templates
+	{
+		blue
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_blue02"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral2
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		peach02
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_peach02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		pink
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_pink01"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.3
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		casing
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					$STRIPETEXTURE			"rj/stripe4"
+					$STRIPE_SCALE			"[ 0.002 0.000 0.002 ]"
+					$STRIPE_COLOR			"[ 0.50 1.0 0.75 ]"
+		
+					$COLORBAR				"rj/colorbar_white02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		swap1
+		{
+			"UnlitTwoTexture"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+		
+					$basetexture			"models/props_nucleus/mp_energy_pyro"
+					$texture2				$texture2
+					$vertexcolor			$vertexcolor
+					$additive 					1
+					$nocull					 1
+						"Proxies"
+						{
+							"TextureScroll"
+							{
+								"texturescrollvar" "$basetexturetransform"
+								"texturescrollrate" 2
+								"texturescrollangle" 5
+							}
+							"TextureScroll"
+							{
+								"texturescrollvar" "$texture2transform"
+								"texturescrollrate" 1.8
+								"texturescrollangle" 0
+							}
+						}
+
+				}
+			}
+		}
+
+	}
+
+	patterns
+	{
+		mp_arm
+		{
+			template	"neutral2"
+		}
+
+		mp_basea
+		{
+			template	"xx"
+		}
+		mp_baseb
+		{
+			template	"xxx"
+		}
+		mp_bridge
+		{
+			template	"xxxx"
+		}
+		mp_cap_bottoma
+		{
+			template	"insidebottom"
+		}
+		mp_cap_bottomb
+		{
+			template	"casing"
+		}
+		mp_cap_bottomc
+		{
+			template	"casing"
+		}
+		mp_core
+		{
+			template	"xx"
+		}
+
+
+		mp_energy_2
+		{
+			template  "xxx"
+		}
+		mp_energy
+		{
+			template	"swap1"
+		}
+
+
+		mp_larm
+		{
+			template  "xx"
+		}
+		mp_pit
+		{
+			template	"neutral2"
+		}
+		mp_rarm
+		{
+			template	"xxx"
+		}
+		mp_reactor
+		{
+			template  "xx"
+		}
+		mp_topa
+		{
+			template  "casing"
+		}
+		mp_topb
+		{
+			template  "casing"
+		}
+
+
+	}
+}
+

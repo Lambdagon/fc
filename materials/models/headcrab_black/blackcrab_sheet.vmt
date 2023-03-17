@@ -1,0 +1,51 @@
+"vertexlitgeneric"
+{
+	"$model" 1
+	"$baseTexture" "models/Headcrab_black/Blackcrab_sheet"
+//	"$envmap" "env_cubemap"
+//	"$envmapcontrast" 1
+	"$bumpmap" "models/headcrab_black/blackcrab_sheet_normal"
+//	"$normalmapalphaenvmapmask" 1
+	"$phong"	"1"
+ 	"$phongexponent"	"12"
+	"$phongboost"	"2"
+	"$phongfresnelranges"   "[.2 .8 1]"
+
+	//rimlight parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "8"
+	"$rimlightboost" ".5"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "1"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

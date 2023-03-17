@@ -1,0 +1,61 @@
+// envmaptint_fix
+"VertexLitGeneric"
+{
+	"$surfaceprop"	"alienflesh"
+	"$model" "1"
+
+	"$baseTexture" "Models/Antlion/Antlionhigh_sheet2"
+	"$bumpmap" "Models/Antlion/Antlionhigh_normal"
+	
+	// phong
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongexponent" "15"
+
+	"$phongfresnelranges"	"[.1 .8 1.2]"
+	
+	// environment map
+	"$normalmapalphaenvmapmask" 1
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.05 .05 .05]"
+	"$envmapfresnel" "1"
+
+	
+	//rimlight parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimlightboost" "1"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

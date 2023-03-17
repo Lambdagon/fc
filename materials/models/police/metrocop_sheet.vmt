@@ -1,0 +1,42 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/Police/metrocop_sheet"
+	"$envmap" "env_cubemap"
+	"$basealphaenvmapmask" 1
+	"hdr?$envmaptint" "[.5 .5 .5]"
+//	"$envmap" "models/Police/envmap"
+//	"$envmapsphere" 1
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

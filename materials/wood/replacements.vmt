@@ -1,0 +1,169 @@
+replacements
+{
+	templates
+	{
+		standard
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_wood01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+		wood2
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_wood02"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		wood3
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_wood03"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+		peach
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_peach01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		woodtrack
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$alphatest			1
+
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_wood03"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+
+	}
+
+	patterns
+	{
+		fake_wood
+		{
+			template  "wood2"
+		}
+		wood_wall
+		{
+			template	"peach"
+		}
+
+		wood_beam
+		{
+			template	"peach"
+		}
+
+		wood_bridge
+		{
+			template	"peach"
+		}
+
+		wood_floor
+		{
+			template	"peach"
+		}
+
+		wood_track
+		{
+			template  "woodtrack"
+		}
+
+
+		wall
+		{
+			template	"peach"
+		}
+		grain_elevator_facade
+		{
+			template	"peach"
+		}
+		grain_elevator_silo
+		{
+			template	"peach"
+		}
+	}
+}
+

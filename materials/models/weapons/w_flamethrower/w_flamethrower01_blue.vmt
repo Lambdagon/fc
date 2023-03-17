@@ -1,0 +1,43 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\weapons\w_flamethrower\w_flamethrower01_blue"
+	
+	"$phong" "1"
+	"$phongexponent" "25"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.3 .5 3]"
+	"$halflambert" "1"
+
+	"$basemapalphaphongmask" "1"
+	
+	"$rimlight" "1"						
+	"$rimlightexponent" "20"				
+	"$rimlightboost" ".25"
+
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	
+	"$glowcolor" "1"
+	"Proxies"
+	{
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
+}

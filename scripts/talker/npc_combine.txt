@@ -1,0 +1,824 @@
+// Dissolve screams
+criterion "IsCombine" "classname" "npc_combine" "required"
+criterion "IsCombineS" "classname" "npc_combine_s" "required"
+
+criterion "SoldierVoiceNormal" "voicetype"	"normal" required
+criterion "SoldierVoiceElite" "voicetype"	"elite" required
+criterion "SoldierVoiceSynth" "voicetype"	"synth" required
+
+criterion "SoldierEnteredCombat"	"worldsoldierincombat"	"1" required
+criterion "SoldierNotEnteredCombat"	"worldsoldierincombat"	"!=1" required
+criterion "SoldierReplyToCheck"	"worldsoldierreplytocheck"	"1" required
+criterion "SoldierNotReplyToCheck"	"worldsoldierreplytocheck"	"!=1" required
+criterion "SoldierRecentCombat"	"timesincecombat" ">0, <8" required
+
+criterion "SoldierEnemyIsPlayer"	"enemyclass" "CLASS_PLAYER" required
+
+criterion "SEIR1"	"enemyclass"	"CLASS_PLAYER_ALLY" required
+criterion "SEIR2"	"enemyclass"	"CLASS_CITIZEN_REBEL" required
+criterion "SEIR3"	"enemyclass"	"CLASS_CITIZEN_PASSIVE" required
+criterion "SEIR4"	"enemyclass"	"CLASS_VORTIGAUNT" required
+criterion "SEIR5"	"enemyclass"	"CLASS_HUMAN_PASSIVE" required
+criterion "SoldierEnemyIsRebel" required
+{
+	SEIR1
+	SEIR2
+	SEIR3
+	SEIR4
+	SEIR5
+}
+
+criterion "SoldierEnemyIsVitalAlly" "enemyclass"	"CLASS_PLAYER_ALLY_VITAL" required
+criterion "SoldierEnemyIsAntlion"	"enemyclass"	"CLASS_ANTLION" required
+criterion "SoldierEnemyIsZombie"	"enemyclass"	"CLASS_ZOMBIE" required
+
+criterion "SEIP1"	"enemyclass"	"CLASS_HEADCRAB" required
+criterion "SEIP2"	"enemyclass"	"CLASS_BARNACLE" required
+criterion "SoldierEnemyIsParasite" required
+{
+	SEIP1
+	SEIP2
+}
+
+//response "CombineDissolveScream"
+//{
+//	speak "NPC_CombineS.DissolveScream" noscene
+//}
+
+//rule CombineDissolveScream
+//{
+//	criteria		IsCombineS ConceptDissolveScream
+//	response		CombineDissolveScream
+//}
+
+response "CombineElectrocuteScream"
+{
+	speak "NPC_CombineS.ElectrocuteScream" noscene
+}
+
+rule CombineElectrocuteScream
+{
+	criteria		IsCombineS ConceptElectrocuteScream
+	response		CombineElectrocuteScream
+}
+
+response SoldierResponsePain
+{
+	sentence "COMBINE_PAIN"
+}
+
+response SoldierResponsePainLight
+{
+	sentence "COMBINE_TAUNT"
+}
+
+response SoldierResponsePainHeavy
+{
+	sentence "COMBINE_COVER"
+}
+
+rule SoldierPain
+{
+	criteria	ConceptTalkWound IsCombineS SoldierVoiceNormal
+	response	SoldierResponsePain
+}
+
+rule SoldierPainHeavy
+{
+	criteria	ConceptTalkMortal IsCombineS SoldierVoiceNormal
+	CombineSpokePainHeavy "!=1" required
+	applycontext "CombineSpokePainHeavy:1:60"
+	response	SoldierResponsePainHeavy
+}
+
+rule SoldierPainLight
+{
+	criteria	ConceptTalkWound IsCombineS SoldierVoiceNormal
+	healthfrac	">.9" required
+	CombineSpokePainLight "!=1" required
+	applycontext "CombineSpokePainLight:1"
+	response	SoldierResponsePainLight
+}
+
+response "SoldierDanger"
+{
+	 sentence "COMBINE_DANGER"
+}
+
+rule SoldierDanger
+{
+	criteria IsCombineS SoldierVoiceNormal ConceptTalkDanger
+	response SoldierDanger
+}
+
+response "SoldierDangerGrenade"
+{
+	 sentence "COMBINE_GREN"
+}
+
+rule SoldierDangerGrenade
+{
+	criteria IsCombineS SoldierVoiceNormal ConceptTalkDanger
+	danger_is_grenade	"1" required
+	response SoldierDangerGrenade
+}
+
+response SoldierEnemyDead
+{
+	sentence "COMBINE_KILL_MONST"
+}
+
+rule SoldierEnemyDead
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptEnemyDead
+	applycontext	"soldierincombat:0"
+	applycontexttoworld
+	response		SoldierEnemyDead
+}
+
+response SoldierKillPlayer
+{
+	sentence "COMBINE_PLAYER_DEAD"
+}
+
+rule SoldierKillPlayer
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptEnemyDead SoldierEnemyIsPlayer
+	applycontext	"soldierincombat:0"
+	applycontexttoworld
+	response		SoldierKillPlayer
+}
+
+// Lost Enemy
+response SoldierLostShort
+{
+	sentence "COMBINE_LOST_SHORT"
+}
+
+response SoldierLostLong
+{
+	sentence "COMBINE_LOST_LONG"
+}
+
+rule SoldierLostShort
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptTalkIdle SoldierEnteredCombat SoldierRecentCombat
+	response SoldierLostShort
+}
+
+rule SoldierLostLong
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptTalkIdle SoldierEnteredCombat NoRecentCombatShort
+	applycontext	"soldierincombat:0"
+	applycontexttoworld
+	response SoldierLostLong
+}
+
+// Start Combat
+response SoldierStartMonster
+{
+	sentence "COMBINE_MONST"
+}
+
+response SoldierStartPlayer
+{
+	sentence "COMBINE_ALERT"
+}
+
+response SoldierStartRebel
+{
+	sentence "COMBINE_MONST_CITIZENS"
+}
+
+response SoldierStartVitalAlly
+{
+	sentence "COMBINE_MONST_CHARACTER"
+}
+
+response SoldierStartAntlions
+{
+	sentence "COMBINE_MONST_BUGS"
+}
+
+response SoldierStartZombies
+{
+	sentence "COMBINE_MONST_ZOMBIES"
+}
+
+response SoldierStartParasites
+{
+	sentence "COMBINE_MONST_PARASITES"
+}
+
+rule CombineStartCombat
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartMonster
+}
+
+rule CombineStartCombatPlayer
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsPlayer
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartPlayer
+}
+
+rule CombineStartCombatRebels
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsRebel
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartRebel
+}
+
+rule CombineStartCombatVital
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsVitalAlly
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartVitalAlly
+}
+
+rule CombineStartCombatAntlions
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsAntlion
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartAntlions
+}
+
+rule CombineStartCombatZombies
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsZombie
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartZombies
+}
+
+rule CombineStartCombatParasite
+{
+	criteria    IsCombineS SoldierVoiceNormal ConceptStartCombat SoldierEnemyIsParasite
+	applycontext	"soldierincombat:1"
+	applycontexttoworld
+	response    SoldierStartParasites
+}
+
+// Attacking
+response SoldierAttacking
+{
+	sentence "COMBINE_ANNOUNCE" weight 5
+	sentence "COMBINE_GO_ALERT"
+}
+
+rule SoldierAttacking
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkAttacking
+	response SoldierAttacking
+}
+
+response SoldierAttackingLowPlayer
+{
+	sentence "COMBINE_PLAYERHIT"
+}
+
+rule SoldierAttackingLowPlayer
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkAttacking SoldierEnemyIsPlayer
+	enemyhealthfrac ">0,<.2" required
+	response SoldierAttackingLowPlayer
+}
+
+// Man Down
+response SoldierManDown
+{
+	sentence "COMBINE_MAN_DOWN"
+}
+
+rule SoldierManDown
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkAllyKilled
+	response	SoldierManDown
+}
+
+// Questions & Answers, Idles
+response SoldierReplyAffimative
+{
+	sentence "COMBINE_ANSWER"
+}
+
+rule SoldierAnswer
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkAnswer SoldierNotEnteredCombat
+	response	SoldierReplyAffimative
+}
+
+response SoldierQuestion
+{
+	sentence "COMBINE_QUEST"
+}
+
+rule SoldierQuestion
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkQuestion SoldierNotEnteredCombat
+	response	SoldierQuestion
+}
+
+response SoldierIdle
+{
+	sentence "COMBINE_IDLE"
+}
+
+rule SoldierIdle
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkIdle SoldierNotEnteredCombat SoldierNotReplyToCheck
+	response	SoldierIdle
+}
+
+response SoldierAskCheck
+{
+	sentence "COMBINE_CHECK"
+}
+
+rule SoldierAskCheck
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkIdle SoldierNotEnteredCombat SoldierNotReplyToCheck
+	applycontext	"soldierreplytocheck:1"
+	applycontexttoworld
+	response	SoldierAskCheck
+}
+
+response SoldierReplyCheck
+{
+	sentence "COMBINE_CLEAR"
+}
+
+rule SoldierReplyCheck
+{
+	criteria	IsCombineS SoldierVoiceNormal ConceptTalkIdle SoldierNotEnteredCombat SoldierReplyToCheck
+	applycontext	"soldierreplytocheck:0"
+	applycontexttoworld
+	response	SoldierReplyCheck
+}
+
+// Commander Mode
+rule SoldierCommanded
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptTalkCommanded
+	response		SoldierReplyAffimative
+}
+
+rule SoldierFollow
+{
+	criteria		IsCombineS SoldierVoiceNormal ConceptTalkStartFollow
+	response		SoldierReplyAffimative
+}
+
+// Soldier Specific
+response SoldierAnnounceAssault
+{
+	sentence "COMBINE_ASSAULT"
+}
+
+rule SoldierAnnounceAssault
+{
+	criteria		IsCombineS SoldierVoiceNormal
+	concept	"TLK_SOLDIER_ASSAULT" required
+	response SoldierAnnounceAssault
+}
+
+response SoldierThrowGrenade
+{
+	sentence "COMBINE_THROW_GRENADE"
+}
+
+rule SoldierThrowGrenade
+{
+	criteria	IsCombineS SoldierVoiceNormal
+	concept	"TLK_SOLDIER_THROW"	required
+	response SoldierThrowGrenade
+}
+
+response SoldierFlanking
+{
+	sentence "COMBINE_FLANK"
+}
+
+rule SoldierFlanking
+{
+	criteria	IsCombineS SoldierVoiceNormal
+	concept	"TLK_SOLDIER_FLANK"	required
+	response SoldierFlanking
+}
+
+response SoldierRefindEnemy
+{
+	sentence "COMBINE_REFIND_ENEMY"
+}
+
+rule SoldierRefindEnemy
+{
+	criteria	IsCombineS SoldierVoiceNormal
+	concept	"TLK_SOLDIER_REFIND"	required
+	response SoldierRefindEnemy
+}
+
+
+Criterion "CombineSoldierIsKillSpeechObject" "CombineSoldierKillSpeechObject" "1" "required" weight 0
+Criterion "CombineSoldierIsNotStillonFire" "CombineSoldierOnFire" "!=1" "required" weight 0
+Criterion "CombineSoldierIsStillonFire" "CombineSoldierOnFire" "1" "required" weight 0
+Criterion "CombineSoldierNotKillSpeech" "CombineSoldierKillSpeech" "!=1" "required" weight 0
+Criterion "CombineSoldierNotKillSpeechMelee" "CombineSoldierKillSpeechMelee" "!=1" "required" weight 0
+Criterion "CombineSoldierNotSaidHealThanks" "CombineSoldierSaidHealThanks" "!=1" "required"
+Criterion "CombineSoldierNotRobotNoises" "CombineSoldierRobotNoises" "!=1" "required" weight 0
+Criterion "IsHelpCapCombineSoldier" "CombineSoldierHelpCap" "1" "required" weight 0
+// Custom criterion
+Criterion "CombineSoldierNotAssistSpeech" "CombineSoldierAssistSpeech" "!=1" "required" weight 0
+Criterion "CombineSoldierNotInvulnerableSpeech" "CombineSoldierInvulnerableSpeech" "!=1" "required" weight 0
+Criterion "CombineSoldierNotAwardSpeech" "CombineSoldierAwardSpeech" "!=1" "required" weight 0
+
+
+Response PlayerRoundStartCombineSoldier
+{
+	sentence "METROPOLICE_TAKE_HIM_DOWN"
+}
+Rule PlayerRoundStartCombineSoldier
+{
+	criteria ConceptPlayerRoundStart IsCombineSoldier
+	Response PlayerRoundStartCombineSoldier
+}
+
+Response PlayerCappedIntelligenceCombineSoldier
+{
+	sentence "METROPOLICE_KILL_PLAYER"
+}
+Rule PlayerCappedIntelligenceCombineSoldier
+{
+	criteria ConceptPlayerCapturedIntelligence IsCombineSoldier
+	Response PlayerCappedIntelligenceCombineSoldier
+}
+
+Response PlayerCapturedPointCombineSoldier
+{
+	sentence "METROPOLICE_KILL_PLAYER"
+}
+Rule PlayerCapturedPointCombineSoldier
+{
+	criteria ConceptPlayerCapturedPoint IsCombineSoldier
+	Response PlayerCapturedPointCombineSoldier
+}
+
+
+
+Response CombineSoldierJarateHit
+{
+	sentence "COMBINE_PAIN"
+}
+Rule CombineSoldierJarateHit
+{
+	criteria ConceptJarateHit IsCombineSoldier 50PercentChance
+	Response CombineSoldierJarateHit
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Pain
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerAttackerPainCombineSoldier
+{
+	sentence "COMBINE_PAIN"
+}
+Rule PlayerAttackerPainCombineSoldier
+{
+	criteria ConceptAttackerPain IsCombineSoldier IsNotDominating
+	Response PlayerAttackerPainCombineSoldier
+}
+
+Response PlayerOnFireCombineSoldier
+{
+	sentence "METROPOLICE_ON_FIRE"
+}
+Rule PlayerOnFireCombineSoldier
+{
+	criteria ConceptFire IsCombineSoldier CombineSoldierIsNotStillonFire IsNotDominating
+	ApplyContext "CombineSoldierOnFire:1:7"
+	Response PlayerOnFireCombineSoldier
+}
+
+Response PlayerOnFireRareCombineSoldier
+{
+	sentence "METROPOLICE_ON_FIRE"
+}
+Rule PlayerOnFireRareCombineSoldier
+{
+	criteria ConceptFire IsCombineSoldier 10PercentChance CombineSoldierIsNotStillonFire IsNotDominating
+	ApplyContext "CombineSoldierOnFire:1:7"
+	Response PlayerOnFireRareCombineSoldier
+}
+
+Response PlayerPainCombineSoldier
+{
+	sentence "COMBINE_PAIN"
+}
+Rule PlayerPainCombineSoldier
+{
+	criteria ConceptPain IsCombineSoldier IsNotDominating
+	Response PlayerPainCombineSoldier
+}
+
+Response PlayerStillOnFireCombineSoldier
+{
+	sentence "METROPOLICE_ON_FIRE"
+}
+Rule PlayerStillOnFireCombineSoldier
+{
+	criteria ConceptFire IsCombineSoldier  CombineSoldierIsStillonFire IsNotDominating
+	ApplyContext "CombineSoldierOnFire:1:7"
+	Response PlayerStillOnFireCombineSoldier
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 1
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerGoCombineSoldier
+{
+	sentence "METROPOLICE_MOVE_ALONG_A"
+}
+Rule PlayerGoCombineSoldier
+{
+	criteria ConceptPlayerGo IsCombineSoldier
+	Response PlayerGoCombineSoldier
+}
+
+Response PlayerHeadLeftCombineSoldier
+{
+	sentence "METROPOLICE_MOVE_ALONG_A"
+}
+Rule PlayerHeadLeftCombineSoldier
+{
+	criteria ConceptPlayerLeft  IsSpy
+	Response PlayerHeadLeftSpy
+}
+
+Response PlayerHeadRightCombineSoldier
+{
+	sentence "METROPOLICE_MOVE_ALONG_A"
+}
+Rule PlayerHeadRightCombineSoldier
+{
+	criteria ConceptPlayerRight  IsCombineSoldier
+	Response PlayerHeadRightCombineSoldier
+}
+
+Response PlayerHelpCombineSoldier
+{
+	sentence "COMBINE_LAST_OF_SQUAD"
+}
+Rule PlayerHelpCombineSoldier
+{
+	criteria ConceptPlayerHelp IsCombineSoldier
+	Response PlayerHelpCombineSoldier
+}
+
+Response PlayerHelpCaptureCombineSoldier
+{
+	sentence "COMBINE_LAST_OF_SQUAD"
+}
+Rule PlayerHelpCaptureCombineSoldier
+{
+	criteria ConceptPlayerHelp IsCombineSoldier IsOnCappableControlPoint
+	Response PlayerHelpCaptureCombineSoldier
+}
+
+Response PlayerHelpDefendCombineSoldier
+{
+	sentence "COMBINE_LAST_OF_SQUAD"
+}
+Rule PlayerHelpDefendCombineSoldier
+{
+	criteria ConceptPlayerHelp IsCombineSoldier IsOnFriendlyControlPoint
+	Response PlayerHelpDefendCombineSoldier
+}
+
+Response PlayerMedicCombineSoldier
+{
+	sentence "COMBINE_COVER"
+}
+Rule PlayerMedicCombineSoldier
+{
+	criteria ConceptPlayerMedic IsCombineSoldier
+	Response PlayerMedicCombineSoldier
+}
+
+Response PlayerMoveUpCombineSoldier
+{
+	sentence "COMBINE_FLANK"
+}
+Rule PlayerMoveUpCombineSoldier
+{
+	criteria ConceptPlayerMoveUp  IsCombineSoldier
+	Response PlayerMoveUpCombineSoldier
+}
+
+Response PlayerNoCombineSoldier
+{
+	sentence "COMBINE_CHECK"
+}
+Rule PlayerNoCombineSoldier
+{
+	criteria ConceptPlayerNo  IsCombineSoldier
+	Response PlayerNoCombineSoldier
+}
+
+Response PlayerThanksCombineSoldier
+{
+	sentence "COMBINE_CLEAR"
+}
+Rule PlayerThanksCombineSoldier
+{
+	criteria ConceptPlayerThanks IsCombineSoldier
+	Response PlayerThanksCombineSoldier
+}
+
+Response PlayerYesCombineSoldier
+{
+	sentence "COMBINE_ANSWER"
+}
+Rule PlayerYesCombineSoldier
+{
+	criteria ConceptPlayerYes  IsCombineSoldier
+	Response PlayerYesCombineSoldier
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 2
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerActivateChargeCombineSoldier
+{
+	sentence "COMBINE_COVER"
+}
+Rule PlayerActivateChargeCombineSoldier
+{
+	criteria ConceptPlayerActivateCharge IsCombineSoldier
+	Response PlayerActivateChargeCombineSoldier
+}
+
+Response PlayerCloakedSpyCombineSoldier
+{
+	sentence "COMBINE_MONST_CHARACTER"
+}
+Rule PlayerCloakedSpyCombineSoldier
+{
+	criteria ConceptPlayerCloakedSpy IsCombineSoldier
+	Response PlayerCloakedSpyCombineSoldier
+}
+
+Response PlayerDispenserHereCombineSoldier
+{
+	sentence "COMBINE_COVER"
+}
+Rule PlayerDispenserHereCombineSoldier
+{
+	criteria ConceptPlayerDispenserHere IsCombineSoldier
+	Response PlayerDispenserHereCombineSoldier
+}
+
+Response PlayerIncomingCombineSoldier
+{
+	sentence "METROPOLICE_MONST_PLAYER"
+}
+Rule PlayerIncomingCombineSoldier
+{
+	criteria ConceptPlayerIncoming IsCombineSoldier
+	Response PlayerIncomingCombineSoldier
+}
+
+Response PlayerSentryAheadCombineSoldier
+{
+	sentence "METROPOLICE_MONST_PLAYER_VEHICLE"
+}
+Rule PlayerSentryAheadCombineSoldier
+{
+	criteria ConceptPlayerSentryAhead IsCombineSoldier
+	Response PlayerSentryAheadCombineSoldier
+}
+
+Response PlayerSentryHereCombineSoldier
+{
+	sentence "COMBINE_COVER"
+}
+Rule PlayerSentryHereCombineSoldier
+{
+	criteria ConceptPlayerSentryHere IsCombineSoldier
+	Response PlayerSentryHereCombineSoldier
+}
+
+Response PlayerTeleporterHereCombineSoldier
+{
+	sentence "COMBINE_COVER"
+}
+Rule PlayerTeleporterHereCombineSoldier
+{
+	criteria ConceptPlayerTeleporterHere IsCombineSoldier
+	Response PlayerTeleporterHereCombineSoldier
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 3
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerBattleCryCombineSoldier
+{
+	sentence "COMBINE_TAUNT"
+}
+Rule PlayerBattleCryCombineSoldier
+{
+	criteria ConceptPlayerBattleCry IsCombineSoldier
+	Response PlayerBattleCryCombineSoldier
+}
+
+// Custom stuff - melee dare
+// Look at enemy, then do battle cry voice command while holding a melee weapon.
+Response MeleeDareCombatCombineSoldier
+{
+	sentence "COMBINE_TAUNT"
+}
+Rule MeleeDareCombatCombineSoldier
+{
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsCombineSoldier IsCrosshairEnemy
+	Response MeleeDareCombatCombineSoldier
+}
+//End custom
+
+Response PlayerCheersCombineSoldier
+{
+	sentence "METROPOLICE_KILL_PLAYER"
+}
+Rule PlayerCheersCombineSoldier
+{
+	criteria ConceptPlayerCheers IsCombineSoldier
+	Response PlayerCheersCombineSoldier
+}
+
+Response PlayerGoodJobCombineSoldier
+{
+	sentence "METROPOLICE_KILL_PLAYER"
+}
+Rule PlayerGoodJobCombineSoldier
+{
+	criteria ConceptPlayerGoodJob IsCombineSoldier
+	Response PlayerGoodJobCombineSoldier
+}
+
+Response PlayerJeersCombineSoldier
+{
+	sentence "COMBINE_LOST_LONG"
+}
+Rule PlayerJeersCombineSoldier
+{
+	criteria ConceptPlayerJeers IsCombineSoldier
+	Response PlayerJeersCombineSoldier
+}
+
+Response PlayerLostPointCombineSoldier
+{
+	sentence "COMBINE_MAN_DOWN"
+}
+Rule PlayerLostPointCombineSoldier
+{
+	criteria ConceptPlayerLostPoint IsCombineSoldier
+	Response PlayerLostPointCombineSoldier
+}
+
+Response PlayerNegativeCombineSoldier
+{
+	sentence "COMBINE_LOST_LONG"
+}
+Rule PlayerNegativeCombineSoldier
+{
+	criteria ConceptPlayerNegative IsCombineSoldier
+	Response PlayerNegativeCombineSoldier
+}
+
+Response PlayerNiceShotCombineSoldier
+{
+	sentence "COMBINE_PLAYERHIT"
+}
+Rule PlayerNiceShotCombineSoldier
+{
+	criteria ConceptPlayerNiceShot IsCombineSoldier
+	Response PlayerNiceShotCombineSoldier
+}
+
+Response PlayerPositiveCombineSoldier
+{
+	sentence "COMBINE_KILL_MONST"
+}
+
+Response PlayerTauntsCombineSoldier
+{
+	sentence "COMBINE_TAUNT"
+}

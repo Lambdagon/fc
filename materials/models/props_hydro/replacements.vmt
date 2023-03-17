@@ -1,0 +1,209 @@
+replacements
+{
+	templates
+	{
+		standard
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$VERTEX_LIT				1
+					
+					$EFFECT					0
+		
+					$basetexture			$basetexture
+					$BASE_STEP_RANGE		"[ 0.0 1.0 ]"
+		
+					$CANVAS					"rj/colorbar3"
+					$CANVAS_SCALE			"[ 0.002 0.002 0.2 ]"
+					$CANVAS_STEP_RANGE		"[ 0.0 1.0 ]"
+					$CANVAS_COLOR_START		"[ 0.0 1.0 0.0 ]"
+					$CANVAS_COLOR_END		"[ 1.0 1.0 0.0 ]"
+				}
+			}
+		}
+
+		barrel_crate
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					$basetexture			"models/props_hydro/barrel_crate_pyro"
+					$vertexcolor			$vertexcolor
+					//$alphatest			1
+
+
+					$DIFFUSE_WHITE			0.9
+					$GRAY_POWER				0.2
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		neutral
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+					
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+		
+					$COLORBAR				"rj/colorbar_wood02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.1
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		white
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					$VERTEX_LIT				1
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+					
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_purple01"
+
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			1.0
+					$GRAY_POWER				0.5
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		peach02
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_peach02"
+					
+					$DIFFUSE_WHITE			0.5
+					$DIFFUSE_BASE			0.2
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		pink
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+		
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.002 0.002 0.002 ]"
+//					$STRIPE_COLOR			"[ 1.0 0.0 0.7 ]"
+		
+					$COLORBAR				"rj/colorbar_pink01"
+					
+					$DIFFUSE_WHITE			0.6
+					$DIFFUSE_BASE			0.3
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+
+
+
+
+	}
+
+	patterns
+	{
+		barrel_crate
+		{
+			template	"barrel_crate"
+		}
+		barricade
+		{
+			template  "neutral"
+		}
+		dump
+		{
+			template	"neutral"
+		}
+		2pipe
+		{
+			template	"peach02"
+		}
+		gorge
+		{
+			template  "neutral"
+		}
+		metal_barrier
+		{
+			template  "neutral"
+		}
+		water_pipes
+		{
+			template	"peach02"
+		}
+		road_bumper01
+		{
+			template  "white"
+		}
+		small_sub
+		{
+			template  "neutral"
+		}
+		water_barrel
+		{
+			template  "pink"
+		}
+		water_machinery
+		{
+			template  "pink"
+		}
+		wood_pallet
+		{
+			template  "peach02"
+		}
+	}
+}
+

@@ -1,0 +1,69 @@
+// sample animation script
+//
+//
+// commands:
+//	Animate <panel name> <variable> <target value> <interpolator> <start time> <duration>
+//		variables:
+//			FgColor
+//			BgColor
+//			Position
+//			Size
+//			Blur		(hud panels only)
+//			TextColor	(hud panels only)
+//			Ammo2Color	(hud panels only)
+//			Alpha		(hud weapon selection only)
+//			SelectionAlpha  (hud weapon selection only)
+//			TextScan	(hud weapon selection only)
+//
+//		interpolator:
+//			Linear
+//			Accel - starts moving slow, ends fast
+//			Deaccel - starts moving fast, ends slow
+//			Spline - simple ease in/out curve
+//			Pulse - < freq > over the duration, the value is pulsed (cosine) freq times ending at the dest value (assuming freq is integral)
+//			Flicker - < randomness factor 0.0 to 1.0 > over duration, each frame if random # is less than factor, use end value, otherwise use prev value
+//
+//	RunEvent <event name> <start time>
+//		starts another even running at the specified time
+//
+//	StopEvent <event name> <start time>
+//		stops another event that is current running at the specified time
+//
+//	StopAnimation <panel name> <variable> <start time>
+//		stops all animations refering to the specified variable in the specified panel
+//
+//	StopPanelAnimations <panel name> <start time>
+//		stops all active animations operating on the specified panel
+//
+//  SetFont <panel name> <fontparameter> <fontname from scheme> <set time> 
+//
+//	SetTexture <panel name> <textureidname> <texturefilename> <set time>
+//
+//  SetString <panel name> <string varname> <stringvalue> <set time>
+
+event MMenu_PlayList_Expand
+{
+	Animate PlayListContainer Tall 300	 Spline	0.50 0.40
+
+	FireCommand 0 "soundentry Panel.SlideDown"
+}
+
+event MMenu_PlayList_Collapse
+{
+	Animate PlayListContainer Tall 0 Spline 0 0.4
+
+	FireCommand 0 "soundentry Panel.SlideUp"
+}
+
+event MMenu_PlayList_Collapse_Immediate
+{
+	Animate PlayListContainer Tall 0 Spline 0 0
+}
+
+event AchievementNotificationBounce
+{
+	Animate AchievementNotificationPanel	Alpha			"0"			Linear 0.0 0.0
+	Animate AchievementNotificationPanel	Alpha			"255"		Linear 0.3 0.5
+	Animate AchievementNotificationPanel	Position		"0 170"		Linear 0 0
+	Animate AchievementNotificationPanel	Position		"0 180"		Bounce 0.0 1.0
+}

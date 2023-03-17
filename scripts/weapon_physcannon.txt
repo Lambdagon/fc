@@ -1,0 +1,84 @@
+// Physics Gun
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_GravityGun"
+	"viewmodel"			"models/weapons/v_physcannon.mdl"
+	"playermodel"		"models/weapons/w_Physics.mdl"
+	"anim_prefix"		"gauss"
+	"bucket"			"3"
+	"bucket_position"	"0"
+	"clip_size"			"1"
+	"primary_ammo"		"None"
+	"default_clip"		"0"
+	"weight"			"0"
+	"autoswitchto"		"0"
+	"autoswitchfrom"	"0"
+	"item_flags"		"2"
+
+	SoundData
+	{
+		// launch held object
+		"single_shot"		"Weapon_PhysCannon.Launch"
+		// Ignore?
+		"reload"			"Weapon_PhysCannon.Charge"
+		// dry fire - no target
+		"empty"				"Weapon_PhysCannon.DryFire"
+		// pick up object
+		"special1"			"Weapon_PhysCannon.Pickup"
+		// open claws, target object
+		"special2"			"Weapon_PhysCannon.OpenClaws"
+		// close claws, target out of range/invalid
+		"melee_hit"			"Weapon_PhysCannon.CloseClaws"
+		// drop object
+		"melee_miss"		"Weapon_PhysCannon.Drop"
+		// too heavy
+		"special3"		"Weapon_PhysCannon.TooHeavy"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"sprites/bucket_physcannon"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"weapon_s"
+		{	
+				"file"		"sprites/bucket_physcannon"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"ammo"
+		{
+				"file"		"sprites/a_icons1"
+				"x"		"55"
+				"y"		"60"
+				"width"		"73"
+				"height"	"15"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"		"0"
+				"y"		"64"
+				"width"		"32"
+				"height"	"32"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"		"0"
+				"y"		"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}

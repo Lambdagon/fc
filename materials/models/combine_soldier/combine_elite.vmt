@@ -1,0 +1,63 @@
+"VertexLitGeneric"
+{
+	"$bumpmap" "models/combine_soldier/combine_elite_normal"
+	"$model" "1"
+	"$selfillum" "1"
+	"$selfillumtint" "[2 1 1]"
+	"$phong" "1"
+	"$phongboost" "5"
+	//"$halflambert" "1"
+	"$phongexponenttexture" "models/combine_soldier/combine_elite_phong"
+	"$phongalbedotint" "1"										
+	"$phongfresnelranges"	"[.1 .5  1]"
+	
+	
+		// Use separate self-illum mask on Pre DX9 hardware
+	">=dx90_20b"
+	{
+		"$baseTexture" 		"Models/Combine_soldier/Combine_elite_noalpha"
+		"$selfillummask" 	"Models/Combine_soldier/combine_elite_selfillummask"
+	}
+
+	// Use redundant self-illum in base alpha on Pre DX9 hardware
+	"<dx90_20b"
+	{
+		"$baseTexture" 	"Models/Combine_soldier/Combine_elite"
+	}
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
+
+
+

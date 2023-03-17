@@ -1,0 +1,119 @@
+replacements
+{
+	templates
+	{
+		standard
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_blue01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		white02
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_white02"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		white02translucent
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+					"$translucent" 1
+
+//					$STRIPETEXTURE			"rj/stripe3"
+//					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+//					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+		
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_white02"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+		dirtground
+		{
+			"LightmappedGeneric"
+			{
+				pyro_vision
+				{
+					$basetexture			$basetexture
+					$vertexcolor			$vertexcolor
+
+					$STRIPETEXTURE			"rj/stripe4"
+					$STRIPE_SCALE			"[ 0.001 0.001 0.001 ]"
+					$STRIPE_COLOR                   "[0.6 0.25 0.20]"
+					$STRIPE_LM_SCALE     		1.0
+					$EFFECT					1
+					$COLORBAR				"rj/colorbar_green01"
+
+					$DIFFUSE_WHITE			0.5
+					$GRAY_POWER				0.4
+					$GRAY_STEP				"[ 0.0 1.0 ]"
+					$LIGHTMAP_GRADIENTS		255
+				}
+			}
+		}
+	}
+	patterns
+	{
+		buildingset040a
+		{
+			template	"white02"
+		}
+		buildingset056a
+		{
+			template	"white02translucent"
+		}
+		buildingset056b
+		{
+			template	"white02translucent"
+		}
+		citymap
+		{
+			template	"dirtground"
+		}
+	}
+}
+

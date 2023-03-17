@@ -1,0 +1,61 @@
+"VertexLitGeneric"
+{
+
+	"$bumpmap" "models/combine_soldier/combinesoldiersheet_prisonguard_normal"
+	"$surfaceprop" "flesh"
+	"$selfillum" 1
+	"$selfillumtint" "[4 .25 .1]"
+	"$model" 1
+	"$phong" 1
+	"$phongboost" "4"
+	//"$halflambert" "1"
+	"$phongexponenttexture" "models/combine_soldier/combinesoldiersheet_prisonguard_grey"
+	"$phongalbedotint" "1"										
+	"$phongfresnelranges"	"[.1 .5 1.0]"
+
+	// Use separate self-illum mask on Pre DX9 hardware
+	">=dx90_20b"
+	{
+		"$baseTexture" 		"Models/Combine_soldier/combinesoldier_prisonguard_noalpha"
+		"$selfillummask" 	"Models/Combine_soldier/combinesoldierselfillummask"
+	}
+
+	// Use redundant self-illum in base alpha on Pre DX9 hardware
+	"<dx90_20b"
+	{
+		"$baseTexture" 		"Models/Combine_soldier/combinesoldiersheet_prisonguard"
+	}
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "6"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

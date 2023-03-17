@@ -1,0 +1,141 @@
+// Physics Sounds
+//
+//	NOTE:  CHAN_BODY is used by sounds in many cases, but the code
+//   uses CHAN_STATIC in others, so I didn't specify a channel here
+//  Volume is determined procedurally by the physics code
+//
+
+// *****************
+// SURFACE MATERIALS
+
+"CavernRock.ImpactSoft"
+{
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"ambient/levels/outland/stalactitehit01.wav"
+		"wave"		"ambient/levels/outland/stalactitehit02.wav"
+		"wave"		"ambient/levels/outland/stalactitehit03.wav"
+	}
+}
+
+"CavernRock.ImpactHard"
+{
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"0.6"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"ambient/levels/outland/stalactitehit01.wav"
+		"wave"		"ambient/levels/outland/stalactitehit02.wav"
+		"wave"		"ambient/levels/outland/stalactitehit03.wav"
+	}
+}
+
+// quieter physcannon open claw/drop sounds
+
+"Weapon_PhysCannon_ep.OpenClaws"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.22"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/physcannon/physcannon_claws_open.wav"
+}
+
+"Weapon_PhysCannon_ep.CloseClaws"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.22"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/physcannon/physcannon_claws_close.wav"
+}
+
+"Weapon_PhysCannon_ep.Drop"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"0.22"
+	"soundlevel"	"SNDLVL_105dB"
+
+	"wave"			"weapons/physcannon/physcannon_drop.wav"
+}
+
+"Weapon_MegaPhysCannon_ep.Drop"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"0.22"
+	"soundlevel"	"SNDLVL_105dB"
+	"pitch"		"50,60"
+
+	"wave"			"weapons/physcannon/physcannon_drop.wav"
+}
+
+"Weapon_PhysCannon_ep.HoldSound"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.3"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/physcannon/hold_loop.wav"
+}
+
+"Weapon_MegaPhysCannon_ep.HoldSound"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.3"
+	"soundlevel"	"SNDLVL_NORM"
+	"pitch"		"100"
+
+	"wave"			"weapons/physcannon/superphys_hold_loop.wav"
+}
+
+"Water.ImpactSoft"
+{
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"physics/surfaces/underwater_impact_bullet1.wav"
+		"wave"		"physics/surfaces/underwater_impact_bullet2.wav"
+		"wave"		"physics/surfaces/underwater_impact_bullet3.wav"
+	}
+}
+
+"Water.ImpactHard"
+{
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"0.6"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"ambient/water/water_splash1.wav"
+		"wave"		"ambient/water/water_splash2.wav"
+		"wave"		"ambient/water/water_splash3.wav"
+	}
+}
+// body impact sounds
+"Body.ImpactSoft"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"physics\body\body_medium_impact_soft4.wav"
+}
+
+"Body.ImpactMedium"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"physics\body\body_medium_impact_soft7.wav"
+}
