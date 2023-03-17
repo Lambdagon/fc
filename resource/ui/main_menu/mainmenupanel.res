@@ -791,44 +791,13 @@
 		}
 	}
 
-	"BlogToggleCheck"
-	{
-		"ControlName"		"CTFCvarToggleCheckButton"
-		"fieldName"			"BlogToggleCheck"
-		"xpos"				"c200"
-		"ypos"				"30"
-		"zpos"				"10"
-		"wide"				"32"
-		"tall"				"32"
-		"visible"			"1"
-		"enabled"			"1"
-		"bordervisible"		"1"
-		"labelText" 		""
-		"cvar_name"			"lfe_ui_mainmenu_news"	
-		"autochange"		"1"
-		"inverted"			"0"
-
-		"labelText" 		""
-		"xshift" 			"0"
-		"yshift" 			"-1"
-		"tooltip" 			"#MMenu_Tooltip_ToggleBlog"
-		"textAlignment"		"center"
-		"font"				"MenuSmallFont"
-		"border_default"	"AdvRoundedButtonDefault"
-		"border_armed"		"AdvRoundedButtonArmed"
-		"border_depressed"	"AdvRoundedButtonDepressed"
 
 		"SubImage"
 		{
-			"image" 			"glyph_tv"
-			"scaleImage"		"1"
-			"imagewidth"		"24"
-		}
-		"SubCheckImage"
-		{
-			"image" 		"main_menu/glyph_disabled"
 			"scaleImage"	"1"
-		}
+			"image" 			"glyph_multiplayer_conc"
+			"imagewidth"		"14"
+		}				
 	}
 
 	"VersionLabelVerText"
@@ -844,7 +813,7 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"labelText"			"Version: March 2020"
+		"labelText"			"Version: April 2023"
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"

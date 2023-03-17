@@ -9,7 +9,7 @@
 		"zpos"				"3"
 		"wide"				"320"
 		"tall"				"330"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
 	}	
 
@@ -22,7 +22,7 @@
 		"zpos"				"4"
 		"wide"				"300"
 		"tall"				"30"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
 		"border"			"MainMenuBGBorder"
 	}
@@ -38,7 +38,7 @@
 		"tall"				"20"
 		"autoResize"		"0"
 		"pinCorner"			"0"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
 		"alpha"				"255"
 		"labelText"			"#MMenu_Changelog"
@@ -56,7 +56,7 @@
 		"zpos"				"2"
 		"wide"				"390"
 		"tall"				"310"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
 		"font"				"MenuMainTitle"
 	}
