@@ -1,0 +1,710 @@
+//--------------------------------------------------------------------------------------------------------------
+// Civilian Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Criterion "CivilianIsNotStillonFire" "CivilianOnFire" "!=1" "required" weight 0
+Criterion "CivilianIsStillonFire" "CivilianOnFire" "1" "required" weight 0
+Criterion "NotCivilianGrabbedIntelligence" "CivilianGrabbedIntelligence" "!=1" "required"
+Criterion "CivilianNotKillSpeechMelee" "CivilianKillSpeechMelee" "!=1" "required" weight 0
+
+
+Response PlayerCloakedSpyDemomanCivilian
+{
+	speak "Civilian.CloakedSpyIdentify05"
+}
+Rule PlayerCloakedSpyDemomanCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnDemoman
+	Response PlayerCloakedSpyDemomanCivilian
+}
+
+Response PlayerCloakedSpyEngineerCivilian
+{
+	speak "Civilian.CloakedSpyIdentify08"
+}
+Rule PlayerCloakedSpyEngineerCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnEngineer
+	Response PlayerCloakedSpyEngineerCivilian
+}
+
+Response PlayerCloakedSpyHeavyCivilian
+{
+	speak "Civilian.CloakedSpyIdentify03"
+}
+Rule PlayerCloakedSpyHeavyCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnHeavy
+	Response PlayerCloakedSpyHeavyCivilian
+}
+
+Response PlayerCloakedSpyMedicCivilian
+{
+	speak "Civilian.CloakedSpyIdentify07"
+}
+Rule PlayerCloakedSpyMedicCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnMedic
+	Response PlayerCloakedSpyMedicCivilian
+}
+
+Response PlayerCloakedSpyPyroCivilian
+{
+	speak "Civilian.CloakedSpyIdentify04"
+}
+Rule PlayerCloakedSpyPyroCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnPyro
+	Response PlayerCloakedSpyPyroCivilian
+}
+
+Response PlayerCloakedSpyScoutCivilian
+{
+	speak "Civilian.CloakedSpyIdentify01"
+}
+Rule PlayerCloakedSpyScoutCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnScout
+	Response PlayerCloakedSpyScoutCivilian
+}
+
+Response PlayerCloakedSpySniperCivilian
+{
+	speak "Civilian.CloakedSpyIdentify09"
+}
+Rule PlayerCloakedSpySniperCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnSniper
+	Response PlayerCloakedSpySniperCivilian
+}
+
+Response PlayerCloakedSpySoldierCivilian
+{
+	speak "Civilian.CloakedSpyIdentify02"
+}
+Rule PlayerCloakedSpySoldierCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnSoldier
+	Response PlayerCloakedSpySoldierCivilian
+}
+
+Response PlayerCloakedSpySpyCivilian
+{
+	speak "Civilian.CloakedSpyIdentify06"
+}
+Rule PlayerCloakedSpySpyCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnSpy
+	Response PlayerCloakedSpySpyCivilian
+}
+
+Response PlayerCloakedSpyCivilianCivilian
+{
+	speak "Civilian.CloakedSpyIdentify10"
+}
+Rule PlayerCloakedSpyCivilianCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian IsOnCivilian
+	Response PlayerCloakedSpyCivilianCivilian
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerRoundStartCivilian
+{
+	speak "Civilian.BattleCry01" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry02" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry03" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry04" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry05" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry06" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry07" predelay "1.0, 5.0"
+	speak "Civilian.BattleCry08" predelay "1.0, 5.0"
+}
+Rule PlayerRoundStartCivilian
+{
+	criteria ConceptPlayerRoundStart IsCivilian
+	Response PlayerRoundStartCivilian
+}
+
+Response PlayerCappedIntelligenceCivilian
+{
+	speak "Civilian.AutoCappedIntelligence01" 
+	speak "Civilian.AutoCappedIntelligence02" 
+	speak "Civilian.AutoCappedIntelligence03" 
+	speak "Civilian.AutoCappedIntelligence04" 
+}
+Rule PlayerCappedIntelligenceCivilian
+{
+	criteria ConceptPlayerCapturedIntelligence IsCivilian
+	Response PlayerCappedIntelligenceCivilian
+}
+
+Response PlayerCapturedPointCivilian
+{
+	speak "Civilian.AutoCappedControlPoint01"
+	speak "Civilian.AutoCappedControlPoint02"
+	speak "Civilian.AutoCappedControlPoint03"
+	speak "Civilian.AutoCappedControlPoint04" 
+	speak "Civilian.AutoCappedControlPoint05" 
+}
+Rule PlayerCapturedPointCivilian
+{
+	criteria ConceptPlayerCapturedPoint IsCivilian
+	Response PlayerCapturedPointCivilian
+}
+
+Response PlayerGrabbedIntelligenceCivilian
+{
+	speak "Civilian.SpecialCompleted01"
+	speak "Civilian.SpecialCompleted02"
+	speak "Civilian.SpecialCompleted03"
+	speak "Civilian.SpecialCompleted04"
+}
+Rule PlayerGrabbedIntelligenceCivilian
+{
+	criteria ConceptPlayerGrabbedIntelligence IsCivilian NotCivilianGrabbedIntelligence
+	ApplyContext "CivilianGrabbedIntelligence:1:30"
+	Response PlayerGrabbedIntelligenceCivilian
+}
+
+Response PlayerSuddenDeathCivilian
+{
+	speak "Civilian.Jeers01"
+	speak "Civilian.Jeers02"
+	speak "Civilian.Jeers03"
+	speak "Civilian.Jeers04"
+	speak "Civilian.Jeers05"
+}
+Rule PlayerSuddenDeathCivilian
+{
+	criteria ConceptPlayerSuddenDeathStart IsCivilian
+	Response PlayerSuddenDeathCivilian
+}
+
+Response PlayerStalemateCivilian
+{
+	speak "Civilian.AutoDejectedTie01"
+	speak "Civilian.AutoDejectedTie02"
+}
+Rule PlayerStalemateCivilian
+{
+	criteria ConceptPlayerStalemate IsCivilian
+	Response PlayerStalemateCivilian
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Pain
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerAttackerPainCivilian
+{
+	speak "Civilian.PainSevere01"
+	speak "Civilian.PainSevere02"
+	speak "Civilian.PainSevere03"
+	speak "Civilian.PainSevere04"
+}
+Rule PlayerAttackerPainCivilian
+{
+	criteria ConceptAttackerPain IsCivilian
+	Response PlayerAttackerPainCivilian
+}
+
+Response PlayerOnFireCivilian
+{
+	speak "Civilian.AutoOnFire04"
+	speak "Civilian.AutoOnFire05"
+	speak "Civilian.AutoOnFire06"
+}
+Rule PlayerOnFireCivilian
+{
+	criteria ConceptFire IsCivilian CivilianIsNotStillonFire
+	ApplyContext "CivilianOnFire:1:7"
+	Response PlayerOnFireCivilian
+}
+
+Response PlayerOnFireRareCivilian
+{
+	speak "Civilian.AutoOnFire01"
+	speak "Civilian.AutoOnFire02"
+	speak "Civilian.AutoOnFire03"
+	speak "Civilian.AutoOnFire07"
+}
+Rule PlayerOnFireRareCivilian
+{
+	criteria ConceptFire IsCivilian 10PercentChance CivilianIsNotStillonFire
+	ApplyContext "CivilianOnFire:1:7"
+	Response PlayerOnFireRareCivilian
+}
+
+Response PlayerPainCivilian
+{
+	speak "Civilian.PainSharp01"
+	speak "Civilian.PainSharp02"
+	speak "Civilian.PainSharp03"
+	speak "Civilian.PainSharp04"
+}
+Rule PlayerPainCivilian
+{
+	criteria ConceptPain IsCivilian
+	Response PlayerPainCivilian
+}
+
+Response PlayerStillOnFireCivilian
+{
+	speak "Civilian.autoonfiresecondary01"
+}
+Rule PlayerStillOnFireCivilian
+{
+	criteria ConceptFire IsCivilian  CivilianIsStillonFire
+	ApplyContext "CivilianOnFire:1:7"
+	Response PlayerStillOnFireCivilian
+}
+
+Response KilledPlayerMeleeCivilian
+{
+	speak "Civilian.Domination01"
+	speak "Civilian.Domination04"
+	speak "Civilian.Domination07"
+}
+Rule KilledPlayerMeleeCivilian
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 50PercentChance IsWeaponMelee CivilianNotKillSpeechMelee IsCivilian
+	ApplyContext "CivilianKillSpeechMelee:1:10"
+	Response KilledPlayerMeleeCivilian
+}
+
+Response PlayerKilledDominatingCivilian
+{
+	speak "Civilian.Domination01" predelay "2.5"
+	speak "Civilian.Domination02" predelay "2.5"
+	speak "Civilian.Domination03" predelay "2.5"
+	speak "Civilian.Domination04" predelay "2.5"
+	speak "Civilian.Domination05" predelay "2.5"
+	speak "Civilian.Domination06" predelay "2.5"
+	speak "Civilian.Domination07" predelay "2.5"
+}
+Rule PlayerKilledDominatingCivilian
+{
+	criteria ConceptKilledPlayer IsCivilian IsDominated
+	ApplyContext "CivilianKillSpeech:1:7"
+	ApplyContext "IsDominating:1:7"
+	Response PlayerKilledDominatingCivilian
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 1
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerGoCivilian
+{
+	speak "Civilian.Go01"
+	speak "Civilian.Go02"
+	speak "Civilian.Go03"
+	speak "Civilian.Go04"
+}
+Rule PlayerGoCivilian
+{
+	criteria ConceptPlayerGo IsCivilian
+	Response PlayerGoCivilian
+}
+
+Response PlayerHeadLeftCivilian
+{
+	speak "Civilian.HeadLeft01"
+	speak "Civilian.HeadLeft02"
+	speak "Civilian.HeadLeft03"
+}
+Rule PlayerHeadLeftCivilian
+{
+	criteria ConceptPlayerLeft  IsCivilian
+	Response PlayerHeadLeftCivilian
+}
+
+Response PlayerHeadRightCivilian
+{
+	speak "Civilian.HeadRight01"
+	speak "Civilian.HeadRight02"
+	speak "Civilian.HeadRight03"
+}
+Rule PlayerHeadRightCivilian
+{
+	criteria ConceptPlayerRight  IsCivilian
+	Response PlayerHeadRightCivilian
+}
+
+Response PlayerHelpCivilian
+{
+	speak "Civilian.HelpMe01"
+	speak "Civilian.HelpMe02"
+	speak "Civilian.HelpMe03"
+}
+Rule PlayerHelpCivilian
+{
+	criteria ConceptPlayerHelp IsCivilian
+	Response PlayerHelpCivilian
+}
+
+Response PlayerHelpCaptureCivilian
+{
+	speak "Civilian.HelpMeCapture01"
+	speak "Civilian.HelpMeCapture02"
+	speak "Civilian.HelpMeCapture03"
+	speak "Civilian.HelpMeCapture04"
+}
+Rule PlayerHelpCaptureCivilian
+{
+	criteria ConceptPlayerHelp IsCivilian IsOnCappableControlPoint
+	ApplyContext "CivilianHelpCap:1:7"
+	Response PlayerHelpCaptureCivilian
+}
+
+Response PlayerMedicCivilian
+{
+	speak "Civilian.Medic01"
+	speak "Civilian.Medic02"
+	speak "Civilian.Medic03"
+}
+Rule PlayerMedicCivilian
+{
+	criteria ConceptPlayerMedic IsCivilian
+	Response PlayerMedicCivilian
+}
+
+// Custom Medic follow
+Response MedicFollowCivilian
+{
+	speak "Civilian.MedicFollow01" predelay ".25"
+	speak "Civilian.MedicFollow02" predelay ".25"
+	speak "Civilian.MedicFollow03" predelay ".25"
+	speak "Civilian.MedicFollow04" predelay ".25"
+	speak "Civilian.MedicFollow05" predelay ".25"
+}
+Rule MedicFollowCivilian
+{
+	criteria ConceptPlayerMedic IsOnMedic IsCivilian IsNotCrossHairEnemy NotLowHealth CivilianIsNotStillonFire
+	Response MedicFollowCivilian
+}
+
+Response PlayerMoveUpCivilian
+{
+	speak "Civilian.MoveUp01"
+	speak "Civilian.MoveUp02"
+	speak "Civilian.MoveUp03"
+}
+Rule PlayerMoveUpCivilian
+{
+	criteria ConceptPlayerMoveUp  IsCivilian
+	Response PlayerMoveUpCivilian
+}
+
+Response PlayerNoCivilian
+{
+	speak "Civilian.No01"
+	speak "Civilian.No02"
+	speak "Civilian.No03"
+	speak "Civilian.No04"
+}
+Rule PlayerNoCivilian
+{
+	criteria ConceptPlayerNo  IsCivilian
+	Response PlayerNoCivilian
+}
+
+Response PlayerThanksCivilian
+{
+	speak "Civilian.Thanks01"
+	speak "Civilian.Thanks02"
+	speak "Civilian.Thanks03"
+	speak "Civilian.Thanks04"
+}
+Rule PlayerThanksCivilian
+{
+	criteria ConceptPlayerThanks IsCivilian
+	Response PlayerThanksCivilian
+}
+
+Response PlayerYesCivilian
+{
+	speak "Civilian.Yes01"
+	speak "Civilian.Yes02"
+	speak "Civilian.Yes03"
+	speak "Civilian.Yes04"
+	speak "Civilian.Yes05"
+}
+Rule PlayerYesCivilian
+{
+	criteria ConceptPlayerYes  IsCivilian
+	Response PlayerYesCivilian
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 2
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerActivateChargeCivilian
+{
+	speak "Civilian.ActivateCharge01"
+	speak "Civilian.ActivateCharge02"
+	speak "Civilian.ActivateCharge03"
+	speak "Civilian.ActivateCharge04"
+	speak "Civilian.ActivateCharge05"
+}
+Rule PlayerActivateChargeCivilian
+{
+	criteria ConceptPlayerActivateCharge IsCivilian
+	Response PlayerActivateChargeCivilian
+}
+
+Response PlayerCloakedSpyCivilian
+{
+	speak "Civilian.CloakedSpy01"
+	speak "Civilian.CloakedSpy02"
+}
+Rule PlayerCloakedSpyCivilian
+{
+	criteria ConceptPlayerCloakedSpy IsCivilian
+	Response PlayerCloakedSpyCivilian
+}
+
+Response PlayerDispenserHereCivilian
+{
+	speak "Civilian.NeedDispenser01"
+}
+Rule PlayerDispenserHereCivilian
+{
+	criteria ConceptPlayerDispenserHere IsCivilian
+	Response PlayerDispenserHereCivilian
+}
+
+Response PlayerIncomingCivilian
+{
+	speak "Civilian.Incoming01"
+	speak "Civilian.Incoming02"
+	speak "Civilian.Incoming03"
+}
+Rule PlayerIncomingCivilian
+{
+	criteria ConceptPlayerIncoming IsCivilian
+	Response PlayerIncomingCivilian
+}
+
+Response PlayerSentryAheadCivilian
+{
+	speak "Civilian.SentryAhead01"
+	speak "Civilian.SentryAhead02"
+	speak "Civilian.SentryAhead03"
+}
+Rule PlayerSentryAheadCivilian
+{
+	criteria ConceptPlayerSentryAhead IsCivilian
+	Response PlayerSentryAheadCivilian
+}
+
+Response PlayerSentryHereCivilian
+{
+	speak "Civilian.NeedSentry01"
+}
+Rule PlayerSentryHereCivilian
+{
+	criteria ConceptPlayerSentryHere IsCivilian
+	Response PlayerSentryHereCivilian
+}
+
+Response PlayerTeleporterHereCivilian
+{
+	speak "Civilian.NeedTeleporter01"
+}
+Rule PlayerTeleporterHereCivilian
+{
+	criteria ConceptPlayerTeleporterHere IsCivilian
+	Response PlayerTeleporterHereCivilian
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 3
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerBattleCryCivilian
+{
+	speak "Civilian.BattleCry01"
+	speak "Civilian.BattleCry02"
+	speak "Civilian.BattleCry03"
+	speak "Civilian.BattleCry04"
+	speak "Civilian.BattleCry05"
+	speak "Civilian.BattleCry06"
+	speak "Civilian.BattleCry07"
+	speak "Civilian.BattleCry08"
+}
+Rule PlayerBattleCryCivilian
+{
+	criteria ConceptPlayerBattleCry IsCivilian
+	Response PlayerBattleCryCivilian
+}
+
+Response PlayerCheersCivilian
+{
+	speak "Civilian.Cheers01"
+	speak "Civilian.Cheers02"
+	speak "Civilian.Cheers03"
+}
+Rule PlayerCheersCivilian
+{
+	criteria ConceptPlayerCheers IsCivilian
+	Response PlayerCheersCivilian
+}
+
+Response PlayerGoodJobCivilian
+{
+	speak "Civilian.GoodJob01"
+	speak "Civilian.GoodJob02"
+	speak "Civilian.GoodJob03"
+	speak "Civilian.GoodJob04"
+}
+Rule PlayerGoodJobCivilian
+{
+	criteria ConceptPlayerGoodJob IsCivilian
+	Response PlayerGoodJobCivilian
+}
+
+Response PlayerJeersCivilian
+{
+	speak "Civilian.Jeers01"
+	speak "Civilian.Jeers02"
+	speak "Civilian.Jeers03"
+	speak "Civilian.Jeers04"
+	speak "Civilian.Jeers05"
+}
+Rule PlayerJeersCivilian
+{
+	criteria ConceptPlayerJeers IsCivilian
+	Response PlayerJeersCivilian
+}
+
+Response PlayerLostPointCivilian
+{
+	speak "Civilian.NegativeVocalization01"
+	speak "Civilian.NegativeVocalization02"
+	speak "Civilian.NegativeVocalization03"
+	speak "Civilian.NegativeVocalization04"
+	speak "Civilian.NegativeVocalization05"
+}
+Rule PlayerLostPointCivilian
+{
+	criteria ConceptPlayerLostPoint IsCivilian
+	Response PlayerLostPointCivilian
+}
+
+Response PlayerNegativeCivilian
+{
+	speak "Civilian.NegativeVocalization01"
+	speak "Civilian.NegativeVocalization02"
+	speak "Civilian.NegativeVocalization03"
+	speak "Civilian.NegativeVocalization04"
+	speak "Civilian.NegativeVocalization05"
+}
+Rule PlayerNegativeCivilian
+{
+	criteria ConceptPlayerNegative IsCivilian
+	Response PlayerNegativeCivilian
+}
+
+Response PlayerNiceShotCivilian
+{
+	speak "Civilian.NiceShot01"
+	speak "Civilian.NiceShot02"
+	speak "Civilian.NiceShot03"
+}
+Rule PlayerNiceShotCivilian
+{
+	criteria ConceptPlayerNiceShot IsCivilian
+	Response PlayerNiceShotCivilian
+}
+
+Response PlayerPositiveCivilian
+{
+	speak "Civilian.PositiveVocalization01"
+	speak "Civilian.PositiveVocalization02"
+	speak "Civilian.PositiveVocalization03"
+}
+Rule PlayerPositiveCivilian
+{
+	criteria ConceptPlayerPositive IsCivilian
+	Response PlayerPositiveCivilian
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Round Win Responses
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerSuccessCivilian
+{
+	speak "Civilian.success01"
+	speak "Civilian.success02"
+	speak "Civilian.success03"
+	speak "Civilian.success04"
+	speak "Civilian.success05"
+	speak "Civilian.success06"
+	speak "Civilian.success07"
+	speak "Civilian.success08"
+}
+Rule PlayerSuccessCivilian
+{
+	criteria ConceptPlayerSuccess IsCivilian
+	Response PlayerSuccessCivilian
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Round Lose Responses
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerFailureCivilian
+{
+	speak "Civilian.failure01" predelay "6.0"
+	speak "Civilian.failure02" predelay "6.0"
+	speak "Civilian.failure03" predelay "6.0"
+	speak "Civilian.failure04" predelay "6.0"
+	speak "Civilian.failure05" predelay "6.0"
+}
+Rule PlayerVictoryCivilian
+{
+	criteria ConceptPlayerFailure IsCivilian
+	Response PlayerFailureCivilian
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Cart
+//--------------------------------------------------------------------------------------------------------------
+Criterion "CivilianNotSaidCartMovingForwardD" "SaidCartMovingForwardD" "!=1" "required" weight 0
+Criterion "CivilianNotSaidCartMovingForwardO" "SaidCartMovingForwardO" "!=1" "required" weight 0
+Criterion "CivilianNotSaidCartMovingStoppedD" "SaidCartMovingStoppedD" "!=1" "required" weight 0
+Criterion "CivilianNotSaidCartMovingStoppedO" "SaidCartMovingStoppedO" "!=1" "required" weight 0
+Response CartMovingForwardOffenseCivilian                                                       
+{
+	speak "Civilian.cartmovingforwardoffense01"
+	speak "Civilian.cartmovingforwardoffense02"
+	speak "Civilian.cartmovingforwardoffense03"
+	speak "Civilian.cartmovingforwardoffense04"
+	speak "Civilian.cartstaycloseoffense01"
+	speak "Civilian.cartstaycloseoffense02"
+	speak "Civilian.cartstaycloseoffense03"
+}
+Rule CartMovingForwardOffenseCivilian                                                      
+{
+	criteria ConceptCartMovingForward IsOnOffense IsCivilian CivilianNotSaidCartMovingForwardO IsNotDisguised 75PercentChance                                                                                                                                                            
+	ApplyContext "SaidCartMovingForwardO:1:20"
+	Response CartMovingForwardOffenseCivilian                                                       
+}
+Response CartMovingStoppedOffenseCivilian                                                       
+{
+	speak "Civilian.cartstoppedoffense01"
+	speak "Civilian.cartstoppedoffense02"
+}
+Rule CartMovingStoppedOffenseCivilian                                                       
+{
+	criteria ConceptCartMovingStopped IsOnOffense IsCivilian CivilianNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance                                                                                                                                                            
+	ApplyContext "SaidCartMovingStoppedO:1:20"
+	Response CartMovingStoppedOffenseCivilian                                                       
+}
+//--------------------------------------------------------------------------------------------------------------
+// END OF Auto Speech Cart
+//--------------------------------------------------------------------------------------------------------------
