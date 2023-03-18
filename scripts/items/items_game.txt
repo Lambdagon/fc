@@ -19032,9 +19032,9 @@
 			"image_inventory"	"backpack/player/items/all_class/all_pan"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_crowbar.mdl"
-			"model_player"	"models/weapons/tfc/v_umbrella.mdl"
-			"attach_to_hands"	"0"
+			"model_player"	"models/weapons/v_models/v_umbrella_civilian.mdl"
+			"model_world"	"models/weapons/w_models/w_umbrella.mdl"
+			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -19044,9 +19044,28 @@
 			{
 				"civilian"	"1"
 			}
-			"static_attrs"
+			"attributes"
 			{
-				"min_viewmodel_offset"		"10 0 -7"
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"51" 
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value"	"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.70"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -19187,36 +19206,53 @@
 		}
 		"9039"
 		{
-			"name"	"Zombie Claw"
+			"name"	"HL2 Crowbar"
 			"item_class"	"tf_weapon_zombie_claw"
-			"baseitem" "1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"tags"
 			{
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"item_type_name"	"#TF_Weapon_Claw"
-			"item_name"	"#TF_Weapon_Claw"
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_Weapon_Crowbar"
+			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
+			"image_inventory"	"backpack/player/items/all_class/all_pan"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/empty.mdl"
-			"attach_to_hands" "0"
+			"model_player"	"models/weapons/v_models/v_crowbar.mdl"
+			"model_world"	"models/weapons/w_models/w_crowbar.mdl"
+			"attach_to_hands"	"0"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
+			"baseitem"	"1"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"zombie"		"1"
+				"zombie"	"1"
 				"zombiefast"	"1"
+				"rebel"			"1"
 			}
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_melee_miss"		"Weapon_Crowbar.Miss"
+				"sound_burst"			"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9040"
 		{
@@ -19354,6 +19390,119 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"5"
 				}
+			}
+		}
+		"9097"
+		{
+			"name"						"HL2 SMG"
+			"item_class"					"tf_weapon_smg"
+			"item_name"					"SMG1 HL2"
+			"image_inventory"			"backpack/weapons/w_models/w_smg"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_slot"					"primary"
+			"attach_to_hands"			"0"
+			"model_world"				"models/weapons/w_smg1.mdl"
+			"model_player"				"models/weapons/v_smg1.mdl"
+			"baseitem"	"1"
+			"baseitem"					"1"
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.7"
+				}
+				"clip size bonus"
+				{
+				"attribute_class"	"mult_clipsize"
+				"value"	"1.8"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.75"
+				}
+			}
+			"used_by_classes"
+			{
+				"zombiefast"			"primary"
+				"rebel"					"primary"
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_SMG1.Single"
+				"sound_burst"	"Weapon_SMG1.Single"
+			}
+		}
+		"9098"
+		{
+			"name"	"USP Match"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"USP Match"
+			"item_description"	"Part of Lambda's  Weapon pack"
+			"item_slot"	"secondary"
+			"item_logname"	"maxgun"
+			"item_iconname"	"pistol"
+			"image_inventory"	"backpack/weapons/w_models/w_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_pistol.mdl"
+			"attach_to_hands"	"0"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"baseitem"		"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"zombiefast"	"1"
+				"rebel"			"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"visuals"
+			{
+				"sound_single_shot"	"HL2_Weapon_Pistol.Single"
+				"sound_burst"	"HL2_Weapon_Pistol.NPC_Single"
+				"sound_reload"	"HL2_Weapon_Pistol.Reload"
+				"animation_replacement"
+				{
+					"ACT_RELOAD_START"	""
+					"ACT_VM_RELOAD"	""
+					"ACT_RELOAD" ""
+					"ACT_RELOAD_FINISH"	"ACT_RELOAD"
+				}
+			}
+			"xifier_class_remap"	"TTG Max Pistol"
+			"attributes"
+			{
+				"clip size bonus"
+				{
+				"attribute_class"	"mult_clipsize"
+				"value"	"1.8"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+
 			}
 		}
 		"30570"

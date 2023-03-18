@@ -1,0 +1,84 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/player/civilian_vip/hwm/civilian_head"
+	"$basemapalphaphongmask" "0"
+	"$compress"    "models/player/civilian_vip/hwm/civilian_head_compress"
+	"$stretch"     "models/player/civilian_vip/hwm/civilian_head_stretch"
+	"$bumpmap"     "models/player/civilian_vip/hwm/civilian_head_normal"
+	
+	"$ambientocclusion" "0.75"
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .0
+	"$detailblendmode" 6
+	"$bbqamount" "1"	
+	"$two" "2.35"
+	"$one" "1"
+	"$absburnminusone" "1"
+	"$burnminusone" "1"
+	"$finalburnlevel" "1"
+	"$burnlevel" "0"
+
+
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/player/civilian_vip/hwm/civilian_head_exponent"
+	"$phongboost" "0.25"
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.3 1 8]"
+	"$halflambert" "0"
+
+	"$rimlight" "1"					// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"			// Exponent for phong component of rim lighting	
+	"$rimlightboost" "2"			// Boost for ambient cube component of rim lighting
+	"$rimmask" "1"                  // Use the alpha channel of the $phongexponenttexture as a rim mask.
+
+	"$cloakColorTint" "[1 0.5 0.4]"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+
+		"BurnLevel"
+		{
+			"resultVar" "$burnlevel"
+		}
+		"Subtract"
+		{
+			"srcVar1" "$burnlevel"
+			"srcVar2" "$one"
+			"resultVar" "$burnminusone"
+		}
+		"Abs"
+		{
+			"srcVar1" "$burnminusone" 
+			"resultVar" "$absburnminusone"
+		}
+
+		"Subtract"
+		{
+			"srcVar1" "$one"
+			"srcVar2" "$absburnminusone"
+			"resultVar" "$finalburnlevel"
+		}
+
+
+		"Equals"
+		{
+			"srcVar1" "$finalburnlevel"
+			"resultVar" "$detailblendfactor"
+		}
+	
+
+	}
+}
