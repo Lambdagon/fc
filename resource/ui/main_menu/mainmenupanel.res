@@ -108,7 +108,7 @@
 		"ypos"			"160"
 		"zpos"			"-1"
 		"wide"			"265"
-		"tall"			"60"
+		"tall"			"195"
 		"visible"		"1"
 		"pinCorner"		"0"
 		"autoResize"	"0"
@@ -117,24 +117,6 @@
 		//"bgcolor_override"	"100 255 150 55"
 		"mouseinputenabled"	"0"
 	}
-	"PlayLabel"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"PlayLabel"
-		"font"			"HudFontSmallBold"
-		"labelText"		"#MMenu_Play"
-		"textAlignment"	"west"
-		"xpos"			"40"
-		"ypos"			"160"
-		"wide"			"140"
-		"tall"			"30"
-		"autoResize"	"0"
-		"pinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"fgcolor_override"	"235 227 203 255"
-	}
-
 	"BlogPanel"
 	{
 		"ControlName"		"CTFBlogPanel"
@@ -283,9 +265,9 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"ServerBrowserButton"
 		"xpos"					"35"
-		"ypos"					"190"
+		"ypos"					"170"
 		"zpos"					"5"
-		"wide"					"124"
+		"wide"					"254"
 		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
@@ -313,10 +295,10 @@
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"MultiplayerGameButton"
-		"xpos"					"165"
-		"ypos"					"190"
+		"xpos"					"35"
+		"ypos"					"200"
 		"zpos"					"11"
-		"wide"					"124"
+		"wide"					"254"
 		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
@@ -340,46 +322,14 @@
 		}	
 	}
 
-	"CustomizeBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"StoreBGPanel"
-		"xpos"			"30"
-		"ypos"			"230"
-		"zpos"			"-1"
-		"wide"			"265"
-		"tall"			"60"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-		"border"		"MainMenuBGBorder"
-		
-		"CustomizeLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"CustomizeLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_Customize"
-			"textAlignment"	"west"
-			"xpos"			"10"
-			"ypos"			"0"
-			"wide"			"140"
-			"tall"			"30"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"235 227 203 255"
-		}
-	}
-
 	"LoadoutButton"
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"LoadoutButton"
 		"xpos"					"35"
-		"ypos"					"260"
+		"ypos"					"230"
 		"zpos"					"11"
-		"wide"					"124"
+		"wide"					"254"
 		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
@@ -407,10 +357,10 @@
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"OptionsDialogButton"
-		"xpos"					"165"
+		"xpos"					"35"
 		"ypos"					"260"
 		"zpos"					"11"
-		"wide"					"124"
+		"wide"					"224"
 		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
@@ -432,38 +382,6 @@
 			"image" 			"glyph_options"
 			"imagewidth"		"16"
 		}		
-	}
-
-	"AchievementStatsBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"AchievementStatsBGPanel"
-		"xpos"			"30"
-		"ypos"			"300"
-		"zpos"			"-1"
-		"wide"			"265"
-		"tall"			"60"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-		"border"		"MainMenuBGBorder"
-		
-		"AchievementStatsLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"AchievementStatsLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_Other"
-			"textAlignment"	"west"
-			"xpos"			"10"
-			"ypos"			"0"
-			"wide"			"150"
-			"tall"			"30"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"235 227 203 255"
-		}
 	}
 
 	"AchievementsButton"
@@ -528,102 +446,49 @@
 		}
 	}
 
-	"SmallButtonBG"
-	{
-		"ControlName"		"EditablePanel"
-		"fieldName"			"SmallButtonBG"
-		"xpos"				"35"
-		"ypos"				"310"
-		"zpos"				"4"
-		"wide"				"200"
-		"tall"				"40"
-		"visible"			"0"
-		"enabled"			"0"
-		"border"			"AdvRoundedButtonDefault"
-		//"font"			"MenuMainTitle"
-
-		"InnerShadow"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldname"		"InnerShadow"
-			"xpos"			"10"
-			"ypos"			"4"
-			"zpos"			"0"
-			"wide"			"120"
-			"tall"			"30"
-			"visible"		"0"	
-			"PaintBackgroundType"	"0"
-			"proportionaltoparent"	"1"
-			"mouseinputenabled"	"0"
-
-			"paintborder"	"1"
-			"border"		"StoreInnerShadowBorder"
-		}
-
-		"BelowDarken"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldname"		"BelowDarken"
-			"xpos"			"10"
-			"ypos"			"4"
-			"zpos"			"0"
-			"wide"			"120"
-			"tall"			"30"
-			"visible"		"0"	
-			"PaintBackgroundType"	"0"
-			"proportionaltoparent"	"1"
-			"mouseinputenabled"	"0"
-
-			"bgcolor_override"	"0 0 0 100"
-		}
-	}
-
 	"SmallAchievementsButton"
 	{
 		"ControlName"		"CTFButton"
 		"fieldName"			"SmallAchievementsButton"
-		"xpos"				"35"
-		"ypos"				"325"
-		"zpos"				"5"
-		"wide"				"30"
-		"tall"				"30"
+		"xpos"					"35"
+		"ypos"					"290"
+		"zpos"					"11"
+		"wide"					"254"
+		"tall"					"25"
 		"visible"			"1"
 		"enabled"			"1"
 		"bordervisible"		"1"
-		"labelText" 		""
 		"Command"			"gamemenucommand OpenAchievementsDialog"
 
-		"labelText" 		""
-		"xshift" 			"0"
-		"yshift" 			"-1"
-		"tooltip" 			"#MMenu_Tooltip_Achievements"
-		"textAlignment"		"center"
-		"font"				"HudFontSmallBold"
-		"border_default"	"AdvLeftButtonDefault"
-		"border_armed"		"AdvLeftButtonArmed"
-		"border_depressed"	"AdvLeftButtonDepressed"
-		"paintbackground"   "0"
+		"labelText" 			"#GameUI_GameMenu_Achievements"
+		"xshift" 				"0"
+		"yshift" 				"-2"
+		"textAlignment"			"west"	
+		"font"					"HudFontSmallBold"
+		"border_default"		"AdvRoundedButtonDefault"
+		"border_armed"			"AdvRoundedButtonArmed"
+		"border_depressed"		"AdvRoundedButtonDepressed"
+		"paintbackground"       "0"
 
 		"SubImage"
 		{
 			"image" 			"glyph_achievements"
-			"imagewidth"		"24"
-		}	
+			"imagewidth"		"16"	
+		}
 	}
 	
 	"SmallStatsButton"
 	{
 		"ControlName"	"CTFButton"
 		"fieldName"		"SmallStatsButton"
-		"xpos"			"65"
-		"ypos"			"325"
-		"zpos"			"5"	
-		"wide"			"30"
-		"tall"			"30"
+		"xpos"					"35"
+		"ypos"					"320"
+		"zpos"					"11"
+		"wide"					"254"
+		"tall"					"25"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
-		"labelText"		""
 		"font"			"HudFontSmallBold"
 		"Command"		"newstats"
 		"bordervisible"		"1"
@@ -633,16 +498,21 @@
 
 		"image_drawcolor"	"235 226 202 255"
 
-		"labelText" 		""
-		"xshift" 			"0"
-		"yshift" 			"-1"
-		"tooltip" 			"#GameUI_GameMenu_PlayerStats"
-		"textAlignment"		"center"
-		"font"				"HudFontSmallBold"
-		"border_default"	"AdvSquareButtonDefault"
-		"border_armed"		"AdvSquareButtonArmed"
-		"border_depressed"	"AdvSquareButtonDepressed"
-		"paintbackground"   "0"
+		"labelText" 			"#GameUI_GameMenu_PlayerStats"
+		"xshift" 				"0"
+		"yshift" 				"-2"
+		"textAlignment"			"west"	
+		"font"					"HudFontSmallBold"
+		"border_default"		"AdvRoundedButtonDefault"
+		"border_armed"			"AdvRoundedButtonArmed"
+		"border_depressed"		"AdvRoundedButtonDepressed"
+        "paintbackground"    		"0"		
+
+		"SubImage"
+		{
+			"image" 			"main_menu/glyph_stats"
+			"imagewidth"		"16"
+		}
 
 		"SubImage"
 		{
@@ -656,11 +526,11 @@
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"OptionsOldButton"		
-		"xpos"					"95"
-		"ypos"					"325"
+		"xpos"					"260"
+		"ypos"					"260"
 		"zpos"					"5"
 		"wide"					"30"
-		"tall"					"30"
+		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
@@ -791,13 +661,44 @@
 		}
 	}
 
+	"BlogToggleCheck"
+	{
+		"ControlName"		"CTFCvarToggleCheckButton"
+		"fieldName"			"BlogToggleCheck"
+		"xpos"				"c200"
+		"ypos"				"30"
+		"zpos"				"10"
+		"wide"				"32"
+		"tall"				"32"
+		"visible"			"0"
+		"enabled"			"1"
+		"bordervisible"		"1"
+		"labelText" 		""
+		"cvar_name"			"lfe_ui_mainmenu_news"	
+		"autochange"		"1"
+		"inverted"			"0"
+
+		"labelText" 		""
+		"xshift" 			"0"
+		"yshift" 			"-1"
+		"tooltip" 			"#MMenu_Tooltip_ToggleBlog"
+		"textAlignment"		"center"
+		"font"				"MenuSmallFont"
+		"border_default"	"AdvRoundedButtonDefault"
+		"border_armed"		"AdvRoundedButtonArmed"
+		"border_depressed"	"AdvRoundedButtonDepressed"
 
 		"SubImage"
 		{
+			"image" 			"glyph_tv"
+			"scaleImage"		"1"
+			"imagewidth"		"24"
+		}
+		"SubCheckImage"
+		{
+			"image" 		"main_menu/glyph_disabled"
 			"scaleImage"	"1"
-			"image" 			"glyph_multiplayer_conc"
-			"imagewidth"		"14"
-		}				
+		}
 	}
 
 	"VersionLabelVerText"
@@ -813,7 +714,7 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"labelText"			"Version: April 2023"
+		"labelText"			"Version: April 2023)"
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"
