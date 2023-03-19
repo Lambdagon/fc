@@ -68,7 +68,6 @@
 			"modelname"	"models/player/civilian.mdl"
 			"modelname_hwm"	"models/player/civilian.mdl"
 			"origin_z" "-51"
-			"vcd"		"null"		
 
 			"animation"
 			{
@@ -77,7 +76,7 @@
 			
 			"attached_model"
 			{
-				//"modelname" "models/weapons/lambda/umbrella/c_prinny_knife.mdl"
+				"modelname" "models/weapons/w_models/w_umbrella.mdl"
 			}
             "angles_x" "0"
             "angles_y" "180"

@@ -6,20 +6,21 @@ PlayerClass
 	// Attributes.
 	"name"			"civilian"
 	"model"			"models/player/civilian.mdl"
-	"model_hwm"		"models/player/civilian.mdl"
-	"model_tfc"		"models/player/civilian.mdl"
-	"model_hands"		"models/player/c_civilian_arms.mdl"
+	"model_hwm"		"models/player/hwm/civilian.mdl"
+	"model_hands"		"models/weapons/c_models/c_civilian_arms.mdl"
 	"localize_name"		"TF_Class_Name_Civilian"
-	"speed_max"		"250"
-	"health_max"		"220"
-	"armor_max"		"50"
+	"speed_max"		"280"
+	// "flag_speed_max"	"9001" :O
+	"health_max"		"200"
+	"armor_max"		"0"
 
 	// Grenades.
 
 	// Weapons.
-	"weapon1"		""
-	"weapon2"		""
-	"weapon3"		""
+	"weapon1"		"TF_WEAPON_UMBRELLA"
+	
+	// Buildables
+	"buildable1"	"OBJ_RADAR"
 
 	//Thirdperson
 	"cameraoffset_forward"	"85"
@@ -28,16 +29,16 @@ PlayerClass
 	
 	AmmoMax
 	{
-		"tf_ammo_primary"	"100"
-		"tf_ammo_secondary"	"100"
-		"tf_ammo_metal"		"200"
-		"tf_ammo_grenades1"	"0"
-		"tf_ammo_grenades2"	"0"
+		"tf_ammo_primary"	"24"
+		"tf_ammo_secondary"	"0"
+		"tf_ammo_metal"		"100"
+		"tf_ammo_grenades1"	"1"
+		"tf_ammo_grenades2"	"1"
 	}	
 
 	// Death Sounds
-	"sound_death"				"TFCPlayer.Death"
-	"sound_crit_death"			"TFCPlayer.CritDeath"
-	"sound_melee_death"			"TFCPlayer.MeleeDeath"
-	"sound_explosion_death"		"TFCPlayer.ExplosionDeath"	
+	"sound_death"				"Civilian.Death"
+	"sound_crit_death"			"Civilian.CritDeath"
+	"sound_melee_death"			"Civilian.MeleeDeath"
+	"sound_explosion_death"			"Civilian.ExplosionDeath"	
 }
