@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\player\spy\mask_medic"
+//	"$bumpmap" "models/player/spy/spy_normal"
+		"$basemapalphaphongmask" "1"
+	
+	"$phong" "1"
+	"$phongboost" ".2"	
+	"$phongexponent" "10"
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.7 15 20]"
+	"$halflambert" "1"
+	
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "2"										// Boost for ambient cube component of rim lighting
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$cloakColorTint" "[0.4 0.5 1]"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+
+	}
+}
