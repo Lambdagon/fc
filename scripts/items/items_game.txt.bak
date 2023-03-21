@@ -20023,7 +20023,7 @@
 				"voice pitch scale"
 				{
 					"attribute_class"	"voice_pitch_scale"
-					"value"		"0.9"
+					"value"		"0.4"
 				}
 			}
 			"visuals"
@@ -20040,6 +20040,127 @@
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"			"tfc/misc/teleport_in.wav"
 		}
+			"9060"
+		{
+			"name"	"CJ Demo Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Grove St. Families Member"
+			"item_name"	"Carl Johnson"
+			"item_description"	"Model by NootNoot64
+			Grove Street, home. At least it was
+			until I fucked everything up."
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"static_attrs"
+			{
+			}
+			"model_player_per_class"
+			{
+				"demoman"	"models/player/cj/demo.mdl"
+			}
+			"used_by_classes"
+			{
+				"demoman" "1"
+			}
+			"attributes"
+			{
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"demo_real"	"1"
+					"shoes"	"1"
+					"grenades"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+			}
+			"9061"
+		{
+			"name"	"Boner Sniper Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Calcic Formation"
+			"item_name"	"Boner"
+			"item_description"	"BAAAD TO THE BONE"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"vgui/marked_for_death"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"static_attrs"
+			{
+			}
+			"model_player_per_class"
+			{
+				"sniper"	"models/bots/skeleton_sniper/skeleton_sniper.mdl"
+				"spy"		"models/bots/skeleton_sniper/skeleton_sniper.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			"attributes"
+			{
+				"taunt success sound"
+				{
+					"attribute_class"		"taunt_success_sound"
+					"value"		"BadToThe.Bone"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"sniper"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"boner.mp3"
+			"drop_sound"	"boner.mp3"
+			}
 		"9097"
 		{
 			"name"						"HL2 SMG"
@@ -20251,6 +20372,84 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"xifier_class_remap"	"TTG Max Pistol"
+		}
+		"9115"
+		{
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Ambassador"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"Lambda's Revovler"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"ambassador"
+			"item_iconname"	"ambassador"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/lambda/revolver/c_revolver.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+				}
+				"turn to gold"
+				{
+					"attribute_class"	"set_turn_to_gold"
+					"value" "1"
+				}
+				"is australium item"
+				{
+					"attribute_class"	"is_australium_item"
+					"value"				"1"
+				}
+				"attach particle effect name"
+				{
+					"atribute_class"	"set_attached_particle_name"
+					"value"	"burningplayer_flyingbits"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Lambda_revolver.Single"
+				"sound_burst" "Weapon_Lambda_revolver.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"30570"
 		{
@@ -29731,7 +29930,6 @@
 		"19"
 		{
 			"system"	"superrare_circling_heart"
-			"attach_to_rootbone"	"1"
 			"attachment"	"muzzle"
 		}
 		"20"
@@ -30143,6 +30341,63 @@
 			"system"	"utaunt_souls_purple_parent"
 		}
 	}
+	
+	"weapon_unusual_effects"
+		{
+			"701"
+			{
+				"system"				"weapon_unusual_hot"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"702"
+			{
+				"system"				"weapon_unusual_isotope"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"703"
+			{
+				"system"				"weapon_unusual_cool"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+			"704"
+			{
+				"system"				"weapon_unusual_energyorb"
+				"draw_in_viewmodel"		"1"
+				"use_suffix_name"		"1"
+				
+				"attachment"			"unusual_0"
+				"control_point_1"		"unusual_1"
+				"control_point_2"		"unusual_2"
+				"control_point_3"		"unusual_3"
+				"control_point_4"		"unusual_4"
+				"control_point_5"		"unusual_5"
+			}
+		}
+		
 	"item_levels"
 	{
 		"KillEaterRank"
