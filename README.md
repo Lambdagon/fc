@@ -1,8 +1,13 @@
 # tf_coop_lambda
-Lambdagon's Own fortress mod 
+Lambda Fortress: Community Edition
 
-What is this? 
+LF:CE is a modified version of Lambda Fortress: Extended to have more features, fixes, new weapons, support
 
-this is a project of mine that is using Lambda fortress Extended as a base. This modification adds new content such as custom weapons, custom classes, cosmetics, and much more
+Fixes include:
+Weapon improvements 
+Map improvements
+Episodic tweaks
+Improved Main Menu
 
-If you would like to help me with this project or find out more info add me on discord at Lambda#1627
+
+Because this project is more community based anyone can submit additions/modifications to be added
