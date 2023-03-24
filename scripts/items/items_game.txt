@@ -3783,6 +3783,58 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 
+		"850"
+		{
+			"name"			"Deflector"
+			"prefab"		"weapon_minigun"
+			"craft_class"	""
+			"baseitem"		"0"
+			"show_in_armory"	"1"
+			"item_name"		"#TF_Minigun_Deflector"
+			"item_quality"	"unique"
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.5"
+				}
+				"attack projectiles"
+				{
+					"attribute_class" 	"attack_projectiles"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_tracer02"
+			}
+		}
+		"851"
+		{
+			"name"	"The AWPer Hand"
+			"prefab"	"weapon_sniperrifle weapon_sniperrifle_alt1"
+			"craft_class"	"weapon"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_CSGO_AWP"
+			"item_description"	"#TF_CSGO_AWP_Desc"
+			"item_quality"	"unique"
+			"baseitem"	"0"
+			"image_inventory"	"backpack/weapons/c_models/c_csgo_awp/c_csgo_awp"
+			"model_player"	"models/weapons/c_models/c_csgo_awp/c_csgo_awp.mdl"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"item_logname"	"awper_hand"
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_AWP.Single"
+				"sound_burst"		"Weapon_AWP.SingleCrit"
+			}
+		}
+
 		"weapon_sniperrifle_alt1"
 		{
 			"visuals"
@@ -6157,7 +6209,7 @@
 				"nameable"			"1"
 			}
 			"item_type_name"	"#TF_VoodooCursedSoul_Type"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_remap"		"Voodoo-Cursed Soul (Armory)"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -6192,7 +6244,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_Pyrovision_Goggles"
 			"item_type_name"	"#TF_Wearable_Pyrovision_Goggles_Type"
 			"item_description"	"#TF_Pyrovision_Goggles_Desc"
@@ -6896,7 +6948,7 @@
 			"item_name"			"#TF_Spellbook_Basic"
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"item_quality"		"normal"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
@@ -8262,7 +8314,7 @@
 				"can_heal_allies"		"1"
 				"can_extinguish"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
 			"item_description" "#TF_Lunchbox_Chocolate_desc"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
@@ -8467,7 +8519,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Unique_Golden_Wrench"
 			"item_slot"	"melee"
@@ -8609,7 +8661,7 @@
 			}
 			"item_logname"	"battleneedle"
 			"item_iconname"	"battleneedle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bonesaw"
 			"item_name"	"#TF_Unique_BattleSaw"
 			"item_description" "#TF_Unique_BattleSaw_Desc"
@@ -8738,7 +8790,7 @@
 			"prefab"	"weapon_holymackerel"
 			"first_sale_date"	"2010/09/29"
 			"particle_suffix"	"holy_mackerel"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -8807,7 +8859,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_LEtranger"
 			"item_slot"	"secondary"
@@ -9243,7 +9295,7 @@
 			"name"	"Gloves of Running Urgently"
 			"prefab"	"valve weapon_gru"
 			"first_sale_date"	"2010/09/29"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"visuals_red"
 			{
 				"use_visualsblock_as_base"	"visuals"
@@ -9280,7 +9332,7 @@
 			}
 			"item_logname"	"fryingpan"
 			"item_iconname"	"fryingpan"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_FryingPan"
 			"item_name"	"#TF_Unique_FryingPan"
 			"item_slot"	"melee"
@@ -9526,7 +9578,7 @@
 			"prefab" "weapon_lochnload"
 			"first_sale_date"	"2010/12/08"
 			"particle_suffix"	"loch_n_load"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -9644,7 +9696,7 @@
 			"model_player"	"models/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak.mdl"
 			"propername"	"1"
 			"inspect_panel_dist" "31"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -11022,7 +11074,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Gloves"
 			"item_name"	"#TF_EvictionNotice"
 			"item_slot"	"melee"
@@ -11213,7 +11265,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
 			"item_description"	"#TF_RighteousBison_Desc"
 			"item_name"	"#TF_RighteousBison"
@@ -11626,7 +11678,7 @@
 				"can_deal_critical_damage"		"1"
 				"can_deal_taunt_damage"			"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_BigEarner"
 			"propername"	"1"
 			"item_logname"	"big_earner"
@@ -11887,7 +11939,7 @@
 			"name"	"Power Up Canteen (MvM)"
 			"first_sale_date"	"2012/12/25"
 			"prefab"	"powerup_bottle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"attributes"
 			{
 				"lunchbox adds minicrits"
@@ -12008,7 +12060,7 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_DEX_Revolver"
 			"item_description"	"#TF_DEX_Revolver_Desc"
@@ -12284,7 +12336,7 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_TFBirthday"
@@ -12351,7 +12403,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Severed_Arm"
 			"item_name"	"#TF_UnarmedCombat"
 			"item_description"	"#TF_UnarmedCombat_Desc"
@@ -12461,7 +12513,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Fists"
 			"item_name"	"#TF_Apocofists"
 			"item_description"	"#TF_Apocofists_Desc"
@@ -12546,7 +12598,7 @@
 			"item_slot"	"primary"
 			"item_logname"	"pomson"
 			"item_iconname"	"pomson"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"10"
@@ -12646,7 +12698,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Wrenchmotron"
 			"item_description"	"#TF_Wrenchmotron_Desc"
@@ -12897,7 +12949,7 @@
 			}
 			"item_logname"	"manmelter"
 			"item_iconname"	"manmelter"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
 			"item_name"	"#TF_ManMelter"
 			"item_description"	"#TF_ManMelter_Desc"
@@ -13015,7 +13067,7 @@
 				"can_be_equipped_by_soldier_or_demo"	"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bottle"
 			"item_name"	"#TF_ScottishHandshake"
 			"item_description"	"#TF_ScottishHandshake_Desc"
@@ -13128,7 +13180,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bat"
 			"item_name"	"#TF_BallBuster"
 			"item_description"	"#TF_BallBuster_Desc"
@@ -13212,7 +13264,7 @@
 				"can_deal_damage"			"1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_SpyCicle"
 			"item_description"	"#TF_SpyCicle_Desc"
 			"propername"	"1"
@@ -13393,7 +13445,7 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_Winter2011"
@@ -13456,7 +13508,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
 			"propername"	"1"
 			"item_quality"	"unique"
@@ -13532,7 +13584,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"			"#TF_DS_DumpsterDevice"
 			"item_description"	"#TF_DS_DumpsterDevice_Desc"
@@ -13626,7 +13678,7 @@
 			}
 			"item_logname"	"lollichop"
 			"item_iconname"	"lollichop"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#tf_weapon_fireaxe"
 			"item_name"	"#TF_Lollichop"
 			"item_description"	"#TF_Lollichop_Desc"
@@ -13674,7 +13726,7 @@
 			"prefab" "weapon_scorch_shot"
 			"first_sale_date"	"2012/06/27"
 			"particle_suffix"	"scorch_shot"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -13716,7 +13768,7 @@
 			}
 			"item_logname"	"rainblower"
 			"item_iconname"	"rainblower"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Flamethrower"
 			"item_name"	"#TF_Rainblower"
 			"item_description"	"#TF_Rainblower_Desc"
@@ -13793,7 +13845,7 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name"	"#TF_Weapon_PEP_Scattergun"
 			"item_description"	"#TF_Weapon_PEP_Scattergun_Desc"
@@ -14008,20 +14060,20 @@
 		{
 			"name"	"The Red-Tape Recorder"
 			"prefab"		"weapon_red_tape_recorder"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 		}
 		"811"
 		{
 			"name"	"The Huo Long Heatmaker"
 			"prefab"		"weapon_long_heatmaker"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"inspect_panel_dist" "88"
 		}
  		"812"
 		{
 			"name"	"The Flying Guillotine"
 			"prefab"		"weapon_guillotine"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"inspect_panel_dist" 			"40"
 		}
  		"813"
@@ -14050,7 +14102,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Staff"
 			"item_name"	"#TF_TW_Staff"
 			"item_description"	"#TF_TW_Staff_Desc"
@@ -14108,7 +14160,7 @@
 			"prefab"	"weapon_sapper"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_Weapon_Ap_Sap"
 			"item_description"	"#TF_Weapon_Ap_Sap_desc"
@@ -14168,7 +14220,7 @@
 			}
 			"item_logname"	"skullbat"
 			"item_iconname"	"skullbat"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Skullbat"
 			"item_name"	"#TF_BatOuttaHell"
 			"item_slot"	"melee"
@@ -14484,7 +14536,7 @@
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Balloon"
 			"item_name"	"#TF_Pet_Reindoonicorn"
 			"item_description"	"#TF_Pet_Reindoonicorn_Desc"
@@ -14595,7 +14647,7 @@
 			{
 				"can_heal_allies"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medigun_Resist"
 			"item_name"		"#TF_Unique_MediGun_Resist"
 			"item_description"	"#TF_Unique_MediGun_Resist_Desc"
@@ -14734,7 +14786,7 @@
 			}
 			"item_logname"	"ham_shank"
 			"item_iconname"	"ham_shank"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pork_Product"
 			"item_name"	"#TF_HamShank"
 			"item_description"	"#TF_HamShank_Desc"
@@ -14867,7 +14919,7 @@
 			}
 			"item_logname"	"golden_fryingpan"
 			"item_iconname"	"golden_fryingpan"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_GoldFryingPan"
 			"item_name"	"#TF_Gold_FryingPan"
 			"item_slot"	"melee"
@@ -14941,7 +14993,7 @@
 			"item_name"			"#TF_Weapon_Sapper_Festive2013"
 			"min_ilevel"	"1"
 			"max_ilevel"	"99"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_sapper/c_sapper_xmas"
 			"model_player"	"models/weapons/c_models/c_sapper/c_sapper_xmas.mdl"
 			"model_world"	"models/weapons/c_models/c_sapper/c_sapper_xmas.mdl"
@@ -15145,7 +15197,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Parachute"
 			"item_name"	"#TF_Weapon_BaseJumper"
 			"item_description"	"#TF_Weapon_BaseJumper_Desc"
@@ -15201,7 +15253,7 @@
 			"item_class"	"tf_weapon_sapper"
 			"craft_class" ""
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"propername"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_Weapon_SnackAttack"
@@ -16449,7 +16501,7 @@
 			"anim_slot"	"MELEE_ALLCLASS"
 			"attach_to_hands"	"1"
 			"hidden"	"1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"normal"
 			"baseitem"	"1"
 			"min_ilevel"	"1"
@@ -17014,7 +17066,7 @@
 			}
 			"item_logname"	"rocketpack"
 			"item_iconname"	"rocketpack"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketPack"
 			"item_name"			"#TF_ThermalThruster"
 			"item_description"	"#TF_ThermalThruster_Desc"
@@ -17088,7 +17140,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar_Gas"
 			"item_name"	"#TF_GasPasser"
 			"item_description"	"#TF_GasPasser_Desc"
@@ -17159,7 +17211,7 @@
 			{
 				"can_deal_damage"			"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_class"	"tf_weapon_slap"
 			"craft_class"	"" 
 			"craft_material_type"	"weapon"
@@ -17691,7 +17743,7 @@
 		{
 			"name"	"Activated Campaign 3 Pass"
 			"item_class"	"tf_wearable"	
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Tracker"
 			"item_name"			"#TF_ActivatedCampaign3Pass"
 			"item_description"	"#TF_ActivatedCampaign3Pass_desc"						
@@ -17775,7 +17827,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physcannon"
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon"
@@ -17853,7 +17905,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physcannon"
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon_mega"
@@ -17937,7 +17989,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physgun"
 			"item_name"		"#TF_Weapon_Physgun"
 			"item_logname"	"physcannon"
@@ -18009,7 +18061,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Portalgun"
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
@@ -18087,7 +18139,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Portalgun"
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
@@ -18279,7 +18331,7 @@
 			}
 			"item_logname"	"have_an_error"
 			"item_iconname"	"have_an_error"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"ERROR"
 			"item_name"	"ERROR"
 			"item_slot"	"melee"
@@ -18487,7 +18539,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
@@ -18538,7 +18590,7 @@
 			}
 			"item_logname"	"crowbar"
 			"item_iconname"	"crowbar"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
@@ -18604,7 +18656,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medikit"
 			"item_name"	"#TF_Weapon_Medikit"
 			"item_slot"	"melee"
@@ -18649,7 +18701,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_Shotgun"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
@@ -18698,7 +18750,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_TFC_Super_Shotgun"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
@@ -18746,7 +18798,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Nailgun"
 			"item_name"		"#TF_Weapon_Nailgun"
 			"image_inventory"	"backpack/weapons/w_models/w_syringegun"
@@ -18792,7 +18844,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Nailgun"
 			"item_name"		"#TF_Weapon_TFC_Super_Nailgun"
 			"item_slot"	"primary"
@@ -18826,7 +18878,7 @@
 			"item_class"	"tf_weapon_tfc_ar"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18868,7 +18920,7 @@
 			"item_class"	"tf_weapon_tfc_flamethrower"
 			"craft_class"	"weapon" 
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_deal_damage"		"1"
@@ -18917,7 +18969,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"		"#TF_Weapon_TFC_IC"
 			"item_slot"	"action"
@@ -18960,7 +19012,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_TFC_AC"
 			"item_name"			"#TF_Weapon_TFC_AC"
 			"item_slot"	"primary"
@@ -19005,7 +19057,7 @@
 			"item_class"	"tf_weapon_pipebomblauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_PipebombLauncher"
 			"item_name"	"#TF_Weapon_PipebombLauncher"
 			"item_slot"	"secondary"
@@ -19054,7 +19106,7 @@
 			"item_class"	"tf_weapon_grenadelauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_slot"	"primary"
@@ -19103,7 +19155,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"#TF_Weapon_RocketLauncher"
 			"item_slot"	"primary"
@@ -19149,7 +19201,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_gib_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"		"#TF_Weapon_SniperRifle"
 			"item_slot"	"primary"
@@ -19249,7 +19301,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
 			"item_name"	"#TF_Weapon_Knife"
 			"item_slot"	"melee"
@@ -19298,7 +19350,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Weapon_TFC_Spanner"
 			"item_slot"	"melee"
@@ -19344,7 +19396,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Railgun"
 			"item_name"		"#TF_Weapon_Railgun"
 			"item_slot"		"secondary"
@@ -19384,7 +19436,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
@@ -19535,7 +19587,7 @@
 		}
 		"9050"
 		{
-			"name"		"Unused Ammo Sandvich"
+			"name"		"Ammo Sandvich"
 			"prefab"		"weapon_sandvich"
 			"craft_class"	"" 
 			"craft_material_type"	"weapon"
@@ -19543,7 +19595,11 @@
 			"item_description"	"#TF_Lunchbox_Banana_desc"
 			"model_player"		"models/items/ammopack_medium.mdl"
 			"propername"		"1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
+			"used_by_classes"
+			{
+				"heavy"			"1"
+			}
 			"static_attrs"
 			{
 				"item_meter_charge_rate"	"30"
@@ -19557,6 +19613,156 @@
 					"value"	"5"
 				}
 			}
+		}
+
+
+		"1184"
+		{
+			"name"	"Gloves of Running Urgently MvM"
+			"item_class"	"tf_weapon_fists"
+			"craft_class"	""		
+			"craft_material_type"	""	
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Gloves"
+			"item_name"	"Gloves of Running Urgently MvM"
+			"item_slot"	"melee"
+			"item_logname"	"gloves_running_urgently"
+			"item_iconname"	"gloves_running_urgently"
+			"image_inventory"	"backpack/weapons/c_models/c_boxing_gloves_urgency/c_boxing_gloves_urgency"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_boxing_gloves/c_boxing_gloves.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.3"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value" "2"
+				}
+				"self mark for death"
+				{
+					"attribute_class"	"self_mark_for_death"
+					"value"	"3"
+				}
+				"single wep holster time increased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"				"1.5"
+				}
+			}
+			"hide_bodygroups_deployed_only"	"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hands"			"1"
+				}
+				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
+				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+			}
+			"visuals_red"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"2"
+			}
+			"visuals_blu"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"3"
+			}
+			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
+			"drop_sound" "ui/item_boxing_gloves_drop.wav"
+			"xifier_class_remap"	"gru"
+		}
+		"863"
+		{
+			"name"	"The Robo-Sandvich"
+			"first_sale_date"	"2012/09/19"
+			"prefab"	"weapon_lunchbox"
+			"craft_class"	""		
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
+			"item_name"	"#TF_Robot_Sandvich"
+			"item_description"	"#TF_Robot_Sandvich_Desc"
+			"image_inventory"	"backpack/weapons/c_models/c_sandwich/c_robo_sandwich"
+			"model_player"	"models/weapons/c_models/c_sandwich/c_robo_sandwich.mdl"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -11"
+				"item_meter_charge_type"			"1"
+				"item_meter_charge_rate"			"30"
+				"meter_label"				"#TF_Sandwich"
+			}
+			"attributes"
+			{
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"3"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9051"
 		{
@@ -20646,7 +20852,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"USP Match"
 			"item_description"	"Part of Lambda's  Weapon pack"
