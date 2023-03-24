@@ -21008,7 +21008,7 @@
 			"image_inventory"	"backpack/weapons/c_models/c_pennyshot"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"	"models/weapons/c_models/c_dex_shotgun/c_shotgun.mdl"
 			"attach_to_hands" "1"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
@@ -21196,6 +21196,98 @@
 			}
 			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
 			"drop_sound"		"ui/item_pack_drop.wav"
+                }
+                "9121"
+		{
+	                "enabled"	"1"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RocketLauncher"
+			"propername"	"1"
+			"item_name"	"The Pro-Pain"
+                        "item_description"	"(Model By goober of the goof)"
+			"item_logname"	"propain"
+			"item_iconname"	"propain"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"image_inventory"	"backpack/weapons/c_models/c_pain"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_pain/c_rocketlauncher.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "60"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -3 -10"
+			}
+			"attributes"
+			{
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value"	"1"
+				}
+                                "Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.80"
+				}
+                                "fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.45"
+				}
+                                "clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.50"
+				}
+                                "damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.25"
+				}
+                                "blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"1.65"
+				}
+                                "projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value"	"3"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Does_Dumpster.Single"
+				"sound_burst"		"Weapon_Does_Dumpster.SingleCrit"
+				"sound_reload"		"Weapon_DumpsterRocket.Reload"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"30570"
 		{
