@@ -266,6 +266,32 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 	}	
 
+	"civilian"
+	{
+		"ControlName"		"ImageButton"
+		"fieldName"			"civilian"
+		"xpos"				"c-60"
+		"ypos"				"200"
+		"zpos"				"6"
+		"wide"				"60"
+		"tall"				"120"
+		"autoResize"		"0"
+		"pinCorner"			"2"
+		"visible"			"1"
+		"enabled"			"1"
+		"tabPosition"		"0"
+		"labelText"			""
+		"textAlignment"		"south-west"
+		"Command"			"loadout civilian"
+		"Default"			"0"
+		"font"				"MenuKeys"
+		"scaleImage"		"1"
+		"activeimage"		"class_sel_sm_civilian_red"
+		"inactiveimage"		"class_sel_sm_civilian_inactive"
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"UI/buttonclickrelease.wav"
+	}	
+
 	"ClassLabel"
 	{
 		"ControlName"	"CExLabel"
