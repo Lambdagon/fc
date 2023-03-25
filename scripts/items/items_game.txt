@@ -3784,65 +3784,6 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 
-		"850"
-		{
-			"name"			"Deflector"
-			"enabled"	"1"
-			"prefab"		"weapon_minigun"
-			"craft_class"	""
-			"baseitem"		"0"
-			"show_in_armory"	"1"
-			"item_name"		"#TF_Minigun_Deflector"
-			"item_quality"	"unusual"
-			"attach_to_hands"	"1"
-			"propername"	"1"
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "1.5"
-				}
-				"attack projectiles"
-				{
-					"attribute_class" 	"attack_projectiles"
-					"value" "1"
-				}
-			}
-			"used_by_classes"
-			{
-				"heavy"	"1"
-			}
-			"visuals"
-			{
-				"tracer_effect"	"bullet_tracer02"
-			}
-		}
-		"851"
-		{
-			"name"	"The AWPer Hand"
-			"prefab"	"weapon_sniperrifle weapon_sniperrifle_alt1"
-			"craft_class"	"weapon"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
-			"item_name"	"#TF_CSGO_AWP"
-			"item_description"	"#TF_CSGO_AWP_Desc"
-			"item_quality"	"unique"
-			"baseitem"	"0"
-			"image_inventory"	"backpack/weapons/c_models/c_csgo_awp/c_csgo_awp"
-			"model_player"	"models/weapons/c_models/c_csgo_awp/c_csgo_awp.mdl"
-			"propername"	"1"
-			"attach_to_hands"	"1"
-			"item_logname"	"awper_hand"
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_AWP.Single"
-				"sound_burst"		"Weapon_AWP.SingleCrit"
-			}
-		}
-
 		"weapon_sniperrifle_alt1"
 		{
 			"visuals"
@@ -21577,6 +21518,84 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
+
+		"850"
+		{
+			"name"			"Deflector"
+			"enabled"	"1"
+			"prefab"		"weapon_minigun"
+			"craft_class"	""
+			"baseitem"		"0"
+			"show_in_armory"	"1"
+			"item_name"		"#TF_Minigun_Deflector"
+			"item_quality"	"developer"
+			"attach_to_hands"	"1"
+			"propername"	"1"
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.5"
+				}
+				"attack projectiles"
+				{
+					"attribute_class" 	"attack_projectiles"
+					"value" "1"
+				}
+				"dmg taken increased"
+				{
+					"attribute_class" 	"mult_dmgtaken"
+					"value" "1.25"
+				}
+				"move speed penalty"
+				{
+					"attribute_class" 	"mult_player_movespeed"
+					"value" "0.8"
+				}
+			}
+			"visuals"
+			{
+				"sound_double_shot"	"MVM.GiantHeavyGunFire"
+				"sound_burst"		"MVM.GiantHeavyGunFire"
+				"sound_special1"	"MVM.GiantHeavyGunWindUp"
+				"sound_special2"	"MVM.GiantHeavyGunWindDown"
+				"sound_special3"	"MVM.GiantHeavyGunSpin"
+			}
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_tracer02"
+			}
+		}
+		"851"
+		{
+			"name"	"The AWPer Hand"
+			"prefab"	"weapon_sniperrifle weapon_sniperrifle_alt1"
+			"craft_class"	"weapon"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_CSGO_AWP"
+			"item_description"	"#TF_CSGO_AWP_Desc"
+			"item_quality"	"unique"
+			"baseitem"	"0"
+			"image_inventory"	"backpack/weapons/c_models/c_csgo_awp/c_csgo_awp"
+			"model_player"	"models/weapons/c_models/c_csgo_awp/c_csgo_awp.mdl"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"item_logname"	"awper_hand"
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_AWP.Single"
+				"sound_burst"		"Weapon_AWP.SingleCrit"
+			}
 		}
 		"30570"
 		{
