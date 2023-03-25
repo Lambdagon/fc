@@ -20188,6 +20188,16 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0.4"
 				}
+                                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"125"
+                                }
+                                "move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "0.50"
+                                }
 			}
 			"visuals"
 			{
@@ -22264,6 +22274,104 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+                "9700"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"enabled"	"1"
+			"show_in_armory"	"1"
+			"item_class"	"tf_weapon_shovel"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Fire Axe"
+			"item_name"	"#TF_Weapon_FireAxe"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_fireaxe_pyro/c_fireaxe_pyro"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"model_player"		"models/weapons/c_models/c_fireaxe_pyro/c_fireaxe_pyro.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+				"soldier"	"1"
+				"heavy"	"1"
+				"sniper"	"1"
+                        }
+                        "visuals"
+			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+                }
+                "9701"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"enabled"	"1"
+			"show_in_armory"	"1"
+			"item_class"	"tf_weapon_shovel"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Shovel"
+			"item_name"	"#TF_Weapon_Shovel"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_shovel"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"model_player"		"models/weapons/w_models/w_shovel.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+				"soldier"	"1"
+				"heavy"	"1"
+				"sniper"	"1"
+				"spy"	"1"
+				"medic"	"1"
+                        }
+                        "visuals"
+			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"
+			}
+			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
+			"drop_sound"		"ui/item_shovel_drop.wav"
                 }
 		"30570"
 		{
