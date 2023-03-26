@@ -78,7 +78,7 @@
 		"tabPosition"		"0"
 		"labelText"			"john"
 		"textAlignment"		"south-west"
-		"Command"			"joinclass rebel"
+		"Command"			"joinclass john"
 		"Default"			"1"
 		"font"				"MenuKeys"
 		"fgcolor"			"TanDark"
