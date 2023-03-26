@@ -1,40 +1,22 @@
-"VertexlitGeneric"
+"VertexLitGeneric"
 {
-	"$baseTexture" "models/weapons/c_models/c_c96/c_revolver"
-	"$phongexponenttexture" "models/weapons/c_models/c_revolver/c_revolver_exp"
-	
-	"$phong" "1"
-	//commented out to use the exponent mask
-	//"$phongexponent" "255"
-	"$phongboost" "2"	
-	"$phongalbedotint" "1"
-	
-	//scales up the exponent texture which usually only has about 120 levels of exponent
-	"$phongexponentfactor"  "90"
-	//"$phongalbedotint" "0"
-	
+	"$basetexture" "models/weapons/c_models/c_c96/c_revolver"
+
+	"$basemapalphaphongmask" "1"
+
 	"$lightwarptexture" "models/lightwarps/softened_weapon_lightwarp"
-			
-	"$phongfresnelranges"	"[.3 .5 3]"
+		
 	"$halflambert" "1"
 	"$glowcolor" "1"
 	
 	"$envmap" "env_cubemap"
-	"$envmaptint" "[.075 .075 .075]"
+	"$envmaptint" "[.1 .1 .1]"
 
 	"$tempvar" "0"
-
-	//commented out to use the exponent mask
-	//"$basephongexponent" "15"
-	//"$basephongboost" "3"
-
-	"$basemapalphaphongmask" "1"
 	
-	"$rimlight" "1"						
-	"$rimlightexponent" "1"				
-	"$rimlightboost" "1.5"
-	"$rimmask" "1"
-	
+	"$rimlight" "1"
+	"$rimlightexponent" "20"	
+	"$rimlightboost" "0.25"
 
 	// Cloaking
 	"$cloakPassEnabled" "1"
