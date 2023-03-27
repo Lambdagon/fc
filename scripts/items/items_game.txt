@@ -22556,7 +22556,8 @@
 		"9710"
 		{
 			"enabled"	"1"
-			"item_class"	"tf_weapon_handgun_scout_primary"
+			"item_class"	"tf_weapon_revolver"
+			"prefab"		"weapon_revolver"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -22576,19 +22577,19 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"#TF_Weapon_Peppergun"
-			"item_description"	"#TF_TheShortstop_Desc"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_description"	"Model by Boomsta"
 			"item_name"	"MK-VI"
 			"item_slot"	"primary"
 			"anim_slot"	"secondary"
 			"item_quality"	"unique"
-			"item_logname"	"shortstop"
-			"item_iconname"	"shortstop"
+			"item_logname"	"revolver"
+			"item_iconname"	"revolver"
 			"propername"	"1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_shortstop/c_shortstop"
+			"image_inventory"	"backpack/weapons/c_models/c_mkvi/c_mkvi"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/lambda/mkvi/c_shortstop.mdl"
@@ -22600,44 +22601,24 @@
 			}
 			"attributes"
 			{
-				"provide on active"
+				"reload time increased"
 				{
-					"attribute_class"	"provide_on_active"
-					"value" "1"
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.25"
 				}
-				"reload time increased hidden"
+				"fire rate bonus"
 				{
-					"attribute_class"	"mult_reload_time_hidden"
-					"value"	"1.5"
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.8"
 				}
-				"disable fancy class select anim"
+				"damage bonus"
 				{
-					"attribute_class"	"disable_fancy_class_select_anim"
-					"value"	"1"
-				}
-				"damage force increase text"
-				{
-					"attribute_class"	"damage_force_reduction"
-					"value" "1"
-				}
-				"damage force increase hidden"
-				{
-					"attribute_class"	"damage_force_reduction"
-					"value" "1.2"
-				}
-				"airblast vulnerability multiplier hidden"
-				{
-					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value" "1.2"
-				}
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+                }
 			}
 			"visuals"
 			{
-				"sound_single_shot"	"Weapon_Short_Stop.Single"
-				"sound_burst"	"Weapon_Short_Stop.SingleCrit"
-				"sound_reload"		"Weapon_Short_Stop.Reload"
-				"muzzle_flash"	"muzzle_bignasty"
-				"tracer_effect"	"bullet_bignasty_tracer01"
 				"animation_replacement"
 				{
 					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
