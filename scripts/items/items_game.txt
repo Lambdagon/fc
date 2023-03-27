@@ -22553,6 +22553,112 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
+		"9710"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_handgun_scout_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+				"weapon_stattrak_module_scale"				"0.66"
+
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Peppergun"
+			"item_description"	"#TF_TheShortstop_Desc"
+			"item_name"	"MK-VI"
+			"item_slot"	"primary"
+			"anim_slot"	"secondary"
+			"item_quality"	"unique"
+			"item_logname"	"shortstop"
+			"item_iconname"	"shortstop"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_shortstop/c_shortstop"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/lambda/mkvi/c_shortstop.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "27"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"attributes"
+			{
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"	"1.5"
+				}
+				"disable fancy class select anim"
+				{
+					"attribute_class"	"disable_fancy_class_select_anim"
+					"value"	"1"
+				}
+				"damage force increase text"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" "1"
+				}
+				"damage force increase hidden"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" "1.2"
+				}
+				"airblast vulnerability multiplier hidden"
+				{
+					"attribute_class"	"airblast_vulnerability_multiplier"
+					"value" "1.2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Short_Stop.Single"
+				"sound_burst"	"Weapon_Short_Stop.SingleCrit"
+				"sound_reload"		"Weapon_Short_Stop.Reload"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
+					"ACT_VM_DRAW"	"ACT_SECONDARY_VM_DRAW_2"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK_2"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE" "ACT_MP_PUSH_STAND_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE""ACT_MP_PUSH_CROUCH_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"	"ACT_MP_PUSH_SWIM_SECONDARY"
+					"ACT_VM_RELOAD"	"ACT_SECONDARY_VM_RELOAD_2"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY_2"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY_2"
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY_2"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY_2"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
