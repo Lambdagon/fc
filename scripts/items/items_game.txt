@@ -22380,6 +22380,11 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "5.00"
 				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -22393,7 +22398,7 @@
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"2.30"
+					"value"	"4.00"
 				}
 				"Reload time increased"
 				{
@@ -22639,6 +22644,179 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+                }
+		"9711"
+		{
+ 			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Twenty Six Shooter"
+			"item_type_name"	"Revolver"
+			"item_name"	"The Twenty Six Shooter"
+			"item_description"	"(Model by Wowza)"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"twentysix"
+			"item_iconname"	"twentysix"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_twentysix"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_twentysix/c_pistol/c_pistol.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"	"1"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"2.00"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.50"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.70"
+				}
+                                "spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.50"
+                                }
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.40"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Ambassador.Single"
+				"sound_burst" "Weapon_Ambassador.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+		"9712"
+		{
+			"prefab"	"weapon_sniperrifle_alt1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sniperrifle"
+			"craft_material_type"	"weapon"
+			"craft_class"	"weapon"
+			"base_item_name"	"The Combined Shot"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Combine Sniper Rifle"
+			"item_name"	"The Combined Shot"
+			"item_description"	""
+			"show_in_armory"	"1"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"combsniper"
+			"item_iconname"	"combsniper"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_combinesniper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_combinesniper/c_dex_sniperrifle.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 0 -8"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.50"
+ 				}
+				"SRifle Charge rate decreased"
+				{
+					"attribute_class"	"mult_sniper_charge_per_sec"
+					"value"				"0.10"
+ 				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.80"
+ 				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Combsniper_Large.Single"
+				"sound_burst"		"Weapon_Combsniper_Large.SingleCrit"
+				"sound_empty"		"Weapon_Combsniper.ClipEmpty"
+				"sound_special2"	"Weapon_SniperRailgun.NonScoped"
+				"sound_special3"	"Weapon_Combsniper.Single"
+				"muzzle_flash"		"dxhr_sniper_muzzleflash"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"30570"
 		{
