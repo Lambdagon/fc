@@ -1,0 +1,48 @@
+"UnlitGeneric"
+{
+        "$abovewater" 1	
+	"$basetexture" "hlstextures/hls_rwater3"
+	"$scale" "[.5 .5]"
+	"$translucent" "1"
+
+                "$alpha" "0.90"
+
+        	"$refracttexture" "_rt_WaterRefraction"
+	"$refractamount" "0"
+        
+	"%compilewater" 1
+	"$surfaceprop" "water"
+	"$bumpframe" "0"
+	"$fogenable" 1
+	"$fogcolor" "{ 16 18 12 }"
+	"$fogstart" 0.00
+	"$fogend" 700.00
+
+	"$texoffset" "[0 0]"
+	"$texscale" "1"
+	
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" 5.00
+		}
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texoffset"
+			"texturescrollrate" .20
+			"texturescrollangle" 90.00
+		}
+
+		"TextureTransform"
+		{
+			"translateVar" "$texoffset"
+			"scaleVar" "$texscale"
+			"resultVar" "$basetexturetransform"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "hlstextures/hls_!c2a1aw01"
+	"$color" "[2 2 2]"
+        
+	"%compilewater" 1
+	"$surfaceprop" "water"
+	"$bottommaterial" "hlstextures/hls_!c2a1aw01_beneath"
+	"$fogenable" 1
+	"$fogcolor" "{ 35 150 150}"
+	"$fogstart" 0.00
+	"$fogend" 1400.00
+
+        	"$refracttexture" "_rt_WaterRefraction"
+	"$refractamount" "0"
+
+	"$texoffset" "[0 0]"
+	"$texscale" "1"
+	
+	"Proxies"
+	{
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texoffset"
+			"texturescrollrate" .20
+			"texturescrollangle" 90.00
+		}
+
+		"TextureTransform"
+		{
+			"translateVar" "$texoffset"
+			"scaleVar" "$texscale"
+			"resultVar" "$basetexturetransform"
+		}
+	}
+}

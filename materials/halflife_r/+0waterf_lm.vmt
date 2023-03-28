@@ -1,0 +1,28 @@
+"LightmappedGeneric"
+{
+	"%compilewater" 1
+	"$basetexture" "halflife/+0waterf"
+	"$bottommaterial" "halflife_r/+0waterf_lm_bottom"
+	"$surfaceprop" "water"
+	"$texoffset" "[0 0]"
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" 8
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texoffset"
+			"texturescrollrate" 2
+			"texturescrollangle" 90
+		}
+		"TextureTransform"
+		{
+			"translateVar" "$texoffset"
+			"resultVar" "$basetexturetransform"
+		}
+	}
+}

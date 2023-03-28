@@ -1,0 +1,54 @@
+"LightmappedGeneric"
+{
+        "$abovewater" 1	
+	"$basetexture" "hlstextures/hls_fluid3"
+	"$scale" "[.5 .5]"
+	"$translucent" "1"
+
+	"$refracttexture" "_rt_WaterRefraction"
+	"$refractamount" "0"
+
+	"$additive" 1
+        
+	"%compilewater" 1
+	"$surfaceprop" "water"
+	"$bumpframe" "0"
+	"$fogenable" 1
+	"$fogcolor" "{ 123 244 184}"
+	"$fogstart" 0.00
+	"$fogend" 6300.00
+
+	"$texoffset" "[0 0]"
+	"$texscale" "1"
+
+	"$translate" "[0.0 0.0]"
+	"$angle" 90
+	
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"sineperiod" 550
+			"sinemin" "1"
+			"sinemax" "1.01"
+			"resultVar" "$scale"
+		}
+		
+		"Sine"
+		{
+			"sineperiod" 18
+			"sinemin" "-.15"
+			"sinemax" ".15"
+			"resultVar" "$translate"
+		}
+
+		"TextureTransform"
+		{
+			"translateVar" "$translate"
+			"rotateVar" "$angle"
+			"scaleVar" "$scale"
+			"resultVar" "$basetexturetransform"
+		}
+	}
+}
