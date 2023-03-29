@@ -313,6 +313,7 @@ criterion "IsSpy" "playerclass" "Spy" "required"
 criterion "IsEngineer" "playerclass" "Engineer" "required"
 criterion "IsMetropolice" "playerclass" "Metropolice" "required"
 criterion "IsCivilian" "playerclass" "Civilian" "required"
+criterion "IsJohn" "playerclass" "John" "required"
 criterion "IsCombineSoldier" "playerclass" "Combine" "required"
 criterion "IsZombie" "playerclass" "Zombie" "required"
 criterion "IsZombine" "playerclass" "Zombine" "required"
@@ -334,6 +335,7 @@ criterion "IsNotCombineSoldier" "playerclass" "!=Combine" "required"
 criterion "IsNotZombie" "playerclass" "!=Zombie" "required"
 criterion "IsNotZombine" "playerclass" "!=Zombine" "required"
 criterion "IsNotAntlion" "playerclass" "!=Antlion" "required"
+criterion "IsNotJohn" "playerclass" "!=John" "required"
 criterion "IsNotAntlionWorker" "playerclass" "!=AntlionWorker" "required"
 
 
@@ -350,6 +352,7 @@ criterion "IsVictimCivilian" "victimclass" "Civilian" "required"  weight 0
 criterion "IsVictimCombineSoldier" "victimclass" "Combine" "required"  weight 0
 criterion "IsVictimZombie" "victimclass" "Zombie" "required"  weight 0
 criterion "IsVictimAntlion" "victimclass" "Antlion" "required"  weight 0
+criterion "IsVictimJohn" "victimclass" "John" "required"
 
 criterion "IsNotVictimScout" "victimclass" "!=Scout" "required" weight 0
 criterion "IsNotVictimSniper" "victimclass" "!=Sniper" "required" weight 0
@@ -364,7 +367,7 @@ criterion "IsNotVictimCivilian" "victimclass" "!=Civilian" "required" weight 0
 criterion "IsNotVictimCombineSoldier" "victimclass" "!=Combine" "required" weight 0
 criterion "IsNotVictimZombie" "victimclass" "!=Zombie" "required" weight 0
 criterion "IsNotVictimAntlion" "victimclass" "!=Antlion" "required" weight 0
-
+criterion "IsNotVictimJohn" "victimclass" "!=John" "required"
 
 criterion "2PercentChance"   "randomnum"               "=>98"   required
 criterion "5PercentChance"   "randomnum"               "=>95"   required
