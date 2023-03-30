@@ -11230,89 +11230,6 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"442"
-		{
-			"name"	"The Righteous Bison"
-			"first_sale_date"	"2011/07/13"
-			"item_class"	"tf_weapon_raygun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
-			"item_description"	"#TF_RighteousBison_Desc"
-			"item_name"	"#TF_RighteousBison"
-			"item_slot"	"secondary"
-			"anim_slot" "secondary2"
-			"item_quality"	"unique"
-			"item_logname"	"righteous_bison"
-			"item_iconname"	"righteous_bison"
-			"propername"	"1"
-			"min_ilevel"	"30"
-			"max_ilevel"	"30"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"45"
-			"model_player"	"models/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"soldier"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"
-			}
-			"attributes"
-			{
-				"energy weapon no ammo"
-				{
-					"attribute_class"	"energy_weapon_no_ammo"
-					"value" "1"
-				}
-				"energy weapon penetration"
-				{
-					"attribute_class"	"energy_weapon_penetration"
-					"value"	"1"
-				}
-				"energy weapon no hurt building"
-				{
-					"attribute_class"	"energy_weapon_no_hurt_building"
-					"value" "1"
-				}
-				"energy weapon no deflect"
-				{
-					"attribute_class"	"energy_weapon_no_deflect"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Bison.Single"
-				"sound_burst"		"Weapon_Bison.SingleCrit"
-				"sound_reload"		"Weapon_Bison.Reload"
-				"animation_replacement"
-				{
-					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_SECONDARY_ALT1_VM_INSPECT_START"
-					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_SECONDARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_SECONDARY_ALT1_VM_INSPECT_END"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
 		"444"
 		{
 			"name"			"The Mantreads"
@@ -23073,6 +22990,90 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9713"
+		{
+			"name"	"The 18 Shot"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Revolver with ''extra ammo''"
+			"item_name"	"The 18 Shot"
+			"item_description"	"(Model by Sparkwire, Populus)"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"item_logname"	"c96"
+			"item_iconname"	"c96"
+			"image_inventory"	"backpack/weapons/c_models/c_18"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_18/c_revolver/c_revolver.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"spy" 		"1"
+			}
+                        "visuals"
+			{
+				"sound_single_shot"	"Weapon_Enforcer.Single"
+				"sound_burst"	"Weapon_Enforcer.SingleCrit"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "3.00"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"2.00"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "3.00"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"3.00"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"	"3"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.40"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"30570"
 		{
