@@ -1,0 +1,66 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 0.277778 -1.000000
+  param "noaction"
+}
+actor "fuel_dump_soldier1"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.351852 3.592593
+      param "!player"
+      event_ramp
+      {
+        0.8000 0.5971
+        2.5167 0.5790
+      }
+    }
+  }
+  channel "Face at"
+  {
+    event face "Face !player"
+    {
+      time 1.037037 5.129631
+      param "!player"
+      event_ramp
+      {
+        1.2717 0.5271
+        3.2246 0.5271
+      }
+      lockbodyfacing
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "gesture"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 2.240741 -1.000000
+      param "1"
+    }
+  }
+  channel "Posture"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "34"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

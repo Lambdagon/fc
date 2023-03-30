@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.hivehand.goodgod04"
+    {
+      time 0.399999 1.958752
+      param "st.grd02.hivehand.goodgod04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "GrudgeM"
+    {
+      time 0.060000 3.020000
+      param "common_expressions"
+      param2 "GrudgeM"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_headshake"
+    {
+      time 0.100000 1.733333
+      param "hg_headshake"
+      absolutetags playback_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.066666 1.960000
+      param "!self"
+    }
+    event lookat "Look at !player"
+    {
+      time 1.986667 3.593334
+      param "!player"
+      event_ramp
+      {
+        0.3760 0.5188
+        1.3740 0.4135
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
