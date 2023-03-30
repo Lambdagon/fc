@@ -1,0 +1,239 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 9.009524 -1.000000
+  param "noaction"
+}
+actor "GRD02_Shack"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Security.statement13"
+    {
+      time 5.072023 7.390957
+      param "NPC_Security.statement13"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.125000 3.558333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5714 0.5100
+          0.9929 0.7400
+          1.5127 0.7600
+          1.9918 0.7600
+          2.2835 0.3700
+          3.0335 0.3700
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8252 1.0000
+          1.1585 0.9200
+          1.5127 1.0000
+          1.7828 0.8400
+          2.1490 1.0000
+          2.4906 1.0000
+          3.2264 1.0000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5335 0.7200
+          0.8252 0.7200
+          1.1585 0.7200
+          1.5127 0.7200
+          1.9918 0.7200
+          2.2835 0.7200
+          3.0335 0.6500
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.1585 0.8100
+          1.5127 0.8100
+          1.9918 0.3600
+          2.2835 0.3600
+          3.0335 0.7700
+        }
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 6.224406 7.224406
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.4303 0.5995
+        0.7394 0.5923
+      }
+    }
+    event expression "b_afraid01"
+    {
+      time 4.974406 6.266073
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid01"
+      event_ramp
+      {
+        0.3030 0.6514
+        0.9523 0.6140
+      }
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 4.786906 8.220239
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5714 0.5100
+          0.9929 0.7400
+          1.5127 0.7600
+          1.9918 0.7600
+          2.2835 0.3700
+          3.0335 0.3700
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8252 1.0000
+          1.1585 0.9200
+          1.5127 1.0000
+          1.7828 0.8400
+          2.1490 1.0000
+          2.4906 1.0000
+          3.2264 1.0000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5335 0.7200
+          0.8252 0.7200
+          1.1585 0.7200
+          1.5127 0.7200
+          1.9918 0.7200
+          2.2835 0.7200
+          3.0335 0.6500
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.1585 0.8100
+          1.5127 0.8100
+          1.9918 0.3600
+          2.2835 0.3600
+          3.0335 0.7700
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentUp"
+    {
+      time 5.185716 7.619049
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.6231 0.7853
+        1.8308 0.7950
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.104166 8.442460
+      param "!self"
+      event_ramp
+      {
+        1.4538 0.9903
+        6.9407 0.9952
+      }
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto target_moveto_trainfootplate1"
+    {
+      time 0.842857 3.752380
+      param "target_moveto_trainfootplate1"
+      param2 "Walk"
+    }
+    event face "Face target_faceto_tramfront"
+    {
+      time 0.164881 5.341072
+      param "target_faceto_tramfront"
+      event_ramp
+      {
+        0.7059 0.9940
+        4.0905 1.0000
+      }
+    }
+    event face "Face target_faceto_tramleft"
+    {
+      time 4.085714 10.495238
+      param "target_faceto_tramleft"
+      event_ramp
+      {
+        0.7059 0.9940
+        5.5952 1.0000
+      }
+    }
+    event lookat "Look at lvl1_ascent_zombie_01_be"
+    {
+      time 8.269049 11.197620
+      param "lvl1_ascent_zombie_01_be"
+      event_ramp
+      {
+        0.7429 0.9952
+        2.4476 1.0000
+      }
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+    event face "Face !self"
+    {
+      time 0.312500 3.354167
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "14"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

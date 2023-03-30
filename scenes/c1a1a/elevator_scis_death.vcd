@@ -1,0 +1,109 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 16.111111 -1.000000
+  param "noaction"
+}
+actor "ballast_01"
+{
+  channel "Voice"
+  {
+  }
+  channel "Captions"
+  {
+    event speak "uc.ele.sfx.clang01"
+    {
+      time 0.000000 3.593056
+      param "uc.ele.sfx.clang01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.Male.death02"
+    {
+      time 4.368611 7.981945
+      param "uc.ele.Male.death02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male.death01"
+    {
+      time 1.765436 5.378771
+      param "uc.ele.male.death01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.Male.death03"
+    {
+      time 7.331573 10.944908
+      param "uc.ele.Male.death03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.Male.dropping01"
+    {
+      time 10.276014 13.889349
+      param "uc.ele.Male.dropping01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.Male.dropping02"
+    {
+      time 11.905645 15.518980
+      param "uc.ele.Male.dropping02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Foley"
+  {
+    event speak "uc.ele.sfx.crashing01"
+    {
+      time 11.294534 14.960898
+      param "uc.ele.sfx.crashing01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+actor "ballast_02"
+{
+  channel "Captions"
+  {
+    event speak "uc.ele.female01_panicked01"
+    {
+      time 2.995596 6.608930
+      param "uc.ele.female01_panicked01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.female01_panicked02"
+    {
+      time 6.007501 9.620834
+      param "uc.ele.female01_panicked02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

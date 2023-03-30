@@ -1,0 +1,99 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.headcrab03"
+    {
+      time 0.270349 2.504385
+      param "NPC_Scifemale.headcrab03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.009695 2.117058
+      param "!enemy"
+      event_ramp
+      {
+        0.0825 0.5468
+        0.1268 0.8392
+        0.2122 0.9866
+        1.6507 1.0000
+        1.7360 0.8156
+        1.9185 0.3323
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event face "Face !enemy"
+    {
+      time 0.267857 0.767857
+      param "!enemy"
+    }
+  }
+  channel "Expression"
+  {
+    event expression "scifem_angry01"
+    {
+      time 0.122650 0.506740
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "scifem_angry01"
+      event_ramp
+      {
+        0.1215 0.6765
+        0.2225 0.9443
+        0.3045 0.4573
+      }
+    }
+    event expression "sci_afraid02"
+    {
+      time 0.805555 2.522222
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid02"
+      event_ramp
+      {
+        0.2358 0.4953
+        0.5075 0.7346
+        1.3913 0.4514
+      }
+    }
+    event expression "Sci_Fem_afraid_extreme00"
+    {
+      time 0.060185 1.870370
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid_extreme00"
+      event_ramp
+      {
+        0.1121 0.3791
+        0.2379 0.7441
+        0.3409 0.6682
+        1.3981 0.2145
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Face"
+  {
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "108"
+  "RampTool" "132"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,100 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.yougotit02"
+    {
+      time 0.187500 1.213736
+      param "NPC_Scimale.yougotit02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.055026 1.560979
+      param "!player"
+      event_ramp
+      {
+        0.1458 1.0000
+        1.2000 0.9988
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_sudden01"
+    {
+      time 0.078836 0.763360
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sudden01"
+      event_ramp
+      {
+        0.1568 0.4669
+        0.2757 0.5544
+        0.3946 0.4764
+        0.4541 0.3168
+      }
+    }
+    event expression "sci_angry02_chin"
+    {
+      time 0.637169 1.405026
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry02_chin"
+      event_ramp
+      {
+        0.1216 0.3652
+        0.4108 0.4303
+        0.6216 0.3617
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.235979 1.625264
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.1571 0.3227
+        0.4346 0.3865
+        0.8269 0.3381
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.097384
+        "extreme" 0.267806
+        "loop" 0.681688
+        "end" 0.765735
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+  "RampTool" "48"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

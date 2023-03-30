@@ -1,0 +1,135 @@
+// Choreo version 1
+actor "GRD04_SupplyDepot"
+{
+  channel "Voice"
+  {
+    event speak "lc.grd04.idle.giveemoneforme01"
+    {
+      time 0.473485 2.129108
+      param "lc.grd04.idle.giveemoneforme01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.grd04.idle.giveemoneforme02"
+    {
+      time 2.547980 4.195848
+      param "lc.grd04.idle.giveemoneforme02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.grd04.idle.giveemoneforme03"
+    {
+      time 4.396465 5.245286
+      param "lc.grd04.idle.giveemoneforme03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_smile_sly_lefty_alt01"
+    {
+      time 1.717949 2.307693
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_sly_lefty_alt01"
+      event_ramp
+      {
+        0.1880 1.0000
+        0.3440 0.9355
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 0.538462 1.884615
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.1560 0.9355
+        1.1500 0.8495
+      }
+    }
+    event expression "b_smile_evil00"
+    {
+      time 2.397436 4.333333
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_evil00"
+      event_ramp
+      {
+        0.1260 0.7634
+        1.7700 0.6882
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 4.153847 6.423076
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.1560 0.9355
+        1.5911 0.6129
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "right hand motion"
+    {
+      time 2.986111 4.952778
+      param "G_righthandmotion"
+      absolutetags playback_time
+      {
+        "apex" 0.241379
+        "accent" 0.517241
+        "loop" 0.689655
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.241379
+        "accent" 0.517241
+        "loop" 0.689655
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Accent"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look At Player"
+    {
+      time 0.069445 0.777778
+      param "!player"
+    }
+    event lookat "Look At Player"
+    {
+      time 1.708334 5.722223
+      param "!player"
+    }
+    event lookat "Look At Self"
+    {
+      time 0.500001 1.777778
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

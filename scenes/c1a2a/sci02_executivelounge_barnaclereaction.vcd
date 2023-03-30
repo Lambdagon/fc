@@ -1,0 +1,123 @@
+// Choreo version 1
+actor "sci_move"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci01.started.generic09"
+    {
+      time 0.349410 1.072653
+      param "oc.sci01.started.generic09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci01.started.generic08"
+    {
+      time 1.187794 1.895186
+      param "oc.sci01.started.generic08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.128205 1.128205
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.0748 0.5620
+        0.3159 1.0000
+        0.6106 1.0000
+      }
+    }
+    event expression "sci_huh01mild"
+    {
+      time 0.102564 0.391026
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_huh01mild"
+      event_ramp
+      {
+        0.0654 0.9941
+        0.2307 0.9906
+      }
+    }
+    event expression "sci_wincing02"
+    {
+      time 0.250000 0.506410
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing02"
+      event_ramp
+      {
+        0.0449 0.9988
+        0.1984 0.9917
+      }
+    }
+    event expression "sci_afraid01"
+    {
+      time 0.211539 1.750000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.1316 1.0000
+        0.8385 0.9929
+      }
+    }
+  }
+  channel "Sequence"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Looks at Barnacle Breaking Through Ceiling"
+    {
+      time 0.044872 1.596154
+      param "barn2"
+      event_ramp
+      {
+        0.2000 0.9953
+        1.3474 0.9941
+      }
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto seq_sci_move"
+    {
+      time 0.463597 0.963597
+      param "seq_sci_move"
+      param2 "Run"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "flex"
+  {
+    event face "Face barn2"
+    {
+      time 1.027360 2.017260
+      param "barn2"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "10"
+  "RampTool" "38"
+  "CChoreoView" "132"
+}
+fps 60
+snap off
+ignorePhonemes off

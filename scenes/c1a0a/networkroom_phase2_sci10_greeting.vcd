@@ -1,0 +1,70 @@
+// Choreo version 1
+actor "SCI10_networkroom"
+{
+  channel "Voice"
+  {
+    event speak "vo\c1a0a\sci10_gotothechamber01.wav"
+    {
+      time 0.484166 2.549813
+      param "am.sci10.gotothechamber01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.066666 3.559090
+      param "!player"
+      event_ramp
+      {
+        0.3286 0.3938
+        0.4429 0.5000
+        0.6429 0.5512
+        1.0571 0.5800
+        1.4571 0.5900
+        2.1643 0.5800
+        2.5143 0.5550
+        2.9857 0.4075
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Flex"
+    {
+      time 0.186607 2.728274
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3762 0.5000
+          0.6024 0.6700
+          0.7432 0.7000
+          1.0023 0.6100
+          1.2523 0.3900
+          1.4462 0.3600
+          1.7750 0.3700
+          1.9705 0.4900
+          2.1205 0.4800
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "72"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

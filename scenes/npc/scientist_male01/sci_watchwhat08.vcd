@@ -1,0 +1,131 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.watchwhat08"
+    {
+      time 0.513333 3.153333
+      param "NPC_Scimale.watchwhat08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026667 3.980001
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        3.2171 0.9931
+        3.5873 0.7183
+        3.7755 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.040000 3.980000
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.1538 0.4268
+        0.4692 0.6707
+        3.0948 0.6463
+        3.5846 0.4024
+        3.8077 0.2195
+      }
+    }
+    event expression "Angry ShockM"
+    {
+      time 0.783134 3.966667
+      param "common_expressions"
+      param2 "Angry ShockM"
+      event_ramp
+      {
+        0.1846 0.5732
+        0.4077 0.5610
+        0.5692 0.2927
+        0.9000 0.4268
+        1.1308 0.4268
+        1.2846 0.2073
+        1.4615 0.2317
+        1.8077 0.7439
+        2.2231 0.7805
+        2.8488 0.2073
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.022436 3.956325
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.6857 0.4800
+          0.8214 0.1700
+          1.1500 0.1700
+          1.2357 0.4700
+          1.5571 0.6000
+          2.3714 0.4400
+          2.5500 0.8600
+          3.1714 0.8800
+          3.8000 0.5200
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent up"
+    {
+      time 0.466666 3.960000
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.1231 0.3902
+        3.4288 0.3902
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.217557
+        "extreme" 0.377863
+        "loop" 0.541985
+        "end" 0.705100
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

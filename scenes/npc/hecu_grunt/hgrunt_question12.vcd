@@ -1,0 +1,79 @@
+// Choreo version 1
+event stoppoint "FireCompletion!"
+{
+  time 1.404364 -1.000000
+  param "noaction"
+}
+actor "!target"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.question12"
+    {
+      time 0.333147 1.412807
+      param "NPC_hgrunt.question12"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.042857 1.847314
+      param "!self"
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "Mar_angry01"
+    {
+      time 0.072440 2.082380
+      param "humans\marine\marine"
+      param2 "Mar_angry01"
+      event_ramp
+      {
+        0.3431 0.4529
+        0.4707 0.4933
+        1.3595 0.5055
+        1.7164 0.4945
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Trigger"
+  {
+    event interrupt "Interrupt- Gordon may shoot at him anytime!!!"
+    {
+      time 0.048095 1.781243
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "ExpressionTool" "26"
+  "GestureTool" "100"
+  "RampTool" "110"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

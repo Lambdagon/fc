@@ -1,0 +1,109 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre57"
+    {
+      time 0.652548 1.724566
+      param "NPC_Scimale.answer_pre57"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 2.578361
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.0187 0.9931
+        2.2889 0.7798
+        2.4437 0.1145
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "fa"
+    {
+      time 0.000000 2.500000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.3957 0.8500
+          1.0870 0.9300
+          1.8522 0.9100
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.3696 0.7600
+          1.1043 0.7800
+          1.8870 0.7900
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.3458 0.4800
+          1.1333 0.6100
+          2.0083 0.4600
+        }
+        {
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3000 0.6700
+          1.9292 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.4913 0.5100
+          0.8261 0.6900
+          1.2261 0.7500
+          1.7522 0.4600
+        }
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event expression "Dubious"
+    {
+      time -0.005952 2.571429
+      param "common_expressions"
+      param2 "Dubious"
+      event_ramp
+      {
+        0.2862 0.3333
+        1.2793 0.3264
+        2.1138 0.3542
+      }
+    }
+  }
+  channel "Accent"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "48"
+  "SceneRampTool" "100"
+  "RampTool" "58"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

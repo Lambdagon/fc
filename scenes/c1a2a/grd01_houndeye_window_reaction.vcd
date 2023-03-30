@@ -1,0 +1,140 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 4.375758 -1.000000
+  param "noaction"
+}
+actor "GRD01_Storage"
+{
+  channel "Voice"
+  {
+    event speak "oc.grd01.offices.biggermess01"
+    {
+      time 0.436177 2.212957
+      param "NPC_Security.bullsquid03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.grd01.offices.biggermess01"
+    {
+      time 7.380035 7.996021
+      param "NPC_Security.startle_aah05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.grd01.offices.biggermess01"
+    {
+      time 4.933147 6.414598
+      param "NPC_Security.gordead_ques17"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.grd01.offices.biggermess01"
+    {
+      time 9.480036 11.765365
+      param "NPC_Security.statement_adlib04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.227273 2.439394
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3385 0.6980
+        0.3667 0.8571
+        1.0077 0.7551
+        1.3692 0.2816
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 4.300000 6.512121
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3385 0.3470
+        0.4079 0.5061
+        1.0077 0.6367
+        1.3692 0.2816
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event face "Face !player"
+    {
+      time 3.690909 4.266666
+      param "!player"
+    }
+    event face "c1a2a_couch_potato"
+    {
+      time 0.121212 3.945455
+      param "c1a2a_couch_potato"
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 4.436363 5.481818
+      param "!player"
+      event_ramp
+      {
+        0.4885 0.9673
+      }
+    }
+    event lookat "c1a2a_couch_potato"
+    {
+      time 0.181818 2.439394
+      param "c1a2a_couch_potato"
+      event_ramp
+      {
+        0.5932 1.0000
+        1.7491 0.9959
+      }
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Firetrigger 16"
+    {
+      time 2.366667 -1.000000
+      param "16"
+    }
+  }
+  channel "Move To"
+  {
+  }
+  channel "Face At"
+  {
+    event interrupt "Interrupt"
+    {
+      time 5.360606 12.767099
+      param ""
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "34"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,90 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.busy18"
+    {
+      time 0.560000 2.183107
+      param "NPC_Scimale.busy18"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 3.026666
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.5831 0.8472
+        0.7508 0.9931
+        2.2810 0.9931
+        2.4281 0.8403
+        2.7689 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_buckup"
+    {
+      time 1.358832 2.645498
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_buckup"
+      event_ramp
+      {
+        0.2485 0.6482
+        0.9545 0.6269
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.472165 1.472165
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.2394 0.1924
+        0.3606 0.6423
+        0.6485 0.2113
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "flex01"
+    {
+      time 0.165498 2.698832
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4389 0.5400
+          0.7828 0.5900
+          0.9644 0.4300
+          1.2109 0.5200
+          1.4398 0.4300
+          1.7111 0.5100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "36"
+  "SceneRampTool" "100"
+  "RampTool" "36"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

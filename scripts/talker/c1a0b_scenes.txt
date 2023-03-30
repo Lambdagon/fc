@@ -1,0 +1,165 @@
+criterion IsAM2 "map" "bm_c1a0b" required
+
+//========================================================
+//19 - LASER HALLWAY
+//========================================================
+criterion IsGrd07LaserHall name "Grd07_laser" required
+
+response Grd07_LaserHall_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/laser_grd07_idle01.vcd"
+   scene "scenes/c1a0b/laser_grd07_idle02.vcd"
+   scene "scenes/c1a0b/laser_grd07_idle03.vcd"
+   scene "scenes/c1a0b/laser_grd07_idle04.vcd"
+   scene "scenes/c1a0b/laser_grd07_idle05.vcd"
+   scene "scenes/c1a0b/laser_grd07_idle06.vcd"
+}
+
+rule Grd07_LaserHall_Idle
+{
+   criteria TLK_VITALIDLE IsGrd07LaserHall IsAM2 IsPlayerClose IsPreDisaster
+   response Grd07_LaserHall_Idle
+}
+
+//========================================================
+//20 - IONIZATION CHAMBER
+//========================================================
+criterion IsSci36Ionization name "SCI36_Ionization" weight 5 required
+criterion IsSci37Ionization name "SCI37_Ionization" weight 5 required 
+
+rule Sci36_Ionization_Hello
+{
+   criteria TLK_HELLO IsSci36Ionization IsAM2 IsPlayerClose SeenByPlayer IsPreDisaster 
+   scene "scenes/c1a0b/ionchamber_sci36.vcd"
+   matchonce
+}
+
+rule Sci37_Ionization_Hello
+{
+   criteria TLK_HELLO IsSci37Ionization IsAM2 IsPlayerClose SeenByPlayer IsPreDisaster 
+   scene "scenes/c1a0b/ionchamber_sci37.vcd"
+   matchonce
+}
+
+//========================================================
+//21 - CONTROL ROOM
+//========================================================
+criterion IsSci40 name "Sci40" required
+criterion IsSci41 name "Sci41" required
+
+response Sci40_ControlRoom_Use
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/controlroom_sci40_interact01.vcd"
+   scene "scenes/c1a0b/controlroom_sci40_interact02.vcd"
+   scene "scenes/c1a0b/controlroom_sci40_interact03.vcd"
+}
+
+rule Sci40_ControlRoom_Use
+{
+   criteria TLK_USE IsSci40 IsAM2 IsPreDisaster
+   response Sci40_ControlRoom_Use
+}
+
+response Sci41_ControlRoom_Use
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/controlroom_sci41_interact01.vcd"
+   scene "scenes/c1a0b/controlroom_sci41_interact02.vcd"
+   scene "scenes/c1a0b/controlroom_sci41_interact03.vcd"
+}
+
+rule Sci41_ControlRoom_Use
+{
+   criteria TLK_USE IsSci41 IsAM2 IsPreDisaster
+   response Sci41_ControlRoom_Use
+}
+
+response Kleiner_ControlRoom_Use
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/controlroom_kleiner_interact01.vcd"
+   scene "scenes/c1a0b/controlroom_kleiner_interact02.vcd"
+}
+
+
+rule Kleiner_ControlRoom_Use
+{
+   criteria TLK_USE IsKleiner IsAM2 IsPreDisaster
+   response Kleiner_ControlRoom_Use
+}
+
+rule Kleiner_Lead
+{
+   criteria TLK_LEAD_CATCHUP IsKleiner IsAM2 IsPreDisaster
+   scene "scenes/c1a0b/controlroom_kleiner_lead01.vcd"
+   scene "scenes/c1a0b/controlroom_kleiner_lead02.vcd"
+}
+
+//========================================================
+//22 - ELI And Kleiner-PostScene
+//========================================================
+criterion PostEliScene "posteli" "1" required
+
+response Kleiner_PLasmaScene_Interact
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/plasma_kleiner_idle01.vcd" defaultdelay
+   scene "scenes/c1a0b/plasma_kleiner_idle02.vcd" defaultdelay
+   scene "scenes/c1a0b/plasma_kleiner_interact01.vcd" defaultdelay
+}
+
+rule Kleiner_PLasmaScene_Interact
+{
+   criteria TLK_USE IsKleiner IsAM2 IsPreDisaster PostEliScene
+   response Kleiner_PLasmaScene_Interact
+}
+      
+//========================================================
+//23 - TEST CHAMBER HALLWAY
+//========================================================
+criterion IsSci44TCHallway name "SCI44_TCHallway" weight 5 required
+criterion IsSci45TCHallway name "SCI45_TChallway" weight 5 required
+criterion IsGrd08TCHallway name "Grd08_TChallway" weight 5 required
+criterion HombreHere "Hombre" "1" required
+
+response SCI45_Vaction_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/tchallway_vacation_idle01.vcd"
+   scene "scenes/c1a0b/tchallway_vacation_idle02.vcd"
+   scene "scenes/c1a0b/tchallway_vacation_idle03.vcd"
+   scene "scenes/c1a0b/tchallway_vacation_idle04.vcd"
+   scene "scenes/c1a0b/tchallway_vacation_idle05.vcd"
+}
+
+rule SCI45_Vaction_Idle
+{
+   criteria TLK_IDLE IsSci45TCHallway IsAM2 IsPlayerClose IsPreDisaster 
+   response SCI45_Vaction_Idle
+}
+
+response GRD08_TCHallway_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0b/tchallway_grd08_idle01.vcd"
+   scene "scenes/c1a0b/tchallway_grd08_idle02.vcd"
+   scene "scenes/c1a0b/tchallway_grd08_idle03.vcd"
+   scene "scenes/c1a0b/tchallway_grd08_idle04.vcd"
+   scene "scenes/c1a0b/tchallway_grd08_idle05.vcd"
+   scene "scenes/c1a0b/tchallway_grd08_idle06.vcd"
+}
+
+rule GRD08_TCHallway_Idle
+{
+   criteria TLK_VITALIDLE IsGrd08TCHallway IsAM2 IsPlayerClose IsPreDisaster HombreHere
+   response GRD08_TCHallway_Idle
+}

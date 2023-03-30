@@ -1,0 +1,97 @@
+// Choreo version 1
+event stoppoint "Complete"
+{
+  time 0.026316 -1.000000
+  param "noaction"
+}
+actor "SCI04"
+{
+  channel "Voice"
+  {
+    event speak "wgh.sci04.elevator.dying.no01"
+    {
+      time 0.322399 1.588317
+      param "wgh.sci04.elevator.dying.no01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Facial"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Gesture"
+  {
+    event sequence "accent"
+    {
+      time 4.519231 4.519231
+      param "bg_up_l_sitinFrameSpine"
+      fixedlength
+    }
+    event sequence "accent"
+    {
+      time 4.920635 4.920635
+      param "bg_up_l_sitinFrameArms"
+      fixedlength
+    }
+    event face "Face Hgrunt01"
+    {
+      time 0.500811 2.357953
+      param "Hgrunt01"
+    }
+    event moveto "Moveto !player"
+    {
+      time 2.440238 3.654522
+      param "!player"
+      param2 "run_protected_all"
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.158762 1.158762
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.4444 0.7834
+      }
+    }
+    event moveto "Moveto RescuedAtLast_SCI04_target02"
+    {
+      time 0.545501 2.522943
+      param "RescuedAtLast_SCI04_target02"
+      param2 "run_protected_all"
+    }
+  }
+  channel "Sequence"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look At Hgrunt01"
+    {
+      time 0.009648 4.701314
+      param "Hgrunt01"
+    }
+    event face "Face Hgrunt01"
+    {
+      time 0.047368 4.639035
+      param "Hgrunt01"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "38"
+  "ExpressionTool" "22"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,52 @@
+// Choreo version 1
+actor "GRD04"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.063492 6.188035
+      param "!player"
+      event_ramp
+      {
+        0.0652 0.1199
+        0.1472 0.1962
+        0.2630 0.5368
+        0.8813 1.0000
+        5.2688 0.9714
+        6.0053 0.1716
+      }
+    }
+  }
+  channel "Interupt"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+actor "SCI02"
+{
+  channel "Look at"
+  {
+  }
+  channel "Expression"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "RampTool" "32"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

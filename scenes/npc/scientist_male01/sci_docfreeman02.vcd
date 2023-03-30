@@ -1,0 +1,56 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.docfreeman02"
+    {
+      time 0.403081 1.030133
+      param "NPC_Scimale.docfreeman02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.070196 1.661065
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.7746
+        1.0133 0.8121
+        1.2850 0.6231
+        1.4900 0.4000
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "PSmile"
+    {
+      time 0.083333 1.559524
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.2950 0.7317
+        0.9600 0.7317
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "RampTool" "40"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

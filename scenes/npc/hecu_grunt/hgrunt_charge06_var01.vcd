@@ -1,0 +1,107 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.charge06"
+    {
+      time 0.073333 0.870249
+      param "NPC_hgrunt.charge06_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Mar_browup01"
+    {
+      time 0.013333 0.466667
+      param "humans\marine\marine"
+      param2 "Mar_browup01"
+      event_ramp
+      {
+        0.1396 0.5337
+        0.3312 0.5386
+      }
+    }
+    event expression "Mar_angry01"
+    {
+      time 0.046667 1.140000
+      param "humans\marine\marine"
+      param2 "Mar_angry01"
+      event_ramp
+      {
+        0.1385 0.5813
+        0.5333 0.2163
+        0.9231 0.1238
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Crazy for Combat"
+    {
+      time 0.026667 1.093333
+      param ""
+      flextimingtags
+      {
+        "in" 0.078750 1
+        "Head Straight" 0.631875 1
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.1120 0.0700
+          0.2607 0.1300
+          0.3276 0.3000
+          0.4116 0.2100
+          0.5740 0.0300
+        }
+        {
+          0.2492 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.0222 0.5100
+          0.0318 0.5100
+          0.0483 0.5100
+          0.1308 0.5200
+          0.2200 0.6700
+          0.3022 0.8400
+          0.4600 0.6800
+          0.6516 0.5200
+          0.7652 0.5100
+          0.8190 0.5100
+          0.8839 0.5100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.0222 0.5100
+          0.0318 0.5100
+          0.0483 0.5100
+          0.1313 0.4900
+          0.2406 0.4400
+          0.3548 0.1600
+          0.6584 0.4900
+          0.7652 0.5100
+          0.8190 0.5100
+          0.8839 0.5100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "88"
+  "ExpressionTool" "50"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

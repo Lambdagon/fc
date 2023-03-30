@@ -1,0 +1,73 @@
+// Choreo version 1
+actor "SCI24_lab03"
+{
+  channel "Voice"
+  {
+    event speak "am.sci24.pineforcross04"
+    {
+      time 0.273334 2.631021
+      param "am.sci24.pineforcross04"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "PSmile"
+    {
+      time 0.280000 3.293334
+      param "common_expressions"
+      param2 "PSmile"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "kgesture04"
+    {
+      time 0.273333 3.640000
+      param "kgesture04"
+      absolutetags playback_time
+      {
+        "apex" 0.100098
+        "accent" 0.514852
+        "loop" 0.645545
+        "end" 0.736634
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.109890
+        "accent" 0.417582
+        "loop" 0.527473
+        "end" 0.692308
+      }
+      sequenceduration 3.066667
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.040000 3.586667
+      param "!self"
+      event_ramp
+      {
+        0.4960 1.0000
+        3.0071 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "72"
+  "RampTool" "56"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

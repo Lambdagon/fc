@@ -1,0 +1,140 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.getgoingsoon04"
+    {
+      time 0.403081 3.656324
+      param "NPC_Scimale.getgoingsoon04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.070196 5.280114
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.6353
+        0.7100 0.8949
+        4.2524 0.7813
+        4.7824 0.2704
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.093333 1.188571
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.3800 0.6098
+        0.8741 0.5732
+      }
+    }
+    event expression "sci_sad00"
+    {
+      time 0.607143 3.095239
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sad00"
+      event_ramp
+      {
+        0.2450 0.3212
+        0.3650 0.4581
+        0.5750 0.5242
+        1.4850 0.6021
+        1.7271 0.4676
+        1.8971 0.3224
+        2.0690 0.1122
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 2.523809 3.809523
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.1730 0.4250
+        0.4108 0.7532
+        0.9938 0.4522
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.976190 2.261904
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.1730 0.4250
+        0.4108 0.7532
+        0.9938 0.4522
+      }
+    }
+    event expression "sci_sad00"
+    {
+      time 1.988096 4.476192
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sad00"
+      event_ramp
+      {
+        0.2450 0.3212
+        0.3650 0.4581
+        0.5750 0.5242
+        1.4850 0.6021
+        1.7271 0.4676
+        1.8971 0.3224
+        2.0690 0.1122
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 1.940476 3.907143
+      param "bg_down"
+      event_ramp
+      {
+        0.3200 0.2632
+        1.6950 0.2526
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "RampTool" "74"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

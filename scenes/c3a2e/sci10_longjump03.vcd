@@ -1,0 +1,213 @@
+// Choreo version 1
+actor "SCI10_Steinman"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci10.familiarizeyourself01"
+    {
+      time 1.131284 5.664957
+      param "lc.sci10.familiarizeyourself01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.079365 7.623017
+      param "!player"
+      event_ramp
+      {
+        0.5432 0.4475
+        0.7556 0.5348
+        1.3111 0.5832
+        2.1667 0.5880
+        5.6782 0.5832
+        7.0226 0.5112
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.189682 6.314683
+      param ""
+      event_ramp
+      {
+        0.7885 0.6163
+        1.1000 0.9988
+        6.1250 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3563 0.5000
+          0.6654 0.5000
+          0.8745 0.5000
+          1.1215 0.5500
+          1.5067 0.4900
+          1.7326 0.3900
+          2.0252 0.3900
+          2.3536 0.5000
+          2.5548 0.5100
+          3.5500 0.5000
+          4.2262 0.6200
+          4.8310 0.5000
+          5.4393 0.5200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4750 0.5200
+          0.7350 0.5100
+          0.9850 0.5100
+          1.2171 0.6800
+          1.4009 0.8300
+          1.5861 0.7500
+          1.7450 0.3600
+          1.8250 0.2600
+          2.1509 0.2700
+          2.3850 0.4100
+          2.6550 0.4300
+          2.9184 0.5600
+          3.0984 0.6000
+          3.3304 0.3700
+          3.6460 0.3800
+          3.9224 0.5500
+          4.2262 0.6100
+          4.8310 0.5000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3926 0.4900
+          0.5790 0.4900
+          0.8335 0.4900
+          1.1770 0.5100
+          1.5030 0.5300
+          1.8141 0.5900
+          2.1437 0.6200
+          2.4067 0.6000
+          4.2262 0.6300
+          4.8310 0.5000
+          5.3964 0.4700
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3745 0.5100
+          0.5154 0.5100
+          0.7108 0.5100
+          1.1500 0.4300
+          1.3960 0.5000
+          1.6276 0.5200
+          2.1262 0.5100
+          2.2438 0.4700
+          2.5085 0.4900
+          3.1413 0.5200
+          3.4486 0.3200
+          3.7913 0.6100
+          4.0679 0.6500
+          4.8964 0.5300
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.1500 0.5000
+          1.4171 0.4800
+          1.6592 0.6600
+          1.8066 0.5000
+          1.9224 0.4100
+          2.1262 0.4500
+          2.2438 0.5100
+          2.5085 0.4700
+          3.0107 0.4400
+          3.4964 0.4600
+          3.6713 0.4600
+          3.8050 0.6000
+          3.9463 0.7400
+          4.0964 0.8400
+          4.3893 0.5200
+          4.6821 0.5000
+          5.1821 0.4700
+        }
+      }
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Sci_Fem_sudden01"
+    {
+      time 0.831349 2.564682
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_sudden01"
+      event_ramp
+      {
+        0.4370 0.6789
+      }
+    }
+    event expression "Sci_Fem_huh01_mouthclosedalt"
+    {
+      time 0.105556 1.105556
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_huh01_mouthclosedalt"
+      event_ramp
+      {
+        0.2082 0.3235
+        0.4061 0.5077
+        0.7796 0.3884
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_right_openhand"
+    {
+      time 3.854167 6.383333
+      param "g_right_openhand"
+      absolutetags playback_time
+      {
+        "apex" 0.188358
+        "accent" 0.269083
+        "loop" 0.336354
+        "end" 0.654321
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.291667
+        "accent" 0.416667
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "move to"
+  {
+    event moveto "Moveto !player"
+    {
+      time 0.354166 2.375000
+      param "!player"
+      param2 "Walk"
+      distancetotarget 106.00
+      forceshortmovement
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 7.083333 -1.000000
+      param "1"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "SceneRampTool" "100"
+  "RampTool" "12"
+  "ExpressionTool" "44"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

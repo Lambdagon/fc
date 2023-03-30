@@ -1,0 +1,143 @@
+// Choreo version 1
+actor "GRD02LC"
+{
+  channel "Voice"
+  {
+    event speak "lc.grd02.teleport.reaction03"
+    {
+      time 0.303030 4.758880
+      param "lc.grd02.teleport.reaction03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.060606 6.257576
+      param "!player"
+      event_ramp
+      {
+        0.5417 0.6014
+        0.9750 0.8188
+        2.9917 0.9203
+        4.4583 0.9275
+        5.3333 0.8478
+        5.7833 0.5725
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 2.469697 4.769697
+      param "hg_nod_yes"
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "bg_accentUp"
+    {
+      time 2.500000 5.524242
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.100576
+        "extreme" 0.245853
+        "loop" 0.447005
+        "end" 0.743719
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "bg_accentFwd"
+    {
+      time 1.000000 3.736363
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.234250
+        "extreme" 0.431863
+        "loop" 0.604774
+        "end" 0.728282
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "shotgun gestures"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "FACE"
+  {
+    event face "Face !player"
+    {
+      time 0.045455 6.075758
+      param "!player"
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_wincing01"
+    {
+      time 0.045455 2.893939
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+    }
+    event expression "b_sudden"
+    {
+      time 2.348485 4.666667
+      param "humans\guard\expressions_guard"
+      param2 "b_sudden01"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "20"
+  "RampTool" "24"
+  "CChoreoView" "44"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,128 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 3.466879 -1.000000
+  param "noaction"
+}
+actor "player!"
+{
+  channel "Voice"
+  {
+    event speak "player.scimale.dominate06"
+    {
+      time 0.448831 3.416518
+      param "player.scimale.dominate08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time -0.013889 5.458333
+      param ""
+      event_ramp
+      {
+        0.2692 0.0858
+        0.7308 1.0000
+        4.4951 0.9939
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.5139 0.0000
+          1.9306 0.0000
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          0.5139 1.0000
+          1.9306 1.0000
+        }
+        {
+          0.5139 1.0000
+          1.9306 1.0000
+        }
+        "lowerer" combo 
+        {
+          0.5139 0.1600
+          1.9306 0.1600
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.5139 1.0000
+          1.9306 1.0000
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "wrinkler" 
+        {
+          0.5139 0.2100
+          1.9306 0.2100
+        }
+        "corner_puller" combo 
+        {
+          0.5139 1.0000
+          1.9306 1.0000
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "part" combo 
+        {
+          0.5139 0.1400
+          1.9306 0.1400
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "funneler" combo 
+        {
+          0.5139 0.2000
+          1.9306 0.2000
+        }
+        {
+          0.5139 0.5000
+          1.9306 0.5000
+        }
+        "bite" 
+        {
+          0.5139 0.0000
+          1.9306 0.0000
+        }
+      }
+    }
+  }
+  channel "Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

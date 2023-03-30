@@ -1,0 +1,159 @@
+// Choreo version 1
+actor "Grd07_laser"
+{
+  channel "Voice"
+  {
+    event speak "am.grd07.havefun01"
+    {
+      time 0.253333 2.972449
+      param "am.grd07.havefun01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "sarcasm"
+    {
+      time 0.053333 3.560000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.2820 0.5400
+          0.8720 0.5900
+          1.6320 0.5800
+          1.8220 0.5400
+          1.9620 0.0100
+          2.1840 0.3300
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          2.0580 0.0000
+          2.2160 0.5000
+          2.4160 0.5100
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          2.6280 0.0500
+          2.7740 0.7200
+          2.9600 0.6900
+          3.3340 0.5400
+        }
+        {
+          1.5240 0.0000
+          3.3960 0.0000
+        }
+      }
+    }
+    event flexanimation "head tilts"
+    {
+      time 0.000000 2.277778
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2953 0.5000
+          0.5953 0.2139
+          0.6398 0.1900
+          0.7852 0.3800
+          0.9704 0.2900
+          1.4064 0.2743
+          1.8064 0.2400
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.5953 0.2000
+          1.4064 0.2885
+          1.8064 0.3898
+        }
+      }
+    }
+    event flexanimation "eye movements"
+    {
+      time 0.000000 3.666667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.6235 0.4400
+          0.8235 0.0000
+          1.1902 0.0000
+          1.4791 0.0000
+        }
+        {
+          0.6235 0.5000
+          0.8235 0.5000
+          1.1902 0.5000
+          1.4791 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.1481 0.4800
+          0.2593 0.4800
+          0.3481 0.6100
+          0.6235 0.6100
+          0.8235 0.6211
+          1.1902 0.6183
+          1.4791 0.6083
+          2.1124 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3704 0.6000
+          0.5444 0.5100
+          0.6235 0.4600
+          0.8235 0.4600
+          1.0000 0.4700
+          1.2087 0.4718
+          1.3407 0.5400
+          1.4791 0.4300
+          2.1124 0.5000
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "!player"
+    {
+      time 1.639766 4.479065
+      param "!player"
+      event_ramp
+      {
+        0.4552 0.6671
+        0.7392 1.0000
+        2.3012 1.0000
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 0.044444 1.666666
+      param "!self"
+    }
+  }
+  channel "gesture"
+  {
+  }
+  faceposermodel "models\humans\security\security_01.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "84"
+  "GestureTool" "100"
+  "ExpressionTool" "54"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

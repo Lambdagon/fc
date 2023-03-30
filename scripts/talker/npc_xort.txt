@@ -1,0 +1,112 @@
+criterion XORT classname "npc_xort" required
+criterion IsCrateMap "map" "test_crates_zoo1" required
+
+// GENERIC RESPONSE RULES FOR EARTHBOUND AI
+// PLZ NOTE THESE ARE VERY WIP AT THE MOMENT. Criteria need more refinement.
+
+
+//============================================================================================
+response XORT_ALERT
+{
+	scene "scenes/npc/alien_slave/xortEB_alert01.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xortEB_alert02.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xortEB_alert03.vcd" respeakdelay 5
+//	scene "scenes/npc/alien_slave/xortEB_alert04.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xortEB_alert05.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xortEB_alert06.vcd" respeakdelay 5	
+}
+	
+rule XORT_ALERT
+{
+	criteria XORT TLK_STARTCOMBAT EnemyIsPlayer SeePlayer
+	response XORT_ALERT
+}
+
+//============================================================================================
+response XORT_IDLE
+{
+	scene "scenes/npc/alien_slave/xortEB_idle01.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle02.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle03.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle04.vcd" respeakdelay 2	
+	scene "scenes/npc/alien_slave/xortEB_idle05.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle06.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle07.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle08.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_idle09.vcd" respeakdelay 2	
+}
+	
+rule XORT_IDLE
+{
+	criteria XORT TLK_IDLE NotProvoked NoRecentCombat
+	response XORT_IDLE
+}
+
+//============================================================================================
+response XORT_PAIN
+{
+	scene "scenes/npc/alien_slave/xortEB_pain01.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_pain02.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_pain03.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_pain04.vcd" respeakdelay 2
+	scene "scenes/npc/alien_slave/xortEB_pain05.vcd" respeakdelay 2
+}
+rule XORT_PAIN
+{
+	criteria XORT TLK_WOUND
+	response XORT_PAIN
+}
+
+//=======================================================================================
+//=======================================================================================
+//=======================================================================================
+// These response rules handle vortiguant npcs in 
+//
+// Chapter Interloper
+//
+// to portray the weakened state of the slaves working inside the interloper tower.
+
+//============================================================================================
+response XORT_LABOURED_COUGH
+{
+	scene "scenes/npc/alien_slave/xort_laboured_cough01.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_cough02.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_cough03.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_cough04.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_cough05.vcd" respeakdelay 5
+}	
+rule XORT_LABOURED_COUGH
+{
+	criteria XORT TLK_IDLE NotProvoked NoRecentCombat NearPlayer IsCrateMap
+	response XORT_LABOURED_COUGH
+}
+
+// ============================================================================================
+response XORT_LABOURED_COUGHIDLE
+{
+	scene "scenes/npc/alien_slave/xort_laboured_coughidle01.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_coughidle02.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_coughidle03.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_coughidle04.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_coughidle05.vcd" respeakdelay 5
+}	
+rule XORT_LABOURED_COUGHIDLE
+{
+	criteria XORT TLK_IDLE NotProvoked NoRecentCombat NearPlayer IsCrateMap
+	response XORT_LABOURED_COUGHIDLE
+}
+
+// ============================================================================================
+response XORT_LABOURED_IDLE
+{
+	scene "scenes/npc/alien_slave/xort_laboured_idle01.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_idle02.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_idle03.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_idle04.vcd" respeakdelay 5
+	scene "scenes/npc/alien_slave/xort_laboured_idle05.vcd" respeakdelay 5
+}	
+rule XORT_LABOURED_IDLE
+{
+	criteria XORT TLK_IDLE NotProvoked NoRecentCombat NearPlayer IsCrateMap
+	response XORT_LABOURED_IDLE
+}		

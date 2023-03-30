@@ -1,0 +1,161 @@
+// Choreo version 1
+event loop "Loop"
+{
+  time 35.810558 -1.000000
+  param "5.039000"
+  loopcount "-1"
+}
+actor "SCI02_SiloDoorsController"
+{
+  channel "look"
+  {
+    event lookat "computer01"
+    {
+      time 0.000000 38.000004
+      param "!self"
+      resumecondition
+    }
+  }
+  channel "move to"
+  {
+  }
+  channel "face at."
+  {
+    event face "Face SCI02_tableface01"
+    {
+      time -4.901515 38.348484
+      param "SCI02_tableface01"
+      lockbodyfacing
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_up_r"
+    {
+      time 0.128480 2.568757
+      param "bg_up_r"
+      event_ramp
+      {
+        0.1789 0.3681
+        0.5579 0.5000
+        2.0614 0.4077
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.237930
+        "extreme" 0.363482
+        "loop" 0.461134
+        "end" 0.600637
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+    event gesture "LineIdle02"
+    {
+      time 0.000000 39.295238
+      param "LineIdle02"
+      absolutetags playback_time
+      {
+        "in" 0.003499
+        "startloop" 0.008306
+        "endloop" 0.951168
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.003499
+        "startloop" 0.008318
+        "endloop" 0.097650
+      }
+      sequenceduration 0.033333
+    }
+  }
+  channel "expression"
+  {
+    event flexanimation "shakes head at this situation"
+    {
+      time 0.293859 3.170462
+      param ""
+      resumecondition
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.4917 0.5700
+          0.9917 0.4000
+          1.3417 0.6100
+          1.7667 0.6200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1750 0.4300
+          0.8917 0.7700
+          2.1667 0.7500
+        }
+      }
+    }
+  }
+  channel "voice"
+  {
+  }
+  channel "triggers"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "flex"
+  {
+    event flexanimation "Head noise"
+    {
+      time 5.215813 38.166668
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.0704 0.5000
+          2.2371 0.3700
+          7.5149 0.3900
+          11.8130 0.6000
+          19.1463 0.6229
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.0704 0.5000
+          2.2371 0.4700
+          4.6508 0.4800
+          6.3508 0.5100
+          6.6708 0.6100
+          7.2549 0.6900
+          8.7408 0.7200
+          11.8130 0.7200
+          15.7175 0.7000
+          19.1463 1.0000
+          21.6175 0.7000
+        }
+      }
+    }
+  }
+  channel "Sequence"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "SceneRampTool" "2"
+  "RampTool" "14"
+  "ExpressionTool" "2"
+  "GestureTool" "10"
+}
+fps 60
+snap off
+ignorePhonemes off

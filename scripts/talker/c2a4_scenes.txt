@@ -1,0 +1,74 @@
+criterion IsQEf "map" "bm_c2a4f" required
+
+//========================================================
+//QE_LOBBYFIGHT_AFTERMATH (DO NOT CHANGE!!!) Kevin is experimenting with this temporarily
+//========================================================
+criterion IsSCI01_Surgery name "SCI01_Surgery" required 
+criterion IsSCI02_Surgery name "SCI02_Surgery" required
+criterion IsGRD01_Office name "GRD01_Office" required
+criterion LobbyDoorOpen "lobbydoor" "1" required
+criterion GrdPizzaIdle "pizzaidle" "1" required
+criterion GrdTeslastartle "teslastartle" "1" required
+
+
+response SCI01_Surgery_Interact
+{
+   sequential
+   scene "scenes/npc/scientist_male01/sci_holddownspot04.vcd"
+   scene "scenes/npc/scientist_male01/sci_holddownspot05.vcd"
+   scene "scenes/npc/scientist_male01/sci_illstayhere03.vcd"
+   scene "scenes/npc/scientist_male01/sci_illstayhere05.vcd"
+   scene "scenes/npc/scientist_male01/sci_imstickinghere04.vcd"
+   scene "scenes/npc/scientist_male01/sci_littlecorner01.vcd"
+   scene "scenes/npc/scientist_male01/sci_ahgordon04.vcd"
+}
+
+rule SCI01_Surgery_Interact
+{
+   criteria TLK_USE IsSCI01_Surgery IsQEf SeenByPlayer LobbyDoorOpen
+   response SCI01_Surgery_Interact
+}
+
+response SCI02_Surgery_Interact
+{
+   sequential
+   scene "scenes/npc/scientist_female01/scifemale_littlecorner01.vcd"
+   scene "scenes/npc/scientist_female01/scifemale_imstickinghere04.vcd"
+   scene "scenes/npc/scientist_female01/scifemale_illstayhere01.vcd"
+   scene "scenes/npc/scientist_female01/scifemale_holddownspot03.vcd"
+   scene "scenes/npc/scientist_female01/scifemale_holddownspot04.vcd"
+}
+
+rule SCI02_Surgery_Interact
+{
+   criteria TLK_USE IsSCI02_Surgery IsQEf SeenByPlayer LobbyDoorOpen
+   response SCI02_Surgery_Interact
+}
+
+response Grd01Office_Interact
+{
+   sequential
+   norepeat
+   scene "scenes/c2a4f/grd01_lobbyidle01.vcd"
+   scene "scenes/c2a4f/grd01_lobbyidle02.vcd"
+   scene "scenes/c2a4f/grd01_lobbyidle03.vcd"
+}
+
+rule Grd01Office_Interact
+{
+   criteria TLK_USE IsGRD01_Office IsQEf SeenByPlayer GrdPizzaIdle
+   response Grd01Office_Interact
+}
+
+response Grd01Office_Teslastartle
+{
+   norepeat
+   scene "scenes/npc/security/startle03.vcd"
+   scene "scenes/npc/security/startle02.vcd"
+}
+
+rule Grd01Office_Teslastartle
+{
+   criteria TLK_USE IsGRD01_Office IsQEf
+   response Grd01Office_Teslastartle
+}

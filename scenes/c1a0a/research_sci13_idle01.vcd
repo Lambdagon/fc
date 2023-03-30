@@ -1,0 +1,88 @@
+// Choreo version 1
+actor "SCI13_Research"
+{
+  channel "Voice"
+  {
+    event speak "am.sci13.twoorthree01"
+    {
+      time 0.166667 4.076667
+      param "am.sci13.twoorthree01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_whiteboard_point02"
+    {
+      time -0.026666 3.626667
+      param "g_whiteboard_point02"
+      absolutetags playback_time
+      {
+        "apex" 0.266042
+        "loop" 0.276042
+        "accent" 0.552085
+        "end" 0.795132
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.254237
+        "loop" 0.254237
+        "accent" 0.508475
+        "end" 0.762712
+      }
+      sequenceduration 3.966666
+    }
+    event gesture "g_scratchhead"
+    {
+      time 2.813333 6.446667
+      param "g_scratchhead"
+      absolutetags playback_time
+      {
+        "apex" 0.128889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 2.240000 4.433333
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.3440 0.4839
+        1.3840 0.4032
+      }
+    }
+  }
+  channel "Look At"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "48"
+}
+fps 60
+snap off
+ignorePhonemes off

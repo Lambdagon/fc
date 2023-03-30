@@ -1,0 +1,43 @@
+// Choreo version 1
+actor "SCI11"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci11.part03.getintoposition01"
+    {
+      time 0.426667 1.506667
+      param "lc.sci11.part03.getintoposition01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.sci11.part03.getintoposition02"
+    {
+      time 1.768235 3.216126
+      param "lc.sci11.part03.getintoposition02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.107843 3.578432
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "68"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,220 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.lockup.idle.betterstockup01"
+    {
+      time 0.966374 4.405399
+      param "st.grd02.lockup.idle.betterstockup01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd02.lockup.idle.betterstockup02"
+    {
+      time 4.873782 6.622376
+      param "st.grd02.lockup.idle.betterstockup02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 7.832343
+      param ""
+      event_ramp
+      {
+        0.4500 0.9985
+        6.9429 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.1750 0.4900
+          1.9927 0.5000
+          2.7635 0.6500
+          2.8052 0.6500
+          3.7000 0.5400
+          4.2750 0.4900
+          4.9750 0.4900
+          5.8500 0.4900
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.4093 0.5000
+          1.7635 0.6900
+          2.1177 0.4000
+          2.2218 0.5000
+          2.3885 0.5000
+          2.6177 0.5000
+          2.9302 0.7400
+          3.6260 0.4600
+          3.7885 0.4600
+          4.8250 0.4800
+          5.4750 0.6500
+          6.3500 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5760 0.2600
+          0.8267 0.4800
+          1.4718 0.5600
+          1.7635 0.4800
+          2.8052 0.6100
+          4.0750 0.4500
+          4.9000 0.4800
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.5343 0.5000
+          2.8052 0.9500
+          3.4418 0.5000
+          4.1377 0.6000
+          5.0000 0.3800
+          5.7250 0.5000
+          6.4500 0.4600
+          6.9500 0.5300
+        }
+      }
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.064815 8.083334
+      param "!player"
+      event_ramp
+      {
+        0.4135 0.5927
+        0.9222 0.7414
+        1.7333 0.7568
+        3.2778 0.7414
+        5.0074 0.7426
+        5.9963 0.6753
+      }
+    }
+  }
+  channel "FAce"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_browup01"
+    {
+      time 2.576442 3.304512
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.0649 0.2503
+        0.1595 0.3533
+        0.4782 0.3521
+        0.6066 0.2621
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 1.593795 3.018607
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1820 0.2940
+        0.2492 0.3879
+        0.7984 0.4928
+        1.2453 0.3672
+        1.3076 0.2656
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 1.242990 1.971060
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1754 0.6986
+        0.2700 0.8485
+        0.4782 0.8473
+        0.6066 0.7104
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 2.965819 6.447178
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1820 0.2940
+        0.2492 0.4227
+        0.5090 0.5822
+        1.1929 0.6121
+        1.6500 0.3076
+        3.1895 0.5550
+        3.3018 0.3672
+        3.3641 0.2656
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 4.576443 5.304513
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.0649 0.2503
+        0.1595 0.9988
+        0.4782 0.9976
+        0.6066 0.2621
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.069986 1.280512
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1031 0.2940
+        0.1703 0.4227
+        0.5090 0.5822
+        0.9582 0.5550
+        1.0705 0.3672
+        1.0933 0.2656
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "c2a5f_barney"
+{
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "22"
+  "RampTool" "76"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

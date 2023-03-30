@@ -1,0 +1,137 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.watchwhat09"
+    {
+      time 0.513333 1.856349
+      param "NPC_Scimale.watchwhat09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026667 2.806667
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.0437 0.9931
+        2.4139 0.7183
+        2.6021 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Angry ShockM"
+    {
+      time 0.369801 2.586667
+      param "common_expressions"
+      param2 "Angry ShockM"
+      event_ramp
+      {
+        0.2846 0.8902
+        1.2077 0.7683
+        1.3999 0.4391
+        1.8821 0.3902
+      }
+    }
+    event expression "Pissed Off"
+    {
+      time 0.040000 2.766667
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.7308 0.2927
+        0.9461 0.7805
+        1.4507 0.7926
+        1.9959 0.7317
+        2.4036 0.6098
+        2.6421 0.3171
+      }
+    }
+    event expression "Tough1"
+    {
+      time 1.020000 2.806667
+      param "humans\marine\marine"
+      param2 "Tough1"
+      event_ramp
+      {
+        0.2154 0.4268
+        1.0077 0.4512
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.022436 2.809658
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.3713 0.5100
+          0.5571 0.7600
+          0.8143 0.7800
+          0.9143 0.4100
+          1.0643 0.3800
+          1.1500 0.7800
+          1.4071 0.9800
+          1.8357 0.8200
+          2.3499 0.5400
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent up"
+    {
+      time 0.173333 2.800000
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.1231 0.3902
+        2.5621 0.3902
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.133566
+        "extreme" 0.284264
+        "loop" 0.532431
+        "end" 0.661097
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

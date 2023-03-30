@@ -1,0 +1,123 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "vo\npc\barneys\nice02.wav"
+    {
+      time 0.469692 1.529034
+      param "NPC_Security.nice02"
+      param2 "0.7"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 2.200985
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3747 0.7433
+        1.6286 0.7620
+        1.9547 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_smile00"
+    {
+      time 0.267353 2.416857
+      param "humans\guard\expressions_guard"
+      param2 "b_smile00"
+      event_ramp
+      {
+        0.3034 0.9976
+        0.8818 0.6871
+        1.9036 1.0000
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 0.275920 2.375418
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.1407 0.9504
+        0.4825 0.7615
+        1.1860 0.9150
+        1.5456 0.8512
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 1.123009 2.270445
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.3162 0.9894
+        0.8524 0.9953
+      }
+    }
+    event expression "b_freaked_mouthopen"
+    {
+      time 0.173077 1.173077
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthopen"
+      event_ramp
+      {
+        0.1947 0.2172
+        0.3553 0.7828
+        0.7289 0.2491
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 0.108974 1.742307
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.3289 0.2102
+        0.5842 0.7710
+        1.2179 0.2208
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "38"
+  "CChoreoView" "84"
+}
+fps 60
+snap off
+ignorePhonemes off

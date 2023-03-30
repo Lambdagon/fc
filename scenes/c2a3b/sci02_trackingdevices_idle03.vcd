@@ -1,0 +1,213 @@
+// Choreo version 1
+actor "Sci02_Cryo"
+{
+  channel "Voice"
+  {
+    event speak "app.sci02.idle.savior01"
+    {
+      time 0.666667 4.015488
+      param "app.sci02.idle.savior01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.sci02.idle.savior02"
+    {
+      time 4.553030 8.086726
+      param "app.sci02.idle.savior02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Face"
+  {
+    event face "Face !player"
+    {
+      time 0.416667 8.625000
+      param "!player"
+      event_ramp
+      {
+        0.4182 0.3579
+        1.2182 0.8526
+        4.0273 0.8211
+        6.0000 0.8632
+        7.2545 0.6526
+      }
+      lockbodyfacing
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.291666 9.666667
+      param "!player"
+      event_ramp
+      {
+        0.8909 0.6316
+        3.4182 0.8211
+        5.1636 0.7895
+        7.0727 0.7895
+        8.4182 0.4737
+      }
+    }
+  }
+  channel "Postures"
+  {
+  }
+  channel "Gestures"
+  {
+    event gesture "g_mid_relaxed_fist_accent"
+    {
+      time 1.477777 4.126263
+      param "g_mid_relaxed_fist_accent"
+      event_ramp
+      {
+        0.1182 0.5104
+        0.4364 0.7292
+        1.9450 0.7708
+        2.2379 0.5536
+        2.5122 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.161641
+        "accent" 0.212725
+        "loop" 0.343034
+        "end" 0.539601
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.235294
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "kgesture08"
+    {
+      time 6.182827 9.623486
+      param "kgesture08"
+      event_ramp
+      {
+        0.0000 0.0000
+        0.7545 0.4583
+        2.2846 0.5116
+        2.7919 0.4726
+        3.4406 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.246684
+        "accent" 0.343614
+        "loop" 0.505526
+        "end" 0.641092
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.115385
+        "accent" 0.256410
+        "loop" 0.423077
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "head gesture punctuate down"
+    {
+      time 6.078031 7.711363
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.2727 0.2976
+        0.5636 0.5833
+        0.9818 0.5179
+        1.3182 0.3333
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "body accent up"
+    {
+      time 0.300000 5.098989
+      param "bodyaccentup"
+      absolutetags playback_time
+      {
+        "apex" 0.247737
+        "extreme" 0.358872
+        "loop" 0.443176
+        "end" 0.760252
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_righthand_flick"
+    {
+      time 3.939394 7.012121
+      param "g_righthand_flick"
+      absolutetags playback_time
+      {
+        "apex" 0.336131
+        "accent" 0.499703
+        "loop" 0.681192
+        "end" 0.736563
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "idle_subtle"
+    {
+      time 0.022727 8.845454
+      param "idle_subtle"
+      event_ramp
+      {
+        1.0364 0.2692
+        1.9727 1.0000
+        8.3182 1.0000
+      }
+      sequenceduration 9.300000
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "22"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

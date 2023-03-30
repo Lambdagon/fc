@@ -1,0 +1,696 @@
+criterion IsAM1 "map" "bm_c1a0a" required weight 2
+
+//========================================================
+//00 - The Mighty Tram Door Opener
+//========================================================
+criterion IsGRD00Door name "GRD00_Door" required weight 2
+
+response GRD00_Door_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/entrance_grd00_morning_idle01.vcd" delay 12
+   scene "scenes/c1a0a/entrance_grd00_morning_idle02.vcd" delay 12
+   scene "scenes/c1a0a/entrance_grd00_morning_idle03.vcd" delay 12
+   scene "scenes/c1a0a/entrance_grd00_morning_idle04.vcd" delay 12
+}
+
+rule GRD00_Door_Idle
+{
+   criteria TLK_VITALIDLE IsGRD00Door IsAM1 IsPlayerClose SeenByPlayer 
+   response GRD00_Door_Idle
+}
+
+//========================================================
+//01 - SECURITY CHECKPOINT
+//========================================================
+criterion IsGRD01Checkpoint name "Grd01_Checkpoint" required
+
+response GRD01_Checkpoint_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/checkpoint_grd01_idle01.vcd" defaultdelay
+   scene "scenes/c1a0a/checkpoint_grd01_idle02.vcd" defaultdelay
+}
+
+rule GRD01_Checkpoint_Idle
+{
+   criteria TLK_VITALIDLE IsGRD01Checkpoint IsAM1 IsPlayerClose IsPreDisaster
+   response GRD01_Checkpoint_Idle
+}
+
+//========================================================
+//02 - Lobby
+//========================================================
+criterion IsGRD02Lobby name "GRD02_Lobby" required weight 2
+criterion IsSCI01Lobby name "Sci01_Lobby" required weight 10
+criterion IsSCI02Lobby name "SCI02_Lobby" required weight 2
+criterion IsSCI03Lobby name "SCI03_Lobby" required weight 2
+criterion IsSCI04Lobby name "SCI04_Lobby" required weight 2
+criterion IsSCI05Lobby name "SCI05_Lobby" required weight 2
+
+response Grd02_Lobby_Answer
+{
+   sequential
+   scene "scenes/c1a0a/lobby_grd02_idle_response01.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response02.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response03.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response04.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response05.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response06.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response07.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response08.vcd" delay 2 
+   scene "scenes/c1a0a/lobby_grd02_idle_response09.vcd" delay 2
+   scene "scenes/c1a0a/lobby_grd02_idle_response10.vcd" delay 2
+}
+
+rule Grd02_Lobby_Answer
+{
+   criteria TLK_ANSWER IsGRD02Lobby IsAM1 IsPlayerClose IsPreDisaster
+   response Grd02_Lobby_Answer
+}
+
+response Grd02_Lobby_Interact_Phase1
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/lobby_grd02_interact01.vcd"
+   scene "scenes/c1a0a/lobby_grd02_interact02.vcd"
+}
+
+rule Grd02_Lobby_Interact_Phase1
+{
+   criteria TLK_USE IsGRD02Lobby IsAM1 IsPreDisaster Phase1
+   response Grd02_Lobby_Interact_Phase1
+}
+
+response Grd02_Lobby_Interact_Phase2
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/lobby_grd02_phase2_interact01.vcd"
+   scene "scenes/c1a0a/lobby_grd02_phase2_interact02.vcd"
+}
+
+rule Grd02_Lobby_Interact_Phase2
+{
+   criteria TLK_USE IsGRD02Lobby IsAM1 IsPreDisaster Phase2
+   response Grd02_Lobby_Interact_Phase2
+}
+
+response Sci01_Lobby_Question
+{
+   sequential
+   scene "scenes/c1a0a/lobby_sci01_idle_call01.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call02.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call03.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call04.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call05.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call06.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call07.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call08.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call09.vcd"
+   scene "scenes/c1a0a/lobby_sci01_idle_call10.vcd"
+}
+
+rule Sci01_Lobby_Question
+{
+   criteria TLK_QUESTION IsSCI01Lobby IsAM1 IsPlayerClose IsPreDisaster
+   response Sci01_Lobby_Question
+}
+
+response Sci01_Lobby_Interact_Phase1
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/lobby_sci01_interact01.vcd"
+   scene "scenes/c1a0a/lobby_sci01_interact02.vcd"
+   scene "scenes/c1a0a/lobby_sci01_interact03.vcd"
+}
+
+rule Sci01_Lobby_Interact_Phase1
+{
+   criteria TLK_USE IsSCI01Lobby IsAM1 Phase1
+   response Sci01_Lobby_Interact_Phase1
+}
+
+response Sci01_Lobby_Interact_Phase2
+{
+   sequential
+	norepeat
+   scene "scenes/c1a0a/lobby_sci01_phase2_interact01.vcd"
+   scene "scenes/c1a0a/lobby_sci01_phase2_interact02.vcd"
+}
+
+rule Sci01_Lobby_Interact_Phase2
+{
+   criteria TLK_USE IsSCI01Lobby IsAM1 IsPreDisaster Phase2
+   response Sci01_Lobby_Interact_Phase2
+}
+
+//========================================================
+//03 - NETWORK HALLWAY
+//========================================================
+criterion IsSCI06NetworkHallway name "Sci06_NetworkHallway" required
+criterion IsSCI07NetworkHallway name "SCI07_NetworkHallway" required
+
+Response Sci06_NetworkHallway_Hello
+{	
+  norepeat   
+  scene "scenes/c1a0a/networkhallway_sci06_goodmorning.vcd"
+}
+
+rule Sci06_NetworkHallway_Hello
+{
+   criteria TLK_HELLO IsSCI06NetworkHallway IsAM1 IsPlayerClose SeenByPlayer
+   Response Sci06_NetworkHallway_Hello
+}
+
+
+
+
+//========================================================
+//04 - NETWORK ROOM
+//========================================================
+criterion IsGrd03NetworkRoom name "GRD03_NetworkRoom" required
+criterion IsSci08NetworkRoom name "SCI08_NetworkRoom" required
+criterion IsSci09NetworkRoom name "SCI09_NetworkRoom" required
+criterion IsSci10NetworkRoom name "SCI10_NetworkRoom" required
+criterion IsSci11NetworkRoom name "SCI11_NetworkRoom" required
+
+response Grd03_Sci08_NetworkRoom_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/networkroom_lunchbet_idle01.vcd" defaultdelay 
+   scene "scenes/c1a0a/networkroom_lunchbet_idle02.vcd" defaultdelay 
+   scene "scenes/c1a0a/networkroom_lunchbet_idle03.vcd" defaultdelay 
+   scene "scenes/c1a0a/networkroom_lunchbet_idle04.vcd" defaultdelay 
+}
+
+rule Grd03_Sci08_NetworkRoom_Idle
+{
+   criteria TLK_VITALIDLE IsGrd03NetworkRoom IsPlayerClose IsAM1 Phase1 SeenByPlayer
+   response Grd03_Sci08_NetworkRoom_Idle
+}
+
+response Sci09_NetworkRoom_Phase1_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_sci09_greeting.vcd"
+}
+
+rule Sci09_NetworkRoom_Phase1_Hello
+{
+   criteria IsSci09NetworkRoom IsPlayerClose IsAM1 Phase1 SeenByPlayer
+   response Sci09_NetworkRoom_Phase1_Hello
+}
+
+response Sci09_NetworkRoom_Phase2_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_phase2_sci09_greeting.vcd"
+}
+
+rule Sci09_NetworkRoom_Phase2_Hello
+{
+   criteria IsSci09NetworkRoom IsPlayerClose IsAM1 Phase2 SeenByPlayer
+   response Sci09_NetworkRoom_Phase2_Hello
+}
+
+response SCI10_NetworkRoom_Phase1_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_sci10_greeting.vcd"
+}
+
+rule SCI10_NetworkRoom_Phase1_Hello
+{
+   criteria IsSci10NetworkRoom IsPlayerReallyNear IsAM1 Phase1 SeenByPlayer
+   response SCI10_NetworkRoom_Phase1_Hello
+}
+
+response SCI10_NetworkRoom_Phase2_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_phase2_sci10_greeting.vcd"
+}
+
+rule SCI10_NetworkRoom_Phase2_Hello
+{
+   criteria IsSci10NetworkRoom IsPlayerClose IsAM1 Phase2 SeenByPlayer
+   response SCI10_NetworkRoom_Phase2_Hello
+}
+
+response SCI11_NetworkRoom_Phase1_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_sci11_greeting.vcd"
+}
+
+rule SCI11_NetworkRoom_Phase1_Hello
+{
+   criteria IsSci11NetworkRoom IsPlayerClose IsAM1 Phase1 SeenByPlayer
+   response SCI11_NetworkRoom_Phase1_Hello
+}
+
+response SCI11_NetworkRoom_Phase2_Hello
+{
+   norepeat
+   scene "scenes/c1a0a/networkroom_phase2_sci11_greeting.vcd"
+}
+
+rule SCI11_NetworkRoom_Phase2_Hello
+{
+   criteria IsSci11NetworkRoom IsPlayerClose IsAM1 Phase2 SeenByPlayer
+   response SCI11_NetworkRoom_Phase2_Hello
+}
+
+//========================================================
+//06 - RESEARCH ROOM
+//========================================================
+criterion IsResearchRoomTruman name "SCI15_Truman" required
+criterion IsSCI14_Research name "SCI14_Research" required
+criterion IsSCI13_Research name "SCI13_Research" required
+criterion RoflCopter "roflcopter" "1" required
+
+response Sci15_Research_Truman
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/research_sci15_drtruman.vcd"
+   scene "scenes/c1a0a/research_sci15_idle01.vcd" 
+   scene "scenes/c1a0a/research_sci15_idle02.vcd" 
+   scene "scenes/c1a0a/research_sci15_idle03.vcd" 
+}
+
+rule Sci15_Research_Truman
+{
+   criteria TLK_VITALIDLE IsResearchRoomTruman IsAM1 IsPreDisaster RoflCopter
+   response Sci15_Research_Truman
+}
+
+response SCI14_Research_Idle
+{
+   norepeat
+   sequential
+   scene "scenes/c1a0a/research_sci14_idle01.vcd" 
+   scene "scenes/c1a0a/research_sci14_idle02.vcd" 
+}
+
+rule SCI14_Research_Idle
+{
+   criteria TLK_VITALIDLE IsSCI14_Research IsAM1 IsPlayerClose SeenByPlayer SeePlayer IsPreDisaster
+   response SCI14_Research_Idle
+}
+
+response SCI13_Research_Idle
+{
+   norepeat
+   sequential
+   scene "scenes/c1a0a/research_sci13_idle01.vcd" 
+   scene "scenes/c1a0a/research_sci13_idle02.vcd" 
+}
+
+rule SCI13_Research_Idle
+{
+   criteria TLK_VITALIDLE IsSCI13_Research IsAM1 IsPlayerClose SeenByPlayer IsPreDisaster
+   response SCI13_Research_Idle
+}
+
+
+//========================================================
+//07 - COOLANT AIRLOCK
+//========================================================
+criterion IsGrd04CoolantAirlock name "GRD04_Coolant" required
+
+response Grd04_Coolant_Airlock_Idle_Phase1
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/coolant_grd04_wrongairlock_idle01.vcd"
+   scene "scenes/c1a0a/coolant_grd04_wrongairlock_idle02.vcd"
+   scene "scenes/c1a0a/coolant_grd04_wrongairlock_idle03.vcd"
+   scene "scenes/c1a0a/coolant_grd04_wrongairlock_idle04.vcd"
+   scene "scenes/c1a0a/coolant_grd04_wrongairlock_idle05.vcd"
+}
+
+rule Grd04_Coolant_Airlock_Idle_Phase1
+{
+   criteria TLK_VITALIDLE IsGrd04CoolantAirlock IsAM1 IsPlayerClose IsPreDisaster Phase1
+   response Grd04_Coolant_Airlock_Idle_Phase1
+}
+
+response Grd04_Coolant_Airlock_Idle_Phase2
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/coolant_phase2_grd04_wrongairlock_idle01.vcd"
+   scene "scenes/c1a0a/coolant_phase2_grd04_wrongairlock_idle02.vcd"
+   scene "scenes/c1a0a/coolant_phase2_grd04_wrongairlock_idle03.vcd"
+   scene "scenes/c1a0a/coolant_phase2_grd04_wrongairlock_idle04.vcd"
+}
+
+rule Grd04_Coolant_Airlock_Idle_Phase2
+{
+   criteria TLK_VITALIDLE IsGrd04CoolantAirlock IsAM1 IsPlayerClose IsPreDisaster Phase2
+   response Grd04_Coolant_Airlock_Idle_Phase2
+}
+
+
+//========================================================
+//08 - BREAK ROOM
+//========================================================
+criterion IsGrd05Breakroom name "GRD05_BreakRoom" required
+criterion IsSci16Breakroom name "SCI16_BreakRoom" required 
+criterion MicrowaveExploded "MicrowaveGone" "1" required
+
+response Grd05_Breakroom_Interact_PreMicrowave
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/breakroom_grd05_interact01.vcd"
+   scene "scenes/c1a0a/breakroom_grd05_interact02.vcd"
+   scene "scenes/c1a0a/breakroom_grd05_interact03.vcd"
+   scene "scenes/c1a0a/breakroom_grd05_interact04.vcd"
+}
+
+rule Grd05_Interact_PreMicrowave
+{
+   criteria TLK_USE IsGrd05Breakroom IsAM1 IsPreDisaster
+   response Grd05_Breakroom_Interact_PreMicrowave
+}
+
+response Grd05_Breakroom_Interact_PostMicrowave
+{
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact01.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact02.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact03.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact04.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact05.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact06.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact07.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_grd05_interact08.vcd"
+}
+
+rule Grd05_Interact_PostMicrowave
+{
+   criteria TLK_USE IsGrd05Breakroom IsAM1 IsPreDisaster MicrowaveExploded
+   response Grd05_Breakroom_Interact_PostMicrowave
+}
+
+response Sci16_Breakroom_Interact_PreMicrowave
+{
+   norepeat
+   scene "scenes/c1a0a/breakroom_sci16_interact01.vcd"
+   scene "scenes/c1a0a/breakroom_sci16_interact02.vcd"
+   scene "scenes/c1a0a/breakroom_sci16_interact03.vcd"
+   scene "scenes/c1a0a/breakroom_sci16_interact04.vcd"
+ //scene "scenes/c1a0a/breakroom_sci16_interact05.vcd"
+}
+
+rule Sci16_Interact_PreMicrowave
+{
+   criteria TLK_USE IsSci16Breakroom IsAM1 IsPreDisaster
+   response Sci16_Breakroom_Interact_PreMicrowave
+}
+
+
+response Sci16_Breakroom_Interact_PostMicrowave
+{
+   norepeat
+   scene "scenes/c1a0a/breakroom_microwave_sci16_interact01.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_sci16_interact02.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_sci16_interact03.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_sci16_interact04.vcd"
+}
+
+rule Sci16_Interact_PostMicrowave
+{
+   criteria TLK_USE IsSci16Breakroom IsAM1 IsPreDisaster MicrowaveExploded
+   response Sci16_Breakroom_Interact_PostMicrowave
+}
+
+
+response Grd05_Sci16_Idle_PostMicrowave
+{
+   norepeat
+   scene "scenes/c1a0a/breakroom_microwave_idle01.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_idle02.vcd"
+   scene "scenes/c1a0a/breakroom_microwave_idle03.vcd"
+}
+
+rule Sci16_Idle_PostMicrowave
+{
+   criteria TLK_IDLE IsSci16Breakroom IsAM1 IsPlayerClose IsPreDisaster MicrowaveExploded
+   response Grd05_Sci16_Idle_PostMicrowave
+}
+
+
+//========================================================
+//09 - LOCKER ROOM
+//========================================================
+criterion IsSci17Locker name "SCI17_Locker" required
+
+response Sci17_Locker_Idle_Phase1
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/locker_sci17_idle01.vcd"
+   scene "scenes/c1a0a/locker_sci17_idle02.vcd"
+   scene "scenes/c1a0a/locker_sci17_idle03.vcd"
+   scene "scenes/c1a0a/locker_sci17_idle04.vcd"
+}
+
+rule Sci17_Locker_Idle_Phase1
+{
+   criteria TLK_VITALIDLE IsSci17Locker IsAM1 IsPlayerClose SeenByPlayer IsPreDisaster Phase1
+   response Sci17_Locker_Idle_Phase1
+}
+
+response Sci17_Locker_Idle_Phase2
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/locker_sci17_phase2_idle01.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle02.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle03.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle04.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle05.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle06.vcd"
+   scene "scenes/c1a0a/locker_sci17_phase2_idle07.vcd"
+}
+
+rule Sci17_Locker_Idle_Phase2
+{
+   criteria TLK_VITALIDLE IsSci17Locker IsAM1 IsPlayerClose SeenByPlayer IsPreDisaster Phase2
+   response Sci17_Locker_Idle_Phase2
+}
+
+//========================================================
+//10 - BATH ROOM 
+//========================================================
+criterion TLK_TP_IDLE concept TLK_TP_IDLE required
+criterion IsSci23Bathroom name "SCI23_Bathroom" required weight 5
+criterion HasTP "tp" "1" required weight 5
+criterion NoTP "tp" "0" required weight 5
+
+response Sci23_Bathroom_Use_Tp
+{
+   sequential
+   scene "scenes/c1a0a/bathroom_phase2_sci23_occupied_interact01.vcd"
+   scene "scenes/c1a0a/bathroom_phase2_sci23_occupied_interact02.vcd"
+   scene "scenes/c1a0a/bathroom_phase2_sci23_occupied_interact03.vcd"
+   scene "scenes/c1a0a/bathroom_phase2_sci23_occupied_interact04.vcd"
+}
+
+rule Sci23_Bathroom_Use_Tp
+{
+   criteria TLK_USE IsSci23Bathroom HasTP IsAM1 IsPreDisaster 
+   response Sci23_Bathroom_Use_Tp
+}
+
+response Sci23_Bathroom_Use_NoTp
+{
+   sequential
+   scene "scenes/c1a0a/bathroom_sci19_interact01.vcd"
+   scene "scenes/c1a0a/bathroom_sci23_idle05.vcd"
+   scene "scenes/c1a0a/bathroom_sci23_idle04.vcd"
+}
+
+rule Sci23_Bathroom_Use_NoTp
+{
+   criteria TLK_USE IsSci23Bathroom NoTP IsAM1 IsPreDisaster 
+   response Sci23_Bathroom_Use_NoTp
+}
+
+//========================================================
+//11 - LAB 01
+//========================================================
+criterion IsSci21Lab01 name "SCI21_Lab01" required
+
+response Sci21_Lab01_Use
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact01.vcd" defaultdelay
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact02.vcd" defaultdelay
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact03.vcd" defaultdelay
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact04.vcd" defaultdelay
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact05.vcd" defaultdelay
+   scene "scenes/c1a0a/lab02_phase2_sci21_interact06.vcd" defaultdelay
+}
+
+rule Sci21_Lab01_Use
+{
+   criteria TLK_USE IsSci21Lab01 Phase2 IsAM1 SeenByPlayer
+   response Sci21_Lab01_Use
+}
+
+//========================================================
+//12 - LAB 02
+//========================================================
+criterion IsSci23Lab02 name "SCI23_Lab02" required
+
+response Sci23_Lab02_Idle
+{
+   scene "scenes/c1a0a/lab02_sci23_maxwellsdemon.vcd"
+}
+
+rule Sci23_Lab02_Idle
+{
+   criteria TLK_VITALIDLE IsSci23Lab02 IsPlayerReallyNear IsAM1 SeenByPlayer Phase1
+   response Sci23_Lab02_Idle
+   matchonce
+}
+
+//========================================================
+//13 - LAB 03
+//========================================================
+criterion IsSci24lab03 name "SCI24_lab03" required
+criterion IsDoctorAlone "solitary" "1" required
+criterion IsDoctorNotAlone "solitary" "" required
+criterion GordonHasTubes "tubes" "1" required
+criterion GordonHasNoTubes "tubes" "" required
+criterion SciMissesTubes "mytubes" "1" required
+criterion SciMissesTubesEnd "mytubes" "" required
+
+response Sci24_Lab03_Tubes
+{
+   norepeat
+   scene "scenes/npc/scientist_male01/sci_annoyed13.vcd"
+}
+
+rule Sci24_Lab03_Tubes
+{
+   criteria TLK_USE IsSci24lab03 GordonHasTubes IsAM1 IsPreDisaster 
+   response Sci24_Lab03_Tubes
+}
+
+response Sci24_Lab03_TubesThrown
+{
+   norepeat
+   scene "scenes/npc/scientist_male01/sci_annoyed07.vcd"
+}
+
+rule Sci24_Lab03_TubesThrown
+{
+   criteria TLK_USE IsSci24lab03 SciMissesTubes IsAM1 IsPreDisaster 
+   response Sci24_Lab03_TubesThrown
+}
+
+response Sci24_Lab03_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/lab03_sci24_crush_idle01.vcd" defaultdelay
+   scene "scenes/c1a0a/lab03_sci24_crush_idle02.vcd" defaultdelay
+   scene "scenes/c1a0a/lab03_sci24_crush_idle03.vcd" defaultdelay
+   scene "scenes/c1a0a/lab03_sci24_crush_idle04.vcd" defaultdelay
+   scene "scenes/c1a0a/lab03_sci24_crush_idle05.vcd" defaultdelay
+   scene "scenes/c1a0a/lab03_sci24_crush_idle06.vcd" defaultdelay
+}
+
+rule Sci24_Lab03_Idle
+{
+   criteria TLK_VITALIDLE IsSci24lab03 IsDoctorAlone IsAM1 IsPlayerClose SeenByPlayer IsPreDisaster 
+   response Sci24_Lab03_Idle
+}
+
+//========================================================
+//15 - DEVELOPMENT HALLWAY
+//========================================================
+criterion IsGrd06DevHall name "GRD06_DevHall" required
+
+response Grd06_DevHall_Idle
+{
+   norepeat
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle01.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle02.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle03.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle04.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle05.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle06.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_nohev_idle07.vcd"
+}
+
+rule GRD06_Idle
+{
+   criteria TLK_VITALIDLE IsGrd06DevHall IsAM1 IsPlayerReallyNear SeenByPlayer IsPreDisaster Phase1
+   response Grd06_DevHall_Idle
+}
+
+response GRD06_DevHall_Phase2_Idle
+{
+   norepeat
+   scene "scenes/c1a0a/developmenthallway_grd06_yeshev_idle01.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_yeshev_idle02.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_yeshev_idle03.vcd"
+   scene "scenes/c1a0a/developmenthallway_grd06_yeshev_idle04.vcd"
+}
+
+rule GRD06_DevHall_Phase2_Idle
+{
+   criteria TLK_VITALIDLE IsGrd06DevHall IsAM1 IsPlayerReallyNear SeenByPlayer IsPreDisaster Phase2
+   response GRD06_DevHall_Phase2_Idle
+}
+
+//========================================================
+//16 - TV ROOM
+//========================================================
+criterion IsSci27TVRoom name "SCI27_TVRoom" required
+criterion PrettyboyPicIsON "prettyboy" "1" required
+criterion PrettyboyPicIsOff "prettyboy" "" required
+criterion ArtCritic "critic" "1" required
+criterion ArtCriticOFF "critic" "" required
+
+response Sci27_TVRoom_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/tvroom_sci27_idle01.vcd"
+   scene "scenes/c1a0a/tvroom_sci27_idle02.vcd"
+   scene "scenes/c1a0a/tvroom_sci27_idle03.vcd"
+   scene "scenes/c1a0a/tvroom_sci27_idle04.vcd"
+}
+
+rule Sci27_TVRoom_Idle
+{
+   criteria TLK_USE IsSci27TVRoom IsAM1 PrettyboyPicIsON IsPreDisaster Phase2
+   response Sci27_TVRoom_Idle
+}
+
+response Sci27_TVRoom_Art
+{
+   sequential
+   norepeat
+   scene "scenes/c1a0a/tvroom_sci27_idle05.vcd" displayfirst
+   scene "scenes/c1a0a/tvroom_sci27_idle06.vcd" displayfirst
+}
+
+rule Sci27_TVRoom_Art
+{
+   criteria TLK_USE IsSci27TVRoom IsAM1 ArtCritic IsPreDisaster Phase2
+   response Sci27_TVRoom_Art
+}

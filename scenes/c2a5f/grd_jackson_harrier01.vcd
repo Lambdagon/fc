@@ -1,0 +1,46 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 1.904762 -1.000000
+  param "noaction"
+}
+actor "GRD02_HiveHand"
+{
+  channel "Look at"
+  {
+  }
+  channel "Posture"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.138889 2.670834
+      param "!self"
+    }
+  }
+  channel "Flex anim"
+  {
+  }
+  channel "Trigger"
+  {
+    event speak "NPC_Security.runforyourlife04"
+    {
+      time 0.277778 2.277778
+      param "NPC_Security.runforyourlife04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "RampTool" "26"
+  "CChoreoView" "48"
+}
+fps 60
+snap off
+ignorePhonemes off

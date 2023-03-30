@@ -1,0 +1,115 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 4.216593 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_post28"
+    {
+      time 0.454242 4.054242
+      param "NPC_Scimale.question_post28"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.040910 1.882449
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        1.0000 1.0000
+        1.4515 0.4390
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 2.733218 5.200398
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        1.7818 1.0000
+        2.0772 0.4390
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 1.611965 3.070940
+      param "!self"
+      event_ramp
+      {
+        0.2182 0.9976
+        1.2152 1.0000
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 1.440909 4.874240
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.3273 0.1655
+        0.8364 0.5366
+        0.9909 0.8780
+        1.4091 0.9024
+        1.6909 0.5976
+        2.6909 0.5976
+        3.1818 0.3780
+      }
+    }
+    event expression "Pissed Off"
+    {
+      time 0.047576 1.814243
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.4000 0.6098
+        1.4848 0.6098
+      }
+    }
+    event expression "sci_afraid01"
+    {
+      time 3.120290 4.120290
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.4030 0.3235
+        0.7303 0.5372
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

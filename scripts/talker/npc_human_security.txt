@@ -1,0 +1,1024 @@
+criterion SECURITY classname "npc_human_security" required
+
+// ============================================================================================
+response SECURITY_ANSWER
+{
+	scene "scenes/npc/security/answer01.vcd"
+	scene "scenes/npc/security/answer02.vcd"
+	scene "scenes/npc/security/answer03.vcd"
+	scene "scenes/npc/security/answer04.vcd"
+	scene "scenes/npc/security/answer05.vcd"
+	scene "scenes/npc/security/answer06.vcd"
+	scene "scenes/npc/security/answer07.vcd"
+	scene "scenes/npc/security/answer08.vcd"
+	scene "scenes/npc/security/answer09.vcd"
+	scene "scenes/npc/security/answer10.vcd"
+	scene "scenes/npc/security/answer11.vcd"
+	scene "scenes/npc/security/answer12.vcd"
+	scene "scenes/npc/security/answer13.vcd"
+	scene "scenes/npc/security/answer14.vcd"
+	scene "scenes/npc/security/answer15.vcd"
+	scene "scenes/npc/security/answer16.vcd"
+	scene "scenes/npc/security/answer17.vcd"
+	scene "scenes/npc/security/answer18.vcd"
+	scene "scenes/npc/security/answer19.vcd"
+	scene "scenes/npc/security/answer10.vcd"
+	scene "scenes/npc/security/answer21.vcd"
+	scene "scenes/npc/security/answer22.vcd"
+	scene "scenes/npc/security/answer23.vcd"
+	scene "scenes/npc/security/answer24.vcd"
+	scene "scenes/npc/security/answer25.vcd"
+	scene "scenes/npc/security/answer26.vcd"
+	scene "scenes/npc/security/answer27.vcd"
+	scene "scenes/npc/security/answer28.vcd"
+	scene "scenes/npc/security/answer29.vcd"
+	scene "scenes/npc/security/answer30.vcd"
+	scene "scenes/npc/security/answer31.vcd"
+	scene "scenes/npc/security/answer32.vcd"
+	scene "scenes/npc/security/answer33.vcd"
+	scene "scenes/npc/security/answer34.vcd"
+	scene "scenes/npc/security/answer35.vcd"
+	scene "scenes/npc/security/answer36.vcd"
+	scene "scenes/npc/security/answer37.vcd"
+	scene "scenes/npc/security/answer38.vcd"
+	scene "scenes/npc/security/answer39.vcd"
+}
+
+rule SECURITY_ANSWER
+{
+	criteria SECURITY TLK_ANSWER NotProvoked NoRecentCombat AllowAnswers
+	response SECURITY_ANSWER
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_POST_QUESTION
+{
+	scene "scenes/npc/security/question01.vcd"
+	scene "scenes/npc/security/question02.vcd"
+	scene "scenes/npc/security/question03.vcd"
+	scene "scenes/npc/security/question04.vcd"
+	scene "scenes/npc/security/question05.vcd"
+	scene "scenes/npc/security/question06.vcd"
+	scene "scenes/npc/security/question07.vcd"
+	scene "scenes/npc/security/question08.vcd"
+	scene "scenes/npc/security/question09.vcd"
+	scene "scenes/npc/security/question10.vcd"
+	scene "scenes/npc/security/question11.vcd"
+	scene "scenes/npc/security/question12.vcd"
+	scene "scenes/npc/security/question13.vcd"
+	scene "scenes/npc/security/question14.vcd"
+	scene "scenes/npc/security/question15.vcd"
+	scene "scenes/npc/security/question16.vcd"
+	scene "scenes/npc/security/question17.vcd"
+	scene "scenes/npc/security/question18.vcd"
+	scene "scenes/npc/security/question19.vcd"
+	scene "scenes/npc/security/question10.vcd"
+	scene "scenes/npc/security/question21.vcd"
+	scene "scenes/npc/security/question22.vcd"
+	scene "scenes/npc/security/question23.vcd"
+	scene "scenes/npc/security/question24.vcd"
+	scene "scenes/npc/security/question25.vcd"
+	scene "scenes/npc/security/question26.vcd"
+}
+
+rule SECURITY_POST_QUESTION
+{
+	criteria SECURITY TLK_QUESTION IsPostDisaster NotProvoked NoRecentCombat NearPlayer AllowQuestions AllowGeneralIdleTalk
+	response SECURITY_POST_QUESTION
+}
+
+rule SECURITY_POST_IDLE
+{
+	criteria SECURITY TLK_IDLE IsPostDisaster NotProvoked NoRecentCombat NearPlayer AllowGeneralIdleTalk
+	response SECURITY_POST_QUESTION
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_POST_IDLE_FOLLOW
+{
+	scene "scenes/npc/security/doingsomething01.vcd"
+	scene "scenes/npc/security/doingsomething02.vcd"
+	scene "scenes/npc/security/doingsomething03.vcd"
+	scene "scenes/npc/security/doingsomething04.vcd"
+	scene "scenes/npc/security/doingsomething05.vcd"
+	scene "scenes/npc/security/doingsomething06.vcd"
+	scene "scenes/npc/security/doingsomething07.vcd"
+	scene "scenes/npc/security/getgoingsoon01.vcd"
+	scene "scenes/npc/security/getgoingsoon02.vcd"
+	scene "scenes/npc/security/getgoingsoon03.vcd"
+	scene "scenes/npc/security/getgoingsoon04.vcd"
+	scene "scenes/npc/security/getgoingsoon05.vcd"
+	scene "scenes/npc/security/getgoingsoon06.vcd"
+	scene "scenes/npc/security/getgoingsoon07.vcd"
+	scene "scenes/npc/security/getgoingsoon08.vcd"
+	scene "scenes/npc/security/getgoingsoon09.vcd"
+	scene "scenes/npc/security/getgoingsoon10.vcd"
+	scene "scenes/npc/security/getgoingsoon11.vcd"
+	scene "scenes/npc/security/getgoingsoon12.vcd"
+	scene "scenes/npc/security/getgoingsoon13.vcd"
+	scene "scenes/npc/security/getgoingsoon14.vcd"
+	scene "scenes/npc/security/waitingsomebody01.vcd"
+	scene "scenes/npc/security/waitingsomebody02.vcd"
+	scene "scenes/npc/security/waitingsomebody03.vcd"
+	scene "scenes/npc/security/waitingsomebody04.vcd"
+	scene "scenes/npc/security/readywhenyouare02.vcd"
+}
+
+rule SECURITY_POST_IDLE_FOLLOW
+{
+	criteria SECURITY TLK_IDLE IsPostDisaster NotProvoked NoRecentCombat IsFollowingPlayer IsStopped NearPlayer RandomChance50
+	response SECURITY_POST_IDLE_FOLLOW
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_HELLO_PREDISASTER
+{
+	scene "scenes/npc/security/ahgordon01.vcd"
+	scene "scenes/npc/security/ahgordon02.vcd"
+	scene "scenes/npc/security/ahgordon03.vcd"
+	scene "scenes/npc/security/ahgordon04.vcd"
+	scene "scenes/npc/security/docfreeman01.vcd"
+	scene "scenes/npc/security/docfreeman02.vcd"
+	scene "scenes/npc/security/freeman01.vcd"
+	scene "scenes/npc/security/freeman02.vcd"
+	scene "scenes/npc/security/freeman03.vcd"
+	scene "scenes/npc/security/freeman04.vcd"
+	scene "scenes/npc/security/freeman05.vcd"
+	scene "scenes/npc/security/freeman06.vcd"
+	scene "scenes/npc/security/hellodrfm01.vcd"
+	scene "scenes/npc/security/hellodrfm02.vcd"
+	scene "scenes/npc/security/hellodrfm03.vcd"
+	scene "scenes/npc/security/hellodrfm04.vcd"
+	scene "scenes/npc/security/hellodrfm05.vcd"
+	scene "scenes/npc/security/heydoc01.vcd"
+	scene "scenes/npc/security/heydoc02.vcd"
+	scene "scenes/npc/security/heydoc03.vcd"
+	scene "scenes/npc/security/heydoc04.vcd"
+	scene "scenes/npc/security/hi01.vcd"
+	scene "scenes/npc/security/hi02.vcd"
+	scene "scenes/npc/security/hi03.vcd"
+	scene "scenes/npc/security/hi04.vcd"
+	scene "scenes/npc/security/hi05.vcd"
+	scene "scenes/npc/security/hi06.vcd"
+}
+
+rule SECURITY_HELLO_PREDISASTER
+{
+	criteria TLK_HELLO SECURITY IsPreDisaster IsPlayerReallyNear SeenByPlayer
+	response SECURITY_HELLO_PREDISASTER
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_HELLO_POSTDISASTER
+{
+	scene "scenes/npc/security/abouttime01.vcd"
+	scene "scenes/npc/security/abouttime02.vcd"
+	scene "scenes/npc/security/abouttime03.vcd"
+	scene "scenes/npc/security/abouttime04.vcd"
+	scene "scenes/npc/security/abouttime05.vcd"
+	scene "scenes/npc/security/abouttime06.vcd"
+	scene "scenes/npc/security/abouttime07.vcd"
+	scene "scenes/npc/security/abouttime08.vcd"
+	scene "scenes/npc/security/abouttime09.vcd"
+}
+
+rule SECURITY_HELLO_POSTDISASTER
+{
+	criteria SECURITY TLK_HELLO IsPostDisaster NotProvoked NoRecentCombat IsPlayerReallyNear SeenByPlayer 
+	response SECURITY_HELLO_POSTDISASTER
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_USE
+{
+	scene "scenes/npc/security/busy01.vcd"
+	scene "scenes/npc/security/busy02.vcd"
+	scene "scenes/npc/security/busy03.vcd"
+	scene "scenes/npc/security/busy04.vcd"
+	scene "scenes/npc/security/busy05.vcd"
+	scene "scenes/npc/security/busy06.vcd"
+	scene "scenes/npc/security/busy07.vcd"
+	scene "scenes/npc/security/busy08.vcd"
+	scene "scenes/npc/security/busy09.vcd"
+	scene "scenes/npc/security/busy10.vcd"
+	scene "scenes/npc/security/busy11.vcd"
+	scene "scenes/npc/security/busy12.vcd"
+	scene "scenes/npc/security/busy13.vcd"
+	scene "scenes/npc/security/busy14.vcd"
+	scene "scenes/npc/security/busy15.vcd"
+}
+
+rule SECURITY_USE
+{
+	criteria SECURITY TLK_USE IsPreDisaster
+	response SECURITY_USE
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_STARTFOLLOW
+{
+	scene "scenes/npc/security/leadon01.vcd"
+	scene "scenes/npc/security/leadon02.vcd"
+	scene "scenes/npc/security/leadon03.vcd"
+	scene "scenes/npc/security/leadtheway01.vcd"
+	scene "scenes/npc/security/leadtheway02.vcd"
+	scene "scenes/npc/security/leadtheway03.vcd"
+	scene "scenes/npc/security/leadtheway04.vcd"
+	scene "scenes/npc/security/leadtheway05.vcd"
+	scene "scenes/npc/security/leadtheway06.vcd"
+	scene "scenes/npc/security/leadtheway07.vcd"
+	scene "scenes/npc/security/leadtheway08.vcd"
+	scene "scenes/npc/security/letsgo01.vcd"
+	scene "scenes/npc/security/letsgo02.vcd"
+	scene "scenes/npc/security/letsgo03.vcd"
+	scene "scenes/npc/security/okimready01.vcd"
+	scene "scenes/npc/security/okimready02.vcd"
+	scene "scenes/npc/security/okimready03.vcd"
+	scene "scenes/npc/security/okimready04.vcd"
+	scene "scenes/npc/security/okimready05.vcd"
+	scene "scenes/npc/security/readywhenyouare01.vcd"
+	scene "scenes/npc/security/readywhenyouare03.vcd"
+	scene "scenes/npc/security/readywhenyouare04.vcd"
+}
+
+rule SECURITY_STARTFOLLOW
+{
+	criteria SECURITY TLK_STARTFOLLOW NotInCombat IsPostDisaster
+	response SECURITY_STARTFOLLOW
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_STOPFOLLOW
+{
+	scene "scenes/npc/security/holddownspot01.vcd"
+	scene "scenes/npc/security/holddownspot02.vcd"
+	scene "scenes/npc/security/holddownspot03.vcd"
+	scene "scenes/npc/security/holddownspot04.vcd"
+	scene "scenes/npc/security/holddownspot05.vcd"
+	scene "scenes/npc/security/illstayhere01.vcd"
+	scene "scenes/npc/security/illstayhere02.vcd"
+	scene "scenes/npc/security/illstayhere03.vcd"
+	scene "scenes/npc/security/imstickinghere01.vcd"
+	scene "scenes/npc/security/imstickinghere02.vcd"
+	scene "scenes/npc/security/imstickinghere03.vcd"
+	scene "scenes/npc/security/imstickinghere04.vcd"
+	scene "scenes/npc/security/imstickinghere05.vcd"
+	scene "scenes/npc/security/littlecorner01.vcd"
+	scene "scenes/npc/security/littlecorner02.vcd"
+	scene "scenes/npc/security/littlecorner03.vcd"
+	scene "scenes/npc/security/littlecorner04.vcd"
+	scene "scenes/npc/security/littlecorner05.vcd"
+	scene "scenes/npc/security/littlecorner06.vcd"
+}
+
+rule SECURITY_STOPFOLLOW
+{
+	criteria SECURITY TLK_STOPFOLLOW NotInCombat IsPostDisaster
+	response SECURITY_STOPFOLLOW
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_NOSHOOT
+{
+	scene "scenes/npc/security/onyourside01.vcd"
+	scene "scenes/npc/security/onyourside02.vcd"
+	scene "scenes/npc/security/onyourside03.vcd"
+	scene "scenes/npc/security/onyourside04.vcd"
+	scene "scenes/npc/security/onyourside05.vcd"
+	scene "scenes/npc/security/onyourside06.vcd"
+	scene "scenes/npc/security/notthemanithought01.vcd"
+	scene "scenes/npc/security/notthemanithought02.vcd"
+	scene "scenes/npc/security/notthemanithought03.vcd"
+	scene "scenes/npc/security/notthemanithought04.vcd"
+	scene "scenes/npc/security/watchwhat01.vcd"
+	scene "scenes/npc/security/watchwhat02.vcd"
+	scene "scenes/npc/security/watchwhat03.vcd"
+	scene "scenes/npc/security/watchwhat04.vcd"
+}
+
+rule SECURITY_NOSHOOT
+{
+	criteria SECURITY TLK_NOSHOOT
+	response SECURITY_NOSHOOT
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_FRIENDLYFIRE
+{
+	scene "scenes/npc/security/stopitfm01.vcd"
+	scene "scenes/npc/security/stopitfm02.vcd"
+	scene "scenes/npc/security/stopitfm03.vcd"
+	scene "scenes/npc/security/stopitfm04.vcd"
+	scene "scenes/npc/security/stopitfm05.vcd"
+	scene "scenes/npc/security/stopitfm06.vcd"
+	scene "scenes/npc/security/stopitfm07.vcd"
+}
+
+rule SECURITY_FRIENDLYFIRE
+{
+	criteria SECURITY TLK_FRIENDLYFIRE
+	response SECURITY_FRIENDLYFIRE
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_PLHURT
+{
+	scene "scenes/npc/security/health01.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health02.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health03.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health04.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health05.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health06.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health07.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health08.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health09.vcd" respeakdelay 500 odds 10
+	scene "scenes/npc/security/health10.vcd" respeakdelay 500 odds 10
+}
+
+rule SECURITY_PLHURT
+{
+	criteria SECURITY TLK_PLHURT NotProvoked NoRecentCombat IsPlayerReallyNear IsPlayerVeryWounded
+	response SECURITY_PLHURT
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_PLRELOAD
+{
+	scene "scenes/npc/security/dontforgetreload01.vcd"
+	scene "scenes/npc/security/dontforgetreload02.vcd"
+	scene "scenes/npc/security/dontforgetreload03.vcd"
+	scene "scenes/npc/security/reloadfm01.vcd"
+	scene "scenes/npc/security/reloadfm02.vcd"
+	scene "scenes/npc/security/reloadfm03.vcd"
+	scene "scenes/npc/security/reloadfm04.vcd"
+	scene "scenes/npc/security/reloadfm05.vcd"
+	scene "scenes/npc/security/reloadfm06.vcd"
+	scene "scenes/npc/security/reloadfm07.vcd"
+	scene "scenes/npc/security/reloadfm08.vcd"
+	scene "scenes/npc/security/youbetterreload01.vcd"
+	scene "scenes/npc/security/youbetterreload02.vcd"
+	scene "scenes/npc/security/youbetterreload03.vcd"
+}
+
+rule SECURITY_PLRELOAD
+{
+	criteria SECURITY TLK_PLRELOAD NearPlayer SeenByPlayer SeePlayer NotProvoked NoRecentCombat
+	response SECURITY_PLRELOAD
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_WOUND
+{
+	scene "scenes/npc/security/pain01.vcd"
+	scene "scenes/npc/security/pain02.vcd"
+	scene "scenes/npc/security/pain03.vcd"
+	scene "scenes/npc/security/pain04.vcd"
+	scene "scenes/npc/security/pain05.vcd"
+	scene "scenes/npc/security/pain06.vcd"
+	scene "scenes/npc/security/pain07.vcd"
+	scene "scenes/npc/security/pain08.vcd"
+	scene "scenes/npc/security/pain09.vcd"
+	scene "scenes/npc/security/pain10.vcd"
+	scene "scenes/npc/security/pain11.vcd"
+	scene "scenes/npc/security/pain12.vcd"
+	scene "scenes/npc/security/pain13.vcd"
+	scene "scenes/npc/security/pain14.vcd"
+	scene "scenes/npc/security/pain15.vcd"
+	scene "scenes/npc/security/pain16.vcd"
+	scene "scenes/npc/security/ow01.vcd"
+	scene "scenes/npc/security/ow02.vcd"
+	scene "scenes/npc/security/ow03.vcd"
+	scene "scenes/npc/security/ow04.vcd"
+	scene "scenes/npc/security/ow05.vcd"
+	scene "scenes/npc/security/ow06.vcd"
+	scene "scenes/npc/security/ow07.vcd"
+}
+
+rule SECURITY_WOUND
+{
+	criteria SECURITY TLK_WOUND
+	response SECURITY_WOUND
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_SHOT_IN_ARM
+{
+	scene "scenes/npc/security/myarm01.vcd" odds 25
+	scene "scenes/npc/security/myarm02.vcd" odds 25
+	scene "scenes/npc/security/myarm03.vcd" odds 25
+}
+
+rule SECURITY_SHOT_IN_ARM
+{
+	criteria SECURITY TLK_SHOT ShotInArm RandomChance50
+	response SECURITY_SHOT_IN_ARM
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_SHOT_IN_GUT
+{
+	scene "scenes/npc/security/mygut01.vcd"
+	scene "scenes/npc/security/mygut02.vcd"
+	scene "scenes/npc/security/mygut03.vcd"
+}
+
+rule SECURITY_SHOT_IN_GUT
+{
+	criteria SECURITY TLK_SHOT ShotInGut RandomChance50
+	response SECURITY_SHOT_IN_GUT
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_SHOT_IN_LEG
+{
+	scene "scenes/npc/security/myleg01.vcd" odds 25
+	scene "scenes/npc/security/myleg02.vcd" odds 25
+	scene "scenes/npc/security/myleg03.vcd" odds 25
+}
+
+rule SECURITY_SHOT_IN_LEG
+{
+	criteria SECURITY TLK_SHOT ShotInLeg RandomChance50
+	response SECURITY_SHOT_IN_LEG
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_MORTAL
+{
+	scene "scenes/npc/security/imhurt01.vcd"
+	scene "scenes/npc/security/imhurt02.vcd"
+	scene "scenes/npc/security/imhurt03.vcd"
+	scene "scenes/npc/security/imhurt04.vcd"
+	scene "scenes/npc/security/imhurt05.vcd"
+	scene "scenes/npc/security/imhurt06.vcd"
+	scene "scenes/npc/security/imhurt07.vcd"
+	scene "scenes/npc/security/imhurt08.vcd"
+	scene "scenes/npc/security/imhurt09.vcd"
+	scene "scenes/npc/security/imhurt10.vcd"
+	scene "scenes/npc/security/moan01.vcd"
+	scene "scenes/npc/security/moan02.vcd"
+}
+
+rule SECURITY_MORTAL
+{
+	criteria SECURITY TLK_MORTAL
+	response SECURITY_MORTAL
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_DEATH
+{
+	scene "scenes/npc/security/pain01.vcd"
+	scene "scenes/npc/security/pain02.vcd"
+	scene "scenes/npc/security/pain03.vcd"
+	scene "scenes/npc/security/pain04.vcd"
+	scene "scenes/npc/security/pain05.vcd"
+	scene "scenes/npc/security/pain06.vcd"
+	scene "scenes/npc/security/pain07.vcd"
+	scene "scenes/npc/security/pain08.vcd"
+	scene "scenes/npc/security/pain09.vcd"
+	scene "scenes/npc/security/pain10.vcd"
+}
+
+rule SECURITY_DEATH
+{
+	criteria SECURITY TLK_DEATH
+	response SECURITY_DEATH
+}
+// ============================================================================================
+//
+// ============================================================================================
+response SECURITY_BETRAYED
+{
+	scene "scenes/npc/security/goodgod01.vcd"
+	scene "scenes/npc/security/goodgod02.vcd"
+	scene "scenes/npc/security/goodgod03.vcd"
+	scene "scenes/npc/security/goodgod04.vcd"
+	scene "scenes/npc/security/goodgod05.vcd"
+	scene "scenes/npc/security/goodgod06.vcd"
+	scene "scenes/npc/security/goodgod07.vcd"
+	scene "scenes/npc/security/heretohelp01.vcd"
+	scene "scenes/npc/security/heretohelp02.vcd"
+	scene "scenes/npc/security/heretohelp03.vcd"
+	scene "scenes/npc/security/heretohelp04.vcd"
+	scene "scenes/npc/security/heretohelp05f.vcd"
+	scene "scenes/npc/security/heretohelp05m.vcd"
+	scene "scenes/npc/security/wetrustedyou01.vcd"
+	scene "scenes/npc/security/wetrustedyou02.vcd"
+	scene "scenes/npc/security/wetrustedyou03.vcd"
+	scene "scenes/npc/security/wetrustedyou04.vcd"
+	scene "scenes/npc/security/wetrustedyou05.vcd"
+	scene "scenes/npc/security/wetrustedyou06.vcd"
+	scene "scenes/npc/security/wetrustedyou07_ex_nomore.vcd"
+	scene "scenes/npc/security/wetrustedyou08_gonnawish.vcd"
+	scene "scenes/npc/security/wetrustedyou09_makemedothis.vcd"
+	scene "scenes/npc/security/wetrustedyou09_tombstone.vcd"
+}
+
+rule SECURITY_BETRAYED
+{
+	criteria SECURITY TLK_BETRAYED
+	response SECURITY_BETRAYED
+}
+
+// ============================================================================================
+response SECURITY_PLPUSH
+{
+	scene "scenes/npc/security/excuseme01.vcd"
+	scene "scenes/npc/security/excuseme02.vcd"
+	scene "scenes/npc/security/excuseme03.vcd"
+	scene "scenes/npc/security/outofyourway01.vcd"
+	scene "scenes/npc/security/outofyourway02.vcd"
+	scene "scenes/npc/security/outofyourway03.vcd"
+	scene "scenes/npc/security/pardonme01.vcd"
+	scene "scenes/npc/security/pardonme02.vcd"
+	scene "scenes/npc/security/sorry01.vcd"
+	scene "scenes/npc/security/sorry02.vcd"
+	scene "scenes/npc/security/sorry03.vcd"
+	scene "scenes/npc/security/sorrydoc01.vcd"
+	scene "scenes/npc/security/sorrydoc02.vcd"
+	scene "scenes/npc/security/sorrydoc03.vcd"
+	scene "scenes/npc/security/sorryfm01.vcd"
+	scene "scenes/npc/security/sorryfm02.vcd"
+}
+
+rule SECURITY_PLPUSH
+{
+	criteria SECURITY TLK_PLPUSH SeenByPlayer
+	response SECURITY_PLPUSH
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_PHYSATTACK
+{
+	scene "scenes/npc/security/annoyed01.vcd"
+	scene "scenes/npc/security/annoyed02.vcd"
+	scene "scenes/npc/security/annoyed03.vcd"
+	scene "scenes/npc/security/annoyed04.vcd"
+	scene "scenes/npc/security/annoyed05.vcd"
+	scene "scenes/npc/security/annoyed06.vcd"
+	scene "scenes/npc/security/annoyed07.vcd"
+	scene "scenes/npc/security/annoyed08.vcd"
+	scene "scenes/npc/security/annoyed09.vcd"
+	scene "scenes/npc/security/annoyed10.vcd"
+	scene "scenes/npc/security/annoyed11.vcd"
+	scene "scenes/npc/security/annoyed12.vcd"
+	scene "scenes/npc/security/annoyed13.vcd"
+	scene "scenes/npc/security/annoyed14.vcd"
+	scene "scenes/npc/security/annoyed15.vcd"
+	scene "scenes/npc/security/annoyed16.vcd"
+	scene "scenes/npc/security/annoyed17.vcd"
+	scene "scenes/npc/security/annoyed18.vcd"
+	scene "scenes/npc/security/annoyed19.vcd"
+	scene "scenes/npc/security/annoyed20.vcd"
+	scene "scenes/npc/security/annoyed21.vcd"
+	scene "scenes/npc/security/annoyed22.vcd"
+	scene "scenes/npc/security/annoyed23.vcd"
+}
+
+rule SECURITY_PHYSATTACK
+{
+	criteria SECURITY IsPreDisaster TLK_PLYR_PHYSATK 
+	response SECURITY_PHYSATTACK
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_HIDEANDRELOAD
+{
+	scene "scenes/npc/security/coverwhilereload01.vcd" respeakdelay 5
+	scene "scenes/npc/security/coverwhilereload02.vcd" respeakdelay 5
+	scene "scenes/npc/security/coverwhilereload03.vcd" respeakdelay 5
+	scene "scenes/npc/security/coverwhilereload04.vcd" respeakdelay 5
+	scene "scenes/npc/security/coverwhilereload05.vcd" respeakdelay 5
+	scene "scenes/npc/security/coverwhilereload06.vcd" respeakdelay 5
+	scene "scenes/npc/security/gottareload01.vcd" respeakdelay 5
+	scene "scenes/npc/security/gottareload02.vcd" respeakdelay 5
+	scene "scenes/npc/security/gottareload03.vcd" respeakdelay 5
+	scene "scenes/npc/security/gottareload04.vcd" respeakdelay 5
+}
+
+rule SECURITY_HIDEANDRELOAD
+{
+	criteria SECURITY TLK_HIDEANDRELOAD RecentCombat NotProvoked
+	response SECURITY_HIDEANDRELOAD
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_WATCHOUT
+{
+	scene "scenes/npc/security/lookoutfm01.vcd"
+	scene "scenes/npc/security/lookoutfm02.vcd"
+	scene "scenes/npc/security/lookoutfm03.vcd"
+	scene "scenes/npc/security/headsup01.vcd"
+	scene "scenes/npc/security/headsup02.vcd"
+	scene "scenes/npc/security/headsup03.vcd"
+}
+
+rule SECURITY_WATCHOUT
+{
+	criteria SECURITY TLK_WATCHOUT NotProvoked
+	response SECURITY_WATCHOUT
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_WATCHOUT_BEHIND
+{
+	scene "scenes/npc/security/behindyou01.vcd"
+	scene "scenes/npc/security/behindyou02.vcd"
+	scene "scenes/npc/security/behindyou03.vcd"
+	scene "scenes/npc/security/behindyou04.vcd"
+	scene "scenes/npc/security/behindyou05.vcd"
+	scene "scenes/npc/security/behindyou06.vcd"
+}
+
+rule SECURITY_WATCHOUT_BEHIND
+{
+	criteria SECURITY TLK_WATCHOUT NotProvoked DangerIsBehindPlayer
+	response SECURITY_WATCHOUT_BEHIND
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_NEWWEAPON
+{
+	scene "scenes/npc/security/eventheodds01.vcd"
+	scene "scenes/npc/security/eventheodds02.vcd"
+	scene "scenes/npc/security/eventheodds03.vcd"
+	scene "scenes/npc/security/eventheodds04.vcd"
+	scene "scenes/npc/security/eventheodds05.vcd"
+	scene "scenes/npc/security/eventheodds06.vcd"
+	scene "scenes/npc/security/eventheodds07.vcd"
+	scene "scenes/npc/security/eventheodds08.vcd"
+	scene "scenes/npc/security/eventheodds09.vcd"
+	scene "scenes/npc/security/thislldonicely01.vcd"
+	scene "scenes/npc/security/thislldonicely02.vcd"
+	scene "scenes/npc/security/thislldonicely03.vcd"
+	scene "scenes/npc/security/oneforme01.vcd"
+	scene "scenes/npc/security/oneforme02.vcd"
+	scene "scenes/npc/security/oneforme03.vcd"
+	scene "scenes/npc/security/oneforme04.vcd"
+	scene "scenes/npc/security/oneforme05.vcd"
+	scene "scenes/npc/security/oneforme06.vcd"
+	scene "scenes/npc/security/oneforme07.vcd"
+	scene "scenes/npc/security/oneforme08.vcd"
+	scene "scenes/npc/security/oneforme09.vcd"
+	scene "scenes/npc/security/oneforme10.vcd"
+}
+
+rule SECURITY_NEWWEAPON
+{
+	criteria SECURITY TLK_NEWWEAPON NearPlayer NotProvoked
+	response SECURITY_NEWWEAPON
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_DANGER
+{
+	scene "scenes/npc/security/getdown01.vcd"
+	scene "scenes/npc/security/getdown02.vcd"
+	scene "scenes/npc/security/getdown03.vcd"
+	scene "scenes/npc/security/getdown04.vcd"
+}
+
+rule SECURITY_DANGER
+{
+	criteria SECURITY TLK_DANGER
+	response SECURITY_DANGER
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_STARTCOMBAT
+{
+	scene "scenes/npc/security/heretheycome01.vcd"
+	scene "scenes/npc/security/heretheycome02.vcd"
+	scene "scenes/npc/security/heretheycome03.vcd"
+	scene "scenes/npc/security/heretheycome04.vcd"
+	scene "scenes/npc/security/takecover01.vcd"
+	scene "scenes/npc/security/takecover02.vcd"
+	scene "scenes/npc/security/takecover03.vcd"
+}
+
+rule SECURITY_STARTCOMBAT
+{
+	criteria SECURITY TLK_STARTCOMBAT NearPlayer NotProvoked TenPercentChance
+	response SECURITY_STARTCOMBAT
+}
+// ============================================================================================
+
+// ============================================================================================
+response SECURITY_HELP_ME
+{
+	scene "scenes/npc/security/help01.vcd"
+	scene "scenes/npc/security/help02.vcd"
+	scene "scenes/npc/security/help03.vcd"
+	scene "scenes/npc/security/help04.vcd"
+	scene "scenes/npc/security/help05.vcd"
+}
+
+rule SECURITY_HELP_ME
+{
+	criteria SECURITY TLK_HELP_ME NotProvoked
+	response SECURITY_HELP_ME
+}
+// ============================================================================================
+
+// ============================================================================================
+//
+//			RESPONSES FOR NPC KILLS (GUARD'S GENERIC SET)
+//
+// ============================================================================================
+response SECURITY_ENEMY_DEAD
+{
+	scene "scenes/npc/security/gotone01.vcd" respeakdelay ">=15,<=30" odds 25 weight 2
+	scene "scenes/npc/security/gotone02.vcd" respeakdelay ">=15,<=30" odds 50
+	scene "scenes/npc/security/gotone03.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/gotone04.vcd" respeakdelay ">=15,<=30" odds 30
+	scene "scenes/npc/security/gotone07.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/gotone08.vcd" respeakdelay ">=15,<=30" odds 70
+	scene "scenes/npc/security/gotone09.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/gotone12.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/gotone13.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/gotone14.vcd" respeakdelay ">=15,<=30" odds 20
+	scene "scenes/npc/security/likethat01.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/likethat02.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/likethat03.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/likethat04.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/likethat05.vcd" respeakdelay ">=15,<=30" odds 20
+	scene "scenes/npc/security/likethat06.vcd" respeakdelay ">=15,<=30" weight 2
+}
+
+rule SECURITY_ENEMY_DEAD
+{
+	criteria SECURITY TLK_ENEMY_DEAD
+	response SECURITY_ENEMY_DEAD
+}
+// ============================================================================================
+//
+//			RESPONSES FOR NPC KILLS (PLAYER'S GENERIC SET)
+//
+// ============================================================================================
+response SECURITY_PLAYER_KILLED_NPC
+{
+	scene "scenes/npc/security/gotone05.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/gotone06.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/gotone08.vcd" respeakdelay ">=15,<=30" odds 80
+	scene "scenes/npc/security/gotone10.vcd" respeakdelay ">=15,<=30" odds 75
+//	scene "scenes/npc/security/gotone11.vcd" respeakdelay ">=15,<=30"
+//	scene "scenes/npc/security/gotone13.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/fantastic01.vcd" respeakdelay ">=15,<=30" odds 75
+//	scene "scenes/npc/security/fantastic02.vcd" respeakdelay ">=15,<=30" odds 20
+	scene "scenes/npc/security/fantastic03.vcd" respeakdelay ">=15,<=30" odds 75
+//	scene "scenes/npc/security/fantastic04.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/fantastic05.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot01.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot02.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot03.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot04.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot05.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot06.vcd" respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/niceshot07.vcd" respeakdelay ">=15,<=30" weight 2
+}
+
+rule SECURITY_PLAYER_KILLED_NPC
+{
+	criteria SECURITY TLK_PLAYER_KILLED_NPC
+	response SECURITY_PLAYER_KILLED_NPC
+}
+// ============================================================================================
+//
+//			RESPONSES FOR BARNACLES (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_BARNACLE
+{
+	scene "scenes/npc/security/upthere01.vcd" respeakdelay 120
+	scene "scenes/npc/security/upthere02.vcd" respeakdelay 120
+	scene "scenes/npc/security/upthere03.vcd" respeakdelay 120
+}
+
+rule SECURITY_NEW_ENEMY_BARNACLE
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsBarnacle
+	response SECURITY_NEW_ENEMY_BARNACLE
+}
+// ============================================================================================
+//
+//			RESPONSES FOR BULLSQUIDS (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_BULLSQUID
+{
+	scene "scenes/npc/security/bullsquid01.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid02.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid03.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid04.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid05.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid06.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid_spit01.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid_spit02.vcd" respeakdelay 120
+	scene "scenes/npc/security/bullsquid_spit03.vcd" respeakdelay 120
+}
+
+rule SECURITY_NEW_ENEMY_BULLSQUID
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsBullsquid
+	response SECURITY_NEW_ENEMY_BULLSQUID
+}
+// ============================================================================================
+//
+//			RESPONSES FOR BULLSQUID KILLS (PLAYER)
+//
+// ============================================================================================
+response SECURITY_ENEMY_DEAD_BULLSQUID
+{
+	scene "scenes/npc/security/bullsquid_dead01.vcd" respeakdelay 30
+	scene "scenes/npc/security/bullsquid_dead02.vcd" respeakdelay 30
+}
+
+rule SECURITY_ENEMY_DEAD_BULLSQUID
+{
+	criteria SECURITY TLK_PLAYER_KILLED_NPC EnemyIsBullsquid RandomChance75
+	response SECURITY_ENEMY_DEAD_BULLSQUID
+}
+// ============================================================================================
+//
+//			RESPONSES FOR HEADCRAB (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_HEADCRAB
+{
+	scene "scenes/npc/security/headcrab01.vcd" respeakdelay 120
+	scene "scenes/npc/security/headcrab02.vcd" respeakdelay 120
+	scene "scenes/npc/security/headcrab03.vcd" respeakdelay 120
+//	scene "scenes/npc/security/headcrab04.vcd" odds 10 respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/headcrab05.vcd" odds 50 respeakdelay 120
+	scene "scenes/npc/security/headcrab08.vcd" respeakdelay 120
+	scene "scenes/npc/security/headcrab09.vcd" respeakdelay 120
+}
+
+rule SECURITY_NEW_ENEMY_HEADCRAB
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsHeadcrab
+	response SECURITY_NEW_ENEMY_HEADCRAB
+}
+// ============================================================================================
+//
+//			RESPONSES FOR HEADCRAB KILLS (GUARD)
+//
+// ============================================================================================
+response SECURITY_ENEMY_DEAD_HEADCRAB
+{
+	scene "scenes/npc/security/headcrab06.vcd" odds 10 respeakdelay ">=15,<=30" weight 2
+//	scene "scenes/npc/security/headcrab07.vcd" respeakdelay ">=15,<=30"
+	scene "scenes/npc/security/headcrab10.vcd" odds 10 respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/headcrab11.vcd" odds 25 respeakdelay ">=15,<=30" weight 2
+	scene "scenes/npc/security/headcrab13.vcd" odds 75 respeakdelay ">=5,<=60"
+	scene "scenes/npc/security/headcrab14.vcd" odds 75 respeakdelay ">=5,<=60"
+}
+
+rule SECURITY_ENEMY_DEAD_HEADCRAB
+{
+	criteria SECURITY TLK_ENEMY_DEAD EnemyIsHeadcrab RandomChance75
+	response SECURITY_ENEMY_DEAD_HEADCRAB
+}
+// ============================================================================================
+//
+//			RESPONSES FOR HUMAN GRUNT (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_GRUNT
+{
+	scene "scenes/npc/security/marine_taunt01.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt02.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt03.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt04.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt05.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt06.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt07.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt08.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt09.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt10.vcd" respeakdelay 120
+	scene "scenes/npc/security/marine_taunt11.vcd" respeakdelay 120
+	scene "scenes/npc/security/takecover01.vcd" respeakdelay 120
+	scene "scenes/npc/security/takecover02.vcd" respeakdelay 120
+	scene "scenes/npc/security/takecover03.vcd" respeakdelay 60
+}
+
+rule SECURITY_NEW_ENEMY_GRUNT
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsHumanGrunt_Generic
+	response SECURITY_NEW_ENEMY_GRUNT
+}
+// ============================================================================================
+//
+//			RESPONSES FOR HUMAN GRUNT KILLS (GUARD)
+//
+// ============================================================================================
+response SECURITY_ENEMY_DEAD_GRUNT
+{
+	scene "scenes/npc/security/marine_dead03.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead04.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead05.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead06.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead07.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead08.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead09.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead10.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead11.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead12.vcd" respeakdelay 10
+	scene "scenes/npc/security/marine_dead13.vcd" respeakdelay 10
+}
+
+rule SECURITY_ENEMY_DEAD_GRUNT
+{
+	criteria SECURITY TLK_ENEMY_DEAD EnemyIsHumanGrunt_Generic
+	response SECURITY_ENEMY_DEAD_GRUNT
+}
+
+rule SECURITY_ENEMY_DEAD_GRUNT02
+{
+	criteria SECURITY TLK_ENEMY_DEAD EnemyIsHumanGrunt_Generic
+	response SECURITY_PLAYER_KILLED_NPC
+}
+// ============================================================================================
+//
+//			RESPONSES FOR ZOMBIES SCIENTISTS (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_ZOMBIE
+{
+	scene "scenes/npc/security/zombies01.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies02.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies03.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies04.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies05.vcd" respeakdelay 120
+//	scene "scenes/npc/security/zombies06.vcd" respeakdelay 120
+//	scene "scenes/npc/security/zombies07.vcd" respeakdelay 120
+}
+
+rule SECURITY_NEW_ENEMY_ZOMBIE
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsZombieScientist
+	response SECURITY_NEW_ENEMY_ZOMBIE
+}
+// ============================================================================================
+//
+//			RESPONSES FOR ZOMBIES GUARDS (SPOTTING)
+//
+// ============================================================================================
+response SECURITY_NEW_ENEMY_ZOMBIEGUARD
+{
+	scene "scenes/npc/security/zombies01.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies02.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies03.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies04.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies05.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies06.vcd" respeakdelay 120
+	scene "scenes/npc/security/zombies07.vcd" respeakdelay 120
+}
+
+rule SECURITY_NEW_ENEMY_ZOMBIEGUARD
+{
+	criteria SECURITY TLK_NEW_ENEMY EnemyIsZombieGuard
+	response SECURITY_NEW_ENEMY_ZOMBIEGUARD
+}
+// ============================================================================================
+//
+//			RESPONSES FOR ZOMBIE SECURITY KILLS (GUARD)
+//
+// ============================================================================================
+response SECURITY_ENEMY_DEAD_ZOMBIEGUARD
+{
+	scene "scenes/npc/security/zombie_guard_dead01.vcd" respeakdelay 30
+	scene "scenes/npc/security/zombie_guard_dead02.vcd" respeakdelay 30
+}
+
+rule SECURITY_ENEMY_DEAD_ZOMBIEGUARD
+{
+	criteria SECURITY TLK_ENEMY_DEAD EnemyIsZombieGuard RandomChance75
+	response SECURITY_ENEMY_DEAD_ZOMBIEGUARD
+}
+// ============================================================================================

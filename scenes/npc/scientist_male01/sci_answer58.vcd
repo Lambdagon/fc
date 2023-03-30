@@ -1,0 +1,138 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre58"
+    {
+      time 0.652548 1.863137
+      param "NPC_Scimale.answer_pre58"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time -0.002111 2.935073
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.1878 0.9931
+        2.4580 0.7798
+        2.8261 0.1145
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.009804 2.094645
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.4466 0.2462
+        0.7333 0.8231
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.017534 2.958572
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.959770 1.959770
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2667 0.6328
+      }
+    }
+  }
+  channel "Accent"
+  {
+    event gesture "accent up"
+    {
+      time 0.029411 2.579412
+      param "bodyaccentup"
+      event_ramp
+      {
+        0.3867 0.1077
+        1.8266 0.1769
+        2.3200 0.1231
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.104767
+        "extreme" 0.157824
+        "loop" 0.462899
+        "end" 0.710173
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "body accent down"
+    {
+      time 0.575415 2.697436
+      param "bodyaccentdown"
+      event_ramp
+      {
+        0.2267 0.1769
+        0.4400 0.3385
+        1.4520 0.3538
+        1.8520 0.1846
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.224167
+        "extreme" 0.339717
+        "loop" 0.585134
+        "end" 0.740181
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.102941
+        "extreme" 0.191176
+        "loop" 0.397059
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "104"
+  "RampTool" "30"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,680 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 11.611112 -1.000000
+  param "noaction"
+}
+actor "GRD01_Sniper"
+{
+  channel "Voice"
+  {
+    event speak "st.grd01.sniper.imdying01"
+    {
+      time 0.029149 2.234092
+      param "st.grd01.sniper.imdying01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd01.sniper.imdying02"
+    {
+      time 2.719148 5.219148
+      param "st.grd01.sniper.imdying02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd01.sniper.imdying03"
+    {
+      time 5.843730 7.766451
+      param "st.grd01.sniper.imdying03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd01.sniper.imdying04"
+    {
+      time 8.316509 10.892179
+      param "st.grd01.sniper.imdying04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Pain01"
+    {
+      time 0.050177 3.038682
+      param ""
+      event_ramp
+      {
+        0.1250 1.0000
+        2.4969 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_droop" combo 
+        {
+          0.2647 0.4300
+          0.7210 0.2200
+        }
+        {
+          0.1502 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.5460 0.0100
+          0.6835 0.3500
+          1.2210 0.5300
+          1.4585 0.0300
+        }
+        {
+          0.1502 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.1502 0.6500
+          0.7460 0.5000
+          1.9523 0.9300
+          2.4857 0.5500
+        }
+        {
+          0.1502 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.1502 0.3700
+          0.6260 0.6200
+          1.0060 0.6700
+          1.3060 0.4300
+          1.4898 0.1100
+          1.7193 0.5400
+          2.5523 0.4900
+        }
+        {
+          0.1502 0.5000
+        }
+        "wrinkler" 
+        {
+          0.8714 0.3300
+          1.5071 0.0400
+          1.7071 0.4400
+        }
+        "corner_depressor" combo 
+        {
+          0.1502 0.1300
+          0.8898 0.5200
+          2.5174 0.4800
+          2.9460 0.1300
+        }
+        {
+          0.1502 0.5000
+        }
+        "part" combo 
+        {
+          0.1502 0.3500
+          0.6460 0.9500
+          1.2897 0.5300
+          2.8962 0.2000
+        }
+        {
+          0.1502 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+        "jaw_clencher" 
+        {
+          0.3429 0.6900
+          0.6000 0.1900
+          1.1909 0.1700
+          1.5273 0.6900
+          2.2844 0.6700
+        }
+      }
+    }
+    event flexanimation "Pain02"
+    {
+      time 2.354775 5.981210
+      param ""
+      event_ramp
+      {
+        0.5223 1.0000
+        3.2432 0.9688
+        3.5292 0.4480
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_droop" combo 
+        {
+          0.0809 0.5900
+          0.8015 0.0400
+          1.5432 0.0100
+          1.7722 0.2600
+          3.3750 0.2800
+        }
+        {
+          0.2307 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.3598 0.0200
+          0.4973 0.3600
+          0.9667 0.6800
+          1.8167 0.0943
+          2.1667 0.0000
+        }
+        {
+          0.2307 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.2307 0.6500
+          0.8265 0.0800
+          1.5744 0.1400
+          2.0833 0.7800
+          3.3917 0.4800
+        }
+        {
+          0.2307 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.2307 0.3700
+          0.7065 0.6200
+          1.0865 0.6700
+          1.3865 0.4300
+        }
+        {
+          0.2307 0.5000
+        }
+        "wrinkler" 
+        {
+          0.3186 0.3200
+          1.2876 0.4200
+        }
+        "corner_depressor" combo 
+        {
+          0.4120 0.5200
+          3.2146 0.4800
+        }
+        {
+          0.2307 0.5000
+        }
+        "part" combo 
+        {
+          0.2307 0.3500
+          0.7265 0.9500
+          1.3702 0.5300
+          2.9767 0.2000
+        }
+        {
+          0.2307 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+        "lowerer" combo 
+        {
+          0.4000 0.5000
+          1.3250 0.5227
+          1.6833 0.1265
+        }
+        {
+        }
+        "jaw_clencher" 
+        {
+          0.4273 0.9700
+          1.2364 0.9900
+          1.5455 0.0700
+        }
+      }
+    }
+    event flexanimation "Pain03"
+    {
+      time 5.948263 9.226659
+      param ""
+      event_ramp
+      {
+        0.8140 1.0000
+        2.8952 0.9688
+        3.1812 0.4480
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_droop" combo 
+        {
+          0.0809 0.2300
+          0.4583 0.5200
+          0.7583 0.8400
+          1.1500 0.0600
+          2.7167 0.5000
+        }
+        {
+          0.2307 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.4667 0.0000
+          0.7000 0.5400
+          0.8583 0.0200
+        }
+        {
+          0.2307 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.1140 0.6500
+          0.8265 0.0800
+          1.1916 0.7500
+          1.6143 0.8900
+          2.7143 0.8400
+          3.0286 0.7000
+        }
+        {
+          0.2307 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.7065 0.8300
+          1.2032 0.4700
+        }
+        {
+          0.2307 0.5000
+        }
+        "wrinkler" 
+        {
+          0.7019 0.4800
+          1.1917 0.0300
+        }
+        "corner_depressor" combo 
+        {
+          0.1977 0.2400
+          2.0857 0.8000
+          3.2143 0.1800
+        }
+        {
+          0.2307 0.5000
+        }
+        "part" combo 
+        {
+          0.2307 0.3500
+          0.7265 0.9500
+          1.3702 0.5300
+          2.9767 0.2000
+        }
+        {
+          0.2307 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+        "lowerer" combo 
+        {
+          0.4000 0.7900
+          0.9833 0.1000
+        }
+        {
+        }
+        "jaw_clencher" 
+        {
+          0.1455 0.6400
+          0.3545 0.9900
+          0.6545 0.7500
+          0.7182 0.1800
+          0.9364 0.7200
+          1.7364 0.5700
+          2.0545 0.8900
+          2.3818 0.9600
+          2.9364 0.8300
+          3.1273 0.4700
+          3.1818 0.1800
+        }
+      }
+    }
+    event flexanimation "Pain04"
+    {
+      time 8.252183 12.688004
+      param ""
+      event_ramp
+      {
+        0.8140 1.0000
+        4.4359 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_droop" combo 
+        {
+          1.4595 0.4900
+          3.8143 0.8000
+        }
+        {
+          0.2307 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.4667 0.0000
+          0.7000 0.5400
+          0.8583 0.0200
+        }
+        {
+          0.2307 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.1140 0.6500
+          0.6682 0.0000
+          0.8749 0.7500
+          1.9417 0.4600
+          2.0917 0.7100
+          3.4417 0.6800
+          3.5583 0.4700
+        }
+        {
+          0.2307 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          1.8232 0.7600
+          2.3199 0.4000
+        }
+        {
+          0.2307 0.5000
+        }
+        "wrinkler" 
+        {
+          1.7936 0.4800
+          2.2834 0.0300
+        }
+        "corner_depressor" combo 
+        {
+          0.4120 0.5300
+          3.1833 0.5300
+        }
+        {
+          0.2307 0.5000
+        }
+        "part" combo 
+        {
+          2.4015 0.9400
+          3.6166 0.4700
+        }
+        {
+          0.2307 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+        "lowerer" combo 
+        {
+        }
+        {
+        }
+        "jaw_clencher" 
+        {
+          0.1727 0.9800
+          0.6273 0.8800
+          0.7909 0.1800
+        }
+      }
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at Self"
+    {
+      time 0.052083 11.481570
+      param "!self"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "SCI01_Sniper"
+{
+  channel "Move"
+  {
+    event moveto "Moveto SCI_Sniper01coast is not clear"
+    {
+      time 1.169749 2.370476
+      param "SCI_Sniper01coast is not clear"
+      param2 "walk_all_Moderate"
+    }
+    event gesture "p_ready"
+    {
+      time 3.857143 7.323811
+      param "p_ready"
+      event_ramp
+      {
+        0.7250 0.4075
+        2.3100 0.3750
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      sequenceduration 3.466667
+    }
+    event gesture "g_palm_out_l"
+    {
+      time 7.047618 9.647619
+      param "g_palm_out_l"
+      event_ramp
+      {
+        0.3900 0.6500
+        1.8824 0.6950
+        2.2224 0.6075
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.129768
+        "accent" 0.246561
+        "loop" 0.415260
+        "end" 0.481818
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "kgesture08"
+    {
+      time 4.142857 6.776190
+      param "kgesture08"
+      absolutetags playback_time
+      {
+        "apex" 0.115385
+        "accent" 0.256410
+        "loop" 0.423077
+        "end" 0.641026
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.115385
+        "accent" 0.256410
+        "loop" 0.423077
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Trigger"
+  {
+    event face "Face GRD01_Sniper"
+    {
+      time 1.751552 5.249428
+      param "GRD01_Sniper"
+      event_ramp
+      {
+        0.5850 1.0000
+        3.4979 0.9964
+      }
+    }
+    event flexanimation "flex_look left and right"
+    {
+      time 5.276694 6.691259
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5386 1.0000
+          0.7752 0.3948
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3898 0.9800
+          0.6142 0.0700
+        }
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 3.445075 4.445076
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2000 0.1993
+        0.3800 0.4642
+        0.6400 0.2053
+      }
+    }
+    event expression "sci_mouth_opened01"
+    {
+      time 3.532085 4.532085
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_mouth_opened01"
+      event_ramp
+      {
+        0.4350 0.6456
+      }
+    }
+    event expression "sci_afraid00"
+    {
+      time 4.000000 12.444445
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        1.2150 0.6753
+        7.9024 0.6169
+        8.1974 0.4545
+      }
+    }
+    event expression "sci_huh01"
+    {
+      time 0.259259 3.611111
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_huh01"
+      event_ramp
+      {
+        0.2450 0.5130
+        0.4550 0.6883
+        2.9154 0.6753
+        3.2304 0.3506
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 2.674242 5.107576
+      param "bg_accentup"
+      event_ramp
+      {
+        0.6500 0.5119
+        1.0357 0.6098
+        1.7714 0.3938
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at GRD01_Sniper"
+    {
+      time 2.115418 4.397727
+      param "GRD01_Sniper"
+    }
+    event lookat "Look at !self"
+    {
+      time 4.393172 8.029535
+      param "!self"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "82"
+  "RampTool" "20"
+  "CChoreoView" "20"
+}
+fps 60
+snap off
+ignorePhonemes off

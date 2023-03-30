@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "Grd05_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.grd05.anotherday01"
+    {
+      time 0.353333 1.815986
+      param "am.grd05.anotherday01"
+      fixedlength
+      tags
+      {
+        "Nother day" 0.009091
+        "Nother dollar" 0.486364
+      }
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "b_head_back"
+    {
+      time 0.020000 2.420000
+      param "b_head_back"
+      event_ramp
+      {
+        0.0000 0.3910
+        0.4000 0.4586
+        2.4000 0.3835
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.402621
+        "extreme" 0.855956
+        "loop" 0.869602
+        "end" 0.883753
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188679
+        "extreme" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      sequenceduration 1.800000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.060000
+      param "!player"
+      event_ramp
+      {
+        0.5080 0.6725
+        0.8980 0.8406
+        1.3607 0.7319
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.106667 2.206667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1500 0.4500
+          0.6920 0.8100
+          1.3620 0.8100
+          1.8560 0.5700
+        }
+        {
+        }
+        "chin_raiser" 
+        {
+          0.1440 0.3800
+          0.4060 0.4700
+        }
+      }
+    }
+    event flexanimation "Head Animation"
+    {
+      time 0.120000 2.220000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.1700 0.4900
+          1.3620 0.5000
+          1.4460 0.4800
+          1.6840 0.4600
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2360 0.4900
+          0.3640 0.6800
+          0.6920 0.7100
+          0.9080 0.6800
+          1.1380 0.4000
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,67 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.hivehand.examination03"
+    {
+      time 0.166666 4.416326
+      param "st.grd02.hivehand.examination03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 2.286667 4.713333
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.5000 1.0000
+        2.0980 1.0000
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 2.266666 4.733333
+      param "!self"
+      event_ramp
+      {
+        0.9020 0.9925
+        2.2020 1.0000
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.073333 2.840000
+      param "!player"
+      event_ramp
+      {
+        0.2960 1.0000
+        2.2880 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

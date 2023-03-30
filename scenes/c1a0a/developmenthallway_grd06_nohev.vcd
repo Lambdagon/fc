@@ -1,0 +1,229 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Sound"
+  {
+    event speak "am.grd06.getyourhev01"
+    {
+      time 0.471014 6.148520
+      param "am.grd06.getyourhev01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Gesture12"
+    {
+      time 2.880050 6.041792
+      param "Gesture12"
+      event_ramp
+      {
+        0.7500 0.9922
+        3.1617 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.379530
+        "accent" 0.488982
+        "loop" 0.577525
+        "end" 0.646974
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_no"
+    {
+      time 2.833333 5.133333
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.225508 7.181159
+      param "!player"
+      event_ramp
+      {
+        0.5222 0.1806
+        1.0000 0.8472
+        1.5033 1.0000
+        5.4667 1.0000
+        5.9556 0.8611
+        6.4556 0.2014
+      }
+    }
+  }
+  channel "Face"
+  {
+    event face "Face !player"
+    {
+      time 0.080580 3.428442
+      param "!player"
+      event_ramp
+      {
+        0.5067 0.1875
+        1.2888 0.8403
+        1.9612 1.0000
+        2.1632 1.0000
+      }
+    }
+    event face "Face !self"
+    {
+      time 1.179348 6.456522
+      param "!self"
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "flex - hold it right there"
+    {
+      time 0.348611 2.654167
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "outer_raiser" combo 
+        {
+          0.5297 0.6800
+          0.6825 0.6800
+        }
+        {
+          0.5297 0.5000
+          0.6825 0.5000
+        }
+        "lowerer" combo 
+        {
+          1.4881 0.0000
+        }
+        {
+          1.4881 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4464 0.7100
+          0.8472 0.2400
+        }
+      }
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 2.751389 6.640277
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          1.4583 0.0300
+          1.7583 0.1100
+          1.9500 0.2300
+          2.1214 0.5700
+          2.3417 0.0800
+          2.9992 0.0000
+        }
+        {
+          2.5131 0.5000
+          2.9992 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          1.5464 0.0000
+          1.8667 0.2100
+          2.1298 0.6800
+          2.5250 0.1400
+          2.9992 0.0000
+        }
+        {
+          1.9298 0.5000
+          2.5131 0.5000
+          2.9992 0.5000
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3583 0.5000
+          0.7500 0.5000
+          1.1417 0.5000
+          1.7000 0.6900
+          1.9833 0.6400
+          2.5000 0.5100
+          2.7167 0.5100
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.2319 0.2600
+          0.6653 0.5000
+          0.7319 0.5168
+          0.9986 0.5362
+          1.6319 0.6700
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.7319 0.5000
+          0.9986 0.5000
+          1.2833 0.5800
+          1.6319 0.7700
+          2.0083 0.5400
+          2.4667 0.4700
+          2.7500 0.4700
+        }
+      }
+    }
+  }
+  channel "Sequence"
+  {
+    event sequence "g_palm_up_lapexArms"
+    {
+      time 2.153846 2.153846
+      param "g_palm_up_lapexArms"
+      fixedlength
+    }
+    event gesture "harassfront2"
+    {
+      time 0.242423 3.202020
+      param "harassfront2"
+      event_ramp
+      {
+        0.5063 1.0000
+        2.1096 1.0000
+      }
+      sequenceduration 1.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+  "RampTool" "26"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

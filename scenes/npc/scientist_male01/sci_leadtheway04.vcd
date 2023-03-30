@@ -1,0 +1,107 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.leadtheway04"
+    {
+      time 0.446667 1.800726
+      param "NPC_Scimale.leadtheway04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.246666
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.6536 0.9931
+        1.8007 0.8403
+        1.9889 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.060000 2.246667
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.3735 0.4634
+        1.2547 0.4878
+        1.3878 0.2927
+        1.7250 0.2317
+        2.0102 0.0488
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.055769 2.256325
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.3851 0.4500
+          0.6591 1.0000
+          1.2339 0.9900
+          1.7706 0.5100
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "body accent up"
+    {
+      time 0.026667 1.899999
+      param "bodyaccentup"
+      event_ramp
+      {
+        0.0441 0.3659
+        1.8207 0.3537
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.234876
+        "extreme" 0.348754
+        "loop" 0.556693
+        "end" 0.667467
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "RampTool" "56"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

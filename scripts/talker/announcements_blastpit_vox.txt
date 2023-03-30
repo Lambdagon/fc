@@ -1,0 +1,59 @@
+criterion IsAnnouncementPowerInitial "concept" "announcement_power_initial" required
+criterion IsAnnouncementPowerRepeat "concept" "announcement_power_repeat" required
+criterion IsAnnouncementFuelInitial "concept" "announcement_fuel_initial" required
+criterion IsAnnouncementFuelRepeat "concept" "announcement_fuel_repeat" required
+criterion IsBpbVox "map" "bm_c1a4b" required weight 2
+
+//========================================================
+//			Bug the player yeaaaaaah
+//========================================================
+response "announce_power_intial"
+{
+	speak "c1a4_powersystem_statusreport"
+}
+
+rule "announce_power_intial"
+{
+	criteria IsAnnouncementPowerInitial IsBpbVox
+	response "announce_power_intial"
+}
+
+response "announce_power_repeat"
+{
+	sequential
+	speak "c1a4_powersystem_statusreport_var1" 
+	speak "c1a4_powersystem_statusreport_var2" 
+}
+
+rule "announce_power_repeat"
+{
+	criteria IsAnnouncementPowerRepeat IsBpbVox
+	response "announce_power_repeat"
+}
+
+//========================================================
+//		Bug the player yeaaaaaah
+//========================================================
+response "announce_fuel_intial"
+{
+	speak "c1a4_fuelsystem_statusreport"
+}
+
+rule "announce_fuel_intial"
+{
+	criteria IsAnnouncementFuelInitial IsBpbVox
+	response "announce_fuel_intial"
+}
+
+response "announce_fuel_repeat"
+{
+	sequential
+	speak "c1a4_fuelsystem_statusreport_var1" 
+	speak "c1a4_fuelsystem_statusreport_var2"	
+}
+
+rule "aannounce_fuel_repeat"
+{
+	criteria IsAnnouncementFuelRepeat IsBpbVox
+	response "announce_fuel_repeat"
+}

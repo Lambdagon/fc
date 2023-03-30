@@ -1,0 +1,84 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.busy09"
+    {
+      time 0.567084 1.448331
+      param "NPC_Scifemale.busy09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.048750 2.489583
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.5411
+        0.4824 0.6870
+        1.5851 0.6870
+        2.0179 0.4509
+        2.2633 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_worried01"
+    {
+      time 0.302083 1.916667
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.1642 0.1939
+        0.2830 0.3392
+        0.6745 0.4539
+        1.0335 0.4054
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Headbobs"
+    {
+      time 0.197916 2.437500
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5571 0.5100
+          0.7643 0.6900
+          1.0786 0.5400
+          1.6071 0.4900
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "106"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

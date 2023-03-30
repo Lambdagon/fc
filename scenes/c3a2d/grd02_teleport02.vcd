@@ -1,0 +1,159 @@
+// Choreo version 1
+actor "GRD02LC"
+{
+  channel "Voice"
+  {
+    event speak "lc.grd02.teleport.reaction02"
+    {
+      time 2.575758 4.820565
+      param "lc.grd02.teleport.reaction02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.075758 5.636364
+      param "!player"
+      event_ramp
+      {
+        0.4947 0.5652
+        0.9789 0.8043
+        1.8368 0.8478
+        3.6316 0.8551
+        4.4684 0.8333
+        4.9789 0.5725
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_left"
+    {
+      time 0.060606 2.260607
+      param "bg_left"
+      absolutetags playback_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      sequenceduration 2.200000
+    }
+    event gesture "bg_right"
+    {
+      time 1.363636 3.563637
+      param "bg_right"
+      absolutetags playback_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      sequenceduration 2.200000
+    }
+    event gesture "bg_up_r"
+    {
+      time 2.833333 4.887879
+      param "bg_up_r"
+      absolutetags playback_time
+      {
+        "apex" 0.066278
+        "extreme" 0.215402
+        "loop" 0.331388
+        "end" 0.497082
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+  }
+  channel "shotgun gestures"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "FACE"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_buckup"
+    {
+      time 0.090909 1.681818
+      param "humans\guard\expressions_guard"
+      param2 "b_buckup"
+      event_ramp
+      {
+        0.0947 1.0000
+        1.3579 1.0000
+      }
+    }
+    event expression "Dubious"
+    {
+      time 1.409091 3.560606
+      param "common_expressions"
+      param2 "Dubious"
+      event_ramp
+      {
+        0.6368 0.8960
+        1.6263 0.8150
+      }
+    }
+    event expression "Smirk"
+    {
+      time 3.409091 6.045455
+      param "common_expressions"
+      param2 "Smirk"
+      event_ramp
+      {
+        0.2000 1.0000
+        2.0469 0.9364
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "RampTool" "38"
+  "ExpressionTool" "20"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

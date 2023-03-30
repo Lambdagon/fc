@@ -1,0 +1,22 @@
+criterion IsAnnouncement "concept" "announcement" required
+
+//========================================================
+//Bug the player yeaaaaaah
+//========================================================
+response "announce_blastpit"
+{
+	sentence "!C2A1_1" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_2" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_3" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_4" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_5" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_6" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_7" soundlevel "SNDLVL_TALKING"
+	sentence "!C2A1_8" soundlevel "SNDLVL_TALKING"
+}
+
+rule "announce_powerup"
+{
+	criteria IsAnnouncement
+	response announce_blastpit
+}

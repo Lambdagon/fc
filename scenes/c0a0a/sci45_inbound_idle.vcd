@@ -1,0 +1,73 @@
+// Choreo version 1
+actor "Sci20_lab01"
+{
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.186667 6.574285
+      param "!player"
+      event_ramp
+      {
+        1.6375 0.7976
+        5.3904 0.8274
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event flexanimation "Torso Twist"
+    {
+      time 0.277778 7.751985
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "chest_rightleft" range 30.0 -30.0 
+        {
+          2.4850 0.0000
+        }
+      }
+    }
+    event gesture "g_righthand_flick"
+    {
+      time 3.928572 6.811904
+      param "g_righthand_flick"
+      event_ramp
+      {
+        0.3000 0.5762
+        0.8263 0.8843
+        1.3632 0.8808
+        2.0706 0.7143
+        2.5338 0.4970
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.135359
+        "accent" 0.348000
+        "loop" 0.456762
+        "end" 0.550773
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "38"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "28"
+}
+fps 60
+snap off
+ignorePhonemes off

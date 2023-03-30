@@ -1,0 +1,388 @@
+// Choreo version 1
+actor "GRD01"
+{
+  channel "Voice"
+  {
+    event speak "app.grd01.assassination.bullitimpact01"
+    {
+      time 10.026237 10.572767
+      param "app.grd01.assassination.bullitimpact01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.grd01.assassination.deathgurgle01"
+    {
+      time 10.746264 13.455267
+      param "app.grd01.assassination.deathgurgle01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.grd01.assassination.gotamessage01"
+    {
+      time 5.188846 6.016850
+      param "app.grd01.assassination.gotamessage01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.grd01.assassination.gotamessage02"
+    {
+      time 7.432144 8.650784
+      param "app.grd01.assassination.gotamessage02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.grd01.assassination.gotamessage03"
+    {
+      time 9.028970 10.264911
+      param "app.grd01.assassination.gotamessage03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event sequence "APP_Assassin_Kill_GRD"
+    {
+      time 9.886065 12.052732
+      param "APP_Assassin_Kill_GRD"
+      fixedlength
+    }
+    event gesture "g_palm_out_l"
+    {
+      time 4.611147 6.558370
+      param "g_palm_out_l"
+      absolutetags playback_time
+      {
+        "apex" 0.173272
+        "accent" 0.329216
+        "loop" 0.554469
+        "end" 0.774997
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "g_palm_out_l"
+    {
+      time 7.629111 10.395779
+      param "g_palm_out_l"
+      event_ramp
+      {
+        0.3200 0.6399
+        1.0367 0.7981
+        2.1996 0.6812
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "death"
+    {
+      time 8.493756 13.270680
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          1.4173 0.0000
+          1.5993 1.0000
+        }
+        {
+        }
+        "lid_closer" combo 
+        {
+          3.8273 0.0000
+          4.0033 0.6300
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          1.4213 0.0000
+          1.6293 1.0000
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.7053 0.1100
+          0.9033 0.8500
+          1.4473 1.0000
+          1.6493 0.0000
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          2.0113 0.0000
+          2.2493 0.8200
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          1.6633 0.0000
+          1.8713 0.9200
+        }
+        {
+        }
+        "jaw_drop" 
+        {
+          1.5213 0.0000
+          1.6573 0.9500
+          2.0093 0.8100
+          2.1153 0.7800
+          3.0573 0.6000
+          3.1633 0.9200
+          3.3633 0.5600
+          3.5053 0.5400
+        }
+        "mouth_drop" combo 
+        {
+          1.4933 0.0000
+          1.6773 0.4900
+          1.8793 0.3500
+          2.2133 0.2700
+          2.4173 0.5300
+          2.6813 0.4100
+          3.0533 0.3600
+          3.2133 0.5200
+          3.3613 0.3500
+          3.4353 0.3500
+        }
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          3.2453 0.5100
+          3.2853 0.5100
+          3.5173 0.9700
+          3.9213 1.0000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3606 0.6500
+          0.4894 0.8600
+          0.6814 0.6400
+          0.7660 0.5100
+          1.0020 0.5100
+          1.1260 0.5100
+        }
+      }
+    }
+    event gesture "g_palm_out_high_l"
+    {
+      time 8.568317 11.334984
+      param "g_palm_out_high_l"
+      event_ramp
+      {
+        0.4353 0.6682
+        0.6467 0.7839
+        2.7667 0.9008
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "bg_accentUp"
+    {
+      time 8.280741 10.714074
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.4202 0.2420
+        0.7499 0.7780
+        1.5610 0.3436
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.023989 3.287897
+      param "!player"
+      event_ramp
+      {
+        0.4967 1.0000
+        2.6506 1.0000
+      }
+      active 0
+    }
+    event lookat "Look at !self"
+    {
+      time 10.084783 13.264271
+      param "!self"
+    }
+    event firetrigger "Firetrigger 2"
+    {
+      time 8.885229 -1.000000
+      param "2"
+    }
+    event lookat "Look at !player"
+    {
+      time 3.895734 9.707004
+      param "!player"
+      event_ramp
+      {
+        0.5818 0.6470
+        1.1598 0.8619
+        4.5753 0.9504
+        5.1465 0.9551
+        5.8113 0.8937
+        5.8113 0.8253
+      }
+    }
+    event lookat "Look at grd01_twistchesttoface_look01"
+    {
+      time 2.946156 4.665173
+      param "grd01_twistchesttoface_look01"
+      event_ramp
+      {
+        0.1687 0.3270
+        0.2584 0.6564
+        0.4998 0.9646
+        1.1149 0.8760
+        1.4055 0.3424
+      }
+    }
+  }
+  channel "Face at"
+  {
+    event face "GRD01_face1"
+    {
+      time 0.296970 2.401335
+      param "GRD01_face1"
+      event_ramp
+      {
+        2.1044 1.0000
+      }
+    }
+    event face "Face !player"
+    {
+      time 4.323593 10.467077
+      param "!player"
+    }
+    event face "grd01_twistchesttoface01"
+    {
+      time 2.731411 5.348505
+      param "grd01_twistchesttoface01"
+      event_ramp
+      {
+        0.2313 0.5431
+        0.3154 0.6316
+        0.5688 0.7367
+        2.2088 0.6848
+      }
+      lockbodyfacing
+    }
+    event firetrigger "Firetrigger 16"
+    {
+      time 9.957036 -1.000000
+      param "16"
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Gunshot"
+    {
+      time 9.866835 -1.000000
+      param "1"
+    }
+    event firetrigger "c2a3c_assasin_relay2"
+    {
+      time 9.866835 -1.000000
+      param "1"
+    }
+    event face "Face !self"
+    {
+      time 1.952564 5.588604
+      param "!self"
+    }
+  }
+  channel "Posture"
+  {
+  }
+  channel "Move"
+  {
+    event moveto "Moveto GRD01_target2"
+    {
+      time 0.039654 1.264521
+      param "GRD01_target2"
+      param2 "Walk"
+      distancetotarget 10.00
+    }
+    event moveto "Moveto !player"
+    {
+      time 8.016932 9.119495
+      param "!player"
+      distancetotarget 33.00
+      forceshortmovement
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "74"
+  "RampTool" "164"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

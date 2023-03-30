@@ -1,0 +1,135 @@
+// Choreo version 1
+actor "GRD02_Lobby"
+{
+  channel "Voice"
+  {
+    event speak "am.grd02.callandanswer07"
+    {
+      time 0.134015 2.072133
+      param "am.grd02.callandanswer07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_right"
+    {
+      time 0.022904 3.296978
+      param "bg_right"
+      event_ramp
+      {
+        0.4151 0.3551
+        1.3581 0.4493
+        2.6032 0.4348
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.103376
+        "extreme" 0.196415
+        "loop" 0.320466
+        "end" 0.772727
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.153846
+        "extreme" 0.292308
+        "loop" 0.476923
+        "end" 0.723077
+      }
+      sequenceduration 2.200000
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.070175 2.328947
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "outer_raiser" combo 
+        {
+          0.2140 0.8400
+        }
+        {
+          0.1940 0.0000
+        }
+        "lowerer" combo 
+        {
+          0.9220 0.1100
+          1.0860 0.9600
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.9220 0.1100
+          1.0860 0.9600
+        }
+        {
+        }
+      }
+    }
+    event flexanimation "EYES RIGHT"
+    {
+      time 0.118421 1.118421
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.0600 0.7600
+          0.3251 0.8200
+          0.4771 0.8300
+          0.6511 0.7900
+          0.7851 0.7300
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3271 0.0400
+          0.7891 0.0000
+        }
+      }
+    }
+    event flexanimation "Head Animation"
+    {
+      time 0.074562 2.328948
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1160 0.5900
+          0.3320 0.5800
+          0.5300 0.6300
+          0.6960 0.5900
+          0.8300 0.5700
+          0.9420 0.5700
+          1.1960 0.5900
+          1.3340 0.2600
+          1.5160 0.2600
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3940 0.4000
+          0.8020 0.5400
+          0.9380 0.5300
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "144"
+  "RampTool" "62"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

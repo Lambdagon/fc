@@ -1,0 +1,357 @@
+criterion IsLC1 "map" "bm_c3a2a" required
+criterion IsLC2 "map" "bm_c3a2b" required
+criterion IsLC3 "map" "bm_c3a2c" required
+criterion IsLC4 "map" "bm_c3a2d" required
+criterion IsLC5 "map" "bm_c3a2e" required
+criterion IsLCX "map" "bm_c3a2f" required
+criterion IsLCH "map" "bm_c3a2h" required weight 20
+
+//========================================================
+//Lambda entrance
+//========================================================
+criterion IsSCI1LastEntrance name "SCI01_LastLambdaEntrance" required
+
+response Sci1_LambdaEntrance_Idle
+{
+	norepeat
+   scene "scenes/c3a2a/sci01_lastentrance_idle01.vcd"
+   scene "scenes/c3a2a/sci01_lastentrance_idle02.vcd"
+   scene "scenes/c3a2a/sci01_lastentrance_idle03.vcd"
+   scene "sc`enes/c3a2a/sci01_lastentrance_idle04.vcd"
+   scene "scenes/generic/generic_response_nospeak01.vcd"
+}
+
+rule Sci1_LambdaEntrance_Idle
+{
+   criteria TLK_VITALIDLE IsSCI1LastEntrance IsPlayerClose IsLC2 SeenByPlayer
+   response Sci1_LambdaEntrance_Idle
+}
+
+rule Sci1_LambdaEntrance_StopFollow
+{
+    criteria TLK_STOPFOLLOW IsSCI1LastEntrance IsLC2
+    response NullResponse
+}
+
+response Sci1_LambdaEntrance_USE
+{
+   scene "scenes/npc/scientist_male01/sci_littlecorner01.vcd"
+   scene "scenes/npc/scientist_male01/sci_holddownspot04.vcd"
+   scene "scenes/npc/scientist_male01/sci_holddownspot05.vcd"
+   scene "scenes/npc/scientist_male01/sci_illstayhere03.vcd"
+   scene "scenes/npc/scientist_male01/sci_illstayhere05.vcd"
+   scene "scenes/npc/scientist_male01/sci_imstickinghere04.vcd"
+}
+
+rule Sci1_LambdaEntrance_USE
+{
+   criteria TLK_USE IsSCI1LastEntrance IsPlayerClose IsLC2 SeenByPlayer
+   response Sci1_LambdaEntrance_USE
+}
+//========================================================
+//Gluon Gun Idles after the "Idles"
+//========================================================
+criterion IsSCI2Gluon name "SCI02_gluongun" required
+
+response Sci2_Gluon_Idle
+{
+    sequential
+   scene "scenes/c3a2a/sci02_gluon_idle01.vcd"
+   scene "scenes/c3a2a/sci02_gluon_idle02.vcd"
+   scene "scenes/c3a2a/sci02_gluon_idle03.vcd"
+}
+
+rule Sci2_Gluon_Idle
+{
+   criteria TLK_VITALIDLE IsSCI2Gluon IsPlayerClose IsLC2 SeenByPlayer
+   response Sci2_Gluon_Idle
+}
+
+//========================================================
+//Gluon Gun Scientist Watches Gordon's Target Practice
+//========================================================
+criterion Gluon_PlayerKilledBullsquid "Concept" "blew_up_a_bullsquid" required weight 5
+
+response Sci2_GluonBullsquid_Idle
+{
+	norepeat
+   scene "scenes/npc/scientist_male01/sci_heretohelp03.vcd"
+}
+
+rule Sci2_GluonBullsquid_Idle
+{
+   criteria Gluon_PlayerKilledBullsquid IsSCI2Gluon IsLC2
+   response Sci2_GluonBullsquid_Idle
+}
+
+//========================================================
+//Reactor
+//========================================================
+criterion IsSCI3Reactor name "sci03" required
+criterion IsReactorFlooded "ReactorFlooded" "1" required
+criterion IsReactorNotFlooded "ReactorFlooded" "0" required
+
+response Sci3_DrainReactor_Pre_Idle
+{
+   sequential
+   scene "scenes/c3a2b/FloodReactor/sci03_floodreactor01_idle01.vcd"
+   scene "scenes/c3a2b/FloodReactor/sci03_floodreactor01_idle02.vcd"
+}
+
+rule Sci3_DrainReactor_Pre_Idle
+{
+   criteria TLK_VITALIDLE IsSCI3Reactor IsPlayerClose IsLC3 SeenByPlayer IsReactorNotFlooded
+   response Sci3_DrainReactor_Pre_Idle
+}
+
+response Sci3_DrainReactor_Post_Idle
+{
+   sequential
+   scene "scenes/c3a2b/FloodReactor/sci03_floodreactor02_idle01.vcd"
+   scene "scenes/c3a2b/FloodReactor/sci03_floodreactor02_idle02.vcd"
+}
+
+rule Sci3_DrainReactor_Post_Idle
+{
+   criteria TLK_VITALIDLE IsSCI3Reactor IsPlayerClose IsLC3 SeenByPlayer IsReactorFlooded
+   response Sci3_DrainReactor_Post_Idle
+}
+
+//========================================================
+//Supply Depot
+//========================================================
+
+criterion IsSCI07SD name "SCI07_SupplyDepot" required weight 5
+criterion IsSCI08SD name "SCI08" required weight 5
+criterion IsSCI09SD name "SCI09_LC" required weight 5
+criterion IsSCI10LJ name "SCI10_Steinman" required weight 5
+criterion IsSupplyDepot01 "supplydepot02" "" required
+criterion IsSupplyDepot02 "supplydepot02" "1" required
+criterion IsPreSupplyDepot02 "presupplydepot02" "1" required
+
+criterion IsGRD04SD name "GRD04_SupplyDepot" required
+
+// rules to cancel out standard responses
+
+rule SupplyDepot_NoReloadLines
+{
+    criteria TLK_PLRELOAD IsLCH
+    response NullResponse
+}
+
+rule SupplyDepot_NoStopFollow
+{
+    criteria TLK_STOPFOLLOW IsLCH
+    response NullResponse
+}
+
+// nagging player to keep going
+response SCI07SD_SupplyDepot_Idle01
+{
+	norepeat
+   scene "scenes/c3a2e/supplydepot01_sci07_idle01.vcd"
+   scene "scenes/c3a2e/supplydepot01_sci07_idle02.vcd"
+   scene "scenes/c3a2e/supplydepot01_sci07_idle03.vcd"
+}
+
+rule SCI07SD_SupplyDepot_Idle01
+{
+   criteria TLK_VITALIDLE IsSCI07SD IsLCH IsPreSupplyDepot02 
+   response SCI07SD_SupplyDepot_Idle01
+}
+
+response GRD04SD_SupplyDepot_Idle02
+{
+	norepeat
+   scene "scenes/c3a2e/supplydepot01_grd04_idle01.vcd"
+   scene "scenes/c3a2e/supplydepot01_grd04_idle02.vcd"
+}
+
+rule GRD04SD_SupplyDepot_Idle02
+{
+   criteria TLK_VITALIDLE IsGRD04SD IsLCH IsPreSupplyDepot02 
+   response GRD04SD_SupplyDepot_Idle02
+}
+
+
+response SCI07SD_SupplyDepot_Idle02
+{
+	norepeat
+   scene "scenes/c3a2e/supplydepot02_sci07_idle01.vcd"
+   scene "scenes/c3a2e/supplydepot_sci07andsci08_memoirs.vcd"
+}
+
+rule SCI07SD_SupplyDepot_Idle02
+{
+   criteria TLK_IDLE IsSCI07SD IsPlayerClose IsLCH IsSupplyDepot02
+   response SCI07SD_SupplyDepot_Idle02
+}
+
+rule SCI07SD_SupplyDepot_Use02
+{
+   criteria TLK_USE IsSCI07SD IsLCH IsSupplyDepot02
+   response SCI07SD_SupplyDepot_Idle02
+}
+
+response SCI08SD_SupplyDepot_Idle
+{
+	sequential
+	norepeat
+   scene "scenes/c3a2e/sci08_idle01.vcd"
+   scene "scenes/c3a2e/sci08_idle02.vcd"
+   scene "scenes/c3a2e/sci08_idle03.vcd"
+   scene "scenes/c3a2e/sci08_idle04.vcd"
+   scene "scenes/c3a2e/sci08_idle05.vcd"
+   scene "scenes/c3a2e/sci08_idle06.vcd"
+}
+
+rule SCI08SD_SupplyDepot_Idle
+{
+   criteria TLK_USE IsSCI08SD IsPlayerClose IsLCH
+   response SCI08SD_SupplyDepot_Idle
+}
+
+response SCI09SD_SupplyDepot_Idle
+{
+	norepeat
+	sequential
+   scene "scenes/c3a2e/sci09_idle01.vcd"
+   scene "scenes/c3a2e/sci09_idle02.vcd"
+   scene "scenes/c3a2e/sci09_idle04.vcd"
+   scene "scenes/c3a2e/sci09_idle05.vcd"
+   scene "scenes/c3a2e/sci09_idle06.vcd"
+}
+
+rule SCI09SD_SupplyDepot_Idle
+{
+   criteria TLK_USE IsSCI09SD IsPlayerClose IsLCH
+   response SCI09SD_SupplyDepot_Idle
+}
+
+response SCI10LJ_LongJump_Idle
+{
+	norepeat
+   scene "scenes/c3a2e/sci10_longjump_idle01.vcd"
+   scene "scenes/c3a2e/sci10_longjump_idle02.vcd"
+   scene "scenes/c3a2e/sci10_longjump_idle03.vcd"
+   scene "scenes/c3a2e/sci10_longjump_idle04.vcd"
+   scene "scenes/c3a2e/sci10_longjump_idle05.vcd"
+}
+
+rule SCI10LJ_LongJump_Idle
+{
+   criteria TLK_VITALIDLE IsSCI10LJ IsPlayerClose IsLCH
+   response SCI10LJ_LongJump_Idle
+}
+
+//========================================================
+//Teleportation Chamber
+//========================================================
+criterion IsSCI11LC name "sci11" required
+criterion IsPortalOpen "portalopen" "1" required
+criterion IsPortalNotOpen "portalopen" "0" required
+
+response SCI11LC_Death
+{	
+	norepeat
+   scene "scenes/c3a2e/sci11_teleport_death01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_death02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_death03.vcd"
+   scene "scenes/c3a2e/sci11_teleport_death04.vcd"
+}
+
+rule Sci11LC_Death
+{
+   criteria IsSCI11LC IsLCH TLK_DEATH
+   response SCI11LC_Death
+}
+
+criterion TryTeleportEarly "Concept" "telejumpearly" required
+
+response SCI11LC_JumpFail
+{	
+	norepeat
+   scene "scenes/c3a2e/sci11_teleport_jumpfail01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_jumpfail02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_jumpfail03.vcd"
+   scene "scenes/c3a2e/sci11_teleport_jumpfail04.vcd"
+   scene "scenes/c3a2e/sci11_teleport_jumpfail05.vcd"
+}
+
+rule Sci11LC_JumpFail
+{
+   criteria IsSCI11LC IsLCH TryTeleportEarly
+   response SCI11LC_JumpFail
+}
+
+response SCI11LC_NotYetOpen
+{	
+   scene "scenes/c3a2e/sci11_teleport_notyetopen01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_notyetopen02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_notyetopen03.vcd"
+}
+
+criterion PlayerNearTeleport "Concept" "playernearteleport" required weight 5
+
+rule Sci11LC_NotYetOpen
+{
+   criteria IsSCI11LC IsLCH PlayerNearTeleport IsPortalNotOpen
+   response SCI11LC_NotYetOpen
+}
+
+response SCI11LC_PortalClose
+{	
+	norepeat
+   scene "scenes/c3a2e/sci11_teleport_portalclose01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_portalclose02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_portalclose04.vcd"
+}
+
+criterion TeleporterClosing "concept" "teletoolate" required
+
+rule SCI11LC_PortalClose
+{
+   criteria IsSCI11LC IsLCH IsPortalOpen TeleporterClosing
+   response SCI11LC_PortalClose
+}
+
+response SCI11LC_PortalOpen
+{
+	norepeat
+// (Going to use the first one as the clear, scripted scene; the others as nags)
+   //scene "scenes/c3a2e/sci11_teleport_portalopen01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_portalopen02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_portalopen03.vcd"
+   scene "scenes/c3a2e/sci11_teleport_portalopen04.vcd"
+}
+
+criterion PortalNagging "Concept" "nagging" required weight 3
+
+rule SCI11LC_PortalOpen
+{
+   criteria IsSCI11LC IsLCH IsPortalOpen PortalNagging
+   response SCI11LC_PortalOpen
+}
+
+response SCI11LC_UnderAttack
+{
+	norepeat
+   scene "scenes/c3a2e/sci11_teleport_underattack01.vcd"
+   scene "scenes/c3a2e/sci11_teleport_underattack02.vcd"
+   scene "scenes/c3a2e/sci11_teleport_underattack03.vcd"
+   scene "scenes/c3a2e/sci11_teleport_underattack04.vcd"
+}
+
+rule Sci11LC_UnderAttack
+{
+// don't complain about enemies when the portal is open
+   criteria IsSCI11LC TLK_MOBBED IsPortalNotOpen IsLCH
+   response SCI11LC_UnderAttack
+}
+
+
+//teleport_death - SCI dies
+//teleport_jumpfail - jump too early, DIE
+//teleport_notyetopen - warning you not to jump
+//teleport_portalclose - portal close, GAME OVER
+//teleport_portalopen - portal opens, warnings

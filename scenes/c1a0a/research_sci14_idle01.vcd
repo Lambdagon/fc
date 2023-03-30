@@ -1,0 +1,60 @@
+// Choreo version 1
+actor "SCI14_Research"
+{
+  channel "Voice"
+  {
+    event speak "am.sci14.paleomathmatics01"
+    {
+      time 0.493333 3.092698
+      param "am.sci14.paleomathmatics01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Tease"
+    {
+      time 0.094616 4.474616
+      param "common_expressions"
+      param2 "Tease"
+      event_ramp
+      {
+        0.4000 0.1210
+        0.8540 1.0000
+        1.0140 0.7903
+        3.4987 1.0000
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at SCI13_Research"
+    {
+      time 0.161282 3.627949
+      param "SCI13_Research"
+      event_ramp
+      {
+        0.4380 1.0000
+        2.9020 0.9758
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

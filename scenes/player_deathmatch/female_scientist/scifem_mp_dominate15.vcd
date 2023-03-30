@@ -1,0 +1,41 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 2.973625 -1.000000
+  param "noaction"
+}
+actor "player!"
+{
+  channel "Voice"
+  {
+    event speak "player.scifemale.dominate15"
+    {
+      time 0.075021 3.079466
+      param "player.scifemale.dominate15"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "22"
+  "GestureTool" "100"
+  "RampTool" "78"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

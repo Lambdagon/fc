@@ -1,0 +1,202 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.headcrab10"
+    {
+      time 0.362708 2.733116
+      param "NPC_Security.headcrab10"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.029375 3.178948
+      param "!enemy"
+      event_ramp
+      {
+        0.1059 0.6647
+        0.3614 0.9756
+        2.6825 1.0000
+        2.8978 0.7219
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_afraid02"
+    {
+      time 1.296296 2.296296
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid02"
+      event_ramp
+      {
+        0.2300 0.1405
+        0.5467 0.4534
+        0.7633 0.1818
+      }
+    }
+    event expression "b_incombat_headcrabug01"
+    {
+      time 0.208424 1.179012
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat_headcrabug01"
+      event_ramp
+      {
+        0.2267 0.7651
+        0.4133 0.2491
+        0.6773 0.6517
+        0.8139 0.5160
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 1.703704 2.777778
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1900 0.4699
+        0.2733 0.6836
+        0.7641 0.4841
+        0.8307 0.3093
+      }
+    }
+    event expression "b_incombat_headcrabug01"
+    {
+      time 1.629629 2.629629
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat_headcrabug01"
+      event_ramp
+      {
+        0.2267 0.2917
+        0.4133 0.2869
+        0.5600 0.3353
+        0.7000 0.4900
+        0.8433 0.5302
+      }
+    }
+    event expression "b_afraid02"
+    {
+      time 0.481844 1.364197
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid02"
+      event_ramp
+      {
+        0.2300 0.1405
+        0.4824 0.4097
+        0.6457 0.1818
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.015687 3.174876
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.046666 2.480000
+      param "bg_accentup"
+      event_ramp
+      {
+        0.1533 0.0567
+        0.3133 0.2468
+        1.2567 0.1311
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "bg_down"
+    {
+      time 1.117647 3.084314
+      param "bg_down"
+      event_ramp
+      {
+        0.3967 0.4782
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.176471 1.809804
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.1167 0.3566
+        0.6292 0.5549
+        1.3167 0.3388
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "32"
+  "CChoreoView" "68"
+  "GestureTool" "100"
+  "RampTool" "48"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

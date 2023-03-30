@@ -1,0 +1,57 @@
+// Choreo version 1
+actor "SCI21_Lab01"
+{
+  channel "Voice"
+  {
+    event speak "am.sci21.rankandfile01"
+    {
+      time 0.566667 5.084445
+      param "am.sci21.rankandfile01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look At Player"
+    {
+      time 0.266666 8.100000
+      param "!player"
+      event_ramp
+      {
+        0.5375 0.8333
+        2.3500 0.8841
+        3.8375 0.8913
+        5.4625 0.8841
+        6.7875 0.8696
+        7.4250 0.6667
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Grudge"
+    {
+      time 0.166667 8.166667
+      param "common_expressions"
+      param2 "Grudge"
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "20"
+  "RampTool" "16"
+}
+fps 60
+snap off
+ignorePhonemes off

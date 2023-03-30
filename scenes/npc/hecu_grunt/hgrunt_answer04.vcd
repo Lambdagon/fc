@@ -1,0 +1,112 @@
+// Choreo version 1
+event stoppoint "FireCompletion!"
+{
+  time 0.895237 -1.000000
+  param "noaction"
+}
+actor "!target"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.answer04"
+    {
+      time 0.357618 0.857618
+      param "NPC_hgrunt.answer04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.042857 1.428333
+      param "!self"
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "Mar_angry01"
+    {
+      time 0.047143 1.796666
+      param "humans\marine\marine"
+      param2 "Mar_angry01"
+      event_ramp
+      {
+        0.3431 0.2913
+        0.4707 0.3317
+        1.0990 0.3439
+        1.4559 0.3329
+      }
+    }
+    event expression "Mar_browup01"
+    {
+      time 0.160000 1.000000
+      param "humans\marine\marine"
+      param2 "Mar_browup01"
+      event_ramp
+      {
+        0.1259 0.3280
+        0.4897 0.4186
+        0.6521 0.2387
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Flex- Head nod"
+    {
+      time 0.141190 1.063094
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.0911 0.5200
+          0.2086 0.6200
+          0.4297 0.3500
+          0.5286 0.3200
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.2886 0.5900
+          0.4286 0.6700
+          0.5227 0.6700
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Trigger"
+  {
+    event interrupt "Interrupt- Gordon may shoot at him anytime!!!"
+    {
+      time 0.048095 1.508095
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "ExpressionTool" "48"
+  "GestureTool" "100"
+  "RampTool" "110"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

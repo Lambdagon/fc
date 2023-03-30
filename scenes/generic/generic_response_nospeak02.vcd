@@ -1,0 +1,118 @@
+// Choreo version 1
+actor "!target"
+{
+  channel "look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.060000 5.345095
+      param "!player"
+      event_ramp
+      {
+        0.3978 0.5241
+        0.6071 0.6801
+        1.1294 0.7703
+        1.6647 0.7973
+        3.9431 0.8063
+        4.2882 0.8003
+        4.6053 0.7417
+        4.9267 0.4369
+      }
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "Response"
+    {
+      time 0.142743 4.779107
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          1.0963 0.7000
+        }
+        {
+          1.0963 0.5000
+        }
+        "lowerer" combo 
+        {
+          1.0963 0.4500
+        }
+        {
+          1.0963 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          1.0963 0.7400
+        }
+        {
+          1.0963 0.5000
+        }
+        "chin_raiser" 
+        {
+          1.0963 0.2000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.0963 0.5000
+          2.0918 0.5000
+          2.5743 0.5000
+          2.8771 0.5000
+          3.0655 0.5200
+          3.2409 0.4700
+          3.5280 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.7896 0.5081
+          1.1052 0.3700
+          1.3921 0.5200
+          1.6903 0.5800
+          1.8873 0.5800
+          2.1364 0.5800
+          2.2667 0.4000
+          2.4521 0.4000
+          2.7400 0.4000
+          2.9133 0.5500
+          3.1788 0.5200
+          3.5255 0.4700
+          3.7521 0.4700
+          3.9655 0.4700
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.0963 0.4909
+          1.4570 0.4900
+          1.6539 0.4900
+          1.8521 0.4900
+          2.1364 0.5700
+          2.3333 0.5600
+          2.4267 0.5400
+          2.5533 0.5200
+          2.9721 0.5300
+          3.2921 0.5300
+          3.4588 0.5300
+          3.6255 0.4600
+          3.8921 0.4600
+          4.1121 0.4600
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "34"
+  "ExpressionTool" "30"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

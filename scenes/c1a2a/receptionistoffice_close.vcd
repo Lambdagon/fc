@@ -1,0 +1,52 @@
+// Choreo version 1
+actor "SCI03"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci03.quiet01"
+    {
+      time 0.246667 2.213810
+      param "oc.sci03.quiet01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci03.quiet02"
+    {
+      time 3.685099 4.342038
+      param "oc.sci03.quiet02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "SCI04"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci04.couldbehelp01"
+    {
+      time 2.574902 3.636489
+      param "oc.sci04.couldbehelp01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

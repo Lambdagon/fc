@@ -1,0 +1,84 @@
+// Choreo version 1
+actor "c1a4c_sci02"
+{
+  channel "Voice"
+  {
+    event speak "bp.sci02.tentacle.smash01"
+    {
+      time 2.853635 3.703635
+      param "bp.sci02.tentacle.smash01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci02.tentacle.smash02"
+    {
+      time 4.020303 4.849441
+      param "bp.sci02.tentacle.smash02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci02.tentacle.screaming01"
+    {
+      time 7.319345 8.279345
+      param "bp.sci02.tentacle.screaming01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci02.tentacle.smash03"
+    {
+      time 6.458740 7.129375
+      param "bp.sci02.tentacle.smash03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci02.tentacle.getitoffme01"
+    {
+      time 9.196058 10.616058
+      param "bp.sci02.tentacle.getitoffme01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci02.tentacle.noooooooooo01"
+    {
+      time 10.736968 13.295585
+      param "bp.sci02.tentacle.noooooooooo01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.111111 12.583334
+      param "!self"
+    }
+    event sequence "tentacle_smash"
+    {
+      time 0.000000 13.333333
+      param "tentacle_smash_NULLL"
+      fixedlength
+    }
+  }
+  channel "trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "CChoreoView" "16"
+}
+fps 60
+snap off
+ignorePhonemes off

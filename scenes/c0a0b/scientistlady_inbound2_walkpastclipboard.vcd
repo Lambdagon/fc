@@ -1,0 +1,78 @@
+// Choreo version 1
+actor "Sci22_lab01"
+{
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.888182 4.730303
+      param "!player"
+      event_ramp
+      {
+        1.0120 0.6071
+        2.7007 0.5833
+      }
+    }
+    event lookat "Look at GRD01_lookdown"
+    {
+      time 4.196768 8.056567
+      param "GRD01_lookdown"
+      event_ramp
+      {
+        0.9953 0.4106
+        2.8766 0.3875
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.344444 8.144444
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "cheek_raiser" combo 
+        {
+          1.5813 0.0400
+          1.6756 0.6300
+          1.8584 0.9800
+          3.4476 1.0000
+          3.8000 0.4000
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          1.5813 0.0400
+          1.6756 0.6300
+          1.8584 0.9800
+          3.4667 1.0000
+          3.8857 0.3900
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.9733 0.5100
+          2.0778 0.5000
+          2.2737 0.4200
+          2.4733 0.4800
+          2.6378 0.5100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "36"
+  "GestureTool" "100"
+  "ExpressionTool" "42"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,172 @@
+// Choreo version 1
+event stoppoint "1"
+{
+  time 7.355556 -1.000000
+  param "noaction"
+}
+actor "SCI02"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci02.elevator.physed01"
+    {
+      time 1.371921 4.221921
+      param "oc.sci02.elevator.physed01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci02.elevator.physed02"
+    {
+      time 4.780877 6.380877
+      param "oc.sci02.elevator.physed02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Gestures"
+  {
+    event gesture "G_noway_big"
+    {
+      time 1.567247 3.800580
+      param "G_noway_big"
+      absolutetags playback_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    event gesture "bg_accentup"
+    {
+      time 1.470925 3.999495
+      param "bg_accentup"
+      event_ramp
+      {
+        0.1957 0.0893
+        0.4217 0.3502
+        0.6348 0.4618
+        1.1870 0.3337
+        1.6909 0.1187
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.157957
+        "extreme" 0.331712
+        "loop" 0.572295
+        "end" 0.705953
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "G_look_small"
+    {
+      time 4.249488 6.814815
+      param "G_look_small"
+      absolutetags playback_time
+      {
+        "apex" 0.186143
+        "accent" 0.265919
+        "loop" 0.345695
+        "end" 0.398879
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.325581
+        "accent" 0.465116
+        "loop" 0.604651
+        "end" 0.697674
+      }
+      sequenceduration 1.466667
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 1.451252 2.595025
+      param "!player"
+      event_ramp
+      {
+        0.2739 0.3184
+        0.5522 0.4148
+        0.8870 0.3514
+        1.0174 0.2103
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 4.404869 5.434356
+      param "!player"
+      event_ramp
+      {
+        0.1274 0.1821
+        0.2013 0.2644
+        0.6390 0.3267
+        0.8315 0.2503
+        0.9228 0.1539
+      }
+    }
+    event lookat "Look at !friend"
+    {
+      time 5.479379 6.325531
+      param "!friend"
+      event_ramp
+      {
+        0.0974 0.0846
+        0.1852 0.1516
+        0.4051 0.1939
+        0.6804 0.1504
+        0.7641 0.1011
+      }
+    }
+  }
+  channel "Face"
+  {
+    event face "Face SCI02_elevator_look01"
+    {
+      time 0.090773 6.468309
+      param "SCI02_elevator_look01"
+    }
+    event face "Face !self"
+    {
+      time 4.801885 9.379420
+      param "!self"
+    }
+  }
+  channel "Move To"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "RampTool" "78"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "SCI03_Generator"
+{
+  channel "Voice"
+  {
+    event speak "bp.sci03.idle.lookforsmithers01"
+    {
+      time 0.216667 2.616667
+      param "bp.sci03.idle.lookforsmithers01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci03.idle.lookforsmithers02"
+    {
+      time 2.766667 4.966667
+      param "bp.sci03.idle.lookforsmithers02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.116667 5.750000
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.5460 0.6165
+        2.3580 0.4737
+        2.8620 0.5338
+        3.4120 0.8872
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_plead_01_left"
+    {
+      time 0.900000 4.350000
+      param "g_plead_01_left"
+      absolutetags playback_time
+      {
+        "apex" 0.157255
+        "accent" 0.255539
+        "loop" 0.393137
+        "end" 0.638554
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.275862
+        "accent" 0.448276
+        "loop" 0.689655
+        "end" 0.862069
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "kgesture13p"
+    {
+      time 2.725000 5.691667
+      param "kgesture13p"
+      absolutetags playback_time
+      {
+        "apex" 0.113636
+        "accent" 0.352273
+        "loop" 0.534091
+        "end" 0.681818
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.113636
+        "accent" 0.352273
+        "loop" 0.534091
+        "end" 0.681818
+      }
+      sequenceduration 2.966667
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.100000 3.875000
+      param "!player"
+      event_ramp
+      {
+        0.2900 1.0000
+        3.1830 1.0000
+      }
+    }
+    event face "Face !player"
+    {
+      time 0.108333 0.608333
+      param "!player"
+    }
+    event lookat "Look at !self"
+    {
+      time 3.508333 5.641666
+      param "!self"
+      event_ramp
+      {
+        0.3440 1.0000
+        2.1333 1.0000
+      }
+      pitch "-48"
+      yaw "22"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

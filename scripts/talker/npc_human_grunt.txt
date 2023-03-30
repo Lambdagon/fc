@@ -1,0 +1,587 @@
+criterion isgrunt classname "npc_human_grunt" required
+
+// ============================================================================================
+//			//starting below is pre combat related response rules//
+// ============================================================================================
+response hgrunt_answer
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_answer01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer05_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer06_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer08_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer11_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer13.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer14.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer14_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer15.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer15_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer16.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_answer16_subd01.vcd"
+}
+
+rule hgrunt_answer
+{
+	criteria isgrunt tlk_hg_answer
+	response hgrunt_answer
+}
+
+response hgrunt_idle
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_idle01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_idle13.vcd"
+}
+
+rule hgrunt_idle
+{
+	criteria isgrunt tlk_hg_idle
+	response hgrunt_idle
+}
+
+response hgrunt_question
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_question01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question02_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question02_extrm01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question11.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question12_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question13.vcd"
+}
+
+rule hgrunt_question
+{
+	criteria isgrunt tlk_hg_quest
+	response hgrunt_question
+}
+
+response hgrunt_question_fm
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_question14.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_question15.vcd"
+}
+
+rule hgrunt_question_fm
+{
+	criteria isgrunt tlk_hg_quest 
+	response hgrunt_question_fm
+}
+
+// ============================================================================================
+//			//starting below is post combat related response rules//
+// ============================================================================================
+response hgrunt_quest_check
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_check01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check08_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check09_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check11.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check11_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_check12_subd01.vcd"
+}
+
+rule hgrunt_quest_check
+{
+	criteria tlk_hg_quest RecentCombatLong
+	response hgrunt_quest_check
+}
+
+response hgrunt_answer_clear
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_clear01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear04_extreme01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear13.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear14.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_clear15.vcd"
+}
+
+rule hgrunt_answer_clear
+{
+	criteria tlk_hg_clear RecentCombatLong
+	response hgrunt_answer_clear
+}
+
+// ============================================================================================
+//			//starting below is combat related response rules//
+// ============================================================================================
+//			hgrunt is alerted to an enemy, notifies his teammates
+// ============================================================================================
+response hgrunt_alert_startcombat
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_alert01.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert01_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert03.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert03_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert04.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert05.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert05_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert05_var03.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert05_var06.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert06.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert08.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert09.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert09_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert11.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert11_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert12.vcd" 	respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert12_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert12_var03.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert13.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert13_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert14.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert14_var02.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert15.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert16.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert16_var01.vcd" respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_alert18.vcd" respeakdelay 5
+}
+
+rule hgrunt_alert_startcombat
+{
+	criteria isgrunt tlk_startcombat
+	response hgrunt_alert_startcombat
+}
+
+rule hgrunt_hear_combat
+{
+	criteria isgrunt tlk_hg_hear_combat
+	response hgrunt_alert_startcombat
+}
+
+response hgrunt_alert_player
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_alert07.vcd" 		respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert10.vcd" 		respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert10_var02.vcd"	respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert17.vcd" 		respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert19.vcd" 		respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert19_var01.vcd" 	respeakdelay 60
+	scene "scenes/npc/hecu_grunt/hgrunt_alert19_var03.vcd" 	respeakdelay 60
+}
+
+rule hgrunt_alert_player
+{
+	criteria isgrunt tlk_startcombat enemyisplayer cansayfreemanlines 
+	response hgrunt_alert_player
+}
+
+//======================================================
+//	hgrunts intend to charge the player's position
+//======================================================
+response hgrunt_charge
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_charge01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge01_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge02_subd01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge02_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge02_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge02_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03_subd01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge03_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge04_subd01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge04_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge04_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge05_extrm01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge05_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge06_extrm01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge06_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge07_extrm01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge07_extrm02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge07_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge07_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge08_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge08_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge08_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09_subd01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09_subd02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge09_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge10_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge10_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge10_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge11.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge11_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge11_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge12_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge12_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge13.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge13_subd01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge13_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_charge13_var02.vcd"
+}
+
+rule hgrunt_charge
+{
+	criteria isgrunt tlk_hg_charge
+	response hgrunt_charge
+}
+
+//=================================================
+//		hgrunts are in distress, seeks cover
+//=================================================
+response hgrunt_cover
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_cover01.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover03.vcd" respeakdelay 5  weight 1
+	scene "scenes/npc/hecu_grunt/hgrunt_cover04.vcd" respeakdelay 5  weight 1
+	scene "scenes/npc/hecu_grunt/hgrunt_cover04_var01.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover06.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover07.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover07_subd01.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover07_var01.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover08.vcd" respeakdelay 5  weight 2
+	scene "scenes/npc/hecu_grunt/hgrunt_cover09.vcd" respeakdelay 5  weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_cover10.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover11.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover12.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover13.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover14.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover14_var02.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover15.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover16.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover16_var01.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover17.vcd" respeakdelay 5  weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover17_var01.vcd" respeakdelay 5  weight 5
+}
+
+rule hgrunt_cover
+{
+	criteria isgrunt tlk_hg_cover
+	response hgrunt_cover
+}
+
+response hgrunt_cover_fm
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_cover02.vcd" odds 60 respeakdelay 5 weight 35
+	scene "scenes/npc/hecu_grunt/hgrunt_cover02_var01.vcd" respeakdelay 5  weight 35
+	scene "scenes/npc/hecu_grunt/hgrunt_cover05.vcd" odds 60 respeakdelay 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover05_var01.vcd" odds 60 respeakdelay 5 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_cover05_var02.vcd" odds 60 respeakdelay 5 weight 1
+}
+
+rule hgrunt_cover_fm
+{
+	criteria isgrunt tlk_hg_cover enemyisplayer cansayfreemanlines tenpercentchance
+	response hgrunt_cover_fm
+}
+
+//=================================================
+//	hgrunts react to player throwing a frag grenade
+//=================================================
+response hgrunt_gren
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade05_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade07_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade07_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade07_var04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade10_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade10_var04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade11.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade12.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade13.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_grenade13_var02.vcd"
+}
+
+rule hgrunt_gren
+{
+	criteria isgrunt tlk_hg_gren
+	response hgrunt_gren
+}
+
+// ============================================================================================
+//	hgrunt is wounded in combat, from either gunfire or the mighty freeman's crowbar// generic damage usage
+// ============================================================================================
+response hgrunt_hit
+{
+	permitrepeats
+	scene "scenes/npc/hecu_grunt/hgrunt_hit01.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit02.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit03.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit04.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit05.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit06.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit07.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit08.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit09.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit10.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit11.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit12.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit13.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit14.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit15.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit16.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit17.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit18.vcd" weight 40
+	scene "scenes/npc/hecu_grunt/hgrunt_hit19.vcd" weight 40
+}
+
+rule hgrunt_hit
+{
+	criteria isgrunt tlk_shot
+	response hgrunt_hit
+}
+
+response hgrunt_hurtarm
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_pain01.vcd" 
+	scene "scenes/npc/hecu_grunt/hgrunt_pain02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain07.vcd"
+//	scene "scenes/npc/hecu_grunt/hgrunt_pain08.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain09.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain11.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_pain12.vcd"
+}
+
+rule hgrunt_hurtarm
+{
+	criteria isgrunt tlk_hg_hurtarm
+	response hgrunt_hurtarm
+}
+
+response hgrunt_hurtleg
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_pain01.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain02.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain03.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain04.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain05.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain06.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain07.vcd" weight 25
+//	scene "scenes/npc/hecu_grunt/hgrunt_pain08.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain09.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain10.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain11.vcd" weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_pain12.vcd" weight 25
+}
+
+rule hgrunt_hurtleg
+{
+	criteria isgrunt tlk_hg_hurtleg
+	response hgrunt_hurtleg
+}
+
+//=======================================================
+// 	hgrunts needs a band-aid, because band-aids fix everything
+//=======================================================
+response hgrunt_medic
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_medic01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic01_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_medic06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt09_hurt.vcd"
+}
+
+rule hgrunt_medic
+{
+	criteria isgrunt tlk_hg_medic
+	response hgrunt_medic
+}
+
+//================================================================================
+//	hgrunts are alerted to xenian creatures: generic set// also includes line where they react in fear
+//================================================================================
+response hgrunt_monster
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_monster01.vcd" respeakdelay 5 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_monster02.vcd" respeakdelay 5 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_monster03.vcd" respeakdelay 5 weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_monster04.vcd" respeakdelay 5 weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_monster05.vcd" respeakdelay 5 weight 2
+	scene "scenes/npc/hecu_grunt/hgrunt_monster06.vcd" respeakdelay 5 weight 30
+	scene "scenes/npc/hecu_grunt/hgrunt_monster07.vcd" respeakdelay 5 weight 25
+	scene "scenes/npc/hecu_grunt/hgrunt_monster08.vcd" respeakdelay 5 weight 10
+	scene "scenes/npc/hecu_grunt/hgrunt_monster09.vcd" respeakdelay 5 weight 10
+//	scene "scenes/npc/hecu_grunt/hgrunt_monster10.vcd" respeakdelay 5 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_monster11.vcd" respeakdelay 5 weight 10
+
+}
+
+rule hgrunt_monster_headcrab
+{
+	criteria isgrunt tlk_startcombat enemyisheadcrab
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_zombie_guard
+{
+	criteria isgrunt tlk_startcombat enemyiszombieguard
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_zombie_scientist
+{
+	criteria isgrunt tlk_startcombat enemyiszombiescientist
+	response hgrunt_monster
+}
+
+rule  hgrunt_monster_aliengrunt
+{
+	criteria isgrunt tlk_startcombat enemyisaliengrunt
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_alienslave
+{
+	criteria isgrunt tlk_startcombat enemyisalienslave
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_bullsquid
+{
+	criteria isgrunt tlk_startcombat enemyisbullsquid
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_houndeye
+{
+	criteria isgrunt tlk_startcombat enemyishoundeye
+	response hgrunt_monster
+}
+
+rule hgrunt_monster_gargantua
+{
+	criteria isgrunt tlk_startcombat enemyisgargantua
+	response hgrunt_monster
+}
+
+//===================================================
+//	hgrunts verify hurting the player/ taunt him on occasion
+//===================================================
+response hgrunt_taunt_generic
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt03_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt04.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt04_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt04_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt04_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt05.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt05_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt06.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt06_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt06_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt06_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt07.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt07_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt09.vcd"
+//	scene "scenes/npc/hecu_grunt/hgrunt_taunt09_hurt.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt09_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt09_var02.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt09_var03.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt10.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt10_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hgrunt_taunt10_var02.vcd"
+}
+
+rule hgrunt_taunt_generic
+{
+	criteria isgrunt tlk_hg_taunt
+	response hgrunt_taunt_generic
+}
+
+response hgrunt_taunt_player
+{
+	scene "scenes/npc/hecu_grunt/hg_taunt_special01.vcd" 
+	scene "scenes/npc/hecu_grunt/hg_taunt_special01_var01.vcd"
+	scene "scenes/npc/hecu_grunt/hg_taunt_special03.vcd" 
+	scene "scenes/npc/hecu_grunt/hg_taunt_special04.vcd"
+}
+
+rule hgrunt_taunt_player
+{
+	criteria isgrunt tlk_hg_taunt enemyisplayer cansayfreemanlines tenpercentchance
+	response hgrunt_taunt_player
+}
+
+//===================================================
+//	hgrunts throw a frag grenade to flush the player out
+//===================================================
+response hgrunt_throw
+{
+	scene "scenes/npc/hecu_grunt/hgrunt_throw01.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw02.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw02_var01.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw03.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw04.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw05.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw05_var01.vcd" respeakdelay 1 weight 5
+	scene "scenes/npc/hecu_grunt/hgrunt_throw06.vcd" respeakdelay 1 weight 5
+}
+
+rule hgrunt_throw
+{
+	criteria isgrunt tlk_hg_throw
+	response hgrunt_throw
+}

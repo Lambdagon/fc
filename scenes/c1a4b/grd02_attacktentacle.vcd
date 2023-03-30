@@ -1,0 +1,205 @@
+// Choreo version 1
+event section "Wait for movement"
+{
+  time 2.746527 -1.000000
+  param "noaction"
+}
+event section "Wait for UNHOLSTER"
+{
+  time 2.930555 -1.000000
+  param "noaction"
+}
+actor "Grd02"
+{
+  channel "Voice"
+  {
+    event speak "bp.grd02.tentacle.heyoverhere01"
+    {
+      time 0.000000 2.069569
+      param "bp.grd02.tentacle.heyoverhere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.grd02.tentacle.heyoverhere02"
+    {
+      time 2.796158 5.753505
+      param "bp.grd02.tentacle.heyoverhere02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_wave"
+    {
+      time 0.246667 2.546667
+      param "g_wave"
+      absolutetags playback_time
+      {
+        "in" 0.352941
+        "loop" 0.640580
+        "end" 0.657971
+        "out" 0.669565
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.352941
+        "loop" 0.779412
+        "end" 0.794118
+        "out" 0.808824
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "lowcover_aim_pistol"
+    {
+      time 2.620000 6.200000
+      param "lowcover_aim_pistol"
+      event_ramp
+      {
+        0.5140 1.0000
+        3.5800 1.0000
+      }
+      sequenceduration 1.666667
+    }
+    event gesture "gesture_shoot_pistol"
+    {
+      time 3.014723 3.148056
+      param "gesture_shoot_pistol"
+      sequenceduration 0.133333
+    }
+    event gesture "gesture_shoot_pistol"
+    {
+      time 3.188056 3.321388
+      param "gesture_shoot_pistol"
+      sequenceduration 0.133333
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Become Invincible"
+    {
+      time 0.133334 -1.000000
+      param "1"
+    }
+    event firetrigger "Become Vulnerable"
+    {
+      time 3.941944 -1.000000
+      param "2"
+    }
+    event firetrigger "Gunshot"
+    {
+      time 3.201389 -1.000000
+      param "3"
+    }
+    event firetrigger "Gunshot"
+    {
+      time 3.014723 -1.000000
+      param "3"
+    }
+    event generic "AI_UNHOLSTER to Grd02"
+    {
+      time 2.791666 2.965277
+      param "AI_UNHOLSTER"
+      param2 "Grd02"
+      resumecondition
+    }
+    event firetrigger "Run at tentacle"
+    {
+      time 0.291667 -1.000000
+      param "5"
+    }
+    event generic "AI_AIM to c1a4c_pecky"
+    {
+      time 2.829861 7.447918
+      param "AI_AIM"
+      param2 "c1a4c_pecky"
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto mark_grd02_attack"
+    {
+      time 2.185555 2.770278
+      param "mark_grd02_attack"
+      param2 "Run"
+      resumecondition
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at c1a4c_pecky"
+    {
+      time 0.038889 6.360000
+      param "c1a4c_pecky"
+    }
+    event face "Face c1a4c_pecky"
+    {
+      time 0.021389 6.486666
+      param "c1a4c_pecky"
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_angry01"
+    {
+      time 2.607173 7.047576
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1577 0.7568
+        1.1211 0.9599
+        4.2758 0.8666
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.862948 1.937947
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.2182 0.9835
+        0.7727 0.9835
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.949985 1.345818
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.0572 0.4982
+        0.0695 0.6860
+        0.1581 0.6718
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 3.633318 4.029151
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.0572 0.4982
+        0.0695 0.6860
+        0.1581 0.6718
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "RampTool" "58"
+  "GestureTool" "100"
+  "ExpressionTool" "70"
+  "SceneRampTool" "100"
+  "CChoreoView" "56"
+}
+fps 60
+snap off
+ignorePhonemes off

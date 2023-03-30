@@ -1,0 +1,146 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 4.666666 -1.000000
+  param "noaction"
+}
+actor "Grd01"
+{
+  channel "Voice"
+  {
+  }
+  channel "flex"
+  {
+    event face "Face !self"
+    {
+      time 0.000000 9.095239
+      param "!self"
+    }
+    event face "Face !player"
+    {
+      time 3.452380 6.571429
+      param "!player"
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 4.166667
+      param "!player"
+    }
+  }
+  channel "gesture"
+  {
+  }
+  channel "Face at"
+  {
+    event gesture "Crouch_to_standpistol"
+    {
+      time 0.238095 1.886600
+      param "Crouch_to_standpistol"
+      event_ramp
+      {
+        0.2286 0.9933
+        0.9494 1.0000
+      }
+      sequenceduration 0.666667
+    }
+    event gesture "shoottostandpistol"
+    {
+      time 1.401549 4.805062
+      param "shoottostandpistol"
+      event_ramp
+      {
+        0.4517 0.9978
+        2.2490 1.0000
+      }
+      absolutetags playback_time
+      {
+        "loopish" 0.416665
+        "loopish" 0.803089
+      }
+      absolutetags shifted_time
+      {
+        "loopish" 0.976425
+        "loopish" 0.987119
+      }
+      sequenceduration 0.533333
+    }
+    event gesture "batonangryidle1"
+    {
+      time 3.244552 5.052244
+      param "batonangryidle1"
+      event_ramp
+      {
+        1.0455 0.4526
+      }
+      sequenceduration 3.000000
+    }
+    event gesture "p_ConsoleType_Rifle"
+    {
+      time 3.641988 8.507190
+      param "p_ConsoleType_Rifle"
+      event_ramp
+      {
+        1.2818 0.9922
+        2.3893 0.9565
+        2.8750 0.6087
+        3.6834 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.069310
+        "loop" 0.325759
+        "end" 0.907317
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.116279
+        "loop" 0.546512
+        "end" 0.697674
+      }
+      sequenceduration 2.900000
+    }
+    event firetrigger "Firetrigger 16"
+    {
+      time 2.014286 -1.000000
+      param "16"
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_freaked_mouthopen"
+    {
+      time 0.261905 2.047619
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthopen"
+      event_ramp
+      {
+        0.6929 0.9911
+      }
+    }
+    event expression "b_freaked_mouthopen"
+    {
+      time 1.190476 2.976191
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthopen"
+      event_ramp
+      {
+        0.6929 0.9911
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "RampTool" "56"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "GestureTool" "118"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,587 @@
+// Choreo version 1
+actor "SCI27_TVroom"
+{
+  channel "Voice"
+  {
+    event firetrigger "GagEnable"
+    {
+      time 48.643208 -1.000000
+      param "15"
+    }
+    event firetrigger "GagEnable"
+    {
+      time 34.000000 -1.000000
+      param "15"
+    }
+    event firetrigger "GagEnable"
+    {
+      time 99.166122 -1.000000
+      param "15"
+    }
+    event firetrigger "GagDisable"
+    {
+      time 94.000000 -1.000000
+      param "14"
+    }
+    event firetrigger "Gagdisable"
+    {
+      time 42.700001 -1.000000
+      param "14"
+    }
+    event firetrigger "GagDisable"
+    {
+      time 103.542587 -1.000000
+      param "14"
+    }
+    event firetrigger "GagEnable"
+    {
+      time 87.201988 -1.000000
+      param "15"
+    }
+  }
+  channel "Triggers for Gags"
+  {
+    event firetrigger "Fire PrettyBOY respaose rule"
+    {
+      time 103.699997 -1.000000
+      param "1"
+    }
+    event firetrigger "Fire PrettyBOY respaose rule"
+    {
+      time 42.650002 -1.000000
+      param "1"
+    }
+    event firetrigger "Fire PrettyBOY respaose rule"
+    {
+      time 55.370369 -1.000000
+      param "1"
+    }
+    event firetrigger "Fire PrettyBOY respaose rule"
+    {
+      time 94.099998 -1.000000
+      param "1"
+    }
+    event firetrigger "GagDisable"
+    {
+      time 18.914288 -1.000000
+      param "14"
+    }
+    event firetrigger "GagEnable- Sci in motion"
+    {
+      time 13.962627 -1.000000
+      param "15"
+    }
+    event firetrigger "GagDisable"
+    {
+      time 7.130954 -1.000000
+      param "14"
+    }
+    event firetrigger "GagEnable- Sci in motion"
+    {
+      time 0.500000 -1.000000
+      param "15"
+    }
+  }
+  channel "Flex"
+  {
+    event firetrigger "Gagdisable"
+    {
+      time 55.370369 -1.000000
+      param "14"
+    }
+    event flexanimation "Looking at display 1 in silence 01"
+    {
+      time 23.377878 28.832424
+      param ""
+      event_ramp
+      {
+        0.4885 0.9988
+        5.1722 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.0318 0.1600
+          1.0773 0.1600
+          1.0773 0.1600
+          1.2742 0.1600
+          1.6572 0.4500
+          2.0057 0.5000
+          2.9299 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.0318 0.6200
+          1.0773 0.6200
+          1.0773 0.6200
+          1.2742 0.6200
+          1.6572 0.6200
+          2.0057 0.5000
+          2.7099 0.5100
+          2.9299 0.5000
+          3.1765 0.6700
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5015 0.6700
+          0.7136 0.4500
+          1.0318 0.4900
+          1.0773 0.4900
+          1.0773 0.4900
+          1.2742 0.4900
+          1.6572 0.4000
+          2.7099 0.6600
+          2.9545 0.5000
+          3.1765 0.6500
+          4.5432 0.4000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.2700 0.5200
+          0.4840 0.5200
+          0.7340 0.5200
+          1.0318 0.6100
+          1.0773 0.8200
+          1.2742 0.8200
+          1.6572 0.5200
+          2.9545 0.5000
+        }
+      }
+    }
+    event flexanimation "Looking at display 1 in silence 02"
+    {
+      time 67.808418 73.262970
+      param ""
+      event_ramp
+      {
+        0.4885 0.9988
+        5.1722 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.2858 0.6000
+          1.6343 0.5600
+          2.0571 0.4900
+          2.2571 0.4900
+          2.4214 0.4900
+          2.6942 0.4900
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5476 0.5900
+          1.0318 0.8300
+          1.0773 0.8300
+          1.0773 0.8300
+          1.2742 0.8300
+          1.6572 0.8200
+          2.0057 0.5800
+          2.7099 0.5100
+          2.9299 0.5100
+          3.1765 0.5100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5015 0.5100
+          0.7136 0.4500
+          1.0318 0.4900
+          1.0773 0.4900
+          1.0773 0.4900
+          1.2742 0.4900
+          1.7857 0.4000
+          2.0501 0.4000
+          2.2480 0.4000
+          2.5714 0.4000
+          2.9545 0.5000
+          3.1765 0.6500
+          3.3000 0.6500
+          3.4214 0.6400
+          3.6214 0.5100
+          3.7214 0.5100
+          3.8143 0.5100
+          4.1143 0.5000
+          4.5432 0.5000
+          4.7286 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.1271 0.5200
+          0.3411 0.5200
+          0.5911 0.5200
+          0.8889 0.5900
+          0.9344 0.6500
+          1.1313 0.6500
+          1.5429 0.5500
+          1.8000 0.5500
+          2.1143 0.4000
+          2.3143 0.4000
+          2.4857 0.4000
+          2.5429 0.4100
+          2.9545 0.5000
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at prettyboylooktarget02"
+    {
+      time 0.070834 6.566666
+      param "prettyboylooktarget02"
+      resumecondition
+    }
+    event lookat "Look at prettyboylooktarget02"
+    {
+      time 8.833334 12.533333
+      param "prettyboylooktarget02"
+      resumecondition
+    }
+    event lookat "Look at prettyboylooktarget"
+    {
+      time 13.761904 17.461903
+      param "prettyboylooktarget"
+      resumecondition
+    }
+    event lookat "Look at !self"
+    {
+      time 23.491993 29.047548
+      param "!self"
+    }
+    event lookat "Look at !self"
+    {
+      time 55.402767 74.777771
+      param "!self"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_scratchchin"
+    {
+      time 7.030556 13.663889
+      param "g_scratchchin"
+      absolutetags playback_time
+      {
+        "apex" 0.141515
+        "accent" 0.151515
+        "loop" 0.303030
+        "end" 0.808081
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.151515
+        "loop" 0.303030
+        "end" 0.808081
+      }
+      sequenceduration 6.633333
+    }
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 12.830578 21.157038
+      param "g_Pacer_ArmsCrossed"
+      event_ramp
+      {
+        0.6952 0.9967
+        7.5446 0.9945
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.085521
+        "accent" 0.106253
+        "loop" 0.253847
+        "end" 0.891708
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+    event gesture "g_scratchchin"
+    {
+      time 41.263916 46.833145
+      param "g_scratchchin"
+      event_ramp
+      {
+        1.4000 0.4265
+        2.3286 1.0000
+        5.5692 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.168554
+        "accent" 0.180465
+        "loop" 0.360929
+        "end" 0.783294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.151515
+        "loop" 0.303030
+        "end" 0.808081
+      }
+      sequenceduration 6.633333
+    }
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 44.672649 49.925213
+      param "g_Pacer_ArmsCrossed"
+      absolutetags playback_time
+      {
+        "apex" 0.139024
+        "accent" 0.217073
+        "loop" 0.514679
+        "end" 0.800018
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+    event gesture "g_palm_up_l"
+    {
+      time 45.843479 47.810146
+      param "g_palm_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "g_palm_up_high_l"
+    {
+      time 46.002861 47.969528
+      param "g_palm_up_high_l"
+      event_ramp
+      {
+        0.7500 0.9901
+        1.9667 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "g_scratchhead"
+    {
+      time 19.844452 24.011116
+      param "g_scratchhead"
+      absolutetags playback_time
+      {
+        "apex" 0.239111
+        "accent" 0.249111
+        "loop" 0.370222
+        "end" 0.636667
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 23.163910 45.936199
+      param "g_Pacer_ArmsCrossed"
+      event_ramp
+      {
+        0.6952 0.9967
+        21.9905 0.9945
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.067864
+        "accent" 0.290704
+        "loop" 0.541008
+        "end" 0.855850
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+    event gesture "g_righthand_flick"
+    {
+      time 49.819447 52.242420
+      param "g_righthand_flick"
+      absolutetags playback_time
+      {
+        "apex" 0.140438
+        "accent" 0.238745
+        "loop" 0.351095
+        "end" 0.421315
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto prettyboymovetarget02"
+    {
+      time 1.532871 7.175923
+      param "prettyboymovetarget02"
+      param2 "Walk"
+      resumecondition
+    }
+    event moveto "Moveto prettyboymovetarget01"
+    {
+      time 14.844075 19.581480
+      param "prettyboymovetarget01"
+      param2 "Walk"
+    }
+    event moveto "Moveto prettyboymovetarget02"
+    {
+      time 51.653240 55.537037
+      param "prettyboymovetarget02"
+      param2 "Walk"
+      resumecondition
+    }
+    event moveto "Moveto prettyboymovetarget01"
+    {
+      time 76.949638 79.305099
+      param "prettyboymovetarget01"
+      param2 "Walk"
+    }
+    event moveto "prettyboymovetarget03"
+    {
+      time 99.643974 105.287025
+      param "prettyboymovetarget03"
+      param2 "Walk"
+      resumecondition
+      distancetotarget 10.00
+    }
+  }
+  channel "FACE"
+  {
+    event face "Face prettyboylooktarget02"
+    {
+      time 3.777778 14.541843
+      param "prettyboylooktarget02"
+      resumecondition
+    }
+    event face "Face prettyboylooktarget"
+    {
+      time 14.280518 17.446465
+      param "prettyboylooktarget"
+      event_ramp
+      {
+        0.6286 1.0000
+        3.1659 0.9978
+      }
+      resumecondition
+    }
+    event face "Face self"
+    {
+      time 23.869446 53.916676
+      param "self"
+      resumecondition
+    }
+    event face "Face prettyboylooktarget02"
+    {
+      time 53.597218 55.530552
+      param "prettyboylooktarget02"
+      resumecondition
+    }
+    event face "Face prettyboylooktarget"
+    {
+      time 17.121340 25.404907
+      param "prettyboylooktarget"
+      resumecondition
+    }
+    event face "Face prettyboylooktarget"
+    {
+      time 78.038017 90.089622
+      param "prettyboylooktarget"
+      resumecondition
+    }
+    event face "Face !self"
+    {
+      time 55.263885 76.797226
+      param "!self"
+      resumecondition
+    }
+    event face "Face prettyboylooktarget02"
+    {
+      time 100.861099 107.286278
+      param "prettyboylooktarget02"
+      resumecondition
+    }
+    event face "Face self"
+    {
+      time 106.986099 126.411278
+      param "self"
+      resumecondition
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_browup"
+    {
+      time 24.468786 26.135452
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.4278 0.4848
+        1.1056 0.4823
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "16"
+  "RampTool" "36"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "10"
+}
+fps 60
+snap off
+ignorePhonemes off

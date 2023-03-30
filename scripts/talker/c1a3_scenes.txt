@@ -1,0 +1,33 @@
+criterion IsWGHa "map" "bm_c1a3a" required
+
+//========================================================
+//Scientist who introduces you to blast pit
+//========================================================
+criterion IsSiloDoorsController name "SCI02_SiloDoorsController" required
+criterion ISSiloDoorOpen name "silodoor" "1" required
+
+response Sci02_SiloDoors_Idle
+{
+   norepeat
+   scene "scenes/c1a3a/sci02_blastpitaccess_idle01.vcd" speakonce weight 100 
+   scene "scenes/c1a3a/sci02_blastpitaccess_idle02.vcd" speakonce weight 100
+   scene "scenes/c1a3a/sci02_blastpitaccess_idle03.vcd" speakonce weight 100
+   scene "scenes/generic/generic_response_nospeak01.vcd"
+}
+
+response Sci02_SiloDoors_Idle02
+{
+      scene "scenes/generic/generic_response_nospeak01.vcd" displaylast 
+      scene "scenes/generic/generic_response_nospeak02.vcd" displaylast 
+}
+
+rule Sci02_SiloDoors_Idle
+{
+   criteria TLK_USE IsSiloDoorsController IsPlayerClose IsWGHa ISSiloDoorOpen
+   response Sci02_SiloDoors_Idle
+}
+//========================================================
+//Scientist who introduces you to blast pit
+//========================================================
+criterion IsSCI01 name "bm_c1a3a_sci_1" required
+criterion ISBeamsSolved name "beams" "1" required

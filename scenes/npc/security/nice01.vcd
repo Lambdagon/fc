@@ -1,0 +1,79 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.nice01"
+    {
+      time 0.447567 1.228043
+      param "NPC_Security.nice01"
+      param2 "0.7"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 2.200985
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3747 0.7433
+        1.6286 0.7620
+        1.9547 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_smile00"
+    {
+      time 0.267353 2.065005
+      param "humans\guard\expressions_guard"
+      param2 "b_smile00"
+      event_ramp
+      {
+        0.3034 0.9976
+        1.5517 1.0000
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 0.057971 2.586957
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.1407 0.9504
+        1.9750 0.8512
+      }
+    }
+    event expression "b_scoff01"
+    {
+      time 0.449275 0.963768
+      param "humans\guard\expressions_guard"
+      param2 "b_scoff01"
+      event_ramp
+      {
+        0.1533 0.8595
+        0.2693 0.8052
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "72"
+  "RampTool" "44"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

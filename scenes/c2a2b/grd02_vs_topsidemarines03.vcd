@@ -1,0 +1,244 @@
+// Choreo version 1
+actor "GRD02_Shack"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Security.no04"
+    {
+      time 0.069727 1.089727
+      param "NPC_Security.no04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+    event firetrigger "15 - Fire Glock"
+    {
+      time 3.245787 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 3.579120 -1.000000
+      param "15"
+    }
+  }
+  channel "Look"
+  {
+    event firetrigger "15 - Fire Glock"
+    {
+      time 7.154645 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 3.833508 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 4.178244 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 5.119911 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 4.836576 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 5.469911 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 5.891065 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 6.385167 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 6.616193 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 6.726448 -1.000000
+      param "15"
+    }
+    event firetrigger "15 - Fire Glock"
+    {
+      time 6.892859 -1.000000
+      param "15"
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine1"
+{
+  channel "Voice"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine2"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.charge09_var03"
+    {
+      time 2.140741 3.140741
+      param "NPC_hgrunt.gren08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.Death"
+    {
+      time 7.451939 7.824207
+      param "NPC_hgrunt.Death"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.charge09_var03"
+    {
+      time 0.853704 2.034452
+      param "NPC_hgrunt.gren07_var04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.pain01"
+    {
+      time 3.551988 4.152442
+      param "NPC_hgrunt.pain01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.hit19"
+    {
+      time 4.271431 5.244470
+      param "NPC_hgrunt.hit19"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event speak "NPC_hgrunt.hit15"
+    {
+      time 6.197359 6.756497
+      param "NPC_hgrunt.hit06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.hit07"
+    {
+      time 5.309792 5.709792
+      param "NPC_hgrunt.hit07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+    event firetrigger "Firetrigger 5"
+    {
+      time 6.489634 -1.000000
+      param "5"
+    }
+    event firetrigger "Firetrigger 5"
+    {
+      time 0.144603 -1.000000
+      param "5"
+    }
+    event firetrigger "Firetrigger 5"
+    {
+      time 4.033493 -1.000000
+      param "5"
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Firetrigger 6"
+    {
+      time 6.972921 -1.000000
+      param "6"
+    }
+    event firetrigger "Firetrigger 6"
+    {
+      time 1.207324 -1.000000
+      param "6"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "44"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

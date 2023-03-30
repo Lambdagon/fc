@@ -1,0 +1,162 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.stopitfm02"
+    {
+      time 0.692083 1.177571
+      param "NPC_Scifemale.startle02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Scifemale.stopitfm02"
+    {
+      time 1.577500 2.742897
+      param "NPC_Scifemale.stopitfm02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.423750 5.020833
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        4.0842 0.9931
+        4.2312 0.8403
+        4.4195 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.270833 2.704166
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3048 0.3018
+        0.5524 0.9053
+        1.3286 0.2929
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "hg_nod_no"
+    {
+      time 0.510417 2.843750
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.2714 0.2544
+        0.4429 0.7870
+        1.1810 0.2988
+        1.4238 0.1391
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Sci_Fem_Freaked_MouthClosed"
+    {
+      time 0.406250 4.125000
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_Freaked_MouthClosed"
+      event_ramp
+      {
+        0.3524 0.9497
+        1.5000 0.9201
+        1.9095 0.5740
+      }
+    }
+    event expression "SciFem_worried01"
+    {
+      time 0.385417 1.572917
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.2571 0.7367
+      }
+    }
+    event expression "SciFem_worried01"
+    {
+      time 1.760417 4.072917
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.2571 0.7367
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.791666 2.135416
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2929 0.7300
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "42"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

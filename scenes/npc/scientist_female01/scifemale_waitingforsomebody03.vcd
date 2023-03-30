@@ -1,0 +1,53 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.waitingforsomebody03"
+    {
+      time 0.775417 2.367911
+      param "NPC_Scifemale.waitingforsomebody03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 3.156250
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        2.5634 0.9931
+        2.7104 0.8403
+        2.8987 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

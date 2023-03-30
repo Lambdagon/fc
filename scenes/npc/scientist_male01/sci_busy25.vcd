@@ -1,0 +1,136 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.busy25"
+    {
+      time 0.466667 2.787619
+      param "NPC_Scimale.busy25"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.033333 3.516522
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.4314 0.7433
+        0.6616 0.9931
+        2.6591 0.9931
+        2.9618 0.8403
+        3.3055 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.367816 1.367816
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2125 0.0614
+        0.3792 0.1145
+        0.7375 0.0933
+      }
+    }
+    event expression "sci_sudden01"
+    {
+      time 0.134615 1.134615
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sudden01"
+      event_ramp
+      {
+        0.3042 0.4321
+        0.6125 0.2078
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.666388 1.666388
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1833 0.3353
+        0.4542 0.4073
+        0.8333 0.3530
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 1.462932 2.462932
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.1417 0.3566
+        0.3792 0.5077
+        0.7134 0.2054
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.854794 2.854794
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1833 0.3353
+        0.3283 0.5655
+        0.7111 0.3530
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.235632 2.668965
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3556 0.3660
+        2.0889 0.3743
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+    }
+  }
+  channel "flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "CChoreoView" "92"
+}
+fps 60
+snap off
+ignorePhonemes off

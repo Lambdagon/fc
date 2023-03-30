@@ -1,0 +1,142 @@
+// Choreo version 1
+actor "SCI01"
+{
+  channel "Voice"
+  {
+    event speak "wgh.sci01.sciteamdontshoot01"
+    {
+      time 0.312112 2.912112
+      param "wgh.sci01.sciteam.dontshoot01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.645079 1.818412
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2700 0.8642
+        0.6867 0.6068
+        0.8900 0.3660
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.358413 2.838412
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3833 0.6045
+        0.5133 0.7638
+        0.9067 0.5856
+        1.0767 0.4687
+        1.1967 0.3660
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 2.125079 3.291746
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.2300 0.5903
+        0.4833 0.7143
+        0.9300 0.5891
+      }
+    }
+    event expression "sci_freaked_mouthopen"
+    {
+      time 2.325079 3.611746
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthopen"
+      event_ramp
+      {
+        0.1867 0.3743
+        0.2600 0.8347
+        0.9333 0.4227
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_SMG1_Stop"
+    {
+      time 2.106524 4.573190
+      param "g_SMG1_Stop"
+      absolutetags playback_time
+      {
+        "apex" 0.178082
+        "accent" 0.246575
+        "loop" 0.547945
+        "end" 0.684932
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.178082
+        "accent" 0.246575
+        "loop" 0.547945
+        "end" 0.684932
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "g_antman_stayback"
+    {
+      time 0.564563 2.931229
+      param "g_antman_stayback"
+      absolutetags playback_time
+      {
+        "apex" 0.142857
+        "extreme" 0.628571
+        "loop" 0.685714
+        "end" 0.828571
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "extreme" 0.628571
+        "loop" 0.685714
+        "end" 0.828571
+      }
+      sequenceduration 2.366667
+    }
+  }
+  channel "face"
+  {
+  }
+  channel "look at"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 4.138890
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "SCI02"
+{
+  channel "moveto"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "60"
+  "ExpressionTool" "100"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

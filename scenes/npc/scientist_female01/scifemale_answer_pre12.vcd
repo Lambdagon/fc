@@ -1,0 +1,87 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.answer_pre12"
+    {
+      time 1.433180 3.151933
+      param "NPC_Scifemale.answer_pre12"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.042963 3.157378
+      param "!friend"
+      event_ramp
+      {
+        0.2154 0.4142
+        0.5600 0.8610
+        2.2148 0.9408
+        2.5909 0.4704
+        2.8342 0.1361
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_anger00"
+    {
+      time 0.398842 2.565508
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.2500 0.8136
+        0.4600 0.9290
+        1.4933 0.4556
+        1.5074 0.5592
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.864790 3.197838
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3042 0.5300
+          0.5861 0.7200
+          0.8194 0.7400
+          1.2569 0.6900
+          1.6319 0.5900
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "22"
+  "SceneRampTool" "100"
+  "RampTool" "20"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

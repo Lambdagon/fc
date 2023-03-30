@@ -1,0 +1,109 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.incoming01"
+    {
+      time 0.286316 1.561509
+      param "NPC_Security.incoming01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.018245 1.078177
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.5839 0.8659
+        0.8669 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.631579 1.631579
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2348 0.4333
+        0.5438 0.4120
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event expression "b_afraid01"
+    {
+      time 0.175439 1.464912
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid01"
+      event_ramp
+      {
+        0.3966 0.9138
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 0.061404 1.061403
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.6565 0.8937
+        0.8565 0.5230
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "accent up"
+    {
+      time 0.035088 1.810526
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.2929 0.6168
+        1.0850 0.6412
+        1.3917 0.5000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.171319
+        "extreme" 0.359792
+        "loop" 0.552010
+        "end" 0.748822
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "36"
+  "SceneRampTool" "100"
+  "RampTool" "46"
+  "CChoreoView" "76"
+}
+fps 60
+snap off
+ignorePhonemes off

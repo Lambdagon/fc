@@ -1,0 +1,83 @@
+// Choreo version 1
+actor "SCI11_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci11.thesampleisdownthere01"
+    {
+      time 0.467619 2.996213
+      param "am.sci11.thesampleisdownthere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.041818 4.806984
+      param "!player"
+      event_ramp
+      {
+        0.5317 0.8002
+        0.9571 1.0000
+        3.3610 0.9669
+        3.8396 0.7388
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex_headbob"
+    {
+      time 0.000000 4.757576
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.8000 0.2900
+          1.4000 0.7500
+          2.0571 0.2900
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3524 0.6000
+          0.8524 0.3000
+          2.0429 0.3800
+          2.6286 0.2500
+          3.1714 0.3100
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.8524 0.7200
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3524 0.5000
+          0.8524 0.4800
+          1.5429 0.4700
+          1.9571 0.2600
+          2.2000 0.2600
+          2.5857 0.4800
+          3.4714 0.4800
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "28"
+  "CChoreoView" "44"
+  "ExpressionTool" "14"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

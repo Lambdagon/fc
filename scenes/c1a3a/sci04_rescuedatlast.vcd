@@ -1,0 +1,206 @@
+// Choreo version 1
+actor "SCI04"
+{
+  channel "Voice"
+  {
+    event speak "wgh.sci04.elevator.rescued01"
+    {
+      time 0.114913 2.190922
+      param "wgh.sci04.elevator.rescued01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "wgh.sci04.elevator.rescued02"
+    {
+      time 2.855430 5.175248
+      param "wgh.sci04.elevator.rescued02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Facial"
+  {
+    event flexanimation "Smile"
+    {
+      time 0.080952 6.168017
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "smile" 
+        {
+          1.3273 0.0000
+          1.6091 0.4300
+          3.9636 0.0000
+        }
+        "inner_raiser" combo 
+        {
+          0.9727 0.2400
+          1.2727 0.5200
+          2.3545 0.6500
+          2.7545 0.3000
+          3.0636 0.2200
+          3.4091 0.5600
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          1.9000 0.0000
+          4.2545 1.0000
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          2.8818 0.0000
+        }
+        {
+        }
+        "jaw_drop" 
+        {
+          4.5000 0.0000
+        }
+        "mouth_drop" combo 
+        {
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Move"
+  {
+    event moveto "run to hgrunt"
+    {
+      time 1.233791 5.971168
+      param "RescuedAtLast_SCI04_target"
+      param2 "Run"
+      event_ramp
+      {
+        0.4935 1.0000
+        4.7373 1.0000
+      }
+      active 0
+    }
+  }
+  channel "Gesture"
+  {
+    event sequence "accent"
+    {
+      time 4.519231 4.519231
+      param "bg_up_l_sitinFrameSpine"
+      fixedlength
+    }
+    event sequence "accent"
+    {
+      time 4.920635 4.920635
+      param "bg_up_l_sitinFrameArms"
+      fixedlength
+    }
+    event gesture "rescued at last gesture"
+    {
+      time 0.054546 1.829545
+      param "g_thank_god"
+      event_ramp
+      {
+        0.2923 1.0000
+        0.7115 1.0000
+        1.1115 0.3143
+      }
+      absolutetags playback_time
+      {
+        "in" 0.190556
+        "out" 0.652582
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.147059
+        "out" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_rescued_at_last"
+    {
+      time 3.880557 6.213889
+      param "g_rescued_at_last"
+      absolutetags playback_time
+      {
+        "in" 0.276191
+        "out" 0.755821
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.180723
+        "out" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture ""
+    {
+      time 3.809260 6.150926
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.129894
+        "extreme" 0.317516
+        "loop" 0.577304
+        "end" 0.862431
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Sequence"
+  {
+    event sequence "bg_up_l_sitCoreDelta"
+    {
+      time 0.246031 2.579364
+      param "bg_up_l_sitCoreDelta"
+      event_ramp
+      {
+        0.4323 0.9140
+        1.3935 0.0538
+      }
+      fixedlength
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look At Marine"
+    {
+      time 3.881481 6.643322
+      param "Hgrunt01"
+    }
+    event face "Face Hgrunt01"
+    {
+      time 3.729629 6.606871
+      param "Hgrunt01"
+    }
+    event face "Face SCI04_target01"
+    {
+      time 0.022727 1.015152
+      param "SCI04_target01"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "RampTool" "52"
+  "ExpressionTool" "22"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

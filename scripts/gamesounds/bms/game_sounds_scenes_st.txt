@@ -1,0 +1,2143 @@
+//
+//
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+//
+// VOL_NORM		1.0f
+//
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+//
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+//
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	= 3.9
+//	SNDLVL_55dB		= 55,	= 3.0
+//	SNDLVL_IDLE		= 60,	= 2.0
+//	SNDLVL_TALKING		= 60,	= 2.0
+//	SNDLVL_60dB		= 60,	= 2.0
+//	SNDLVL_65dB		= 65,	= 1.5
+//	SNDLVL_STATIC		= 66,	= 1.25
+//	SNDLVL_70dB		= 70,	= 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	= 0.8
+//	SNDLVL_80dB		= 80,	= 0.7
+//	SNDLVL_85dB		= 85,	= 0.6
+//	SNDLVL_90dB		= 90,	= 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	= 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140, = 0.27
+//	SNDLVL_140dB	= 140,	= 0.2
+//	SNDLVL_150dB	= 150,	= 0.2
+//
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Surface Tension Sniper" 
+
+//	// The player comes across a fatatily wounded guard crawling on the ground. His attacker is not far away....
+
+"st.grd01.sniper.imdying01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd01_imdying01.wav"
+}
+
+"st.grd01.sniper.imdying02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd01_imdying02.wav"
+}
+
+"st.grd01.sniper.imdying03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd01_imdying03.wav"
+}
+
+"st.grd01.sniper.imdying04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd01_imdying04.wav"
+}
+
+//	// a lone scientist tries to help the injured guard out, should the player sit back and watch the show.
+
+"st.sci02.sniper.startled01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/npc/scientist_male01/startle11.wav"
+}
+
+"st.sci02.sniper.startled02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/npc/scientist_male01/startle07.wav"
+}
+
+"st.sci02.sniper.heeelllp01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.88"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"wave"			"vo/npc/scientist_male01/help01.wav"
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Ordinance Storage Scientist- 
+
+//	// The player, having dropped down from a hole in the roof, discovers a lone scientist huddled in a dark corner.
+
+"st.sci01.headingforlambda01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_headingforlamdacomplex01.wav"	
+}
+
+"st.sci01.lostmynerve01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_lostmynerve01.wav"	
+}
+
+"st.sci01.lostmynerve02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_lostmynerve02.wav"	
+}
+
+"st.sci01.takeonelook01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_takeonelook01.wav"	
+}
+
+"st.sci01.takeonelook02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_takeonelook02.wav"	
+}
+
+"st.sci01.ifyouintendtogoon01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_ifyouintendtogoon01.wav"	
+}
+
+"st.sci01.ifyouintendtogoon02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_ifyouintendtogoon02.wav"	
+}
+
+"st.sci01.ifyouintendtogoon03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_ifyouintendtogoon03.wav"	
+}
+
+"st.sci01.idle.icanhearthem01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_icanhearthem01.wav"	
+}
+
+"st.sci01.idle.icanhearthem02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_icanhearthem02.wav"	
+}
+
+"st.sci01.idle.icanhearthem03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.550"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_icanhearthem03.wav"	
+}
+
+"st.sci01.idle.onewrongmove01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.550"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_onewrongmove01.wav"	
+}
+
+"st.sci01.idle.onewrongmove02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.600"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_onewrongmove02.wav"	
+}
+
+"st.sci01.idle.onewrongmove03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.550"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_onewrongmove03.wav"	
+}
+
+"st.sci01.idle.shootwhenumust01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.550"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_shootwhenumust01.wav"	
+}
+
+"st.sci01.idle.shootwhenumust02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.550"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/sci01_idle_shootwhenumust02.wav"	
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Introduction of Security Officer Jackson. "Thanks. I thought my ass was cooked!" - 
+
+//	// The player saves a security guard from certain death.
+
+"st.grd02.intro01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd02_intro01.wav"
+}
+
+"st.grd02.intro02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd02_intro02.wav"
+}
+
+"st.grd02.intro03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd02_intro03.wav"
+}
+
+"st.grd02.intro04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5e/grd02_intro04.wav"
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Hivehand Examination" 
+
+//	// The player unravels the mystery of the hivehand weapon, much to the amusement of Officer Jackson.  The Hivehand, however, is NOT amused.
+
+"st.grd02.hivehand.goodgod01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehand_goodgod01.wav"
+}
+
+"st.grd02.hivehand.goodgod02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehand_goodgod02.wav"
+}
+
+"st.grd02.hivehand.goodgod04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehand_goodgod04.wav"
+}
+
+"st.grd02.hivehand.examination01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination01.wav"
+}
+
+"st.grd02.hivehand.examination02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination02.wav"
+}
+
+"st.grd02.hivehand.examination03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination03.wav"
+}
+
+
+"st.grd02.hivehand.examination04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination04.wav"
+}
+
+"st.grd02.hivehand.examination05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination05.wav"
+}
+
+"st.grd02.hivehand.examination08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_75dB"
+
+	"wave"			"vo/c2a5e/grd02_hivehandexamination08.wav"
+}
+
+//****************************************
+// ST MAP F (STARTS HERE!!!) 
+//****************************************
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Weapons Lockup Quest
+
+//	// Officer Jackson, should he be recruieted by the player, will mention his friend and the possibility of a weapons storage area in the near vicinity.
+
+"st.grd02.story.lockup01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_story01.wav"
+}
+
+"st.grd02.story.lockup02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_story02.wav"
+}
+
+"st.grd02.story.lockup03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.860"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_story03.wav"
+}
+
+"st.grd02.story.lockup04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.870"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_story04.wav"
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Motherlode- The Surface Tension Weapons Lockup
+
+//	// For a brief moment, it's the player's birthday.
+
+"st.grd03.lockup.freeze01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_freeze01.wav"
+}
+
+"st.grd03.lockup.ainttryingtokillme01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_ainttryingtokillme01.wav"
+}
+
+"st.grd03.lockup.ainttryingtokillme02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_ainttryingtokillme02.wav"
+}
+
+"st.grd03.lockup.ainttryingtokillme03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_ainttryingtokillme03.wav"
+}
+
+"st.grd03.lockup.ainttryingtokillme04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_ainttryingtokillme04.wav"
+}
+
+"st.grd03.lockup.finerthings01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_finerthings01.wav"
+}
+
+"st.grd03.lockup.finerthings02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_finerthings02.wav"
+}
+
+"st.grd03.lockup.opensesame01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_opensesame01.wav"
+}
+
+"st.grd03.lockup.motherlode01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_motherlode01.wav"
+}
+
+"st.grd03.lockup.expensivetaste01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_expensivetaste01.wav"	
+}
+
+"st.grd03.lockup.idle.helpyourself01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_helpyourself01.wav"	
+}
+
+"st.grd03.lockup.idle.sendoutword01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_sendoutword01.wav"	
+}
+
+"st.grd03.lockup.idle.sendoutword02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_sendoutword02.wav"	
+}
+
+"st.grd03.lockup.idle.stickaroundhere01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_stickaroundhere01.wav"	
+}
+
+"st.grd03.lockup.idle.stickaroundhere02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_stickaroundhere02.wav"	
+}
+
+"st.grd03.lockup.idle.stickaroundhere03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.870"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_stickaroundhere03.wav"	
+}
+
+"st.grd03.lockup.idle.uralrightfm01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.900"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_uralrightfm01.wav"	
+}
+
+"st.grd03.lockup.idle.youretheguy01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_youretheguy01.wav"		
+}
+
+"st.grd03.lockup.idle.youretheguy02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.900"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_youretheguy02.wav"		
+}
+
+"st.grd03.lockup.idle.youretheguy03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.900"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_idle_youretheguy03.wav"		
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- The Motherlode- The Jackson Reunion.
+
+//	// Officer Jackson is reunited with his colleague, provided the player chooses to bring him up to the weapons lockup.
+
+"st.grd02.lockup.story.holdfire01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_holdyourfire01.wav"		
+}
+
+"st.grd02.lockup.story.buddyhere01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_mybuddyhere01.wav"		
+}
+
+"st.grd02.lockup.story.buddyhere02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_mybuddyhere02.wav"		
+}
+
+"st.grd02.lockup.story.motherlode01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.820"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_motherlode01.wav"		
+}
+
+"st.grd02.lockup.story.motherlode02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_motherlode02.wav"		
+}
+
+"st.grd02.lockup.story.motherlode03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_motherlode03.wav"		
+}
+
+"st.grd02.lockup.story.outtadodge01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_outtadodge01.wav"		
+}
+
+"st.grd02.lockup.story.outtadodge02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.780"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_outtadodge02.wav"		
+}
+
+"st.grd02.lockup.story.takealoadoff01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_takealoadoff01.wav"		
+}
+
+"st.grd02.lockup.story.thanksforhelp01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_thanksforhelp01.wav"		
+}
+
+"st.grd02.lockup.story.thanksforhelp02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.850"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_thanksforhelp02.wav"		
+}
+
+"st.grd02.lockup.idle.betterstockup01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.880"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_idle_betterstockup01.wav"		
+}
+
+"st.grd02.lockup.idle.betterstockup02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.880"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_idle_betterstockup02.wav"		
+}
+
+"st.grd02.lockup.idle.goodluckpartner01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.880"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd02_idle_goodluckpartner01.wav"		
+}
+
+// grd03 lines
+
+"st.grd03.lockup.story.jackson01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_jackson01.wav"		
+}
+
+"st.grd03.lockup.story.goahead01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_goahead01.wav"		
+}
+
+"st.grd03.lockup.story.goahead02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_goahead02.wav"		
+}
+
+"st.grd03.lockup.story.notbadeh01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.700"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_notbadeh01.wav"		
+}
+
+"st.grd03.lockup.story.probablyshouldwait01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.750"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5f/grd03_probablyshouldwait01.wav"		
+}
+
+//****************************************
+// ST MAP G (STARTS HERE!!!) 
+//****************************************
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- "Gunny, do you hear That?.
+
+//	// The player's crawling thru a ventilation shaft gives a pair of marine's pause. They take aim...
+
+"st.hgrunt01.gunny01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.7"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5g/hgrunt01_duct_gunny01.wav"
+}
+
+"st.hgrunt01.duct_rightthere01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.7"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5g/hgrunt01_duct_rightthere01.wav"
+}
+
+"st.hgrunt02.duct_quiet01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5g/hgrunt02_duct_quiet01.wav"
+}
+
+"st.hgrunt02.duct_getready01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.55"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5g/hgrunt02_duct_getready01.wav"
+}
+
+"st.hgrunt02.duct_now01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5g/hgrunt02_duct_now01.wav"
+}
+
+//*****************************************************************************************************************************************************************************************************************************************
+// Scene- OSPREY AMBUSH 
+
+//	// The player sees an Osprey being attacked on a landing pad
+
+"st.radio.osprey_lav01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"vo/c2a5g/radio_st_osprey_lav01.wav"
+}
+
+"st.radio.osprey_lav02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"vo/c2a5g/radio_st_osprey_lav02.wav"
+}
+
+"st.radio.osprey_lav03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"vo/c2a5g/radio_st_osprey_lav03.wav"
+}
+
+//****************************************
+// ST MAP H (STARTS HERE!!!) 
+//****************************************
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "AGRUNT SMASH"
+
+//	// An agrunt throws a marine though the wall. OUCH.
+
+"st.hgrunt_agruntsmash01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt_agruntsmash01.wav"
+}
+
+"st.hgrunt_agruntsmash02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt_agruntsmash02.wav"
+}
+
+"st.hgrunt_agruntsmash03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt_agruntsmash03.wav"
+}
+
+"st.hgrunt_agruntsmash04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt_agruntsmash04.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "Hey! Asshole!"
+
+//	// An hgrunt throws a satchel charge in a pipe
+
+"st.hgrunt03.heyasshole01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt03_heyasshole01.wav"
+}
+
+"st.hgrunt03.heyasshole02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt03_heyasshole02.wav"
+}
+
+
+//************************************************************************************************************************************************************************************************************
+// Scene- Grd in the hangar
+
+//	// A lone security guard holds the golden key into Lambda Complex. 
+
+"st.grd.hangar_intro01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_intro01.wav"
+}
+
+"st.grd.hangar_intro02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_intro02.wav"
+}
+
+"st.grd.hangar_goodnews01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_goodnews01.wav"
+}
+
+"st.grd.hangar_goodnews02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_goodnews02.wav"
+}
+
+"st.grd.hangar_badnews01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_badnews01.wav"
+}
+
+"st.grd.hangar_badnews02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_badnews02.wav"
+}
+
+"st.grd.hangar_niceandquiet01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_niceandquiet01.wav"
+}
+
+"st.grd.hangar_niceandquiet02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_niceandquiet02.wav"
+}
+
+"st.grd.hangar_loudworks01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.82"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_loudworks01.wav"
+}
+
+"st.grd.hangar_loudworks02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.80"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_loudworks02.wav"
+}
+
+"st.grd.hangar_getthedrop01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_getthedrop01.wav"
+}
+
+"st.grd.hangar_getthedrop02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_getthedrop02.wav"
+}
+
+"st.grd.hangar_getthedrop03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_getthedrop03.wav"
+}
+
+"st.grd.hangar_getthedrop04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_getthedrop04.wav"
+}
+
+//When the guard is outside the hangar, making his way with the player to the security booth...
+
+"st.grd.hangar.outside.downtoright01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_downtoright01.wav"
+}
+
+"st.grd.hangar.outside.downtoright02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_downtoright02.wav"
+}
+
+"st.grd.hangar.outside.ahshit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_ahshit01.wav"
+}
+
+"st.grd.hangar.outside.freshair01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_freshair01.wav"
+}
+
+"st.grd.hangar.outside.makeabreak01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_makeabreak01.wav"
+}
+
+"st.grd.hangar.outside.makeabreak02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_makeabreak02.wav"
+}
+
+"st.grd.hangar.outside.daywouldgo01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.70"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_daywouldgo01.wav"
+}
+
+"st.grd.hangar.outside.ahchrist01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.80"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_ahchrist01.wav"
+}
+
+"st.grd.hangar.outside.comeon_panicked01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.80"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_comeon_panicked01.wav"
+}
+
+"st.grd.hangar.outside.coverme_panicked01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.82"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_coverme_panicked01.wav"
+}
+
+"st.grd.hangar.outside.wemadeit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_wemadeit01.wav"
+}
+
+"st.grd.hangar.outside.wemadeit02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_wemadeit02.wav"
+}
+
+"st.grd.hangar.outside.wemadeit03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_wemadeit03.wav"
+}
+
+"st.grd.hangar.outside.wemadeit04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_wemadeit04.wav"
+}
+
+"st.grd.hangar.outside.hlastwords01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_hlastwords01.wav"
+}
+
+"st.grd.hangar.outside.hlastwords02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/grd_hangar_hlastwords02.wav"
+}
+
+"stu.grd.hangar_hmapdeath01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"vo/c2a5h/grd_hangar_hmapdeath01.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "Semper Fi, my ass!"
+
+//	// The player overhears 3 hgrunts talking in an airplane hanger
+
+"st.hgrunt04.nofrontline01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.60"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt04_nofrontline01.wav"
+}
+
+"st.hgrunt05.lockitup01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.80"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt05_lockitup01.wav"
+}
+
+"st.hgrunt06.semperfi01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.80"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/hgrunt06_semperfi01.wav"
+}
+
+
+//************************************************************************************************************************************************************************************************************
+// Scene- TANK vs MANTA
+
+//	// The player sees a Manta overtake a Tank
+
+"st.radio.tankvsmanta01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_tankvsmanta01.wav"
+}
+
+"st.radio.tankvsmanta02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_tankvsmanta02.wav"
+}
+
+"st.radio.tankvsmanta03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_tankvsmanta03.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- Sniper "TreeFrog"
+
+//	// The player sees a Manta overtake a Tank
+
+"st.radio.sniper_treefrog01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_sniper_treefrog01.wav"
+}
+
+"st.radio.sniper_treefrog02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_sniper_treefrog02.wav"
+}
+
+"st.radio.sniper_treefrog03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_sniper_treefrog03.wav"
+}
+
+"st.radio.sniper_treefrog04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_sniper_treefrog04.wav"
+}
+
+"st.radio.sniper_treefrog05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_st_sniper_treefrog05.wav"
+}
+
+//****************************************
+// ST MAP I (STARTS HERE!!!) 
+//****************************************
+
+//************************************************************************************************************************************************************************************************************
+// Scene- Requiem for an IFAK
+
+//	// The Hangar Grd accompanies the player into the next map, to discover a graveyard of marines...
+
+"st.grd04.accesscodes01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_accesscodes01.wav"
+}
+
+"st.grd04.accesscodes02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_accesscodes02.wav"
+}
+
+"st.grd04.lambdabeer01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_lambdabeer01.wav"
+}
+
+"st.grd04.lambdabeer02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_lambdabeer02.wav"
+}
+
+"st.grd04.lambdabeer03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_lambdabeer03.wav"
+}
+
+"st.grd04.ifak_holyshit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_holyshit01.wav"
+}
+
+"st.grd04.ifak_holyshit02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_holyshit02.wav"
+}
+
+"st.grd04.ifak_holyshit03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_holyshit03.wav"
+}
+
+"st.grd04.ifak_hatetoadmit01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_hatetoadmit01.wav"
+}
+
+"st.grd04.ifak_hatetoadmit02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_hatetoadmit02.wav"
+}
+
+"st.grd04.ifak_hatetoadmit03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_hatetoadmit03.wav"
+}
+
+"st.grd04.ifak_hatetoadmit04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.85"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_hatetoadmit04.wav"
+}
+
+"st.grd04.ifak_waitup01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.95"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_waitup01.wav"
+}
+
+"st.grd04.ifak_waitup02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.95"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_waitup02.wav"
+}
+
+"st.grd04.ifak_radioreact01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_radioreact01.wav"
+}
+
+"st.grd04.ifak_radioreact02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/grd_ifak_radioreact02.wav"
+}
+
+// Scene- Garg Trap
+
+//	// 2 hgrunts try to set a trap for the Garg
+
+"st.hgrunt07.gargtrap01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/hgrunt07_gargtrap01.wav"
+}
+
+"st.hgrunt08.gargtrap01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/hgrunt08_gargtrap01.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "Air Assets" - Radio in Final hgrunt center
+
+//	// Radio broadcast asking for air assets
+
+"st.radio.airassets01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_airassets01.wav"
+}
+
+"st.radio.airassets02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_airassets02.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "Thunderclap" - Radio in Final hgrunt center
+
+//	// Radio broadcast - There is no more support, hgrunts are moving out
+
+"st.radio.echoyankee01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_echoyankee01.wav"
+}
+
+"st.radio.echoyankee02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_echoyankee02.wav"
+}
+
+"st.radio.thunderclap01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_thunderclap01.wav"
+}
+
+"st.radio.thunderclap02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.25"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5i/radio_st_thunderclap02.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "EAS03" - The Final Emergency Announcement System Broadcast. 
+//		    The Airstrikes will commence shortly
+
+"st.eas03_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_01.wav"
+}
+
+"st.eas03_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_02.wav"
+}
+
+"st.eas03_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_03.wav"
+}
+
+"st.eas03_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_04.wav"
+}
+
+"st.eas03_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_05.wav"
+}
+
+"st.eas03_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_06.wav"
+}
+
+"st.eas03_07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_07.wav"
+}
+
+"st.eas03_08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_08.wav"
+}
+
+"st.eas03_09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/eas03_09.wav"
+}
+
+"st.eas03_10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c2a5i/eas03_10.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- "Emergency Medical Procedure" - Radio in Final hgrunt center
+
+//	// Radio broadcast - an hgrunt is bleeding out, medic tries to instruct him over radio.
+
+"st.radio.ifak01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak01.wav"
+}
+
+"st.radio.ifak02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak02.wav"
+}
+
+"st.radio.ifak03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak03.wav"
+}
+
+"st.radio.ifak04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak04.wav"
+}
+
+"st.radio.ifak05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak05.wav"
+}
+
+"st.radio.ifak06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak06.wav"
+}
+
+"st.radio.ifak07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.35"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"vo/c2a5i/radio_st_ifak07.wav"
+}
+
+//************************************************************************************************************************************************************************************************************
+// Scene- Come in Cooper!
+
+//	// The player overhears an important message utop a water tower with radio equipment. A Gargantua circles the player....waiting.
+
+"st.radio.comeincooper01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.6"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c2a5h/radio_comeincooper01.wav"
+}
+
+// DEV NOTE:
+// This soundscript is no longer being used in ST map I.
+// using the raw wav path instead for custom control.
+
+"st.radio.radiosilence01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"	"vo/c2a5h/radio_comeincooper_radiosilence01.wav"
+}

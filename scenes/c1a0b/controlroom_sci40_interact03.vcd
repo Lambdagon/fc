@@ -1,0 +1,59 @@
+// Choreo version 1
+actor "Sci40"
+{
+  channel "Voice"
+  {
+    event speak "am.sci40.allinorder01"
+    {
+      time 0.486667 6.375057
+      param "am.sci40.allinorder01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.140000 6.880000
+      param "!player"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_openarms_right"
+    {
+      time 0.680000 3.046667
+      param "g_openarms_right"
+      absolutetags playback_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      sequenceduration 2.366667
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

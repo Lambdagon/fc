@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "SCI21_Lab01"
+{
+  channel "Voice"
+  {
+    event speak "am.sci21.halcyondays01"
+    {
+      time 0.633333 3.397709
+      param "am.sci21.halcyondays01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look At !self"
+    {
+      time 0.233333 5.433333
+      param "!self"
+      event_ramp
+      {
+        0.4800 0.6087
+        0.9520 0.7826
+        2.7000 0.8478
+        4.3789 0.8116
+        4.8382 0.6024
+      }
+      pitch "40"
+    }
+  }
+  channel "Expression"
+  {
+    event expression "PSmile"
+    {
+      time 0.166667 5.333333
+      param "common_expressions"
+      param2 "PSmile"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_hands_on_hips"
+    {
+      time 0.100000 5.066667
+      param "g_hands_on_hips"
+      absolutetags playback_time
+      {
+        "apex" 0.192703
+        "loop" 0.202703
+        "accent" 0.405405
+        "end" 0.810811
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.202703
+        "loop" 0.202703
+        "accent" 0.405405
+        "end" 0.810811
+      }
+      sequenceduration 4.966667
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "RampTool" "36"
+  "CChoreoView" "20"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,55 @@
+// Choreo version 1
+actor "Kleiner"
+{
+  channel "Voice"
+  {
+    event speak "am.kleiner.thisway02"
+    {
+      time 0.500000 3.440068
+      param "am.kleiner.thisway02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event face "Face !player"
+    {
+      time 0.060000 3.726667
+      param "!player"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.060000 3.733333
+      param "!player"
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.186667 4.046667
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.7300 0.8226
+        2.7960 0.7823
+        3.4480 0.7419
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

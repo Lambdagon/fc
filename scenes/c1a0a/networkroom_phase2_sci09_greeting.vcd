@@ -1,0 +1,107 @@
+// Choreo version 1
+actor "SCI09_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci09.gottothechamber01"
+    {
+      time 0.503333 6.005510
+      param "am.sci09.gottothechamber01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event flexanimation "Flex"
+    {
+      time 3.531746 5.948413
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2512 0.5000
+          0.4774 0.6700
+          0.6182 0.7000
+          0.8773 0.6100
+          1.1273 0.3900
+          1.3212 0.3600
+          1.6500 0.3700
+          1.8455 0.4900
+          1.9955 0.4800
+        }
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 3.114444 5.162424
+      param "!player"
+      event_ramp
+      {
+        0.2500 0.1450
+        0.4051 0.4150
+        0.6550 0.5263
+        1.0350 0.4800
+        1.1850 0.4263
+        1.4156 0.2313
+      }
+    }
+    event flexanimation "Flex"
+    {
+      time 0.277778 2.750000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          1.2000 0.0000
+        }
+        {
+          1.2000 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          1.2000 0.5400
+        }
+        {
+          1.2000 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.4222 0.6000
+          1.2000 0.0000
+        }
+        {
+          0.4222 0.5000
+          1.2000 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4222 0.4500
+          1.2000 0.4498
+          1.3388 0.6100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.4222 0.3900
+          1.2000 0.5900
+          1.3388 0.3600
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "RampTool" "40"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

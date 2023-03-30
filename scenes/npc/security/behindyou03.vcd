@@ -1,0 +1,133 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.behindyou03"
+    {
+      time 0.314444 1.476439
+      param "NPC_Security.behindyou03"
+      param2 "0.825"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 2.057962
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3874 0.8472
+        0.5551 0.9931
+        1.2110 0.9931
+        1.4023 0.8403
+        1.7041 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.359259 1.637037
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1545 0.1181
+        0.2631 0.3436
+        0.3417 0.5266
+        0.6182 0.5148
+        0.9136 0.3471
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 0.033518 1.292778
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.1765 0.3991
+        0.3029 0.5466
+        0.5529 0.5301
+        0.9093 0.3967
+      }
+    }
+    event expression "b_afraid01"
+    {
+      time 0.062963 1.229630
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid01"
+      event_ramp
+      {
+        0.2559 0.7226
+        0.4794 0.3778
+        0.9393 0.6930
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 1.122407 2.381667
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.1765 0.3837
+        0.3029 0.5337
+        0.5529 0.5372
+        0.9093 0.3967
+      }
+    }
+    event expression "b_afraid01"
+    {
+      time 0.657407 1.824074
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid01"
+      event_ramp
+      {
+        0.2286 0.3613
+        0.4521 0.4994
+        0.8075 0.3317
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.883333 1.433333
+      param ""
+      event_ramp
+      {
+        0.2588 0.9976
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1676 0.4300
+          0.2647 0.3500
+          0.3882 0.4800
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "120"
+  "RampTool" "102"
+  "SceneRampTool" "100"
+  "ExpressionTool" "68"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

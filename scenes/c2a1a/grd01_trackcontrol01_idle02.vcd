@@ -1,0 +1,92 @@
+// Choreo version 1
+actor "GRD01_PowerUpControl"
+{
+  channel "Voice"
+  {
+    event speak "pu.grd01.idle.outtathebigguysway01"
+    {
+      time 0.285714 5.428503
+      param "pu.grd01.idle.outtathebigguysway01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time -0.092592 7.425927
+      param "!self"
+    }
+  }
+  channel "Animation"
+  {
+    event gesture "hg_nod_left"
+    {
+      time 1.722222 3.022222
+      param "hg_nod_left"
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 4.129630 6.429630
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0000 0.4086
+        2.2840 0.2581
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_wincing01"
+    {
+      time -0.111111 7.611111
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "36"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

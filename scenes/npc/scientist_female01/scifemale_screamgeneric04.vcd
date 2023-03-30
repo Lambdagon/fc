@@ -1,0 +1,123 @@
+// Choreo version 1
+event stoppoint "FIRE"
+{
+  time 1.404762 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.scream_generic04"
+    {
+      time 0.253495 1.463948
+      param "NPC_Scifemale.scream_generic04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.027917 1.114345
+      param "!enemy"
+      event_ramp
+      {
+        0.0607 0.1806
+        0.2225 0.8472
+        0.3887 0.9931
+        0.5737 0.9931
+        0.7207 0.8403
+        0.9090 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event expression "Sci_Fem_afraid_extreme00"
+    {
+      time 0.178571 1.130952
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid_extreme00"
+      event_ramp
+      {
+        0.2073 0.5856
+        0.3000 0.9811
+        0.5315 0.9209
+        0.6442 0.4439
+      }
+    }
+    event expression "Sci_Fem_afraid_extreme00"
+    {
+      time 0.178571 1.541666
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid_extreme00"
+      event_ramp
+      {
+        0.2073 0.5856
+        0.3000 0.9811
+        0.9422 0.9209
+        1.0549 0.4439
+      }
+    }
+    event expression "SciFem_worried01"
+    {
+      time 0.238095 2.101191
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.2673 0.8902
+      }
+    }
+    event expression "Sci_Fem_afraid00"
+    {
+      time 1.035714 2.404762
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid00"
+      event_ramp
+      {
+        0.1836 0.5667
+        0.4036 0.5502
+        0.6573 0.2243
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Anguish"
+    {
+      time 0.071429 0.494048
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Anguish"
+      event_ramp
+      {
+        0.0945 1.0000
+        0.1573 0.1275
+        0.1973 0.1429
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "SCREAM"
+    {
+      time 0.035714 1.077381
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "220"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

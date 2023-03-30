@@ -1,0 +1,144 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.headcrab02"
+    {
+      time 0.362708 1.129601
+      param "NPC_Security.headcrab02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.029375 1.960611
+      param "!enemy"
+      event_ramp
+      {
+        0.1909 0.6623
+        0.3614 0.9756
+        1.3667 1.0000
+        1.5704 0.7243
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_incombat_headcrabug01"
+    {
+      time 0.333333 0.863248
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat_headcrabug01"
+      event_ramp
+      {
+        0.1110 0.7592
+        0.3053 0.2857
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 0.008547 1.008547
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.1721 0.1677
+        0.3134 0.6517
+      }
+    }
+    event expression "b_afraid02"
+    {
+      time 0.428127 0.846931
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid02"
+      event_ramp
+      {
+        0.1172 0.2409
+        0.2409 0.3506
+        0.3513 0.2279
+      }
+    }
+    event expression "b_incombat01"
+    {
+      time 0.498446 1.149573
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat01"
+      event_ramp
+      {
+        0.1805 0.8229
+        0.5197 0.7438
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.850427 1.636752
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1575 0.7072
+        0.5696 0.2007
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.015687 1.444107
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 0.324786 1.634887
+      param "bg_down"
+      event_ramp
+      {
+        0.1676 0.2916
+        0.4284 0.2597
+        0.8777 0.1393
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.268192
+        "extreme" 0.447765
+        "loop" 0.636992
+        "end" 0.803049
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "32"
+  "CChoreoView" "132"
+  "GestureTool" "100"
+  "RampTool" "66"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

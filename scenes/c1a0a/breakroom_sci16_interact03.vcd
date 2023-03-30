@@ -1,0 +1,87 @@
+// Choreo version 1
+actor "Sci16_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci16.breakroom.topform01"
+    {
+      time 0.383333 2.755238
+      param "am.sci16.breakroom.topform01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time -0.050000 3.725000
+      param "!player"
+      event_ramp
+      {
+        0.6435 0.5000
+        1.1739 0.6449
+        2.4656 0.6243
+        3.3134 0.4328
+      }
+    }
+  }
+  channel "faces"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.158333 3.125000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1860 0.5933
+          0.5860 0.7300
+        }
+        {
+        }
+      }
+    }
+    event flexanimation "Head Animation"
+    {
+      time 0.191667 3.133334
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3171 0.4900
+          1.2657 0.5000
+          2.0857 0.5100
+          2.4771 0.4800
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5029 0.3200
+          0.8429 0.4600
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3086 0.5000
+          1.1314 0.5000
+          1.6286 0.5000
+          2.1200 0.4700
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "RampTool" "46"
+  "ExpressionTool" "70"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

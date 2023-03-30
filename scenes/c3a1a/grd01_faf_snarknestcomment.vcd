@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "GRD01_LambdaBunker"
+{
+  channel "Voice"
+  {
+    event speak "faf.grd01.snarknestcomment01"
+    {
+      time 0.717160 2.563146
+      param "faf.grd01.snarknestcomment01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 1.850000 5.933333
+      param "!player"
+      event_ramp
+      {
+        0.4059 0.3518
+        0.8176 0.4758
+        1.1706 0.4947
+        3.0784 0.4805
+        3.6078 0.3778
+      }
+    }
+    event lookat "Look at snarknest_look"
+    {
+      time 0.066667 2.366667
+      param "snarknest_look"
+    }
+  }
+  channel "Move to"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_angry01"
+    {
+      time 0.166667 6.466667
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.6636 0.4439
+        0.8364 0.5691
+        1.3182 0.6446
+        4.4591 0.6564
+        5.2917 0.5573
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 1.600000 3.050000
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1345 0.1865
+        0.2483 0.4038
+        0.4069 0.5396
+        1.0966 0.2349
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 1.183334 3.516667
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.2727 0.2113
+        0.5182 0.4864
+        0.8556 0.5608
+        1.3773 0.3955
+        1.5955 0.1688
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "FacialFlex"
+  {
+  }
+  channel "face"
+  {
+    event face "Face snarknest_look"
+    {
+      time 0.095238 3.785715
+      param "snarknest_look"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "28"
+  "ExpressionTool" "2"
+  "RampTool" "44"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

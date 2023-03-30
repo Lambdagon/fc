@@ -1,0 +1,93 @@
+// Choreo version 1
+event loop "Loop"
+{
+  time 10.620000 -1.000000
+  param "1.000000"
+  loopcount "-1"
+}
+actor "Kleiner"
+{
+  channel "Posture"
+  {
+    event gesture "eyescanposture"
+    {
+      time 1.826666 8.360001
+      param "eyescanposture"
+      event_ramp
+      {
+        0.0000 0.3333
+        2.1125 0.9178
+        6.5333 0.4702
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.133673
+        "loop" 0.279592
+        "end" 0.798168
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.294118
+        "loop" 0.455882
+        "end" 0.676471
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "keypad_g"
+    {
+      time 3.200000 5.533333
+      param "keypad_g"
+      absolutetags playback_time
+      {
+        "apex" 0.188406
+        "accent" 0.289855
+        "loop" 0.579710
+        "end" 0.594203
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188406
+        "accent" 0.289855
+        "loop" 0.579710
+        "end" 0.594203
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at heady_01"
+    {
+      time 0.113334 11.140000
+      param "heady_01"
+      event_ramp
+      {
+        0.1380 0.4390
+        0.2880 0.7866
+        0.5117 0.9676
+        0.8000 1.0000
+        1.3000 1.0000
+        2.3687 0.9573
+        8.8720 0.9451
+        9.8533 0.9085
+        10.6033 1.0000
+        10.9595 1.0000
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "RampTool" "32"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

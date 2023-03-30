@@ -1,0 +1,69 @@
+// Choreo version 1
+actor "SCI23_Lab02"
+{
+  channel "Voice"
+  {
+    event speak "am.sci23.maxwellsdemon01"
+    {
+      time 0.280000 2.030227
+      param "am.sci23.maxwellsdemon01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.sci23.maxwellsdemon02"
+    {
+      time 2.033333 3.260612
+      param "am.sci23.maxwellsdemon02"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.126667 4.460001
+      param "common_expressions"
+      param2 "Pissed Off"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_crossarms"
+    {
+      time 1.160000 7.300000
+      param "g_crossarms"
+      absolutetags playback_time
+      {
+        "apex" 0.027612
+        "accent" 0.100450
+        "loop" 0.110450
+        "end" 0.864130
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "accent" 0.344828
+        "loop" 0.344828
+        "end" 0.689655
+      }
+      sequenceduration 1.966667
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

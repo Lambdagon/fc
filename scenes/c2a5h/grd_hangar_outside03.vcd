@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "h_hangar_guard"
+{
+  channel "Voice"
+  {
+    event speak "st.grd.hangar.outside.ahchrist01"
+    {
+      time 1.614142 3.014142
+      param "st.grd.hangar.outside.ahchrist01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd.hangar.outside.ahchrist01"
+    {
+      time 3.283840 4.392389
+      param "st.grd.hangar.outside.comeon_panicked01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd.hangar.outside.ahchrist01"
+    {
+      time 4.881147 5.430648
+      param "st.grd.hangar.outside.coverme_panicked01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Flex Animations"
+  {
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Face At"
+  {
+    event face "Face grd_endface01"
+    {
+      time 1.762296 2.871677
+      param "grd_endface01"
+      event_ramp
+      {
+        0.1222 0.9957
+        0.9644 1.0000
+      }
+    }
+  }
+  channel "Triggers"
+  {
+  }
+  channel "Triggers For Sound"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "RampTool" "90"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

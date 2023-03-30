@@ -1,0 +1,58 @@
+criterion IsAnnouncement "concept" "announcement" required
+criterion IsFirstWGH "map" "bm_c1a3a" required weight 2
+criterion IsSecondWGH "map" "bm_c1a3b" required weight 2
+criterion IsThirdWGH "map" "bm_c1a3c" required weight 2
+criterion IsBackgroundWGH "map" "background05" required weight 2
+
+//========================================================
+//WGH
+//========================================================
+response "announce_c1a3a"
+{
+	sequential
+	norepeat
+	speak "C1A3_00"
+	speak "C1A3_01"
+	speak "C1A3_02"
+	speak "C1A3_03"
+	speak "C1A3_04"
+}
+
+response "announce_wgh"
+{
+	sentence "!C1A3_0" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_1" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_2" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_3" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_4" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_5" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_6" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_7" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_8" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_9" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A3_10" soundlevel "SNDLVL_TALKING"
+}
+
+rule "announce_c1a3a"
+{
+	criteria IsAnnouncement IsFirstWGH 
+	response announce_c1a3a
+}
+
+rule "announce_c1a3b"
+{
+	criteria IsAnnouncement IsSecondWGH 
+	response announce_wgh
+}
+
+rule "announce_c1a3c"
+{
+	criteria IsAnnouncement IsThirdWGH 
+	response announce_wgh
+}
+
+rule "announce_background05"
+{
+	criteria IsAnnouncement IsBackgroundWGH 
+	response announce_wgh
+}

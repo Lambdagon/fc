@@ -1,0 +1,351 @@
+// Choreo version 1
+actor "GRD02_Shack"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Security.startle_ohjesus02"
+    {
+      time 7.834682 9.504818
+      param "NPC_Security.marine_taunt07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.startle_ohjesus02"
+    {
+      time 0.903667 1.853667
+      param "NPC_Security.startle_ohshit02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.startle_ohjesus02"
+    {
+      time 9.897912 11.342855
+      param "NPC_Security.marine_dead10"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event gesture "ShootToCrouchD"
+    {
+      time 3.352577 4.305538
+      param "ShootToCrouchD"
+      event_ramp
+      {
+        0.2681 1.0000
+        0.6787 1.0000
+      }
+      sequenceduration 1.000000
+    }
+    event gesture "CrouchDToStand"
+    {
+      time 6.847701 7.962297
+      param "CrouchDToStand"
+      event_ramp
+      {
+        0.3046 0.9891
+        0.9509 1.0000
+      }
+      sequenceduration 0.833333
+    }
+    event gesture "Crouch_idleD"
+    {
+      time 3.831946 7.194444
+      param "Crouch_idleD"
+      event_ramp
+      {
+        0.1136 1.0000
+        3.0898 1.0000
+      }
+      sequenceduration 2.000000
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 20.007818 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 7.514284 -1.000000
+      param "1"
+    }
+    event lookat "Look at topsidemarine1"
+    {
+      time 0.409428 12.686917
+      param "topsidemarine1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 14.973101 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 17.197634 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 11.208730 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 13.954580 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 18.086523 -1.000000
+      param "1"
+    }
+  }
+  channel "Move"
+  {
+    event face "Face topsidemarine1"
+    {
+      time 1.303367 20.983919
+      param "topsidemarine1"
+    }
+    event moveto "Moveto mark_grd02_fakefightcover2"
+    {
+      time 9.152093 14.778357
+      param "mark_grd02_fakefightcover2"
+      param2 "Run"
+      distancetotarget 34.00
+    }
+    event moveto "Moveto mark_grd02_fakefightcover"
+    {
+      time 0.351662 2.606398
+      param "mark_grd02_fakefightcover"
+      param2 "Run"
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "10 - Set Attachments points for mp5 tracers to guard offscreen"
+    {
+      time 11.941668 -1.000000
+      param "10"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 6.186354 7.174109
+      param "NPC_hgrunt.taunt09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 11.611022 13.370160
+      param "NPC_hgrunt.taunt_special01_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 16.244883 17.548759
+      param "NPC_hgrunt.taunt01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 13.966240 15.120775
+      param "NPC_hgrunt.pain07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 0.025479 0.402486
+      param "NPC_hgrunt.alert08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.throw02_var01"
+    {
+      time 18.395233 19.272217
+      param "NPC_hgrunt.cover09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 1.906959 3.471381
+      param "NPC_hgrunt.alert12_var03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Trigger 3 (Start SHOOTING)"
+    {
+      time 10.463960 -1.000000
+      param "3"
+    }
+    event firetrigger "Trigger 3 (Start SHOOTING)"
+    {
+      time 3.962698 -1.000000
+      param "3"
+    }
+    event firetrigger "Trigger 3 (Start SHOOTING)"
+    {
+      time 17.593039 -1.000000
+      param "3"
+    }
+  }
+  channel "Flex"
+  {
+    event firetrigger "STOP SHOOTING"
+    {
+      time 5.372027 -1.000000
+      param "4"
+    }
+    event firetrigger "STOP SHOOTING"
+    {
+      time 11.255865 -1.000000
+      param "4"
+    }
+    event firetrigger "STOP SHOOTING"
+    {
+      time 19.457848 -1.000000
+      param "4"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine2"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.throw02_var01"
+    {
+      time 15.093365 16.141869
+      param "NPC_hgrunt.cover07_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.throw02_var01"
+    {
+      time 21.122419 22.303167
+      param "NPC_hgrunt.gren07_var04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.throw02_var01"
+    {
+      time 18.506258 19.018095
+      param "NPC_hgrunt.pain11"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.throw02_var01"
+    {
+      time 19.367369 20.521904
+      param "NPC_hgrunt.pain07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 3.926631 4.425293
+      param "NPC_hgrunt.charge07_extrm01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+    event firetrigger "Firetrigger 5"
+    {
+      time 21.487461 -1.000000
+      param "5"
+    }
+    event firetrigger "Firetrigger 5"
+    {
+      time 3.261271 -1.000000
+      param "5"
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Trigger Bulleye For Marine to Fire at (Stop)"
+    {
+      time 6.705935 -1.000000
+      param "6"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "44"
+  "CChoreoView" "24"
+}
+fps 60
+snap off
+ignorePhonemes off

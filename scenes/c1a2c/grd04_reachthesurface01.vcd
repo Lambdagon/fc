@@ -1,0 +1,153 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 5.266666 -1.000000
+  param "noaction"
+}
+actor "GRD04"
+{
+  channel "Voice"
+  {
+    event speak "oc.grd04.elevator.reachthesurface01"
+    {
+      time 0.660732 2.360732
+      param "oc.grd04.elevator.reachthesurface01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.grd04.elevator.reachthesurface02"
+    {
+      time 2.710732 4.990392
+      param "oc.grd04.elevator.reachthesurface02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.063492 6.188035
+      param "!player"
+      event_ramp
+      {
+        0.0652 0.1199
+        0.1472 0.1962
+        0.2630 0.5368
+        0.8813 1.0000
+        5.2688 0.9714
+        6.0053 0.1716
+      }
+    }
+  }
+  channel "Interupt"
+  {
+    event interrupt "Interupt if solo"
+    {
+      time 2.604902 3.880133
+      param ""
+    }
+    event interrupt "Interupt if solo"
+    {
+      time 4.365319 5.359300
+      param ""
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 2.440564 -1.000000
+      param "1"
+    }
+    event gesture "g_point_l_rpg"
+    {
+      time 0.291667 2.258334
+      param "g_point_l_rpg"
+      absolutetags playback_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.603448
+        "out" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.603448
+        "out" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_up_l"
+    {
+      time 0.277778 1.877778
+      param "bg_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.388889 1.388889
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2588 0.6246
+        0.6745 0.5832
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.583333 2.125000
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.2059 0.6175
+        1.3433 0.5868
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "SCI02"
+{
+  channel "Look at"
+  {
+  }
+  channel "Expression"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "RampTool" "60"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

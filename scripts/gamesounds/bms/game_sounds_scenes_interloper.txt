@@ -1,0 +1,687 @@
+//
+//
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+// NOTE:  AUTOMATICALLY GENERATED FILE, ANY HAND EDITED COMMENTS WILL BE LOST!!!
+//
+// VOL_NORM		1.0f
+//
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+//
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+//
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	= 3.9
+//	SNDLVL_55dB		= 55,	= 3.0
+//	SNDLVL_IDLE		= 60,	= 2.0
+//	SNDLVL_TALKING		= 60,	= 2.0
+//	SNDLVL_60dB		= 60,	= 2.0
+//	SNDLVL_65dB		= 65,	= 1.5
+//	SNDLVL_STATIC		= 66,	= 1.25
+//	SNDLVL_70dB		= 70,	= 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	= 0.8
+//	SNDLVL_80dB		= 80,	= 0.7
+//	SNDLVL_85dB		= 85,	= 0.6
+//	SNDLVL_90dB		= 90,	= 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	= 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140, = 0.27
+//	SNDLVL_140dB	= 140,	= 0.2
+//	SNDLVL_150dB	= 150,	= 0.2
+//
+
+
+//*********************************************************************************************************************************************************************************************************
+// Map A
+
+// SCENE - VORT VILLAGE PRE - AGRUNT BULLY SCENE
+
+// The agrunt in this scene dishes out a meaty backhand.
+
+"int.agrunt_foley_slap01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"95,115"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	
+	"wave"			"vo/c4a3a/agrunt_slap01.wav"
+}
+
+"int.agrunt_foley_slap02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"95,115"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	
+	"wave"			"vo/c4a3a/agrunt_slap02.wav"
+}
+
+"int.agrunt_foley_slap03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"95,115"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	
+	"wave"			"vo/c4a3a/agrunt_slap03.wav"
+}
+
+// vorts cry and protest
+
+"int.vort_painedprotest01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_painedprotest01.wav"
+}
+
+"int.vort_protest02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_protest02.wav"
+}
+
+"int.vort_protest03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_protest03.wav"
+}
+
+"int.vort_tortured_pain_ramdom"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	"rndwave"
+	{
+		"wave"			"vo/c4a3a/vort_tortured_pain01.wav"
+		"wave"			"vo/c4a3a/vort_tortured_pain02.wav"
+		"wave"			"vo/c4a3a/vort_tortured_pain03.wav"
+		"wave"			"vo/c4a3a/vort_tortured_pain04.wav"
+	}
+}
+
+"int.vort_tortured_cry01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_cry01.wav"
+}
+
+"int.vort_tortured_cry02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_cry02.wav"
+}
+
+"int.vort_tortured_pain01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_pain01.wav"
+}
+
+"int.vort_tortured_pain02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_pain02.wav"
+}
+
+"int.vort_tortured_pain03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_pain03.wav"
+}
+
+"int.vort_tortured_pain04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_pain02.wav"
+}
+
+"int.vort_tortured_plead01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_plead01.wav"
+}
+
+"int.vort_tortured_plead02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_plead02.wav"
+}
+
+"int.vort_tortured_plead03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_tortured_plead03.wav"
+}
+
+// Vorts flee in fear after main scene plays out or player intervenes.
+
+"int.vort_scared_retreat01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_scared_retreat01.wav"
+}
+
+"int.vort_scared_retreat02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_scared_retreat02.wav"
+}
+
+"int.vort_scared_retreat03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"wave"			"vo/c4a3a/vort_scared_retreat03.wav"
+}
+
+// startled as the vort is cowering.
+
+"int.vort_scared_startled01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_TALKING"
+
+	"rndwave"
+	{
+		"wave"			"vo/c4a3a/vort_scared_startled01.wav"
+		"wave"			"vo/c4a3a/vort_scared_startled02.wav"
+		"wave"			"vo/c4a3a/vort_scared_startled03.wav"
+		"wave"			"vo/c4a3a/vort_scared_startled04.wav"
+	}
+}
+
+// Cowering in fear and Pleading.
+
+"int.vort_scared_cower_plead"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	"rndwave"
+	{
+		"wave"			"vo/c4a3a/vort_scared_cower_plead01.wav"
+		"wave"			"vo/c4a3a/vort_scared_cower_plead02.wav"
+		"wave"			"vo/c4a3a/vort_scared_cower_plead03.wav"
+		"wave"			"vo/c4a3a/vort_painedprotest01.wav"
+		"wave"			"vo/c4a3a/vort_weeping01.wav"
+		"wave"			"vo/c4a3a/vort_weeping06.wav"
+	}
+}
+
+"int.vort_scared_cowering"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	"rndwave"
+	{
+		"wave"			"vo/c4a3a/vort_scared_cowering01.wav"
+		"wave"			"vo/c4a3a/vort_scared_cowering02.wav"
+		"wave"			"vo/c4a3a/vort_scared_cowering03.wav"
+		"wave"			"vo/c4a3a/vort_scared_cowering04.wav"
+		"wave"			"vo/c4a3a/vort_scared_cowering05.wav"
+	}
+}
+
+"int.vort_weeping"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_TALKING"
+	"rndwave"
+	{
+		"wave"			"vo/c4a3a/vort_weeping01.wav"
+		"wave"			"vo/c4a3a/vort_weeping02.wav"
+		"wave"			"vo/c4a3a/vort_weeping03.wav"
+		"wave"			"vo/c4a3a/vort_weeping04.wav"
+		"wave"			"vo/c4a3a/vort_weeping05.wav"
+		"wave"			"vo/c4a3a/vort_weeping06.wav"
+		"wave"			"vo/c4a3a/vort_weeping07.wav"
+	}
+}
+	
+// SCENE - VORT VILLAGE INTRO
+
+"int.vortvillage.vort_call01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_call01.wav"
+}
+
+"int.vortvillage.vort_confused01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_confused01.wav"
+}
+
+"int.vortvillage.vort_confused02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_confused02.wav"
+}
+
+
+"int.vortvillage.vort_ignore01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_ignore01.wav"
+}
+
+"int.vortvillage.vort_ignore02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_ignore02.wav"
+}
+
+"int.vortvillage.vort_invite01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_invite01.wav"
+}
+
+"int.vortvillage.vort_nodebate01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_nodebate01.wav"
+}
+
+"int.vortvillage.vort_nodebate02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_nodebate02.wav"
+}
+
+// SCENE - VORT VILLAGE INTRO part 2
+
+
+"int.vortvillage.vort_cough01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo\c4a3a\vort_village_cough1.wav"
+}
+
+"int.vortvillage.vort_cough01a"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo\c4a3a\vort_village_cough1a.wav"
+}
+
+"int.vortvillage.vort_concern"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo\c4a3a\vort_village_concern.wav"
+}
+
+"int.vortvillage.vort_goeat01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo\c4a3a\vort_village_goeat01.wav"
+}
+
+"int.vortvillage.vort_goeat02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo\c4a3a\vort_village_goeat02.wav"
+}
+
+// SCENE - VORT VILLAGE INTRO part 3 - arguing who gets the tasty portion of the headcrab this time around.
+
+"int.vortvillage_argue01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue01.wav"
+}
+
+"int.vortvillage_argue02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue02.wav"
+}
+
+"int.vortvillage_argue03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue03.wav"
+}
+
+"int.vortvillage_argue04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue04.wav"
+}
+
+"int.vortvillage_argue05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue05.wav"
+}
+
+"int.vortvillage_argue05a"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue05a.wav"
+}
+
+"int.vortvillage_argue_sigh01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_village_argue_sigh01.wav"
+}
+
+// SCENE - VORT VILLAGE POST - Vort Mourning his fallen friend(s)
+
+"int.vort_mourn01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_mourn01.wav"
+}
+
+"int.vort_mourn02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_mourn02.wav"
+}
+
+"int.vort_mourn03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_mourn03.wav"
+}
+
+"int.vort_mourn04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_mourn04.wav"
+}
+
+"int.vort_mourn05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"vo/c4a3a/vort_mourn05.wav"
+}
+
+"int.vinebreak"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_130dB"
+	
+	"rndwave"
+	{
+		"wave"			"xen/object/int_vinebreak1.wav"
+		"wave"			"xen/object/int_vinebreak2.wav"
+	}
+}
+
+"int.thumper.hit"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_130dB"
+	
+	"wave"			"xen/object/thumper_impact.wav"
+}
+
+"int.thumper.crank"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_130dB"
+	
+	"wave"			"xen/object/thumper_spin.wav"
+}
+
+"int.webignite"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_130dB"
+	
+	"wave"			"xen/object/gon_webignite.wav"
+}
+
+"int.aneurysm.pop"
+{
+	"channel"	"CHAN_AUTO"
+	"volume"	"1.0"
+	"soundlevel"  "SNDLVL_NONE"
+	"pitch"		"100"
+	"wave"	"xen/object/ane_pop.wav"
+}
+

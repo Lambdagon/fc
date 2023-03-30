@@ -1,0 +1,157 @@
+// Choreo version 1
+actor "SCI27_TVroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci27.vanity04"
+    {
+      time 0.486667 3.783175
+      param "am.sci27.vanity04"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Poise"
+    {
+      time 0.293333 5.080000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          2.6320 0.1000
+          2.7600 0.9900
+          3.5040 0.0000
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          0.2660 0.0000
+          0.7480 0.7600
+          1.6940 0.3400
+          2.4200 0.1600
+          2.5680 0.2600
+          2.6780 0.8200
+          3.0580 0.8800
+          4.3720 0.6200
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.2620 0.0000
+          0.7880 0.6100
+          1.0380 0.6400
+          1.9140 0.6000
+          2.4540 0.2400
+          3.0300 0.2300
+          3.1300 0.7800
+          4.3440 0.8100
+        }
+        {
+        }
+        "smile" 
+        {
+          1.8920 0.0000
+          2.0120 0.4500
+          2.1220 0.4900
+          2.4400 0.4600
+          2.5780 0.0000
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "palm_out_down"
+    {
+      time 0.586667 3.026667
+      param "g_palm_out_high_l"
+      absolutetags playback_time
+      {
+        "apex" 0.131148
+        "accent" 0.366120
+        "loop" 0.562842
+        "end" 0.669399
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "palm_out_up"
+    {
+      time 2.300000 4.940000
+      param "g_palm_up_high_l"
+      absolutetags playback_time
+      {
+        "apex" 0.128440
+        "accent" 0.269723
+        "loop" 0.321099
+        "end" 0.648663
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_accentUp"
+    {
+      time 2.333333 4.920000
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.117590
+        "extreme" 0.287443
+        "loop" 0.522623
+        "end" 0.653279
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.180000 4.733334
+      param "!self"
+      event_ramp
+      {
+        0.3680 1.0000
+        3.9380 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

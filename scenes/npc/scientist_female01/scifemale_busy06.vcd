@@ -1,0 +1,125 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.busy06"
+    {
+      time 0.567084 2.181506
+      param "NPC_Scifemale.busy06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.802083
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.5623
+        0.4824 0.7082
+        0.7095 0.7648
+        1.1810 0.7801
+        1.8327 0.7766
+        2.2093 0.7082
+        2.3563 0.5554
+        2.5446 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.062501 2.770833
+      param "bg_accentup"
+      event_ramp
+      {
+        0.4381 0.4095
+        1.0143 0.4452
+        1.2143 0.3190
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.112308
+        "extreme" 0.274530
+        "loop" 0.499146
+        "end" 0.623931
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Sci_Fem_sudden01"
+    {
+      time 0.250000 1.250000
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_sudden01"
+      event_ramp
+      {
+        0.1390 0.4811
+        0.2618 0.6596
+        0.7412 0.6548
+        0.8525 0.4811
+      }
+    }
+    event expression "Sci_Fem_anger02"
+    {
+      time 0.706349 1.706349
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_anger02"
+      event_ramp
+      {
+        0.2324 0.3818
+        0.5353 0.4563
+        0.8000 0.3818
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Headbobs"
+    {
+      time 0.270833 2.510417
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5571 0.5100
+          0.7643 0.6900
+          1.0786 0.4200
+          1.6071 0.4900
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "136"
+  "CChoreoView" "84"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,200 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.dontforgettoreload04"
+    {
+      time 0.403081 3.542650
+      param "NPC_Scimale.dontforgettoreload04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.041460 4.452117
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.6155
+        0.3800 0.9318
+        3.2797 1.0000
+        3.6799 0.9121
+        4.0400 0.6833
+        4.2431 0.4523
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.056650 3.013957
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.3281 0.5753
+        0.8138 0.6050
+        1.2120 0.3909
+        2.5399 0.3008
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.355556 3.355556
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.3273 0.5780
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.722222 1.722222
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.3273 0.5780
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.017534 4.436090
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.3785 0.5400
+          0.8440 0.8400
+          2.1917 0.8300
+          3.3083 0.5000
+          4.0250 0.4800
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.0600 0.4700
+          1.4800 0.5800
+          1.9200 0.4700
+          2.5600 0.3600
+          3.4400 0.4800
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.6000 0.4700
+          2.1200 0.3800
+          2.6200 0.1400
+          3.3000 0.5000
+          3.7600 0.5200
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "body gesture accent up"
+    {
+      time 0.020936 3.028982
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.2839 0.0985
+        0.7194 0.2273
+        2.2650 0.2045
+        2.7941 0.0606
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.129776
+        "extreme" 0.275835
+        "loop" 0.478071
+        "end" 0.746191
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "body gesture down"
+    {
+      time 2.083334 4.436781
+      param "bg_down"
+      event_ramp
+      {
+        0.1774 0.0985
+        0.4710 0.3671
+        1.8396 0.3974
+        2.1449 0.1819
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072039
+        "extreme" 0.201709
+        "loop" 0.403419
+        "end" 0.772616
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_up_l"
+    {
+      time 0.266666 1.866666
+      param "bg_up_l"
+      event_ramp
+      {
+        0.1273 0.1454
+        0.3818 0.2707
+        0.7182 0.3522
+        1.2455 0.2766
+        1.4591 0.1442
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "44"
+  "SceneRampTool" "100"
+  "ExpressionTool" "10"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

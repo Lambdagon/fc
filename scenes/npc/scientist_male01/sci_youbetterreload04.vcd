@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.youbetterreload04"
+    {
+      time 0.187500 2.744847
+      param "NPC_Scimale.youbetterreload04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.055026 1.797090
+      param "!player"
+      event_ramp
+      {
+        0.1458 1.0000
+        0.9486 0.9988
+        1.2965 0.8889
+        1.4903 0.6111
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_sudden01"
+    {
+      time 0.038161 0.722685
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sudden01"
+      event_ramp
+      {
+        0.1568 0.4669
+        0.2757 0.5544
+        0.3946 0.4764
+        0.4541 0.3168
+      }
+    }
+    event expression "sci_angry02_chin"
+    {
+      time 1.237368 2.005225
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry02_chin"
+      event_ramp
+      {
+        0.1216 0.3652
+        0.4108 0.4303
+        0.6216 0.3617
+      }
+    }
+    event expression "sci_afraid01"
+    {
+      time 0.500000 1.500000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.2375 0.9894
+        0.6687 0.4657
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.034722 2.881945
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.0974 0.5154
+        0.7369 0.5035
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.069312 1.458597
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.4362 0.3227
+        0.7138 0.3865
+        1.1061 0.3381
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.097384
+        "extreme" 0.267806
+        "loop" 0.681688
+        "end" 0.765735
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "RampTool" "58"
+  "SceneRampTool" "100"
+  "ExpressionTool" "24"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

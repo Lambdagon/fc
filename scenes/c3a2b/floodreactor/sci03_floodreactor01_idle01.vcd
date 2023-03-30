@@ -1,0 +1,130 @@
+// Choreo version 1
+actor "sci03"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci03.idle.bothpumps01"
+    {
+      time 0.366667 3.266667
+      param "lc.sci03.idle.bothpumps01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.sci03.idle.bothpumps02"
+    {
+      time 3.568422 5.537560
+      param "lc.sci03.idle.bothpumps02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "GrudgeM"
+    {
+      time 1.535088 5.315790
+      param "common_expressions"
+      param2 "GrudgeM"
+      event_ramp
+      {
+        1.0820 0.6048
+        3.4260 0.4758
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_up_r"
+    {
+      time 3.307017 4.907017
+      param "bg_up_r"
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+    event gesture "bg_down"
+    {
+      time 4.596492 6.563159
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "G_medurgent_mid"
+    {
+      time 1.219298 3.252631
+      param "G_medurgent_mid"
+      absolutetags playback_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+  }
+  channel "Look At"
+  {
+    event face "Face !player"
+    {
+      time 0.105263 1.692983
+      param "!player"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.289474 7.280702
+      param "!player"
+      event_ramp
+      {
+        0.2280 0.9516
+        6.6240 0.8306
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "36"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

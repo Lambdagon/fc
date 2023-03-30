@@ -1,0 +1,136 @@
+// Choreo version 1
+event loop "Loop to Look at gordon"
+{
+  time 6.560606 -1.000000
+  param "6.000000"
+  loopcount "-1"
+}
+event stoppoint "FIRE!"
+{
+  time 1.377977 -1.000000
+  param "noaction"
+}
+actor "sci_move"
+{
+  channel "Sound"
+  {
+    event speak "vo\npc\scientist_male01\no01.wav"
+    {
+      time 0.713333 1.165351
+      param "vo\npc\scientist_male01\pain13.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "scaredidle"
+    {
+      time 0.146666 1.473333
+      param "scaredidle"
+      event_ramp
+      {
+        0.2280 0.5484
+        1.1280 0.5565
+      }
+      sequenceduration 2.666667
+    }
+  }
+  channel "Look At"
+  {
+    event face "Face sci_barnaclefood"
+    {
+      time 0.313333 2.011686
+      param "sci_barnaclefood"
+    }
+    event lookat "Look at barn1"
+    {
+      time 0.093333 1.400000
+      param "barn1"
+    }
+    event lookat "Look at !player"
+    {
+      time 3.625153 8.840278
+      param "!player"
+      event_ramp
+      {
+        1.5600 0.9976
+        5.2151 0.9941
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.331111 2.191429
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3440 0.7285
+        1.6243 0.6730
+      }
+    }
+    event expression "sci_mouth_opened01"
+    {
+      time 0.920000 1.473333
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_mouth_opened01"
+      event_ramp
+      {
+        0.2120 0.4923
+        0.3440 0.3802
+      }
+    }
+    event expression "sci_serious_mild"
+    {
+      time 1.083333 9.337302
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wince00"
+      event_ramp
+      {
+        0.6900 0.6612
+        1.5200 0.7615
+        2.0800 0.7615
+        5.8829 0.7615
+        6.2029 0.7615
+        7.0795 0.6612
+      }
+    }
+    event gesture "kgesture05p"
+    {
+      time 0.055556 3.178472
+      param "kgesture05p"
+      absolutetags playback_time
+      {
+        "apex" 0.295553
+        "accent" 0.460582
+        "loop" 0.653384
+        "end" 0.792630
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121622
+        "accent" 0.256757
+        "loop" 0.459459
+        "end" 0.621622
+      }
+      sequenceduration 2.500000
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "ExpressionTool" "100"
+  "RampTool" "10"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

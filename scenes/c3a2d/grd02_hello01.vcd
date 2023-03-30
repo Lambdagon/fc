@@ -1,0 +1,106 @@
+// Choreo version 1
+actor "GRD02LC"
+{
+  channel "Voice"
+  {
+    event speak "lc.grd02.reactor.backsosoon01"
+    {
+      time 0.959893 1.771685
+      param "lc.grd02.reactor.backsosoon01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.404635 2.131907
+      param "!player"
+      event_ramp
+      {
+        0.5368 0.4710
+        1.2684 0.4638
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_accent_left"
+    {
+      time 0.344029 2.189484
+      param "bg_accent_left"
+      absolutetags playback_time
+      {
+        "apex" 0.184387
+        "extreme" 0.368774
+        "loop" 0.460967
+        "end" 0.611570
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "extreme" 0.416667
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "shotgun gestures"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "FACE"
+  {
+    event face "Face Player"
+    {
+      time 0.151515 1.106061
+      param "!player"
+      event_ramp
+      {
+        0.6895 1.0000
+        0.9545 1.0000
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_smile00"
+    {
+      time 0.060606 1.863636
+      param "humans\guard\expressions_guard"
+      param2 "b_smile00"
+      event_ramp
+      {
+        0.1737 0.9923
+        1.0842 0.9846
+        1.4000 0.8846
+        1.6211 0.6154
+        1.7263 0.0846
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "68"
+  "RampTool" "38"
+  "ExpressionTool" "20"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

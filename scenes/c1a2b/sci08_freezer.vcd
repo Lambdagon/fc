@@ -1,0 +1,337 @@
+// Choreo version 1
+actor "sci08_freezer"
+{
+  channel "voice"
+  {
+    event speak "oc.sci08.freezer.nosafehaven01"
+    {
+      time 2.752406 5.186624
+      param "oc.sci08.freezer.nosafehaven01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci08.freezer.nosafehaven02"
+    {
+      time 6.025133 8.583591
+      param "oc.sci08.freezer.nosafehaven02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.075804 3.716281
+      param "!player"
+      event_ramp
+      {
+        0.4438 0.4274
+        0.7239 0.6628
+        3.0721 0.6935
+        3.2869 0.2984
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 7.340789 10.050047
+      param "!player"
+      event_ramp
+      {
+        0.5338 0.3894
+        0.8339 0.6012
+        1.6734 0.6671
+        2.2657 0.2984
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 4.584462 6.623207
+      param "!player"
+      event_ramp
+      {
+        0.4438 0.4274
+        0.7239 0.6628
+        1.4703 0.6935
+        1.6851 0.2984
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 5.858705 7.897449
+      param "!self"
+      event_ramp
+      {
+        0.4438 0.7324
+        0.7239 0.9678
+        1.4703 0.9985
+        1.6851 0.6034
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 3.158704 5.197449
+      param "!self"
+      event_ramp
+      {
+        0.4438 0.7324
+        0.7239 0.9678
+        1.4703 0.9985
+        1.6851 0.6034
+      }
+    }
+  }
+  channel "face"
+  {
+    event face "Face !player"
+    {
+      time 4.045211 11.582540
+      param "!player"
+      event_ramp
+      {
+        0.7000 0.9194
+        7.5373 1.0000
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Eyes-lookdown"
+    {
+      time 2.735713 7.723810
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.4083 0.4900
+          0.7500 0.4800
+          1.2167 0.6800
+          1.7333 0.5100
+          2.4250 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.6167 0.4800
+          0.9583 0.6200
+          1.1313 0.4200
+          1.2500 0.3700
+          1.4634 0.2400
+          1.7167 0.1600
+          2.4833 0.1300
+          2.9000 0.1200
+          3.3750 0.2300
+          3.5500 0.4500
+          4.1500 0.4800
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.9875 0.4500
+          1.2521 0.4600
+          1.7943 0.0100
+          2.2506 0.4000
+          2.9182 0.4700
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.5500 0.4800
+          0.8083 0.5800
+          0.8833 0.7900
+          1.2667 0.5300
+          1.6167 0.4900
+          1.8167 0.3700
+          2.2667 0.2600
+        }
+      }
+    }
+    event gesture "LineIdle01"
+    {
+      time 2.918651 13.454762
+      param "LineIdle01"
+      event_ramp
+      {
+        0.7000 0.9971
+        9.0094 1.0000
+        9.7117 0.5572
+      }
+      sequenceduration 7.500000
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 6.231482 8.564815
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.1941 0.3783
+        0.4059 0.5777
+        1.1820 0.6158
+        1.6098 0.3930
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "broadsweepdown"
+    {
+      time 5.768652 8.714485
+      param "broadsweepdown"
+      event_ramp
+      {
+        0.5273 0.7977
+        1.0818 0.9501
+        2.3064 0.8006
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.407258
+        "loop" 0.500000
+        "end" 0.532258
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.310345
+        "accent" 0.500000
+        "loop" 0.586207
+        "end" 0.655172
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "crouch_panicked"
+    {
+      time 0.000000 3.462882
+      param "crouch_panicked"
+      event_ramp
+      {
+        0.0000 1.0000
+        1.0333 0.9853
+      }
+      sequenceduration 2.066667
+    }
+    event gesture "Crouch_to_stand"
+    {
+      time 1.250000 4.238095
+      param "Crouch_to_stand"
+      event_ramp
+      {
+        0.6017 0.5601
+        1.3375 0.7009
+        1.5351 0.7214
+        2.4131 0.5689
+      }
+      sequenceduration 0.700000
+    }
+  }
+  channel "move to"
+  {
+    event gesture "bg_down"
+    {
+      time 6.634741 8.601408
+      param "bg_down"
+      event_ramp
+      {
+        0.3600 0.5279
+        0.7700 0.6100
+        1.2000 0.4986
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Blink"
+    {
+      time 2.515872 3.515873
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Blink"
+      event_ramp
+      {
+        0.2588 0.1584
+        0.3412 0.9971
+        0.6412 0.9912
+        0.8294 0.3021
+      }
+    }
+    event expression "SciFem_worried01"
+    {
+      time 5.377638 12.948016
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.5588 0.5748
+        0.6941 0.7654
+        6.6715 0.9707
+        7.2342 0.5865
+      }
+    }
+    event expression "SciFem_sad01"
+    {
+      time 2.309144 4.956203
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_sad01"
+      event_ramp
+      {
+        0.3824 0.6070
+        1.9294 0.6334
+        2.1647 0.4575
+      }
+    }
+    event expression "SciFem_worried01"
+    {
+      time 3.872081 6.029762
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_worried01"
+      event_ramp
+      {
+        0.5588 0.5630
+        0.6941 0.7537
+        1.2588 0.9589
+        1.8216 0.8504
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "22"
+  "RampTool" "6"
+  "CChoreoView" "20"
+}
+fps 60
+snap off
+ignorePhonemes off

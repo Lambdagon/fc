@@ -1,0 +1,155 @@
+// Choreo version 1
+actor "Grd05_Breakroom"
+{
+  channel "Voice"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.073334 2.720001
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.5120 0.7500
+          0.9480 0.7700
+          1.3120 0.2900
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          1.2680 0.1300
+          1.4520 0.4000
+          1.7620 0.4100
+          1.8980 0.1800
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.9538 0.2200
+          1.2057 0.6900
+          1.7380 1.0000
+        }
+        {
+          1.7380 0.9600
+        }
+        "corner_depressor" combo 
+        {
+          0.2560 0.2400
+          0.9420 0.3300
+          1.2520 0.1800
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5231 0.5500
+          1.0897 0.5300
+          1.3615 0.5500
+          1.5923 0.4900
+          1.8000 0.5500
+          1.9795 0.5000
+        }
+      }
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at Sci16_Breakroom"
+    {
+      time 0.053334 1.333334
+      param "Sci16_Breakroom"
+      event_ramp
+      {
+        0.4772 0.2246
+        0.7903 0.2536
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "Sci16_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci16.microwave.post.doesntbodewell01"
+    {
+      time 0.113333 2.791270
+      param "am.sci16.microwave.post.doesntbodewell01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.053333 2.773333
+      param "!self"
+      event_ramp
+      {
+        0.4886 1.0000
+        2.7200 1.0000
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.086666 2.760000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.2600 0.7900
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.1525 0.6300
+          2.0600 0.8200
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.8625 0.3600
+          1.6375 0.6600
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5500 0.1400
+          2.1475 0.1500
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.0550 0.0900
+          2.4925 0.0300
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "RampTool" "70"
+  "SceneRampTool" "100"
+  "ExpressionTool" "80"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

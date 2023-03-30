@@ -1,0 +1,131 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.fantastic07"
+    {
+      time 0.403081 1.913217
+      param "NPC_Scimale.fantastic07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.041460 2.796945
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.6155
+        0.3800 0.9318
+        1.8112 1.0000
+        2.0248 0.9121
+        2.3849 0.6833
+        2.5880 0.4523
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Sighing"
+    {
+      time 0.545977 1.413793
+      param "common_expressions"
+      param2 "Sighing"
+      event_ramp
+      {
+        0.1227 0.1288
+        0.2182 0.6515
+        0.3182 0.6515
+        0.4045 0.1364
+      }
+    }
+    event expression "PSmile"
+    {
+      time 0.068966 2.798851
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.3318 0.4318
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.017534 2.792412
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.4917 0.3700
+          0.8618 0.8300
+          1.9750 0.8600
+          2.2750 0.5900
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent forward"
+    {
+      time 0.017242 2.801150
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.121399
+        "extreme" 0.315637
+        "loop" 0.485595
+        "end" 0.729339
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "point swing across"
+    {
+      time 0.494253 2.794253
+      param "g_point_swing_across"
+      absolutetags playback_time
+      {
+        "apex" 0.176471
+        "accent" 0.352941
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.352941
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+  "RampTool" "44"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

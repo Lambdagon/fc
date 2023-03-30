@@ -1,0 +1,92 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre10"
+    {
+      time 0.446666 1.959773
+      param "NPC_Scimale.answer_pre10"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.033334 2.972223
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.2028 0.9931
+        2.5730 0.7183
+        2.7612 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "flexanimation"
+    {
+      time 0.000000 3.000000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_closer" combo 
+        {
+          0.4000 0.1400
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          0.3556 0.6600
+          1.5333 0.8200
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4500 0.3900
+          1.1667 0.3500
+          1.8278 0.5500
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.4111 0.1600
+          0.5944 0.0900
+          1.5778 0.5500
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3833 0.0800
+          0.6056 0.0600
+          0.9778 0.4700
+        }
+      }
+    }
+  }
+  channel "Accent"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "92"
+  "RampTool" "22"
+  "SceneRampTool" "100"
+  "ExpressionTool" "36"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,33 @@
+// Choreo version 1
+actor "!target"
+{
+  channel "Vo"
+  {
+    event speak "NPC_Vortigaunt.alert06"
+    {
+      time 0.523333 3.623333
+      param "NPC_Vortigaunt.alert06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Flex/Expression"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

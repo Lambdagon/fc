@@ -1,0 +1,136 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.busy02"
+    {
+      time 0.390001 3.538482
+      param "NPC_Scifemale.busy02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 4.750000
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.4064 0.4718
+        0.6991 0.6531
+        2.0500 0.7698
+        3.1071 0.6177
+        3.5625 0.4649
+        4.0342 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.062501 2.495834
+      param "bg_accentup"
+      event_ramp
+      {
+        0.4381 0.4095
+        1.0143 0.4452
+        1.2143 0.3190
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_anger00"
+    {
+      time 0.083333 4.416667
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.4909 0.3778
+        3.9000 0.3566
+      }
+    }
+    event expression "SciFem_Browup01"
+    {
+      time 0.447917 1.447917
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.2880 0.4817
+        0.7480 0.4734
+      }
+    }
+    event expression "SciFem_Browup01"
+    {
+      time 1.875000 2.875000
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.1976 0.7991
+        0.2880 0.9634
+        0.7480 0.9634
+        0.7952 0.7837
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Headbobs"
+    {
+      time 0.270833 4.468750
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5571 0.5100
+          0.7643 0.6900
+          1.0786 0.4200
+          1.4143 0.4200
+          1.7000 0.6600
+          1.9357 0.4800
+          2.3143 0.4100
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "84"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

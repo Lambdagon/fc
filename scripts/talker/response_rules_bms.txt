@@ -1,0 +1,162 @@
+enumeration "NPCState"
+{
+	"None"		"0"
+	"Idle"		"1"
+	"Alert"		"2"
+	"Combat"	"3"
+	"Scripted"	"4"
+	"PlayDead"	"5"
+	"Dead"		"6"
+}
+
+criterion AllowGeneralIdleTalk allowgeneralidles "1" required
+
+criterion AllowQuestions noquestion "0" required
+criterion AllowAnswers noanswer "0" required
+
+criterion RandomChance75 randomnum "<=75" required
+criterion RandomChance50 randomnum "<=50" required
+criterion IsFollowingPlayer followingplayer "1" required
+
+criterion IsStopped speed "<1" required
+criterion IsMoving speed ">0" required
+
+criterion IsPlayerMoving playerspeed ">0" required
+criterion IsPlayerWalking playerspeed ">0,<150" required
+criterion IsPlayerRunning playerspeed ">=150,<320" required
+criterion IsPlayerSprinting playerspeed ">=320" required
+criterion IsPlayerVeryWounded "playerhealthfrac"	">0,<=.25" required
+
+criterion DangerIsBehindPlayer "dangerloc" "behind" required
+
+criterion EnemyIsGargantua "enemy" "npc_gargantua" required weight 2
+criterion EnemyIsPlayer "enemy" "player" required weight 2
+criterion EnemyIsHeadcrab "enemy" "npc_headcrab" required weight 2
+criterion EnemyIsZombieGuard "enemy" "npc_zombie_security" required weight 2
+criterion EnemyIsZombieScientist "enemy" "npc_zombie_scientist" required weight 2
+criterion EnemyIsAlienController "enemy" "npc_alien_controller" required weight 2
+criterion EnemyIsAlienGrunt "enemy" "npc_alien_grunt" required weight 2
+criterion EnemyIsAlienSlave "enemy" "npc_alien_slave" required weight 2
+criterion EnemyIsBarnacle "enemy" "npc_barnacle" required weight 2
+criterion EnemyIsBullsquid "enemy" "npc_bullsquid" required weight 2
+criterion EnemyIsHoundeye "enemy" "npc_houndeye" required weight 2
+criterion EnemyIsSentryCeiling "enemy" "npc_sentry_ceiling" required weight 2
+criterion EnemyIsSentryGround "enemy" "npc_sentry_ground" required weight 2
+criterion EnemyIsHumanGrunt_Generic "enemy" "npc_human_grunt" required weight 2
+criterion EnemyIsHumanGrunt_Medic "enemy" "npc_human_medic" required weight 2
+criterion EnemyIsHumanGrunt_Commander "enemy" "npc_human_commander" required weight 2
+
+criterion CanSayFreemanLines "freemanlines" "1" required
+criterion IsPreDisaster "predisaster" ">0" required
+criterion IsPostDisaster "predisaster" "0" required
+criterion IsEli name "Eli" required
+criterion IsKleiner name "kleiner" required
+criterion InCombat "npcstate" "[NPCState::Combat]" required
+criterion NotInCombat "npcstate" "!=[NPCState::Combat]" required
+criterion NotProvoked "provoked" "0" required
+criterion NoRecentCombat "timesincecombat" ">10" required
+criterion RecentCombat "timesincecombat" ">0, <3" required
+criterion RecentCombatLong "timesincecombat" ">0, <120" required
+criterion SeePlayer "seeplayer" "1" required
+criterion SeenByPlayer "seenbyplayer" "1" required
+criterion NearPlayer "distancetoplayer" "<512" required
+criterion IsPlayerClose distancetoplayer "<256" required
+criterion IsPlayerReallyNear distancetoplayer "<128" required
+criterion TenPercentChance "randomnum" "<10" required
+
+criterion TLK_SHOT concept TLK_SHOT required
+criterion "ShotInLeg" "shotloc" "leg" required weight 8
+criterion "ShotInArm" "shotloc" "arm" required weight 8
+criterion "ShotInGut" "shotloc" "gut" required weight 8
+
+criterion TLK_VITALIDLE concept TLK_VITALIDLE required
+criterion TLK_HELLO concept TLK_HELLO required
+criterion TLK_IDLE Concept TLK_IDLE required
+criterion TLK_USE Concept TLK_USE required
+criterion TLK_STARTFOLLOW concept TLK_STARTFOLLOW required
+criterion TLK_STOPFOLLOW concept TLK_STOPFOLLOW required
+criterion TLK_PLPUSH concept TLK_PLPUSH required
+criterion TLK_PLDEAD concept TLK_PLDEAD required
+criterion TLK_PLRELOAD concept TLK_PLRELOAD required
+criterion TLK_WATCHOUT concept TLK_WATCHOUT required
+criterion TLK_WOUND concept TLK_WOUND required
+criterion TLK_MORTAL concept TLK_MORTAL required
+criterion TLK_BETRAYED concept TLK_BETRAYED required
+criterion TLK_ENEMY_DEAD concept TLK_ENEMY_DEAD required
+criterion TLK_HELP_ME concept TLK_HELP_ME required
+criterion TLK_MANY_ENEMIES concept TLK_MANY_ENEMIES required
+criterion TLK_ATTACKING concept TLK_ATTACKING required
+criterion TLK_MOBBED concept TLK_MOBBED required
+criterion TLK_STARTCOMBAT concept TLK_STARTCOMBAT required
+criterion TLK_DANGER concept TLK_DANGER required
+criterion TLK_PLHURT concept TLK_PLHURT required
+criterion TLK_PLHURT1 concept TLK_PLHURT1 required
+criterion TLK_PLHURT2 concept TLK_PLHURT2 required
+criterion TLK_PLHURT3 concept TLK_PLHURT3 required
+criterion TLK_STARE concept TLK_STARE required
+criterion TLK_LOOK concept TLK_LOOK required
+criterion TLK_JOINPLAYER concept TLK_JOINPLAYER required
+criterion TLK_PLAYER_KILLED_NPC concept TLK_PLAYER_KILLED_NPC required
+criterion TLK_HIDEANDRELOAD concept TLK_HIDEANDRELOAD required
+criterion TLK_NEWWEAPON concept TLK_NEWWEAPON required
+criterion TLK_NEW_ENEMY concept TLK_NEW_ENEMY required
+criterion TLK_ANSWER concept TLK_ANSWER required
+criterion TLK_QUESTION concept TLK_QUESTION required
+criterion TLK_HEAL concept TLK_HEAL required
+
+criterion TLK_LEAD_START concept TLK_LEAD_START required
+criterion TLK_LEAD_ATTRACTPLAYER concept TLK_LEAD_ATTRACTPLAYER required
+criterion TLK_LEAD_WAITOVER concept TLK_LEAD_WAITOVER required
+criterion TLK_LEAD_ARRIVAL concept TLK_LEAD_ARRIVAL required
+criterion TLK_LEAD_SUCCESS concept TLK_LEAD_SUCCESS required
+criterion TLK_LEAD_FAILURE concept TLK_LEAD_FAILURE required
+criterion TLK_LEAD_RETRIEVE concept TLK_LEAD_RETRIEVE required
+criterion TLK_LEAD_COMINGBACK concept TLK_LEAD_COMINGBACK required
+criterion TLK_LEAD_CATCHUP concept TLK_LEAD_CATCHUP required
+
+criterion TLK_HG_GREN concept TLK_HG_GREN required
+criterion TLK_HG_ALERT concept TLK_HG_ALERT required
+criterion TLK_HG_MONST concept TLK_HG_MONST required
+criterion TLK_HG_COVER concept TLK_HG_COVER required
+criterion TLK_HG_THROW concept TLK_HG_THROW required
+criterion TLK_HG_TAUNT concept TLK_HG_TAUNT required
+criterion TLK_HG_CHARGE concept TLK_HG_CHARGE required
+criterion TLK_HG_IDLE concept TLK_HG_IDLE required
+criterion TLK_HG_QUEST concept TLK_HG_QUEST required
+criterion TLK_HG_ANSWER concept TLK_HG_ANSWER required
+criterion TLK_HG_CLEAR concept TLK_HG_CLEAR required
+criterion TLK_HG_MEDIC concept TLK_HG_MEDIC required
+criterion TLK_HG_HURTARM concept TLK_HG_HURTARM required
+criterion TLK_HG_HURTLEG concept TLK_HG_HURTLEG required
+criterion TLK_HG_HEAR_COMBAT concept TLK_HG_HEAR_COMBAT required
+
+criterion TLK_FRIENDLYFIRE concept TLK_FRIENDLYFIRE required
+criterion TLK_DEATH concept TLK_DEATH required
+criterion TLK_PLYR_PHYSATK concept TLK_PLYR_PHYSATK required
+criterion TLK_NOSHOOT concept TLK_NOSHOOT required
+
+criterion Phase1 playersuit "0" required
+criterion Phase2 playersuit "1" required
+
+response NullResponse
+
+#include "talker/c1a0a_scenes.txt"
+#include "talker/c1a0b_scenes.txt"
+#include "talker/c1a1_scenes.txt"
+#include "talker/c1a2_scenes.txt"
+#include "talker/c1a3_scenes.txt"
+#include "talker/c1a4_scenes.txt"
+#include "talker/c2a1_scenes.txt"
+#include "talker/c2a3_scenes.txt"
+#include "talker/c2a4_scenes.txt"
+#include "talker/c2a5_scenes.txt"
+#include "talker/c3a1_scenes.txt"
+#include "talker/c3a2_scenes.txt"
+#include "talker/npc_human_grenadier.txt"
+#include "talker/npc_human_grunt.txt"
+#include "talker/npc_human_commander.txt"
+#include "talker/npc_human_medic.txt"
+#include "talker/npc_human_scientist.txt"
+#include "talker/npc_human_scientist_female.txt"
+#include "talker/npc_human_security.txt"
+#include "talker/npc_xort.txt"

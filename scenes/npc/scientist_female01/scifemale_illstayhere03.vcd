@@ -1,0 +1,118 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.illstayhere03"
+    {
+      time 0.400417 2.793660
+      param "NPC_Scifemale.illstayhere03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.038333 2.156250
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.6051 0.9931
+        1.7521 0.8403
+        1.9404 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.114583 2.547917
+      param "bg_accentup"
+      event_ramp
+      {
+        0.2905 0.3333
+        0.8667 0.3690
+        1.2143 0.2262
+        1.6333 0.1036
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Interested01"
+    {
+      time 0.373789 1.373789
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Interested01"
+      event_ramp
+      {
+        0.3238 0.5100
+        0.7143 0.5159
+      }
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.425872 2.725872
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.1429 0.5266
+        0.3667 0.6564
+        1.0429 0.6316
+        1.6286 0.4026
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.597285
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

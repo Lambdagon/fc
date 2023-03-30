@@ -1,0 +1,157 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.onfire04"
+    {
+      time 0.186667 5.188096
+      param "NPC_hgrunt.onfire04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Mouth flaps of horror"
+    {
+      time 0.245791 0.730640
+      param ""
+      event_ramp
+      {
+        0.0663 0.9939
+        0.4229 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "jaw_drop" 
+        {
+          0.0536 1.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.0536 1.0000
+        }
+        {
+          0.0536 0.5000
+        }
+      }
+    }
+    event flexanimation "Mouth flaps of horror"
+    {
+      time 0.566498 1.177610
+      param ""
+      event_ramp
+      {
+        0.0663 0.9939
+        0.5491 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "jaw_drop" 
+        {
+          0.0536 1.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.0536 1.0000
+        }
+        {
+          0.0536 0.5000
+        }
+      }
+    }
+    event flexanimation "Mouth flaps of horror"
+    {
+      time 1.142255 1.967653
+      param ""
+      event_ramp
+      {
+        0.0663 0.9939
+        0.7634 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "jaw_drop" 
+        {
+          0.0536 1.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.0536 1.0000
+        }
+        {
+          0.0536 0.5000
+        }
+      }
+    }
+    event flexanimation "Mouth flaps of horror"
+    {
+      time 1.883598 3.895143
+      param ""
+      event_ramp
+      {
+        0.0663 0.9939
+        1.9495 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "jaw_drop" 
+        {
+          0.2108 0.5900
+          0.4757 1.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.2270 0.8900
+          0.4757 1.0000
+        }
+        {
+          0.4757 0.5000
+        }
+      }
+    }
+    event flexanimation "Mouth flaps of horror"
+    {
+      time 3.445286 5.556398
+      param ""
+      event_ramp
+      {
+        0.0663 0.9939
+        2.0491 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "jaw_drop" 
+        {
+          0.3162 0.8800
+          0.7506 1.0000
+        }
+        "mouth_drop" combo 
+        {
+          0.3000 0.9700
+          0.7506 1.0000
+        }
+        {
+          0.7506 0.5000
+        }
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "RampTool" "160"
+  "ExpressionTool" "74"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

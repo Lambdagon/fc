@@ -1,0 +1,127 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 2.936275 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre22"
+    {
+      time 0.568206 2.868206
+      param "NPC_Scimale.question_pre22"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.010850 4.061613
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        3.4005 0.9805
+        3.7065 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_afraid00"
+    {
+      time 0.349343 0.920772
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.1872 0.2774
+        0.3468 0.3955
+        0.4234 0.2397
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.836862 3.789476
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.4130 0.2692
+        0.6125 0.5738
+        1.4442 0.4758
+        2.2685 0.5183
+        2.7007 0.2420
+      }
+    }
+    event expression "sci_sudden01"
+    {
+      time 1.730533 2.730533
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sudden01"
+      event_ramp
+      {
+        0.4907 0.5360
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event face "Face !friend"
+    {
+      time 0.024183 3.879738
+      param "!friend"
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.096604 2.359153
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3722 0.1760
+        0.6429 0.2551
+        1.4006 0.1724
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.134435
+        "extreme" 0.328621
+        "loop" 0.505263
+        "end" 0.689474
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "12"
+  "SceneRampTool" "100"
+  "RampTool" "32"
+  "CChoreoView" "136"
+}
+fps 60
+snap off
+ignorePhonemes off

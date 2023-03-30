@@ -1,0 +1,76 @@
+// Choreo version 1
+actor "GRD00_Door"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd00.struggles02"
+    {
+      time 0.039203 3.189838
+      param "uc.grd00.struggles02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "look at !self"
+    {
+      time 0.019380 3.484496
+      param "!self"
+      event_ramp
+      {
+        0.0800 0.7338
+        0.1505 1.0000
+        3.1109 1.0000
+        3.1955 0.7013
+        3.3005 0.3117
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.013480 3.452358
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1378 0.1871
+        0.4378 0.9402
+        1.8925 0.9870
+        2.0000 0.4545
+        2.2450 0.9675
+        3.1983 0.2310
+      }
+    }
+    event expression "b_sudden01"
+    {
+      time 0.027164 3.417776
+      param "humans\guard\expressions_guard"
+      param2 "b_sudden01"
+      event_ramp
+      {
+        0.2081 0.9620
+        3.0987 0.9678
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "172"
+  "ExpressionTool" "46"
+  "GestureTool" "100"
+  "RampTool" "80"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

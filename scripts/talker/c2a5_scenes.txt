@@ -1,0 +1,109 @@
+criterion IsSTe "map" "bm_c2a5e" required
+criterion IsSTf "map" "bm_c2a5f" required
+
+//========================================================
+//ORDNANCE STORAGE
+//========================================================
+criterion IsSCI1ordnance name "Sci01_Ordnance" required
+
+response Sci1_Ordnance_Interact
+{
+   sequential
+   norepeat
+   scene "scenes/c2a5e/sci01_ordnancestorage_idle01.vcd"
+   scene "scenes/c2a5e/sci01_ordnancestorage_idle02.vcd"
+   scene "scenes/c2a5e/sci01_ordnancestorage_idle03.vcd"
+}
+
+rule Sci1_Ordnance_Interact
+{
+   criteria TLK_USE IsSCI1ordnance IsSTe
+   response Sci1_Ordnance_Interact
+}
+
+
+//========================================================
+//HIVE HAND RESPONSES
+//========================================================
+criterion IsGRDbundy name "GRD02_HiveHand" required
+criterion PlayerHasHiveHand "hivegoatse" "1" required
+
+response GRDbundy_HiveHand_Response
+{
+   norepeat
+   scene "scenes/c2a5e/grd02_hivehand01.vcd"
+   scene "scenes/c2a5e/grd02_hivehand02.vcd"
+//   scene "scenes/c2a5e/grd02_hivehand03.vcd"
+   scene "scenes/c2a5e/grd02_hivehand04.vcd"
+   scene "scenes/c2a5e/grd02_hivehand05.vcd"
+   scene "scenes/c2a5e/grd02_hivehand06.vcd"
+   scene "scenes/c2a5e/grd02_hivehand07.vcd"
+}
+
+rule GRDbundy_HiveHand_Response
+{
+   criteria TLK_IDLE IsSTe PlayerHasHiveHand IsGRDbundy NotProvoked NoRecentCombat SeenByPlayer IsPlayerClose
+   response GRDbundy_HiveHand_Response
+}
+
+//========================================================
+//HIVE HAND GRD RESPONSES when SAFE
+//========================================================
+criterion HiveHandGrdSafe "hivehandgrdlives" "1" required
+
+response GrdHiveHand_Lives_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c2a5f/hivehandgrd_safeidle01.vcd"
+   scene "scenes/c2a5f/hivehandgrd_safeidle02.vcd"
+   scene "scenes/c2a5f/hivehandgrd_safeidle03.vcd"
+   scene "scenes/c2a5f/hivehandgrd_safeidle04.vcd"
+}
+
+rule GrdHiveHand_Lives_Idle
+{
+  criteria TLK_USE IsGRDBundy HiveHandGrdSafe IsSTf
+  response GrdHiveHand_Lives_Idle
+}
+
+//========================================================
+//HIVE HAND GRD RESPONSES when near turret in map
+//========================================================
+criterion GrdTurretDanger "turretdanger" "1" required
+
+response GrdHiveHand_TurretDanger_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/npc/security/headcrab01.vcd"
+   scene "scenes/npc/security/watchout01.vcd"
+}
+
+rule GrdHiveHand_TurretDanger_Idle
+{
+  criteria TLK_USE IsGRDBundy GrdTurretDanger IsSTf
+  response GrdHiveHand_TurretDanger_Idle
+}
+
+//========================================================
+//   MotherLodeIdles
+//========================================================
+criterion IsGrdLode name "c2a5f_barney" required
+criterion MothLodeIdle "lodeidle" "1" required
+
+response Lode_Idle
+{
+	sequential
+	norepeat
+	scene "scenes/c2a5f/grd03_motherlode_idle01.vcd"
+	scene "scenes/c2a5f/grd03_motherlode_idle02.vcd"
+	scene "scenes/c2a5f/grd03_motherlode_idle03.vcd"
+	scene "scenes/c2a5f/grd03_motherlode_idle04.vcd"
+}
+
+rule Lode_Idle
+{
+	criteria TLK_USE IsGrdLode MothLodeIdle IsSTf
+	response Lode_Idle
+}

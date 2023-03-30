@@ -1,0 +1,141 @@
+// Choreo version 1
+actor "SCI14_Research"
+{
+  channel "Voice"
+  {
+    event speak "am.sci14.whatsymbolisthat01"
+    {
+      time 0.173333 2.009229
+      param "am.sci14.whatsymbolisthat01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.sci14.nothisone01"
+    {
+      time 3.093333 4.231269
+      param "am.sci14.nothisone01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_point_l"
+    {
+      time 2.930555 4.997222
+      param "g_point_l"
+      absolutetags playback_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      sequenceduration 2.066667
+    }
+    event gesture "g_frustrated_point_l"
+    {
+      time 0.064815 3.295371
+      param "g_frustrated_point_l"
+      absolutetags playback_time
+      {
+        "in" 0.052410
+        "loop" 0.398313
+        "end" 0.461205
+        "out" 0.876791
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.079365
+        "loop" 0.603175
+        "end" 0.698413
+        "out" 0.857143
+      }
+      sequenceduration 2.133333
+    }
+  }
+  channel "Look"
+  {
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+actor "SCI13_Research"
+{
+  channel "Voice"
+  {
+    event speak "am.sci13.thatone01"
+    {
+      time 2.153333 2.832857
+      param "am.sci13.thatone01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.sci13.smudge01"
+    {
+      time 4.346667 6.143129
+      param "am.sci13.smudge01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "Point to symbol"
+    {
+      time 1.386667 5.353333
+      param "g_whiteboard_point01"
+      absolutetags playback_time
+      {
+        "apex" 0.244237
+        "loop" 0.254237
+        "accent" 0.508475
+        "end" 0.762712
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.254237
+        "loop" 0.254237
+        "accent" 0.508475
+        "end" 0.762712
+      }
+      sequenceduration 3.966666
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at SCI14"
+    {
+      time 4.337963 6.222222
+      param "SCI14_Research"
+    }
+  }
+  faceposermodel "models\humans\marine.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

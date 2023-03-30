@@ -1,0 +1,49 @@
+// Choreo version 1
+actor "SCI01_Sniper"
+{
+  channel "Voice"
+  {
+    event speak "st.sci02.sniper.heeelllp01"
+    {
+      time 4.322639 5.642639
+      param "st.sci02.sniper.heeelllp01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.sci02.sniper.startled01"
+    {
+      time 0.136111 1.155023
+      param "st.sci02.sniper.startled01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.sci02.sniper.startled02"
+    {
+      time 2.282361 3.025490
+      param "st.sci02.sniper.startled02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

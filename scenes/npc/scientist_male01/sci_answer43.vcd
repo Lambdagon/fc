@@ -1,0 +1,109 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre43"
+    {
+      time 0.446666 2.166031
+      param "NPC_Scimale.answer_pre43"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 2.946008
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.1863 0.9931
+        2.5565 0.7183
+        2.7447 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "fa"
+    {
+      time 0.000000 2.850000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.5071 0.6300
+          1.5643 0.7600
+          2.4786 0.5900
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.4607 0.5600
+          1.3786 0.5700
+          2.2929 0.5900
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8357 0.5300
+          1.1429 0.5000
+          1.2071 0.4400
+          1.6107 0.5000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3179 0.3900
+          2.3679 0.3700
+        }
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event gesture "hands"
+    {
+      time 0.000000 2.033333
+      param "G_what"
+      absolutetags playback_time
+      {
+        "apex" 0.505597
+        "accent" 0.565298
+        "loop" 0.666045
+        "end" 0.753731
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+  }
+  channel "Accent"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "176"
+  "RampTool" "54"
+  "SceneRampTool" "100"
+  "ExpressionTool" "56"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

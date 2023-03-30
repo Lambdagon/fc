@@ -1,0 +1,97 @@
+// Choreo version 1
+actor "SCI21_Lab01"
+{
+  channel "Voice"
+  {
+    event speak "am.sci21.youthwasted01"
+    {
+      time 0.733334 4.508708
+      param "am.sci21.youthwasted01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look At Player"
+    {
+      time 0.199999 6.100000
+      param "!player"
+      event_ramp
+      {
+        0.4700 0.6870
+        0.9840 0.8188
+        2.9267 0.8841
+        4.8667 0.8551
+        5.4350 0.6604
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Smirk"
+    {
+      time 2.966667 6.333333
+      param "common_expressions"
+      param2 "Smirk"
+      event_ramp
+      {
+        0.6720 1.0000
+        3.0400 1.0000
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "p_fingerpointup"
+    {
+      time -2.800000 -0.500000
+      param "p_fingerpointup"
+      absolutetags playback_time
+      {
+        "apex" 0.367647
+        "loop" 0.588235
+        "end" 0.602941
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.367647
+        "loop" 0.588235
+        "end" 0.602941
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "p_fingerpointup"
+    {
+      time 2.866667 5.166667
+      param "p_fingerpointup"
+      absolutetags playback_time
+      {
+        "apex" 0.367647
+        "loop" 0.588235
+        "end" 0.602941
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.367647
+        "loop" 0.588235
+        "end" 0.602941
+      }
+      sequenceduration 2.300000
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "RampTool" "30"
+  "CChoreoView" "20"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

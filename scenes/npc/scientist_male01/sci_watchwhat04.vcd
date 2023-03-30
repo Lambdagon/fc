@@ -1,0 +1,156 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.watchwhat04"
+    {
+      time 0.513333 3.393333
+      param "NPC_Scimale.watchwhat04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026667 4.493333
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        3.7304 0.9931
+        4.1006 0.7183
+        4.2888 0.2222
+      }
+    }
+    active "0"
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.040000 4.486667
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.4692 0.6707
+        4.1323 0.6463
+      }
+    }
+    event expression "Tough1"
+    {
+      time 0.466667 3.560000
+      param "humans\marine\marine"
+      param2 "Tough1"
+      event_ramp
+      {
+        0.1385 0.2683
+        1.4154 0.3659
+        2.2538 0.3049
+        2.4462 0.5976
+        2.7692 0.5976
+        2.9308 0.2561
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.022436 4.476325
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.3571 0.5100
+          1.9875 0.6000
+          2.2053 0.9000
+          2.4571 0.9000
+          2.8714 0.2600
+          3.6125 0.2500
+          4.2250 0.5100
+        }
+      }
+    }
+  }
+  channel "Accent"
+  {
+    event gesture "accent up"
+    {
+      time 0.973333 4.286666
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.6462 0.3902
+        1.9390 0.4268
+        2.3257 0.0975
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.203219
+        "extreme" 0.390342
+        "loop" 0.587078
+        "end" 0.689079
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    active "0"
+  }
+  channel "Gesture"
+  {
+    event gesture "accent forward"
+    {
+      time 1.993333 4.426667
+      param "bg_accentFwd"
+      event_ramp
+      {
+        0.3385 0.0610
+        0.8769 0.5976
+        1.6769 0.5854
+        2.3308 0.3171
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    active "0"
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "16"
+  "SceneRampTool" "100"
+  "RampTool" "26"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

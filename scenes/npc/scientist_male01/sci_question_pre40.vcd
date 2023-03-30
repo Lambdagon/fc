@@ -1,0 +1,152 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 3.636492 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre40"
+    {
+      time 0.572042 3.547915
+      param "NPC_Scimale.question_pre40"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.014686 4.860463
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        4.1955 0.9805
+        4.5015 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 1.818357 3.329468
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.9571 0.9941
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 0.094686 1.650241
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.8286 0.2043
+        1.1762 0.4758
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 1.793237 2.337681
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.2981 0.7060
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 3.750573 4.750573
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2667 0.4923
+        0.7333 0.4758
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.405797 1.405797
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1676 0.1122
+        0.3441 0.3955
+        0.5882 0.1865
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event expression "sci_smile_sly_lefty_alt01"
+    {
+      time 1.905158 4.551293
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_smile_sly_lefty_alt01"
+      event_ramp
+      {
+        0.5222 0.1311
+        1.7915 0.9634
+        2.2497 0.6482
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 1.584455 3.847004
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3722 0.3130
+        0.6429 0.4900
+        1.4006 0.3094
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.134435
+        "extreme" 0.328621
+        "loop" 0.505263
+        "end" 0.689474
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "212"
+  "RampTool" "36"
+  "SceneRampTool" "100"
+  "ExpressionTool" "24"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

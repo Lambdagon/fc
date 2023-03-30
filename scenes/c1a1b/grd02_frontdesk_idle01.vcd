@@ -1,0 +1,116 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd06.lobby.emergency_hellohello01"
+    {
+      time 0.617777 2.818094
+      param "uc.grd06.lobby.emergency_hellohello01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_anyoneouthere01"
+    {
+      time 3.132928 4.523314
+      param "uc.grd06.lobby.emergency_anyoneouthere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_browup01"
+    {
+      time 0.097403 1.097403
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.2444 0.1491
+        0.4333 0.5673
+        0.6111 0.1871
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.638528 5.233767
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.2944 0.8830
+        1.5875 0.7485
+        2.2500 0.5556
+        4.3750 0.6433
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 0.333333 5.350649
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2333 0.3012
+        0.5750 0.4386
+        1.4833 0.4327
+        1.9889 0.3860
+        2.5111 0.4006
+        3.0641 0.4503
+        3.4413 0.6667
+        4.2635 0.5994
+        4.4919 0.2368
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.045189 5.196704
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.1420 0.2900
+          0.1560 0.3000
+          1.6375 0.4400
+          2.2125 0.3400
+          2.9000 0.4900
+          3.2500 0.5200
+          3.3375 0.2600
+          3.9250 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.1040 0.3800
+          0.1900 0.1700
+          0.3780 0.4100
+          1.0625 0.2900
+          1.4125 0.6500
+          2.0750 0.4700
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+  "RampTool" "18"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

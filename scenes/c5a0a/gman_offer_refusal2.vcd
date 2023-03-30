@@ -1,0 +1,237 @@
+// Choreo version 1
+actor "Gman"
+{
+  channel "Sound"
+  {
+    event speak "endgame.gman.noregrets01"
+    {
+      time 3.050000 7.450000
+      param "endgame.gman.noregrets02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at player"
+    {
+      time 1.100000 8.666667
+      param "player"
+      event_ramp
+      {
+        0.3067 0.5368
+        0.7933 0.6564
+        1.0800 0.6917
+        1.3233 0.6917
+        6.1311 0.6917
+        6.3311 0.6887
+        6.5744 0.6595
+        7.0078 0.5475
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+  channel "Gestures"
+  {
+    event firetrigger "16- TELEPORT PLAYER TO DEATH ARENA"
+    {
+      time 11.816667 -1.000000
+      param "16"
+    }
+    event gesture "HG_headback"
+    {
+      time 5.850000 8.683333
+      param "HG_headback"
+      absolutetags playback_time
+      {
+        "apex" 0.215301
+        "extreme" 0.299029
+        "loop" 0.358835
+        "end" 0.598059
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "G_tiefidget"
+    {
+      time 7.283333 10.250000
+      param "G_tiefidget"
+      absolutetags playback_time
+      {
+        "apex" 0.238636
+        "accent" 0.468636
+        "loop" 0.478636
+        "end" 0.488636
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.238636
+        "accent" 0.477273
+        "loop" 0.488636
+        "end" 0.488636
+      }
+      sequenceduration 2.966667
+    }
+    event gesture "HG_headforward"
+    {
+      time 3.166667 6.116667
+      param "HG_headforward"
+      event_ramp
+      {
+        0.1976 0.4141
+        0.4000 0.6719
+        0.4738 0.6875
+        1.2833 0.6953
+        1.8667 0.7031
+        2.1929 0.6969
+        2.2929 0.6672
+        2.5405 0.4031
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.283019
+        "extreme" 0.510552
+        "loop" 0.567464
+        "end" 0.795115
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Head Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 1.816667 9.183333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          1.2111 0.2400
+          1.7444 0.6300
+          2.4000 0.3400
+          2.9833 0.3500
+          3.6500 0.6017
+          3.9167 0.6000
+          4.2333 0.3200
+          4.6667 0.3200
+          5.4333 0.9300
+          6.4000 0.7800
+        }
+        {
+          1.7444 0.5000
+          3.7444 0.5000
+          5.4278 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          4.3833 0.0688
+          4.7333 0.2800
+          5.4333 0.3200
+        }
+        {
+          5.4278 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          1.2167 0.0800
+          1.6000 0.6400
+          1.9667 0.6900
+          2.3833 0.0400
+          4.3833 0.0611
+          4.7833 0.4600
+          5.4278 0.5600
+        }
+        {
+          5.4278 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.5833 0.0000
+          1.7500 0.0000
+          2.6500 0.1300
+          3.1500 0.4400
+          3.6667 0.4500
+          4.0500 0.0300
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.6333 0.6400
+          1.1833 0.5600
+          1.7500 0.2100
+          2.2333 0.2100
+          2.6500 0.2100
+          2.9333 0.4800
+          3.7500 0.5140
+          4.3333 0.1200
+          5.4333 0.0000
+        }
+        {
+          1.7444 0.3100
+          3.7444 0.3602
+          5.4278 0.3100
+        }
+        "wrinkler" 
+        {
+          5.4278 0.0000
+        }
+        "corner_puller" combo 
+        {
+          0.6833 0.5000
+          1.1667 0.2900
+          1.6278 0.1500
+          2.2167 0.1300
+          3.2833 0.2900
+          3.7333 0.2500
+          5.4278 0.1500
+        }
+        {
+          1.1778 0.4000
+          2.8111 0.5100
+          3.7778 0.4964
+          5.4278 0.5000
+        }
+      }
+    }
+  }
+  channel "Facial Flex"
+  {
+  }
+  faceposermodel "models\gman_high.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "26"
+  "ExpressionTool" "18"
+  "RampTool" "28"
+  "CChoreoView" "24"
+}
+fps 60
+snap on
+ignorePhonemes off

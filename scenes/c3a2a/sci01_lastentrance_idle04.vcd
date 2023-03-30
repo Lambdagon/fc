@@ -1,0 +1,144 @@
+// Choreo version 1
+actor "SCI01_LastLambdaEntrance"
+{
+  channel "Voice"
+  {
+    event speak "sci01_idle_overcomethesebeasts01.wav"
+    {
+      time 0.358268 3.987384
+      param "vo\c3a2a\LastEntrance\sci01_idle_overcomethesebeasts01.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "sci01_idle_overcomethesebeasts02.wav"
+    {
+      time 4.333313 6.733313
+      param "vo\c3a2a\LastEntrance\sci01_idle_overcomethesebeasts02.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_sudden01"
+    {
+      time 0.287879 4.666667
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sudden01"
+      event_ramp
+      {
+        0.5333 0.9274
+        3.5933 0.8468
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 4.454546 7.621212
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.4533 0.9597
+        2.6515 0.9194
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentFwd"
+    {
+      time 0.318182 2.751515
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "g_fist"
+    {
+      time 2.863636 5.163636
+      param "g_fist"
+      absolutetags playback_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.741722
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_headshake"
+    {
+      time 5.651515 7.284848
+      param "hg_headshake"
+      absolutetags playback_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.060606 4.727273
+      param "!player"
+    }
+  }
+  channel "Face at"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "FireTrigger"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "SceneRampTool" "100"
+  "RampTool" "30"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

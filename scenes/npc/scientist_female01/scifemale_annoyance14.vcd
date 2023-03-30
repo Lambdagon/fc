@@ -1,0 +1,153 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scifemale.annoyance14"
+    {
+      time 0.726130 4.800574
+      param "NPC_Scifemale.annoyance14"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.097094 6.792927
+      param "!player"
+      event_ramp
+      {
+        0.3083 0.3030
+        0.4284 0.5514
+        0.6074 0.6730
+        0.9633 0.7745
+        3.3500 0.8949
+        5.4389 0.7745
+        5.8145 0.6458
+        6.0916 0.4320
+        6.2896 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_buckup"
+    {
+      time 0.739316 2.822649
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_buckup"
+      event_ramp
+      {
+        0.3714 0.4734
+        0.7000 0.6045
+        1.3556 0.6423
+      }
+    }
+    event gesture "hg_nod_no"
+    {
+      time 2.993590 5.806089
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.6167 0.2149
+        1.3333 0.2886
+        2.1667 0.2273
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.060118
+        "extreme" 0.132260
+        "loop" 0.348685
+        "end" 0.592593
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event expression "SciFem_dubious right"
+    {
+      time 2.118590 4.868589
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_dubious right"
+      event_ramp
+      {
+        0.5083 0.5112
+        2.2875 0.6434
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.145833 2.020833
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.4000 0.4687
+        1.1833 0.5148
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "flex10"
+    {
+      time 0.044871 6.933760
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5714 0.5100
+          1.1000 0.5300
+          1.5000 0.6202
+          2.2143 0.6047
+          2.5143 0.5300
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3714 0.4900
+          1.1000 0.5700
+          1.2857 0.7000
+          2.1143 0.7700
+          2.3429 0.7000
+          2.6857 0.5800
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.4714 0.4800
+          0.9571 0.4600
+          1.5857 0.3200
+          2.2429 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.6857 0.5100
+          1.3883 0.5300
+          2.1104 0.4900
+          2.5714 0.5000
+          2.9143 0.5000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "14"
+  "SceneRampTool" "100"
+  "RampTool" "14"
+  "CChoreoView" "48"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,46 @@
+// Choreo version 1
+actor "Hgrunt01"
+{
+  channel "Movement"
+  {
+    event moveto "Moveto Sci04"
+    {
+      time 0.913333 4.885797
+      param "Sci04"
+      param2 "Walk"
+      distancetotarget 3.00
+    }
+    event moveto "Moveto Sci04"
+    {
+      time 0.033333 1.053334
+      param "Sci04"
+      param2 "Run"
+      distancetotarget 20.00
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Firetrigger Kill"
+    {
+      time 0.793334 -1.000000
+      param "1"
+    }
+    event firetrigger "Firetrigger Flee"
+    {
+      time 1.340000 -1.000000
+      param "2"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

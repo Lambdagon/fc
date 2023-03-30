@@ -1,0 +1,155 @@
+// Choreo version 1
+event stoppoint "Fire"
+{
+  time 6.505951 -1.000000
+  param "noaction"
+}
+actor "h_hangar_guard"
+{
+  channel "Voice"
+  {
+    event speak "st.grd.hangar.outside.downtoright01"
+    {
+      time 1.307541 2.607541
+      param "st.grd.hangar.outside.downtoright01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event firetrigger "-16 Spawn The First Wave of Xenians"
+    {
+      time 7.519180 -1.000000
+      param "16"
+    }
+    event speak "st.grd.hangar.outside.ahshit01"
+    {
+      time 8.723648 9.623648
+      param "st.grd.hangar.outside.ahshit01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd.hangar.outside.downtoright02"
+    {
+      time 3.521827 5.931396
+      param "st.grd.hangar.outside.downtoright02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expressions"
+  {
+    event gesture "g_point_l_rpg"
+    {
+      time 3.005952 5.329761
+      param "g_point_l_rpg"
+      event_ramp
+      {
+        0.4487 0.7759
+        1.1077 0.8168
+        1.3333 0.7069
+      }
+      absolutetags playback_time
+      {
+        "in" 0.226646
+        "loop" 0.518478
+        "end" 0.664394
+        "out" 0.810309
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.603448
+        "out" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Flex Animations"
+  {
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 2.803572
+      param "!self"
+    }
+    event lookat "Look at grd_endface01"
+    {
+      time 4.071428 6.116071
+      param "grd_endface01"
+      event_ramp
+      {
+        0.4795 1.0000
+        2.0446 1.0000
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 2.479166 4.491071
+      param "!player"
+      event_ramp
+      {
+        0.3615 0.6482
+        0.6667 0.8960
+        1.6638 0.6681
+      }
+    }
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto grd_endface01"
+    {
+      time 0.000000 1.616467
+      param "grd_endface01"
+      param2 "Run"
+      distancetotarget 200.00
+      forceshortmovement
+    }
+    event moveto "Moveto grd_endface01"
+    {
+      time 4.838142 7.827776
+      param "grd_endface01"
+      param2 "Run"
+      distancetotarget 200.00
+      forceshortmovement
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face grd_endface01"
+    {
+      time 3.125000 5.386905
+      param "grd_endface01"
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Firetrigger 15 - ungag and stopscripting for grd fight"
+    {
+      time 1.159098 -1.000000
+      param "15"
+    }
+  }
+  channel "Triggers For Sound"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "RampTool" "78"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

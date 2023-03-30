@@ -1,0 +1,80 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.pain09"
+    {
+      time 0.121730 0.309508
+      param "NPC_Security.pain09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_blink01"
+    {
+      time 0.045855 0.196208
+      param "humans\guard\expressions_guard"
+      param2 "b_blink01"
+      event_ramp
+      {
+        0.0651 0.9929
+      }
+    }
+    event expression "b_afraid01"
+    {
+      time 0.170815 0.485630
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid01"
+      event_ramp
+      {
+        0.0613 0.4002
+        0.0962 0.8229
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.256173 0.493827
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.0477 0.2208
+        0.1768 0.2963
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.025854 0.746410
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.0671 0.2800
+          0.1960 0.8500
+          0.3656 0.8900
+          0.4660 0.4200
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "34"
+  "CChoreoView" "216"
+  "GestureTool" "100"
+  "RampTool" "264"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

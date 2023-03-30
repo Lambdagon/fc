@@ -1,0 +1,192 @@
+// Choreo version 1
+actor "GRD02_Shack"
+{
+  channel "Voice"
+  {
+    event speak "oar.grd02.silo.eatleadyoubastards01"
+    {
+      time 6.941558 8.816569
+      param "oar.grd02.silo.eatleadyoubastards01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 3.620852 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 4.370579 -1.000000
+      param "1"
+    }
+  }
+  channel "Move"
+  {
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 8.787787 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 4.948501 -1.000000
+      param "1"
+    }
+    event firetrigger "1 - Fire Shotgun"
+    {
+      time 9.506834 -1.000000
+      param "1"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 0.058738 1.550461
+      param "NPC_hgrunt.taunt_special03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 4.335133 4.840530
+      param "NPC_hgrunt.pain10"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Trigger 3 (Start SHOOTING)"
+    {
+      time 3.150793 -1.000000
+      param "3"
+    }
+    event firetrigger "Trigger 3 (Start SHOOTING)"
+    {
+      time 0.294444 -1.000000
+      param "3"
+    }
+  }
+  channel "Flex"
+  {
+    event firetrigger "STOP SHOOTING"
+    {
+      time 4.200995 -1.000000
+      param "4"
+    }
+    event firetrigger "STOP SHOOTING"
+    {
+      time 1.134076 -1.000000
+      param "4"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "topsidemarine2"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.alert12_var03"
+    {
+      time 9.117740 11.178851
+      param "NPC_hgrunt.taunt09_var03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event firetrigger "13 - trigger the marine 1's death"
+    {
+      time 4.896197 -1.000000
+      param "13"
+    }
+  }
+  channel "Expression"
+  {
+    event firetrigger "Firetrigger 14"
+    {
+      time 4.887148 -1.000000
+      param "14"
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+    event firetrigger "Trigger Bulleye For Grd Fire At (START)"
+    {
+      time 11.255713 -1.000000
+      param "5"
+    }
+    event firetrigger "Trigger Bulleye For Grd Fire At (START)"
+    {
+      time 2.922381 -1.000000
+      param "5"
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Trigger Bulleye For Marine to Fire at (Stop)"
+    {
+      time 4.283713 -1.000000
+      param "6"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "44"
+  "CChoreoView" "20"
+}
+fps 60
+snap off
+ignorePhonemes off

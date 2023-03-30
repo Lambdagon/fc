@@ -1,0 +1,121 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.watchwhat05"
+    {
+      time 0.513333 2.308208
+      param "NPC_Scimale.watchwhat05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026667 3.266667
+      param "!player"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.5037 0.9931
+        2.8739 0.7183
+        3.0621 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Angry ShockM"
+    {
+      time 0.509801 3.266667
+      param "common_expressions"
+      param2 "Angry ShockM"
+      event_ramp
+      {
+        1.0384 1.0000
+        1.9169 0.9878
+        2.0784 0.5976
+        2.4221 0.2073
+      }
+    }
+    event expression "Pissed Off"
+    {
+      time 0.040000 3.273334
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.4692 0.6707
+        2.9189 0.6463
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.022436 3.269658
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.3571 0.5100
+          0.5429 0.6600
+          1.1929 0.6700
+          1.3143 0.3900
+          1.4357 0.4200
+          1.5428 0.8400
+          2.2500 0.8400
+          2.8714 0.5000
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent up"
+    {
+      time 0.886666 3.273333
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.1231 0.3902
+        2.3221 0.3902
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.146997
+        "extreme" 0.312850
+        "loop" 0.585972
+        "end" 0.727576
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

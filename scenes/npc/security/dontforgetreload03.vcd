@@ -1,0 +1,153 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.dontforgetreload03"
+    {
+      time 0.515953 1.571758
+      param "NPC_Security.dontforgetreload03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 2.173944
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        1.5736 0.9512
+        1.8491 0.3778
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 0.186426 1.630570
+      param "bg_down"
+      event_ramp
+      {
+        0.0924 0.2421
+        0.3528 0.2905
+        0.5841 0.1830
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.117398
+        "extreme" 0.328716
+        "loop" 0.536003
+        "end" 0.707399
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_browup01"
+    {
+      time 0.316507 0.560629
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1177 0.9965
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.732899 1.657869
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.0409 0.2149
+        0.1212 0.4357
+        0.7672 0.4309
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex_nod"
+    {
+      time 0.433076 1.068211
+      param ""
+      event_ramp
+      {
+        0.0889 0.9965
+        0.3250 0.9976
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3648 0.1900
+        }
+      }
+    }
+    event flexanimation "flex_nod"
+    {
+      time 0.873553 1.597973
+      param ""
+      event_ramp
+      {
+        0.1306 0.9965
+        0.6167 0.9988
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2513 0.4700
+          0.4541 0.3900
+          0.6333 0.4700
+        }
+        "lid_tightener" combo 
+        {
+          0.1920 0.3100
+          0.3200 0.3200
+          0.4420 0.2200
+        }
+        {
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.1140 0.4400
+          0.2440 0.2700
+          0.3460 0.3500
+          0.4200 0.4400
+        }
+      }
+    }
+  }
+  channel "voice"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "RampTool" "72"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

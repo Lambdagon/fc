@@ -1,0 +1,51 @@
+// Choreo version 1
+actor "GRD01_Storage"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Security.startle_ohshit02"
+    {
+      time 0.424242 1.823902
+      param "NPC_Security.gotone06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at self"
+    {
+      time 0.181818 4.242424
+      param "self"
+    }
+  }
+  channel "Triggers"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Face At"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "78"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

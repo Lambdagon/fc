@@ -1,0 +1,69 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 3.552248 -1.000000
+  param "noaction"
+}
+actor "silo_man5"
+{
+  channel "Voice"
+  {
+    event speak "app.hgrunt01.whereishe01"
+    {
+      time 0.430955 1.430955
+      param "app.hgrunt01.whereishe01"
+      param2 "0.650"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event interrupt "Interrupt if player hurts them"
+    {
+      time 0.000000 3.957010
+      param ""
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  faceposermodel "models\humans\marine.mdl"
+}
+
+actor "silo_man6"
+{
+  channel "Voice"
+  {
+    event speak "app.hgrunt02.suitweighs01"
+    {
+      time 1.838097 3.409752
+      param "app.hgrunt02.suitweighs01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "24"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "40"
+}
+fps 60
+snap off
+ignorePhonemes off

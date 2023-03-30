@@ -1,0 +1,240 @@
+// Choreo version 1
+actor "sci_pulling"
+{
+  channel "Dialog"
+  {
+    event speak "uc.sci_pulled.pullmeout01"
+    {
+      time -0.014394 3.303202
+      param "uc.sci_pulled.pullmeout01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "AUDIO"
+  {
+    event speak "Sci_ventpull.sfx"
+    {
+      time 0.100000 4.824331
+      param "Sci_ventpull.sfx"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthopen"
+    {
+      time 0.003369 4.052389
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthopen"
+      event_ramp
+      {
+        0.1460 0.9941
+        3.3951 0.9893
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.439304 4.188215
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3070 0.9988
+        1.1800 0.9870
+        1.2900 0.0897
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "crazy fear"
+    {
+      time 0.152778 2.833333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.6486 1.0000
+          1.0652 1.0000
+        }
+        {
+          0.6486 0.5000
+          1.0652 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.6486 0.1700
+          1.0652 0.0900
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.6486 0.5900
+          1.0652 0.4000
+        }
+      }
+    }
+    active "0"
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Trigger2-Sci Screaming"
+    {
+      time 4.451419 -1.000000
+      param "2"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "sci_pulled"
+{
+  channel "Dialog"
+  {
+    event speak "uc.sci_pulling.aah"
+    {
+      time 3.461894 5.150171
+      param "uc.sci_pulling.aah"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_pulling.Icant"
+    {
+      time 0.179001 3.117663
+      param "uc.sci_pulling.Icant"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_pulling.deathgroan"
+    {
+      time 5.473557 7.562582
+      param "uc.sci_pulling.deathgroan"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 2.758749 6.507660
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3070 0.9988
+        1.1800 0.9870
+        1.2900 0.0897
+      }
+    }
+    event expression "sci_mouth_opened01"
+    {
+      time 4.807225 5.340993
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_mouth_opened01"
+      event_ramp
+      {
+        0.1460 0.9894
+        0.3249 0.9858
+        0.3975 0.0366
+      }
+    }
+    event expression "sci_wincing02"
+    {
+      time 4.170852 5.170852
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing02"
+    }
+    event expression "sci_mouth_opened01"
+    {
+      time 3.248401 4.674327
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_mouth_opened01"
+      event_ramp
+      {
+        0.1460 0.9894
+        0.8679 0.9858
+        1.0620 0.0366
+      }
+    }
+    event expression "sci_mouth_opened01"
+    {
+      time 5.542520 6.184130
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_mouth_opened01"
+      event_ramp
+      {
+        0.1460 0.4098
+        0.4327 0.4062
+        0.5053 0.0366
+      }
+    }
+    event expression "sci_freaked_mouthopen"
+    {
+      time 0.017258 4.066278
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthopen"
+      event_ramp
+      {
+        0.1460 0.9941
+        3.3951 0.9893
+      }
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 4.985012 -1.000000
+      param "1"
+    }
+  }
+  channel "AUDIO"
+  {
+    event speak "S_ladderdis.sfx"
+    {
+      time 4.175786 5.110321
+      param "S_ladderdis.sfx"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "S_ladderhit.sfx"
+    {
+      time 4.759487 6.537310
+      param "S_ladderhit.sfx"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "46"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "40"
+}
+fps 60
+snap off
+ignorePhonemes off

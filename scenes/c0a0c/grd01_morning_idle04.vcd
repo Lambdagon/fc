@@ -1,0 +1,115 @@
+// Choreo version 1
+actor "GRD00_Door"
+{
+  channel "Voice"
+  {
+    event speak "vo\c0a0c\grd01_goonget01.wav"
+    {
+      time 1.261918 6.130762
+      param "vo\c0a0c\grd01_goonget01.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "FLex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.331298 7.363029
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          1.5059 0.4900
+          1.6171 0.4900
+          1.7357 0.4700
+          2.0404 0.5000
+          2.1132 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.2632 0.5100
+          0.3632 0.5100
+          0.4885 0.4700
+          0.5852 0.3400
+          0.6978 0.4600
+          0.8367 0.4900
+          0.9528 0.4900
+          1.1132 0.5800
+          1.3299 0.5100
+          1.6209 0.4700
+          1.8016 0.4700
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 2.973605 7.390273
+      param "bg_down"
+      event_ramp
+      {
+        0.1714 0.2308
+        0.4857 0.6385
+        2.8524 0.4385
+        3.7905 0.3923
+        4.1429 0.2308
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.038386
+        "extreme" 0.107482
+        "loop" 0.471698
+        "end" 0.650943
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "posture"
+  {
+  }
+  channel "look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.006424 7.806500
+      param "!player"
+      event_ramp
+      {
+        0.6400 0.5266
+        1.1600 0.7278
+        2.2800 0.8817
+        4.0900 0.8935
+        5.9000 0.8698
+        6.7900 0.6154
+      }
+    }
+  }
+  channel "face"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "20"
+  "ExpressionTool" "52"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

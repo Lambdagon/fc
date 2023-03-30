@@ -1,0 +1,68 @@
+// Choreo version 1
+event loop "Loop"
+{
+  time 4.193334 -1.000000
+  param "2.000000"
+  loopcount "-1"
+}
+actor "GRD00_Door"
+{
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.073334 4.393334
+      param "!player"
+      event_ramp
+      {
+        0.4920 0.5362
+        0.9890 0.8841
+        1.5900 1.0000
+        4.3200 1.0000
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.088533 1.968533
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1500 0.4800
+          0.2340 0.5900
+          0.4860 0.5900
+          0.7020 0.4600
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.1180 0.3467
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3640 0.3500
+          0.8960 0.4100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "40"
+  "ExpressionTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

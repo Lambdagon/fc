@@ -1,0 +1,69 @@
+// Choreo version 1
+actor "GRD01_PowerUpControl"
+{
+  channel "Animation"
+  {
+  }
+  channel "Move"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.002539 2.535874
+      param "!player"
+      event_ramp
+      {
+        0.3520 0.5269
+        0.9800 0.3978
+        1.5920 0.0000
+      }
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !target2"
+    {
+      time 2.362540 4.869207
+      param "!target2"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "pu.grd01.nevergonnamakeit03"
+    {
+      time 0.469207 1.848028
+      param "pu.grd01.nevergonnamakeit03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Triggers"
+  {
+  }
+  channel "Expressions"
+  {
+    event expression "b_sad00"
+    {
+      time 0.261905 3.317460
+      param "humans\guard\expressions_guard"
+      param2 "b_sad00"
+      event_ramp
+      {
+        0.6960 0.5376
+        1.4380 0.8387
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "84"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

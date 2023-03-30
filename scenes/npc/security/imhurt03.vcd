@@ -1,0 +1,208 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.imhurt03"
+    {
+      time 0.417408 4.509086
+      param "NPC_Security.imhurt03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 5.702837
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        1.3120 1.0000
+        1.4751 0.3537
+        3.1944 0.2302
+        3.6283 0.9917
+        4.6938 0.8659
+        5.0787 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Sighing"
+    {
+      time 0.372685 1.706018
+      param "common_expressions"
+      param2 "Sighing"
+      event_ramp
+      {
+        0.3077 0.3117
+        0.6803 0.4246
+        0.7423 0.4124
+        0.7775 0.4246
+        1.0419 0.1463
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 0.135417 1.229167
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.3095 0.9209
+        0.7595 0.8453
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 1.177084 4.465991
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.3095 0.9209
+        2.1167 0.5053
+        2.9547 0.8453
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 2.992165 3.992165
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.2833 0.9976
+        0.7389 0.9941
+      }
+    }
+    event expression "b_blink01"
+    {
+      time 1.283982 3.163611
+      param "humans\guard\expressions_guard"
+      param2 "b_blink01"
+      event_ramp
+      {
+        0.1778 0.9976
+        1.7444 0.9953
+      }
+    }
+    event expression "b_freaked_mouthopen"
+    {
+      time 0.885834 1.719167
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthopen"
+      event_ramp
+      {
+        0.3000 0.5277
+        0.5529 0.2633
+      }
+    }
+    event expression "b_wincing02"
+    {
+      time 3.481482 4.833333
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+      event_ramp
+      {
+        0.4414 0.4557
+        1.0414 0.3932
+      }
+    }
+    event expression "b_wincing02"
+    {
+      time 2.225926 3.577777
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+      event_ramp
+      {
+        0.4414 0.4557
+        1.0414 0.3932
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.124287 4.999287
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          1.3253 0.6100
+          1.4562 0.4800
+          1.6063 0.4700
+          1.6603 0.6800
+          1.8375 0.6800
+          1.8938 0.5500
+          2.0312 0.4600
+          2.0926 0.5600
+          3.2375 0.7800
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.9250 0.6075
+          1.2000 0.4907
+          1.4875 0.2336
+          1.6125 0.2569
+          1.7000 0.5505
+          1.8313 0.5327
+          1.9375 0.3128
+          2.1250 0.4800
+          2.3125 0.2928
+          2.8313 0.4900
+          3.5333 0.5000
+          3.9222 0.3700
+          4.3111 0.5300
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent forward"
+    {
+      time 1.129629 3.294445
+      param "bg_accentFwd"
+      event_ramp
+      {
+        0.0692 1.0000
+        2.1200 0.9878
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.156116
+        "extreme" 0.316269
+        "loop" 0.624466
+        "end" 0.780581
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "50"
+  "SceneRampTool" "100"
+  "ExpressionTool" "18"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

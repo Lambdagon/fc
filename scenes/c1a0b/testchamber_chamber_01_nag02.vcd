@@ -1,0 +1,205 @@
+// Choreo version 1
+actor "Sci40"
+{
+  channel "voice"
+  {
+    event speak "am.testchamber.sci40.nag01"
+    {
+      time 0.806667 6.736213
+      param "am.testchamber.sci40.nag01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci40.nag02"
+    {
+      time 3.215239 12.230591
+      param "am.testchamber.sci40.nag02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_turnL"
+    {
+      time 0.293333 4.213333
+      param "hg_turnL"
+      absolutetags playback_time
+      {
+        "apex" 0.154762
+        "extreme" 0.289116
+        "loop" 0.445578
+        "end" 0.641157
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.192308
+        "extreme" 0.384615
+        "loop" 0.641026
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "G_puncuate"
+    {
+      time 4.379999 8.753333
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.265244
+        "accent" 0.393667
+        "loop" 0.666158
+        "end" 0.774390
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_down"
+    {
+      time 4.926667 8.593333
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.162113
+        "extreme" 0.284153
+        "loop" 0.672131
+        "end" 0.848816
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "G_righthandmotion"
+    {
+      time 0.720000 3.733334
+      param "G_righthandmotion"
+      event_ramp
+      {
+        0.0000 0.4454
+        0.2542 0.5042
+        0.9583 0.4370
+        1.7125 0.3866
+        2.3833 0.5042
+        3.0133 0.4370
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.157537
+        "accent" 0.337580
+        "loop" 0.450107
+        "end" 0.506370
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.241379
+        "accent" 0.517241
+        "loop" 0.689655
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at control_camm"
+    {
+      time 3.246666 11.639999
+      param "control_camm"
+      event_ramp
+      {
+        1.1093 0.6134
+        2.0100 0.7731
+        4.8888 0.8151
+        6.6766 0.7143
+      }
+    }
+    event lookat "Look at Sci41"
+    {
+      time 0.653334 4.053334
+      param "Sci41"
+      event_ramp
+      {
+        0.8580 0.6555
+        1.3980 0.8908
+        2.3935 0.7479
+      }
+    }
+  }
+  channel "triggers"
+  {
+    event firetrigger "Intercom Up"
+    {
+      time 9.406666 -1.000000
+      param "2"
+    }
+    event firetrigger "Intercom Down"
+    {
+      time 1.106666 -1.000000
+      param "1"
+    }
+  }
+  channel "facial"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.493334 10.093333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "cheek_raiser" combo 
+        {
+          0.2792 0.1500
+          0.5600 1.0000
+          2.4100 1.0000
+          3.0980 0.0000
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.2560 0.2000
+          0.5980 0.6400
+          1.3780 0.6900
+          2.5060 0.7100
+          2.8320 0.2600
+        }
+        {
+          0.0000 0.0000
+        }
+        "lowerer" combo 
+        {
+          3.0720 0.0000
+          3.6000 0.7300
+        }
+        {
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "48"
+  "CChoreoView" "28"
+}
+fps 60
+snap off
+ignorePhonemes off

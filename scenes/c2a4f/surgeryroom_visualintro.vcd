@@ -1,0 +1,558 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 28.500000 -1.000000
+  param "noaction"
+}
+actor "SCI01_Surgery"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at SCI03_Surgery"
+    {
+      time 0.000000 23.358335
+      param "SCI03_Surgery"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face SCI03_Surgery"
+    {
+      time 3.111111 20.472223
+      param "SCI03_Surgery"
+    }
+    event lookat "Look at SCI02_Surgery"
+    {
+      time 22.656330 27.284306
+      param "SCI02_Surgery"
+    }
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto SCI03_Surgery"
+    {
+      time 5.083334 5.783334
+      param "SCI03_Surgery"
+      param2 "Walk"
+      distancetotarget 28.00
+    }
+    event moveto "Moveto SCI03_Surgery"
+    {
+      time 9.611112 10.311111
+      param "SCI03_Surgery"
+      param2 "Walk"
+      distancetotarget 28.00
+    }
+    event moveto "Moveto SCI02_Surgery"
+    {
+      time 22.775003 24.307741
+      param "SCI02_Surgery"
+      param2 "Walk"
+      distancetotarget 24.00
+      forceshortmovement
+    }
+    event moveto "Moveto SCI01_Surgery_pushedaside"
+    {
+      time 14.650002 15.677780
+      param "SCI01_Surgery_pushedaside"
+      param2 "Walk"
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event gesture "g_palm_out_high_l"
+    {
+      time 5.609722 8.987499
+      param "g_palm_out_high_l"
+      absolutetags playback_time
+      {
+        "apex" 0.099888
+        "accent" 0.189787
+        "loop" 0.319641
+        "end" 0.639281
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_chestup"
+    {
+      time 7.804166 10.437499
+      param "g_chestup"
+      absolutetags playback_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "g_palm_up_l"
+    {
+      time 3.498610 5.465278
+      param "g_palm_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_down"
+    {
+      time 24.016268 25.982935
+      param "bg_down"
+      event_ramp
+      {
+        0.3000 0.5986
+        0.4538 0.6789
+        1.0538 0.6104
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Posture"
+  {
+    event gesture "g_plead_01"
+    {
+      time 9.277779 11.244445
+      param "g_plead_01"
+      event_ramp
+      {
+        0.2846 0.5301
+        1.4769 0.5466
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.275862
+        "accent" 0.448276
+        "loop" 0.689655
+        "end" 0.862069
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.275862
+        "accent" 0.448276
+        "loop" 0.689655
+        "end" 0.862069
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "g_palm_out_r"
+    {
+      time 24.040079 26.806746
+      param "g_palm_out_r"
+      absolutetags playback_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+    event gesture "g_scratchhead"
+    {
+      time 28.208334 31.841667
+      param "g_scratchhead"
+      absolutetags playback_time
+      {
+        "apex" 0.128889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  channel "Triggers"
+  {
+    event gesture "kgesture09"
+    {
+      time 25.921030 28.754364
+      param "kgesture09"
+      absolutetags playback_time
+      {
+        "apex" 0.119048
+        "accent" 0.428571
+        "loop" 0.500000
+        "end" 0.666667
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.119048
+        "accent" 0.428571
+        "loop" 0.500000
+        "end" 0.666667
+      }
+      sequenceduration 2.833333
+    }
+  }
+  faceposermodel "models\humans\scientist_02.mdl"
+}
+
+actor "SCI02_Surgery"
+{
+  channel "gesture"
+  {
+    event lookat "Look at SCI03_Surgery"
+    {
+      time 0.750000 23.071428
+      param "SCI03_Surgery"
+    }
+    event gesture "broadsweepdown"
+    {
+      time 13.212963 15.179629
+      param "broadsweepdown"
+      absolutetags playback_time
+      {
+        "apex" 0.310345
+        "accent" 0.500000
+        "loop" 0.586207
+        "end" 0.655172
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.310345
+        "accent" 0.500000
+        "loop" 0.586207
+        "end" 0.655172
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_accentUp"
+    {
+      time 12.750000 15.183333
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+    }
+    event gesture "g_right_openhand"
+    {
+      time 11.712431 13.345764
+      param "g_right_openhand"
+      absolutetags playback_time
+      {
+        "apex" 0.291667
+        "accent" 0.416667
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.291667
+        "accent" 0.416667
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event lookat "Look at SCI02_Surgery"
+    {
+      time 22.750000 33.988094
+      param "SCI02_Surgery"
+    }
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+actor "SCI03_Surgery"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at SCI01_Surgery"
+    {
+      time 1.574074 13.177778
+      param "SCI01_Surgery"
+    }
+    event lookat "Look at SCI02_Surgery"
+    {
+      time 12.962963 19.670834
+      param "SCI02_Surgery"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face SCI01_Surgery"
+    {
+      time 2.173610 14.784723
+      param "SCI01_Surgery"
+    }
+  }
+  channel "Move To"
+  {
+    event gesture "G_puncuate"
+    {
+      time 1.081945 2.715278
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event moveto "Moveto SCI02_Surgery"
+    {
+      time 15.753179 18.808735
+      param "SCI02_Surgery"
+      param2 "Walk"
+      distancetotarget 25.00
+    }
+    event moveto "SCI03_Surgery_walksoutofframe"
+    {
+      time 19.947622 23.003180
+      param "SCI03_Surgery_walksoutofframe"
+      param2 "Walk"
+      distancetotarget 25.00
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 2.354167 4.687500
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "G_puncuate"
+    {
+      time 16.723608 18.356941
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "sequence"
+  {
+    event gesture "G_noway_big"
+    {
+      time 8.381945 10.615278
+      param "G_noway_big"
+      absolutetags playback_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    event gesture "g_righthand_flick"
+    {
+      time 6.145833 8.695834
+      param "g_righthand_flick"
+      absolutetags playback_time
+      {
+        "apex" 0.133442
+        "accent" 0.226852
+        "loop" 0.333606
+        "end" 0.400327
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "g_point_l"
+    {
+      time 13.987037 16.053705
+      param "g_point_l"
+      absolutetags playback_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      sequenceduration 2.066667
+    }
+    event gesture "g_pointright_l"
+    {
+      time 18.168055 20.134720
+      param "g_pointright_l"
+      absolutetags playback_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.672414
+        "out" 0.913793
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.672414
+        "out" 0.913793
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "bg_down"
+    {
+      time 16.427774 18.394442
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "ExpressionTool" "22"
+  "GestureTool" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

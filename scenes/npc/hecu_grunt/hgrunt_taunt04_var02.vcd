@@ -1,0 +1,101 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.taunt04_var02"
+    {
+      time 0.266667 1.100454
+      param "NPC_hgrunt.taunt04_var02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Mar_browup01"
+    {
+      time 0.026667 0.486667
+      param "humans\marine\marine"
+      param2 "Mar_browup01"
+      event_ramp
+      {
+        0.0435 0.5550
+        0.4196 0.5475
+      }
+    }
+    event expression "Mar_angry01"
+    {
+      time 0.079259 1.185926
+      param "humans\marine\marine"
+      param2 "Mar_angry01"
+      event_ramp
+      {
+        0.2175 0.6264
+        0.3455 0.9775
+        0.8818 0.9500
+        0.9561 0.6450
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Nod"
+    {
+      time 0.166548 1.155840
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1734 0.8300
+          0.3963 0.2600
+          0.6412 0.4400
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.0740 0.4600
+          0.2212 0.2000
+          0.4659 0.6400
+        }
+        "outer_raiser" combo 
+        {
+          0.5090 1.0000
+        }
+        {
+          0.5090 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.5090 1.0000
+        }
+        {
+          0.5090 0.5000
+        }
+        "wrinkler" 
+        {
+          0.5090 0.8100
+        }
+        "lid_raiser" combo 
+        {
+          0.2044 0.8600
+        }
+        {
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "42"
+  "RampTool" "90"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

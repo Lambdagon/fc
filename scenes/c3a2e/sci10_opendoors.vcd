@@ -1,0 +1,158 @@
+// Choreo version 1
+event section "move to doorkeypad"
+{
+  time 2.236667 -1.000000
+  param "automate Resume 0.000000"
+}
+actor "SCI10_Steinman"
+{
+  channel "Voice"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 3.831111 -1.000000
+      param "1"
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.263131 1.997078
+      param "!player"
+      event_ramp
+      {
+        0.1200 0.2845
+        0.1900 0.4132
+        0.5900 0.5089
+        0.9067 0.4888
+        1.1781 0.3932
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 4.822222 6.135555
+      param "!player"
+      event_ramp
+      {
+        0.3267 0.7312
+        0.9733 0.4516
+      }
+    }
+    event lookat "Look at sci10_scene2_doorlook"
+    {
+      time 5.815556 7.068888
+      param "sci10_scene2_doorlook"
+    }
+    event lookat "Look at !self"
+    {
+      time 1.631945 5.073612
+      param "!self"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Expressions"
+  {
+    event expression "SciFem_Interested01"
+    {
+      time 2.004759 3.004759
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Interested01"
+      event_ramp
+      {
+        0.3235 1.0000
+        0.6000 0.9032
+      }
+    }
+    event expression "SciFem_anger00"
+    {
+      time 2.797495 4.605187
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.4882 0.7556
+        1.4529 0.7249
+      }
+    }
+    event expression "SciFem_huh01_mouthclosedversion"
+    {
+      time 4.528431 7.081767
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_huh01_mouthclosedversion"
+      event_ramp
+      {
+        0.4136 0.3813
+        0.8000 0.7698
+        1.6291 0.3353
+      }
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "ButtonPush"
+    {
+      time 2.339259 4.339259
+      param "ButtonPush"
+      sequenceduration 2.000000
+    }
+    event firetrigger "Boop!"
+    {
+      time 3.280742 -1.000000
+      param "2"
+    }
+    event firetrigger "Boop!"
+    {
+      time 3.494074 -1.000000
+      param "2"
+    }
+    event firetrigger "Boop!"
+    {
+      time 3.067408 -1.000000
+      param "2"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face airlock_faceat01"
+    {
+      time 1.982612 5.072136
+      param "airlock_faceat01"
+      event_ramp
+      {
+        1.1667 1.0000
+        2.4866 1.0000
+      }
+    }
+    event face "Face sci10_scene2_doorface"
+    {
+      time 4.575555 7.082222
+      param "sci10_scene2_doorface"
+    }
+  }
+  channel "move to"
+  {
+    event moveto "Moveto airlock_movetot01"
+    {
+      time 0.448081 2.364041
+      param "airlock_moveto01"
+      param2 "Walk"
+      resumecondition
+    }
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "RampTool" "30"
+  "SceneRampTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

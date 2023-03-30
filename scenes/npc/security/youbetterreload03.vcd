@@ -1,0 +1,93 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "vo\npc\barneys\youbetterreload03"
+    {
+      time 0.354771 1.872073
+      param "NPC_Security.youbetterreload03"
+      param2 "0.750"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.029375 2.422537
+      param "!player"
+      event_ramp
+      {
+        0.1615 0.2256
+        0.3515 0.9756
+        1.8400 1.0000
+        2.0718 0.7439
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_afraid00"
+    {
+      time 0.047619 1.222222
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid00"
+      event_ramp
+      {
+        0.2513 0.3247
+        0.6564 0.1523
+      }
+    }
+    event expression "b_smile_sly_lefty"
+    {
+      time 0.730159 2.484127
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_sly_lefty"
+      event_ramp
+      {
+        0.1231 0.5573
+        0.3641 0.9575
+        1.0689 0.5431
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "head nods"
+    {
+      time 0.015873 2.626984
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2937 0.5800
+          0.5159 0.3500
+          1.0397 0.5500
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.2937 0.4000
+          0.5236 0.3200
+          0.8923 0.6300
+          1.2769 0.5100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "26"
+  "CChoreoView" "84"
+  "GestureTool" "100"
+  "RampTool" "78"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

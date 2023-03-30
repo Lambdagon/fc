@@ -1,0 +1,110 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 1.993333 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre14"
+    {
+      time 0.442912 1.958354
+      param "NPC_Scimale.question_pre14"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.030000 2.922561
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        2.2423 0.9805
+        2.5483 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_afraid00"
+    {
+      time 0.498652 1.070081
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.1872 0.2774
+        0.3468 0.3955
+        0.4234 0.2397
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.826117 2.056509
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.2000 0.4652
+        0.7963 0.5089
+        0.9785 0.3754
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.015754 2.278303
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3722 0.1760
+        0.6429 0.2551
+        1.4006 0.1724
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.134435
+        "extreme" 0.328621
+        "loop" 0.505263
+        "end" 0.689474
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "200"
+  "RampTool" "108"
+  "SceneRampTool" "100"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

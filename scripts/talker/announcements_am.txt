@@ -1,0 +1,82 @@
+criterion IsAnnouncement "concept" "announcement" required
+criterion IsAM1 "map" "bm_c1a0a" required weight 2
+criterion IsAM2 "map" "bm_c1a0b" required weight 2
+criterion IsAM3 "map" "background02" required weight 2
+
+//========================================================
+//AM
+//========================================================
+response "announce_am"
+{
+	//sequential
+	// norepeat
+	speak "C1A0_01"
+	speak "C1A0_02"
+	speak "C1A0_03"
+	speak "C1A0_04"
+	speak "C1A0_05"
+	speak "C1A0_06"
+	speak "C1A0_07"
+	speak "C1A0_08"
+	speak "C1A0_09"
+	speak "C1A0_10"
+	speak "C1A0_11"
+	speak "C1A0_12"
+	speak "C1A0_13"
+	speak "C1A0_14"
+	speak "C1A0_15"
+	speak "C1A0_16"
+	speak "C1A0_17"
+	speak "C1A0_18"
+	speak "C1A0_19"
+	speak "C1A0_20"
+	speak "C1A0_21"
+	speak "C1A0_22"
+	speak "C1A0_23"
+	speak "C1A0_24"
+	speak "C1A0_25"
+	speak "C1A0_26"
+	speak "C1A0_27"
+	speak "C1A0_28"
+	speak "C1A0_29"
+	speak "C1A0_30"
+	speak "C1A0_31"
+	speak "C1A0_32"
+	speak "C1A0_33"
+	speak "C1A0_34"
+	speak "C1A0_35"
+	speak "C1A0_36"
+	speak "C1A0_37"
+	speak "C1A0_38"
+	speak "C1A0_39"
+	speak "C1A0_40"
+	speak "C1A0_41"
+	speak "C1A0_421"
+	speak "C1A0_43"
+	speak "C1A0_44"
+	speak "C1A0_45"
+	speak "C1A0_46"
+	speak "C1A0_47"
+	speak "C1A0_48"
+	speak "C1A0_49"
+	speak "C1A0_50"
+	speak "C1A0_51"
+}
+
+rule "announce_c1a0a"
+{
+	criteria IsAnnouncement IsAM1
+	response announce_am
+}
+
+rule "announce_c1a0b"
+{
+	criteria IsAnnouncement IsAM2
+	response announce_am
+}
+
+rule "announce_background02"
+{
+	criteria IsAnnouncement IsAM3
+	response announce_am
+}

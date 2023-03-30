@@ -1,0 +1,110 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.annoyance_pre01"
+    {
+      time 0.223888 3.153593
+      param "NPC_Scimale.annoyance_pre01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time -0.008235 3.934346
+      param "!player"
+      event_ramp
+      {
+        0.0529 0.0572
+        0.2702 0.6696
+        3.0154 0.9132
+        3.4844 0.7378
+        3.7649 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Grudge"
+    {
+      time 0.023039 1.965195
+      param "common_expressions"
+      param2 "Grudge"
+      event_ramp
+      {
+        0.2308 0.5263
+        0.8385 0.9158
+        1.1013 0.9158
+        1.3308 1.0000
+        1.4629 0.4947
+      }
+    }
+    event flexanimation "Head Dip"
+    {
+      time 0.219117 3.003432
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5911 0.6100
+          1.5706 0.3400
+          2.1941 0.4800
+        }
+      }
+    }
+    event flexanimation "Look Down"
+    {
+      time 0.857843 1.446078
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3273 0.2500
+        }
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.757823 2.832823
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3429 0.3235
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.232823 3.441157
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2286 0.5478
+        1.0048 0.5478
+      }
+    }
+  }
+  channel "flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "148"
+  "RampTool" "56"
+  "SceneRampTool" "100"
+  "ExpressionTool" "34"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

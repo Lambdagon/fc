@@ -1,0 +1,207 @@
+// Choreo version 1
+actor "c1a3b_sci_dead2"
+{
+  channel "Voice"
+  {
+    event speak "sci_takemewithyou01.wav"
+    {
+      time 0.420000 4.084150
+      param "wgh.sci02.sciteam.takemewithyou01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_freaked_mouthopen"
+    {
+      time 0.326872 1.326872
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthopen"
+      event_ramp
+      {
+        0.3132 0.6328
+        0.6868 0.5773
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.871379 1.871379
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.2263 0.7769
+        0.4763 0.9008
+        0.7500 0.7993
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.527657 4.283212
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2806 0.2231
+        0.8222 0.6682
+        1.2000 0.4782
+        2.1100 0.6529
+      }
+    }
+    event expression "sci_smile00"
+    {
+      time 3.333333 4.333333
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_smile00"
+      event_ramp
+      {
+        0.1480 0.6623
+        0.2480 0.8524
+        0.6000 0.8630
+        0.7400 0.6600
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 1.033333 3.466667
+      param "bg_accentup"
+      event_ramp
+      {
+        0.5200 0.7296
+        0.7850 0.9339
+        1.3060 0.6588
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "G_medurgent_mid"
+    {
+      time 0.155555 2.188889
+      param "G_medurgent_mid"
+      event_ramp
+      {
+        0.2160 0.7509
+        0.7760 0.8276
+        1.2520 0.5136
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.150000
+        "accent" 0.250000
+        "loop" 0.400000
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+    event gesture "G_noway_big"
+    {
+      time 2.277778 4.866667
+      param "G_noway_big"
+      absolutetags playback_time
+      {
+        "apex" 0.268045
+        "accent" 0.372610
+        "loop" 0.503316
+        "end" 0.634023
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    event gesture "kgesture07"
+    {
+      time 1.200000 4.000000
+      param "kgesture07"
+      absolutetags playback_time
+      {
+        "apex" 0.168675
+        "accent" 0.313253
+        "loop" 0.481928
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.168675
+        "accent" 0.313253
+        "loop" 0.481928
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event gesture "g_openarms"
+    {
+      time 2.300000 4.666667
+      param "g_openarms"
+      event_ramp
+      {
+        1.0240 0.3341
+        1.6040 0.8796
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      sequenceduration 2.366667
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.067614 4.678725
+      param "!enemy"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "50"
+  "ExpressionTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

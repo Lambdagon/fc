@@ -1,0 +1,181 @@
+// Choreo version 1
+event loop "Caption Loop"
+{
+  time 43.556000 -1.000000
+  param "0.000000"
+  loopcount "-1"
+}
+actor "ballast_01"
+{
+  channel "Captions"
+  {
+    event speak "uc.ele.male01_01"
+    {
+      time 0.282499 3.895833
+      param "uc.ele.male01_01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_02"
+    {
+      time 5.924166 9.537500
+      param "uc.ele.male01_02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_03"
+    {
+      time 14.104720 17.718056
+      param "uc.ele.male01_03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_04"
+    {
+      time 22.493607 26.106941
+      param "uc.ele.male01_04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_05"
+    {
+      time 30.507496 34.120834
+      param "uc.ele.male01_05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_06"
+    {
+      time 34.899158 38.512493
+      param "uc.ele.male01_06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.male01_07"
+    {
+      time 38.605515 42.218849
+      param "uc.ele.male01_07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Voice"
+  {
+  }
+  channel "Foley"
+  {
+    event speak "uc.ele.sfx.mfoley01"
+    {
+      time 3.615833 7.229166
+      param "uc.ele.sfx.mfoley01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01a"
+    {
+      time 13.749167 17.362499
+      param "uc.ele.sfx.mfoley01a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01"
+    {
+      time 18.049168 21.662500
+      param "uc.ele.sfx.mfoley01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01"
+    {
+      time 9.082500 12.695832
+      param "uc.ele.sfx.mfoley01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01"
+    {
+      time 28.649166 32.262497
+      param "uc.ele.sfx.mfoley01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01a"
+    {
+      time 32.315834 35.929165
+      param "uc.ele.sfx.mfoley01a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.sfx.mfoley01"
+    {
+      time 37.249165 40.862495
+      param "uc.ele.sfx.mfoley01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "interrupt"
+  {
+    event interrupt "allow cancel to prevent looping to continue"
+    {
+      time 0.000000 46.611118
+      param ""
+    }
+  }
+}
+
+actor "ballast_02"
+{
+  channel "Captions"
+  {
+    event speak "uc.ele.female01_crying01"
+    {
+      time 9.132500 12.745834
+      param "uc.ele.female01_crying01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.ele.female01_crying02"
+    {
+      time 19.970882 23.584217
+      param "uc.ele.female01_crying02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+actor "Audio"
+{
+  channel "sound\bms_scripted\elevator_fall\fall1_loop.wav"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "8"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

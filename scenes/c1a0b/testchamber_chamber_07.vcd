@@ -1,0 +1,272 @@
+// Choreo version 1
+actor "Sci40"
+{
+  channel "voice"
+  {
+    event speak "am.testchamber.sci40.getawayfromthebeams01"
+    {
+      time 0.300000 7.658209
+      param "am.testchamber.sci40.getawayfromthebeams01"
+      param2 "1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci40.getawayfromthebeams02"
+    {
+      time 2.954168 9.880472
+      param "am.testchamber.sci40.getawayfromthebeams02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci40.shutitdown01"
+    {
+      time 4.803612 10.283998
+      param "am.testchamber.sci40.shutitdown01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci40.shutitdown02"
+    {
+      time 6.477498 14.143530
+      param "am.testchamber.sci40.shutitdown02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci40.lookout01"
+    {
+      time 11.400002 17.009026
+      param "am.testchamber.sci40.lookout01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at Sci41"
+    {
+      time 7.680000 10.106666
+      param "Sci41"
+      event_ramp
+      {
+        0.8897 0.6218
+        1.5241 0.6555
+      }
+    }
+    event lookat "Look at Sci41"
+    {
+      time 3.926667 6.353333
+      param "Sci41"
+      event_ramp
+      {
+        0.8897 0.6218
+        1.5241 0.6555
+      }
+    }
+    active "0"
+  }
+  channel "move to"
+  {
+    event moveto "Moveto lcs_testchamber_backaway"
+    {
+      time 9.906668 12.446668
+      param "lcs_testchamber_backaway"
+    }
+    active "0"
+  }
+  channel "face to"
+  {
+    event face "Face lcs_testchamber_cmmm"
+    {
+      time 7.686667 12.980000
+      param "lcs_testchamber_cmmm"
+      event_ramp
+      {
+        1.6207 1.0000
+        5.2933 1.0000
+      }
+    }
+    active "0"
+  }
+  channel "gestures"
+  {
+    event gesture "g_frustrated_point_l"
+    {
+      time 3.746667 5.880001
+      param "g_frustrated_point_l"
+      absolutetags playback_time
+      {
+        "in" 0.079365
+        "loop" 0.603175
+        "end" 0.698413
+        "out" 0.857143
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.079365
+        "loop" 0.603175
+        "end" 0.698413
+        "out" 0.857143
+      }
+      sequenceduration 2.133333
+    }
+    event gesture "g_fist"
+    {
+      time 5.900001 10.600001
+      param "g_fist"
+      absolutetags playback_time
+      {
+        "apex" 0.086358
+        "accent" 0.122340
+        "loop" 0.846808
+        "end" 0.892199
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "G_noway_big"
+    {
+      time 0.933333 3.166667
+      param "G_noway_big"
+      absolutetags playback_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.272727
+        "loop" 0.424242
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    active "0"
+  }
+  channel "triggers"
+  {
+    event firetrigger "Death"
+    {
+      time 12.220000 -1.000000
+      param "5"
+    }
+    active "0"
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "Sci41"
+{
+  channel "voice"
+  {
+    event speak "am.testchamber.sci41.whaaaooo01"
+    {
+      time 0.000000 6.234399
+      param "am.testchamber.sci41.whaaaooo01"
+      param2 "0"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci41.ohdear01"
+    {
+      time 1.946666 8.314875
+      param "am.testchamber.sci41.ohdear01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci41.shuttingdown01"
+    {
+      time 5.611111 12.350680
+      param "am.testchamber.sci41.shuttingdown01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci41.shuttingdown02"
+    {
+      time 7.136667 13.896349
+      param "am.testchamber.sci41.shuttingdown02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci41.shuttingdown03"
+    {
+      time 9.111112 15.818527
+      param "am.testchamber.sci41.shuttingdown03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "am.testchamber.sci41.NOOOOOOOO"
+    {
+      time 11.889395 18.613838
+      param "am.testchamber.sci41.NOOOOOOOO"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "Sit_Armory"
+    {
+      time 10.886666 17.400002
+      param "Sit_Armory"
+      event_ramp
+      {
+        0.5862 1.0000
+        6.5133 1.0000
+      }
+      sequenceduration 2.000000
+    }
+    active "0"
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "Sci42"
+{
+  channel "gestures"
+  {
+    event gesture "Sit_Armory"
+    {
+      time 10.480000 16.993334
+      param "Sit_Armory"
+      event_ramp
+      {
+        0.5862 1.0000
+        6.5133 1.0000
+      }
+      sequenceduration 2.000000
+    }
+    active "0"
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "SceneRampTool" "100"
+  "RampTool" "58"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

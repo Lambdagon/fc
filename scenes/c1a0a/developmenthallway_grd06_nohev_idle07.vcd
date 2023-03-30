@@ -1,0 +1,226 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Sound"
+  {
+    event speak "am.grd06.gotallday01"
+    {
+      time 0.463768 4.999890
+      param "am.grd06.gotallday01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_accentFwd"
+    {
+      time 0.569443 4.444806
+      param "bg_accentFwd"
+      event_ramp
+      {
+        0.1643 0.7237
+        0.9000 0.7262
+        1.6200 0.2212
+        2.4700 0.0037
+        3.3554 0.0188
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.087208
+        "extreme" 0.226741
+        "loop" 0.348833
+        "end" 0.436040
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "movement2"
+    {
+      time 3.169686 5.575362
+      param "G_what"
+      absolutetags playback_time
+      {
+        "apex" 0.219653
+        "accent" 0.395759
+        "loop" 0.567410
+        "end" 0.783297
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+    event gesture "Gesture12"
+    {
+      time 0.580616 3.616727
+      param "Gesture12"
+      event_ramp
+      {
+        0.4588 0.9987
+        2.7655 0.9975
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.111404
+        "accent" 0.281081
+        "loop" 0.363349
+        "end" 0.561644
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 0.958334 3.452778
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.5647 0.9875
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.054238
+        "extreme" 0.149155
+        "loop" 0.379667
+        "end" 0.497348
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "bg_accentUp"
+    {
+      time 0.152778 2.586111
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.2588 0.2550
+        0.4235 0.4725
+        1.2765 0.1950
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.044349 6.224638
+      param "!player"
+      event_ramp
+      {
+        0.3079 0.1660
+        0.6357 0.7961
+        1.5033 1.0000
+        4.6913 1.0000
+        5.1802 0.8611
+        5.6802 0.2014
+      }
+    }
+  }
+  channel "Face"
+  {
+    event face "Face !player"
+    {
+      time 0.080580 1.782609
+      param "!player"
+      event_ramp
+      {
+        0.5067 0.1875
+        1.0000 0.8403
+        1.5000 1.0000
+        1.7020 1.0000
+      }
+    }
+    event face "Face !self"
+    {
+      time 0.471015 3.253623
+      param "!self"
+    }
+  }
+  channel "Face Flexes"
+  {
+    event flexanimation "Head movements"
+    {
+      time 0.144928 5.869566
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.0000 0.4800
+          1.7143 0.5000
+          2.9286 0.4800
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          2.4714 0.5100
+          3.0714 0.5200
+          3.5571 0.5000
+          3.7143 0.4400
+          3.9143 0.3200
+          4.2714 0.4700
+          5.1000 0.5000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.7000 0.4700
+          1.0714 0.3800
+          1.4429 0.3700
+          1.9000 0.4100
+          2.2857 0.4800
+          2.8429 0.5000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "ExpressionTool" "14"
+  "GestureTool" "34"
+  "RampTool" "34"
+  "CChoreoView" "48"
+}
+fps 60
+snap off
+ignorePhonemes off

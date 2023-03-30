@@ -1,0 +1,170 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 3.333333 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.gordead_ques20"
+    {
+      time 0.893513 3.093513
+      param "NPC_Security.gordead_ques20"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 4.885461
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.4874 0.6512
+        0.8182 0.9811
+        4.0141 0.9957
+        4.7679 0.1585
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "dissapointment"
+    {
+      time 0.000000 4.151429
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.4160 0.7400
+          0.9756 1.0000
+          1.4160 0.9804
+          2.3327 0.6788
+          2.5470 0.5984
+        }
+        {
+          0.4160 0.5000
+          0.9756 0.5000
+          1.4160 0.5000
+          2.3327 0.5000
+          2.5470 0.5000
+        }
+        "inner_raiser" combo 
+        {
+        }
+        {
+          0.4160 0.5000
+          0.9756 0.5000
+          1.4160 0.5000
+          2.3327 0.5000
+          2.5470 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.4160 0.6100
+          0.9756 0.4000
+          1.1600 0.5000
+          1.4160 0.5400
+          1.7333 0.5000
+          2.3327 0.6533
+          2.5470 0.5700
+          2.9200 0.2200
+        }
+        {
+          0.4160 0.2600
+          0.9289 0.4386
+          1.1800 0.5000
+          1.4160 0.5100
+          2.3327 0.5141
+          2.5470 0.5153
+        }
+        "cheek_raiser" combo 
+        {
+          0.4160 0.6300
+          0.9756 0.4500
+          1.4160 0.3544
+          2.3327 0.2047
+          2.5470 0.6800
+        }
+        {
+          0.4160 0.2200
+          0.9756 0.2200
+          1.4160 0.5000
+          2.3327 0.5000
+          2.5470 0.5000
+        }
+        "corner_depressor" combo 
+        {
+          0.4160 0.4600
+          0.9756 0.6352
+          1.4160 0.2300
+          2.3327 0.0000
+          2.5470 0.0000
+        }
+        {
+          0.4160 0.5000
+          0.9756 0.5000
+          1.4160 0.5000
+          2.3327 0.5000
+          2.5470 0.5000
+        }
+        "chin_raiser" 
+        {
+          0.4160 0.2300
+          0.9756 0.1600
+          1.4160 0.0000
+          2.3327 0.0000
+          2.5470 0.0000
+        }
+      }
+    }
+    event flexanimation "Head bobs"
+    {
+      time 0.000000 5.011905
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.9994 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2494 0.5000
+          0.9267 0.4500
+          1.3661 0.3700
+          1.6161 0.4900
+          2.2941 0.5000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.2494 0.5000
+          1.2494 0.5000
+          1.8208 0.5000
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "112"
+  "RampTool" "22"
+  "SceneRampTool" "100"
+  "ExpressionTool" "30"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

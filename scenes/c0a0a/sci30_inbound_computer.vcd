@@ -1,0 +1,45 @@
+// Choreo version 1
+event loop "Loop"
+{
+  time 3.000000 -1.000000
+  param "2.000000"
+  loopcount "-1"
+}
+actor "Sci30_Lab05"
+{
+  channel "Gestures"
+  {
+    event gesture "g_typing02"
+    {
+      time 0.146667 5.153334
+      param "g_typing02"
+      absolutetags playback_time
+      {
+        "apex" 0.121172
+        "loop" 0.201294
+        "accent" 0.323569
+        "end" 0.603882
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.234375
+        "loop" 0.234375
+        "accent" 0.312500
+        "end" 0.703125
+      }
+      sequenceduration 4.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,253 @@
+// Choreo version 1
+event section "Pause"
+{
+  time 1.986666 -1.000000
+  param "noaction"
+}
+actor "SCI31_Generator"
+{
+  channel "voice"
+  {
+    event speak "vo\c1a0b\sci31_idle_particle01.wav"
+    {
+      time 2.753333 5.528616
+      param "am.sci31.particle01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 7.446667 9.373333
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.0000 0.1837
+        1.1919 0.4592
+        1.9267 0.3163
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.250152
+        "extreme" 0.373041
+        "loop" 0.671483
+        "end" 0.854671
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at SCI32_Generator"
+    {
+      time 1.529956 9.400000
+      param "SCI32_Generator"
+      event_ramp
+      {
+        0.4620 0.4490
+        0.7740 0.7399
+        1.1260 0.7955
+        2.4880 0.8163
+        6.1641 0.8163
+        6.8868 0.7245
+      }
+    }
+    event flexanimation "look up and down"
+    {
+      time 0.000000 2.156863
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4143 0.6700
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5333 0.8000
+          1.0714 0.6100
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.4952 0.4300
+          1.0048 0.6700
+        }
+      }
+    }
+  }
+  channel "facial"
+  {
+    event flexanimation "Worried"
+    {
+      time 2.193333 6.226666
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.3952 0.6900
+          1.5952 0.9100
+          2.8286 0.6600
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.3238 0.3500
+          1.6048 0.5400
+          2.9286 0.3000
+        }
+        {
+        }
+        "puckerer" combo 
+        {
+          0.5905 0.4000
+          1.8762 0.5000
+          3.1381 0.4200
+        }
+        {
+        }
+        "jaw_drop" 
+        {
+          2.3429 0.0200
+          2.8095 0.2100
+        }
+        "mouth_drop" combo 
+        {
+          2.3476 0.0000
+          2.8333 0.5000
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.7095 0.7700
+          1.5167 0.6300
+          2.9714 0.5700
+        }
+      }
+    }
+    event expression "sci_huh01a"
+    {
+      time 0.519608 2.362745
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_huh01a"
+      event_ramp
+      {
+        0.5800 0.5590
+      }
+    }
+  }
+  channel "head"
+  {
+    event face "Face SCI32_Generator"
+    {
+      time 1.951389 7.993055
+      param "SCI32_Generator"
+      event_ramp
+      {
+        0.3080 0.2855
+        0.6000 0.4200
+        1.0955 0.5037
+        1.7680 0.5471
+        4.4105 0.3543
+      }
+      lockbodyfacing
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "SCI32_Generator"
+{
+  channel "voice"
+  {
+    event speak "am.sci32.stillcharging01"
+    {
+      time 5.437974 9.643416
+      param "am.sci32.stillcharging01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "facial"
+  {
+    event flexanimation "Don't Care"
+    {
+      time 4.693334 9.446667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.5286 0.2900
+          2.3667 0.3000
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          0.6190 0.8200
+          1.4857 0.9000
+          2.3619 0.8000
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.5381 0.5500
+          2.2619 0.5600
+        }
+        {
+        }
+        "wrinkler" 
+        {
+          0.5476 0.2400
+          2.2714 0.2300
+        }
+      }
+    }
+  }
+  channel "head"
+  {
+    event flexanimation "Head Movement"
+    {
+      time 4.653333 7.733334
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.6181 0.6100
+          1.5562 0.4500
+          2.4714 0.5200
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "28"
+  "RampTool" "44"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,101 @@
+// Choreo version 1
+actor "GRD02_Lobby"
+{
+  channel "Voice"
+  {
+    event speak "am.grd02.tradejobs01"
+    {
+      time 1.216529 3.618116
+      param "am.grd02.tradejobs01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.071429 5.321429
+      param "!player"
+      event_ramp
+      {
+        0.3898 0.5165
+        0.6061 0.7132
+        0.9697 0.7808
+        1.5522 0.7868
+        2.2455 0.7868
+        3.2505 0.7868
+        3.5900 0.7868
+        4.0494 0.7703
+        4.2388 0.7673
+        4.3455 0.7598
+        4.4810 0.7342
+        4.6719 0.6231
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animatoin"
+    {
+      time 0.353792 4.258554
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.5833 0.5000
+          2.3289 0.4900
+          2.3601 0.4900
+          2.5563 0.6300
+          2.9095 0.7000
+          3.2438 0.5600
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.9161 0.5156
+          1.1661 0.6387
+          1.3539 0.5156
+          1.5289 0.4531
+          1.9512 0.4591
+          2.2328 0.5000
+          2.5577 0.6319
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.6950 0.4900
+          0.8039 0.3300
+          1.1164 0.4800
+          1.3224 0.3500
+          2.0714 0.5000
+          2.2262 0.5000
+          2.5476 0.6400
+          3.0833 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.2738 0.5000
+          1.5833 0.5000
+          2.2262 0.5000
+          2.5476 0.8400
+          2.6000 0.9600
+          2.7687 0.6300
+          3.0833 0.5000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "RampTool" "36"
+  "SceneRampTool" "100"
+  "ExpressionTool" "32"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

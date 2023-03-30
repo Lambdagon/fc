@@ -1,0 +1,123 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.busy02"
+    {
+      time 0.459259 3.402547
+      param "NPC_Scimale.busy02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 3.514815
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3224 0.5216
+        0.4670 0.7483
+        2.3487 0.7483
+        2.9130 0.5147
+        3.0935 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.111111 3.870370
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.4231 0.9756
+        0.7818 0.9756
+        0.9636 0.5488
+        1.2882 0.2527
+        2.3765 0.0815
+      }
+    }
+    event gesture "bg_accentup"
+    {
+      time 0.148148 2.581481
+      param "bg_accentup"
+      event_ramp
+      {
+        0.5091 0.3495
+        1.0182 0.4298
+        1.8091 0.3081
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.037037 2.037037
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1645 0.1688
+        0.3323 0.2656
+        0.6226 0.2184
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 2.222222 3.222222
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1645 0.1688
+        0.3323 0.4191
+        0.6226 0.2184
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.388889 3.944444
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.3588 0.3754
+        0.5647 0.5998
+        1.0085 0.5655
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "36"
+  "RampTool" "34"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

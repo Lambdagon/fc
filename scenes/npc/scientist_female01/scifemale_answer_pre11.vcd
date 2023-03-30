@@ -1,0 +1,126 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.answer_pre11"
+    {
+      time 0.644291 2.976037
+      param "NPC_Scifemale.answer_pre11"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.042963 4.657378
+      param "!friend"
+      event_ramp
+      {
+        0.2154 0.4142
+        0.5600 0.8610
+        3.7148 0.9408
+        4.0909 0.4704
+        4.3342 0.1361
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 1.287730 3.621063
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.6700 0.4349
+        1.3600 0.3876
+        1.6800 0.1834
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.495238
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Browup01"
+    {
+      time 0.216883 2.143867
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.3833 0.4023
+        0.7100 0.4438
+        1.2500 0.5414
+        1.6095 0.3816
+      }
+    }
+    event expression "SciFem_anger00"
+    {
+      time 1.021064 2.954397
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.2500 0.2959
+        0.4600 0.4112
+        1.1400 0.4379
+        1.4600 0.3136
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.142567 2.608949
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3153 0.5300
+          0.6028 0.7200
+          0.9528 0.7400
+          1.3903 0.5000
+          1.7653 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "16"
+  "SceneRampTool" "100"
+  "RampTool" "20"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

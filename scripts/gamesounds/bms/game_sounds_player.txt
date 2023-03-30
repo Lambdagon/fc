@@ -1,0 +1,716 @@
+// Game_Sounds_Player
+//
+//
+// This list of soundscripts references sound files (.wavs typically) from either:
+//
+// bms/sound/***		(BMS Sound Directory)
+// hl2/sound/***		(HL2 Sound Directory)
+//
+//
+// As you navigate this list:
+// 
+//
+// There will be soundscript entries native to Half-Life 2, which have not been majorly altered (with the possible exception of channel assignments).
+// 
+// 
+// There will be soundscript entries native to Half-Life 2, but HAVE BEEN UPDATED to override the HL2 sound path with our BMS sound path, so as to
+// utilize higher quality recordings (and/or ones with more variety for the random callups)
+//
+//
+// Lastly, there will be entries created specifically for BLACK MESA (therefore, only the bms sound path will be referenced in these cases, unless otherwise specified)
+// 
+//
+//
+// Developer Notes has been added to the list to help discern what sound directory is being used on a script by script basis.
+//
+//
+//
+
+"Player.Dev.Savesound"
+{
+	"channel"			"CHAN_STATIC"
+	"volume"			"0.75"
+	"soundlevel"		"SNDLVL_NONE"
+
+	"wave"				"ambient\alarms\train_horn2.wav"
+}
+
+//--------------------------------------------------------------------------------------------------
+// SprintNoPower		(HL2 Sound Directory)
+// SprintStart			(HL2 Sound Directory)
+
+"HL2Player.SprintNoPower"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_60dB"
+
+	"wave"			"player/suit_denydevice.wav"
+}
+
+"HL2Player.SprintStart"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"soundlevel"		"SNDLVL_60dB"
+
+	"wave"			"player/suit_sprint.wav"
+}
+
+//--------------------------------------------------------------------------------------------------
+// FlashLightOn			(BMS Sound Directory)
+// FlashLightOff		(BMS Sound Directory)
+
+"HL2Player.FlashLightOn"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"items/flashlight_on.wav"
+}
+
+"HL2Player.FlashLightOff"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"			"items/flashlight_off.wav"
+}
+
+//--------------------------------------------------------------------------------------------------
+// TrainUse			(BMS Sound Directory)
+
+"HL2Player.TrainUse"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"plats/train_use1.wav"
+}
+
+//--------------------------------------------------------------------------------------------------
+// PlayerUse			(BOTH BMS and HL2 Sound Directories contain these .wavs)
+// PlayerUseNpc
+// PLayerUseDeny
+
+"HL2Player.Use"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"common/wpn_select.wav"
+}
+
+"HL2Player.UseNPC"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"common/wpn_select.wav"
+}
+
+"HL2Player.UseDeny"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"common/wpn_denyselect.wav"
+}
+
+//---------------------------------------------------
+// Player BurnPain		(BMS Sound Directory)
+//
+// DEV NOTE: 			Replaces the original HL2 variants, and offers a little more variety. 
+//
+
+"HL2Player.BurnPain"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"player/pl_burnpain01.wav"
+		"wave"		"player/pl_burnpain02.wav"
+		"wave"		"player/pl_burnpain03.wav"
+		"wave"		"player/pl_burnpain04.wav"
+		"wave"		"player/pl_burnpain05.wav"
+		"wave"		"player/pl_burnpain06.wav"
+	}
+}
+
+
+////////////////////////
+// SHARED player sounds
+//
+
+//---------------------------------------------------
+// Player Death			(BMS Sound Directory)
+
+"Player.Death"
+{
+	"channel"		"CHAN_AUTO" // CHAN_VOICE used by suit vox flatline
+	"volume"		"0.9"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"player/pl_pain01.wav"
+		"wave"		"player/pl_pain02.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player Plasma Damage		(HL2 Sound Directory)
+
+"Player.PlasmaDamage"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"player/general/flesh_burn.wav"
+}
+
+//---------------------------------------------------
+// Player Sonic Damage		(BMS Sound Directory)
+
+"Player.SonicDamage"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"0.7"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"player/pl_pain01.wav"
+		"wave"		"player/pl_pain02.wav"
+	}
+}
+
+//---------------------------------------------------
+//Player Drown Start		(BMS Sound Directory)
+
+"Player.DrownStart"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"90,110"
+
+	"wave"			"player/bmpl_drown01.wav"
+}
+
+//---------------------------------------------------
+// Player Swim 			(BMS Sound Directory)
+
+"Player.Swim"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"		"physics\footsteps\Water\water_wade1.wav"
+		"wave"		"physics\footsteps\Water\water_wade2.wav"
+		"wave"		"physics\footsteps\Water\water_wade3.wav"
+		"wave"		"physics\footsteps\Water\water_wade4.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player Fall Damage		(BMS Sound Directory)
+//
+// NOTE:			Replaces the HL2 directory version outright.
+//
+
+"Player.FallDamage"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.95"
+	"pitch"			"90,110"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player/pl_fallpain01.wav"
+		"wave"		"player/pl_fallpain03.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player Fall Gib		(HL2 Sound Directory)
+
+"Player.FallGib"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"0.75"
+	"pitch"			"90,110"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"		"physics/body/body_medium_break2.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player Drown Continue	(BMS Sound Directory)
+
+"Player.DrownContinue"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"90,110"
+
+	"rndwave"
+	{
+		"wave"		"player/bmpl_drown01.wav"
+		"wave"		"player/bmpl_drown02.wav"
+		"wave"		"player/bmpl_drown03.wav"
+		"wave"		"player/bmpl_drown04.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player AmbientUnderWater	(BMS Sound Directory)
+
+"Player.AmbientUnderWater"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"bms_ambience\room_ambience\r_ambience_underwater1.wav"
+}
+
+//---------------------------------------------------
+// Player UseTrain	(HL2 Sound Directory)
+
+"Player.UseTrain"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"plats/train_use1.wav"
+}
+
+
+//---------------------------------------------------
+// Player UseDeny	(HL2 Sound Directory)
+// Player HudHint	(BMS Sound Directory)
+// Player Pickup Weapon (BMS Sound Directory)
+
+"Player.UseDeny"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"common/wpn_select.wav"
+}
+
+"Player.HudHint"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.18"
+	"pitch"			"115"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"/hev_vox/blip.wav"
+}
+
+"Player.PickupWeapon"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.8"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"95,105"
+	"wave"			"items/weapon_pickup.wav"
+}
+
+//---------------------------------------------------
+// Geiger BeepLow	(BMS Sound Directory)
+// Geiger BeepHigh	(BMS Sound Directory)
+//
+
+"Geiger.BeepLow"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player/geiger1.wav"
+		"wave"		"player/geiger2.wav"
+	}
+}
+
+"Geiger.BeepHigh"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player/geiger2.wav"
+		"wave"		"player/geiger3.wav"
+	}
+}
+
+//---------------------------------------------------
+// Player Longjump Sounds - Bootup Sequence	(BMS Sound Directory)
+//
+
+
+// This first entry's is actually handled in sentences.txt as code has been setup previously to play a sound when
+// acquiring the longjump item, so we go ahead and use that instead.
+
+"LongJump.Bootup.ModuleAqcuired"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/bootup_sequence/bootup_moduleacq.wav"
+}
+
+//
+//
+// The remaining sounds are all used for the duration of the Longjump Bootup Sequence.
+//
+//
+//
+
+"LongJump.Bootup.ModuleAqcuired_s2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/bootup_sequence/bootup_moduleacq_s2.wav"
+}
+
+"LongJump.Bootup.blip1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/bootup_sequence/bootup_blip1.wav"
+}
+
+"LongJump.Bootup.blip2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/bootup_sequence/bootup_blip2.wav"
+}
+
+"LongJump.Bootup.Text_On"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"common/launch_upmenu1.wav"
+}
+
+"LongJump.Bootup.Text_Off"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.65"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"common/launch_upmenu1.wav"
+}
+
+"LongJump.Bootup.Jet_Connects"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/bootup_sequence/bootup_jetconnects.wav"
+}
+
+"LongJump.Bootup.Complete"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"			"100"	
+	"volume"		"0.35"
+	"soundlevel"	"SNDLVL_60dB"
+	"wave"			"common/wpn_hudon.wav"
+}
+
+//---------------------------------------------------
+// Player Longjump Sounds	(BMS Sound Directory)
+//
+// ALL of the LongJump Entries listed are native to the BMS directory.
+//
+
+"Player.LongJump"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_long1.wav"
+}
+
+// Sound indicators for when the longjump reserves are 
+// temporarily depleted / ready again for use.
+
+"Player.LongJump.Deny"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_deny.wav"
+}
+
+"Player.LongJump.Ready"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_ready.wav"
+}
+
+"Player.LongJump.ImpactCompensation"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_fall.wav"
+}
+
+////
+
+"Player.DoubleJump"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_boost2.wav"
+}
+
+"Player.AirBoostJump"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_boost1.wav"
+}
+
+"Player.Break"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"weapons/jumpmod/jumpmod_break.wav"
+}
+
+"Player.Slide"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_60dB"
+	"wave"			"player/player_slide.wav"
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//			NOW STARTS BLACK MESA MULTIPLAYER ENTRIES
+//
+//				bms/sound/player_deathmatch
+//
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// DEV NOTE: All the Multiplayer Entries are native to the bms sound directory path:
+
+// Multiplayer Generic Damage Sounds-Fall, Fire, and Drowning
+// these are mostly versions of single player sound effects, sans the "Gordon" vocalizations////
+
+"Multiplayer.BurnPain"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.9"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/pldm_burnpain01.wav"
+		"wave"		"player_deathmatch/pldm_burnpain06.wav"
+	}
+}
+
+"Multiplayer.FallDamage"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.95"
+	"pitch"			"90,110"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/pldm_fallpain01.wav"
+		"wave"		"player_deathmatch/pldm_fallpain03.wav"
+	}
+}
+
+"Multiplayer.Drownstart"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"90,110"
+	"wave"			"player/bmpl_drown01.wav"
+}
+
+"Multiplayer.DrownContinue"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"90,110"
+
+	"rndwave"
+	{
+		"wave"		"player/bmpl_drown01.wav"
+		"wave"		"player/bmpl_drown02.wav"
+		"wave"		"player/bmpl_drown03.wav"
+		"wave"		"player/bmpl_drown04.wav"
+	}
+}
+
+// Player has taken damage HEV damage when charge is < 25%.
+
+"Multiplayer.HevImpact1"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"100"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/hevimpact01.wav"
+		"wave"		"player_deathmatch/hevimpact02.wav"
+		"wave"		"player_deathmatch/hevimpact03.wav"
+		"wave"		"player_deathmatch/hevimpact04.wav"
+		"wave"		"player_deathmatch/hevimpact05.wav"
+		"wave"		"player_deathmatch/hevimpact06.wav"
+		"wave"		"player_deathmatch/hevimpact07.wav"
+		"wave"		"player_deathmatch/hevimpact08.wav"
+		"wave"		"player_deathmatch/hevimpact09.wav"
+		"wave"		"player_deathmatch/hevimpact10.wav"
+	}
+}
+
+// Player has taken damage HEV damage when: 25% < charge < 50%.
+
+"Multiplayer.HevImpact2"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"100"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/hevimpact01.wav"
+		"wave"		"player_deathmatch/hevimpact02.wav"
+		"wave"		"player_deathmatch/hevimpact03.wav"
+		"wave"		"player_deathmatch/hevimpact04.wav"
+		"wave"		"player_deathmatch/hevimpact05.wav"
+		"wave"		"player_deathmatch/hevimpact06.wav"
+		"wave"		"player_deathmatch/hevimpact07.wav"
+		"wave"		"player_deathmatch/hevimpact08.wav"
+		"wave"		"player_deathmatch/hevimpact09.wav"
+		"wave"		"player_deathmatch/hevimpact10.wav"
+	}
+}
+
+// Player has taken damage HEV damage when: 50% < charge < 75%.
+
+"Multiplayer.HevImpact3"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"125"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/hevimpact01.wav"
+		"wave"		"player_deathmatch/hevimpact02.wav"
+		"wave"		"player_deathmatch/hevimpact03.wav"
+		"wave"		"player_deathmatch/hevimpact04.wav"
+		"wave"		"player_deathmatch/hevimpact05.wav"
+		"wave"		"player_deathmatch/hevimpact06.wav"
+		"wave"		"player_deathmatch/hevimpact07.wav"
+		"wave"		"player_deathmatch/hevimpact08.wav"
+		"wave"		"player_deathmatch/hevimpact09.wav"
+		"wave"		"player_deathmatch/hevimpact10.wav"
+	}
+}
+
+// Player has taken damage HEV damage when: 75% < charge < 100%.
+
+"Multiplayer.HevImpact4"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"150"
+
+	"rndwave"
+	{
+		"wave"		"player_deathmatch/hevimpact01.wav"
+		"wave"		"player_deathmatch/hevimpact02.wav"
+		"wave"		"player_deathmatch/hevimpact03.wav"
+		"wave"		"player_deathmatch/hevimpact04.wav"
+		"wave"		"player_deathmatch/hevimpact05.wav"
+		"wave"		"player_deathmatch/hevimpact06.wav"
+		"wave"		"player_deathmatch/hevimpact07.wav"
+		"wave"		"player_deathmatch/hevimpact08.wav"
+		"wave"		"player_deathmatch/hevimpact09.wav"
+		"wave"		"player_deathmatch/hevimpact10.wav"
+	}
+}
+
+// Endgame 
+
+"Player.heartbeat01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_NONE"
+
+	"wave"		"player/player_heartbeat01.wav"
+}
+
+"Player.Credits"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#music\BMS - End Credits.ogg"
+}

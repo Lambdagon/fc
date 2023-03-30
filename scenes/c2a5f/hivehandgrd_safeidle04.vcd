@@ -1,0 +1,123 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.lockup.idle.goodluckpartner01"
+    {
+      time 0.740183 1.450342
+      param "st.grd02.lockup.idle.goodluckpartner01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.476191 2.333334
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3040 0.5200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3714 0.5000
+          0.5911 0.7100
+          0.9524 0.5300
+          1.2239 0.5300
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+        }
+      }
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.047619 4.000000
+      param "!player"
+      event_ramp
+      {
+        0.4135 0.5927
+        0.9222 0.7414
+        1.7333 0.7568
+        2.6650 0.7426
+        3.0878 0.6753
+        3.4802 0.7414
+      }
+    }
+  }
+  channel "FAce"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_browup01"
+    {
+      time 0.263559 1.911706
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.4471 1.0000
+        1.0017 0.9870
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.092593 1.629629
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1471 0.3329
+        0.3265 0.4014
+        1.2088 0.3896
+      }
+    }
+    event expression "b_smile_sly_righty"
+    {
+      time 0.584986 3.955357
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_sly_righty"
+      event_ramp
+      {
+        0.7647 0.8725
+        2.6926 0.8394
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "c2a5f_barney"
+{
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "56"
+  "RampTool" "68"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,136 @@
+// Choreo version 1
+actor "sci03"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci03.instruct.getamoveon01"
+    {
+      time 0.366667 2.380998
+      param "lc.sci03.instruct.getamoveon01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.sci03.instruct.getamoveon02"
+    {
+      time 2.638597 3.498098
+      param "lc.sci03.instruct.getamoveon02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_accentFwd"
+    {
+      time 0.122807 2.556141
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "G_puncuate"
+    {
+      time 0.526316 2.159649
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "G_lefthandmotion"
+    {
+      time 2.219299 4.185966
+      param "G_lefthandmotion"
+      absolutetags playback_time
+      {
+        "apex" 0.224138
+        "accent" 0.482759
+        "loop" 0.517241
+        "end" 0.724138
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.224138
+        "accent" 0.482759
+        "loop" 0.517241
+        "end" 0.724138
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.157894 4.166667
+      param "!player"
+      event_ramp
+      {
+        0.2720 1.0000
+        3.5320 1.0000
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.070175 2.885965
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.4500 1.0000
+        2.3760 1.0000
+      }
+    }
+    event expression "GrudgeM"
+    {
+      time 2.596491 4.184211
+      param "common_expressions"
+      param2 "GrudgeM"
+      event_ramp
+      {
+        0.3780 1.0000
+        1.3577 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "76"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

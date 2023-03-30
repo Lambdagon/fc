@@ -1,0 +1,137 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre68"
+    {
+      time 0.652548 1.835745
+      param "NPC_Scimale.answer_pre68"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 3.352871
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.4933 0.9931
+        3.0235 0.6952
+        3.2183 0.1145
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.044118 3.348038
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.5400 0.4538
+        0.9133 0.4769
+        1.0800 0.7923
+        2.4934 0.4847
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.443804 1.443804
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1333 0.1488
+        0.3528 0.4628
+        0.6861 0.1311
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 1.049020 2.049019
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.3625 0.2810
+        0.6225 0.5419
+        0.7600 0.2739
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.120275 2.120275
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1333 0.1488
+        0.3528 0.3400
+        0.6861 0.1311
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.017534 3.355631
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.8285 0.4400
+          1.0215 0.8500
+          1.9571 0.8800
+          2.2214 0.6000
+        }
+      }
+    }
+  }
+  channel "Accent"
+  {
+    event gesture "body gesture accent up"
+    {
+      time 0.377450 2.810784
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "136"
+  "RampTool" "80"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,150 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.zombies02"
+    {
+      time 0.546377 2.890141
+      param "NPC_Scimale.zombies02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.169015 1.600765
+      param "!enemy"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.9786
+        0.8353 0.9894
+        1.0630 0.1832
+      }
+    }
+    active "0"
+  }
+  channel "Expression"
+  {
+    event expression "sci_afraid01"
+    {
+      time 1.370519 2.191032
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.2593 0.9953
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.732092 2.694213
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.2543 0.9929
+        1.1059 0.6871
+        1.5643 0.9929
+      }
+    }
+    event expression "sci_afraid02"
+    {
+      time 0.474516 1.474516
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid02"
+      event_ramp
+      {
+        0.2088 0.4793
+        0.4529 0.6281
+        0.7765 0.4888
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "gesture"
+  {
+    event gesture "kgesture08"
+    {
+      time 0.156334 2.456334
+      param "kgesture08"
+      absolutetags playback_time
+      {
+        "apex" 0.132107
+        "accent" 0.293571
+        "loop" 0.394737
+        "end" 0.450658
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.115385
+        "accent" 0.256410
+        "loop" 0.423077
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "bg_accentup"
+    {
+      time 0.391182 2.589667
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3375 0.5490
+        1.9417 0.4959
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.138353
+        "extreme" 0.338196
+        "loop" 0.614902
+        "end" 0.768627
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "kgesture02"
+    {
+      time 0.809524 3.276191
+      param "kgesture02"
+      absolutetags playback_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+  "RampTool" "48"
+  "CChoreoView" "56"
+}
+fps 60
+snap off
+ignorePhonemes off

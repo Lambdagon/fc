@@ -1,0 +1,248 @@
+// Choreo version 1
+event stoppoint "FIRE"
+{
+  time 26.490341 -1.000000
+  param "noaction"
+}
+actor "h_hangar_guard"
+{
+  channel "Voice"
+  {
+    event speak "st.grd.hangar.outside.hlastwords01"
+    {
+      time 0.138889 3.738889
+      param "st.grd.hangar.outside.hlastwords01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd.hangar.outside.hlastwords01"
+    {
+      time 3.930554 4.894160
+      param "st.grd.hangar.outside.hlastwords02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expressions"
+  {
+    event firetrigger "Fire 12- Agrunt Npc Removel"
+    {
+      time 23.486443 -1.000000
+      param "12"
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 0.583333 -1.000000
+      param "1"
+    }
+  }
+  channel "Flex Animations"
+  {
+    event firetrigger "Firetrigger 2- resume previous scene to blend"
+    {
+      time 0.237270 -1.000000
+      param "2"
+    }
+    event flexanimation "Look over Right Shoulder"
+    {
+      time 4.057279 6.598945
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5863 1.0000
+          1.1696 0.9944
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5863 1.0000
+          1.1696 0.9944
+        }
+        "chest_rightleft" range 30.0 -30.0 
+        {
+          0.5863 0.9500
+          1.1696 0.9450
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event firetrigger "Firetrigger 10- Fire Sound Of death screams"
+    {
+      time 4.874297 -1.000000
+      param "10"
+    }
+    event gesture "Gesture12"
+    {
+      time 2.066137 4.366138
+      param "Gesture12"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Look At"
+  {
+    event firetrigger "Firetrigger 3- Alien Grunt Spawns"
+    {
+      time 3.147629 -1.000000
+      param "3"
+    }
+    event lookat "Look at !self"
+    {
+      time 0.398569 5.565236
+      param "!self"
+    }
+  }
+  channel "Move To"
+  {
+    event firetrigger "Fire 11- Guard Npc Removel"
+    {
+      time 25.214417 -1.000000
+      param "11"
+    }
+    event moveto "Moveto h_final_faceto"
+    {
+      time 5.174602 8.698412
+      param "h_final_faceto"
+      param2 "Run"
+    }
+    event flexanimation "Flex01"
+    {
+      time 1.367350 3.171272
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.1425 0.2400
+        }
+        {
+          0.1425 0.5000
+        }
+        "lowerer" combo 
+        {
+          1.2503 0.5100
+        }
+        {
+          1.2503 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1425 0.5700
+          0.3303 0.2900
+          0.7013 0.4700
+          1.0150 0.5000
+          1.2503 0.6400
+          1.4201 0.3800
+          1.5934 0.7000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.1425 0.2000
+          0.2503 0.3700
+          1.2503 0.6600
+          1.3876 0.3600
+          1.4758 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.1425 0.2400
+          0.2836 0.2200
+          0.7013 0.4000
+          1.2503 0.3900
+          1.3876 0.6700
+          1.4758 0.5000
+        }
+      }
+    }
+  }
+  channel "Face At"
+  {
+    event firetrigger "Firetrigger 4"
+    {
+      time 4.580164 -1.000000
+      param "4"
+    }
+    event face "Face h_final_faceto"
+    {
+      time 4.260060 6.944908
+      param "h_final_faceto"
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "5- Clear out grd priority message"
+    {
+      time 5.392920 -1.000000
+      param "5"
+    }
+  }
+  channel "Triggers For Sound"
+  {
+  }
+  channel "STUFF"
+  {
+    event firetrigger "Firetrigger 13"
+    {
+      time 18.072954 -1.000000
+      param "13"
+    }
+    event firetrigger "Firetrigger 13"
+    {
+      time 8.297555 -1.000000
+      param "13"
+    }
+    event firetrigger "Firetrigger 13"
+    {
+      time 10.162371 -1.000000
+      param "13"
+    }
+    event firetrigger "Firetrigger 13"
+    {
+      time 12.720572 -1.000000
+      param "13"
+    }
+    event firetrigger "Firetrigger 13"
+    {
+      time 14.572954 -1.000000
+      param "13"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "hgrdslayer"
+{
+  channel "STUFF"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "68"
+  "RampTool" "42"
+  "SceneRampTool" "100"
+  "ExpressionTool" "30"
+  "CChoreoView" "48"
+}
+fps 60
+snap off
+ignorePhonemes off

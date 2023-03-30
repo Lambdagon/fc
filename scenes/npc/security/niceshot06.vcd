@@ -1,0 +1,102 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.niceshot06"
+    {
+      time 0.543265 1.143265
+      param "NPC_Security.niceshot06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.050208 1.234503
+      param "!player"
+      event_ramp
+      {
+        0.3926 0.3354
+        0.7013 0.4933
+        0.7453 0.5116
+        0.9458 0.3195
+      }
+    }
+  }
+  channel "expression"
+  {
+  }
+  channel "gestures"
+  {
+    event gesture "bg_accentup"
+    {
+      time -0.013889 2.350000
+      param "bg_accentup"
+      event_ramp
+      {
+        0.9050 0.3896
+        1.3369 0.3058
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.099295
+        "extreme" 0.285155
+        "loop" 0.542499
+        "end" 0.685468
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 0.215278 1.661111
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.4938 0.1854
+        0.6813 0.2810
+        0.8375 0.2373
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.246878
+        "extreme" 0.482229
+        "loop" 0.494467
+        "end" 0.505764
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "100"
+  "CChoreoView" "96"
+  "GestureTool" "100"
+  "RampTool" "32"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

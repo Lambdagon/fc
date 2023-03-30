@@ -1,0 +1,218 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 2.127587 -1.000000
+  param "noaction"
+}
+actor "bm_c1a3a_sci_1"
+{
+  channel "Voice"
+  {
+    event speak "uc.sci03.dumpster.isthatyou03"
+    {
+      time 2.232522 3.032522
+      param "uc.sci03.dumpster.isthatyou03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event expression "sci_afraid00"
+    {
+      time 3.229173 5.467735
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.4059 0.9590
+        1.9415 0.9144
+      }
+    }
+    event expression "sci_afraid02"
+    {
+      time 2.383334 3.716667
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid02"
+      event_ramp
+      {
+        0.3000 0.6864
+      }
+    }
+    event expression "sci_wincing02"
+    {
+      time 0.895238 3.252381
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing02"
+      event_ramp
+      {
+        1.0250 0.3571
+      }
+    }
+    event expression "sci_afraid00"
+    {
+      time 1.136580 2.764031
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.4059 0.9590
+        1.3304 0.9144
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "kgesture08"
+    {
+      time -0.345039 3.279035
+      param "kgesture08"
+      event_ramp
+      {
+        0.3840 0.4138
+        1.0160 0.6031
+        2.9187 0.4548
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.344444
+        "accent" 0.446917
+        "loop" 0.568020
+        "end" 0.726386
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.115385
+        "accent" 0.256410
+        "loop" 0.423077
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.121212 5.478788
+      param "!player"
+      event_ramp
+      {
+        0.8250 0.3438
+        1.2786 0.4982
+        3.6136 0.5175
+        4.2922 0.4584
+        4.5305 0.3450
+      }
+    }
+  }
+  channel "face at"
+  {
+    event face "Face !player"
+    {
+      time 0.111111 2.759259
+      param "!player"
+      event_ramp
+      {
+        0.9500 0.9976
+        2.6481 0.9976
+      }
+    }
+  }
+  channel "move"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "bm_c1a3a_sci_2"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scimale.startle08"
+    {
+      time 0.567161 1.838930
+      param "NPC_Scimale.goodgod02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.850000 1.850000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.5265 0.9590
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "G_what"
+    {
+      time 0.587879 2.621212
+      param "G_what"
+      absolutetags playback_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 3.493939
+      param "!player"
+      event_ramp
+      {
+        0.8250 0.3438
+        1.2786 0.4982
+        1.7500 0.5175
+        2.4286 0.4584
+        2.6669 0.3450
+      }
+    }
+  }
+  channel "face at"
+  {
+    event face "Face !player"
+    {
+      time 0.074073 2.722222
+      param "!player"
+      event_ramp
+      {
+        0.9571 0.9952
+        2.6481 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "28"
+  "ExpressionTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

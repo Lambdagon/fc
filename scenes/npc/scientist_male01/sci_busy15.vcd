@@ -1,0 +1,127 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.busy15"
+    {
+      time 0.451920 1.917203
+      param "NPC_Scimale.busy15"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.026429 2.586375
+      param "!player"
+      event_ramp
+      {
+        0.1043 0.1830
+        0.3536 0.8472
+        0.5213 1.0000
+        1.8282 0.9931
+        2.0503 0.8403
+        2.3822 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.376344 2.231182
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.2160 0.4212
+        0.6160 0.7317
+        0.8200 0.7792
+        1.5200 0.6159
+        1.6976 0.2988
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.163804 1.163804
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.1429 0.3424
+        0.2071 0.3436
+        0.6250 0.3495
+      }
+    }
+    event gesture "bg_accentup"
+    {
+      time 0.111961 2.545295
+      param "bg_accentup"
+      event_ramp
+      {
+        0.2062 0.1086
+        0.4875 0.1960
+        1.1500 0.2621
+        1.5125 0.1535
+        1.8625 0.0838
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.327381 1.327381
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1114 0.1251
+        0.2743 0.2692
+        0.4257 0.1771
+        0.5257 0.0933
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.041667 2.041667
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2000 0.1251
+        0.3629 0.1995
+        0.5143 0.1771
+        0.6143 0.0933
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "70"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

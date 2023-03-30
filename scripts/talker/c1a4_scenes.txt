@@ -1,0 +1,102 @@
+criterion IsBPb "map" "bm_c1a4b" required
+criterion IsBPd "map" "bm_c1a4d" required
+
+
+//========================================================
+// Guard outside blast pit
+//========================================================
+criterion IsGrd1BlastPit name "grd01" required
+criterion IsTentacleDead "TentacleDead" "1" required
+criterion IsLeeroyDead "LeeroyDead" "1" required
+
+response grd01_BlastPit_Idle
+{
+   norepeat
+   scene "scenes/c1a4b/grd01_bequiet_idle01.vcd"
+   scene "scenes/c1a4b/grd01_bequiet_idle02.vcd"
+   scene "scenes/c1a4b/grd01_bequiet_idle03.vcd"
+   scene "scenes/c1a4b/grd01_bequiet_idle04.vcd"
+}
+
+rule grd01_BlastPit_Idle
+{
+   criteria TLK_VITALIDLE IsGrd1BlastPit IsPlayerClose IsBPb IsLeeroyDead
+   response grd01_BlastPit_Idle
+}
+
+response grd01_BlastPit_Idle_TentDead
+{
+   norepeat
+   sequential
+   scene "scenes/c1a4b/grd01_tentacledead02.vcd"
+   scene "scenes/c1a4b/grd01_tentacledead03.vcd"
+}
+
+rule grd01_BlastPit_Idle_TentDead
+{
+   criteria TLK_USE IsGrd1BlastPit IsPlayerClose IsBPb IsTentacleDead
+   response grd01_BlastPit_Idle_TentDead
+}
+
+//========================================================
+//Scientist near generator, waiting for Smithers
+//========================================================
+criterion IsSci3Generator name "SCI03_Generator" required
+criterion IsGeneratorOn "c1a4_objective_power" "1" required
+criterion IsGeneratorOff "c1a4_objective_power" "" required
+
+response Sci03_Generator_Idle
+{
+   norepeat
+   scene "scenes/c1a4d/sci03_generator_idle01.vcd"
+   scene "scenes/c1a4d/sci03_generator_idle02.vcd"
+}
+
+rule Sci03_Generator_Idle
+{
+   criteria TLK_USE IsSci3Generator IsPlayerClose IsBPd
+   response Sci03_Generator_Idle
+}
+
+response Sci03_Generator_Idle_Off
+{
+   norepeat
+   scene "scenes/c1a4d/sci03_generatoroff_idle.vcd"
+}
+
+rule Sci03_Generator_Idle_Off
+{
+   criteria TLK_USE IsSci3Generator IsPlayerClose IsBPd IsGeneratorOff
+   response Sci03_Generator_Idle_Off
+}
+
+response Sci03_Generator_Idle_On
+{
+   norepeat
+   scene "scenes/c1a4d/sci03_generatoron_idle.vcd"
+}
+
+rule Sci03_Generator_Idle_On
+{
+   criteria TLK_USE IsSci3Generator IsPlayerClose IsBPd IsGeneratorOn
+   response Sci03_Generator_Idle_On
+}
+
+//========================================================
+//Scientist in generator office called Smithers
+//========================================================
+criterion IsSci4Smithers name "SCI04_Smithers" required
+
+response Sci04_Smithers_Idle
+{
+   norepeat
+   scene "scenes/c1a4d/sci04_smithers_idle01.vcd"
+   scene "scenes/c1a4d/sci04_smithers_idle02.vcd"
+   scene "scenes/c1a4d/sci04_smithers_idle03.vcd"
+}
+
+rule Sci04_Smithers_Idle
+{
+   criteria TLK_USE IsSci4Smithers IsPlayerClose IsBPd
+   response Sci04_Smithers_Idle
+}

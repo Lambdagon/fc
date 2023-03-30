@@ -1,0 +1,75 @@
+// Choreo version 1
+actor "Eli"
+{
+  channel "Voice"
+  {
+    event speak "uc.eli.idle.feartheworst01"
+    {
+      time 0.337778 1.388073
+      param "uc.eli.idle.feartheworst01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.111111 4.966667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "blink" 
+        {
+          0.4240 1.0000
+          2.7380 1.0000
+          4.2320 1.0000
+        }
+        "inner_raiser" combo 
+        {
+          0.2640 0.4000
+          1.8460 0.6000
+          2.1580 0.5900
+          2.7120 0.4500
+          4.4000 0.4600
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.4320 0.5200
+          2.8880 0.4100
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          3.0480 0.5500
+          3.2400 0.5100
+          3.4960 0.6300
+          3.8280 0.3800
+          4.2780 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8540 0.0500
+          2.0660 0.1900
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist_eli.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

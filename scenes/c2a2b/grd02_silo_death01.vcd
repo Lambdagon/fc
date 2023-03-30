@@ -1,0 +1,353 @@
+// Choreo version 1
+actor "GRD02_Shack_DeathGuy"
+{
+  channel "Voice"
+  {
+    event speak "oar.grd02.silo.tooquiet01"
+    {
+      time 3.072812 7.164490
+      param "NPC_Security.imhurt03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.bullsquid03"
+    {
+      time 9.289404 10.561649
+      param "vo\npc\barneys\grd_death03.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.bullsquid03"
+    {
+      time 7.796349 8.498096
+      param "vo\npc\barneys\grd_death01.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 8.807732 9.807732
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2229 0.7165
+        0.6743 0.6984
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 7.807732 8.807732
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2229 0.7165
+        0.6743 0.6984
+      }
+    }
+    event expression "b_blink01"
+    {
+      time 8.161131 8.673037
+      param "humans\guard\expressions_guard"
+      param2 "b_blink01"
+      event_ramp
+      {
+        0.1750 0.9916
+        0.4151 0.9879
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 9.902777
+      param "!player"
+      event_ramp leftedge curve_default_to_curve_default 0.000 rightedge curve_default_to_curve_default 0.000
+      {
+        0.7200 0.3595
+        1.5800 0.5163
+        2.2000 0.5464
+        3.0400 0.5669
+        4.3000 0.5669
+        5.5800 0.5669
+        6.7800 0.5669
+        7.8800 0.5525
+        8.4000 0.5187
+        8.8200 0.4680
+        9.3000 0.3510
+      }
+    }
+  }
+  channel "Look"
+  {
+    event gesture "BP_wall_lean_final_exertion"
+    {
+      time 7.842091 10.492090
+      param "BP_wall_lean_final_exertion"
+      event_ramp
+      {
+        0.1500 0.9988
+        0.5477 0.9964
+        0.8323 0.0000
+      }
+      sequenceduration 4.000000
+    }
+    event gesture "BP_wall_lean_final_exertion"
+    {
+      time 3.789061 6.439060
+      param "BP_wall_lean_final_exertion"
+      event_ramp
+      {
+        0.1500 0.4270
+        0.5583 0.4246
+        0.8785 0.1315
+        1.2167 0.0000
+      }
+      sequenceduration 4.000000
+    }
+    event gesture "BP_wall_lean_final_exertion"
+    {
+      time 4.705728 7.355727
+      param "BP_wall_lean_final_exertion"
+      event_ramp
+      {
+        0.1333 0.3389
+        0.4166 0.3365
+        0.6618 0.1315
+        0.9333 0.0084
+      }
+      sequenceduration 4.000000
+    }
+  }
+  channel "Move"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 3.927777 6.533333
+      param "hg_nod_yes"
+      absolutetags playback_time
+      {
+        "apex" 0.169196
+        "extreme" 0.260065
+        "loop" 0.480748
+        "end" 0.792299
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_nod_yes"
+    {
+      time 6.333333 8.327778
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.6333 0.3896
+        1.4333 0.3571
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.221039
+        "extreme" 0.339751
+        "loop" 0.628053
+        "end" 0.821170
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Firetrigger 1 ---- Pause Scene until told to continue in vmf"
+    {
+      time 11.541667 -1.000000
+      param "1 ---- Pause Scene until told to continue in vmf"
+    }
+    event firetrigger "Firetrigger 1 ---- Pause Scene until told to continue in vmf"
+    {
+      time 2.458333 -1.000000
+      param "1 ---- Pause Scene until told to continue in vmf"
+    }
+    event firetrigger "Firetrigger 1 ---- Pause Scene until told to continue in vmf"
+    {
+      time 11.541667 -1.000000
+      param "1 ---- Pause Scene until told to continue in vmf"
+    }
+    event firetrigger "16 - fire death scene pose continue to death pause key frame"
+    {
+      time 7.559921 -1.000000
+      param "16"
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "death gasps"
+    {
+      time 9.258194 9.758194
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "part" combo 
+        {
+          0.2167 0.2500
+          0.3173 0.7300
+          0.4593 0.7500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+        "jaw_drop" 
+        {
+          0.1895 0.0400
+          0.3315 0.8300
+          0.4222 0.1100
+        }
+        "mouth_drop" combo 
+        {
+          0.1868 0.0000
+          0.3287 0.8500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+      }
+    }
+    event flexanimation "death gasps"
+    {
+      time 7.804646 8.304646
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "part" combo 
+        {
+          0.2167 0.2500
+          0.3173 0.7300
+          0.4593 0.7500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+        "jaw_drop" 
+        {
+          0.1895 0.0400
+          0.3315 0.8300
+          0.4222 0.1100
+        }
+        "mouth_drop" combo 
+        {
+          0.1868 0.0000
+          0.3287 0.8500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+      }
+    }
+    event flexanimation "death gasps"
+    {
+      time 9.942852 10.442852
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "part" combo 
+        {
+          0.2167 0.2500
+          0.3173 0.7300
+          0.4593 0.7500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+        "jaw_drop" 
+        {
+          0.1895 0.0400
+          0.3315 0.8300
+          0.4222 0.1100
+        }
+        "mouth_drop" combo 
+        {
+          0.1868 0.0000
+          0.3287 0.8500
+        }
+        {
+          0.3173 0.5000
+          0.4593 0.5000
+        }
+      }
+    }
+    event flexanimation "flex death head"
+    {
+      time 9.479426 13.081159
+      param ""
+      event_ramp
+      {
+        0.2214 0.9928
+        3.2643 1.0000
+      }
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.8951 0.5200
+          1.9976 0.5200
+          3.1794 0.5131
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8951 0.5000
+          1.9976 0.5000
+          3.1794 0.5000
+        }
+        "blink" 
+        {
+          0.6000 0.0000
+          0.6500 0.0000
+          0.8500 1.0000
+          2.9667 0.9000
+        }
+      }
+    }
+    event firetrigger "Firetrigger 14"
+    {
+      time 10.387836 -1.000000
+      param "14"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "24"
+  "RampTool" "28"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,1213 @@
+// Choreo version 1
+event loop "LOOP THE CPR"
+{
+  time 51.842590 -1.000000
+  param "1.000000"
+  loopcount "-1"
+}
+actor "Sci45_TCHallway"
+{
+  channel "Dialog"
+  {
+    event speak "uc.sci_cpr.1234_loop01a"
+    {
+      time 1.982576 6.017746
+      param "uc.sci_cpr.1234_loop01a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop01b"
+    {
+      time 7.455704 11.490874
+      param "uc.sci_cpr.1234_loop01b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop01b"
+    {
+      time 18.486109 22.521278
+      param "uc.sci_cpr.1234_loop01b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop01a"
+    {
+      time 23.326855 27.362024
+      param "uc.sci_cpr.1234_loop01a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.outofbreath01"
+    {
+      time 12.336117 14.395935
+      param "uc.sci_cpr.outofbreath01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.outofbreath01"
+    {
+      time 31.632412 33.692230
+      param "uc.sci_cpr.outofbreath01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.dammitbreathe02"
+    {
+      time 28.022394 30.632711
+      param "uc.sci_cpr.dammitbreathe02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop02"
+    {
+      time 39.197227 44.053623
+      param "uc.sci_cpr.1234_loop02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop01a"
+    {
+      time 34.044453 38.079624
+      param "uc.sci_cpr.1234_loop01a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "vo\c1a1a\sci_cpr_outofbreath01.wav"
+    {
+      time 44.252781 46.312599
+      param "uc.sci_cpr.outofbreath01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.1234_loop01b"
+    {
+      time 46.433338 50.468510
+      param "uc.sci_cpr.1234_loop01b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci_cpr.outofbreath01"
+    {
+      time 14.523615 17.979465
+      param "uc.sci_cpr.dammitbreathe01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 57.226665
+      param "!self"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face !self"
+    {
+      time -1.722223 54.777779
+      param "!self"
+    }
+  }
+  channel "Move To"
+  {
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 0.083333 57.200005
+      param "UC_SCI_Resuscitate_GRD"
+      absolutetags playback_time
+      {
+        "UP01" 0.003714
+        "up02" 0.998542
+      }
+      absolutetags shifted_time
+      {
+        "UP01" 0.020290
+        "up02" 0.025604
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 0.956312 21.656315
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 1.682829 22.382828
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 3.567928 22.842005
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.077825
+        "down" 0.096586
+        "upagain" 0.116048
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 8.024999 28.725002
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 6.377812 26.374107
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.075014
+        "down" 0.093098
+        "upagain" 0.111857
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 11.264271 31.964272
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.3468 0.9965
+        3.2214 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 17.896296 38.596298
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.0780 0.9965
+        2.6527 0.0000
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 20.381687 40.420082
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0000 0.1452
+        0.6697 0.9917
+        1.6030 0.9965
+        2.4776 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 22.576134 42.614529
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.3438 0.1452
+        0.7822 0.9917
+        1.8406 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 24.298355 44.336754
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.2553 0.0000
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.048128
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 33.095974 53.134373
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 26.965023 47.003418
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 37.029308 57.067707
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 42.224747 62.263145
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 45.681690 65.720093
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 34.825607 54.864002
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 37.780560 58.480564
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.0780 0.9965
+        2.6527 0.0000
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 39.175343 59.213734
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0000 0.1452
+        0.6697 0.9917
+        1.6030 0.9965
+        2.4776 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 47.537247 67.575638
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 48.838837 68.877243
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0938 0.0000
+        0.2938 0.1452
+        0.7822 0.9917
+        1.7156 0.9965
+        2.5901 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 14.912502 35.612507
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.5000 0.1452
+        1.4135 0.9917
+        2.0780 0.9965
+        2.6527 0.0000
+      }
+      absolutetags playback_time
+      {
+        "up" 0.072464
+        "down" 0.089933
+        "upagain" 0.108054
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+    event gesture "UC_SCI_Resuscitate_GRD"
+    {
+      time 41.246769 61.285160
+      param "UC_SCI_Resuscitate_GRD"
+      event_ramp
+      {
+        0.0000 0.1452
+        0.6697 0.9917
+        1.6030 0.9965
+        2.4776 0.0224
+      }
+      absolutetags playback_time
+      {
+        "up" 0.041839
+        "down" 0.059885
+        "upagain" 0.078604
+      }
+      absolutetags shifted_time
+      {
+        "up" 0.072464
+        "down" 0.097750
+        "upagain" 0.126524
+      }
+      sequenceduration 10.000000
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "look at grd"
+    {
+      time 12.834128 17.381748
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.9913 0.0000
+          3.5649 0.0000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.9913 0.2400
+          2.3545 0.5600
+          3.4376 0.2425
+        }
+      }
+    }
+    event flexanimation "look at grd"
+    {
+      time 28.556353 33.103973
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.9913 0.0000
+          3.5649 0.0000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.9913 0.2400
+          2.3545 0.5600
+          3.4376 0.2425
+        }
+      }
+    }
+    event flexanimation "look at grd"
+    {
+      time 43.556351 48.103973
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.9913 0.0000
+          3.5649 0.0000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.9913 0.2400
+          2.3545 0.5600
+          3.4376 0.2425
+        }
+      }
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Face"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "GRD08_TChallway"
+{
+  channel "HE"
+  {
+    event expression "b_blink01"
+    {
+      time -0.333332 110.666672
+      param "humans\guard\expressions_guard"
+      param2 "b_blink01"
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 62.166672
+      param "!self"
+    }
+  }
+  channel "FACE"
+  {
+    event face "Face !self"
+    {
+      time 0.000000 62.166668
+      param "!self"
+    }
+  }
+  channel "chestcompression animations"
+  {
+    event flexanimation "chest compress"
+    {
+      time 3.343434 3.843434
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 7.738889 8.238889
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 5.122222 5.622222
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 9.655556 10.155556
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 10.688888 11.188888
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 12.947221 13.447221
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 16.702776 17.202776
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 19.550922 20.050922
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 21.476849 21.976849
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 23.684256 24.184256
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 25.399071 25.899071
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 26.440737 26.940737
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 28.003237 28.503237
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 34.024071 34.524071
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 35.835182 36.335182
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 38.057404 38.557404
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 39.176453 39.676453
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 40.201851 40.701851
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 41.246292 41.746292
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.6000
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.1200
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 42.368519 42.868519
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 43.389355 43.919121
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 46.890652 47.420418
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+    event flexanimation "chest compress"
+    {
+      time 48.531342 49.061108
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1831 0.7100
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1831 0.0000
+        }
+      }
+    }
+  }
+  channel "base layer ani"
+  {
+    event gesture "UC_GRD_BeResuscitated_SCI"
+    {
+      time -0.055555 116.268524
+      param "UC_GRD_BeResuscitated_SCI"
+      absolutetags playback_time
+      {
+        "still01" 0.000323
+        "still02" 0.004588
+        "stiil03" 0.883862
+      }
+      absolutetags shifted_time
+      {
+        "still01" 0.000399
+        "still02" 0.000599
+        "stiil03" 0.000999
+      }
+      sequenceduration 10.000000
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "8"
+  "ExpressionTool" "44"
+  "GestureTool" "4"
+  "RampTool" "18"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

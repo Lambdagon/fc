@@ -1,0 +1,101 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "wetrustedyou04"
+    {
+      time 0.171041 2.533082
+      param "NPC_Security.wetrustedyou04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.029375 3.156725
+      param "!player"
+      event_ramp
+      {
+        0.1615 0.2256
+        0.5303 0.9756
+        2.3706 1.0000
+        2.9202 0.7439
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.021367 2.615385
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.3481 0.5731
+        2.2493 0.5975
+      }
+    }
+    event expression "Tough5"
+    {
+      time 0.748291 2.827992
+      param "humans\marine\marine"
+      param2 "Tough5"
+      event_ramp
+      {
+        0.2389 0.2927
+        0.5333 0.2439
+        0.6238 0.3363
+        1.0622 0.3776
+        1.5010 0.4368
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "forward"
+    {
+      time 0.021368 1.869231
+      param "bg_accentFwd"
+      event_ramp
+      {
+        0.1429 0.1585
+        1.7476 0.1585
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.275401
+        "extreme" 0.568031
+        "loop" 0.645724
+        "end" 0.816991
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "GestureTool" "100"
+  "CChoreoView" "68"
+  "ExpressionTool" "34"
+}
+fps 60
+snap off
+ignorePhonemes off

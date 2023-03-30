@@ -1,0 +1,249 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 3.844445 -1.000000
+  param "noaction"
+}
+actor "sci_move"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci01.hello01"
+    {
+      time 0.120000 0.730567
+      param "oc.sci01.hello01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci01.whosthere01"
+    {
+      time 2.566612 3.375025
+      param "oc.sci01.whosthere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.066667 1.066667
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.1460 0.8045
+        0.7380 0.7444
+      }
+    }
+    event expression "Grudge"
+    {
+      time 0.880000 2.893333
+      param "common_expressions"
+      param2 "Grudge"
+      event_ramp
+      {
+        0.6520 0.8496
+        1.6287 0.4962
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "body gesture accent forward"
+    {
+      time 0.440000 4.179534
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.090376
+        "extreme" 0.234977
+        "loop" 0.361503
+        "end" 0.910870
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "gesture look small"
+    {
+      time 0.620000 2.838439
+      param "G_look_small"
+      event_ramp
+      {
+        0.4800 0.5325
+        1.6940 0.5779
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.215250
+        "accent" 0.317891
+        "loop" 0.530351
+        "end" 0.760383
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.325581
+        "accent" 0.465116
+        "loop" 0.604651
+        "end" 0.697674
+      }
+      sequenceduration 1.466667
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 4.515555
+      param "!player"
+      event_ramp
+      {
+        0.0820 0.5519
+        0.2000 0.9805
+        3.9022 1.0000
+        4.2042 0.7013
+      }
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto mark_lounge_toplayer"
+    {
+      time 1.257576 2.221212
+      param "mark_lounge_toplayer"
+      param2 "Walk"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "sci_barnaclefood"
+{
+  channel "Expression"
+  {
+    event expression "ScaredM"
+    {
+      time 0.112403 3.941861
+      param "common_expressions"
+      param2 "ScaredM"
+    }
+    event expression "sci_afraid01"
+    {
+      time 3.748062 5.232558
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.0900 0.9870
+        1.2060 1.0000
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_up_l"
+    {
+      time 0.015152 1.615152
+      param "bg_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+    }
+    event gesture "bg_down"
+    {
+      time 0.872093 4.210853
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.050779
+        "extreme" 0.262498
+        "loop" 0.609786
+        "end" 0.872285
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "gesture_turn_left_180"
+    {
+      time 0.984496 1.917830
+      param "gesture_turn_left_180"
+      sequenceduration 0.933333
+    }
+    event gesture "Startle_behind"
+    {
+      time 3.771318 5.437985
+      param "Startle_behind"
+      sequenceduration 1.666667
+    }
+  }
+  channel "Look"
+  {
+    event face "Face !player"
+    {
+      time 0.984496 4.472868
+      param "!player"
+      event_ramp
+      {
+        0.9260 1.0000
+        3.4884 1.0000
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.868217 3.914729
+      param "!player"
+      event_ramp
+      {
+        2.8203 0.9870
+        2.9863 0.0584
+      }
+    }
+  }
+  channel "Move"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

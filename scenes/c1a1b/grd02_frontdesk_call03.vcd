@@ -1,0 +1,42 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd06.lobby.emergency_bastardspickup01"
+    {
+      time 2.845050 4.978292
+      param "uc.grd06.lobby.emergency_bastardspickup01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_thisissectorc_01"
+    {
+      time 0.390504 1.892046
+      param "uc.grd06.lobby.emergency_thisissectorc_01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "44"
+}
+fps 60
+snap off
+ignorePhonemes off

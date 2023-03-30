@@ -1,0 +1,28 @@
+criterion IsAnnouncement "concept" "announcement" required
+
+//========================================================
+//AM
+//========================================================
+response "announce_uc"
+{
+	//sequential
+	// norepeat
+	speak "C1A1_00"
+	speak "C1A1_01"
+	speak "C1A1_02"
+	speak "C1A1_03"
+	speak "C1A1_04"
+	speak "C1A1_05"
+	speak "C1A1_06"
+	speak "C1A1_07"
+	speak "C1A1_08"
+	speak "C1A1_09"
+	speak "C1A1_10"
+	speak "C1A1_11"
+}
+
+rule "announce_uc"
+{
+	criteria IsAnnouncement
+	response announce_uc
+}

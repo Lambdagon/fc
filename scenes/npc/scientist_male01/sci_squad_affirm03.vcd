@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.squad_affirm03"
+    {
+      time 0.406667 1.156009
+      param "NPC_Scimale.squad_affirm03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.006666
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.4136 0.9931
+        1.5607 0.8403
+        1.7489 0.2222
+      }
+    }
+    active "0"
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.059999 2.020000
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.3588 0.4146
+        1.1379 0.6708
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.055769 2.029659
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1851 0.4500
+          0.3730 1.0000
+          1.1572 0.9900
+          1.6776 0.5600
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "accent up"
+    {
+      time 0.040000 2.053333
+      param "bodyaccentup"
+      event_ramp
+      {
+        0.1615 0.4756
+        1.8231 0.5122
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.083999
+        "extreme" 0.151198
+        "loop" 0.537593
+        "end" 0.755989
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "52"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,179 @@
+// Choreo version 1
+actor "Grd03_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.grd03.yehbuddy03"
+    {
+      time 0.213333 3.233560
+      param "am.grd03.yehbuddy03"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Stretch"
+    {
+      time 0.120000 3.086667
+      param "Stretch_Sit"
+      absolutetags playback_time
+      {
+        "in" 0.000000
+        "out" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.000000
+        "out" 1.022727
+      }
+      sequenceduration 2.966667
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Pride"
+    {
+      time 0.093333 3.786666
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_closer" combo 
+        {
+          0.7760 0.0000
+          1.0540 1.0000
+          1.9460 1.0000
+          2.2100 0.0000
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          1.1360 0.0000
+          1.2580 0.7900
+          2.1460 0.0000
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          2.3220 0.0000
+          2.4840 0.4100
+          3.1140 0.3700
+        }
+        {
+        }
+        "stretcher" combo 
+        {
+          1.0600 0.0000
+          1.1940 0.3100
+          1.5680 0.0000
+        }
+        {
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "Sci08_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci08.grumbles03"
+    {
+      time 3.266667 5.338209
+      param "am.sci08.grumbles03"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Self"
+    {
+      time 0.473333 5.526667
+      param "!self"
+      event_ramp
+      {
+        0.0000 1.0000
+        0.6880 1.0000
+        0.8940 0.4662
+        1.3560 0.2481
+        1.7620 0.4737
+        1.9740 1.0000
+        5.0340 1.0000
+      }
+    }
+    event lookat "Grd"
+    {
+      time 1.106667 2.406667
+      param "Grd03_NetworkRoom"
+      event_ramp
+      {
+        0.2520 0.3459
+        1.0280 0.3609
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Annoyed"
+    {
+      time 0.646667 5.533333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "outer_raiser" combo 
+        {
+          0.9640 0.0000
+          1.2120 0.2500
+          1.5760 0.2900
+          2.2620 0.3200
+          2.8060 0.0000
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.9620 0.0000
+          1.2180 0.2600
+          3.5000 0.5200
+          3.9880 0.4300
+          4.0940 0.1100
+          4.3980 0.4100
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.9500 0.0000
+          1.2400 0.6900
+          1.5060 0.7000
+          3.1280 0.5500
+          4.2120 0.2800
+        }
+        {
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

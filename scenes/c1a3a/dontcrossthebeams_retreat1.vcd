@@ -1,0 +1,74 @@
+// Choreo version 1
+event stoppoint "Fire Completion"
+{
+  time 0.833334 -1.000000
+  param "noaction"
+}
+actor "bm_c1a3a_sci_1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scimale.startle13"
+    {
+      time 0.932521 1.793043
+      param "NPC_Scimale.startle13"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "face at"
+  {
+  }
+  channel "move"
+  {
+  }
+}
+
+actor "bm_c1a3a_sci_2"
+{
+  channel "Voice"
+  {
+    event speak "wgh.sci02.beams.dontcross01"
+    {
+      time 0.332242 0.962605
+      param "NPC_Scimale.watchout03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "face at"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "28"
+  "ExpressionTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

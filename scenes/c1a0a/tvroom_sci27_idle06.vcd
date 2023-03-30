@@ -1,0 +1,189 @@
+// Choreo version 1
+actor "SCI27_TVroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci27.vanity06"
+    {
+      time 1.400894 3.636155
+      param "am.sci27.vanity06"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event expression "sci_angry01"
+    {
+      time 2.645314 4.123528
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1280 0.3618
+        0.2360 0.4848
+        0.3600 0.3971
+        0.3975 0.2570
+        0.4415 0.1048
+        0.6570 0.0049
+        0.7545 0.0426
+        0.7765 0.1169
+        0.8822 0.3729
+        0.9500 0.4592
+        1.0470 0.4714
+        1.2465 0.4629
+        1.3345 0.4068
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.993450 3.177660
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2320 0.3354
+        0.4040 0.3937
+        0.5380 0.4605
+        0.6740 0.3463
+        0.8462 0.3147
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.318011 2.318011
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1600 0.4666
+        0.8120 0.4374
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event flexanimation "Head nodding"
+    {
+      time 0.452723 4.224026
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.6140 0.4733
+          0.8813 0.4778
+          0.9793 0.4611
+          1.0373 0.3556
+          1.0633 0.0000
+          1.0873 0.0000
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.1880 0.5000
+          1.4975 0.5000
+          1.8308 0.3500
+          2.5875 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3067 0.4900
+          0.4467 0.4900
+          0.6600 0.4900
+          0.9067 0.3100
+          1.1400 0.3100
+          1.4800 0.4900
+          1.6600 0.4900
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          1.2505 0.5000
+          1.5600 0.5000
+          1.8933 0.3000
+          2.4250 0.4600
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.2686 0.4900
+          0.3406 0.4900
+          0.3906 0.4900
+          0.4146 0.4900
+          0.5938 0.2800
+          0.7423 0.2400
+          0.8940 0.3100
+          1.0235 0.5300
+          1.0906 0.5300
+          1.1535 0.5300
+          1.2656 0.5300
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+        }
+      }
+    }
+    event moveto "Moveto prettyboymovetarget01"
+    {
+      time 7.031987 11.596201
+      param "prettyboymovetarget01"
+      param2 "Walk"
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Player"
+    {
+      time 0.165773 4.553174
+      param "!player"
+      event_ramp
+      {
+        0.3940 1.0000
+        4.0081 1.0000
+      }
+    }
+    event face "Face player"
+    {
+      time 0.956250 5.333334
+      param "!player"
+      event_ramp
+      {
+        0.5040 1.0000
+        4.3771 1.0000
+      }
+    }
+    event face "Face player"
+    {
+      time 0.650695 3.444444
+      param "!player"
+      event_ramp
+      {
+        0.5040 0.5359
+        1.9234 0.5359
+      }
+      lockbodyfacing
+    }
+  }
+  channel "FACE"
+  {
+    event face "prettyboylooktarget"
+    {
+      time 8.180173 11.843915
+      param "prettyboylooktarget"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "RampTool" "54"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

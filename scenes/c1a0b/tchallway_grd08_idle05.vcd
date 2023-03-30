@@ -1,0 +1,102 @@
+// Choreo version 1
+actor "Grd08_TChallway"
+{
+  channel "Voice"
+  {
+    event speak "am.grd08.haveatemdoc01"
+    {
+      time 1.104809 1.873063
+      param "am.grd08.haveatemdoc01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.084465 3.653467
+      param "!player"
+      event_ramp
+      {
+        0.4556 0.6730
+        0.7427 0.9929
+        2.8014 0.9988
+        3.1894 0.5053
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "HeadNod"
+    {
+      time 0.346860 3.413044
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1106 0.4900
+          0.5440 0.4900
+          0.7162 0.4300
+          0.8581 0.3200
+          1.0458 0.5000
+          1.2558 0.5000
+        }
+      }
+    }
+    event flexanimation "FACE FLEX"
+    {
+      time 0.676811 3.768600
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.0585 0.3600
+          0.1751 0.6400
+        }
+        {
+          0.0585 0.5000
+          0.1751 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.0585 0.1800
+          0.1751 0.5100
+        }
+        {
+          0.0585 0.5000
+          0.1751 0.5000
+        }
+        "corner_puller" combo 
+        {
+          0.0585 0.3900
+          0.1751 0.7100
+        }
+        {
+          0.0585 0.0000
+          0.1751 0.0000
+        }
+        "smile" 
+        {
+          0.0585 0.1600
+          0.1751 0.1800
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "72"
+  "RampTool" "36"
+  "SceneRampTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

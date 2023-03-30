@@ -1,0 +1,1025 @@
+// **************************************************************
+// HL2 ambient generic sounds for general use by level designers:
+// ambients, explosions, water, fire, weather, sirens etc.
+
+//---------------------------------------------------------------------------
+// PLZ NOTE SOME OF THE ORIGINAL HL2 ENTRIES WILL HAVE BEEN UPDATED TO UTILIZE
+// BLACK MESA CUSTOM .WAV FILES
+// AND WILL BE SPECIFIED WITH DEVELOPER NOTATIONS
+
+//-----------------------------------------------------------------
+// Explosion Sounds (HL2)
+
+"explode_1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_1.wav"
+}
+
+"explode_2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_2.wav"
+}
+
+"explode_3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_3.wav"
+}
+
+"explode_4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_4.wav"
+}
+
+"explode_5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_5.wav"
+}
+
+"explode_6"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_6.wav"
+}
+
+"explode_7"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_7.wav"
+}
+
+"explode_8"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_8.wav"
+}
+
+"explode_9"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"		"SNDLVL_GUNFIRE"
+
+	"wave"			"ambient/explosions/explode_9.wav"
+}
+
+//-----------------------------------------------------------------
+// Fire Sounds (HL2)
+// 
+// fire_large	(Updated to used BM sound variants) 
+// fire_medium	(Updated to used BM sound variants)
+
+"fire_large"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"bms_ambience\object_ambience\o_ambience_disaster_fire3.wav"
+}
+
+"fire_medium"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.7"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"		"SNDLVL_NORM"
+
+	"wave"			"bms_ambience\object_ambience\o_ambience_disaster_fire5.wav"
+}
+
+"Fire.Plasma"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_60dB"
+
+	"wave"			"ambient/fire/firebig.wav"
+}
+
+//-----------------------------------------------------------------
+// Splash Sounds (HL2)
+
+"Splash.SplashSound"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"0.75"
+	"soundlevel"		"SNDLVL_75dB"
+	"pitch"			"90, 100"
+
+	"rndwave"
+	{
+		"wave"		"ambient/water/water_spray1.wav"
+		"wave"		"ambient/water/water_spray2.wav"
+		"wave"		"ambient/water/water_spray3.wav"
+	}
+}
+
+//---------------------------------------------------------------------------
+// Random Spark Sounds (HL2) (Updated to used BM sound variants)
+
+"DoSpark"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.2,0.45"
+	"pitch"			"95,100"
+	"soundlevel"		"SNDLVL_70dB"
+
+	"rndwave"
+	{
+		"wave"		"bms_objects/sparks/elec_spark1.wav"
+		"wave"		"bms_objects/sparks/elec_spark2.wav"
+		"wave"		"bms_objects/sparks/elec_spark3.wav"
+		"wave"		"bms_objects/sparks/elec_spark1b.wav"
+		"wave"		"bms_objects/sparks/elec_spark2b.wav"
+		"wave"		"bms_objects/sparks/elec_spark3b.wav"
+		"wave"		"bms_objects/sparks/elec_spark4.wav"
+		"wave"		"bms_objects/sparks/elec_spark5.wav"
+		"wave"		"bms_objects/sparks/elec_spark6.wav"
+	}
+}
+
+"LoudSpark"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.5,0.8"
+	"soundlevel"		"SNDLVL_80dB"
+	"pitch"			"95,100"
+
+	"rndwave"
+	{
+		"wave"		"bms_objects/sparks/elec_spark1.wav"
+		"wave"		"bms_objects/sparks/elec_spark2.wav"
+		"wave"		"bms_objects/sparks/elec_spark3.wav"
+		"wave"		"bms_objects/sparks/elec_spark1b.wav"
+		"wave"		"bms_objects/sparks/elec_spark2b.wav"
+		"wave"		"bms_objects/sparks/elec_spark3b.wav"
+		"wave"		"bms_objects/sparks/elec_spark4.wav"
+		"wave"		"bms_objects/sparks/elec_spark5.wav"
+		"wave"		"bms_objects/sparks/elec_spark6.wav"
+	}
+}
+
+"ReallyLoudSpark"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.8,1.0"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"95,100"
+
+	"rndwave"
+	{
+		"wave"		"bms_objects/sparks/elec_spark1.wav"
+		"wave"		"bms_objects/sparks/elec_spark2.wav"
+		"wave"		"bms_objects/sparks/elec_spark3.wav"
+		"wave"		"bms_objects/sparks/elec_spark1b.wav"
+		"wave"		"bms_objects/sparks/elec_spark2b.wav"
+		"wave"		"bms_objects/sparks/elec_spark3b.wav"
+		"wave"		"bms_objects/sparks/elec_spark4.wav"
+		"wave"		"bms_objects/sparks/elec_spark5.wav"
+		"wave"		"bms_objects/sparks/elec_spark6.wav"
+	}
+}
+
+//-----------------------------------------------------------------
+// ExtinguisherJet Sounds 	(HL2)
+//
+// DEV NOTE:	Sounds are not present in the HL2 or BMS directory
+// 		Keeping for legacy listing purposes.
+
+"ExtinguisherJet.TurnOn"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"VOL_NORM"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"weapons/extinguisher/fire1.wav"
+}
+
+"ExtinguisherJet.TurnOff"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"VOL_NORM"
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"weapons/extinguisher/release1.wav"
+}
+
+//-----------------------------------------------------------------
+// MISC (HL2)
+
+"ambient.steam01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.4"
+	"pitch"			"100"
+	"soundlevel"		"SNDLVL_70dB"
+
+	"wave"			"ambient/gas/steam_loop1.wav"
+}
+
+"PhysicsCannister.ThrusterLoop"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/gas/cannister_loop.wav"
+}
+
+//-----------------------------------------------------------------
+// Electrical Zap Hits (HL2)
+
+"ambient.electrical_zap_1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap1.wav"
+}
+
+"ambient.electrical_zap_quiet"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.0"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap1.wav"
+}
+
+"ambient.electrical_zap_2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap2.wav"
+}
+
+"ambient.electrical_zap_3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap3.wav"
+}
+
+"ambient.electrical_zap_4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap4.wav"
+}
+
+"ambient.electrical_zap_5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap5.wav"
+}
+
+"ambient.electrical_zap_6"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap6.wav"
+}
+
+"ambient.electrical_zap_7"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap7.wav"
+}
+
+"ambient.electrical_zap_8"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap8.wav"
+}
+
+"ambient.electrical_zap_9"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/energy/zap9.wav"
+}
+
+"ambient.electrical_random_zap_1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"rndwave"
+	{
+		"wave"		"ambient/energy/zap1.wav"
+		"wave"		"ambient/energy/zap2.wav"
+		"wave"		"ambient/energy/zap3.wav"
+	}
+}
+
+"ambient.electrical_random_zap_2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"rndwave"
+	{
+		"wave"		"ambient/energy/zap5.wav"
+		"wave"		"ambient/energy/zap6.wav"
+		"wave"		"ambient/energy/zap7.wav"
+		"wave"		"ambient/energy/zap8.wav"
+		"wave"		"ambient/energy/zap9.wav"
+	}
+}
+
+//-----------------------------------------------------------------
+// Ambient Whoosh Incoming (HL2)
+
+"ambient.whoosh_huge_incoming1"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_huge1.wav"
+}
+
+"ambient.whoosh_huge_incoming2"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_huge2.wav"
+}
+
+"ambient.whoosh_huge_incoming3"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_huge3.wav"
+}
+
+"ambient.whoosh_huge_incoming4"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_huge4.wav"
+}
+
+"ambient.whoosh_huge_incoming5"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_huge5.wav"
+}
+
+"ambient.whoosh_large_incoming1"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_large1.wav"
+}
+
+"ambient.whoosh_large_incoming2"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_large2.wav"
+}
+"ambient.whoosh_large_incoming3"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_large3.wav"
+}
+"ambient.whoosh_large_incoming4"
+{
+
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_large4.wav"
+}
+
+"ambient.whoosh_medium_incoming1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium1.wav"
+}
+
+"ambient.whoosh_medium_incoming2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium2.wav"
+}
+
+"ambient.whoosh_medium_incoming3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium3.wav"
+}
+
+"ambient.whoosh_medium_incoming4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium4.wav"
+}
+
+"ambient.whoosh_medium_incoming5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium5.wav"
+}
+
+"ambient.whoosh_medium_incoming6"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"physics/nearmiss/whoosh_medium6.wav"
+}
+
+//-----------------------------------------------------------------
+// Ambient rock slides (HL2)
+
+"ambient.rock_slide1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/rock1.wav"
+}
+
+"ambient.rock_slide2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/rock2.wav"
+}
+
+"ambient.rock_slide3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/rock3.wav"
+}
+
+"ambient.rock_slide4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/rock4.wav"
+}
+
+"ambient.rock_slide5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_100dB"
+
+	"wave"			"ambient/materials/rock5.wav"
+}
+
+
+//******************************************************************************//
+//******************************************************************************//
+//										//
+//	THIS ENDS THE "HL2" PORTION OF THE game_sounds_ambient_generic list	//
+//										//
+//******************************************************************************//
+//******************************************************************************//
+//
+//
+//
+//
+//******************************************************************************//
+//******************************************************************************//
+//										//
+//		THE BLACK MESA CUSTOM ENTRIES LIST STARTS BELOW			//
+//										//
+//******************************************************************************//
+//******************************************************************************//
+
+// DEV NOTE: PLEASE BE AWARE THESE ENTRIES, WHILE BM RELATED, MAY REFERENCE THE
+// HL2 SOUND WAV DIRECTORY (IN SOME CASES), BUT FOR THE MOST PART WILL STICK TO THE
+// BMS DIRECTORY
+
+//---------------------------------------------------------------------------
+// Random Tesla Zaps - BLACK MESA
+
+"ambient.c2a1a_tesla_zap_1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc1.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc2.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc3.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc4.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc5.wav"
+	}
+}
+
+"ambient.c2a1a_tesla_zap_2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_75dB"
+
+	"rndwave"
+	{
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc1.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc2.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc3.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc4.wav"
+		"wave"		"bms_ambience/object_ambience/o_ambience_disaster_arc5.wav"
+	}
+}
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//
+//
+//
+//---------------------------------------------------------------------------
+// Sign Rotate - BLACK MESA
+
+"ambient.sign_rotate"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.25"
+	"pitch"			"100"
+
+	"soundlevel"		"SNDLVL_75dB"
+
+	"wave"			"bms_objects/machine/sign_rotate1.wav"
+}
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+
+"glass_largesheet_break1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"physics/glass/glass_largesheet_break1.wav"
+}
+
+"waterleak_loop1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"ambient/levels/canals/waterleak_loop1.wav"
+}
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+
+"boom13"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/object_physics/boom13.wav"
+}
+
+"fan6"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/fans/fan6.wav"
+}
+
+"fan8"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/fans/fan8.wav"
+}
+
+"hum2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/hum/hum2.wav"
+}
+
+"klaxon1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"ambient/alarms/klaxon1.wav"
+}
+
+"metal_crash1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/crashes_hits/metal_crash1.wav"
+}
+
+"metal_hit1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/crashes_hits/metal_hit1.wav"
+}
+
+//--------------------------------------------------------------------------------------------
+// M_AMBIENCE -  BLACK MESA
+// DEV NOTE   :  CHECK TO SEE WHAT'S ACTUALLY BEING USED HERE.
+
+// bms machine_ambience //
+
+"m_ambience_air_release1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_air_release1.wav"
+}
+
+"m_ambience_comp1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_comp1.wav"
+}
+
+"m_ambience_comp2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_comp2.wav"
+}
+
+"m_ambience_electrichum1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_electrichum1.wav"
+}
+
+"m_ambience_motor2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_motor2.wav"
+}
+
+"m_ambience_misc7"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_misc7.wav"
+}
+
+"m_ambience_pipe1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipe1.wav"
+}
+
+"m_ambience_pipe2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipe2.wav"
+}
+
+"m_ambience_pipe5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipe5.wav"
+}
+
+"m_ambience_pipe4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipe4.wav"
+}
+
+"m_ambience_pipe3"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipe3.wav"
+}
+
+"m_ambience_pipeflow1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipeflow1.wav"
+}
+
+"m_ambience_pipeflow2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_pipeflow2.wav"
+}
+
+"m_ambience_watercontainer"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_watercontainer.wav"
+}
+
+// bms room_ambience //
+
+"r_ambience_water10"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/room_ambience/r_ambience_water10.wav"
+}
+
+"r_ambience_water18"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/room_ambience/r_ambience_water18.wav"
+}
+
+"r_ambience_water4"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/room_ambience/r_ambience_water4.wav"
+}
+
+// bms object_ambience //
+
+"o_ambience_disaster_fire5"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/object_ambience/o_ambience_disaster_fire5.wav"
+}
+
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// MISC TO SORT
+
+"metal_break1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/object_physics/metal_break1.wav"
+}
+
+"door_metal_open1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_objects/doors/door_metal_open1.wav"
+}
+
+//--------------------------------------------------------------------------------------------
+// XEN RELATED MISC
+
+"xen.rock.lower"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"physics/concrete/rock_scrape_rough_loop1.wav"
+}
+
+"xen.crystal.powered"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_electrical2slow.wav"
+}
+
+"xen.crystal.enabled"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.9"
+	"pitch"			"100"
+	"wave"			"bms_ambience/machine_ambience/m_ambience_electrical3.wav"
+}

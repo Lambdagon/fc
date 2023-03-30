@@ -1,0 +1,207 @@
+// Choreo version 1
+actor "SCI17_Locker"
+{
+  channel "Voice"
+  {
+    event speak "am.sci17.khakis01"
+    {
+      time 0.321026 3.499484
+      param "am.sci17.khakis01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at "
+  {
+    event lookat "Look at !player"
+    {
+      time 2.054487 4.104167
+      param "!player"
+      event_ramp
+      {
+        0.5917 0.7101
+        1.0917 0.8261
+        1.5375 0.6812
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 0.192307 2.461539
+      param "!self"
+      event_ramp
+      {
+        0.4917 1.0000
+        2.2692 1.0000
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 2.026879 4.506045
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.4000 0.9835
+        1.1167 0.9858
+        1.4083 0.3235
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.127025
+        "extreme" 0.208866
+        "loop" 0.454390
+        "end" 0.918159
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "g_openarms"
+    {
+      time 0.256410 2.623077
+      param "g_openarms"
+      event_ramp
+      {
+        0.3375 0.4132
+        1.1083 0.5183
+        2.2167 0.4109
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      sequenceduration 2.366667
+    }
+    event gesture "bg_accentfwd"
+    {
+      time 0.269231 2.702565
+      param "bg_accentfwd"
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.534271 1.490424
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1615 0.6907
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.593600 2.010266
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.0756 0.6316
+        0.1346 0.7556
+        0.4164 0.5643
+        1.0937 0.2645
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.116178 3.468601
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2309 0.6777
+        0.7550 0.7048
+        1.1900 0.6694
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.224304 0.755913
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.0976 0.6753
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.000000 2.935897
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.5962 0.5600
+        }
+        {
+          0.5962 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5962 0.0000
+          2.5222 0.4300
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5962 0.0000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.0333 0.2500
+          1.8111 0.6200
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "52"
+  "RampTool" "48"
+  "SceneRampTool" "100"
+  "ExpressionTool" "18"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

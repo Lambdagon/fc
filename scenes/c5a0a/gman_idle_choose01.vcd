@@ -1,0 +1,323 @@
+// Choreo version 1
+event stoppoint "Fire completion"
+{
+  time 3.150000 -1.000000
+  param "noaction"
+}
+actor "Gman"
+{
+  channel "Sound"
+  {
+    event speak "endgame.gman.decisiveman01"
+    {
+      time 1.066667 3.210862
+      param "endgame.gman.timetochoose01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+    event interrupt "INTERUPT------IF THE PLAYER BOOKS IT"
+    {
+      time 0.000000 3.333333
+      param ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at actor"
+    {
+      time 0.066667 11.150000
+      param "!player"
+      event_ramp leftedge curve_default_to_curve_kochanek_early 0.000 rightedge curve_kochanek_late_to_curve_default 0.000
+      {
+        1.6000 0.5356
+        5.2000 0.5766
+        9.9533 0.5308
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+  channel "Gestures"
+  {
+    event gesture "P_leanforward"
+    {
+      time 0.566667 2.916667
+      param "P_leanforward"
+      absolutetags playback_time
+      {
+        "apex" 0.217315
+        "extreme" 0.304241
+        "loop" 0.362191
+        "end" 0.651688
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.258621
+        "extreme" 0.362069
+        "loop" 0.431034
+        "end" 0.620690
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "HG_headback"
+    {
+      time 0.616667 2.916667
+      param "HG_headback"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Head"
+  {
+    event flexanimation "BodyHeadMotions"
+    {
+      time 0.900000 3.316667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3167 0.5800
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3500 0.4100
+          0.9167 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.3167 0.3400
+          0.7167 0.5100
+          1.0333 0.5100
+        }
+      }
+    }
+  }
+  channel "Body"
+  {
+  }
+  channel "Head Flex"
+  {
+  }
+  channel "KS_Facial Flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.083333 2.100000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.4000 0.3800
+          1.1167 0.4700
+          1.8167 0.4400
+        }
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.0833 0.0000
+          0.3333 0.0000
+          0.6833 0.2800
+          1.1833 0.3800
+        }
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          0.0833 0.0000
+          0.4000 0.0000
+          0.7500 0.3000
+          1.2000 0.4800
+        }
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.4000 0.0000
+          0.6500 0.0000
+          1.0722 0.0000
+          1.5833 0.0000
+          1.7556 0.0000
+        }
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+        }
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "wrinkler" 
+        {
+        }
+        "corner_puller" combo 
+        {
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.4000 0.5000
+          0.6500 0.5000
+          1.0722 0.5000
+          1.5833 0.5000
+          1.7556 0.5000
+        }
+      }
+    }
+  }
+  channel "KS_New Facial"
+  {
+    event flexanimation "Choooooose"
+    {
+      time 2.083333 5.200000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.5333 0.5900
+          1.0667 0.7000
+        }
+        {
+          0.1833 0.5000
+        }
+        "lid_closer" combo 
+        {
+          0.1833 0.0000
+        }
+        {
+          0.1833 0.5000
+        }
+        "inner_raiser" combo 
+        {
+        }
+        {
+          0.1833 0.5000
+        }
+        "outer_raiser" combo 
+        {
+        }
+        {
+          0.1833 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.1833 0.0600
+          0.8167 0.2600
+        }
+        {
+          0.1833 0.5000
+        }
+        "upper_raiser" combo 
+        {
+          0.1833 0.2000
+        }
+        {
+          0.1833 0.5000
+        }
+        "corner_puller" combo 
+        {
+          0.1833 0.0400
+          0.8000 0.3300
+        }
+        {
+          0.1833 0.5000
+        }
+        "mouth_sideways" range -1.0 1.0 
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.4000 0.3000
+        }
+        {
+        }
+      }
+    }
+  }
+  faceposermodel "models\gman_high.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "26"
+  "ExpressionTool" "28"
+  "RampTool" "10"
+  "CChoreoView" "44"
+}
+fps 60
+snap on
+ignorePhonemes off

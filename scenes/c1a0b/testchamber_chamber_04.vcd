@@ -1,0 +1,101 @@
+// Choreo version 1
+actor "Sci40"
+{
+  channel "voice"
+  {
+    event speak "am.testchamber.sci40.sampleisready01"
+    {
+      time 1.199131 15.020265
+      param "am.testchamber.sci40.sampleisready01"
+      param2 "0.850"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "triggers"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 1.333334 -1.000000
+      param "1"
+    }
+    event firetrigger "Firetrigger 2"
+    {
+      time 11.266667 -1.000000
+      param "2"
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "G_righthandroll"
+    {
+      time 1.766667 6.160000
+      param "G_righthandroll"
+      absolutetags playback_time
+      {
+        "apex" 0.218758
+        "accent" 0.306914
+        "loop" 0.707988
+        "end" 0.784833
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.282051
+        "accent" 0.397436
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 6.653334 9.966667
+      param "hg_puncuate_down"
+      absolutetags playback_time
+      {
+        "apex" 0.227364
+        "extreme" 0.512822
+        "loop" 0.522822
+        "end" 0.532822
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at control_camm"
+    {
+      time 0.846667 12.520000
+      param "control_camm"
+      event_ramp
+      {
+        1.2625 0.5546
+        3.3625 0.7815
+        5.6875 0.8319
+        8.3000 0.7563
+        10.1375 0.6303
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "RampTool" "16"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

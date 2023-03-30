@@ -1,0 +1,81 @@
+// Choreo version 1
+actor "GRD02LC"
+{
+  channel "Voice"
+  {
+    event speak "lc.grd02.reactor.goodbye01"
+    {
+      time 0.393939 3.475141
+      param "lc.grd02.reactor.goodbye01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 1.681818 4.196970
+      param "!player"
+      event_ramp
+      {
+        0.5105 0.4783
+        1.0053 0.8043
+        1.5789 0.8043
+        2.0368 0.5000
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "shotgun gestures"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "FACE"
+  {
+    event face "Face !player"
+    {
+      time 1.515152 4.166667
+      param "!player"
+      event_ramp
+      {
+        0.9000 1.0000
+        2.6515 1.0000
+      }
+      lockbodyfacing
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_smile00"
+    {
+      time 1.515152 4.212121
+      param "humans\guard\expressions_guard"
+      param2 "b_smile00"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "20"
+  "RampTool" "38"
+  "CChoreoView" "44"
+}
+fps 60
+snap off
+ignorePhonemes off

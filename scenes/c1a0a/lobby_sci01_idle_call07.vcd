@@ -1,0 +1,122 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 3.407407 -1.000000
+  param "noaction"
+}
+actor "SCI01_Lobby"
+{
+  channel "Voice"
+  {
+    event speak "am.sci01.callandanswer07"
+    {
+      time 0.407407 3.453212
+      param "am.sci01.callandanswer07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.240741 3.685185
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "outer_raiser" combo 
+        {
+          0.1540 0.7100
+        }
+        {
+          0.0440 0.2500
+        }
+      }
+    }
+    event flexanimation "Head Animation"
+    {
+      time 0.222222 3.648148
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3762 0.4900
+          0.9429 0.5000
+          1.3952 0.4600
+          2.0762 0.4600
+          2.7571 0.5000
+          2.9524 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4667 0.4700
+          0.9095 0.2300
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.7810 0.6500
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at monitor"
+    {
+      time 0.185185 3.666666
+      param "target_lobbymonitor_02"
+      event_ramp
+      {
+        0.3000 0.4420
+        0.5593 0.6957
+        1.0222 0.7174
+        1.4148 0.7391
+        1.8185 0.7391
+        2.2889 0.7609
+        2.7296 0.6377
+        2.9778 0.3913
+      }
+    }
+    event gesture "g_point_l"
+    {
+      time 0.351852 2.418519
+      param "g_point_l"
+      event_ramp
+      {
+        0.3000 0.4078
+        0.6630 0.7203
+        1.0741 0.6359
+        1.2704 0.5578
+      }
+      absolutetags playback_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      sequenceduration 2.066667
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "42"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

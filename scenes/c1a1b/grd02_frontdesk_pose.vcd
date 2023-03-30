@@ -1,0 +1,208 @@
+// Choreo version 1
+event stoppoint "Complete"
+{
+  time 1.841481 -1.000000
+  param "noaction"
+}
+event section "Pause"
+{
+  time 1.181481 -1.000000
+  param "noaction"
+}
+event loop "Loop"
+{
+  time 3.994814 -1.000000
+  param "1.181481"
+  loopcount "-1"
+}
+actor "GRD06_DevHall"
+{
+  channel "Gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 1.234815 3.304814
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.081904
+        "extreme" 0.229329
+        "loop" 0.458661
+        "end" 0.638848
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "g_point_l"
+    {
+      time 1.218149 3.284814
+      param "g_point_l"
+      event_ramp
+      {
+        0.0000 0.4203
+        0.9750 0.4275
+        2.0667 0.3768
+      }
+      absolutetags playback_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.081967
+        "loop" 0.508197
+        "end" 0.639344
+        "out" 0.836066
+      }
+      sequenceduration 2.066667
+    }
+    event gesture "bg_down"
+    {
+      time 1.234815 3.201481
+      param "bg_down"
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event flexanimation "Flex animation"
+    {
+      time 1.268148 3.448148
+      param ""
+    }
+    event gesture "Posture05"
+    {
+      time 2.161481 3.974814
+      param "Posture05"
+      event_ramp
+      {
+        0.0000 0.5435
+        1.8133 0.4928
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.334559
+        "loop" 0.562500
+        "end" 0.713235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.357143
+        "loop" 0.452381
+        "end" 0.619048
+      }
+      sequenceduration 2.833333
+    }
+    event gesture "bg_up_l"
+    {
+      time 0.049206 1.649206
+      param "bg_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto Mark01"
+    {
+      time 0.708148 1.182315
+      param "Mark01"
+      param2 "Run"
+      resumecondition
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 3.308148 -1.000000
+      param "1"
+    }
+    event face "Face Radio_target"
+    {
+      time 0.747195 4.041481
+      param "Radio_target"
+      event_ramp
+      {
+        0.2360 0.6377
+        0.5560 1.0000
+        3.2943 1.0000
+      }
+    }
+    event firetrigger "Firetrigger 3"
+    {
+      time 2.574815 -1.000000
+      param "3"
+    }
+    event firetrigger "Firetrigger 2"
+    {
+      time 2.001481 -1.000000
+      param "2"
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 2.041481 -1.000000
+      param "1"
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at Radio"
+    {
+      time 0.761481 6.834814
+      param "Radio"
+      event_ramp
+      {
+        0.1675 0.6449
+        0.4550 1.0000
+        4.8625 0.8478
+        5.2925 0.8551
+        5.5775 0.7681
+        5.9225 0.3333
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "80"
+  "CChoreoView" "68"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,106 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.scream_generic01"
+    {
+      time 0.271352 0.723914
+      param "NPC_Scifemale.scream_generic01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.027917 1.167916
+      param "!enemy"
+      event_ramp
+      {
+        0.0607 0.1806
+        0.2225 0.8472
+        0.3887 0.9931
+        0.6273 0.9931
+        0.7743 0.8403
+        0.9626 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event expression "Sci_Fem_afraid_extreme00"
+    {
+      time -0.023810 0.928571
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid_extreme00"
+      event_ramp
+      {
+        0.2073 0.5856
+        0.3000 0.9811
+        0.5315 0.9209
+        0.6442 0.4439
+      }
+    }
+    event expression "Sci_Fem_afraid02"
+    {
+      time 0.476191 1.476191
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid02"
+      event_ramp
+      {
+        0.1182 0.8501
+        0.5355 0.2208
+      }
+    }
+    event expression "SciFem_Anguish"
+    {
+      time 0.684524 1.684524
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Anguish"
+      event_ramp
+      {
+        0.0736 0.2538
+        0.2073 0.3223
+        0.5809 0.2751
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Anguish"
+    {
+      time 0.071429 0.494048
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Anguish"
+      event_ramp
+      {
+        0.0945 1.0000
+        0.1573 0.1275
+        0.1973 0.1429
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "SCREAM"
+    {
+      time 0.035714 1.077381
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "28"
+  "SceneRampTool" "100"
+  "RampTool" "220"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

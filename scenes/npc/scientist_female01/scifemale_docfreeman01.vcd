@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.docfreeman01"
+    {
+      time 0.979745 2.739110
+      param "NPC_Scifemale.docfreeman01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 3.647434
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.4623 0.7770
+        0.6300 0.9229
+        2.7832 0.9931
+        3.0349 0.8403
+        3.3899 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_sly01"
+    {
+      time 0.128205 4.064103
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_sly01"
+      event_ramp
+      {
+        0.7381 0.8383
+        2.5189 0.7556
+        2.8951 0.8111
+        3.4910 0.6576
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "FLEX_headnod"
+    {
+      time 0.038462 4.128205
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.5500 0.1700
+          0.6900 0.2200
+          1.0300 0.8000
+          1.5400 0.1700
+          2.0200 0.0000
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          1.8300 0.2600
+          2.5100 0.5300
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5385 0.5000
+          1.0897 0.5600
+          1.4487 0.4000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.9700 0.4200
+          1.7800 0.5900
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "20"
+  "SceneRampTool" "100"
+  "RampTool" "24"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

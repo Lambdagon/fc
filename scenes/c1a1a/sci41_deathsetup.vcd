@@ -1,0 +1,76 @@
+// Choreo version 1
+event section "walk to door"
+{
+  time 1.375661 -1.000000
+  param "automate  0.000000"
+}
+event loop "loop til cancelled"
+{
+  time 7.262593 -1.000000
+  param "3.000000"
+  loopcount "-1"
+}
+actor "Sci41"
+{
+  channel "look"
+  {
+    event moveto "Moveto Sci41_walktodoor01"
+    {
+      time 0.000000 1.821429
+      param "Sci41_walktodoor01"
+      param2 "PU_GRD_WalkLimp"
+      resumecondition
+    }
+    event lookat "Look at !self"
+    {
+      time 1.016203 7.960648
+      param "!self"
+    }
+    event gesture "P_lean_on_car"
+    {
+      time 1.442130 8.834723
+      param "P_lean_on_car"
+      absolutetags playback_time
+      {
+        "apex" 0.126275
+        "loop" 0.171878
+        "end" 0.874687
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.227273
+        "loop" 0.340909
+        "end" 0.681818
+      }
+      sequenceduration 2.966667
+    }
+  }
+  channel "Trigger"
+  {
+    event face "Face Sci41_facethedoorofdeath"
+    {
+      time 0.701388 8.071759
+      param "Sci41_facethedoorofdeath"
+    }
+  }
+  channel "gesture"
+  {
+    event interrupt "BLAST THE BEAMS INTERRUPT"
+    {
+      time 0.092593 7.593305
+      param ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "36"
+  "ExpressionTool" "100"
+  "GestureTool" "32"
+  "RampTool" "70"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

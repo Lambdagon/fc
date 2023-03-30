@@ -1,0 +1,220 @@
+// Choreo version 1
+event stoppoint "fire complete"
+{
+  time 2.923077 -1.000000
+  param "noaction"
+}
+actor "SCI17_Locker"
+{
+  channel "Voice"
+  {
+    event speak "am.sci17.eyeforfashion01"
+    {
+      time 0.321026 2.692840
+      param "am.sci17.eyeforfashion01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at "
+  {
+    event lookat "Look at !player"
+    {
+      time 0.038461 3.397436
+      param "!player"
+      event_ramp
+      {
+        0.5250 0.6014
+        0.9958 0.6739
+        1.5042 0.7246
+        2.0667 0.6812
+        2.7917 0.6522
+        3.0125 0.4928
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentfwd"
+    {
+      time 0.282052 2.715385
+      param "bg_accentfwd"
+      event_ramp
+      {
+        0.4417 0.6706
+        0.8917 0.6470
+        1.3125 0.3684
+        1.6375 0.2456
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.534271 1.490424
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1615 0.6907
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.593600 2.010266
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.0756 0.6316
+        0.1346 0.7556
+        0.4164 0.5643
+        1.0937 0.2645
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 2.039255 3.391678
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2309 0.6777
+        0.7550 0.7048
+        1.1900 0.6694
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.224304 0.755913
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.0976 0.6753
+      }
+    }
+    event gesture "g_righthand_flick"
+    {
+      time 1.076923 3.594871
+      param "g_righthand_flick"
+      event_ramp
+      {
+        0.0000 1.0000
+        1.2708 0.9783
+        1.6542 0.6884
+        2.1042 0.0217
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.272615
+        "accent" 0.420971
+        "loop" 0.985261
+        "end" 0.995261
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "G_righthandmotion"
+    {
+      time 0.128205 2.094872
+      param "G_righthandmotion"
+      absolutetags playback_time
+      {
+        "apex" 0.241379
+        "accent" 0.517241
+        "loop" 0.689655
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.241379
+        "accent" 0.517241
+        "loop" 0.689655
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.243590 2.858975
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.9000 0.4400
+          1.3222 0.6100
+          1.9667 1.0000
+          2.4111 0.9200
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.2667 0.6800
+          0.5444 0.7400
+          0.9000 0.4500
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3556 0.6300
+          0.7333 0.3900
+          1.1778 0.5400
+          1.5778 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.5889 0.5300
+          2.1111 0.7500
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3556 0.5600
+          1.1000 0.5100
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "18"
+  "SceneRampTool" "100"
+  "RampTool" "48"
+  "CChoreoView" "56"
+}
+fps 60
+snap off
+ignorePhonemes off

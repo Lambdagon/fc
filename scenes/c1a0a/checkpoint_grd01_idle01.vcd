@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "GRD01_Checkpoint"
+{
+  channel "Voice"
+  {
+    event speak "am.grd01.sayhitocross01"
+    {
+      time 0.425926 2.305110
+      param "am.grd01.sayhitocross01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "Nervous"
+    {
+      time 0.093398 3.762963
+      param "g_scratchhead"
+      event_ramp
+      {
+        0.1111 0.0000
+        0.3167 0.6087
+        0.7833 1.0000
+        1.6222 1.0000
+        3.6696 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.000000
+        "accent" 0.000000
+        "loop" 0.284909
+        "end" 0.617357
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at Player"
+    {
+      time 0.057971 3.702899
+      param "!player"
+      event_ramp
+      {
+        1.0067 0.2396
+        3.0167 0.2096
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Sheepish"
+    {
+      time 0.072464 3.695652
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          1.1706 0.9000
+          1.9154 0.8600
+          2.6615 0.5000
+        }
+        {
+          1.9783 0.5000
+        }
+        "smile" 
+        {
+          1.2077 0.2700
+          2.6244 0.2800
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3769 0.6900
+          1.3923 0.7500
+          2.4462 0.7500
+          3.0385 0.7300
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.4769 0.6900
+          2.3308 0.7300
+          2.9769 0.7300
+        }
+      }
+    }
+    event flexanimation "Eyes"
+    {
+      time 0.826087 1.862319
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.1165 0.8300
+          0.3308 0.9400
+          0.6857 0.9100
+          0.9165 0.8200
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "26"
+  "SceneRampTool" "100"
+  "RampTool" "36"
+  "CChoreoView" "124"
+}
+fps 60
+snap off
+ignorePhonemes off

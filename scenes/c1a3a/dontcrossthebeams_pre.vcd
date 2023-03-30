@@ -1,0 +1,123 @@
+// Choreo version 1
+actor "bm_c1a3a_sci_1"
+{
+  channel "Voice"
+  {
+  }
+  channel "Flex"
+  {
+    event face "Face !player"
+    {
+      time 0.420635 3.426192
+      param "Sci01and02_facehereforprescene"
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look At Player"
+    {
+      time 0.000000 1.204935
+      param "!player"
+      event_ramp
+      {
+        0.5417 0.9823
+        0.6758 0.9752
+      }
+    }
+    event lookat "Look At SCI02"
+    {
+      time 0.779194 2.492527
+      param "bm_c1a3a_sci_2"
+      event_ramp
+      {
+        0.5208 0.9421
+        1.3583 0.9433
+      }
+    }
+    event lookat "Look At Player"
+    {
+      time 1.858562 3.082714
+      param "!player"
+      event_ramp
+      {
+        0.5417 0.9823
+        0.8210 0.9752
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "bm_c1a3a_sci_2"
+{
+  channel "Voice"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+    event face "Face !player"
+    {
+      time 0.000000 3.127779
+      param "Sci01and02_facehereforprescene"
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look At Player"
+    {
+      time 2.311924 3.444406
+      param "!player"
+      event_ramp
+      {
+        0.4125 0.7119
+        0.6889 0.7993
+        0.9403 0.6623
+      }
+    }
+    event lookat "Look At SCI01"
+    {
+      time 1.465228 2.707928
+      param "bm_c1a3a_sci_1"
+      event_ramp
+      {
+        0.3208 0.7048
+        0.5875 0.8312
+        0.9710 0.7025
+      }
+    }
+    event moveto "Moveto Sci02_movetohere"
+    {
+      time 0.059758 1.118581
+      param "Sci02_movetohere"
+      distancetotarget 18.00
+    }
+    event lookat "Look At Player"
+    {
+      time 0.000000 1.598375
+      param "!player"
+      event_ramp
+      {
+        0.3750 0.6966
+        0.8940 0.6895
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "28"
+  "ExpressionTool" "100"
+  "CChoreoView" "84"
+}
+fps 60
+snap off
+ignorePhonemes off

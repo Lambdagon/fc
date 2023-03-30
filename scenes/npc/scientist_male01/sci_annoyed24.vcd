@@ -1,0 +1,107 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.annoyance_pre24"
+    {
+      time 0.307103 2.573702
+      param "NPC_Scimale.annoyance_pre24"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.014641 3.277637
+      param "!player"
+      event_ramp
+      {
+        0.0825 0.1287
+        0.1681 0.5466
+        0.3365 1.0000
+        2.5818 1.0000
+        2.9152 0.6604
+        3.0853 0.2222
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex01"
+    {
+      time 0.021942 3.267973
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.3500 0.6900
+          1.2278 0.6600
+          2.4056 0.6500
+        }
+        {
+        }
+        "wrinkler" 
+        {
+          0.3056 0.6700
+          1.2111 0.7800
+          1.9111 0.5400
+        }
+        "corner_depressor" combo 
+        {
+          0.2833 0.6500
+          1.0833 0.7400
+          2.0167 0.5900
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.010427 2.316309
+      param "bg_accentup"
+      event_ramp
+      {
+        0.1815 0.2727
+        0.4828 0.3105
+        1.1617 0.1181
+        1.4947 0.0378
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.076637
+        "extreme" 0.267173
+        "loop" 0.530991
+        "end" 0.677555
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "36"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "CChoreoView" "204"
+}
+fps 60
+snap off
+ignorePhonemes off

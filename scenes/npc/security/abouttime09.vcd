@@ -1,0 +1,220 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.abouttime09"
+    {
+      time 0.687668 3.578099
+      param "NPC_Security.abouttime09"
+      param2 "0.56"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 4.486775
+      param "!player"
+      event_ramp
+      {
+        0.3464 0.6647
+        0.5843 0.9756
+        3.7521 1.0000
+        4.0055 0.6732
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_angry01"
+    {
+      time 0.841667 2.041667
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.2091 0.5679
+        0.3018 0.7615
+        0.8691 0.9126
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 0.416667 1.138889
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.2273 0.9103
+        0.3836 0.4852
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 1.716667 4.250000
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.2473 0.6812
+        0.6691 0.9351
+        1.3000 0.9717
+      }
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 1.180556 3.091667
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.3525 0.1582
+        0.8778 0.4652
+        1.6353 0.3459
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.284884
+        "extreme" 0.460741
+        "loop" 0.470741
+        "end" 0.480741
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_down"
+    {
+      time 1.433333 4.188889
+      param "bg_down"
+      event_ramp
+      {
+        0.2231 0.2869
+        0.8731 0.3754
+        2.3004 0.3117
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.210720
+        "extreme" 0.321468
+        "loop" 0.493743
+        "end" 0.754032
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 2.380556 4.291667
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.3525 0.1582
+        0.8778 0.4144
+        1.6353 0.2952
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.284884
+        "extreme" 0.460741
+        "loop" 0.470741
+        "end" 0.480741
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "bg_up_r"
+    {
+      time 0.122222 1.722222
+      param "bg_up_r"
+      event_ramp
+      {
+        0.2808 0.4404
+        0.7923 0.3849
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.085106
+        "extreme" 0.276596
+        "loop" 0.425532
+        "end" 0.638298
+      }
+      sequenceduration 1.600000
+    }
+  }
+  channel "Face Flex"
+  {
+    event flexanimation "flex01_mouth emotions"
+    {
+      time 0.136942 4.043352
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "corner_puller" combo 
+        {
+        }
+        {
+        }
+        "smile" 
+        {
+        }
+      }
+    }
+    event flexanimation "eyes"
+    {
+      time 0.110921 4.093750
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5091 0.4600
+          0.7818 0.3600
+          1.7545 0.4800
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "44"
+  "GestureTool" "100"
+  "CChoreoView" "60"
+  "ExpressionTool" "22"
+}
+fps 60
+snap off
+ignorePhonemes off

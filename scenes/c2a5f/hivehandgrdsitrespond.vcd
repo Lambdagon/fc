@@ -1,0 +1,81 @@
+// Choreo version 1
+event stoppoint "pow"
+{
+  time 4.391795 -1.000000
+  param "noaction"
+}
+actor "GRD02_HiveHand"
+{
+  channel "Look at"
+  {
+    event lookat "player"
+    {
+      time 0.045129 5.654872
+      param "!player"
+      event_ramp
+      {
+        0.4069 0.1236
+        0.5706 0.1833
+        0.7005 0.2080
+        0.7694 0.2121
+        4.6676 0.2156
+        4.7774 0.2013
+        5.3683 0.0368
+      }
+    }
+  }
+  channel "Posture"
+  {
+    event gesture "BreakRoom_Sit_01_Respond"
+    {
+      time 0.230769 5.539487
+      param "g_BreakRoom_Sit_01"
+      event_ramp
+      {
+        0.0000 1.0000
+        0.8667 0.8625
+        2.7199 0.7838
+        4.3615 0.8237
+        5.3087 0.9882
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.133468
+        "accent" 0.450493
+        "loop" 0.461425
+        "end" 0.570744
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.500000
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Flex anim"
+  {
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Pause"
+    {
+      time 2.812309 -1.000000
+      param "1"
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "RampTool" "26"
+  "CChoreoView" "36"
+}
+fps 60
+snap off
+ignorePhonemes off

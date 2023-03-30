@@ -1,0 +1,94 @@
+// Choreo version 1
+event stoppoint "Fire1"
+{
+  time 1.093333 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.charge11_var01"
+    {
+      time 0.220000 0.854104
+      param "NPC_hgrunt.charge11_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Mar_angry01"
+    {
+      time 0.079259 1.399259
+      param "humans\marine\marine"
+      param2 "Mar_angry01"
+      event_ramp
+      {
+        0.2175 0.6264
+        0.3455 0.9775
+        1.1694 0.8650
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Nod"
+    {
+      time 0.160001 1.440000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2733 0.8300
+          0.4962 0.2600
+          0.7411 0.4400
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.1739 0.4600
+          0.3211 0.2000
+          0.5658 0.6400
+        }
+        "outer_raiser" combo 
+        {
+          0.6089 1.0000
+        }
+        {
+          0.6089 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.6089 1.0000
+        }
+        {
+          0.6089 0.5000
+        }
+        "wrinkler" 
+        {
+          0.6089 0.8100
+        }
+        "lid_raiser" combo 
+        {
+          0.3043 0.8600
+        }
+        {
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "88"
+  "ExpressionTool" "46"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

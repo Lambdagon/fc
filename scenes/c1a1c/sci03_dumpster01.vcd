@@ -1,0 +1,60 @@
+// Choreo version 1
+actor "SCI03_Dumpster"
+{
+  channel "Voice"
+  {
+    event speak "uc.sci03.dumpster.isthatyou01"
+    {
+      time 0.200000 0.965329
+      param "uc.sci03.dumpster.isthatyou01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci03.dumpster.isthatyou02"
+    {
+      time 1.146667 2.116440
+      param "uc.sci03.dumpster.isthatyou02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.sci03.dumpster.isthatyou03"
+    {
+      time 2.240000 3.040000
+      param "uc.sci03.dumpster.isthatyou03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 2.206667 -1.000000
+      param "1"
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

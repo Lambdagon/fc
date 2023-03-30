@@ -1,0 +1,51 @@
+// Choreo version 1
+actor "GRD02_Shack"
+{
+  channel "Voice"
+  {
+    event speak "oar.grd02.silo.tooquiet01"
+    {
+      time 0.447811 1.214523
+      param "NPC_Security.incoming02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+    event firetrigger "16 - Fire Relationship  - kill shootyshootybangbang"
+    {
+      time 1.477273 -1.000000
+      param "16"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "28"
+  "CChoreoView" "88"
+}
+fps 60
+snap off
+ignorePhonemes off

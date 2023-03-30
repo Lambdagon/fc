@@ -1,0 +1,119 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd06.lab.becarefulinthere01"
+    {
+      time 0.349524 1.866962
+      param "uc.grd06.lab.becarefulinthere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_wincing01"
+    {
+      time 0.700000 2.475000
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.4778 0.4380
+        0.9481 0.5471
+        1.3324 0.4350
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 0.183333 1.183333
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1630 0.3483
+        0.7407 0.3199
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 0.583333 1.583333
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.2963 0.2257
+        0.5370 0.5306
+        0.6519 0.2496
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.233334 1.316667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1797 0.4900
+          0.3797 0.5400
+          0.5971 0.8200
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.267029 1.431885
+      param "!player"
+      event_ramp
+      {
+        0.4593 0.4813
+        0.6193 0.3976
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 2.017030 3.340218
+      param "!self"
+      event_ramp
+      {
+        0.4593 0.4813
+        0.6645 0.3976
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 1.450363 2.781885
+      param "!self"
+      event_ramp
+      {
+        0.4593 0.4813
+        0.7724 0.3976
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "GestureTool" "100"
+  "ExpressionTool" "46"
+  "CChoreoView" "80"
+}
+fps 60
+snap off
+ignorePhonemes off

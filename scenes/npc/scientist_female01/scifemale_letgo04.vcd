@@ -1,0 +1,129 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.letsgo04"
+    {
+      time 0.712917 2.036137
+      param "NPC_Scifemale.letsgo04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.038333 2.520833
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.9697 0.9931
+        2.1167 0.8403
+        2.3050 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 0.166666 1.760416
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.2571 0.4628
+        0.3238 0.5998
+        0.4286 0.7131
+        1.1476 0.6623
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.106091
+        "extreme" 0.233400
+        "loop" 0.615326
+        "end" 0.856209
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Expression"
+  {
+    event gesture "hg_puncuate_down"
+    {
+      time 0.614583 2.247916
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.3524 0.6234
+        0.7238 0.7202
+        1.0000 0.5514
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Flex"
+  {
+    event expression "SciFem_grin01"
+    {
+      time 1.197917 3.510417
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_grin01"
+      event_ramp
+      {
+        0.3571 0.8158
+        0.5381 0.9115
+        0.9789 0.6505
+      }
+    }
+    event expression "SciFem_Browup01"
+    {
+      time 0.562500 1.562500
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.2048 0.7627
+        0.7190 0.7273
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "30"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

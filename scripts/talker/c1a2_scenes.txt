@@ -1,0 +1,213 @@
+criterion IsOC1 "map" "bm_c1a2a" required
+criterion IsOC2 "map" "bm_c1a2b" required
+criterion IsOC3 "map" "bm_c1a2c" required
+
+//========================================================
+//executive lounge
+//========================================================
+criterion IsSci2Executive name "sci_move" required
+// Hey, I didn't come up with the name.
+
+response Sci2_Executive_Post_Idle
+{
+	sequential
+	norepeat
+	scene "scenes/c1a2a/sci02_executivelounge_idle01.vcd" defaultdelay
+	scene "scenes/c1a2a/sci02_executivelounge_idle02.vcd" defaultdelay
+	scene "scenes/c1a2a/sci02_executivelounge_idle03.vcd" defaultdelay
+}
+
+rule Sci2_Executive_Post_Idle
+{
+	criteria TLK_USE IsSci2Executive IsPlayerClose IsOC1
+	response Sci2_Executive_Post_Idle
+}
+
+//========================================================
+// Grd_Storage-LadderScene
+//========================================================
+criterion IsGrd01S name "Grd01_Storage" required
+criterion IsOCladderon name "ocladder" "1" required
+criterion IsOCladderoff name "ocladder" "" required
+// Hey, I didn't come up with the name.
+
+response Grd01S_Ladder_Unrecruit
+{
+	sequential
+	norepeat
+	scene "scenes/npc/security/illstayhere03.vcd" defaultdelay
+	scene "scenes/npc/security/holddownspot03.vcd" defaultdelay
+	scene "scenes/npc/security/imstickinghere01.vcd" defaultdelay
+	scene "scenes/npc/security/imstickinghere05.vcd" defaultdelay
+}
+
+rule Grd01S_Ladder_Unrecruit
+{
+	criteria TLK_USE IsGrd01S IsPlayerClose IsOC1 IsOCladderon
+	response Grd01S_Ladder_Unrecruit
+}
+
+//========================================================
+//receptionist office
+//========================================================
+criterion IsSci3Receptionist name "SCI03" required
+criterion IsReceptionistScenePost "ReceptionistDone" "1" required
+criterion IsReceptionistScenePre "ReceptionistDone" "" required
+
+response Sci3_Receptionist_Pre_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a2a/receptionistoffice_close2.vcd" defaultdelay
+   scene "scenes/c1a2a/receptionistoffice_close3.vcd" defaultdelay
+}
+
+rule Sci3_Receptionist_Pre_Idle
+{
+   criteria TLK_IDLE IsSci3Receptionist IsPlayerClose IsOC2 IsReceptionistScenePre
+   response Sci3_Receptionist_Pre_Idle
+}
+
+response Sci3_Receptionist_Post_Idle
+{
+   norepeat
+   scene "scenes/c1a2a/receptionistoffice_postidle01.vcd" defaultdelay
+   scene "scenes/c1a2a/receptionistoffice_postidle02.vcd" defaultdelay
+   scene "scenes/c1a2a/receptionistoffice_postidle03.vcd" defaultdelay
+}
+
+rule Sci3_Receptionist_Post_Idle
+{
+   criteria TLK_VITALIDLE IsSci3Receptionist IsPlayerClose IsOC2 SeenByPlayer IsReceptionistScenePost
+   response Sci3_Receptionist_Post_Idle
+}
+
+//========================================================
+// Grd02- Get Topside
+//========================================================
+criterion IsGRD02TOP name "GRD02_TopSide" required weight 10
+criterion GRD02TopInCafe "Grd02Cafe" "1" required
+
+response GRD02TopSide_Cafeteria_Idle
+{
+   scene "scenes/c1a2b/grd02_dontgettoolost01.vcd" displayfirst speakonce
+   scene "scenes/npc/security/illstayhere03.vcd"
+   scene "scenes/npc/security/holddownspot03.vcd"
+   scene "scenes/npc/security/imstickinghere01.vcd"
+   scene "scenes/npc/security/imstickinghere02.vcd"
+   scene "scenes/npc/security/imstickinghere05.vcd"
+}
+
+rule GRD02TopSide_Cafeteria_Idle
+{
+   criteria TLK_USE IsGRD02TOP IsOC3 GRD02TopInCafe
+   response GRD02TopSide_Cafeteria_Idle
+}
+//========================================================
+// Grd02- Quickie Combat Option with Vorts
+//========================================================
+criterion GRD02VORTS "Grd02vort" "1" required
+
+response GRD02TopSide_Vort_Alert
+{
+   scene "scenes/npc/security/behindyou06.vcd"
+   scene "scenes/npc/security/incoming02.vcd"
+   scene "scenes/npc/security/takecover01.vcd"
+   scene "scenes/npc/security/takecover02.vcd"
+   scene "scenes/npc/security/takecover03.vcd"
+   scene "scenes/npc/security/uhoh02.vcd"
+}
+
+rule GRD02TopSide_Vort_Alert
+{
+   criteria TLK_USE IsGRD02TOP IsOC3 GRD02VORTS
+   response GRD02TopSide_Vort_Alert
+}
+//========================================================
+// Elevator Shaft Persons farewells-if still alive
+//========================================================
+criterion IsGrd04Stairway name "GRD04" required
+criterion IsSci02Stairway name "SCI02" required
+criterion IsSci04mapb name "SCI04" required
+criterion OCGuard02top name "GRD02_TopSide" required
+criterion OCGuard02 name "GRD02" required
+criterion Scientist04 name "SCI04" required
+criterion Sci02CantClimb "SCI02peewee" "1" required
+criterion Grd04WithDocs "farewellwithdoc" "1" required
+criterion Grd04NoDocs "nodocs" "1" required
+criterion Sci04isSafe "sci04safe" "1" required
+
+
+response GRD04_Farewell_solo
+{
+  sequential
+  norepeat
+  scene "scenes/c1a2c/grd04_farewell_solo.vcd"
+  scene "scenes/c1a2c/grd04_farewell02.vcd"
+  scene "scenes/c1a2c/grd04_farewell03.vcd"
+  scene "scenes/c1a2c/grd04_farewell04.vcd"
+}
+
+rule GRD04_Farewell_solo
+{
+   criteria TLK_USE IsGRD04Stairway IsOC3 Grd04NoDocs 
+   response GRD04_Farewell_solo
+}
+
+response GRD04_Farewell
+{
+  sequential
+  norepeat
+  scene "scenes/c1a2c/grd04_farewell.vcd"
+  scene "scenes/c1a2c/grd04_farewell02.vcd"
+  scene "scenes/c1a2c/grd04_farewell03.vcd"
+  scene "scenes/c1a2c/grd04_farewell04.vcd"
+}
+
+rule GRD04_Farewell
+{
+   criteria TLK_USE IsGRD04Stairway IsOC3 Grd04WithDocs
+   response GRD04_Farewell
+}
+
+response SCI02_Farewell_Solo
+{
+   scene "scenes/c1a2b/sci02_failedphysed01.vcd"
+}
+
+rule SCI02_Farewell
+{
+   criteria TLK_USE IsSci02Stairway IsOC3 SCI02CantClimb
+   response SCI02_Farewell_Solo
+}
+
+response SCI04_Farewell_MediaCircus
+{
+  norepeat
+  scene "scenes/c1a2b/sci04female_elevator_mediacircus01.vcd"
+}
+
+rule SCI04_Farewell_MediaCircus
+{
+  criteria TLK_USE IsSci04mapb IsOC3 SCI04isSafe
+  response SCI04_Farewell_MediaCircus
+}
+//========================================================
+//elevator scientist
+//========================================================
+criterion IsSci12Elevator "concept" "sci12" required
+
+response Sci12_CantHoldOn_Idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a2b/sci12_elevatorshaft_cantholdon_idle01.vcd" defaultdelay
+   scene "scenes/c1a2b/sci12_elevatorshaft_cantholdon_idle02.vcd" defaultdelay
+   scene "scenes/c1a2b/sci12_elevatorshaft_cantholdon_idle03.vcd" defaultdelay
+}
+
+rule Sci12_CantHoldOn_Idle
+{
+   criteria IsSci12Elevator IsOC3
+   response Sci12_CantHoldOn_Idle
+}

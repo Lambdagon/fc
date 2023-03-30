@@ -1,0 +1,146 @@
+// Choreo version 1
+event section "PU"
+{
+  time 1.941666 -1.000000
+  param "noaction"
+}
+event loop "LOPP"
+{
+  time 9.097222 -1.000000
+  param "7.000000"
+  loopcount "-1"
+}
+actor "GRD01_Office"
+{
+  channel "Dialog"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 2.047980 10.186868
+      param "!player"
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto ss_grd01officedestiny02"
+    {
+      time 0.333333 2.055555
+      param "ss_grd01officedestiny02"
+      param2 "Walk"
+      resumecondition
+      distancetotarget 3.00
+      forceshortmovement
+    }
+  }
+  channel "Gesture"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 2.083333 -1.000000
+      param "1"
+    }
+    event gesture "p_ready"
+    {
+      time 2.305556 5.772223
+      param "p_ready"
+      event_ramp
+      {
+        0.2895 0.2835
+        0.5947 0.3817
+        1.4211 0.9085
+        2.8789 0.3772
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      sequenceduration 3.466667
+    }
+    event gesture "p_LeanFwdLeft_Rifle"
+    {
+      time 2.916667 6.511111
+      param "p_LeanFwdLeft_Rifle"
+      event_ramp
+      {
+        0.4105 0.5112
+        2.2418 0.7031
+        3.1365 0.4754
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.093814
+        "loop" 0.300205
+        "end" 0.669231
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.116279
+        "loop" 0.372093
+        "end" 0.581395
+      }
+      sequenceduration 2.900000
+    }
+  }
+  channel "Posture"
+  {
+    event gesture "Posture02"
+    {
+      time 4.027778 6.716667
+      param "Posture02"
+      event_ramp
+      {
+        0.5632 0.2946
+        1.0474 0.4911
+        2.0767 0.3326
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.375900
+        "loop" 0.476140
+        "end" 0.651560
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.322581
+        "loop" 0.408602
+        "end" 0.559140
+      }
+      sequenceduration 3.133333
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "38"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

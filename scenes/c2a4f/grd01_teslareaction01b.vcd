@@ -1,0 +1,156 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 7.250000 -1.000000
+  param "noaction"
+}
+actor "GRD01_Office"
+{
+  channel "Dialog"
+  {
+    event speak "NPC_Security.goodgod04"
+    {
+      time 0.784849 1.818273
+      param "NPC_Security.goodgod04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.runforyourlife04"
+    {
+      time 4.300926 5.250926
+      param "NPC_Security.startle_ohshit02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.headsup01"
+    {
+      time 6.000000 6.768866
+      param "NPC_Security.headsup01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+  }
+  channel "Face At"
+  {
+    event lookat "Look at agrunt_02"
+    {
+      time 3.916667 6.000000
+      param "agrunt_02"
+      event_ramp
+      {
+        0.8320 0.7391
+        1.7160 0.7281
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 5.250000 7.541667
+      param "!player"
+      event_ramp
+      {
+        0.5280 0.7266
+        1.9923 0.7078
+      }
+    }
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto grd01_tesla mark"
+    {
+      time 2.287500 3.416667
+      param "grd01_tesla mark"
+      param2 "Run"
+    }
+    event face "Face !player"
+    {
+      time 5.604167 7.645833
+      param "!player"
+      event_ramp
+      {
+        0.7960 0.9797
+        2.0417 1.0000
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentUp"
+    {
+      time 3.344443 6.166667
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.245571
+        "extreme" 0.401247
+        "loop" 0.616798
+        "end" 0.736549
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Posture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 3.394706 4.950261
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.5051 0.6719
+        1.1205 0.6563
+      }
+    }
+    event expression "b_wincing02"
+    {
+      time 0.416667 2.291667
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 5.290540 6.846095
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.5051 0.6719
+        1.1205 0.6563
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "ExpressionTool" "40"
+  "GestureTool" "100"
+  "RampTool" "50"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

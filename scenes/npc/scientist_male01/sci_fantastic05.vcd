@@ -1,0 +1,131 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.fantastic05"
+    {
+      time 0.403081 1.336709
+      param "NPC_Scimale.fantastic05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.041460 2.446370
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.6155
+        0.3800 0.9318
+        1.4606 1.0000
+        1.6742 0.9121
+        2.0343 0.6833
+        2.2374 0.4523
+      }
+    }
+    active "0"
+  }
+  channel "Expression"
+  {
+    event expression "Sighing"
+    {
+      time 0.178161 1.045977
+      param "common_expressions"
+      param2 "Sighing"
+      event_ramp
+      {
+        0.1227 0.1288
+        0.2182 0.6515
+        0.3182 0.6515
+        0.4045 0.1364
+      }
+    }
+    event expression "PSmile"
+    {
+      time 0.068966 2.431035
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.3318 0.4318
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.017534 2.413102
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.5368 0.8900
+          0.7273 0.4600
+          1.7917 0.3500
+          2.0250 0.6300
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "fist swing across"
+    {
+      time 0.155173 2.455173
+      param "g_fist_swing_across"
+      absolutetags playback_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "accent forward"
+    {
+      time 0.017242 2.450575
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+  "RampTool" "44"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

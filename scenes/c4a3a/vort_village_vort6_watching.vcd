@@ -1,0 +1,88 @@
+// Choreo version 1
+event loop "Loop Watching"
+{
+  time 5.500000 -1.000000
+  param "2.250000"
+  loopcount "-1"
+}
+actor "village_bottom_vort_06"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 8.000000
+      param "!player"
+      event_ramp
+      {
+        0.9636 0.5163
+        1.9571 0.7491
+        2.0286 0.7491
+        5.8714 0.7491
+        5.9571 0.7491
+        7.0429 0.5163
+      }
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face "
+    {
+      time 0.000000 8.000000
+      param "!player"
+      event_ramp
+      {
+        0.9429 0.9976
+        7.0714 0.9964
+      }
+    }
+  }
+  channel "Move to"
+  {
+    event gesture "g_handclasp"
+    {
+      time 0.097222 7.175000
+      param "g_handclasp"
+      absolutetags playback_time
+      {
+        "in" 0.109804
+        "loop" 0.278510
+        "end" 0.768653
+        "out" 0.815706
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.153061
+        "loop" 0.510204
+        "end" 0.612245
+        "out" 0.816326
+      }
+      sequenceduration 3.300000
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "move to"
+  {
+  }
+  faceposermodel "models\vortigaunt_slave.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "SceneRampTool" "100"
+  "RampTool" "14"
+  "ExpressionTool" "50"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

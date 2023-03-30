@@ -1,0 +1,170 @@
+// Choreo version 1
+actor "Sci40"
+{
+  channel "voice"
+  {
+    event speak "TC_Sci40_Nag03"
+    {
+      time 1.059999 7.934874
+      param "am.testchamber.sci40.nag03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "triggers"
+  {
+    event firetrigger "Intercom Down"
+    {
+      time 1.020000 -1.000000
+      param "1"
+    }
+    event firetrigger "Intercom Up"
+    {
+      time 4.766667 -1.000000
+      param "2"
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "startleclipboardgesture"
+    {
+      time -0.040000 9.840000
+      param "startleclipboardgesture"
+      absolutetags playback_time
+      {
+        "apex" 0.030811
+        "accent" 0.068469
+        "loop" 0.667341
+        "end" 0.866397
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.132353
+        "accent" 0.294118
+        "loop" 0.588235
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "G_puncuate"
+    {
+      time 1.993333 6.526666
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.148529
+        "accent" 0.252941
+        "loop" 0.526471
+        "end" 0.692647
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "b_head_forward"
+    {
+      time 1.426666 6.733333
+      param "b_head_forward"
+      event_ramp
+      {
+        0.9154 0.2941
+        1.7308 0.5882
+        3.4308 0.5042
+        4.3846 0.4034
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.303949
+        "extreme" 0.632371
+        "loop" 0.712673
+        "end" 0.770389
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188679
+        "extreme" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      sequenceduration 1.800000
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at control_camm"
+    {
+      time 0.806667 6.386666
+      param "control_camm"
+      event_ramp
+      {
+        0.3077 0.4286
+        0.6615 0.5546
+        1.6692 0.6807
+        2.7000 0.6134
+        3.9846 0.6218
+        4.8769 0.4622
+      }
+    }
+  }
+  channel "facial"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.733333 5.933333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.2571 0.5100
+          0.6490 0.6400
+          1.0122 0.6900
+          1.4469 0.3300
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.2408 0.1900
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          2.2875 0.1300
+          3.1750 0.3200
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.3490 0.4400
+        }
+        {
+        }
+        "chin_raiser" 
+        {
+          0.2082 0.2600
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "28"
+  "RampTool" "26"
+  "ExpressionTool" "32"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

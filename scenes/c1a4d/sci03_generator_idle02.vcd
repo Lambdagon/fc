@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "SCI03_Generator"
+{
+  channel "Voice"
+  {
+    event speak "bp.sci03.idle.oncethatcreature01"
+    {
+      time 0.233333 2.008095
+      param "bp.sci03.idle.oncethatcreature01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci03.idle.oncethatcreature02"
+    {
+      time 2.116666 4.784557
+      param "bp.sci03.idle.oncethatcreature02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "PSmile"
+    {
+      time 2.016667 5.516667
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.9220 1.0000
+        3.0980 1.0000
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "kgesture04p"
+    {
+      time 1.375000 5.508333
+      param "kgesture04p"
+      absolutetags playback_time
+      {
+        "apex" 0.081531
+        "accent" 0.309819
+        "loop" 0.391351
+        "end" 0.655242
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.109890
+        "accent" 0.417582
+        "loop" 0.527473
+        "end" 0.692308
+      }
+      sequenceduration 3.066667
+    }
+    event gesture "kgesture03p"
+    {
+      time 0.041666 2.508333
+      param "kgesture03p"
+      absolutetags playback_time
+      {
+        "apex" 0.123288
+        "accent" 0.315068
+        "loop" 0.424658
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123288
+        "accent" 0.315068
+        "loop" 0.424658
+        "end" 0.616438
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.083333 5.500000
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time 0.049999 5.525000
+      param "!player"
+      lockbodyfacing
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

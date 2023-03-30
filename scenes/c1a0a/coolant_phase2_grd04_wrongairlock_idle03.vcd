@@ -1,0 +1,88 @@
+// Choreo version 1
+actor "GRD04_coolant"
+{
+  channel "Voice"
+  {
+    event speak "am.grd04.whatshappening01"
+    {
+      time 0.471380 1.369634
+      param "am.grd04.whatshappening01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Cheers"
+    {
+      time 0.216750 3.361772
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_droop" combo 
+        {
+          0.2580 0.0000
+          0.3760 0.3900
+          0.4340 0.0000
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          0.3007 0.0700
+          0.4520 0.5400
+          0.6000 0.7600
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.2733 0.0000
+          0.4540 0.4800
+          0.6060 0.6000
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.4860 0.0000
+          0.5680 0.7800
+          0.6920 0.9000
+          1.2280 0.9000
+          1.5380 0.7300
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Player"
+    {
+      time 0.010943 3.211143
+      param "!player"
+      event_ramp
+      {
+        0.3000 0.7780
+        0.5241 1.0000
+        2.3455 1.0000
+        2.5956 0.6966
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "68"
+  "RampTool" "14"
+  "SceneRampTool" "100"
+  "ExpressionTool" "82"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

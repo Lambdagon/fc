@@ -1,0 +1,158 @@
+// Choreo version 1
+event stoppoint "Fire"
+{
+  time 43.077782 -1.000000
+  param "noaction"
+}
+actor "SCI34_Laser"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+    event firetrigger "Firetrigger 2"
+    {
+      time 2.451389 -1.000000
+      param "2"
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "g_palm_out_r"
+    {
+      time 2.750001 13.100001
+      param "g_palm_out_r"
+      event_ramp
+      {
+        0.0000 1.0000
+        3.9583 0.9984
+        4.8583 0.7953
+        6.4625 0.9688
+        9.0333 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.141129
+        "accent" 0.279329
+        "loop" 0.355993
+        "end" 0.838710
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.121951
+        "accent" 0.231707
+        "loop" 0.390244
+        "end" 0.780488
+      }
+      sequenceduration 2.766667
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "eye movement 1"
+    {
+      time 0.000000 2.623485
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8163 0.6700
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3314 0.6700
+          0.8163 0.5000
+        }
+      }
+    }
+    event flexanimation "Look to Right"
+    {
+      time 2.925575 14.515319
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.4332 0.5000
+          1.3499 0.5000
+          2.2249 1.0000
+          5.3082 1.0000
+          7.9749 1.0000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.4332 0.5000
+          1.3499 0.5000
+          2.2249 0.6900
+          5.3082 0.6900
+          7.9749 0.6900
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.4332 0.5000
+          1.3499 0.8200
+          2.2249 0.9308
+          5.3082 1.0000
+          7.9749 0.9308
+        }
+        "chest_rightleft" range 30.0 -30.0 
+        {
+          3.7839 0.7100
+        }
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 1.361869 2.361869
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2098 0.5469
+        0.8024 0.5469
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.486869 1.486869
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.2634 0.5734
+        0.8073 0.5688
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "SCI35_Laser"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "SceneRampTool" "2"
+  "RampTool" "16"
+  "ExpressionTool" "10"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

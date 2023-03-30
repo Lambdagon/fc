@@ -1,0 +1,128 @@
+// Choreo version 1
+actor "Grd05_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.grd05.makelikea03"
+    {
+      time 0.413333 3.161451
+      param "am.grd05.makelikea03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_right"
+    {
+      time 1.660000 2.960000
+      param "hg_nod_right"
+      event_ramp
+      {
+        0.2640 0.4144
+        0.6480 0.5679
+        0.9440 0.4628
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "!player"
+    {
+      time 0.026666 4.009473
+      param "!player"
+      event_ramp
+      {
+        0.3533 0.7875
+        0.6847 1.0000
+        3.2421 1.0000
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "FLex_headupanddown"
+    {
+      time 0.000000 3.964912
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4218 0.5000
+          0.5709 0.3900
+          1.6498 0.5000
+        }
+      }
+    }
+    event flexanimation "flex_eyes and brow"
+    {
+      time 0.000000 3.868421
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.2639 1.0000
+          0.9157 1.0000
+          1.8340 0.1400
+        }
+        {
+          0.2639 0.5000
+          1.5884 0.5000
+          1.8340 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.2639 0.9500
+          0.8884 1.0000
+          1.8340 0.6300
+        }
+        {
+          0.2639 0.5000
+          1.5884 0.5000
+          1.8340 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.2639 0.3100
+          0.8157 0.5169
+          1.8340 0.0500
+        }
+        {
+          0.2639 0.5000
+          1.5884 0.5000
+          1.8340 0.5000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "76"
+  "RampTool" "88"
+  "ExpressionTool" "22"
+  "GestureTool" "228"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

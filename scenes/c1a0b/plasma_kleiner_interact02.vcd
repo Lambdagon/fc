@@ -1,0 +1,85 @@
+// Choreo version 1
+actor "Kleiner"
+{
+  channel "Voice"
+  {
+    event speak "sci_kleiner_longerthananticipated01"
+    {
+      time 0.798095 5.546644
+      param "am.kleiner.longerthananticipated01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 6.523810
+      param "!self"
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "kgesture11"
+    {
+      time 1.233333 10.419048
+      param "kgesture11"
+      absolutetags playback_time
+      {
+        "apex" 0.108696
+        "accent" 0.292570
+        "loop" 0.659492
+        "end" 0.779032
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.338235
+        "loop" 0.411765
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "expression"
+  {
+    event gesture "bodyaccentdown"
+    {
+      time 1.952381 7.409525
+      param "bodyaccentdown"
+      absolutetags playback_time
+      {
+        "apex" 0.043386
+        "extreme" 0.080574
+        "loop" 0.610122
+        "end" 0.835867
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.102941
+        "extreme" 0.191176
+        "loop" 0.397059
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Flex"
+  {
+  }
+  faceposermodel "models\humans\scientist_kliener.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "CChoreoView" "16"
+}
+fps 60
+snap off
+ignorePhonemes off

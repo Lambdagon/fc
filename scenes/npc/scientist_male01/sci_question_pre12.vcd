@@ -1,0 +1,98 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 2.682292 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre12"
+    {
+      time 0.626067 2.511554
+      param "NPC_Scimale.question_pre12"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.034584 3.177145
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        2.4923 0.9805
+        2.7983 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_browup"
+    {
+      time 0.503236 1.074665
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.1872 0.2774
+        0.3468 0.3955
+        0.4234 0.2397
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.460814 3.080507
+      param "bg_accentup"
+      event_ramp
+      {
+        0.5143 0.2102
+        0.6429 0.3377
+        1.7577 0.1334
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.116108
+        "extreme" 0.283820
+        "loop" 0.516035
+        "end" 0.645043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "180"
+  "RampTool" "38"
+  "SceneRampTool" "100"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

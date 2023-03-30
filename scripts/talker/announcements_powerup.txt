@@ -1,0 +1,37 @@
+criterion IsAnnouncement "concept" "announcement" required
+criterion IsPowerUpB "map" "bm_c1a4b" required weight 2
+
+//========================================================
+//Rocket go poop
+//========================================================
+response "announce_rocket_disabled"
+{
+	sentence "!C1A4_ROCKET_DISABLED" 
+}
+
+rule "announce_rocket_disabled"
+{
+	criteria IsAnnouncement IsPowerUpB
+	response announce_rocket_disabled
+}
+
+//========================================================
+//Bug the player yeaaaaaah
+//========================================================
+response "announce_powerup"
+{
+	sentence "!C1A4_1" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_2" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_3" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_4" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_5" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_6" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_7" soundlevel "SNDLVL_TALKING"
+	sentence "!C1A4_8" soundlevel "SNDLVL_TALKING"
+}
+
+rule "announce_powerup"
+{
+	criteria IsAnnouncement
+	response announce_powerup
+}

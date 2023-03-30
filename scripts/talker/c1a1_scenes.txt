@@ -1,0 +1,101 @@
+criterion IsUC1 "map" "bm_c1a1a" required
+criterion IsUC2 "map" "bm_c1a1b" required
+criterion IsUC3 "map" "bm_c1a1c" required
+
+//========================================================
+// ELI AND KLIENER
+//========================================================
+
+response Eli_c1a1a_idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a1a/eli_idle01.vcd"
+   scene "scenes/c1a1a/eli_idle02.vcd"
+}
+
+rule Eli_c1a1a_idle
+{
+   criteria TLK_VITALIDLE IsEli IsUC1 IsPlayerClose
+   response Eli_c1a1a_idle
+}
+
+response Kleiner_c1a1a_idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a1a/kleiner_idle01.vcd"
+   scene "scenes/c1a1a/kleiner_idle02.vcd"
+   scene "scenes/c1a1a/kleiner_idle03.vcd"
+}
+
+rule Kleiner_c1a1a_idle
+{
+   criteria TLK_VITALIDLE IsKleiner IsUC1 IsPlayerClose
+   response Kleiner_c1a1a_idle
+}
+
+//========================================================
+// Murtaugh Idles
+//========================================================
+criterion IsMURTAUGH name "GRD06_DevHall" required weight 10
+criterion LobbyAreaReached "LobbyReached" "1" required
+
+response GRD06_DevHall_Lobby_Idle
+{
+   norepeat
+   sequential
+   scene "scenes/c1a1b/grd02_frontdesk_call.vcd" delay "2"
+   scene "scenes/c1a1b/grd02_frontdesk_idle01.vcd" delay "4"
+   scene "scenes/c1a1b/grd02_frontdesk_idle03.vcd" delay "4"
+   scene "scenes/c1a1b/grd02_frontdesk_idle02.vcd" delay "4"
+   scene "scenes/c1a1b/grd02_frontdesk_idle04.vcd" delay "4"
+   scene "scenes/c1a1b/grd02_frontdesk_idle05.vcd" delay "4"
+   scene "scenes/c1a1b/grd02_frontdesk_idle06.vcd" delay "4"
+}
+
+rule GRD06_DevHall_Lobby_Idle
+{
+   criteria TLK_IDLE IsMURTAUGH IsUC2 LobbyAreaReached
+   response GRD06_DevHall_Lobby_Idle
+}
+
+
+//========================================================
+// CATWALK GRD
+//========================================================
+criterion IsCatWalkGrd name "GRD00_Door" required weight 10
+
+response CatWalkGRD_Idle
+{
+   scene "scenes/c1a1b/grd00_catwalk_help01.vcd"
+   scene "scenes/c1a1b/grd00_catwalk_help02.vcd"
+   scene "scenes/c1a1b/grd00_catwalk_help03.vcd"
+   scene "scenes/c1a1b/grd00_catwalk_struggles01.vcd"
+   scene "scenes/c1a1b/grd00_catwalk_struggles02.vcd"
+}
+
+rule CatWalkGRD_IDLE
+{
+   criteria TLK_IDLE IsCatWalkGrd IsUC2
+   response CatWalkGRD_Idle
+}
+
+//========================================================
+// RetinalScan SCI
+//========================================================
+criterion IsRetinalScanSci name "sitting_scientist" required weight 10
+criterion RetinalSciSafe "retscisafe" "1" required
+
+response RetinalScanSci_idle
+{
+   sequential
+   norepeat
+   scene "scenes/c1a1c/sci_ucret_postoutroidle01.vcd"
+}
+
+rule RetinalScanSci_idle
+{
+   criteria TLK_VITALIDLE IsRetinalScanSci IsUC3 RetinalSciSafe IsPlayerClose
+   response RetinalScanSci_idle
+}

@@ -1,0 +1,91 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 1.760417 -1.000000
+  param "noaction"
+}
+actor "c2a5f_barney"
+{
+  channel "Voice"
+  {
+    event speak "st.grd03.lockup.freeze01"
+    {
+      time 0.856111 2.238333
+      param "st.grd03.lockup.freeze01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 1.063798 -1.000000
+      param "1"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "Crouch_to_shootpistol"
+    {
+      time 0.559167 1.103425
+      param "Crouch_to_shootpistol"
+      sequenceduration 0.625000
+    }
+    event gesture "Crouch_Idle_RPG"
+    {
+      time 0.000000 0.584640
+      param "Crouch_Idle_RPG"
+      sequenceduration 2.000000
+    }
+    event gesture "pistolangryidle2"
+    {
+      time 0.790467 3.646173
+      param "pistolangryidle2"
+      event_ramp
+      {
+        0.3080 1.0000
+        2.5675 1.0000
+      }
+      sequenceduration 0.750000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 4.642645
+      param "!player"
+    }
+  }
+  channel "Move"
+  {
+    event face "Face !player"
+    {
+      time 0.047619 1.309523
+      param "!player"
+    }
+    event face "Face !player"
+    {
+      time 0.722222 3.285714
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "32"
+  "ExpressionTool" "56"
+  "CChoreoView" "88"
+}
+fps 60
+snap off
+ignorePhonemes off

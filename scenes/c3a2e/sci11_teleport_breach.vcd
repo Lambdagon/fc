@@ -1,0 +1,44 @@
+// Choreo version 1
+actor "SCI11"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci11.part03.breach01"
+    {
+      time 0.426667 2.868345
+      param "lc.sci11.part03.breach01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_afraid00"
+    {
+      time 0.176471 3.343137
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.107844 3.460785
+      param "!enemy"
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "68"
+}
+fps 60
+snap off
+ignorePhonemes off

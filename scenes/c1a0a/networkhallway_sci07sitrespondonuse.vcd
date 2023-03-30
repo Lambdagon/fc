@@ -1,0 +1,61 @@
+// Choreo version 1
+event stoppoint "pow"
+{
+  time 4.391795 -1.000000
+  param "noaction"
+}
+actor "SCI07_ResearchWing"
+{
+  channel "Look at"
+  {
+  }
+  channel "Posture"
+  {
+    event gesture "BreakRoom_Sit_01_Respond"
+    {
+      time 0.038462 5.590769
+      param "g_BreakRoom_Sit_01"
+      event_ramp
+      {
+        0.0000 0.3008
+        0.8667 0.3126
+        3.1843 0.2339
+        4.6052 0.2738
+        5.5523 0.2444
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.080833
+        "accent" 0.318707
+        "loop" 0.369515
+        "end" 0.482679
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.500000
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Flex anim"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "78"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "RampTool" "30"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

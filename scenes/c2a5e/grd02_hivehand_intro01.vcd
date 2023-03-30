@@ -1,0 +1,99 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.intro01"
+    {
+      time 0.182222 1.342222
+      param "st.grd02.intro01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd02.intro02"
+    {
+      time 1.726666 3.155623
+      param "st.grd02.intro02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_afraid00"
+    {
+      time 1.288889 4.788888
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid00"
+      event_ramp
+      {
+        0.2128 0.2532
+        0.4667 0.9091
+        2.6231 1.0000
+        3.0316 0.7532
+        3.3060 0.3571
+        3.3846 0.1169
+      }
+    }
+    event expression "b_afraid02"
+    {
+      time 0.033333 2.566667
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid02"
+      event_ramp
+      {
+        0.1795 0.4545
+        0.2923 0.6883
+        0.6974 0.9221
+        2.0256 0.7662
+        2.2974 0.4740
+        2.4436 0.1883
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.070370 4.192592
+      param "!player"
+      event_ramp
+      {
+        0.0536 0.5584
+        0.1607 0.9481
+        3.1054 1.0000
+        3.6253 0.7468
+        3.8727 0.3766
+      }
+    }
+    event face "Face !player"
+    {
+      time 0.066667 4.888889
+      param "!player"
+      event_ramp
+      {
+        0.1455 0.9740
+        3.1455 0.9805
+      }
+      lockbodyfacing
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "52"
+  "ExpressionTool" "100"
+  "RampTool" "44"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

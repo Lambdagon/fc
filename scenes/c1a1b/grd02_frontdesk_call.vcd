@@ -1,0 +1,201 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd06.lobby.emergency_idle02a"
+    {
+      time 0.477500 1.440289
+      param "uc.grd06.lobby.emergency_idle02a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_callout01b"
+    {
+      time 2.046072 4.830222
+      param "uc.grd06.lobby.emergency_callout01b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_callout02a"
+    {
+      time 5.039405 7.057047
+      param "uc.grd06.lobby.emergency_callout02a"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_callout02b"
+    {
+      time 7.265121 10.773170
+      param "uc.grd06.lobby.emergency_callout02b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_callout02c"
+    {
+      time 10.918453 12.846322
+      param "uc.grd06.lobby.emergency_callout02c"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 13.888888
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.9333 0.6100
+          1.7000 0.6500
+          2.3600 0.5000
+          2.6200 0.4300
+          3.0000 0.3500
+          4.1000 0.3500
+          4.3400 0.3500
+          4.5400 0.4700
+          4.7200 0.7500
+          5.2800 0.7800
+          5.7400 0.7800
+          7.7400 0.7500
+          8.6000 0.2500
+          9.6000 0.1400
+          10.1689 0.3700
+          10.5089 0.7700
+          11.4667 0.8800
+          12.8667 0.4200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3833 0.1700
+          0.6733 0.1700
+          0.8983 0.1700
+          1.7250 0.2900
+          2.6667 0.3600
+          4.4400 0.1600
+          5.3800 0.8800
+          6.3200 0.8700
+          9.3667 0.6300
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3200 0.3100
+          1.2600 0.2600
+          1.6400 0.2800
+          1.9000 0.4800
+          2.6800 0.5000
+          4.6000 0.5600
+          6.6000 0.6600
+          9.9500 0.5100
+          12.4500 0.3400
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          3.7200 0.5000
+          5.0800 0.6400
+          6.0800 1.0000
+          8.5000 0.2600
+          11.8000 0.5600
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event expression "b_freaked_mouthclosed"
+    {
+      time 2.774306 3.951389
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2889 0.0936
+        0.5437 0.2953
+        0.8667 0.0819
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 8.644676 11.229168
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2889 0.0936
+        0.5437 0.6199
+        2.2741 0.0819
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 11.294677 13.879169
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2889 0.0936
+        0.9770 0.3538
+        1.6333 0.0994
+        2.2741 0.0439
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_angry01"
+    {
+      time 0.161310 15.451785
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1324 0.3596
+        0.3294 0.5205
+        1.4500 0.6140
+        1.8500 0.6433
+        2.4375 0.7895
+        2.7069 0.5643
+        3.0069 0.0058
+        3.5708 0.5673
+        5.4750 0.7807
+        6.0000 0.7251
+        6.3238 0.1345
+        6.3750 0.1082
+        7.9238 0.6901
+        9.3333 0.6111
+        10.5238 0.3392
+        11.6583 0.6462
+        13.5750 0.5380
+      }
+    }
+  }
+  channel "Look AT"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 14.750000
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "ExpressionTool" "10"
+  "GestureTool" "100"
+  "RampTool" "24"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

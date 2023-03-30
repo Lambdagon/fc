@@ -1,0 +1,150 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.coverwhilereload03"
+    {
+      time 0.426667 1.712268
+      param "NPC_Security.coverwhilereload03"
+      param2 "0.9"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 1.417102
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        0.8507 0.9931
+        0.9978 0.8403
+        1.1860 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_incombat02"
+    {
+      time 0.900000 1.806013
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.2639 0.2503
+        0.4000 0.8406
+        0.5228 0.8619
+        0.6680 0.7131
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 0.191706 0.794203
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.1218 0.8689
+      }
+    }
+    event expression "b_huh01"
+    {
+      time 0.041449 0.387971
+      param "humans\guard\expressions_guard"
+      param2 "b_huh01"
+      event_ramp
+      {
+        0.0964 0.5218
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 1.100611 1.372968
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1078 0.9953
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.000000 2.146176
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.0667 0.5900
+          0.3281 1.0000
+          0.6875 0.9900
+          0.8584 0.6500
+          1.1167 0.4700
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.7333 0.4900
+          0.9556 0.4700
+          1.2222 0.4200
+          1.3389 0.3300
+          1.6111 0.4900
+          1.7333 0.4900
+          1.8500 0.5000
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "g_chestup"
+    {
+      time 0.236660 2.167095
+      param "g_chestup"
+      event_ramp
+      {
+        0.2091 0.4451
+        0.3760 0.6423
+        0.9480 0.3353
+        1.1385 0.1476
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.174886
+        "accent" 0.297307
+        "loop" 0.437216
+        "end" 0.689552
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "108"
+  "RampTool" "102"
+  "SceneRampTool" "100"
+  "ExpressionTool" "36"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

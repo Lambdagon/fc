@@ -1,0 +1,161 @@
+// Choreo version 1
+actor "Kleiner"
+{
+  channel "Voice"
+  {
+    event speak "uc.kleiner.interact.cute01"
+    {
+      time 0.383333 2.884195
+      param "uc.kleiner.interact.cute01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.kleiner.interact.cute02"
+    {
+      time 3.688095 7.028662
+      param "uc.kleiner.interact.cute02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event gesture "kgesture02"
+    {
+      time 0.214285 4.585714
+      param "kgesture02"
+      absolutetags playback_time
+      {
+        "apex" 0.162160
+        "accent" 0.231728
+        "loop" 0.478377
+        "end" 0.652251
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "kgesture04"
+    {
+      time 3.547619 7.042857
+      param "kgesture04"
+      absolutetags playback_time
+      {
+        "apex" 0.219032
+        "accent" 0.488996
+        "loop" 0.585412
+        "end" 0.730036
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.109890
+        "accent" 0.417582
+        "loop" 0.527473
+        "end" 0.692308
+      }
+      sequenceduration 3.066667
+    }
+    event flexanimation "Facial Animation"
+    {
+      time 0.119048 7.571428
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.1160 0.5000
+        }
+        {
+        }
+        "outer_raiser" disabled combo 
+        {
+          0.1160 0.5000
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.1680 0.3300
+          0.8380 0.3800
+          1.4880 0.4100
+        }
+        {
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          3.9540 0.5200
+          4.1980 0.5000
+          5.5120 0.5300
+          6.0040 0.5400
+          6.3980 0.7900
+        }
+      }
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 3.642857 7.285715
+      param "!player"
+      event_ramp
+      {
+        0.8480 0.8232
+        1.9900 0.8720
+        2.8100 0.7931
+      }
+    }
+  }
+  channel "Posture"
+  {
+    event gesture "eyescanposture"
+    {
+      time 0.112380 5.336191
+      param "eyescanposture"
+      event_ramp
+      {
+        0.0000 0.3333
+        1.8258 0.6191
+        5.2238 0.4702
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.167183
+        "loop" 0.349681
+        "end" 0.704931
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.294118
+        "loop" 0.455882
+        "end" 0.676471
+      }
+      sequenceduration 2.300000
+    }
+    event face "Face !self"
+    {
+      time 0.000000 9.000000
+      param "!self"
+    }
+  }
+  faceposermodel "models\humans\scientist_kliener.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "28"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "30"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

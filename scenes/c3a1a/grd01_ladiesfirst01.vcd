@@ -1,0 +1,245 @@
+// Choreo version 1
+event section "walk"
+{
+  time 1.350000 -1.000000
+  param "noaction"
+}
+actor "GRD01_LambdaBunker"
+{
+  channel "Voice"
+  {
+    event speak "*vo\c3a1a\ForgetAboutFreeman\grd01_ladiesfirst01.wav"
+    {
+      time 2.242161 3.342161
+      param "*vo\c3a1a\ForgetAboutFreeman\grd01_ladiesfirst01.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "*vo\c3a1a\ForgetAboutFreeman\grd01_ladiesfirst02.wav"
+    {
+      time 4.092162 5.176448
+      param "*vo\c3a1a\ForgetAboutFreeman\grd01_ladiesfirst02.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at hatchlook01"
+    {
+      time 1.147223 3.285648
+      param "hatchlook01"
+      event_ramp
+      {
+        0.2640 0.9917
+        1.6006 0.9988
+        1.8806 0.9988
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 2.938889 7.137037
+      param "!player"
+      event_ramp
+      {
+        0.2105 0.2208
+        0.5587 0.6423
+        3.0497 0.6092
+        3.2314 0.4782
+        3.6137 0.2231
+      }
+    }
+  }
+  channel "Move to"
+  {
+    event expression "b_scoff01"
+    {
+      time 2.308089 3.308090
+      param "humans\guard\expressions_guard"
+      param2 "b_scoff01"
+      event_ramp
+      {
+        0.0629 0.5844
+        0.1486 0.9988
+        0.5679 0.5183
+      }
+    }
+    event expression "b_smile01a"
+    {
+      time 2.516666 6.950000
+      param "humans\guard\expressions_guard"
+      param2 "b_smile01a"
+      event_ramp
+      {
+        0.5636 0.9835
+        3.8690 0.9835
+      }
+    }
+    event expression "b_freaked_mouthclosed"
+    {
+      time 4.033334 5.033333
+      param "humans\guard\expressions_guard"
+      param2 "b_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1120 0.1263
+        0.3920 0.4392
+        0.7360 0.1547
+      }
+    }
+    event gesture "g_present"
+    {
+      time 3.283333 6.799999
+      param "g_present"
+      event_ramp
+      {
+        0.4850 0.2267
+        0.7450 0.6800
+        1.3050 0.7922
+        2.2450 0.6706
+        2.8363 0.4864
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.144003
+        "accent" 0.355207
+        "loop" 0.384008
+        "end" 0.480010
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.192308
+        "accent" 0.474359
+        "loop" 0.512821
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event moveto "Moveto hatchlook01"
+    {
+      time 0.083333 1.366667
+      param "hatchlook01"
+      param2 "Walk"
+      distancetotarget 11.00
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 1.553088 3.452295
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.1360 0.1240
+        0.3135 0.3731
+        0.8127 0.4451
+        0.9961 0.3436
+        1.3687 0.1122
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.089027
+        "extreme" 0.195861
+        "loop" 0.516361
+        "end" 0.764731
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "bg_accentup"
+    {
+      time 1.866666 4.300000
+      param "bg_accentup"
+      event_ramp
+      {
+        0.5833 0.4250
+        1.2273 0.3105
+        1.5545 0.1842
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "hg_nod_no"
+    {
+      time 3.386422 5.568961
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.1360 0.1240
+        0.3135 0.3731
+        0.8127 0.4451
+        1.2794 0.3436
+        1.6520 0.1122
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.077470
+        "extreme" 0.170435
+        "loop" 0.449328
+        "end" 0.665455
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "FacialFlex"
+  {
+  }
+  channel "face"
+  {
+    event face "Face hatchlook01"
+    {
+      time 3.288095 6.807143
+      param "!self"
+    }
+    event face "Face hatchlook01"
+    {
+      time 1.371428 3.773810
+      param "hatchlook01"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "ExpressionTool" "2"
+  "RampTool" "40"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

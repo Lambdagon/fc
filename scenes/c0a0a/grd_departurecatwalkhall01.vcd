@@ -1,0 +1,97 @@
+// Choreo version 1
+actor "GRD_DepartureCatwalk"
+{
+  channel "Flex"
+  {
+    event flexanimation "Flex"
+    {
+      time 0.727922 7.285835
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.1838 0.7100
+          0.7897 1.0000
+          1.7530 1.0000
+          2.2721 0.7300
+          2.8530 0.6400
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2197 0.5600
+          0.9364 0.2700
+          2.9364 0.5900
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.9167 0.6400
+          1.4667 1.0000
+          1.8667 0.3500
+          3.3333 0.1000
+        }
+        "chest_rightleft" range 30.0 -30.0 
+        {
+          0.2454 0.5600
+          0.9954 0.8800
+          2.9947 0.8500
+          3.5054 0.6300
+          4.5887 0.5300
+        }
+      }
+    }
+    event gesture "hg_turn_r"
+    {
+      time 0.683216 4.424775
+      param "hg_turn_r"
+      absolutetags playback_time
+      {
+        "apex" 0.154810
+        "extreme" 0.200282
+        "loop" 0.245755
+        "end" 0.554629
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.104167
+        "extreme" 0.208333
+        "loop" 0.312500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "g_scratchhead"
+    {
+      time 5.235027 14.479480
+      param "g_scratchhead"
+      absolutetags playback_time
+      {
+        "apex" 0.044587
+        "accent" 0.054587
+        "loop" 0.111111
+        "end" 0.602410
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "100"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

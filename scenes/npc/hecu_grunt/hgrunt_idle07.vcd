@@ -1,0 +1,38 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 2.088829 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.idle04"
+    {
+      time 0.239999 2.058956
+      param "NPC_hgrunt.idle07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "46"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

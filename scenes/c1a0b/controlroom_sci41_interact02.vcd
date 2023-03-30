@@ -1,0 +1,86 @@
+// Choreo version 1
+actor "Sci41"
+{
+  channel "Voice"
+  {
+    event speak "am.sci41.tardiness01"
+    {
+      time 0.493334 5.991611
+      param "am.sci41.tardiness01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.020000 6.560000
+      param "!player"
+    }
+  }
+  channel "expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 4.121212 6.257576
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2434 0.7048
+        1.9119 0.6718
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.424243 1.863637
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2434 0.7048
+        1.2149 0.6718
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 1.257576 3.651515
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.2500 0.5171
+        0.7333 0.3129
+        2.2321 0.4793
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 3.439394 4.439394
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.2700 0.4144
+        0.7533 0.3518
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "RampTool" "60"
+  "ExpressionTool" "18"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

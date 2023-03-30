@@ -1,0 +1,126 @@
+// Choreo version 1
+event loop "Loop"
+{
+  time 8.047619 -1.000000
+  param "0.000000"
+  loopcount "1"
+}
+actor "Sci12_GmanRoom"
+{
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.080000 7.846667
+      param "!self"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_accentUp"
+    {
+      time 5.453334 7.960318
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.0000 0.3393
+        2.5070 0.3750
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.121328
+        "extreme" 0.296579
+        "loop" 0.539235
+        "end" 0.674042
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "bg_accentFwd"
+    {
+      time 2.093333 5.053333
+      param "bg_accentFwd"
+      absolutetags playback_time
+      {
+        "apex" 0.188501
+        "extreme" 0.371184
+        "loop" 0.531031
+        "end" 0.748307
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "Face"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.103174 7.880952
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "cheek_raiser" combo 
+        {
+          0.3500 0.2100
+          0.8833 0.6700
+          2.1417 0.6900
+          3.0667 0.4600
+          3.8167 0.3200
+          4.8500 0.4400
+          5.6167 0.5300
+          6.1417 0.6600
+          6.8833 0.5100
+          7.3583 0.2800
+        }
+        {
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5500 0.8000
+          1.5833 0.8300
+          2.6750 0.8200
+          3.6917 0.2800
+          4.8083 0.3000
+          6.1083 0.2700
+          6.9167 0.2700
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4500 0.7500
+          1.2417 0.7800
+          1.7917 0.2700
+          2.6500 0.2100
+          3.4167 0.6400
+          3.7417 0.8200
+          4.7333 0.8500
+          6.0250 0.8600
+          6.9000 0.7900
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "84"
+  "RampTool" "20"
+  "ExpressionTool" "24"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

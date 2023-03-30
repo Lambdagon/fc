@@ -1,0 +1,130 @@
+// Choreo version 1
+actor "Sci29_Lab05"
+{
+  channel "Flex"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.054545 5.173484
+      param "!self"
+      event_ramp
+      {
+        0.3222 0.4266
+        0.6111 0.6169
+        3.8361 0.6569
+        4.3805 0.6075
+        4.7805 0.4324
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "g_mid_relaxed_fist_accent"
+    {
+      time 3.855426 5.755557
+      param "g_mid_relaxed_fist_accent"
+      absolutetags playback_time
+      {
+        "apex" 0.181630
+        "accent" 0.240004
+        "loop" 0.444318
+        "end" 0.590259
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.235294
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "headpatposture"
+    {
+      time 3.080556 5.892842
+      param "headpatposture"
+      event_ramp
+      {
+        0.2889 0.2468
+        0.4444 0.3643
+        1.1222 0.4430
+        2.0790 0.3561
+        2.2790 0.2632
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.149198
+        "loop" 0.267523
+        "end" 0.674818
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.294118
+        "loop" 0.470588
+        "end" 0.691176
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_mid_relaxed_fist_accent"
+    {
+      time 2.946979 5.543179
+      param "g_mid_relaxed_fist_accent"
+      absolutetags playback_time
+      {
+        "apex" 0.346154
+        "accent" 0.474359
+        "loop" 0.641026
+        "end" 0.861456
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.235294
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "hg_turnL"
+    {
+      time 5.400000 8.033333
+      param "hg_turnL"
+      event_ramp
+      {
+        0.2653 0.4595
+        0.5583 0.7309
+        1.0042 0.8496
+        1.6250 0.8578
+        2.2194 0.6193
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.192308
+        "extreme" 0.384615
+        "loop" 0.641026
+        "end" 0.769231
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.192308
+        "extreme" 0.384615
+        "loop" 0.641026
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "RampTool" "48"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

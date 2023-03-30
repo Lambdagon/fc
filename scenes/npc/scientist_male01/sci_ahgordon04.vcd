@@ -1,0 +1,128 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.ahgordon04"
+    {
+      time 0.473333 1.734127
+      param "NPC_Scimale.ahgordon04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.545000
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.4993 0.8472
+        0.6670 0.9931
+        1.4757 0.9931
+        1.6227 0.8500
+        2.2874 0.2222
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.493333 2.360000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.5621 0.5405
+        1.2827 0.6385
+      }
+    }
+    event expression "sci_smile00"
+    {
+      time 0.740000 2.460000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_smile00"
+      event_ramp
+      {
+        0.4103 0.8900
+        1.3738 0.9758
+        1.5428 0.7884
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.440000 1.220000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.1765 0.7678
+        0.4412 0.4534
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.060000 2.493333
+      param "bg_accentup"
+      event_ramp
+      {
+        0.2217 0.1233
+        0.4957 0.1935
+        1.2435 0.1233
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.360000 2.666667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5067 0.7100
+          0.6947 0.6000
+          0.9895 0.5300
+          1.3263 0.5300
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "RampTool" "46"
+  "SceneRampTool" "100"
+  "ExpressionTool" "38"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

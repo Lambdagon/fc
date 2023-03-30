@@ -1,0 +1,87 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 3.730769 -1.000000
+  param "noaction"
+}
+actor "player!"
+{
+  channel "Voice"
+  {
+    event speak "player.scifemale.dominate01"
+    {
+      time 0.059943 3.365340
+      param "player.scifemale.dominate01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Browup01"
+    {
+      time -0.120370 1.611111
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.3614 0.4699
+        0.4894 0.9976
+        1.1761 1.0000
+        1.3147 0.3613
+      }
+    }
+    event expression "Sci_fem_slysmileleft"
+    {
+      time 1.842593 4.183049
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_fem_slysmileleft"
+      event_ramp
+      {
+        0.6574 0.9976
+        1.6967 0.9941
+      }
+    }
+    event expression "SciFem_smile01"
+    {
+      time -0.009259 4.226496
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_smile01"
+      event_ramp
+      {
+        0.2332 0.9953
+        2.5554 0.9906
+      }
+    }
+    event expression "SciFem_anger00"
+    {
+      time 0.750000 2.546296
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.3409 0.5643
+        1.5297 0.5773
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

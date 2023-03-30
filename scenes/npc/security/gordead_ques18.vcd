@@ -1,0 +1,132 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 2.866667 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.gordead_ques18"
+    {
+      time 1.157582 2.815360
+      param "NPC_Security.gordead_ques18"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time -0.075406 4.166245
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.6147 0.8472
+        3.2949 0.9957
+        4.0487 0.1585
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "flex91"
+    {
+      time 0.000000 3.954545
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "blink" 
+        {
+          0.7361 0.1500
+          0.8973 0.4700
+          1.0528 0.1600
+          1.3750 0.1300
+          1.6325 0.3300
+          1.9808 0.3500
+          2.1250 0.1300
+          2.8888 0.0000
+          2.9646 0.0000
+        }
+        "inner_raiser" combo 
+        {
+          0.9583 0.0000
+          1.5038 0.0000
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+        }
+        {
+          1.5796 0.5200
+        }
+        "lowerer" combo 
+        {
+        }
+        {
+          0.9583 0.5000
+          1.5038 0.5000
+          1.5796 0.5000
+        }
+        "chin_raiser" 
+        {
+          0.3750 0.4900
+          0.9583 0.2800
+          1.5038 0.4645
+          1.5796 0.4583
+          2.2250 0.0400
+          2.5375 0.0600
+          2.7250 0.1300
+          3.2125 0.2000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4000 0.4900
+          1.0100 0.3900
+          1.2000 0.1900
+          1.6100 0.1900
+          2.1400 0.5100
+          2.6400 0.5100
+          3.3600 0.5100
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3400 0.4900
+          0.9000 0.5200
+          1.2700 0.8000
+          1.4700 0.8000
+          2.0000 0.5500
+          2.9600 0.5100
+          3.1700 0.5100
+          3.4300 0.5100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "140"
+  "RampTool" "22"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

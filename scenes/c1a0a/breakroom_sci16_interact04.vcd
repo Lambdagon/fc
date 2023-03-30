@@ -1,0 +1,83 @@
+// Choreo version 1
+actor "Sci16_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci16.breakroom.canthiswait01"
+    {
+      time 0.308333 2.209104
+      param "am.sci16.breakroom.canthiswait01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "look at gordon"
+    {
+      time -0.066667 3.075000
+      param "!player"
+      event_ramp
+      {
+        0.4640 0.4776
+        0.7000 0.5448
+        1.2152 0.5522
+        2.3923 0.5075
+      }
+    }
+  }
+  channel "faces"
+  {
+    event flexanimation "can this wait type of head bob"
+    {
+      time -0.066667 2.966667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.7823 0.3400
+          1.5889 0.4100
+          1.9889 0.3100
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.7823 0.8000
+          1.3556 0.7700
+          1.6111 0.7000
+          2.0000 0.5900
+        }
+        "inner_raiser" combo 
+        {
+          0.4889 0.8900
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.3889 0.5200
+          1.3556 0.5700
+          1.8778 0.5300
+        }
+        {
+        }
+      }
+    }
+  }
+  channel "gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "128"
+  "RampTool" "66"
+  "ExpressionTool" "18"
+  "GestureTool" "58"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

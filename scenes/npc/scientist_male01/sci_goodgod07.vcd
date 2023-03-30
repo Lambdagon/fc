@@ -1,0 +1,114 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.goodgod07_var01"
+    {
+      time 0.387207 1.585642
+      param "NPC_Scimale.goodgod07_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.050355 2.958685
+      param "!player"
+      event_ramp
+      {
+        0.1047 0.6353
+        0.7100 0.8949
+        2.2308 0.7813
+        2.4808 0.2704
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.134921 2.150794
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2556 0.7414
+        0.4852 0.4014
+        0.7593 0.3577
+        0.9889 0.3365
+        1.3963 0.1842
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.301587 2.404762
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3148 0.3058
+        0.7519 0.1983
+        0.9556 0.1240
+      }
+    }
+    event expression "sci_intrigued"
+    {
+      time 0.460317 1.460317
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_intrigued"
+      event_ramp
+      {
+        0.2444 0.3471
+        0.3889 0.8501
+        0.7185 0.3152
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.103175 2.536509
+      param "bg_accentup"
+      event_ramp
+      {
+        0.2333 0.2220
+        0.4500 0.4675
+        0.9130 0.4050
+        1.4222 0.2656
+        1.7778 0.1464
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "CChoreoView" "84"
+}
+fps 60
+snap off
+ignorePhonemes off

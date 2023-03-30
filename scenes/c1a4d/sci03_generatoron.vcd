@@ -1,0 +1,153 @@
+// Choreo version 1
+actor "SCI03_Generator"
+{
+  channel "Voice"
+  {
+    event speak "bp.sci03.restoredallpower01"
+    {
+      time 0.225000 3.577993
+      param "bp.sci03.restoredallpower01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "bp.sci03.restoredallpower02"
+    {
+      time 4.066667 6.402925
+      param "bp.sci03.restoredallpower02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_hands_on_hips"
+    {
+      time 3.391667 8.358335
+      param "g_hands_on_hips"
+      absolutetags playback_time
+      {
+        "apex" 0.192703
+        "loop" 0.202703
+        "accent" 0.405405
+        "end" 0.810811
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.202703
+        "loop" 0.202703
+        "accent" 0.405405
+        "end" 0.810811
+      }
+      sequenceduration 4.966667
+    }
+    event gesture "kgesture09"
+    {
+      time 1.175000 3.908333
+      param "kgesture09"
+      absolutetags playback_time
+      {
+        "apex" 0.318525
+        "accent" 0.639373
+        "loop" 0.713415
+        "end" 0.777439
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.119048
+        "accent" 0.428571
+        "loop" 0.500000
+        "end" 0.666667
+      }
+      sequenceduration 2.833333
+    }
+    event gesture "g_chestup"
+    {
+      time 3.300000 8.325000
+      param "g_chestup"
+      absolutetags playback_time
+      {
+        "apex" 0.347451
+        "accent" 0.394481
+        "loop" 0.448229
+        "end" 0.812292
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+  }
+  channel "Expression"
+  {
+    event expression "PSmile"
+    {
+      time 0.166667 8.316668
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.1720 1.0000
+        1.2460 0.3459
+        3.3780 1.0000
+        3.6760 0.6466
+        4.1240 0.6165
+        5.5360 0.5714
+        5.8100 0.9248
+        8.1500 0.0000
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event face "Face !player"
+    {
+      time 0.066666 3.608333
+      param "!player"
+    }
+    event lookat "Look at !player"
+    {
+      time 0.075000 4.025001
+      param "!player"
+    }
+    event face "Face Generator"
+    {
+      time 3.716666 5.016667
+      param "!target1"
+      event_ramp
+      {
+        0.5320 1.0000
+        1.3000 1.0000
+      }
+    }
+    event face "Face !player"
+    {
+      time 5.425000 7.375000
+      param "!player"
+      lockbodyfacing
+    }
+    event lookat "Look at !player"
+    {
+      time 5.458333 7.408333
+      param "!player"
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

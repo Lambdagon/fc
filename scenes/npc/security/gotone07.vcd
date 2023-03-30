@@ -1,0 +1,130 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.gotone07"
+    {
+      time 0.547879 2.422097
+      param "NPC_Security.gotone07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.757878 3.246854
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        1.7631 0.8659
+        2.2960 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_browup01"
+    {
+      time 0.273264 0.726597
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1750 0.9976
+      }
+    }
+    event expression "b_smile_sly_lefty_alt01"
+    {
+      time 1.284242 2.830909
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_sly_lefty_alt01"
+      event_ramp
+      {
+        0.0964 0.1913
+        0.1335 0.4734
+        0.2251 0.6635
+        1.1028 0.6116
+        1.3067 0.3649
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 1.105151 1.891818
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.0553 0.3211
+        0.2083 0.5620
+        0.5572 0.5396
+        0.6444 0.4416
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 0.856597 1.509930
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1539 0.2928
+        0.4579 0.3152
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.352690 3.243774
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.8133 0.5400
+          1.0070 0.5800
+          1.2545 1.0000
+          2.1080 1.0000
+          2.4777 0.5500
+        }
+        "smile" 
+        {
+          1.1000 0.1000
+          1.3867 0.2200
+          1.6267 0.2100
+          1.9533 0.3600
+          2.2533 0.3300
+          2.3800 0.1700
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.3467 0.4600
+          1.5267 0.3400
+          1.7867 0.4500
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "88"
+  "RampTool" "46"
+  "SceneRampTool" "100"
+  "ExpressionTool" "30"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

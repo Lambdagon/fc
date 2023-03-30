@@ -1,0 +1,124 @@
+// Choreo version 1
+actor "GRD02"
+{
+  channel "Voice"
+  {
+    event speak "oc.grd02.stairway.seesdeadsci01"
+    {
+      time 1.970834 3.560834
+      param "oc.grd02.stairway.seesdeadsci01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_angry01"
+    {
+      time 1.094694 3.331873
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1563 0.6095
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 0.347543 1.646688
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.2246 0.3817
+        0.9764 0.4675
+        1.0493 0.2367
+      }
+    }
+    event expression "b_buckup"
+    {
+      time 2.774181 4.682301
+      param "humans\guard\expressions_guard"
+      param2 "b_buckup"
+      event_ramp
+      {
+        0.2238 0.5296
+        0.5548 0.9675
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 2.019907 3.881018
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.1690 0.3047
+        0.4429 0.6006
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 1.343982 3.643981
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "SCI15_Truman"
+    {
+      time 0.100926 4.325463
+      param "SCI15_Truman"
+      event_ramp
+      {
+        0.3000 0.6509
+        0.5083 0.9734
+        1.0792 0.9675
+        3.3255 0.8314
+      }
+    }
+  }
+  channel "flex"
+  {
+  }
+  channel "Posture"
+  {
+    event moveto "Moveto SCI15_Truman"
+    {
+      time 0.260417 2.083334
+      param "SCI15_Truman"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "22"
+  "RampTool" "24"
+  "CChoreoView" "64"
+}
+fps 60
+snap off
+ignorePhonemes off

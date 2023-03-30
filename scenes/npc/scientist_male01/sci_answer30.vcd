@@ -1,0 +1,83 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre30"
+    {
+      time 0.446666 1.285510
+      param "NPC_Scimale.answer_pre30"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 2.568557
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        1.8089 0.9931
+        2.1791 0.7183
+        2.3673 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "fa"
+    {
+      time 0.000000 2.500000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.2208 0.6200
+          1.0250 0.9300
+          1.8875 0.6300
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.2833 0.7100
+          1.0625 0.4800
+          1.5500 0.7300
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3005 0.3200
+          0.4220 0.4000
+          0.5363 0.3200
+          0.6363 0.4100
+          0.7505 0.3200
+          0.9231 0.3800
+        }
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "48"
+  "SceneRampTool" "100"
+  "RampTool" "30"
+  "CChoreoView" "136"
+}
+fps 60
+snap off
+ignorePhonemes off

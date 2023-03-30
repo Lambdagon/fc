@@ -1,0 +1,194 @@
+// Choreo version 1
+actor "Kleiner"
+{
+  channel "Voice"
+  {
+    event speak "am.kleiner.welltakeitfromhere01"
+    {
+      time 0.869524 3.406939
+      param "am.kleiner.welltakeitfromhere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.071429 5.071429
+      param "!player"
+      event_ramp
+      {
+        0.2023 0.3518
+        0.4916 0.6045
+        0.8616 0.6647
+        2.4529 0.6553
+        4.0393 0.5419
+        4.5133 0.3329
+      }
+    }
+  }
+  channel "Face AT"
+  {
+    event face "Face !player"
+    {
+      time 1.095238 3.166667
+      param "!player"
+      event_ramp
+      {
+        0.1400 0.1806
+        0.2840 0.3235
+        0.8800 0.4404
+        1.3880 0.4144
+        1.7320 0.2928
+      }
+      lockbodyfacing
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Flex01"
+    {
+      time 0.595238 4.023810
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.0840 0.4900
+          0.1700 0.4900
+          0.3440 0.6500
+          0.5240 0.5900
+          0.7800 0.5100
+          1.6467 0.4900
+        }
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "kgesture11"
+    {
+      time 2.880953 5.538095
+      param "kgesture11"
+      absolutetags playback_time
+      {
+        "apex" 0.261701
+        "accent" 0.427182
+        "loop" 0.490829
+        "end" 0.643580
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.338235
+        "loop" 0.411765
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "kgesture04"
+    {
+      time 1.054167 4.120833
+      param "kgesture04"
+      event_ramp
+      {
+        1.0400 0.3117
+        1.4440 0.9965
+        3.0667 0.9917
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.222826
+        "accent" 0.397490
+        "loop" 0.527473
+        "end" 0.692308
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.109890
+        "accent" 0.417582
+        "loop" 0.527473
+        "end" 0.692308
+      }
+      sequenceduration 3.066667
+    }
+    event gesture "kgesture02"
+    {
+      time -2.500000 -0.033333
+      param "kgesture02"
+      absolutetags playback_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "kgesture02"
+    {
+      time 0.604167 3.763141
+      param "kgesture02"
+      absolutetags playback_time
+      {
+        "apex" 0.096268
+        "accent" 0.192537
+        "loop" 0.524390
+        "end" 0.630081
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123288
+        "accent" 0.246575
+        "loop" 0.452055
+        "end" 0.616438
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "bodyaccentup"
+    {
+      time 0.662480 2.962480
+      param "bodyaccentup"
+      absolutetags playback_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.073529
+        "extreme" 0.132353
+        "loop" 0.470588
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+  }
+  faceposermodel "models\humans\scientist_kliener.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "40"
+  "SceneRampTool" "100"
+  "RampTool" "50"
+  "ExpressionTool" "30"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

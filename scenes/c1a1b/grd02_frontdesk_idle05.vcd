@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Voice"
+  {
+    event speak "uc.grd06.lobby.emergency_idle09"
+    {
+      time 0.405656 2.525565
+      param "uc.grd06.lobby.emergency_idle09"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.grd06.lobby.emergency_idle08"
+    {
+      time 3.738990 5.997675
+      param "uc.grd06.lobby.emergency_idle08"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event firetrigger "Firetrigger 1"
+    {
+      time 3.545455 -1.000000
+      param "1"
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "44"
+}
+fps 60
+snap off
+ignorePhonemes off

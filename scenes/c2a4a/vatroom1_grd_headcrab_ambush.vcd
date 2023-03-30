@@ -1,0 +1,40 @@
+// Choreo version 1
+event stoppoint "FIRE"
+{
+  time 0.743589 -1.000000
+  param "noaction"
+}
+actor "barn_barney"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Security.startle_ohshit02"
+    {
+      time 3.070257 4.020257
+      param "NPC_Security.startle_ohshit02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Security.pain07"
+    {
+      time 0.116922 0.619553
+      param "NPC_Security.pain07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "52"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

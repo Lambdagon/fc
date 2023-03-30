@@ -1,0 +1,62 @@
+// Choreo version 1
+event stoppoint "Fire completion"
+{
+  time 17.775726 -1.000000
+  param "noaction"
+}
+event section "walk to position"
+{
+  time 15.000000 -1.000000
+  param "noaction"
+}
+event stoppoint "Fire Completion"
+{
+  time 4.899999 -1.000000
+  param "noaction"
+}
+actor "balcony_g4"
+{
+  channel "Voice"
+  {
+    event speak "qe.hgrunt01.whatcivviesdoing01"
+    {
+      time 2.736378 4.080664
+      param "NPC_hgrunt.monster01"
+      param2 "VOL_NORM"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Sequences"
+  {
+  }
+  channel "Movement"
+  {
+  }
+  channel "Facing"
+  {
+  }
+  channel "Look At"
+  {
+  }
+  faceposermodel "models\humans\marine.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "14"
+  "RampTool" "34"
+  "CChoreoView" "20"
+}
+fps 60
+snap off
+ignorePhonemes off

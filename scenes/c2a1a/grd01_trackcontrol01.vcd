@@ -1,0 +1,258 @@
+// Choreo version 1
+actor "GRD01_PowerUpControl"
+{
+  channel "Voice"
+  {
+    event speak "pu.grd01.longwaydown01"
+    {
+      time 1.323182 3.804633
+      param "pu.grd01.longwaydown01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown02"
+    {
+      time 4.349570 7.406645
+      param "pu.grd01.longwaydown02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown03"
+    {
+      time 8.037477 10.037477
+      param "pu.grd01.longwaydown03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown04"
+    {
+      time 10.230808 14.696070
+      param "pu.grd01.longwaydown04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown05"
+    {
+      time 15.515254 17.110628
+      param "pu.grd01.longwaydown05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown06"
+    {
+      time 17.644142 20.144142
+      param "pu.grd01.longwaydown06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.longwaydown07"
+    {
+      time 20.522930 23.939325
+      param "pu.grd01.longwaydown07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.startled01"
+    {
+      time 0.363636 0.834929
+      param "pu.grd01.startled01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.062424 6.666668
+      param "!player"
+      event_ramp
+      {
+        0.1860 0.1935
+        0.3020 0.6344
+        0.4220 0.1075
+        0.5880 1.0000
+        1.2840 0.1183
+        1.4480 0.0645
+        3.2600 0.0000
+        3.5677 0.7419
+        5.1642 0.8172
+        5.7862 0.7742
+      }
+    }
+    event lookat "Look at !target3"
+    {
+      time 6.824244 8.611111
+      param "!target3"
+      event_ramp
+      {
+        0.7960 0.8495
+        1.2872 0.6344
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 19.558586 26.457296
+      param "!self"
+    }
+    event lookat "Look at !player"
+    {
+      time 7.980810 12.291922
+      param "!player"
+      event_ramp
+      {
+        0.3120 0.8145
+        3.9000 0.7258
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 14.608588 18.397478
+      param "!player"
+    }
+    event lookat "Look at train"
+    {
+      time 11.787880 14.848487
+      param "!target6"
+    }
+    event lookat "Look at !self"
+    {
+      time 6.181818 7.454545
+      param "!self"
+      event_ramp
+      {
+        0.3380 0.9677
+        0.6799 1.0000
+      }
+    }
+  }
+  channel "Animation"
+  {
+    event firetrigger "Aim gun"
+    {
+      time 0.621212 -1.000000
+      param "1"
+    }
+    event gesture "hg_turn_l"
+    {
+      time 11.909091 16.012121
+      param "hg_turn_l"
+      absolutetags playback_time
+      {
+        "apex" 0.041467
+        "extreme" 0.082933
+        "loop" 0.124400
+        "end" 0.712177
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.104167
+        "extreme" 0.208333
+        "loop" 0.312500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "hg_nod_left"
+    {
+      time 22.636362 23.936361
+      param "hg_nod_left"
+      event_ramp
+      {
+        0.0100 0.2254
+        1.2860 0.1965
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+  }
+  channel "Expression"
+  {
+    event expression "common_expressions/Miserable"
+    {
+      time 1.119191 14.818183
+      param "common_expressions"
+      param2 "Miserable"
+      event_ramp
+      {
+        0.2380 0.9140
+      }
+    }
+    event expression "common_expressions/Pondering"
+    {
+      time 9.761618 16.950506
+      param "common_expressions"
+      param2 "Pondering"
+    }
+    event expression "b_afraid02"
+    {
+      time 0.257576 1.257576
+      param "common_expressions"
+      param2 "Freaked"
+      event_ramp
+      {
+        0.3120 0.5484
+        0.7700 0.4839
+      }
+    }
+    event expression "b_wincing02"
+    {
+      time 1.909091 3.545455
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+      event_ramp
+      {
+        0.4000 1.0000
+        0.8380 1.0000
+        1.1540 0.1156
+      }
+    }
+    event expression "b_huh01a"
+    {
+      time 0.212121 1.212121
+      param "humans\guard\expressions_guard"
+      param2 "b_huh01a"
+      event_ramp
+      {
+        0.2780 0.6936
+        0.7840 0.6647
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "24"
+}
+fps 60
+snap off
+ignorePhonemes off

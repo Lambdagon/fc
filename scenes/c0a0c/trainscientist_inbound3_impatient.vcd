@@ -1,0 +1,91 @@
+// Choreo version 1
+actor "SCI09_NetworkRoom"
+{
+  channel "Look"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.159420 16.455315
+      param "!self"
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 0.228116 21.478420
+      param "g_Pacer_ArmsCrossed"
+      absolutetags playback_time
+      {
+        "apex" 0.059997
+        "accent" 0.104313
+        "loop" 0.928105
+        "end" 0.959477
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+  }
+  channel "Head"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.557568 16.547504
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          1.5667 0.1500
+          2.8167 0.2600
+          3.8000 0.3400
+          4.7500 0.1900
+          6.1333 0.1200
+          6.8167 0.3600
+          7.8833 0.7400
+          9.9000 0.7300
+          11.9167 0.8100
+          14.3833 0.8000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8500 0.2500
+          1.9167 0.2200
+          2.8333 0.2200
+          3.2167 0.0900
+          4.3500 0.2200
+          5.2333 0.2100
+          6.3000 0.2000
+          7.0167 0.3000
+          8.4667 0.3500
+          9.0167 0.3200
+          10.2333 0.4700
+          10.8000 0.5300
+          12.4000 0.5300
+          13.3500 0.4500
+          13.9667 0.3900
+          14.5333 0.3400
+          15.5000 0.3800
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "ExpressionTool" "12"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

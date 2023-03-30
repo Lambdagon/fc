@@ -1,0 +1,194 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.zombie03"
+    {
+      time 0.660834 3.238068
+      param "NPC_Scifemale.zombie03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time -0.034584 1.229167
+      param "!enemy"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        0.7509 0.9931
+        0.8979 0.8403
+        1.0862 0.2222
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.642499 1.916667
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.2220 0.8472
+        0.3897 1.0000
+        0.7613 0.9931
+        0.9083 0.8403
+        1.0966 0.2222
+      }
+    }
+    event lookat "Look at !enemy"
+    {
+      time 1.746666 4.875000
+      param "!enemy"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        2.6155 0.9931
+        2.7625 0.8403
+        2.9508 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentUp"
+    {
+      time 0.156250 2.589583
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.2909 0.2621
+        0.6309 0.7131
+        1.2145 0.2633
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "broadsweepdown"
+    {
+      time 1.270834 3.237500
+      param "broadsweepdown"
+      absolutetags playback_time
+      {
+        "apex" 0.310345
+        "accent" 0.500000
+        "loop" 0.586207
+        "end" 0.655172
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.310345
+        "accent" 0.500000
+        "loop" 0.586207
+        "end" 0.655172
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "urgenthandsweep"
+    {
+      time 0.072916 2.539583
+      param "urgenthandsweep"
+      absolutetags playback_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.547945
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.547945
+        "end" 0.616438
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Sci_Fem_afraid_extreme00"
+    {
+      time 0.614583 1.614583
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid_extreme00"
+      event_ramp
+      {
+        0.2036 0.4191
+        0.3200 0.3707
+        0.5327 0.6706
+      }
+    }
+    event expression "SciFem_wince"
+    {
+      time 0.458333 2.364583
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_wince"
+      event_ramp
+      {
+        0.2073 0.4392
+        0.7836 0.4109
+        1.4681 0.8512
+      }
+    }
+    event expression "SciFem_huhmild"
+    {
+      time 1.958333 3.052083
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_huhmild"
+      event_ramp
+      {
+        0.1418 0.3648
+        0.3309 0.8961
+        0.8273 0.5667
+      }
+    }
+    event expression "Sci_Fem_afraid02"
+    {
+      time 2.510417 3.510417
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "Sci_Fem_afraid02"
+      event_ramp
+      {
+        0.1855 0.3636
+        0.3891 0.4557
+        0.7545 0.4144
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "110"
+  "SceneRampTool" "100"
+  "ExpressionTool" "30"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

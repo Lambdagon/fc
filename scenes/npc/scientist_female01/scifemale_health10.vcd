@@ -1,0 +1,119 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.health10"
+    {
+      time 0.442084 2.357481
+      param "NPC_Scifemale.health10"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.027916 3.218750
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        2.6780 0.9931
+        2.8250 0.8403
+        3.0133 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "SciFem_Browup01"
+    {
+      time 0.135417 2.177083
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_Browup01"
+      event_ramp
+      {
+        0.2143 0.3846
+        0.4381 0.6923
+        0.6143 0.6272
+        0.9190 0.3905
+      }
+    }
+    event expression "SciFem_sly01"
+    {
+      time 0.364583 2.885417
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_sly01"
+      event_ramp
+      {
+        0.4000 0.3166
+        0.9286 0.4379
+        1.7127 0.4290
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "eyes"
+    {
+      time 0.114584 3.291667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3643 0.5000
+          0.7929 0.5400
+          1.3643 0.5400
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5429 0.6100
+          0.9500 0.5100
+          1.4143 0.6200
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3500 0.4700
+          0.6000 0.5800
+          0.7786 0.4700
+          1.3786 0.3800
+          1.9286 0.4000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.5571 0.4700
+          0.6000 0.4700
+          1.3929 0.5700
+          1.7429 0.6000
+          2.0714 0.5800
+          2.2429 0.5500
+          2.5643 0.4900
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "RampTool" "36"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

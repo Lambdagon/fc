@@ -1,0 +1,43 @@
+// Choreo version 1
+event loop "Loop Death"
+{
+  time 6.500000 -1.000000
+  param "4.500000"
+  loopcount "-1"
+}
+actor "rusty_the_zombiegrd"
+{
+  channel "gestures"
+  {
+    event gesture "playdead02_pose"
+    {
+      time 0.540099 7.064158
+      param "playdead02_pose"
+      event_ramp
+      {
+        0.2565 1.0000
+        6.5241 1.0000
+      }
+      sequenceduration 0.033333
+    }
+    event gesture "flinch_head"
+    {
+      time 0.190476 0.871429
+      param "flinch_head"
+      sequenceduration 1.133333
+    }
+  }
+  faceposermodel "models\zombies\zombie_guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "10"
+  "ExpressionTool" "24"
+  "RampTool" "50"
+  "CChoreoView" "28"
+}
+fps 60
+snap off
+ignorePhonemes off

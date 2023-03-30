@@ -1,0 +1,75 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 1.426667 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.cover07_var01"
+    {
+      time 0.300001 1.348504
+      param "NPC_hgrunt.cover07_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Tough Panic1"
+    {
+      time 0.146667 1.146667
+      param "humans\marine\marine"
+      param2 "Tough Panic1"
+      event_ramp
+      {
+        0.1302 0.6818
+        0.9209 0.6585
+      }
+    }
+    event expression "Tough Grin"
+    {
+      time 0.600000 1.600000
+      param "humans\marine\marine"
+      param2 "Tough Grin"
+      event_ramp
+      {
+        0.1283 0.6989
+        0.9152 0.7124
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Yell"
+    {
+      time 0.080000 1.919999
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.1236 0.8039
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "92"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

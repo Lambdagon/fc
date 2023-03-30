@@ -1,0 +1,116 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Voice"
+  {
+    event speak "st.grd02.hivehand.examination05"
+    {
+      time 0.166666 3.463219
+      param "st.grd02.hivehand.examination05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "grin"
+    {
+      time 0.073333 4.293333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.2900 0.0000
+          0.5520 0.6700
+          0.9600 0.6700
+          3.5400 0.6200
+          3.8100 0.6700
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.2660 0.0000
+          0.5860 0.1700
+          0.9660 0.1800
+          2.2180 0.1400
+          2.2860 0.1500
+          2.3920 0.3700
+          2.9860 0.1400
+          3.2100 0.1300
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          3.2000 0.0000
+          3.3480 0.9000
+          3.9440 0.9300
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          2.3040 0.5000
+          2.3360 0.5000
+          2.4400 0.7100
+          2.9700 0.5500
+          3.0280 0.5500
+          3.2880 0.5000
+          3.3500 0.5000
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Gesture13"
+    {
+      time 0.593334 4.306667
+      param "Gesture13"
+      absolutetags playback_time
+      {
+        "in" 0.109259
+        "loop" 0.382406
+        "end" 0.777379
+        "out" 0.906643
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.171429
+        "loop" 0.600000
+        "end" 0.685714
+        "out" 0.857143
+      }
+      sequenceduration 2.366667
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at Hivehand"
+    {
+      time 0.033333 0.973333
+      param "!player"
+      pitch "-30"
+    }
+    event lookat "Look at !player"
+    {
+      time 1.000000 4.293333
+      param "!player"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

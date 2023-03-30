@@ -1,0 +1,125 @@
+// Choreo version 1
+actor "SCI17_Locker"
+{
+  channel "Voice"
+  {
+    event speak "am.sci17.labcoat01"
+    {
+      time 0.308205 2.598454
+      param "am.sci17.labcoat01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look at "
+  {
+    event lookat "Look at !player"
+    {
+      time 0.038461 3.397436
+      param "!player"
+      event_ramp
+      {
+        0.4792 0.6014
+        1.0417 0.7391
+        1.8167 0.7536
+        2.4625 0.7319
+        2.9125 0.5870
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentfwd"
+    {
+      time 0.282052 2.715385
+      param "bg_accentfwd"
+      event_ramp
+      {
+        0.4417 0.6706
+        0.8917 0.6470
+        1.3125 0.3684
+        1.6375 0.2456
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "extreme" 0.361111
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  channel "expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.534271 1.490424
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1615 0.6907
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 0.593600 2.010266
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.0756 0.6316
+        0.1346 0.7556
+        0.4164 0.5643
+        1.0937 0.2645
+      }
+    }
+    event expression "sci_sad00"
+    {
+      time 2.039255 3.391678
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sad00"
+      event_ramp
+      {
+        0.2309 0.6777
+        0.7550 0.7048
+        1.1900 0.6694
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.224304 0.755913
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.0976 0.6753
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "52"
+  "RampTool" "48"
+  "SceneRampTool" "100"
+  "ExpressionTool" "18"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

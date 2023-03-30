@@ -1,0 +1,178 @@
+// Choreo version 1
+actor "SCI08"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci08.mincingwords02"
+    {
+      time 3.249934 6.680614
+      param "lc.sci08.mincingwords02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "lc.sci08.mincingwords01"
+    {
+      time 0.765146 3.015146
+      param "lc.sci08.mincingwords01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.055042 8.444047
+      param "!player"
+      event_ramp
+      {
+        0.4125 0.3566
+        0.8000 0.4911
+        2.0000 0.5797
+        5.1944 0.5762
+        6.7569 0.5419
+        7.5069 0.4510
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.450980 4.779858
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.3333 0.5100
+          0.5444 0.5100
+          0.7156 0.5100
+          1.0943 0.5100
+          1.3438 0.4300
+          1.5683 0.5300
+          1.8749 0.5100
+          2.2762 0.5100
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3500 0.5600
+          0.4740 0.5900
+          0.6660 0.5800
+          0.8440 0.4300
+          1.0800 0.4900
+          2.0714 0.5100
+          2.8048 0.5500
+          3.0143 0.6800
+          3.3857 0.5400
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.3143 0.4800
+          0.5571 0.3900
+          0.8238 0.5300
+          1.0857 0.4100
+          1.2952 0.4300
+          1.5762 0.4300
+          1.8048 0.4700
+          2.0762 0.4700
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.3000 0.4300
+          1.5190 0.4500
+          1.9238 0.4800
+          2.5333 0.4900
+          2.8381 0.4900
+        }
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_browup"
+    {
+      time 0.712121 1.712121
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.1102 0.1936
+        0.1966 0.6021
+        0.4610 0.2916
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.090909 2.090909
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1475 0.2822
+        0.4051 0.3684
+        0.7949 0.2999
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 5.257576 7.712121
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1475 0.2822
+        0.2539 0.3908
+        0.4500 0.4711
+        0.8786 0.5195
+        1.3714 0.4994
+        1.9214 0.5006
+        2.1444 0.4392
+        2.2494 0.2999
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 3.000000 5.229167
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.3333 0.3554
+        0.5167 0.5750
+        0.8778 0.6517
+        1.4833 0.5738
+        1.7222 0.3778
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 3.729167 4.854167
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2520 0.3353
+        0.5444 0.4038
+        0.8240 0.3353
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "42"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

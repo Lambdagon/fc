@@ -1,0 +1,93 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 15.263891 -1.000000
+  param "noaction"
+}
+event loop "look at player like a creep"
+{
+  time 14.666668 -1.000000
+  param "12.000000"
+  loopcount "-1"
+}
+actor "Gman"
+{
+  channel "Flex"
+  {
+  }
+  channel "Head"
+  {
+    event gesture "gesture_brushsuit_closeup"
+    {
+      time 8.000002 10.200002
+      param "gesture_brushsuit_closeup"
+      absolutetags playback_time
+      {
+        "apex" 0.123077
+        "accent" 0.615385
+        "loop" 0.759231
+        "end" 0.769231
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.123077
+        "accent" 0.615385
+        "loop" 0.769231
+        "end" 0.769231
+      }
+      sequenceduration 2.200000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time -0.027778 5.356350
+      param "!player"
+      event_ramp
+      {
+        0.1906 0.4851
+        4.4949 0.4827
+      }
+    }
+    event lookat "Look at c2a1a_garg"
+    {
+      time 4.319769 10.605484
+      param "c2a1a_garg"
+      event_ramp
+      {
+        1.3614 0.3452
+        5.5857 0.3452
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 9.402779 16.236906
+      param "!player"
+      event_ramp
+      {
+        0.1906 0.3751
+        1.8000 0.4189
+        2.3167 0.4189
+        2.9333 0.4189
+        3.4667 0.4189
+        3.7667 0.4189
+        4.3833 0.4189
+        5.9449 0.3797
+      }
+    }
+  }
+  faceposermodel "models\gman.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+  "RampTool" "12"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

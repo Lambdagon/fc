@@ -1,0 +1,57 @@
+criterion IsAP1 "map" "bm_c2a3a" required
+criterion IsAP2 "map" "bm_c2a3b" required
+
+//========================================================
+//ICTHYOSAUR VIEWING
+//========================================================
+criterion IsSci1ViewingRoom name "SCI01_Icthy" required
+criterion IsIcthyosaurDead "IcthyosaurDead" "1" required
+criterion IsIcthyosaurAlive "IcthyosaurDead" "0" required
+
+response Sci1_Viewing_Idle
+{
+   norepeat
+   scene "scenes/c2a3a/sci01_challengerdeep_idle01.vcd" defaultdelay
+   scene "scenes/c2a3a/sci01_challengerdeep_idle02.vcd" defaultdelay
+   scene "scenes/c2a3a/sci01_challengerdeep_idle03.vcd" defaultdelay
+}
+
+rule Sci1_Viewing_Idle
+{
+   criteria TLK_VITALIDLE IsSci1ViewingRoom IsPlayerClose IsAP1 SeenByPlayer IsIcthyosaurAlive
+   response Sci1_Viewing_Idle
+}
+
+response Sci1_Viewing_Idle_FishDead
+{
+   sequential
+   norepeat
+   scene "scenes/c2a3a/sci01_ichthydead02.vcd" defaultdelay
+   scene "scenes/c2a3a/sci01_ichthydead03.vcd" defaultdelay
+}
+
+rule Sci1_Viewing_Idle_FishDead
+{
+   criteria TLK_VITALIDLE IsSci1ViewingRoom IsPlayerClose IsAP1 SeenByPlayer IsIcthyosaurDead
+   response Sci1_Viewing_Idle_FishDead
+}
+
+//========================================================
+//FREEZER ROOM
+//========================================================
+criterion IsSci01FreezerRoom name "Sci02_Cryo" required
+
+
+response Sci01_Freezer_Idle
+{
+   norepeat
+   scene "scenes/c2a3b/sci02_trackingdevices_idle01.vcd" defaultdelay
+   scene "scenes/c2a3b/sci02_trackingdevices_idle02.vcd" defaultdelay
+   scene "scenes/c2a3b/sci02_trackingdevices_idle03.vcd" defaultdelay
+}
+
+rule Sci01_Freezer_Idle
+{
+   criteria TLK_VITALIDLE IsSci01FreezerRoom IsPlayerClose IsAP2 SeenByPlayer
+   response Sci01_Freezer_Idle
+}

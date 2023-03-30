@@ -1,0 +1,204 @@
+// Choreo version 1
+actor "GRD06_DevHall"
+{
+  channel "Sound"
+  {
+    event speak "am.grd06.gotallday02"
+    {
+      time 0.384058 4.533695
+      param "am.grd06.gotallday02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "G_shrug"
+    {
+      time 2.487639 5.541262
+      param "G_shrug"
+      event_ramp
+      {
+        0.1357 0.5006
+        0.5929 0.7084
+        2.7357 0.7084
+      }
+      absolutetags playback_time
+      {
+        "in" 0.091694
+        "apex" 0.239715
+        "accent" 0.331877
+        "loop" 0.467641
+        "end" 0.570470
+        "extreme" 0.713906
+        "out" 0.875000
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.000000
+        "apex" 0.160000
+        "accent" 0.240000
+        "loop" 0.320000
+        "end" 0.440000
+        "extreme" 0.628571
+        "out" 1.034483
+      }
+      sequenceduration 1.700000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.225508 5.608696
+      param "!player"
+      event_ramp
+      {
+        0.5222 0.1806
+        1.0000 0.8541
+        1.5033 1.0000
+        3.8942 1.0000
+        4.3831 0.8680
+        4.8831 0.2014
+      }
+    }
+  }
+  channel "Face"
+  {
+    event face "Face !player"
+    {
+      time 0.080580 1.782609
+      param "!player"
+      event_ramp
+      {
+        0.5067 0.1875
+        1.0000 0.8403
+        1.5000 1.0000
+        1.7020 1.0000
+      }
+    }
+    event face "Face !self"
+    {
+      time 0.471015 5.557971
+      param "!self"
+    }
+    event face "Face !player"
+    {
+      time 2.790725 4.492754
+      param "!player"
+      event_ramp
+      {
+        0.5067 0.1875
+        1.0000 0.8403
+        1.5000 1.0000
+        1.7020 1.0000
+      }
+    }
+  }
+  channel "Face Flexes"
+  {
+    event flexanimation "Grab a cold one smile"
+    {
+      time 2.784749 5.601779
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "cheek_raiser" combo 
+        {
+          0.3750 0.1500
+          0.8194 0.3400
+          1.5417 0.3800
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          1.1431 0.3500
+          1.8083 0.3800
+        }
+        {
+          1.1431 0.5000
+        }
+        "smile" 
+        {
+          1.1431 0.3800
+          1.7861 0.4000
+          2.0306 0.2300
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3750 0.4800
+          0.6639 0.3100
+          1.1861 0.2800
+          1.8306 0.3800
+          2.1861 0.4800
+        }
+        "move_forwardback" range 6.0 -10.0 
+        {
+        }
+      }
+    }
+    event flexanimation "put it this way"
+    {
+      time 0.022727 2.774621
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.6750 0.4800
+          1.6833 0.3500
+          2.2333 0.3500
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.5167 0.3300
+          0.9083 0.2100
+          1.2833 0.3700
+          1.7750 0.3800
+          2.1250 0.3900
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3000 0.4900
+          0.5667 0.4900
+          1.1833 0.5000
+          1.5583 0.5900
+          1.8917 0.7300
+          2.2333 0.7100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.0250 0.4800
+          1.4333 0.4900
+          1.7750 0.5800
+          2.0167 0.5800
+          2.2000 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.8917 0.5000
+          1.5167 0.4400
+          1.6667 0.3100
+          1.9417 0.2600
+          2.1417 0.3800
+          2.2500 0.4400
+          2.3500 0.4500
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "68"
+  "RampTool" "28"
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

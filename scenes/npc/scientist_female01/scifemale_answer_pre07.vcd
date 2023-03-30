@@ -1,0 +1,71 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.answer_pre07"
+    {
+      time 0.633180 1.766922
+      param "NPC_Scifemale.answer_pre07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.042963 3.168489
+      param "!friend"
+      event_ramp
+      {
+        0.2154 0.4142
+        0.5600 0.8610
+        2.2259 0.9408
+        2.6020 0.4704
+        2.8453 0.1361
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "humans\scientist_female\expresssions_scientist_female/SciFem_anger00"
+    {
+      time 0.316883 2.410534
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.5300 0.4675
+        1.5900 0.5030
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.142567 2.608949
+      param ""
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "16"
+  "SceneRampTool" "100"
+  "RampTool" "20"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off

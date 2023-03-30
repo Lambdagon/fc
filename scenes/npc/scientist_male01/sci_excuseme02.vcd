@@ -1,0 +1,58 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.excuseme02"
+    {
+      time 0.200000 1.214172
+      param "NPC_Scimale.excuseme02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 1.606666
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.0137 0.9931
+        1.1608 0.8403
+        1.3490 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.060000 1.600000
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.1412 0.5854
+        1.1618 0.6829
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "68"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,125 @@
+// Choreo version 1
+actor "Eli"
+{
+  channel "Voice"
+  {
+    event speak "uc.eli.idle.someplacesafe01"
+    {
+      time 0.126667 2.626667
+      param "uc.eli.idle.someplacesafe01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "uc.eli.idle.someplacesafe02"
+    {
+      time 2.946667 4.483175
+      param "uc.eli.idle.someplacesafe02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.129629 5.833333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "inner_raiser" combo 
+        {
+          0.3140 0.5700
+          0.5200 0.9900
+          1.2780 1.0000
+          1.4800 0.4600
+          1.7560 0.4900
+          2.0420 0.3200
+          3.0588 0.1800
+          4.0765 0.8600
+          4.7824 0.7700
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.3140 0.5700
+          0.5200 0.9900
+          1.2780 1.0000
+          1.4800 0.4600
+          1.7560 0.4900
+          2.0420 0.3200
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3700 0.6600
+          0.7600 0.5200
+          0.9860 0.7500
+          1.5240 0.7200
+          1.8740 0.6900
+          2.1960 0.5500
+          2.8800 0.5800
+          3.2160 0.5800
+          3.5400 0.2000
+          3.9720 0.1800
+        }
+      }
+    }
+    event flexanimation "Eyes Down"
+    {
+      time 3.444444 5.500000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.0360 0.0000
+          2.0176 -0.0000
+        }
+      }
+    }
+    event lookat "Look at Kleiner"
+    {
+      time 1.592593 4.129630
+      param "Kleiner"
+      event_ramp
+      {
+        0.1720 0.4634
+        0.4540 0.8476
+        0.6500 0.8963
+        1.9153 0.9146
+        2.2473 0.7988
+        2.3933 0.5671
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 0.111111 1.814815
+      param "!player"
+      event_ramp
+      {
+        0.1720 0.4634
+        0.4540 0.8476
+        0.6500 0.8963
+        1.0820 0.9146
+        1.4240 0.6586
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist_eli.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "34"
+  "CChoreoView" "28"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,193 @@
+// Choreo version 1
+actor "c2a5f_barney"
+{
+  channel "Voice"
+  {
+    event speak "st.grd03.lockup.idle.stickaroundhere01"
+    {
+      time 0.813016 2.013016
+      param "st.grd03.lockup.idle.stickaroundhere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd03.lockup.idle.stickaroundhere02"
+    {
+      time 2.396349 4.561088
+      param "st.grd03.lockup.idle.stickaroundhere02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "st.grd03.lockup.idle.stickaroundhere03"
+    {
+      time 4.988016 7.364683
+      param "st.grd03.lockup.idle.stickaroundhere03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 4.410120 6.743453
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.1716 0.7768
+        0.6728 0.4344
+        1.6947 0.0931
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "Gesture12"
+    {
+      time 2.317725 4.617724
+      param "Gesture12"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.264706
+        "loop" 0.367647
+        "end" 0.514706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at Player"
+    {
+      time 0.268254 4.603770
+      param "!player"
+      event_ramp
+      {
+        0.3235 0.3723
+        0.6225 0.4699
+        3.2046 0.5218
+        3.5764 0.4864
+        4.0022 0.3718
+      }
+    }
+    event lookat "Look at Player"
+    {
+      time 6.407143 10.742659
+      param "!player"
+      event_ramp
+      {
+        0.3235 0.3723
+        0.6225 0.4699
+        3.2046 0.5218
+        3.5764 0.4864
+        4.0022 0.3718
+      }
+    }
+  }
+  channel "Move"
+  {
+    event expression "b_smile_sly_lefty"
+    {
+      time 1.174476 3.364952
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_sly_lefty"
+      event_ramp
+      {
+        0.2921 0.5691
+        0.6816 0.8760
+        1.4079 0.6246
+      }
+    }
+    event expression "b_smile_subtle01"
+    {
+      time 0.757809 3.519714
+      param "humans\guard\expressions_guard"
+      param2 "b_smile_subtle01"
+      event_ramp
+      {
+        0.4711 0.9634
+        2.4274 0.9799
+      }
+    }
+    event lookat "Look at motherlode_hivehandgrd_look01"
+    {
+      time 4.576786 7.211706
+      param "motherlode_hivehandgrd_look01"
+      event_ramp
+      {
+        0.3894 0.6635
+        2.0569 0.5943
+      }
+    }
+    event expression "b_angry01"
+    {
+      time 5.093056 6.093056
+      param "humans\guard\expressions_guard"
+      param2 "b_angry01"
+      event_ramp
+      {
+        0.1160 0.6563
+        0.8420 0.6253
+      }
+    }
+    event expression "b_browup01"
+    {
+      time 4.691409 5.233076
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.0640 0.6730
+        0.4630 0.6337
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "GRD02_HiveHand"
+{
+  channel "VOID"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "ExpressionTool" "56"
+  "RampTool" "76"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

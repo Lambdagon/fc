@@ -1,0 +1,113 @@
+// Choreo version 1
+actor "GRD01_PowerUpControl"
+{
+  channel "Animation"
+  {
+    event sequence "PU_GRD_Slide_Up_Wall"
+    {
+      time 0.800000 5.966667
+      param "PU_GRD_Slide_Up_Wall"
+      active 0
+      fixedlength
+    }
+    event sequence "PU_GRD_Wall_Lean_Idle"
+    {
+      time -0.270834 1.202500
+      param "PU_GRD_Wall_Lean_Idle"
+      active 0
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 4.800318 7.200318
+      param "!player"
+      event_ramp
+      {
+        0.2320 0.4839
+        1.8369 0.4624
+      }
+    }
+    event lookat "Look at !self"
+    {
+      time 0.031746 4.968254
+      param "!self"
+    }
+  }
+  channel "Voice"
+  {
+    event speak "pu.grd01.nevergonnamakeit01"
+    {
+      time 0.126667 2.675669
+      param "pu.grd01.nevergonnamakeit01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "pu.grd01.nevergonnamakeit02"
+    {
+      time 5.000000 6.498504
+      param "pu.grd01.nevergonnamakeit02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "stand up"
+    {
+      time 0.800000 -1.000000
+      param "1"
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "b_wincing02"
+    {
+      time 0.603175 7.079365
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+      event_ramp
+      {
+        0.1820 1.0000
+        0.8220 1.0000
+        1.4820 0.1935
+        2.2640 0.0000
+        2.9760 0.9462
+        4.3839 0.9570
+        4.9679 0.0323
+      }
+    }
+    event expression "b_sad00"
+    {
+      time 0.023810 7.246031
+      param "humans\guard\expressions_guard"
+      param2 "b_sad00"
+      event_ramp
+      {
+        0.1880 0.8387
+        6.8856 0.7419
+      }
+    }
+  }
+  channel "Gestures"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "40"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,66 @@
+// Choreo version 1
+actor "sci39_Ionization"
+{
+  channel "wav"
+  {
+    event speak "am.sci38.stabilize01"
+    {
+      time 5.361945 10.135687
+      param "am.sci38.stabilize01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gesture"
+  {
+  }
+  channel "look"
+  {
+    event lookat "player"
+    {
+      time 5.075278 9.568611
+      param "!player"
+    }
+  }
+  channel "gesture2"
+  {
+  }
+}
+
+actor "sci38_Ionization"
+{
+  channel "wav"
+  {
+    event speak "am.sci39.cyclotron01"
+    {
+      time 0.581944 4.918202
+      param "am.sci39.cyclotron01"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at sci37_Ionization"
+    {
+      time 0.083332 4.513888
+      param "sci37_Ionization"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "32"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

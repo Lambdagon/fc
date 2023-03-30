@@ -1,0 +1,109 @@
+// Choreo version 1
+event stoppoint "Complete"
+{
+  time 7.846666 -1.000000
+  param "noaction"
+}
+actor "OAR_civilian_hgrunt1"
+{
+  channel "Voice"
+  {
+    event speak "oar.hgrunt03.didntsignon01"
+    {
+      time 0.161707 1.909235
+      param "oar.hgrunt03.didntsignon01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt03.monsthellyeah01"
+    {
+      time 2.155093 4.631306
+      param "oar.hgrunt03.monsthellyeah01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt03.damnoperation01"
+    {
+      time 5.419642 7.639007
+      param "oar.hgrunt03.damnoperation01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Look"
+  {
+    event lookat "look at hgrunt2"
+    {
+      time 0.039989 7.978261
+      param "OAR_civilian_hgrunt2"
+    }
+  }
+  channel "Face"
+  {
+    event face "Look at hgrunt2"
+    {
+      time 0.026667 8.000000
+      param "OAR_civilian_hgrunt2"
+      event_ramp
+      {
+        1.7400 0.8117
+        3.7800 1.0000
+        4.9345 0.9870
+        5.2182 0.4026
+        5.8745 0.3766
+        6.0200 0.9805
+        7.4891 1.0000
+        7.7636 0.7013
+      }
+      lockbodyfacing
+    }
+  }
+  channel "Trigger"
+  {
+    event firetrigger "Fire Corpse_Drop"
+    {
+      time 5.120370 -1.000000
+      param "1"
+    }
+  }
+}
+
+actor "OAR_civilian_hgrunt2"
+{
+  channel "Look"
+  {
+    event lookat "look at hgrunt1"
+    {
+      time 0.030864 8.808641
+      param "OAR_civilian_hgrunt1"
+      event_ramp
+      {
+        0.2182 1.0000
+        7.5088 1.0000
+        8.0727 0.7532
+        8.4818 0.1364
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "8"
+  "RampTool" "22"
+  "CChoreoView" "12"
+}
+fps 60
+snap off
+ignorePhonemes off

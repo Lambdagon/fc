@@ -1,0 +1,148 @@
+// Choreo version 1
+actor "SCI01_Icthy"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scimale.lookoutfm01_var01"
+    {
+      time 1.458333 2.375453
+      param "NPC_Scimale.lookoutfm01_var01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Scimale.lookoutfm01_var01"
+    {
+      time 2.722222 3.333537
+      param "NPC_Scimale.watchout02"
+      event_ramp
+      {
+        0.2054 0.6938
+        0.4286 0.7625
+      }
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "NPC_Scimale.no03"
+    {
+      time 3.491708 4.391708
+      param "NPC_Scimale.no03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 0.986112 3.319445
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.3250 0.9891
+        0.8714 0.1844
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event firetrigger "1- pause scene for final rope snap, then continue"
+    {
+      time 3.350003 -1.000000
+      param "1"
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.986112 4.973485
+      param "!player"
+      event_ramp
+      {
+        0.8500 0.7406
+        3.2689 0.7406
+      }
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move"
+  {
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.986111 1.986111
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.3554 0.8813
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 2.333334 3.320834
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3875 0.8844
+        0.5086 0.1578
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.166667 2.166667
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1370 0.1719
+        0.3875 0.8422
+        0.7778 0.1125
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 3.489815 5.128705
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.3875 0.8844
+        0.9630 0.1578
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "108"
+}
+fps 60
+snap off
+ignorePhonemes off

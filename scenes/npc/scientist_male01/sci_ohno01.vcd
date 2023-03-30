@@ -1,0 +1,114 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.ohno01"
+    {
+      time 0.119476 1.093966
+      param "NPC_Scimale.ohno01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.000000 1.561125
+      param "!enemy"
+      event_ramp
+      {
+        0.0778 0.7296
+        0.1354 0.9976
+        1.2905 0.9941
+        1.3954 0.7485
+        1.4629 0.4664
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.008759 0.228759
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.0585 0.5443
+        0.1582 0.5242
+      }
+    }
+    event expression "sci_afraid01"
+    {
+      time 0.497742 1.144294
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.0596 0.5903
+        0.1309 0.9906
+        0.3619 0.9244
+        0.3954 0.5927
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.119868 1.120074
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.0656 0.3223
+        0.1934 0.5360
+        0.3698 0.6257
+        0.6972 0.4687
+        0.7984 0.2444
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.006158 1.302587
+      param "bg_accentup"
+      event_ramp
+      {
+        0.1900 0.3436
+        0.4933 0.5301
+        0.8667 0.3743
+        1.1433 0.3081
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.119610
+        "extreme" 0.358829
+        "loop" 0.533643
+        "end" 0.763662
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "122"
+  "CChoreoView" "112"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,118 @@
+// Choreo version 1
+actor "SCI07_SupplyDepot"
+{
+  channel "Voice"
+  {
+    event speak "lc.sci07.idle.timeisofthesscence01"
+    {
+      time 0.402777 2.931394
+      param "lc.sci07.idle.timeisofthesscence01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look AT"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.125000 4.076389
+      param "!player"
+      event_ramp
+      {
+        0.3688 0.9905
+        3.0417 0.9964
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_browup"
+    {
+      time 0.356111 1.356111
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.3459 0.5261
+        0.5541 0.1591
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.009444 2.759444
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.3054 0.2981
+        1.4095 0.3361
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event gesture "kgesture07"
+    {
+      time 0.611111 4.077778
+      param "kgesture07"
+      absolutetags playback_time
+      {
+        "apex" 0.328545
+        "accent" 0.445320
+        "loop" 0.581557
+        "end" 0.727525
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.168675
+        "accent" 0.313253
+        "loop" 0.481928
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 1.541667 4.204165
+      param "bg_accentup"
+      event_ramp
+      {
+        0.7000 0.3017
+        1.0000 0.3420
+        2.0500 0.3112
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.200313
+        "extreme" 0.365328
+        "loop" 0.593810
+        "end" 0.720744
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "12"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

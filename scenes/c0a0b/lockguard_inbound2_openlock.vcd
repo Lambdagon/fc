@@ -1,0 +1,307 @@
+// Choreo version 1
+actor "GRD03_control"
+{
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 6.306351 9.296824
+      param "!self"
+      event_ramp
+      {
+        1.0205 0.8036
+        1.8922 0.8036
+      }
+    }
+    event face "Face !player"
+    {
+      time 2.186667 5.563223
+      param "!player"
+      event_ramp
+      {
+        1.1208 0.3988
+        2.3765 0.3869
+      }
+      lockbodyfacing
+    }
+    event face "Face !player"
+    {
+      time 13.752235 19.249670
+      param "!player"
+      event_ramp
+      {
+        1.1529 0.7574
+        5.4974 0.7751
+      }
+    }
+    event face "Face !target3"
+    {
+      time 20.100590 32.076775
+      param "!target3"
+      event_ramp
+      {
+        0.9831 1.0000
+        11.9762 1.0000
+      }
+    }
+    event lookat "Look at !target3"
+    {
+      time 8.658730 14.694444
+      param "!target3"
+      event_ramp
+      {
+        1.0205 0.8036
+        1.8294 0.8095
+        4.6121 0.8035
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 13.846825 20.177778
+      param "!player"
+      event_ramp
+      {
+        0.9765 0.6923
+        1.3529 0.8166
+        4.8529 0.8284
+        5.3309 0.7321
+      }
+    }
+    event lookat "Look at !target3"
+    {
+      time 19.687302 30.401588
+      param "!target3"
+      event_ramp
+      {
+        1.0205 0.8036
+        1.8294 0.8095
+        8.5424 0.8810
+        8.9261 0.8333
+        9.7143 0.7321
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 1.706350 7.030159
+      param "!player"
+      event_ramp
+      {
+        1.0205 0.8036
+        1.8294 0.8095
+        3.1995 0.8810
+        3.5356 0.8333
+        4.3238 0.7321
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 29.613491 34.644447
+      param "!player"
+      event_ramp
+      {
+        0.9765 0.6923
+        1.3529 0.8166
+        3.5529 0.8284
+        4.0309 0.7321
+      }
+    }
+    event lookat "Look at !target3"
+    {
+      time 33.887302 44.601589
+      param "!target3"
+      event_ramp
+      {
+        1.0205 0.8036
+        1.8294 0.8095
+        8.5424 0.8810
+        8.9261 0.8333
+        9.7143 0.7321
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_ep2_09_holdbeacon_startcar"
+    {
+      time 0.246667 2.284762
+      param "g_ep2_09_holdbeacon_startcar"
+      event_ramp
+      {
+        0.0000 0.4881
+        2.0381 0.4702
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.165957
+        "accent" 0.248935
+        "loop" 0.331914
+        "end" 0.694118
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.220588
+        "loop" 0.294118
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "bg_accentUp"
+    {
+      time 3.007936 5.441270
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.0000 0.3988
+        2.4333 0.3750
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "g_salute"
+    {
+      time 16.266668 19.733334
+      param "g_salute"
+      absolutetags playback_time
+      {
+        "apex" 0.262081
+        "accent" 0.554241
+        "loop" 0.573718
+        "end" 0.700320
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.256410
+        "accent" 0.641026
+        "loop" 0.666667
+        "end" 0.833333
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "shiftrightbig"
+    {
+      time 18.866669 49.099998
+      param "shiftrightbig"
+      absolutetags playback_time
+      {
+        "apex" 0.034179
+        "loop" 0.051819
+        "end" 0.901766
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.256410
+        "loop" 0.384615
+        "end" 0.641026
+      }
+      sequenceduration 2.633333
+    }
+    event gesture "g_Pacer_ArmsCrossed"
+    {
+      time 21.600000 44.866669
+      param "g_Pacer_ArmsCrossed"
+      event_ramp
+      {
+        0.0000 1.0000
+        21.9686 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.045845
+        "accent" 0.259312
+        "loop" 0.666189
+        "end" 0.934097
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.285714
+        "accent" 0.464286
+        "loop" 0.642857
+        "end" 0.892857
+      }
+      sequenceduration 0.966667
+    }
+  }
+  channel "Triggers"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 4.722222 -1.000000
+      param "1"
+    }
+  }
+  channel "Move"
+  {
+    event moveto "Moveto !target1"
+    {
+      time 2.047620 3.000001
+      param "!target1"
+      param2 "Walk"
+    }
+    event moveto "Moveto !target2"
+    {
+      time 10.243589 -1.000000
+      param "!target2"
+      param2 "Walk"
+    }
+  }
+  channel "Head"
+  {
+    event flexanimation "Head"
+    {
+      time 6.198149 9.581483
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4963 0.0000
+          2.6181 0.0000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          1.8105 0.6200
+          2.5763 0.6500
+        }
+      }
+    }
+    event flexanimation "Head"
+    {
+      time 15.281482 17.398151
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4704 0.1100
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "16"
+  "GestureTool" "100"
+  "ExpressionTool" "54"
+  "CChoreoView" "20"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,136 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.imhurt02"
+    {
+      time 0.426667 3.135102
+      param "NPC_Security.imhurt02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.053333 4.194736
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.9400 1.0000
+        1.1840 0.3537
+        1.9320 1.0000
+        3.2215 0.8659
+        3.9484 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "b_wincing02"
+    {
+      time 0.092593 3.879630
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing02"
+      event_ramp
+      {
+        0.3640 0.5797
+        1.4833 0.1358
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 2.492362 4.234155
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.2292 0.4911
+        0.7962 0.6588
+        0.9681 0.5348
+      }
+    }
+    event expression "b_blink01"
+    {
+      time 1.458333 2.617424
+      param "humans\guard\expressions_guard"
+      param2 "b_blink01"
+      event_ramp
+      {
+        0.1688 0.9965
+        0.3000 0.4852
+        0.5031 0.0059
+        0.6938 0.0236
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 1.520833 3.718750
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.1238 0.2279
+        0.2727 0.5832
+        1.2881 0.4475
+        1.9167 0.5171
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 1.083333 2.547348
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.3844 0.7107
+        0.9598 0.8784
+        1.1317 0.7544
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.255769 3.858547
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.5375 0.5800
+          0.9850 1.0000
+          1.4451 1.0000
+          1.8148 0.6200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.2500 0.5700
+          1.4563 0.7000
+          1.7813 0.4400
+          2.0500 0.4800
+          2.2375 0.3900
+          2.5688 0.4900
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "58"
+  "SceneRampTool" "100"
+  "ExpressionTool" "32"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

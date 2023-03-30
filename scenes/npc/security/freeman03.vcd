@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Security.freeman03"
+    {
+      time 0.652157 1.386171
+      param "NPC_Security.freeman03"
+      param2 "0.7"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.000000 2.782511
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.4139
+        0.5214 0.5915
+        0.6643 0.6753
+        0.8429 0.7155
+        1.1571 0.7226
+        1.7388 0.7178
+        1.9253 0.6871
+        2.1610 0.5832
+        2.3330 0.4208
+        2.5362 0.1585
+      }
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "flex_look of acknowlegement_slight buddybuddy"
+    {
+      time 0.000000 2.778638
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.4197 0.2600
+          0.7630 0.1500
+        }
+        {
+          0.9789 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.4641 0.5900
+          0.7963 0.4600
+        }
+        {
+          0.9789 0.5000
+        }
+        "corner_puller" combo 
+        {
+          0.4218 0.7600
+          0.8667 0.1800
+          1.3407 0.7700
+        }
+        {
+          1.1404 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.1000 0.4900
+          0.2037 0.4900
+          0.3852 0.4800
+          0.5704 0.3800
+          0.9889 0.4900
+          1.1704 0.4900
+        }
+        "inner_raiser" combo 
+        {
+          0.2296 0.2400
+          0.3667 0.1100
+        }
+        {
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "54"
+  "SceneRampTool" "100"
+  "RampTool" "28"
+  "CChoreoView" "68"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,68 @@
+// Choreo version 1
+actor "hgrunt03_satchel"
+{
+  channel "Voice"
+  {
+    event speak "hgrunt03_tooeasy01.wav"
+    {
+      time 0.180000 1.007302
+      param "vo\c2a5g\Satchel\hgrunt03_tooeasy01.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "hgrunt03_tooeasy02.wav"
+    {
+      time 1.026667 1.949887
+      param "vo\c2a5g\Satchel\hgrunt03_tooeasy02.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "hgrunt03_tooeasy03.wav"
+    {
+      time 2.293333 3.606644
+      param "vo\c2a5g\Satchel\hgrunt03_tooeasy03.wav"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Tough Happy"
+    {
+      time 0.840000 4.306666
+      param "humans\marine\marine"
+      param2 "Tough Happy"
+      event_ramp
+      {
+        0.5320 1.0000
+        3.0087 1.0000
+      }
+    }
+    event expression "PSmile"
+    {
+      time 0.106667 1.106667
+      param "common_expressions"
+      param2 "PSmile"
+      event_ramp
+      {
+        0.1720 1.0000
+        0.7600 1.0000
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

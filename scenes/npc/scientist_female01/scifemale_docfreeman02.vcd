@@ -1,0 +1,71 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.docfreeman02"
+    {
+      time 0.518206 1.131925
+      param "NPC_Scifemale.docfreeman02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 2.467947
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.8472
+        0.4824 0.9931
+        1.6037 0.9931
+        1.8554 0.8403
+        2.2104 0.2222
+      }
+    }
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "Headbobs"
+    {
+      time 0.258013 1.723557
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.0700 0.5100
+          0.2771 0.5100
+          0.5914 0.2300
+          1.0928 0.3500
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "20"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "CChoreoView" "52"
+}
+fps 60
+snap off
+ignorePhonemes off

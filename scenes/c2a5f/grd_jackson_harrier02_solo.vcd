@@ -1,0 +1,36 @@
+// Choreo version 1
+actor "GRD02_HiveHand"
+{
+  channel "Look at"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Flex anim"
+  {
+  }
+  channel "Trigger"
+  {
+    event speak "NPC_Security.incoming01"
+    {
+      time 0.972222 2.005646
+      param "NPC_Security.goodgod04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "38"
+  "SceneRampTool" "100"
+  "RampTool" "26"
+  "CChoreoView" "40"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,89 @@
+// Choreo version 1
+actor "oc_radio01"
+{
+  channel "Voice"
+  {
+    event speak "oc.eas01_signin"
+    {
+      time 0.196429 14.796430
+      param "oc.eas01_signin"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt01"
+    {
+      time 14.833336 28.433357
+      param "oc.eas01_pt01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt02"
+    {
+      time 28.500000 43.599998
+      param "oc.eas01_pt02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt03"
+    {
+      time 43.680550 59.280548
+      param "oc.eas01_pt03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt04"
+    {
+      time 60.138882 76.638885
+      param "oc.eas01_pt04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt05"
+    {
+      time 77.089264 90.389267
+      param "oc.eas01_pt05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_pt06"
+    {
+      time 91.071396 98.371399
+      param "oc.eas01_pt06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.eas01_signout"
+    {
+      time 98.938065 105.814323
+      param "oc.eas01_signout"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "vo\c1a2a\eas01_fulla.wav"
+  {
+  }
+  channel "Foley"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

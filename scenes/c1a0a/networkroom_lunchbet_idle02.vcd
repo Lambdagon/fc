@@ -1,0 +1,206 @@
+// Choreo version 1
+actor "Grd03_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.grd03.yehbuddy02"
+    {
+      time 0.213333 4.950090
+      param "am.grd03.yehbuddy02"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "headshake"
+    {
+      time 3.406667 5.040000
+      param "hg_headshake"
+      absolutetags playback_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "AccentUp_Sit"
+    {
+      time 0.933333 2.900000
+      param "AccentUp_Sit"
+      absolutetags playback_time
+      {
+        "apex" 0.000000
+        "accent" 0.369310
+        "loop" 0.379310
+        "end" 0.862069
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.000000
+        "accent" 0.379310
+        "loop" 0.379310
+        "end" 0.862069
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "smirk"
+    {
+      time 0.093333 5.446667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          1.2220 0.0000
+          1.3880 0.6300
+          1.6160 0.3300
+        }
+        {
+        }
+        "lid_droop" combo 
+        {
+          1.0940 0.3600
+          1.2060 0.4500
+          1.2560 0.0000
+          3.5340 0.0000
+          3.8620 0.4700
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          3.2240 0.0200
+          3.4080 0.9100
+          3.6180 0.0000
+          4.3700 0.0000
+          5.0200 0.7200
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.8520 0.4000
+          1.1740 0.3100
+          1.3120 0.6300
+          1.5760 0.5300
+          1.7020 0.5300
+        }
+      }
+    }
+  }
+  channel "Look"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "Sci08_NetworkRoom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci08.grumbles02"
+    {
+      time 4.993333 6.980657
+      param "am.sci08.grumbles02"
+      param2 "70"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Annoyed"
+    {
+      time 2.466666 6.959999
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_closer" combo 
+        {
+          2.3540 0.0000
+          2.4940 1.0000
+          3.3380 1.0000
+          3.5360 0.0000
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          2.0200 0.8600
+          2.3860 1.0000
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          3.3420 0.5000
+          3.3640 0.5000
+          3.3880 0.5800
+          3.5680 0.7000
+          4.0900 0.5100
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          2.4780 0.5000
+          2.5360 0.5000
+          2.8480 0.3100
+          3.1900 0.6800
+          3.4740 0.5100
+          3.5080 0.5100
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Self"
+    {
+      time 2.460000 8.273333
+      param "!self"
+      event_ramp
+      {
+        0.3500 1.0000
+        5.8133 1.0000
+      }
+    }
+    event lookat "Grd"
+    {
+      time 0.073333 3.206666
+      param "Grd03_NetworkRoom"
+      event_ramp
+      {
+        0.1640 0.2932
+        2.4347 0.2556
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

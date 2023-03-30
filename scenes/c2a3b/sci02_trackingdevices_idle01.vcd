@@ -1,0 +1,137 @@
+// Choreo version 1
+actor "Sci02_Cryo"
+{
+  channel "Voice"
+  {
+    event speak "app.sci02.idle.nothingcandohere01"
+    {
+      time 0.107843 2.580927
+      param "app.sci02.idle.nothingcandohere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "app.sci02.idle.nothingcandohere02"
+    {
+      time 3.191176 5.865507
+      param "app.sci02.idle.nothingcandohere02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Move"
+  {
+  }
+  channel "Face"
+  {
+    event face "Face !player"
+    {
+      time 0.023110 6.642158
+      param "!player"
+      event_ramp
+      {
+        1.1182 0.8842
+        5.2909 0.8632
+      }
+      lockbodyfacing
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.028711 6.671568
+      param "!player"
+      event_ramp
+      {
+        0.4545 0.5053
+        1.3182 0.7789
+        2.3727 0.8947
+        4.2545 0.8947
+        5.5727 0.8211
+        6.0182 0.6421
+      }
+    }
+  }
+  channel "Postures"
+  {
+  }
+  channel "Gestures"
+  {
+    event gesture "g_openarms_right"
+    {
+      time 3.357843 6.248318
+      param "g_openarms_right"
+      absolutetags playback_time
+      {
+        "apex" 0.116969
+        "accent" 0.245634
+        "loop" 0.584844
+        "end" 0.608237
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      sequenceduration 2.366667
+    }
+    event gesture "no way small"
+    {
+      time 1.046218 2.897199
+      param "G_noway_small"
+      event_ramp
+      {
+        0.0000 0.3542
+        0.1727 0.7708
+        0.4727 0.7292
+        1.0182 0.3542
+        1.8510 0.3125
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.132331
+        "accent" 0.283147
+        "loop" 0.543143
+        "end" 0.689394
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.151515
+        "accent" 0.287879
+        "loop" 0.454545
+        "end" 0.575758
+      }
+      sequenceduration 2.233333
+    }
+    event gesture "idle_subtle"
+    {
+      time 0.059524 5.859524
+      param "idle_subtle"
+      event_ramp
+      {
+        0.4455 0.7231
+        1.2091 1.0000
+        5.0636 1.0000
+        5.4909 0.8308
+      }
+      sequenceduration 9.300000
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "48"
+  "RampTool" "22"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

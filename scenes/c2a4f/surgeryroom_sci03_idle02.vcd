@@ -1,0 +1,385 @@
+// Choreo version 1
+event stoppoint "FIRE"
+{
+  time 5.683334 -1.000000
+  param "noaction"
+}
+actor "SCI01_Surgery"
+{
+  channel "Voice"
+  {
+    event speak "vo\c2a4f\SurgeryRoom\sci01_enough.wav"
+    {
+      time 3.422078 5.656159
+      param "qe.sci01.surgeryroom.idle.puges01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 2.848485 10.645021
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2957 0.9941
+        5.5104 1.0000
+      }
+    }
+    event expression "sci_huh01"
+    {
+      time 1.190477 3.009921
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_huh01"
+      event_ramp
+      {
+        0.7818 0.8099
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 1.882275 3.646164
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        1.3091 0.3636
+      }
+    }
+  }
+  channel "lookat"
+  {
+    event lookat "Look at !player"
+    {
+      time 1.410053 2.826720
+      param "!player"
+      event_ramp
+      {
+        0.3045 0.3967
+        1.2801 0.3825
+      }
+    }
+    event lookat "Look at SCI03_Surgery"
+    {
+      time 2.701720 8.048942
+      param "SCI03_Surgery"
+      event_ramp
+      {
+        0.4591 0.3967
+        4.9288 0.5821
+      }
+    }
+    event lookat "Look at SCI03_Surgery"
+    {
+      time 0.511243 2.021163
+      param "SCI03_Surgery"
+      event_ramp
+      {
+        0.4591 0.3967
+        1.0915 0.5821
+      }
+    }
+  }
+  channel "Face At"
+  {
+  }
+}
+
+actor "SCI02_Surgery"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+    event lookat "Look at SCI01_Surgery"
+    {
+      time 3.233334 6.500000
+      param "SCI01_Surgery"
+      event_ramp
+      {
+        0.3552 0.4510
+        0.8250 0.6765
+        2.2000 0.6635
+        2.5937 0.4498
+      }
+    }
+    event lookat "Look at SCI03_Surgery"
+    {
+      time 0.050000 3.583334
+      param "SCI03_Surgery"
+      event_ramp
+      {
+        0.2310 0.3577
+        0.4357 0.4900
+        0.9827 0.6139
+        2.5357 0.5880
+        3.0071 0.4699
+        3.2000 0.3318
+      }
+    }
+  }
+  channel "Face At"
+  {
+  }
+}
+
+actor "SCI03_Surgery"
+{
+  channel "Voice"
+  {
+    event speak "qe.sci03.surgeryroom.idle03"
+    {
+      time 0.361472 2.961472
+      param "qe.sci03.surgeryroom.idle03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 1.130159 3.281441
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1765 0.4864
+        0.6880 0.6494
+        1.6922 0.5998
+        1.9843 0.4900
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 2.336231 4.086231
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.4440 0.3530
+        1.1800 0.6328
+        1.4696 0.4002
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.220900 3.026455
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2176 0.2208
+        0.3890 0.5537
+        0.4560 0.6553
+        1.0870 0.5195
+        1.8570 0.2326
+      }
+    }
+    event expression "sci_buckup"
+    {
+      time 3.856945 11.573611
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_buckup"
+      event_ramp
+      {
+        1.0000 0.6836
+        2.1000 0.8394
+        5.4833 0.6446
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 5.617064 7.033731
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.4174 0.2834
+        0.8522 0.2243
+      }
+    }
+    event expression "sci_wincing01"
+    {
+      time 3.483731 5.867064
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_wincing01"
+      event_ramp
+      {
+        0.3448 0.4144
+        0.6207 0.6659
+        2.0661 0.6718
+        2.2247 0.5065
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.174604 4.289755
+      param "!player"
+      event_ramp
+      {
+        0.4769 0.5325
+        1.8846 0.6482
+        3.4308 0.4616
+      }
+    }
+    event lookat "Look at SCI01_Surgery"
+    {
+      time 4.002885 5.936220
+      param "SCI01_Surgery"
+      event_ramp
+      {
+        0.1680 0.4085
+        0.5200 0.5950
+        1.4280 0.5903
+        1.7240 0.3636
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 5.683262 11.346032
+      param "!player"
+      event_ramp
+      {
+        0.4960 0.4132
+        1.3700 0.5750
+        2.9500 0.6009
+        3.8900 0.5632
+        5.1000 0.4215
+      }
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face !player"
+    {
+      time 0.202381 11.335713
+      param "!player"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "bg_down"
+    {
+      time 0.252382 2.219048
+      param "bg_down"
+      event_ramp
+      {
+        0.2520 0.1901
+        0.4440 0.7485
+        1.6360 0.2586
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.086207
+        "extreme" 0.241379
+        "loop" 0.482759
+        "end" 0.672414
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "hg_nod_no"
+    {
+      time 0.869048 3.035715
+      param "hg_nod_no"
+      event_ramp
+      {
+        0.2880 0.4557
+        0.7920 0.5455
+        1.5760 0.1535
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.078038
+        "extreme" 0.171683
+        "loop" 0.452620
+        "end" 0.800000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "hg_puncuate_down"
+    {
+      time 1.352382 2.985715
+      param "hg_puncuate_down"
+      event_ramp
+      {
+        0.1520 0.2952
+        0.3600 0.3672
+        0.6520 0.4097
+        1.2720 0.3329
+        1.4560 0.1617
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.552500
+        "end" 0.562500
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.333333
+        "extreme" 0.541667
+        "loop" 0.562500
+        "end" 0.562500
+      }
+      sequenceduration 1.633333
+    }
+    event gesture "G_puncuate"
+    {
+      time 0.235715 1.869048
+      param "G_puncuate"
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.416667
+        "loop" 0.562500
+        "end" 0.729167
+      }
+      sequenceduration 1.633333
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "28"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

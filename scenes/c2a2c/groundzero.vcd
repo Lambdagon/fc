@@ -1,0 +1,192 @@
+// Choreo version 1
+actor "groundzero_talker1"
+{
+  channel "Voice"
+  {
+    event speak "oar.hgrunt01.hewillpay01"
+    {
+      time 28.877975 31.038792
+      param "oar.hgrunt01.hewillpay01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt01.scienceteam01"
+    {
+      time 13.190475 14.190475
+      param "oar.hgrunt01.scienceteam01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "hgrunt01_whoisthisguy01.wav"
+    {
+      time 6.050596 9.315948
+      param "oar.hgrunt01.whoisthisguy01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt01.sabotagemaybe01"
+    {
+      time 18.440475 23.162266
+      param "oar.hgrunt01.sabotagemaybe01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt01.hewillpay02"
+    {
+      time 31.639881 33.170696
+      param "oar.hgrunt01.hewillpay02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt01.shit01"
+    {
+      time 16.337303 17.373199
+      param "oar.hgrunt01.shit01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Move"
+  {
+    event lookat "Look at !self"
+    {
+      time 5.166667 35.666668
+      param "!self"
+    }
+    event lookat "Look at groundzero_talker2"
+    {
+      time 31.465481 39.165493
+      param "groundzero_talker2"
+      event_ramp
+      {
+        0.8333 0.5915
+        1.3500 0.8064
+        2.7859 1.0000
+        5.0743 0.9976
+      }
+    }
+  }
+  channel "Look"
+  {
+  }
+  channel "Trigger"
+  {
+    event face "Face groundzero_faceat01"
+    {
+      time 5.166667 36.888893
+      param "groundzero_faceat01"
+    }
+  }
+}
+
+actor "groundzero_talker2"
+{
+  channel "Voice"
+  {
+    event speak "oar.hgrunt02.groundzero01"
+    {
+      time 10.453773 12.476993
+      param "oar.hgrunt02.groundzero01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt02.yeahmaybe01"
+    {
+      time 23.002975 24.654404
+      param "oar.hgrunt02.yeahmaybe01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt02.guyskillingmarines01"
+    {
+      time 24.982742 28.769567
+      param "oar.hgrunt02.guyskillingmarines01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oar.hgrunt02.yeah01"
+    {
+      time 14.867464 15.438235
+      param "oar.hgrunt02.yeah01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+  }
+  channel "Move"
+  {
+    event lookat "Look at !player"
+    {
+      time 19.716362 26.630505
+      param "groundzero_talker1"
+      event_ramp
+      {
+        0.4077 0.4061
+        0.4846 0.5525
+        1.1385 0.8489
+        5.8493 0.7084
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 6.914773 15.217805
+      param "groundzero_talker1"
+      event_ramp
+      {
+        0.4077 0.4061
+        0.4846 0.5525
+        1.1385 0.8489
+        7.2382 0.7084
+      }
+    }
+    event lookat "Look at self"
+    {
+      time 25.071033 38.196041
+      param "self"
+    }
+  }
+  channel "Look"
+  {
+    event face "Face groundzero_faceat01"
+    {
+      time 5.166667 38.250000
+      param "groundzero_faceat01"
+    }
+  }
+  channel "Trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "20"
+  "RampTool" "36"
+  "CChoreoView" "24"
+}
+fps 60
+snap off
+ignorePhonemes off

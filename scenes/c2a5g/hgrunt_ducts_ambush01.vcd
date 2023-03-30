@@ -1,0 +1,39 @@
+// Choreo version 1
+event stoppoint "Fire !"
+{
+  time 1.045455 -1.000000
+  param "noaction"
+}
+actor "c2a5h_shot_grunt_01"
+{
+  channel "Voice"
+  {
+    event speak "st.hgrunt02.duct_now01"
+    {
+      time 0.000000 0.460159
+      param "st.hgrunt02.duct_now01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+}
+
+actor "c2a5h_shot_grunt_02"
+{
+  channel "Voice"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "92"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

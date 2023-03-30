@@ -1,0 +1,155 @@
+// Choreo version 1
+actor "Sci16_Breakroom"
+{
+  channel "Voice"
+  {
+    event speak "am.sci16.breakroom.frontpage01"
+    {
+      time 0.441667 4.645953
+      param "am.sci16.breakroom.frontpage01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "look at gordon"
+    {
+      time 0.000000 6.110539
+      param "!player"
+      event_ramp
+      {
+        0.5412 0.5299
+        1.2615 0.6791
+        3.1277 0.7313
+        4.4577 0.6940
+        5.2048 0.3582
+        5.6333 0.1642
+      }
+    }
+  }
+  channel "faces"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.000000 6.102137
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.9333 0.0200
+          2.9667 0.0000
+        }
+        {
+          0.9333 0.5000
+          2.9667 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.9333 0.5600
+          2.9667 0.8000
+        }
+        {
+          0.9333 0.5000
+          2.9667 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          2.9667 0.5500
+        }
+        {
+          2.9667 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          0.9333 0.0000
+          2.3286 0.1373
+          2.6429 0.3039
+          2.9000 0.9804
+          4.3429 0.4706
+        }
+        {
+          0.9333 0.5000
+          2.9667 0.5000
+        }
+        "wrinkler" 
+        {
+        }
+        "upper_raiser" combo 
+        {
+          0.9333 0.0000
+          2.9667 0.0000
+        }
+        {
+          0.9333 0.5000
+          2.9667 0.5000
+        }
+        "corner_puller" combo 
+        {
+          1.9286 0.3300
+          2.9667 0.5900
+          3.5143 0.5600
+          3.9857 0.7400
+          4.9571 0.7800
+          5.5858 0.4100
+        }
+        {
+          2.9667 0.5000
+        }
+        "smile" 
+        {
+          0.9333 0.0800
+          2.9667 0.4300
+        }
+        "jaw_depth" 
+        {
+          0.9333 0.0000
+          2.9667 0.0000
+        }
+      }
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 2.368338 4.701671
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.3111 0.3060
+        0.7889 0.3403
+        1.6778 0.1677
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "52"
+  "RampTool" "18"
+  "ExpressionTool" "14"
+  "GestureTool" "46"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

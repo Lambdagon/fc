@@ -1,0 +1,161 @@
+// Choreo version 1
+actor "sci_move"
+{
+  channel "Voice"
+  {
+    event speak "oc.sci01.youreheadingoutthere01"
+    {
+      time 0.484848 1.524576
+      param "oc.sci01.youreheadingoutthere01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci01.youreheadingoutthere02"
+    {
+      time 2.071970 2.823195
+      param "oc.sci01.youreheadingoutthere02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.sci01.youreheadingoutthere03"
+    {
+      time 3.526515 5.392343
+      param "oc.sci01.youreheadingoutthere03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Scared"
+    {
+      time 0.044893 3.177328
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.3667 0.9758
+        1.4929 0.9935
+        1.6214 0.6623
+        1.7464 0.2857
+        1.8536 1.0000
+        2.5906 0.9677
+      }
+    }
+    event expression "Miserable"
+    {
+      time 2.666667 5.712121
+      param "common_expressions"
+      param2 "Miserable"
+      event_ramp
+      {
+        0.2722 0.6429
+        2.4250 0.6364
+        2.9194 0.2403
+        3.0028 0.0519
+      }
+    }
+    event expression "sci_sad00"
+    {
+      time 3.121212 6.181818
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sad00"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_nod_no"
+    {
+      time 3.077160 5.657406
+      param "hg_nod_no"
+      absolutetags playback_time
+      {
+        "apex" 0.065529
+        "extreme" 0.144165
+        "loop" 0.380071
+        "end" 0.825671
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.072464
+        "extreme" 0.159420
+        "loop" 0.420290
+        "end" 0.913043
+      }
+      sequenceduration 2.333333
+    }
+    event gesture "bg_accentUp"
+    {
+      time 0.272727 2.706061
+      param "bg_accentUp"
+      event_ramp
+      {
+        0.3286 0.1530
+        0.5952 0.4062
+        0.9048 0.6732
+        1.4143 0.2474
+        1.7810 0.0932
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.075758 6.590909
+      param "!player"
+      event_ramp
+      {
+        0.1533 0.0974
+        0.6067 0.9481
+        2.8714 1.0000
+        3.4913 0.4286
+        4.4628 0.4221
+        4.9348 0.9935
+        5.9333 0.7468
+        6.3000 0.4351
+      }
+    }
+    event face "Face !player"
+    {
+      time 0.063491 3.595238
+      param "!player"
+      event_ramp
+      {
+        0.6095 0.3524
+        2.9667 0.3524
+      }
+      lockbodyfacing
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "10"
+  "RampTool" "42"
+  "CChoreoView" "44"
+}
+fps 60
+snap off
+ignorePhonemes off

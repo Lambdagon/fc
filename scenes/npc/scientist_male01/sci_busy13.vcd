@@ -1,0 +1,179 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.busy13"
+    {
+      time 0.616667 5.288027
+      param "NPC_Scimale.busy13"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.862828 5.972461
+      param "!player"
+      event_ramp
+      {
+        0.2629 0.1806
+        0.6264 0.8472
+        0.7941 0.9931
+        4.1766 0.9835
+        4.3237 0.8568
+        4.9319 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 4.414366 5.414367
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2182 0.3837
+        0.6303 0.7119
+      }
+    }
+    event expression "sci_buckup"
+    {
+      time 3.005320 4.185875
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_buckup"
+      event_ramp
+      {
+        0.1515 0.5714
+        0.9563 0.5549
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 3.981496 4.981496
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.1848 0.1370
+        0.4697 0.4746
+        0.7848 0.1783
+      }
+    }
+    event expression "sci_losing_patience00"
+    {
+      time 0.240741 1.606482
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_losing_patience00"
+      event_ramp
+      {
+        0.2095 0.2338
+        0.4571 1.0000
+        0.9396 0.9906
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.819445 3.372475
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.2967 0.3601
+        1.2585 0.4333
+      }
+    }
+    event expression "humans\scientist\expressions_scientist/sci_dubious left"
+    {
+      time 3.266489 4.539216
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_dubious left"
+      event_ramp
+      {
+        0.2433 0.5077
+        0.7360 0.7780
+        1.0527 0.5502
+      }
+    }
+    event expression "sci_disgust02"
+    {
+      time 1.317947 2.317947
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_disgust02"
+      event_ramp
+      {
+        0.2788 0.3636
+        0.4091 0.4711
+        0.6667 0.4463
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.379630 2.379629
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2333 0.2810
+        0.4722 0.4522
+        0.7194 0.2987
+      }
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Flex01"
+    {
+      time 0.097222 6.041667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4000 0.4500
+          0.7250 0.3600
+          1.4875 0.4600
+          2.5626 0.4600
+          3.0521 0.5000
+          3.5300 0.6400
+          3.8100 0.4100
+          4.2198 0.4000
+          4.4153 0.4100
+          4.7587 0.3600
+          5.2925 0.4100
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          2.0172 0.4900
+          2.6875 0.4900
+          3.1760 0.5300
+          3.6200 0.6300
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          2.3820 0.5000
+          2.7399 0.5100
+          2.9452 0.3200
+          3.4083 0.5000
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "RampTool" "72"
+  "SceneRampTool" "100"
+  "ExpressionTool" "12"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,437 @@
+// Choreo version 1
+event stoppoint "Fire Complete!"
+{
+  time 32.586830 -1.000000
+  param "noaction"
+}
+actor "int_vort1"
+{
+  channel "Voice"
+  {
+    event speak "int.vortvillage.vort_invite01"
+    {
+      time 29.636688 32.136688
+      param "int.vortvillage.vort_invite01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "int.vortvillage.vort_confused01"
+    {
+      time 17.914822 19.770741
+      param "int.vortvillage.vort_confused01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !player"
+    {
+      time 16.311478 17.626293
+      param "!player"
+    }
+    event lookat "Look at int_vort2"
+    {
+      time 17.270439 19.401722
+      param "int_vort2"
+    }
+    event lookat "Look at !player"
+    {
+      time 22.076378 34.105545
+      param "!player"
+    }
+    event lookat "Look at !player"
+    {
+      time 18.334980 20.223869
+      param "!player"
+    }
+    event lookat "Look at int_vort2"
+    {
+      time 20.030693 22.819382
+      param "int_vort2"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face !player"
+    {
+      time 28.287678 34.065056
+      param "!player"
+    }
+    event face "Face vt1_face_sheildbutton"
+    {
+      time 25.748241 27.970463
+      param "vt1_face_sheildbutton"
+    }
+  }
+  channel "Move to"
+  {
+    event moveto "Moveto vt1_target1"
+    {
+      time 14.317117 17.786961
+      param "vt1_target1"
+      param2 "Walk"
+      distancetotarget 14.00
+    }
+    event moveto "Moveto vt1_target2"
+    {
+      time 22.852398 25.968536
+      param "vt1_target2"
+      param2 "Walk"
+    }
+    event moveto "vt1_target3"
+    {
+      time 27.871014 29.554352
+      param "vt1_target3"
+      param2 "Walk"
+      forceshortmovement
+    }
+    event moveto "Moveto vt1_target4"
+    {
+      time 31.641495 33.600037
+      param "vt1_target4"
+      param2 "Walk"
+    }
+    event moveto "Moveto vt1_target4"
+    {
+      time 18.361256 21.787582
+      param "vt1_target4"
+      param2 "Walk"
+      distancetotarget 80.00
+    }
+    event gesture "g_handclasp"
+    {
+      time 23.338383 27.008755
+      param "g_handclasp"
+      absolutetags playback_time
+      {
+        "in" 0.238524
+        "loop" 0.559628
+        "end" 0.651373
+        "out" 0.846358
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.153061
+        "loop" 0.510204
+        "end" 0.612245
+        "out" 0.816326
+      }
+      sequenceduration 3.300000
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_follow_me"
+    {
+      time 29.539116 32.839111
+      param "g_follow_me"
+      absolutetags playback_time
+      {
+        "apex" 0.183673
+        "accent" 0.285714
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.183673
+        "accent" 0.285714
+        "loop" 0.612245
+        "end" 0.714286
+      }
+      sequenceduration 3.300000
+    }
+    event gesture "nectar_give"
+    {
+      time 26.520123 27.895123
+      param "nectar_give"
+      event_ramp
+      {
+        0.6549 0.9710
+      }
+      sequenceduration 2.400000
+    }
+    event gesture "g_accent2hands_01_LG"
+    {
+      time 18.370758 20.670761
+      param "g_accent2hands_01_LG"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "accent" 0.352941
+        "loop" 0.588235
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.352941
+        "loop" 0.588235
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "Flex Animation"
+  {
+    event flexanimation "head up"
+    {
+      time 30.873299 31.373299
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2500 1.0000
+        }
+      }
+    }
+  }
+  channel "move to"
+  {
+    event firetrigger "16 - Press Console - Lower Energy Shield"
+    {
+      time 27.097221 -1.000000
+      param "16"
+    }
+  }
+  faceposermodel "models\vortigaunt_slave.mdl"
+}
+
+actor "int_vort2"
+{
+  channel "Voice"
+  {
+    event speak "int.vortvillage.vort_nodebate01"
+    {
+      time 19.795612 22.293888
+      param "int.vortvillage.vort_ignore02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "int.vortvillage.vort_ignore01"
+    {
+      time 16.177509 17.324993
+      param "int.vortvillage.vort_ignore01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 8.388626 11.901587
+      param "!self"
+      event_ramp
+      {
+        0.6133 0.9976
+        3.1718 0.9952
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 12.780187 17.747784
+      param "!player"
+    }
+    event firetrigger "Trigger 13 - Teleport FX ACTIVATE"
+    {
+      time 6.500001 -1.000000
+      param "13"
+    }
+    event firetrigger "12 - vort2 presses button"
+    {
+      time 4.411806 -1.000000
+      param "12"
+    }
+    event firetrigger "1 - seq vort 2 walkaway"
+    {
+      time 21.422043 -1.000000
+      param "1"
+    }
+  }
+  channel "Face At"
+  {
+    event face "Face !player"
+    {
+      time 14.023873 16.974876
+      param "!player"
+      event_ramp
+      {
+        2.0791 0.9976
+        2.9510 1.0000
+      }
+    }
+    event face "Face face_console"
+    {
+      time 2.876829 6.744350
+      param "face_console"
+    }
+    event face "Face vort_target_walkaway"
+    {
+      time 21.165562 27.579845
+      param "vort_target_walkaway"
+    }
+    event face "Face int_vort1"
+    {
+      time 20.207661 22.313721
+      param "int_vort1"
+      event_ramp
+      {
+        0.4682 0.3402
+        1.5773 0.3631
+      }
+    }
+  }
+  channel "Move to"
+  {
+    event moveto "Moveto vt1_target4"
+    {
+      time 6.896456 10.686982
+      param "vt1_target4"
+      param2 "Walk"
+      distancetotarget 25.00
+    }
+    event moveto "vt2_target1"
+    {
+      time 13.277329 14.993745
+      param "vt2_target1"
+      param2 "Walk"
+    }
+    event moveto "vt4_target1"
+    {
+      time 16.789536 21.112267
+      param "vt4_target1"
+      param2 "Walk"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_Accent_BothHands01"
+    {
+      time 21.371307 23.837975
+      param "g_Accent_BothHands01"
+      absolutetags playback_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "g_palm_mid_right"
+    {
+      time 20.508430 23.341763
+      param "g_palm_mid_right"
+      absolutetags playback_time
+      {
+        "apex" 0.238095
+        "accent" 0.357143
+        "loop" 0.547619
+        "end" 0.666667
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.238095
+        "accent" 0.357143
+        "loop" 0.547619
+        "end" 0.666667
+      }
+      sequenceduration 2.833333
+    }
+    event gesture "nectar_give"
+    {
+      time 3.496435 5.649213
+      param "nectar_give"
+      event_ramp
+      {
+        0.6549 0.9710
+      }
+      sequenceduration 2.400000
+    }
+  }
+  channel "Flex Animation"
+  {
+    event firetrigger "10 - teleport booth vort leaves booth"
+    {
+      time 12.263560 -1.000000
+      param "10"
+    }
+    event flexanimation "Sigh"
+    {
+      time 15.611979 18.481030
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "blink" 
+        {
+          1.1561 1.0000
+          1.2561 1.0000
+          1.5783 0.8482
+        }
+        "head_rightleft" range 30.0 -30.0 
+        {
+          0.5360 0.4311
+          0.9041 0.2335
+          1.2840 0.6287
+          1.5920 0.5449
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.1561 0.0000
+          1.2561 0.0000
+          1.5783 0.0759
+        }
+      }
+    }
+    event flexanimation "Looks Player Over"
+    {
+      time 14.250108 15.527886
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.7594 0.2700
+          1.0149 0.5000
+        }
+      }
+    }
+    event firetrigger "Trigger 14  - teleport Vort 3"
+    {
+      time 4.540975 -1.000000
+      param "14"
+    }
+    event firetrigger "11- Booth Vort Presses Button"
+    {
+      time 6.166667 -1.000000
+      param "11"
+    }
+  }
+  faceposermodel "models\vortigaunt_slave.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "SceneRampTool" "100"
+  "RampTool" "16"
+  "ExpressionTool" "50"
+  "GestureTool" "26"
+}
+fps 60
+snap off
+ignorePhonemes off

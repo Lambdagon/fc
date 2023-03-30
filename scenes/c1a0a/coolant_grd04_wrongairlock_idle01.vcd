@@ -1,0 +1,126 @@
+// Choreo version 1
+actor "GRD04_Coolant"
+{
+  channel "Voice"
+  {
+    event speak "am.grd04.thingswilldiedown01"
+    {
+      time 0.235556 2.635556
+      param "am.grd04.thingswilldiedown01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "look at gordon"
+    {
+      time 0.000000 3.513333
+      param "!player"
+      event_ramp
+      {
+        0.4538 0.6450
+        1.0700 0.8580
+        2.2692 0.8225
+        2.8158 0.5508
+      }
+    }
+  }
+  channel "expressions"
+  {
+    event flexanimation "somewhat certain"
+    {
+      time 0.000000 3.606667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3178 0.3900
+          0.8622 0.4100
+          1.0178 0.4155
+          1.1289 0.4194
+          1.2733 0.4243
+          1.4511 0.4304
+          2.0111 0.4506
+          2.7222 0.4759
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3178 0.6400
+          0.8622 0.5600
+          1.0178 0.5479
+          1.1289 0.5427
+          1.2733 0.5383
+          1.4511 0.5342
+          2.0111 0.5234
+          2.7222 0.5112
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.0178 0.3500
+          1.1289 0.3461
+          1.2733 0.4300
+          2.0111 0.4900
+          2.7222 0.5000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.0178 0.4300
+          1.1289 0.4200
+          1.2733 0.4900
+          1.4511 0.5193
+          1.7294 0.5100
+          2.0111 0.5100
+          2.7222 0.5000
+        }
+      }
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "hg_nod_yes"
+    {
+      time 0.233334 2.533334
+      param "hg_nod_yes"
+      event_ramp
+      {
+        0.3385 0.2007
+        0.5462 0.2913
+        1.8846 0.1934
+        2.0000 0.0869
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.058824
+        "extreme" 0.161765
+        "loop" 0.411765
+        "end" 0.764706
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "postures"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "34"
+}
+fps 60
+snap off
+ignorePhonemes off

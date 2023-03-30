@@ -1,0 +1,114 @@
+// Choreo version 1
+actor "Sci41"
+{
+  channel "voice"
+  {
+    event speak "am.testchamber.sci41.hewaitedtoolong01"
+    {
+      time 0.886667 7.629638
+      param "am.testchamber.sci41.hewaitedtoolong01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "trigger"
+  {
+    event firetrigger "Firetrigger 3"
+    {
+      time 0.966666 -1.000000
+      param "3"
+    }
+    event firetrigger "Firetrigger 4"
+    {
+      time 7.320000 -1.000000
+      param "4"
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "Sit_Office_Chair"
+    {
+      time -0.293333 11.346667
+      param "Sit_Office_Chair"
+      sequenceduration 3.333333
+    }
+    event gesture "Sit_Armory"
+    {
+      time 2.120000 7.760000
+      param "Sit_Armory"
+      event_ramp
+      {
+        0.2360 0.1513
+        0.8720 0.4874
+        1.1760 0.4958
+        2.4800 0.5462
+        3.3320 0.4202
+        4.2220 0.5378
+        5.3460 0.3613
+      }
+      sequenceduration 2.000000
+    }
+    event gesture "BodyAdjust_Sit"
+    {
+      time 1.000000 2.300000
+      param "BodyAdjust_Sit"
+      absolutetags playback_time
+      {
+        "in" 0.000000
+        "out" 1.000000
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.000000
+        "out" 1.052632
+      }
+      sequenceduration 1.300000
+    }
+  }
+  channel "look at"
+  {
+    event lookat "Look at lcs_testchamber_clmr"
+    {
+      time 3.093334 4.840000
+      param "lcs_testchamber_clmr"
+      event_ramp
+      {
+        0.5283 0.5798
+        1.0203 0.7143
+      }
+    }
+    event lookat "Look at lcs_testchamber_clmm"
+    {
+      time 0.760000 3.673333
+      param "lcs_testchamber_clmm"
+      event_ramp
+      {
+        1.0720 0.7395
+        2.1480 0.6639
+      }
+    }
+    event lookat "Look at lcs_testchamber_clml"
+    {
+      time 4.200001 9.760001
+      param "lcs_testchamber_clml"
+      event_ramp
+      {
+        0.5205 0.6555
+        5.1073 0.6807
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "12"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

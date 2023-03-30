@@ -1,0 +1,101 @@
+// Choreo version 1
+actor "SCI36_Ionization"
+{
+  channel "wav"
+  {
+    event speak "am.sci36.haleandhearty01"
+    {
+      time 0.313334 3.049207
+      param "am.sci36.haleandhearty01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "G_look"
+    {
+      time 0.946667 2.913334
+      param "g_fist"
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.258621
+        "loop" 0.344828
+        "end" 0.517241
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+  channel "look"
+  {
+    event lookat "player"
+    {
+      time 0.026667 3.513333
+      param "!player"
+    }
+  }
+  channel "gesture2"
+  {
+    event gesture "G_what"
+    {
+      time -0.000000 2.033333
+      param "G_what"
+      absolutetags playback_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.133333
+        "accent" 0.200000
+        "loop" 0.366667
+        "end" 0.533333
+      }
+      sequenceduration 2.033333
+    }
+    event gesture "G_look_small"
+    {
+      time 0.860000 3.413333
+      param "g_point_swing"
+      absolutetags playback_time
+      {
+        "apex" 0.239237
+        "accent" 0.319388
+        "loop" 0.399539
+        "end" 0.452972
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.176471
+        "accent" 0.250000
+        "loop" 0.441176
+        "end" 0.588235
+      }
+      sequenceduration 2.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "CChoreoView" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,64 @@
+// Choreo version 1
+actor "GRD02_Shack_DeathGuy"
+{
+  channel "Voice"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Gesture"
+  {
+    event firetrigger "1 ---- Pause Here - Grd is posed for scene"
+    {
+      time 0.146154 -1.000000
+      param "1"
+    }
+  }
+  channel "Look"
+  {
+  }
+  channel "Move"
+  {
+    event gesture "BP_wall_lean_idle"
+    {
+      time 0.000000 4.750000
+      param "BP_wall_lean_idle"
+      absolutetags playback_time
+      {
+        "1" 0.109273
+        "2" 0.217544
+      }
+      absolutetags shifted_time
+      {
+        "1" 0.109273
+        "2" 0.323736
+      }
+      sequenceduration 2.333333
+    }
+  }
+  channel "Trigger"
+  {
+  }
+  channel "Flex"
+  {
+    event firetrigger "Pause Here - Grd is Dead"
+    {
+      time 1.783334 -1.000000
+      param "9"
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "GestureTool" "36"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "RampTool" "18"
+  "CChoreoView" "104"
+}
+fps 60
+snap off
+ignorePhonemes off

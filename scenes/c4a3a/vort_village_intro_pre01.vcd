@@ -1,0 +1,140 @@
+// Choreo version 1
+actor "int_vort2"
+{
+  channel "Voice"
+  {
+    event speak "int.vortvillage.vort_call01"
+    {
+      time 5.635685 7.345663
+      param "int.vortvillage.vort_call01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 4.232938 8.709129
+      param "!self"
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move to"
+  {
+    event firetrigger "11 - booth vort presses button"
+    {
+      time 1.911806 -1.000000
+      param "11"
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "eat_nectar"
+    {
+      time 5.016270 11.549604
+      param "eat_nectar"
+      event_ramp
+      {
+        1.1333 1.0000
+        2.1583 0.9952
+        3.8500 0.0443
+      }
+      sequenceduration 6.533333
+    }
+    event gesture "nectar_give"
+    {
+      time 0.074213 2.226990
+      param "nectar_give"
+      event_ramp
+      {
+        0.6549 0.9710
+      }
+      sequenceduration 2.400000
+    }
+  }
+  channel "Flex Animation"
+  {
+    event gesture "hg_headup"
+    {
+      time 5.960715 8.260715
+      param "hg_headup"
+      event_ramp
+      {
+        0.3238 0.4402
+        1.7857 0.4330
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "g_accent2hands_01_LG"
+    {
+      time 6.369443 8.669445
+      param "g_accent2hands_01_LG"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "accent" 0.352941
+        "loop" 0.588235
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "accent" 0.352941
+        "loop" 0.588235
+        "end" 0.661765
+      }
+      sequenceduration 2.300000
+    }
+    event firetrigger "12 - vort presses button"
+    {
+      time 0.870140 -1.000000
+      param "12"
+    }
+    event firetrigger "12 - vort presses button"
+    {
+      time 0.870140 -1.000000
+      param "12"
+    }
+    event firetrigger "12 - vort presses button"
+    {
+      time 0.870140 -1.000000
+      param "12"
+    }
+    event firetrigger "Firetrigger 14"
+    {
+      time 2.729166 -1.000000
+      param "14"
+    }
+  }
+  faceposermodel "models\vortigaunt_slave.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

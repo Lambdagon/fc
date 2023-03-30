@@ -1,0 +1,141 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 3.146789 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre48"
+    {
+      time 0.580775 3.026263
+      param "NPC_Scimale.question_pre48"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023419 3.958084
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        3.2844 0.9805
+        3.5904 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 1.282646 2.793757
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.9571 0.5584
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 0.103419 1.658974
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.8286 0.2043
+        1.1762 0.4758
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 1.735303 2.279747
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.2981 0.9658
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 1.992308 2.992308
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1676 0.1724
+        0.3441 0.2503
+        0.5882 0.2468
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.136752 1.136752
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.1676 0.1724
+        0.3441 0.2503
+        0.5882 0.2468
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.026521 2.289070
+      param "bg_accentup"
+      event_ramp
+      {
+        0.3722 0.1111
+        0.6429 0.2834
+        1.1895 0.1252
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.134435
+        "extreme" 0.328621
+        "loop" 0.505263
+        "end" 0.689474
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "24"
+  "SceneRampTool" "100"
+  "RampTool" "36"
+  "CChoreoView" "200"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,155 @@
+// Choreo version 1
+actor "Sci49_TChamberFoyer"
+{
+  channel "Voice"
+  {
+    event speak "am.sci49.postponing01"
+    {
+      time 0.490101 5.366994
+      param "am.sci49.postponing01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.051961 6.626307
+      param "!player"
+      event_ramp
+      {
+        0.2411 0.2195
+        0.5840 0.3057
+        2.0952 0.3918
+        4.9028 0.3561
+        5.7504 0.2383
+      }
+    }
+  }
+  channel "Movement"
+  {
+  }
+  channel "Animation"
+  {
+  }
+  channel "gesture"
+  {
+  }
+  channel "flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.143939 5.386364
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_rightleft" range 30.0 -30.0 
+        {
+          2.8899 0.5000
+          3.3121 0.5200
+          3.8232 0.6700
+          4.4111 0.7200
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2778 0.5800
+          0.7061 0.3300
+          1.4232 0.4800
+          1.7899 0.4800
+          2.6566 0.4900
+          2.9232 0.4900
+          3.4121 0.4400
+          3.6899 0.5700
+          3.9121 0.5900
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          2.5788 0.4900
+          3.1788 0.4900
+          3.7566 0.2000
+          4.6444 0.1700
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.3222 0.4800
+          1.5111 0.4500
+          1.7000 0.3700
+          2.0444 0.4600
+          2.4444 0.4700
+          2.6455 0.4900
+          3.0343 0.4900
+          3.0788 0.4900
+          3.7121 0.7300
+          4.0343 0.5100
+          4.2232 0.5100
+          4.4121 0.5100
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.7889 0.4900
+          1.4556 0.5100
+          1.7000 0.5500
+          2.8455 0.5500
+          3.4232 0.8300
+          3.8566 0.5900
+        }
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_angry01"
+    {
+      time 0.295457 5.699133
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.4195 0.3946
+        0.7732 0.8054
+        1.0537 0.6270
+        4.2890 0.6270
+      }
+    }
+    event expression "sci_browup"
+    {
+      time 0.051911 1.468577
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.3000 0.1568
+        0.3756 0.2703
+        0.4878 0.3351
+        0.7927 0.2270
+        0.9488 0.1351
+      }
+    }
+    event expression "sci_sad00"
+    {
+      time 1.015152 3.318182
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_sad00"
+      event_ramp
+      {
+        0.7512 0.5568
+        1.4805 0.4811
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "44"
+  "ExpressionTool" "18"
+  "GestureTool" "128"
+  "RampTool" "12"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

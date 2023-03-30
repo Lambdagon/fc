@@ -1,0 +1,67 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 3.071428 -1.000000
+  param "noaction"
+}
+actor "!target"
+{
+  channel "Voice"
+  {
+    event speak "player.guard.revenge02"
+    {
+      time 0.338518 3.061534
+      param "player.guard.revenge02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "Look at !self"
+    {
+      time 0.000000 3.705026
+      param "!self"
+      event_ramp
+      {
+        0.3000 1.0000
+        3.3476 1.0000
+      }
+    }
+  }
+  channel "Face At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex Animation"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Posture"
+  {
+  }
+  channel "Trigger"
+  {
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "24"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

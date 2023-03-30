@@ -1,0 +1,108 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre51"
+    {
+      time 0.446666 1.542017
+      param "NPC_Scimale.answer_pre51"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 2.091694
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        1.5320 0.9931
+        1.8022 0.7798
+        1.9570 0.1145
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "fa"
+    {
+      time 0.000000 2.086667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_tightener" combo 
+        {
+          0.2706 0.4100
+          1.4912 0.4600
+        }
+        {
+        }
+        "inner_raiser" combo 
+        {
+          0.2441 0.9300
+          1.4588 0.9800
+        }
+        {
+        }
+        "outer_raiser" combo 
+        {
+          0.2147 0.8600
+          1.4382 0.9400
+        }
+        {
+        }
+        "lowerer" combo 
+        {
+          0.5000 0.3100
+          1.4735 0.4400
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.2412 0.6000
+          0.9882 0.5900
+          1.7088 0.6600
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.4147 0.5600
+          0.5794 0.4400
+          0.9382 0.5300
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.2206 0.7100
+          1.5971 0.7900
+        }
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Accent"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "54"
+  "SceneRampTool" "100"
+  "ExpressionTool" "68"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

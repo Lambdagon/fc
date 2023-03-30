@@ -1,0 +1,90 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.help05"
+    {
+      time 0.970833 3.490833
+      param "NPC_Scimale.help05"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.080000 3.732500
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.3147 0.4482
+        0.4449 0.7018
+        0.7000 0.8788
+        1.3500 1.0000
+        2.3708 1.0000
+        3.0270 0.7471
+        3.2866 0.4413
+        3.4748 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Pissed Off"
+    {
+      time 0.718333 1.718333
+      param "common_expressions"
+      param2 "Pissed Off"
+      event_ramp
+      {
+        0.2379 0.3537
+        0.8655 0.3537
+      }
+    }
+    event expression "Scared"
+    {
+      time 1.579167 2.995833
+      param "common_expressions"
+      param2 "Scared"
+      event_ramp
+      {
+        0.2759 0.4756
+        1.1047 0.4512
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.897436 3.244659
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.7000 0.5800
+          0.9884 1.0000
+          1.8576 0.9600
+          2.0773 0.5600
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "44"
+  "SceneRampTool" "100"
+  "RampTool" "58"
+  "CChoreoView" "32"
+}
+fps 60
+snap off
+ignorePhonemes off

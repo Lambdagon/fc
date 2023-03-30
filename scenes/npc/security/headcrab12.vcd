@@ -1,0 +1,152 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "voice"
+  {
+    event speak "NPC_Security.headcrab12"
+    {
+      time 0.362708 2.269261
+      param "NPC_Security.headcrab12"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at !enemy"
+    {
+      time 0.029375 2.683221
+      param "!enemy"
+      event_ramp
+      {
+        0.1059 0.6647
+        0.3614 0.9756
+        2.1867 1.0000
+        2.4020 0.7219
+      }
+    }
+  }
+  channel "expression"
+  {
+    event expression "b_browup01"
+    {
+      time 0.651253 1.651253
+      param "humans\guard\expressions_guard"
+      param2 "b_browup01"
+      event_ramp
+      {
+        0.1704 0.3447
+        0.7407 0.3046
+      }
+    }
+    event expression "b_incombat01"
+    {
+      time 0.050254 0.852866
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat01"
+      event_ramp
+      {
+        0.2037 0.5584
+        0.5667 0.5502
+      }
+    }
+    event expression "b_wincing01"
+    {
+      time 0.714286 1.845238
+      param "humans\guard\expressions_guard"
+      param2 "b_wincing01"
+      event_ramp
+      {
+        0.2037 0.3436
+        0.4148 0.4545
+        0.8902 0.3011
+      }
+    }
+    event expression "b_incombat02"
+    {
+      time 1.148810 2.595238
+      param "humans\guard\expressions_guard"
+      param2 "b_incombat02"
+      event_ramp
+      {
+        0.1000 0.5325
+        0.2296 0.8146
+        0.5630 0.4687
+        0.8889 0.7615
+        1.1328 0.7568
+        1.2291 0.5785
+      }
+    }
+    event expression "humans\guard\expressions_guard/b_afraid02"
+    {
+      time 1.607143 2.607143
+      param "humans\guard\expressions_guard"
+      param2 "b_afraid02"
+      event_ramp
+      {
+        0.1481 0.4486
+        0.3741 0.4215
+        0.6481 0.1995
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.015687 2.679150
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.017857 2.451191
+      param "bg_accentup"
+      event_ramp
+      {
+        0.2815 0.1322
+        0.6815 0.5832
+        1.8259 0.1771
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "ExpressionTool" "32"
+  "CChoreoView" "108"
+  "GestureTool" "100"
+  "RampTool" "54"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,68 @@
+// Choreo version 1
+actor "GRD02"
+{
+  channel "Look at"
+  {
+    event lookat "Look at !self"
+    {
+      time 2.250000 11.916667
+      param "!self"
+    }
+  }
+  channel "Expression"
+  {
+    event face "face_truman"
+    {
+      time 13.958333 17.111111
+      param "face_truman"
+    }
+    event face "Face grd01s_finalmark"
+    {
+      time 4.750000 6.111111
+      param "grd01s_finalmark"
+    }
+  }
+  channel "Move To"
+  {
+    event moveto "Moveto sci04_body_examine01"
+    {
+      time 0.852778 6.263094
+      param "sci04_body_examine01"
+      param2 "Walk"
+      distancetotarget 63.00
+    }
+    event moveto "face_truman"
+    {
+      time 16.686111 25.776983
+      param "face_truman"
+      param2 "Walk"
+      distancetotarget 20.00
+    }
+    event moveto "grd02top_move03"
+    {
+      time 7.144444 15.610315
+      param "grd02top_move03"
+      param2 "Walk"
+      distancetotarget 15.00
+    }
+  }
+}
+
+actor "!target"
+{
+  channel "Voice"
+  {
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "32"
+  "CChoreoView" "16"
+}
+fps 60
+snap off
+ignorePhonemes off

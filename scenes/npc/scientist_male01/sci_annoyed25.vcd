@@ -1,0 +1,125 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.annoyance_pre25"
+    {
+      time 0.402827 1.496591
+      param "NPC_Scimale.annoyance_pre25"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.016478 3.394084
+      param "!player"
+      event_ramp
+      {
+        0.1529 0.1806
+        0.2403 0.6847
+        0.4093 0.9769
+        2.6091 1.0000
+        2.8451 0.8146
+        3.0483 0.4739
+        3.1770 0.2222
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Angry ShockM"
+    {
+      time 0.462827 2.256944
+      param "common_expressions"
+      param2 "Angry ShockM"
+      event_ramp
+      {
+        0.2833 0.5975
+        1.0311 0.7597
+        1.3157 0.5529
+        1.4126 0.4231
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.109886 1.109885
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.0900 0.4723
+        0.8450 0.4911
+      }
+    }
+    event expression "sci_digust01"
+    {
+      time 0.725271 2.137034
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_digust01"
+      event_ramp
+      {
+        0.4800 0.4723
+        0.8850 0.7603
+        1.2568 0.3128
+      }
+    }
+    event expression "sci_freaked_mouthclosed"
+    {
+      time 0.212450 1.776552
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthclosed"
+      event_ramp
+      {
+        0.2759 0.2255
+        0.3353 0.3235
+        0.6765 0.4061
+        1.0813 0.5018
+        1.2193 0.2574
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.238091 3.302193
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.0900 0.4723
+        0.9901 0.4911
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "Head Back"
+    {
+      time 0.014130 3.417285
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_forwardback" range 0.2 -0.2 
+        {
+          0.7857 0.5700
+          1.2571 0.8400
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "192"
+  "RampTool" "68"
+  "SceneRampTool" "100"
+  "ExpressionTool" "28"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

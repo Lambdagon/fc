@@ -1,0 +1,146 @@
+// Choreo version 1
+actor "village_roof_slave_09a"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+  }
+  channel "Face At"
+  {
+    event face "Face target_vortpanic_face01"
+    {
+      time 4.068252 5.102973
+      param "target_vortpanic_face01"
+    }
+  }
+  channel "Move to"
+  {
+    event moveto "Moveto target_vortpanic_mark01"
+    {
+      time 1.734916 5.137695
+      param "target_vortpanic_mark01"
+      param2 "run_all"
+      distancetotarget 25.00
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "hg_headup"
+    {
+      time 0.074075 2.374075
+      param "hg_headup"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+    }
+    event gesture "g_Accent_BothHands01"
+    {
+      time 3.833333 6.300000
+      param "g_Accent_BothHands01"
+      absolutetags playback_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+      sequenceduration 2.466667
+    }
+    event gesture "hg_headup"
+    {
+      time 3.782409 6.082409
+      param "hg_headup"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.441176
+        "loop" 0.514706
+        "end" 0.661765
+      }
+    }
+    event gesture "g_LabWork_goAway"
+    {
+      time 5.291666 7.591666
+      param "g_LabWork_goAway"
+      absolutetags playback_time
+      {
+        "apex" 0.147059
+        "extreme" 0.250000
+        "loop" 0.691176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.147059
+        "extreme" 0.250000
+        "loop" 0.691176
+        "end" 0.735294
+      }
+    }
+  }
+  channel "Flex Animation"
+  {
+    event gesture "g_Accent_BothHands01"
+    {
+      time 6.083333 8.550000
+      param "g_Accent_BothHands01"
+      absolutetags playback_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191781
+        "accent" 0.301370
+        "loop" 0.410959
+        "end" 0.616438
+      }
+    }
+  }
+  channel "move to"
+  {
+  }
+  faceposermodel "models\vortigaunt_slave.mdl"
+}
+
+scalesettings
+{
+  "CChoreoView" "24"
+  "SceneRampTool" "100"
+  "RampTool" "24"
+  "ExpressionTool" "50"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

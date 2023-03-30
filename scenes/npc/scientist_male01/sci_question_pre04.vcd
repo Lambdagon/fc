@@ -1,0 +1,134 @@
+// Choreo version 1
+event stoppoint "Completion"
+{
+  time 2.565173 -1.000000
+  param "noaction"
+}
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.question_pre04"
+    {
+      time 0.634032 2.414531
+      param "NPC_Scimale.question_pre04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.042549 4.105433
+      param "!friend"
+      event_ramp
+      {
+        0.1846 0.4026
+        0.2900 0.7403
+        0.6400 0.9935
+        3.1126 0.9805
+        3.5449 0.7338
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "sci_browup"
+    {
+      time 0.511201 1.082630
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_browup"
+      event_ramp
+      {
+        0.1872 0.2774
+        0.3468 0.3955
+        0.4234 0.2397
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 0.795427 1.795427
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1915 0.4097
+        0.6000 0.4380
+        0.8660 0.2822
+      }
+    }
+    event expression "sci_afraid01"
+    {
+      time 1.217550 2.527075
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid01"
+      event_ramp
+      {
+        0.2404 0.1924
+        0.7670 0.4298
+        0.9861 0.3589
+      }
+    }
+    event expression "sci_angry01"
+    {
+      time 1.941261 2.941262
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_angry01"
+      event_ramp
+      {
+        0.1915 0.4097
+        0.6000 0.5502
+        0.8660 0.3943
+      }
+    }
+  }
+  channel "Flex"
+  {
+  }
+  channel "Gesture"
+  {
+  }
+  channel "Accent"
+  {
+    event gesture "bg_accentup"
+    {
+      time 0.018382 2.451717
+      param "bg_accentup"
+      event_ramp
+      {
+        0.5143 0.2102
+        0.6429 0.3377
+        1.5714 0.1334
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "18"
+  "SceneRampTool" "100"
+  "RampTool" "42"
+  "CChoreoView" "352"
+}
+fps 60
+snap off
+ignorePhonemes off

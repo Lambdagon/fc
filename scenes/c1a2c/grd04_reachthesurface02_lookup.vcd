@@ -1,0 +1,856 @@
+// Choreo version 1
+event stoppoint "FIRE!"
+{
+  time 3.652778 -1.000000
+  param "noaction"
+}
+actor "GRD04"
+{
+  channel "Voice"
+  {
+    event speak "oc.grd04.elevator.holyhell01"
+    {
+      time 0.597240 1.957263
+      param "oc.grd04.elevator.holyhell01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "oc.grd04.elevator.holyhell02"
+    {
+      time 2.398827 3.172183
+      param "oc.grd04.elevator.holyhell02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.063492 6.188035
+      param "!player"
+      event_ramp
+      {
+        0.0652 0.1199
+        0.1472 0.1962
+        0.2630 0.5368
+        0.8813 1.0000
+        5.2688 0.9714
+        6.0053 0.1716
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "LOOKING UP"
+    {
+      time 0.041667 2.097223
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9061
+          1.3237 0.0000
+          1.4348 1.0000
+          1.6431 0.8298
+        }
+        {
+          0.6570 0.5000
+          0.8376 0.5000
+          1.0181 0.5000
+          1.3237 0.5000
+          1.4348 0.5000
+          1.6431 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.6709 0.5600
+          1.3237 0.9600
+          1.3237 0.9600
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          0.6709 1.0000
+          1.3237 1.0000
+          1.3237 1.0000
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 1.0000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 0.6100
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.6570 0.6400
+          0.8376 0.6413
+          1.0181 0.6269
+          1.4348 0.5663
+          1.6431 0.5452
+        }
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "bg_accentUp"
+    {
+      time 0.416667 2.850000
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+    event gesture "p_ready"
+    {
+      time -0.083333 2.577778
+      param "p_ready"
+      absolutetags playback_time
+      {
+        "apex" 0.126477
+        "loop" 0.505908
+        "end" 0.819449
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.097087
+        "loop" 0.388350
+        "end" 0.776699
+      }
+      sequenceduration 3.466667
+    }
+    event gesture "g_point_l_rpg"
+    {
+      time 1.601851 3.568518
+      param "g_point_l_rpg"
+      absolutetags playback_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.603448
+        "out" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "in" 0.086207
+        "loop" 0.431034
+        "end" 0.603448
+        "out" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+    event flexanimation "LOOKING UP"
+    {
+      time 2.583333 8.861113
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          1.2959 1.0000
+          1.4765 1.0000
+          1.6570 0.9061
+          1.9626 0.0000
+          2.0737 1.0000
+          2.2820 0.8298
+        }
+        {
+          1.2959 0.5000
+          1.4765 0.5000
+          1.6570 0.5000
+          1.9626 0.5000
+          2.0737 0.5000
+          2.2820 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          1.3098 0.5600
+          1.9626 0.9600
+          1.9626 0.9600
+        }
+        {
+          1.3098 0.5000
+          1.9626 0.5000
+          1.9626 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          1.3098 1.0000
+          1.9626 1.0000
+          1.9626 1.0000
+        }
+        {
+          1.3098 0.5000
+          1.9626 0.5000
+          1.9626 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.2959 1.0000
+          1.4765 1.0000
+          1.6570 0.9530
+          2.0737 1.0000
+          2.2820 1.0000
+          4.3000 1.0000
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.2959 1.0000
+          1.4765 1.0000
+          1.6570 0.9530
+          2.0737 1.0000
+          4.2403 1.0000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          1.2959 0.6400
+          1.4765 0.6413
+          1.6570 0.6269
+          2.0737 0.5663
+          2.2820 0.5452
+        }
+      }
+    }
+    event gesture "bg_accentUp"
+    {
+      time 2.138889 4.572222
+      param "bg_accentUp"
+      absolutetags playback_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.125000
+        "extreme" 0.305556
+        "loop" 0.555556
+        "end" 0.694444
+      }
+      sequenceduration 2.433333
+    }
+  }
+}
+
+actor "SCI02"
+{
+  channel "Trigger Sequence"
+  {
+    event firetrigger "1- Cancel Sci02's stting down"
+    {
+      time 2.138888 -1.000000
+      param "1"
+    }
+    event gesture "Sit_Chair_to_Idle"
+    {
+      time 2.138888 2.983307
+      param "Sit_Chair_to_Idle"
+      sequenceduration 1.733333
+    }
+  }
+  channel "Face"
+  {
+    event face "Face GRD04"
+    {
+      time 4.550569 6.585826
+      param "GRD04"
+      event_ramp
+      {
+        0.5714 1.0000
+        2.0353 1.0000
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "LOOKING UP"
+    {
+      time 3.416666 9.055557
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9061
+          1.3237 0.0000
+          1.4348 1.0000
+          1.6431 0.8298
+        }
+        {
+          0.6570 0.5000
+          0.8376 0.5000
+          1.0181 0.5000
+          1.3237 0.5000
+          1.4348 0.5000
+          1.6431 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.6709 0.5600
+          1.3237 0.9600
+          1.3237 0.9600
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          0.6709 1.0000
+          1.3237 1.0000
+          1.3237 1.0000
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 1.0000
+          3.7167 0.8800
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 1.0000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.6570 0.6400
+          0.8376 0.6413
+          1.0181 0.6269
+          1.4348 0.5663
+          1.6431 0.5452
+        }
+      }
+    }
+    event expression "sci_freaked_mouthopen"
+    {
+      time 2.055555 4.000000
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_freaked_mouthopen"
+      event_ramp
+      {
+        0.5286 0.6446
+        1.4048 0.6293
+      }
+    }
+    event expression "sci_afraid00"
+    {
+      time 1.277778 3.018518
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.4762 0.5643
+        1.3619 0.5301
+      }
+    }
+    event expression "sci_afraid00"
+    {
+      time 3.518518 6.185185
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_afraid00"
+      event_ramp
+      {
+        0.4762 0.5643
+        2.2878 0.5301
+      }
+    }
+    event expression "sci_buckup"
+    {
+      time 4.296297 7.981481
+      param "humans\scientist\expressions_scientist"
+      param2 "sci_buckup"
+      event_ramp
+      {
+        0.6714 0.9575
+        3.0672 0.9315
+      }
+    }
+  }
+  channel "Look at"
+  {
+    event lookat "Look at GRD04"
+    {
+      time 2.339285 6.492063
+      param "GRD04"
+      event_ramp
+      {
+        0.4643 0.9917
+        2.4571 0.9941
+        3.7875 0.9941
+      }
+    }
+    event lookat "Look at GRD01_Storage"
+    {
+      time 3.177910 4.469577
+      param "GRD01_Storage"
+      event_ramp
+      {
+        0.4357 0.9941
+        0.9818 0.9953
+      }
+    }
+    event lookat "Look at GRD02_TopSide"
+    {
+      time 5.080027 6.371694
+      param "GRD02_TopSide"
+      event_ramp
+      {
+        0.4357 0.6989
+        0.9818 0.7001
+      }
+    }
+    event lookat "Look at GRD04"
+    {
+      time 0.291666 2.694444
+      param "GRD04"
+      event_ramp
+      {
+        0.4357 0.9941
+        2.0929 0.9953
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+actor "SCI04"
+{
+  channel "Look"
+  {
+    event face "Face GRD04"
+    {
+      time 1.847222 3.819443
+      param "GRD04"
+    }
+    event lookat "Look at GRD04"
+    {
+      time 1.055555 4.152778
+      param "GRD04"
+      event_ramp
+      {
+        0.4716 0.9917
+        2.9151 0.9953
+      }
+    }
+    event moveto "Moveto GRD04"
+    {
+      time 3.623016 4.611111
+      param "GRD04"
+      param2 "Run"
+      distancetotarget 41.00
+    }
+    event moveto "Moveto SCI02watches"
+    {
+      time 4.763889 7.866667
+      param "SCI02watches"
+      param2 "Run"
+      param3 "GRD04"
+      forceshortmovement
+    }
+    event gesture "g_arrest_clench"
+    {
+      time 7.362422 9.329088
+      param "g_arrest_clench"
+      absolutetags playback_time
+      {
+        "apex" 0.103448
+        "accent" 0.275862
+        "loop" 0.431034
+        "end" 0.517241
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.103448
+        "accent" 0.275862
+        "loop" 0.431034
+        "end" 0.517241
+      }
+      sequenceduration 1.966667
+    }
+    event face "Face !player"
+    {
+      time 5.458333 9.659721
+      param "!player"
+    }
+    event lookat "Look at !self"
+    {
+      time 3.875000 10.027779
+      param "!self"
+    }
+    event flexanimation "LOOKING UP"
+    {
+      time 4.888888 10.527780
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9061
+          1.3237 0.0000
+          1.4348 1.0000
+          1.6431 0.8298
+        }
+        {
+          0.6570 0.5000
+          0.8376 0.5000
+          1.0181 0.5000
+          1.3237 0.5000
+          1.4348 0.5000
+          1.6431 0.5000
+        }
+        "inner_raiser" combo 
+        {
+          0.6709 0.5600
+          1.3237 0.9600
+          1.3237 0.9600
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          0.6709 1.0000
+          1.3237 1.0000
+          1.3237 1.0000
+        }
+        {
+          0.6709 0.5000
+          1.3237 0.5000
+          1.3237 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 1.0000
+          3.7167 0.8800
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.6570 1.0000
+          0.8376 1.0000
+          1.0181 0.9530
+          1.4348 1.0000
+          1.6431 1.0000
+        }
+        "eyes_rightleft" range 30.0 -30.0 
+        {
+          0.6570 0.6400
+          0.8376 0.6413
+          1.0181 0.6269
+          1.4348 0.5663
+          1.6431 0.5452
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist_female.mdl"
+}
+
+actor "GRD02_TopSide"
+{
+  channel "Look"
+  {
+    event lookat "Look at GRD04"
+    {
+      time 0.157408 1.351852
+      param "GRD04"
+    }
+    event lookat "Look at GRD04"
+    {
+      time 2.305556 4.282408
+      param "GRD04"
+      event_ramp
+      {
+        0.3857 0.5218
+        1.6964 0.7048
+      }
+    }
+    event moveto "Moveto SCI02watches"
+    {
+      time 5.152778 11.316667
+      param "GRD04"
+      param2 "Run"
+      param3 "GRD01_Storage"
+      distancetotarget 58.00
+      forceshortmovement
+    }
+    event face "Face !self"
+    {
+      time 6.583334 8.544446
+      param "!self"
+    }
+    event lookat "Look at !player"
+    {
+      time 8.000003 12.444447
+      param "!player"
+      event_ramp
+      {
+        0.5375 0.4227
+        1.0000 0.6104
+        2.2500 0.7344
+        3.5625 0.6222
+        4.0750 0.4227
+      }
+    }
+    event face "Face SCI04"
+    {
+      time 7.716668 11.444446
+      param "SCI04"
+      event_ramp
+      {
+        0.7000 0.9976
+        2.5250 1.0000
+        3.7278 0.9941
+      }
+    }
+    event lookat "Look at GRD01_Storage"
+    {
+      time 1.151388 2.665277
+      param "GRD01_Storage"
+      event_ramp
+      {
+        0.2906 0.6659
+        1.3318 0.6695
+      }
+    }
+    event lookat "Look at SCI04"
+    {
+      time 4.388889 6.011573
+      param "SCI04"
+      event_ramp
+      {
+        0.2333 0.6352
+        1.1958 0.6316
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event gesture "g_scratchhead"
+    {
+      time 2.630440 5.245254
+      param "g_scratchhead"
+      event_ramp
+      {
+        0.2952 1.0000
+        1.9910 1.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.179094
+        "accent" 0.192989
+        "loop" 0.385977
+        "end" 0.673640
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  faceposermodel "models\humans\guard.mdl"
+}
+
+actor "GRD01_Storage"
+{
+  channel "Look"
+  {
+    event lookat "Look at GRD04"
+    {
+      time 0.292593 2.186112
+      param "GRD04"
+      event_ramp
+      {
+        0.4716 0.9917
+        1.7114 0.9953
+      }
+    }
+    event lookat "Look at !player"
+    {
+      time 8.122222 10.186109
+      param "!player"
+      event_ramp
+      {
+        0.4716 0.9917
+        1.8817 0.9953
+      }
+    }
+    event lookat "Look at SCI04"
+    {
+      time 3.059258 5.852777
+      param "SCI04"
+      event_ramp
+      {
+        0.4716 0.6966
+        2.6114 0.5821
+      }
+    }
+    event face "Face SCI04"
+    {
+      time 4.566667 7.466666
+      param "SCI04"
+      event_ramp
+      {
+        1.2625 0.9965
+        2.2000 1.0000
+      }
+    }
+    event lookat "Self ALT"
+    {
+      time 5.455554 8.036112
+      param "!self"
+      event_ramp
+      {
+        0.4716 0.5785
+        2.3984 0.5821
+      }
+    }
+    event face "Face SCI04"
+    {
+      time 7.283333 10.799999
+      param "SCI04"
+      event_ramp
+      {
+        1.2625 0.9965
+        2.8167 1.0000
+      }
+    }
+    event lookat "Look at GRD02_TopSide"
+    {
+      time 5.588888 7.869444
+      param "GRD02_TopSide"
+      event_ramp
+      {
+        0.4716 0.5785
+        2.0984 0.5821
+      }
+    }
+    event lookat "Look at GRD02_TopSide"
+    {
+      time 1.033331 2.936110
+      param "GRD02_TopSide"
+      event_ramp
+      {
+        0.4716 0.9575
+        1.7207 0.9611
+      }
+    }
+  }
+  channel "move to"
+  {
+    event moveto "Moveto GRD04"
+    {
+      time 2.430556 4.200001
+      param "GRD04"
+      param2 "Run"
+      distancetotarget 136.00
+      forceshortmovement
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_chestup"
+    {
+      time 0.824074 3.457407
+      param "g_chestup"
+      absolutetags playback_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.128205
+        "accent" 0.217949
+        "loop" 0.320513
+        "end" 0.769231
+      }
+      sequenceduration 2.633333
+    }
+  }
+}
+
+actor "GRD02"
+{
+  channel "Look"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "20"
+  "RampTool" "42"
+  "ExpressionTool" "24"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

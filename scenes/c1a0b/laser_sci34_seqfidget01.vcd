@@ -1,0 +1,87 @@
+// Choreo version 1
+event stoppoint "Fire!"
+{
+  time 3.000000 -1.000000
+  param "noaction"
+}
+actor "SCI34_Laser"
+{
+  channel "Voice"
+  {
+  }
+  channel "Look At"
+  {
+  }
+  channel "Move To"
+  {
+  }
+  channel "Face At"
+  {
+    event face "Face "
+    {
+      time 0.000000 3.744447
+      param "!self"
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Flex"
+    {
+      time 0.000000 3.000000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+      }
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "g_scratchhead"
+    {
+      time 0.000000 3.633333
+      param "g_scratchhead"
+      event_ramp
+      {
+        0.1450 0.9984
+        3.6333 0.9984
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.128889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.138889
+        "accent" 0.138889
+        "loop" 0.277778
+        "end" 0.583333
+      }
+      sequenceduration 3.633333
+    }
+  }
+  channel "Triggers"
+  {
+  }
+}
+
+actor "SCI35_Laser"
+{
+  channel "Face At"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "SceneRampTool" "2"
+  "RampTool" "40"
+  "ExpressionTool" "46"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

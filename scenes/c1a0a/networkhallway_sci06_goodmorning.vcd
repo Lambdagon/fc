@@ -1,0 +1,110 @@
+// Choreo version 1
+actor "Sci06_NetworkHallway"
+{
+  channel "voice"
+  {
+    event speak "vo\c1a0a\sci06_goodmorningdoctor01.wav"
+    {
+      time 0.371212 1.800441
+      param "am.sci06.goodmorningdoctor01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gestures"
+  {
+    event gesture "g_righthand_flick"
+    {
+      time 0.303571 2.620347
+      param "g_righthand_flick"
+      event_ramp
+      {
+        0.0000 0.0000
+        0.4700 0.2425
+        0.8620 0.3853
+        1.3766 0.2746
+        1.7036 0.0362
+        1.8639 0.0000
+        2.3167 0.0000
+      }
+      absolutetags playback_time
+      {
+        "apex" 0.215526
+        "accent" 0.356644
+        "loop" 0.824788
+        "end" 0.958979
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "accent" 0.354167
+        "loop" 0.520833
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !player"
+    {
+      time 0.227057 2.562569
+      param "!player"
+      event_ramp
+      {
+        0.3897 0.5725
+        0.7172 0.8333
+        1.0345 0.8406
+        1.4138 0.8551
+        1.7448 0.8551
+        2.0655 0.6159
+        2.1828 0.4565
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.321969 2.583333
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "cheek_raiser" combo 
+        {
+          0.4140 1.0000
+          1.6660 0.9100
+        }
+        {
+        }
+        "corner_puller" combo 
+        {
+          0.4040 1.0000
+          1.5560 1.0000
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.2020 0.8800
+          0.8320 0.7700
+          1.0560 0.4900
+        }
+      }
+    }
+  }
+  faceposermodel "models\humans\scientist.mdl"
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "58"
+  "CChoreoView" "96"
+}
+fps 60
+snap off
+ignorePhonemes off

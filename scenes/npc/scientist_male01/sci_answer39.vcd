@@ -1,0 +1,96 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Sound"
+  {
+    event speak "NPC_Scimale.answer_pre39"
+    {
+      time 0.446666 2.092448
+      param "NPC_Scimale.answer_pre39"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.023530 2.965616
+      param "!friend"
+      event_ramp
+      {
+        0.1952 0.1562
+        0.3532 0.7618
+        0.5632 0.9931
+        2.2060 0.9931
+        2.5762 0.7183
+        2.7644 0.2222
+      }
+    }
+    event expression "Dubious"
+    {
+      time -0.009524 2.933333
+      param "common_expressions"
+      param2 "Dubious"
+      event_ramp
+      {
+        0.6185 0.6875
+        2.1111 0.6736
+      }
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "fa"
+    {
+      time 0.000000 2.900000
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "wrinkler" 
+        {
+          0.4345 0.3600
+          2.1966 0.3900
+        }
+        "corner_depressor" combo 
+        {
+          0.3862 0.3300
+          2.3724 0.3600
+        }
+        {
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          1.0207 0.5000
+          1.4552 0.4100
+          1.9276 0.5200
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          0.3414 0.8400
+          1.3034 0.8800
+          2.3448 0.8600
+        }
+      }
+    }
+  }
+  channel "Accent"
+  {
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "58"
+  "SceneRampTool" "100"
+  "RampTool" "54"
+  "CChoreoView" "140"
+}
+fps 60
+snap off
+ignorePhonemes off

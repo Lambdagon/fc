@@ -1,0 +1,147 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_hgrunt.taunt09_var03"
+    {
+      time 0.453334 2.514445
+      param "NPC_hgrunt.taunt09_var03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+  }
+  channel "Flex"
+  {
+    event flexanimation "Crazy Angry01"
+    {
+      time 0.046038 2.580420
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          1.2285 0.7500
+          1.4015 0.8469
+          1.4977 1.0000
+          1.7862 0.8859
+        }
+        {
+          1.2285 0.5000
+          1.4015 0.5000
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "outer_raiser" combo 
+        {
+          1.4977 1.0000
+          1.7862 0.8990
+        }
+        {
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "lowerer" combo 
+        {
+          0.1654 0.8000
+          1.2285 0.9900
+          1.4015 1.0000
+          1.4977 0.7500
+          1.7862 0.3794
+        }
+        {
+          1.2285 0.5000
+          1.4015 0.5000
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "cheek_raiser" combo 
+        {
+          1.2285 0.7300
+          1.4015 0.8243
+          1.4977 0.8029
+          1.7862 0.5985
+        }
+        {
+          1.2285 0.5000
+          1.4015 0.5000
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "wrinkler" 
+        {
+          1.2285 0.7800
+          1.4015 0.3300
+          1.4977 0.2079
+          1.7862 0.0640
+        }
+        "corner_depressor" combo 
+        {
+          1.2285 0.3000
+          1.4015 0.3388
+          1.4977 0.3300
+          1.7862 0.2459
+        }
+        {
+          1.2285 0.5000
+          1.4015 0.5000
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "part" combo 
+        {
+          1.2285 0.1200
+          1.4015 0.8017
+          1.4977 0.7809
+          1.7862 0.5821
+        }
+        {
+          1.2285 0.5000
+          1.4015 0.5000
+          1.4977 0.5000
+          1.7862 0.5000
+        }
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3618 0.2000
+          0.6797 0.4300
+          1.2285 0.5500
+          1.4015 0.6165
+          1.5592 0.9600
+          1.8754 0.5400
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          1.2285 0.4900
+          1.4015 0.3419
+          1.4977 0.2200
+          1.7862 0.4100
+        }
+      }
+    }
+  }
+  channel "Look At"
+  {
+    event lookat "self?"
+    {
+      time 0.046667 2.554242
+      param "!self"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "80"
+  "RampTool" "100"
+  "ExpressionTool" "56"
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

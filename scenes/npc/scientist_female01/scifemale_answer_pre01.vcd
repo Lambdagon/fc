@@ -1,0 +1,105 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "Voice"
+  {
+    event speak "NPC_Scifemale.answer_pre01"
+    {
+      time 0.633180 4.016559
+      param "NPC_Scifemale.answer_pre01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Look"
+  {
+    event lookat "Look at !friend"
+    {
+      time 0.042963 6.137464
+      param "!friend"
+      event_ramp
+      {
+        0.2154 0.4142
+        0.5600 0.6509
+        1.1667 0.9408
+        4.4757 0.7722
+        4.4955 0.7751
+        4.6805 0.7515
+        5.0805 0.7278
+        5.2555 0.6953
+        5.5710 0.4704
+        5.8143 0.1361
+      }
+    }
+  }
+  channel "Gesture"
+  {
+    event expression "SciFem_dubious right"
+    {
+      time 2.144444 5.311111
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_dubious right"
+      event_ramp
+      {
+        0.3160 0.9112
+        2.1769 0.9645
+        2.7285 0.5651
+      }
+    }
+  }
+  channel "Expression"
+  {
+    event expression "humans\scientist_female\expresssions_scientist_female/SciFem_anger00"
+    {
+      time 0.222222 4.740740
+      param "humans\scientist_female\expresssions_scientist_female"
+      param2 "SciFem_anger00"
+      event_ramp
+      {
+        0.5182 0.4970
+      }
+    }
+  }
+  channel "Flex"
+  {
+    event flexanimation "headup"
+    {
+      time 0.231456 4.453393
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          1.7500 0.5500
+          2.2375 0.7200
+          2.5750 0.5500
+          2.9000 0.5100
+        }
+        "eyes_updown" range 30.0 -30.0 
+        {
+          0.5875 0.4900
+          1.0000 0.4900
+          1.3500 0.4700
+          1.7750 0.2900
+          2.2375 0.4900
+        }
+      }
+    }
+  }
+  channel "Face"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "60"
+  "RampTool" "26"
+  "SceneRampTool" "100"
+  "ExpressionTool" "16"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

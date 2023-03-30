@@ -1,0 +1,85 @@
+// Choreo version 1
+actor "GRD02_Lobby"
+{
+  channel "Voice"
+  {
+    event speak "vo\c1a0a\grd02_callandanswer04.wav"
+    {
+      time 0.306632 1.974818
+      param "am.grd02.callandanswer04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "Expression"
+  {
+    event flexanimation "Facial Animation"
+    {
+      time 0.058139 2.075127
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.1240 0.7300
+          0.3000 0.8900
+          0.4862 0.9100
+          0.9103 0.9300
+          1.3724 0.8900
+          1.7034 0.7700
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.1240 0.7300
+          0.3000 0.8900
+          0.4862 0.9100
+          0.9103 0.9300
+          1.3724 0.8900
+          1.7034 0.7400
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.1240 0.7300
+          0.3000 0.8900
+          0.4862 0.9100
+          0.9103 0.9300
+          1.3724 0.8900
+          1.7034 0.7400
+        }
+        {
+        }
+      }
+    }
+    event flexanimation "Head Animation"
+    {
+      time 0.077520 2.080901
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "head_updown" range 15.0 -15.0 
+        {
+          0.3103 0.5000
+          0.4310 0.7100
+          0.6448 0.7200
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "58"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "188"
+}
+fps 60
+snap off
+ignorePhonemes off
