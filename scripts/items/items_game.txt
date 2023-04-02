@@ -21864,7 +21864,116 @@
 			}
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
-		}						
+		}	
+		"9406"
+        {
+            "name"    "John 357"
+            "item_class"    "tf_weapon_revolver"
+            "baseitem" "0"
+            "tags"
+            {
+                "can_deal_damage"            "1"
+                "can_deal_mvm_penetration_damage"    "1"
+                "can_deal_long_distance_damage"    "1"
+            }
+            "item_type_name"    ".357 Magnum Revolver"
+            "item_name"    "Colt Python"
+            "item_slot"    "primary"
+            "show_in_armory"    "1"
+            "image_inventory"    "backpack/weapons/w_models/w_revolver"
+            "image_inventory_size_w"        "128"
+            "image_inventory_size_h"        "82"
+            "model_world"    "models/weapons/w_357.mdl"
+            "model_player"    "models/weapons/v_357.mdl"
+            "attach_to_hands" "0"
+            "inspect_panel_dist" "40"
+            "item_quality"    "unique"
+            "propername"    "1"
+            "min_ilevel"    "5"
+            "max_ilevel"    "5"
+            "used_by_classes"
+            {
+                "john"                "1"
+            }
+            "particle_suffix"        "ar2"
+            "mouse_pressed_sound"    "ui/item_heavy_gun_pickup.wav"
+            "drop_sound"        "ui/item_heavy_gun_drop.wav"
+            "attributes"
+            {
+                "damage bonus HIDDEN"
+                {
+                    "attribute_class"     "mult_dmg"
+                    "value" "2"
+                }
+                "weapon spread bonus"
+                {
+                    "attribute_class"    "mult_spread_scale"
+                    "value" "0.4"
+                }
+                "revolver use hit locations"
+                {
+                    "attribute_class"    "set_weapon_mode"
+                    "value"    "1"
+                }
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"    "2"
+                }
+
+            }
+            "static_attrs"
+            {
+                "min_viewmodel_offset"        "10 0 -9"
+            }
+            "visuals"
+            {
+                "sound_single_shot"        "Weapon_357.Single"
+                "sound_double_shot"        "Weapon_357.Single"
+                "sound_burst"            "Weapon_357.Single"
+                "sound_empty"            "HL2_Weapon_Shotgun.Empty"
+                "sound_reload"            "Weapon_357.Reload"
+                "sound_special1"        "Weapon_357.Single"
+            }
+        }
+		"9407"
+		{
+			"name"	"John Kleiner Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"0"
+			"model_world" "models/kleiner.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"eistein scintist"
+			"item_name"	"Dr. Isaac Kleiner"
+			"item_description"	"Everyone's favorite(?) doctor!"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"mouse_pressed_sound"	"items/kleiner_select.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+		}					
 		"850"
 		{
 			"name"			"Deflector"
@@ -23138,77 +23247,7 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		"9405"
-        {
-            "name"    "John 357"
-            "item_class"    "tf_weapon_revolver"
-            "baseitem" "0"
-            "tags"
-            {
-                "can_deal_damage"            "1"
-                "can_deal_mvm_penetration_damage"    "1"
-                "can_deal_long_distance_damage"    "1"
-            }
-            "item_type_name"    ".357 Magnum Revolver"
-            "item_name"    "Colt Python"
-            "item_slot"    "primary"
-            "show_in_armory"    "1"
-            "image_inventory"    "backpack/weapons/w_models/w_revolver"
-            "image_inventory_size_w"        "128"
-            "image_inventory_size_h"        "82"
-            "model_world"    "models/weapons/w_357.mdl"
-            "model_player"    "models/weapons/v_357.mdl"
-            "attach_to_hands" "0"
-            "inspect_panel_dist" "40"
-            "item_quality"    "unique"
-            "propername"    "1"
-            "min_ilevel"    "5"
-            "max_ilevel"    "5"
-            "used_by_classes"
-            {
-                "john"                "1"
-            }
-            "particle_suffix"        "ar2"
-            "mouse_pressed_sound"    "ui/item_heavy_gun_pickup.wav"
-            "drop_sound"        "ui/item_heavy_gun_drop.wav"
-            "attributes"
-            {
-                "damage bonus HIDDEN"
-                {
-                    "attribute_class"     "mult_dmg"
-                    "value" "2"
-                }
-                "weapon spread bonus"
-                {
-                    "attribute_class"    "mult_spread_scale"
-                    "value" "0.4"
-                }
-                "revolver use hit locations"
-                {
-                    "attribute_class"    "set_weapon_mode"
-                    "value"    "1"
-                }
-                "fire rate penalty"
-                {
-                    "attribute_class"    "mult_postfiredelay"
-                    "value"    "2"
-                }
 
-            }
-            "static_attrs"
-            {
-                "min_viewmodel_offset"        "10 0 -9"
-            }
-            "visuals"
-            {
-                "sound_single_shot"        "Weapon_357.Single"
-                "sound_double_shot"        "Weapon_357.Single"
-                "sound_burst"            "Weapon_357.Single"
-                "sound_empty"            "HL2_Weapon_Shotgun.Empty"
-                "sound_reload"            "Weapon_357.Reload"
-                "sound_special1"        "Weapon_357.Single"
-            }
-        }
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
