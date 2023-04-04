@@ -22125,8 +22125,8 @@
 		}	
 		"9410"
 		{
-			"name"	"Sovereign"
-			"item_class"	"tf_weapon_revolver"
+			"name"	"Spyshotgun"
+			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -22141,23 +22141,24 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"Break-Action Pistol"
-			"item_name"	"Tranquilizer Gun"
-			"item_description"	"Model by goober of the goof"
+			"item_type_name"	"Shotgun"
+			"item_name"	"Shotgun"
+			"item_description"	""
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"show_in_armory"	"1"
 			"propername"	"0"
-			"item_logname"	"pistol"
-			"item_iconname"	"pistol"
+			"item_logname"	"shotgun"
+			"item_iconname"	"shotgun"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_biggun/c_revolver"
+			"image_inventory"	"backpack/weapons/c_models/c_shotgun/c_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_sovereign/c_revolver.mdl"
-			"attach_to_hands" "1"
+			"model_player"	"models/weapons/v_models/v_shotgun_soldier.mdl"
+			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
+			"attach_to_hands" "2"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
 			{
@@ -22169,32 +22170,11 @@
 			}
 			"attributes"
 			{
-
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "4"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.2"
-				}
-				"clip size penalty"
-			{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.2"
-			}
-            "maxammo primary increased"
-			{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "2"
-            }
 			}
 			"visuals"
 			{
 			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}			
 		"850"
