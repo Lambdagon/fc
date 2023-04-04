@@ -22014,32 +22014,189 @@
 				"voice pitch scale"
 				{
 					"attribute_class"	"voice_pitch_scale"
-					"value"		"1.1"
-				}
-				"max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "75"
+					"value"		"1.08"
 				}
 				"health regen"
 				{
 					"attribute_class"	"add_health_regen"
-					"value"	"7.5"
+					"value"	"2"
                 }
 				"move speed penalty"
 				{
 					"attribute_class" 	"mult_player_movespeed"
 					"value" "0.8"
 				}
-				"no double jump"
+				"increased jump height"
 				{
-					"attribute_class" 	"set_scout_doublejump_disabled"
+					"attribute_class"	"mod_jump_height"
+					"value" "0.67"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
 					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"vo/taunts/spy/Spy_taunt_dosi_end_37.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
-		}					
+		}		
+		"9409"
+		{
+			"name"	"Mini-Scattergun"
+			"item_class"	"tf_weapon_scattergun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Minigun? Scattergun?"
+			"item_name"	"The War Crime"
+			"item_description"	"Model by goober of the goof"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"miniscattergun"
+			"item_iconname"	"minigun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_minigun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_miniscattergun/c_scattergun.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.44"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.25"
+                }
+				"clip size bonus"
+			{
+					"attribute_class"	"mult_clipsize"
+					"value" "2"
+			}
+            "maxammo primary increased"
+			{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "2"
+            }
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.45"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}	
+		"9410"
+		{
+			"name"	"Sovereign"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Break-Action Pistol"
+			"item_name"	"Tranquilizer Gun"
+			"item_description"	"Model by goober of the goof"
+			"item_slot"	"secondary"
+			"anim_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"pistol"
+			"item_iconname"	"pistol"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_biggun/c_revolver"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_sovereign/c_revolver.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "4"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.2"
+				}
+				"clip size penalty"
+			{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.2"
+			}
+            "maxammo primary increased"
+			{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "2"
+            }
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}			
 		"850"
 		{
 			"name"			"Deflector"
@@ -22324,12 +22481,12 @@
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "1.25"
-                                }
-                                "move speed penalty"
+                }
+                "move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value" "0.70"
-                                }
+                }
 			}
 			"visuals"
 			{

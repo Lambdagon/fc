@@ -1,0 +1,2499 @@
+DebugMenu
+{
+	"width"		"1250"
+	"height"	"880"
+
+	Props
+	{
+		"Wood Crate"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl"
+		}
+		"Wood Crate 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate002a.mdl"
+		}
+		"Barrel"
+		{
+			"command"	"prop_physics_create props_c17/oildrum001.mdl;ent_setname"
+		}
+		"Explosive Barrel"
+		{
+			"command"	"prop_physics_create props_c17/oildrum001_explosive.mdl"
+		}
+		"Blue Barrel"
+		{
+			"command"	"prop_physics_create props_borealis/bluebarrel001.mdl"
+		}
+		"Bench"
+		{
+			"command"	"prop_physics_create props_c17/bench01a.mdl" 
+		}
+		"Bench 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/BenchOutdoor01a.mdl"
+		}
+		"Bench 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/bench_indoor001a.mdl targetname bch3"
+		}
+		"Bench 4"
+		{
+			"command"	"prop_physics_create props_wasteland/cafeteria_bench001a.mdl"
+		}
+		"Chair"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_chair01a.mdl"
+		}
+		"Chair 2"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureChair001a.mdl"
+		}
+		"Chair 3"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_chair03a.mdl"
+		}
+		"Chair 4"
+		{
+			"command"	"prop_physics_create props_c17/chair02a.mdl"
+		}
+		"Chair 5"
+		{
+			"command"	"prop_physics_create props_c17/chair_office01a.mdl"
+		}
+		"Breen Chair"
+		{
+			"command"	"prop_physics_create props_combine/breenchair.mdl"
+		}
+		"Armchair"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureArmchair001a.mdl"
+		}
+		"Prison Chair"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/chair_kleiner03a.mdl"
+		}
+		"Train Seats"
+		{
+			"command"	"ent_create prop_physics_override model models/props_trainstation/traincar_seats001.mdl"
+		}
+		"Stool"
+		{
+			"command"	"prop_physics_create props_c17/chair_stool01a.mdl"
+		}
+		"Toilet"
+		{
+			"command"	"prop_physics_create props_wasteland/prison_toilet01.mdl"
+		}
+		"Sink"
+		{
+			"command"	"prop_physics_create props_wasteland/prison_sink001b.mdl"
+		}
+		"Sink 2"
+		{
+			"command"	"ent_create prop_physics_override model models/props_interiors/SinkKitchen01a.mdl"
+		}
+		"Radiator"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureRadiator001a.mdl"
+		}
+		"Radiator 2"
+		{
+			"command"	"prop_physics_create props_interiors/Radiator01a.mdl"
+		}
+		"Bathtub"
+		{
+			"command"	"ent_create prop_physics_override model models/props_interiors/BathTub01a.mdl"
+		}
+		"Bathtub 2"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureBathtub001a.mdl"
+		}
+		"Fridge"
+		{
+			"command"	"ent_create prop_physics_override model models/props_wasteland/kitchen_fridge001a.mdl"
+		}
+		"Fridge 2"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureFridge001a.mdl"
+		}
+		"Fridge 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_interiors/refrigerator01a.mdl"
+		}
+		"Fridge Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_interiors/refrigeratorDoor01a.mdl"
+		}
+		"Fridge Door 2"
+		{
+			"command"	"ent_create prop_physics_override model models/props_interiors/refrigeratorDoor02a.mdl"
+		}
+		"Shelf 1"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_shelf001a.mdl"
+		}
+		"Shelf 2"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_shelf002a.mdl"
+		}
+		"Cabinet Drawer"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_CabinetDrawer01a.mdl"
+		}
+		"Cabinet Drawer 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_interiors/Furniture_CabinetDrawer02a.mdl"
+		}
+		"Lockers"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/lockers.mdl"
+		}
+		"Locker Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/lockerdoorleft.mdl"
+		}
+		"Counter"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_counter001a.mdl"
+		}
+		"Counter 2"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_counter001b.mdl"
+		}
+		"Counter 3"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_counter001c.mdl"
+		}
+		"Counter 4"
+		{
+			"command"	"prop_physics_create props_wasteland/kitchen_counter001d.mdl"
+		}
+		"Stove"
+		{
+			"command"	"ent_create prop_physics_override model models/props_wasteland/kitchen_stove001a.mdl"
+		}
+		"Stove 2"
+		{
+			"command"	"ent_create prop_physics_override model models/props_wasteland/kitchen_stove002a.mdl"
+		}
+		"Table"
+		{
+			"command"	"prop_physics_create props_wasteland/cafeteria_table001a.mdl"
+		}
+		"Table 2"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureTable001a.mdl"
+		}
+		"Table 3"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureTable002a.mdl"
+		}
+		"Table 4"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureTable003a.mdl"
+		}
+		"Drawer"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureDrawer001a.mdl"
+		}
+		"Drawer 2"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureDrawer002a.mdl"
+		}
+		"Drawer 3"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureDrawer003a.mdl"
+		}
+		"Bed"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureBed001a.mdl"
+		}
+		"Mattres"
+		{
+			"command"	"ent_create prop_ragdoll model models/props_c17/FurnitureMattress001a.mdl"
+		}
+		"Desk"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_Desk01a.mdl"
+		}
+		"File Cabinet"
+		{
+			"command"	"prop_physics_create props_lab/filecabinet02.mdl"
+		}
+		"Small Lamp"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_Lamp01a.mdl"
+		}
+		"Shelf 3"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_shelf01a.mdl"
+		}
+		"Vanity"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_Vanity01a.mdl"
+		}
+		"Cupboard"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureCupboard001a.mdl"
+		}
+		"Dresser"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureDresser001a.mdl"
+		}
+		"Fireplace"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/FurnitureFireplace001a.mdl"
+		}
+		"Trashcan"
+		{
+			"command"	"prop_physics_create props_trainstation/trashcan_indoor001a.mdl"
+		}
+		"Trashcan 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/trashcan_indoor001b.mdl"
+		}
+		"Couch"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_Couch01a.mdl"
+		}
+		"Couch 2"
+		{
+			"command"	"prop_physics_create props_interiors/Furniture_Couch02a.mdl"
+		}
+		"Couch 3"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureCouch001a.mdl"
+		}
+		"Couch 4"
+		{
+			"command"	"prop_physics_create props_c17/FurnitureCouch002a.mdl"
+		}
+		"Wooden Pallet"
+		{
+			"command"	"prop_physics_create props_junk/wood_pallet001a.mdl"
+		}
+		"Metal Desk"
+		{
+			"command"	"prop_physics_create props_wasteland/controlroom_desk001a.mdl"
+		}
+		"Breen Desk"
+		{
+			"command"	"ent_create prop_physics_override model models/props_combine/breendesk.mdl"
+		}
+		"Dumpster"
+		{
+			"command"	"ent_create prop_physics model models/props_junk/TrashDumpster02.mdl"
+		}
+		"Dumpster Lid"
+		{
+			"command"	"prop_physics_create props_junk/TrashDumpster02b.mdl"
+		}
+		"Plank"
+		{
+			"command"	"prop_physics_create props_wasteland/dockplank01b.mdl"
+		}
+		"Ravenholm Sign"
+		{
+			"command"	"prop_physics_create props_junk/ravenholmsign.mdl"
+		}
+		"Vending Machine"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_interiors/VendingMachineSoda01a.mdl"
+		}
+		"Vending Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_interiors/VendingMachineSoda01a_door.mdl"
+		}
+		"Ladder"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/metalladder001.mdl"
+		}
+		"Ladder 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/metalladder002.mdl"
+		}
+		"Ladder 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/metalladder002b.mdl"
+		}
+		"Ladder 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/metalladder003.mdl"
+		}
+		"Slide"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/playgroundslide01.mdl"
+		}
+		"TickTac"
+		{
+			"command"	"prop_physics_create props_c17/playgroundTick-tack-toe_block01a.mdl"
+		}
+		"TickTac Post"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/playgroundTick-tack-toe_post01.mdl"
+		}
+		"Carousel"
+		{
+			"command"	"prop_physics_create props_c17/playground_carousel01.mdl"
+		}
+		"Jungle Gym"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/playground_jungle_gym01a.mdl"
+		}
+		"Jungle Gym 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/playground_jungle_gym01b.mdl"
+		}
+		"Trash Bin"
+		{
+			"command"	"prop_physics_create props_junk/TrashBin01a.mdl"
+		}
+		"Push Cart"
+		{
+			"command"	"prop_physics_create props_junk/PushCart01a.mdl"
+		}
+		"Buoy"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/buoy01.mdl"
+		}
+		"Harpoon"
+		{
+			"command"	"prop_physics_create props_junk/harpoon002a.mdl"
+		}
+		"Wood Board"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board01a.mdl"
+		}
+		"Wood Board 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board02a.mdl"
+		}
+		"Wood Board 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board03a.mdl"
+		}
+		"Wood Board 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board04a.mdl"
+		}
+		"Wood Board 5"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board05a.mdl"
+		}
+		"Wood Board 6"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board06a.mdl"
+		}
+		"Wood Board 7"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_debris/wood_board07a.mdl"
+		}
+		"Barrier"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/concrete_barrier001a.mdl"
+		}
+		"Barricade"
+		{
+			"command"	"prop_physics_create props_wasteland/barricade001a.mdl"
+		}
+		"Barricade 2"
+		{
+			"command"	"prop_physics_create props_wasteland/barricade002a.mdl"
+		}
+		"Gas Pump"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/gaspump001a.mdl"
+		}
+		"Dock Pole"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_docks/dock01_pole01a_128.mdl"
+		}
+		"Dock Pole Long"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_docks/dock01_pole01a_256.mdl"
+		}
+		"Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_c17/door01_left.mdl"
+		}
+		
+		"Glass Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_c17/door02_double.mdl"
+		}
+		"Ship Door"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_borealis/borealis_door001a.mdl"
+		}
+		"Blast Door"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/blastdoor001a.mdl"
+		}
+		"Blast Door 2"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/blastdoor001b.mdl"
+		}
+		"Blast Door 3"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/blastdoor001c.mdl"
+		}
+		"Wood Fence"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_wasteland/wood_fence01a.mdl"
+		}
+		"Wood Fence 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_wasteland/wood_fence02a.mdl"
+		}
+		"Metal Panel"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_debris/metal_panel01a.mdl"
+		}
+		"Metal Panel 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_debris/metal_panel02a.mdl"
+		}
+		"Cargo Container"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_wasteland/cargo_container01.mdl"
+		}
+		"Cargo Container 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics model models/props_wasteland/cargo_container01b.mdl"
+		}
+		"Kennel"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/kennel.mdl"
+		}
+		"Orange Tube"
+		{
+			"command"	"ent_create prop_physics_override model models/props_lab/generatortube.mdl"
+		}
+		"Sign Pole"
+		{
+			"command"	"prop_physics_create props_c17/signpole001.mdl"
+		}
+		"Iron Beam"
+		{
+			"command"	"prop_physics_create props_junk/iBeam01a.mdl"
+		}
+		"Iron Beam 2"
+		{
+			"command"	"prop_physics_create props_junk/iBeam01a_cluster01.mdl"
+		}
+		"Doll"
+		{
+			"command"	"prop_physics_create props_c17/doll01.mdl"
+		}
+		"Clock"
+		{
+			"command"	"prop_physics_create props_c17/clock01.mdl"
+		}
+		"Cash Reg"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/cashregister01a.mdl"
+		}
+		"Chopper Bomb"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/Combine_Helicopter/helicopter_bomb01.mdl"
+		}
+		"Tram Lever"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/tram_lever01.mdl"
+		}
+		"Tram Lever Base"
+		{
+			"command"	"ent_create prop_physics_override model models/props_wasteland/tram_leverbase01.mdl"
+		}
+		"Wrench"
+		{
+			"command"	"prop_physics_create props_c17/tools_wrench01a.mdl"
+		}
+		"Pliers"
+		{
+			"command"	"prop_physics_create props_c17/tools_pliers01a.mdl"
+		}
+		"Meat Grinder"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/grinderclamp01a.mdl"
+		}
+		"Door Slotted"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_doors/door03_slotted_left.mdl"
+		}
+		"Weapon Stripper"
+		{
+			"command"	"ent_create prop_physics_override model models/props_combine/weaponstripper.mdl"
+		}
+		"Streetsign"
+		{
+			"command"	"prop_physics_create props_c17/streetsign001c.mdl"
+		}
+		"Streetsign 2"
+		{
+			"command"	"prop_physics_create props_c17/streetsign002b.mdl"
+		}
+		"Streetsign 3"
+		{
+			"command"	"prop_physics_create props_c17/streetsign003b.mdl"
+		}
+		"Streetsign 4"
+		{
+			"command"	"prop_physics_create props_c17/streetsign004e.mdl"
+		}
+		"Streetsign 5"
+		{
+			"command"	"prop_physics_create props_c17/streetsign004f.mdl"
+		}
+		"Streetsign 6"
+		{
+			"command"	"prop_physics_create props_c17/streetsign005b.mdl"
+		}
+		"Streetsign 7"
+		{
+			"command"	"prop_physics_create props_c17/streetsign005c.mdl"
+		}
+		"Streetsign 8"
+		{
+			"command"	"prop_physics_create props_c17/streetsign005d.mdl"
+		}
+		"Matt Pipe"
+		{
+			"command"	"prop_physics_create props_canal/mattpipe.mdl"
+		}
+		"Pot"
+		{
+			"command"	"prop_physics_create props_interiors/pot01a.mdl"
+		}
+		"Pot 2"
+		{
+			"command"	"prop_physics_create props_interiors/pot02a.mdl"
+		}
+		"Concrete Block"
+		{
+			"command"	"prop_physics_create props_debris/concrete_cynderblock001.mdl"
+		}
+		"Cinder Block"
+		{
+			"command"	"prop_physics_create props_junk/CinderBlock01a.mdl"
+		}
+		"Breen Bust"
+		{
+			"command"	"prop_physics_create props_combine/breenbust.mdl"
+		}
+		"Combine Light"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/breenlight.mdl"
+		}
+		"Meat Hook"
+		{
+			"command"	"prop_physics_create props_junk/meathook001a.mdl"
+		}
+		"Suit Charger"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/suit_charger001.mdl"
+		}
+		"Bucket"
+		{
+			"command"	"prop_physics_create props_junk/MetalBucket01a.mdl"
+		}
+		"Bucket 2"
+		{
+			"command"	"prop_physics_create props_junk/MetalBucket02a.mdl"
+		}
+		"Saw blade"
+		{
+			"command"	"prop_physics_create props_junk/sawblade001a.mdl"
+		}
+		"Magnifying Lamp"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/light_magnifyinglamp02.mdl"
+		}
+		"Plant Pot"
+		{
+			"command"	"prop_physics_create props_junk/terracotta01.mdl"
+		}
+		"Rock"
+		{
+			"command"	"prop_physics_create props_junk/Rock001a.mdl"
+		}
+		"Watermelon"
+		{
+			"command"	"prop_physics_create props_junk/watermelon01.mdl"
+		}
+		"Dog Sign"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/bewaredog.mdl"
+		}
+		"Traffic Cone"
+		{
+			"command"	"prop_physics_create props_junk/TrafficCone001a.mdl"
+		}
+		"Cremator Head"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/crematorcase.mdl"
+		}
+		"Jar"
+		{
+			"command"	"prop_physics_create props_lab/jar01a.mdl"
+		}
+		"Jar 2"
+		{
+			"command"	"prop_physics_create props_lab/jar01b.mdl"
+		}
+		"Hev Plate"
+		{
+			"command"	"prop_physics_create props_lab/hevplate.mdl"
+		}
+		"Keypad"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/keypad.mdl"
+		}
+		"Radio"
+		{
+			"command"	"prop_physics_create props_lab/citizenradio.mdl"
+		}
+		"TV"
+		{
+			"command"	"prop_physics_create props_c17/tv_monitor01.mdl"
+		}
+		"Monitor"
+		{
+			"command"	"prop_physics_create props_lab/monitor01a.mdl"
+		}
+		"Monitor 2"
+		{
+			"command"	"prop_physics_create props_lab/monitor01b.mdl"
+		}
+		"Monitor 3"
+		{
+			"command"	"prop_physics_create props_lab/monitor02.mdl"
+		}
+		"Lab Receiver"
+		{
+			"command"	"prop_physics_create props_lab/reciever01a.mdl"
+		}
+		"Lab Receiver 2"
+		{
+			"command"	"prop_physics_create props_lab/reciever01b.mdl"
+		}
+		"Lab Receiver 3"
+		{
+			"command"	"prop_physics_create props_lab/reciever01c.mdl"
+		}
+		"Lab Receiver 4"
+		{
+			"command"	"prop_physics_create props_lab/reciever01d.mdl"
+		}
+		"Keyboard"
+		{
+			"command"	"prop_physics_create props_c17/computer01_keyboard.mdl"
+		}
+		"Hard Drive"
+		{
+			"command"	"prop_physics_create props_lab/harddrive01.mdl"
+		}
+		"Hard Drive 2"
+		{
+			"command"	"prop_physics_create props_lab/harddrive02.mdl"
+		}
+		"Console"
+		{
+			"command"	"prop_physics_create props_c17/consolebox01a.mdl"
+		}
+		"Console 2"
+		{
+			"command"	"prop_physics_create props_c17/consolebox03a.mdl"
+		}
+		"Console 3"
+		{
+			"command"	"prop_physics_create props_c17/consolebox05a.mdl"
+		}
+		"Phone Reciever"
+		{
+			"command"	"prop_physics_create props_trainstation/payphone_reciever001a.mdl"
+		}
+		"Hula Doll"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/huladoll.mdl"
+		}
+		"Desk Lamp"
+		{
+			"command"	"prop_physics_create props_lab/desklamp01.mdl"
+		}
+		"Cactus"
+		{
+			"command"	"prop_physics_create props_lab/cactus.mdl"
+		}
+		"Clipboard"
+		{
+			"command"	"prop_physics_create props_lab/clipboard.mdl"
+		}
+		"Photo"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/frame002a.mdl"
+		}
+		"Clock 2"
+		{
+			"command"	"prop_physics_create props_combine/breenclock.mdl"
+		}
+		"Globe"
+		{
+			"command"	"prop_physics_create props_combine/breenglobe.mdl"
+		}
+		"Rock 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/rockcliff01b.mdl"
+		}
+		"Rock 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/rockcliff01c.mdl"
+		}
+		"Rock 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/rockcliff01e.mdl"
+		}
+		"Big Rock"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/BigRock.mdl"
+		}
+		"Crab Cannister"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/headcrabcannister01a.mdl"
+		}
+		"Crab Cannister 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/headcrabcannister01b.mdl"
+		}
+		"Tram Bracket"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/tram_bracket01.mdl"
+		}
+		"Speaker Clust"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/SpeakerCluster01a.mdl"
+		}
+		"Chimney"
+		{
+			"command"	"prop_physics_create props_animated_breakable/Smokestack.mdl"
+		}
+		"Cannister"
+		{
+			"command"	"prop_physics_create props_c17/canister01a.mdl"
+		}
+		"Cannister 2"
+		{
+			"command"	"prop_physics_create props_c17/canister02a.mdl"
+		}
+		"Propane Cannister"
+		{
+			"command"	"prop_physics_create props_junk/PropaneCanister001a.mdl"
+		}
+		"Propane Tank"
+		{
+			"command"	"prop_physics_create props_junk/propane_tank001a.mdl"
+		}
+		"Propane"
+		{
+			"command"	"prop_physics_create props_c17/canister_propane01a.mdl"
+		}
+		"Bicycle"
+		{
+			"command"	"prop_physics_create props_junk/bicycle01a.mdl"
+		}
+		"Carboard"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage_carboard001a.mdl"
+		}
+		"Carboard 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage_carboard002a.mdl"
+		}
+		"Carboard Box"
+		{
+			"command"	"prop_physics_create props_junk/cardboard_box001b.mdl"
+		}
+		"Carboard Box 2"
+		{
+			"command"	"prop_physics_create props_junk/cardboard_box002a.mdl"
+		}
+		"Carboard Box 3"
+		{
+			"command"	"prop_physics_create props_junk/cardboard_box002b.mdl"
+		}
+		"Carboard Box 4"
+		{
+			"command"	"prop_physics_create props_junk/cardboard_box003a.mdl"
+		}
+		"Carboard Box 5"
+		{
+			"command"	"prop_physics_create props_junk/cardboard_box003b.mdl"
+		}
+		"Garbage"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage128_composite001a.mdl"
+		}
+		"Garbage 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage128_composite001b.mdl"
+		}
+		"Garbage 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage128_composite001c.mdl"
+		}
+		"Garbage 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/garbage128_composite001d.mdl"
+		}
+		"Garbage 5"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/TrashCluster01a.mdl"
+		}
+		"Gear"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/gear01.mdl"
+		}
+		"Cooling Tank"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/horizontalcoolingtank04.mdl"
+		}
+		"Vent"
+		{
+			"command"	"prop_physics_create props_junk/vent001.mdl"
+		}
+		"Display Cooler"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/display_cooler01a.mdl"
+		}
+		"Fountain"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/fountain_01.mdl"
+		}
+		"Glass Bottle"
+		{
+			"command"	"prop_physics_create props_junk/garbage_glassbottle001a.mdl"
+		}
+		"Glass Bottle 2"
+		{
+			"command"	"prop_physics_create props_junk/garbage_glassbottle002a.mdl"
+		}
+		"Glass Bottle 3"
+		{
+			"command"	"prop_physics_create props_junk/garbage_glassbottle003a.mdl"
+		}
+		"Glass Bottle 4"
+		{
+			"command"	"prop_physics_create props_junk/GlassBottle01a.mdl"
+		}
+		"Plastic Bottle"
+		{
+			"command"	"prop_physics_create props_junk/garbage_plasticbottle001a.mdl"
+		}
+		"Plastic Bottle 2"
+		{
+			"command"	"prop_physics_create props_junk/garbage_plasticbottle002a.mdl"
+		}
+		"Plastic Bottle 3"
+		{
+			"command"	"prop_physics_create props_junk/garbage_plasticbottle003a.mdl"
+		}
+		"Newspaper"
+		{
+			"command"	"prop_physics_create props_c17/paper01.mdl"
+		}
+		"Newspaper 2"
+		{
+			"command"	"prop_physics_create props_junk/garbage_newspaper001a.mdl"
+		}
+		"Plastic Bucket"
+		{
+			"command"	"prop_physics_create props_junk/plasticbucket001a.mdl"
+		}
+		"Plastic Crate"
+		{
+			"command"	"prop_physics_create props_junk/PlasticCrate01a.mdl"
+		}
+		"Can"
+		{
+			"command"	"prop_physics_create props_junk/PopCan01a.mdl"
+		}
+		"Metal Can"
+		{
+			"command"	"prop_physics_create props_junk/garbage_metalcan001a.mdl"
+		}
+		"Metal Can 2"
+		{
+			"command"	"prop_physics_create props_junk/garbage_metalcan002a.mdl"
+		}
+		"Take Out"
+		{
+			"command"	"prop_physics_create props_junk/garbage_takeoutcarton001a.mdl"
+		}
+		"Bag"
+		{
+			"command"	"prop_physics_create props_junk/garbage_bag001a.mdl"
+		}
+		"Coffee Mug"
+		{
+			"command"	"prop_physics_create props_junk/garbage_coffeemug001a.mdl"
+		}
+		"Milk Carton"
+		{
+			"command"	"prop_physics_create props_junk/garbage_milkcarton001a.mdl"
+		}
+		"Milk Carton 2"
+		{
+			"command"	"prop_physics_create props_junk/garbage_milkcarton002a.mdl"
+		}
+		"Glass Jug"
+		{
+			"command"	"prop_physics_create props_junk/glassjug01.mdl"
+		}
+		"Shoe"
+		{
+			"command"	"prop_physics_create props_junk/Shoe001a.mdl"
+		}
+		"Shovel"
+		{
+			"command"	"prop_physics_create props_junk/Shovel01a.mdl"
+		}
+		"Paintcan"
+		{
+			"command"	"prop_physics_create props_junk/metal_paintcan001a.mdl"
+		}
+		"Paintcan 2"
+		{
+			"command"	"prop_physics_create props_junk/metal_paintcan001b.mdl"
+		}
+		"Gascan"
+		{
+			"command"	"prop_physics_create props_junk/gascan001a.mdl"
+		}
+		"Metal Gascan"
+		{
+			"command"	"prop_physics_create props_junk/metalgascan.mdl"
+		}
+		"Teleporter"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/teleplatform.mdl"
+		}
+		"Payphone"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/payphone001a.mdl"
+		}
+		"Pole"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/pole_448Connection002b.mdl"
+		}
+		"Handrail"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/payphone001a.mdl"
+		}
+		"Plug"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/tpplug.mdl"
+		}
+		"Plug Holder"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_lab/tpplugholder_single.mdl"
+		}
+		"Train Post"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/trainstation_post001.mdl"
+		}
+		"Horse"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/statue_horse.mdl"
+		}
+		"Propeller Blade"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/TrapPropeller_Blade.mdl"
+		}
+		"Propeller Engine"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_c17/TrapPropeller_Engine.mdl"
+		}
+		"Propeller Lever"
+		{
+			"command"	"ent_create prop_physics_override model models/props_c17/TrapPropeller_Lever.mdl"
+		}
+		"Tree Poplar"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/tree_poplar_01.mdl"
+		}
+		"Oak Tree"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/oak_tree01.mdl"
+		}
+		"Cliff Tree"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_foliage/tree_cliff_01a.mdl"
+		}
+		"Tree Deciduous"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/tree_deciduous_01a.mdl"
+		}
+		"Tree Deciduous 2"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/tree_deciduous_02a.mdl"
+		}
+		"Tree Deciduous 3"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/tree_deciduous_03a.mdl"
+		}
+		"Tree Deciduous 4"
+		{
+			"command"	"ent_create prop_physics_override model models/props_foliage/tree_deciduous_03b.mdl"
+		}
+		"Car"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car002a.mdl"
+		}
+		"Car 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car002b.mdl"
+		}
+		"Car 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car003a.mdl"
+		}
+		"Car 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car003b.mdl"
+		}
+		"Car 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car004a.mdl"
+		}
+		"Car 5"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car004b.mdl"
+		}
+		"Car6"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car005a.mdl"
+		}
+		"Car 7"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car005b.mdl"
+		}
+		"Car 8"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car001a_hatchback.mdl"
+		}
+		"Car 9"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/car001b_hatchback.mdl"
+		}
+		"Truck"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/truck001a.mdl"
+		}
+		"Truck 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/truck002a_cab.mdl"
+		}
+		"Truck 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/truck003a.mdl"
+		}
+		"Van"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/van001a.mdl"
+		}
+		"Wagon"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/wagon001a.mdl"
+		}
+		"Combine APC"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/combine_apc_wheelcollision.mdl"
+		}
+		"Car (Ragdoll)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/props_vehicles/car001a_phy.mdl"
+		}
+		"Conscript APC"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/apc001.mdl"
+		}
+		"Boat"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_wasteland/boat_01.mdl"
+		}
+		"Boat 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_canal/boat001a.mdl"
+		}
+		"Boat 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_canal/boat001b.mdl"
+		}
+		"Boat 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_canal/boat002b.mdl"
+		}
+		"Generator"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/generatortrailer01.mdl"
+		}
+		"Trailer"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/trailer001a.mdl"
+		}
+		"Trailer 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/trailer002a.mdl"
+		}
+		"Wheel Barrow"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_junk/Wheebarrow01a.mdl"
+		}
+		"Train"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/train001.mdl"
+		}
+		"Train 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_trainstation/train003.mdl"
+		}
+		"Combine Train"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/combine_train02a.mdl"
+		}
+		"Combine Train 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_combine/combine_train02b.mdl"
+		}
+		"Car Wheel"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/carparts_wheel01a.mdl"
+		}
+		"APC Wheel"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/props_vehicles/apc_tire001.mdl"
+		}
+		"Crowbar"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_crowbar.mdl"
+		}
+		"Pistol"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_pistol.mdl"
+		}
+		"357"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_357.mdl"
+		}
+		"Crossbow"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_crossbow.mdl"
+		}
+		"Smg1"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_smg1.mdl"
+		}
+		"Ar2"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_irifle.mdl"
+		}
+		"Shotgun"
+		{
+			"command"	"ent_create prop_physics_override model models/Weapons/w_shotgun.mdl"
+		}
+		"Frag Grenade"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_grenade.mdl"
+		}
+		"RPG"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_rocket_launcher.mdl"
+		}
+		"Bugbait"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_bugbait.mdl"
+		}
+		"Gravity Gun"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_physics.mdl"
+		}
+		"Stunstick"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_stunbaton.mdl"
+		}
+		"Alyx Gun"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_alyx_gun.mdl"
+		}
+		"Annabelle"
+		{
+			"command"	"ent_create prop_physics_override model models/weapons/w_annabelle.mdl"
+		}
+		"Supplies Smg1"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/items/ammocrate_smg1.mdl"
+		}
+		"Supplies Rockets"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/items/ammoCrate_Rockets.mdl"
+		}
+		"Supplies Ar2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/items/ammocrate_ar2.mdl"
+		}
+
+	}
+	"Ragdolls"
+	{
+		"Kleiner"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/kleiner.mdl"
+		}
+		"Gman"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/gman.mdl"
+		}
+		"Breen"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/breen.mdl"
+		}
+		"Barney"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/barney.mdl"
+		}
+		"Eli"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/eli.mdl"
+		}
+		"Grigori"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/monk.mdl"
+		}
+		"Odessa"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/odessa.mdl"
+		}
+		"Alyx"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/alyx.mdl"
+		}
+		"Mossman"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/mossman.mdl"
+		}
+		"Magnusson (EP2)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/magnusson.mdl"
+		}
+		"DOG"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/dog.mdl"
+		}
+		"Vortigaunt"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/vortigaunt.mdl"
+		}
+		"Vortigaunt Slave"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/vortigaunt_slave.mdl"
+		}
+		"Combine Soldier"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/combine_soldier.mdl"
+		}
+		"Combine Bum"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/combine_soldier.mdl skin 1"
+		}
+		"Metropolice"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/police.mdl"
+		}
+		"Prison Guard"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Combine_Soldier_PrisonGuard.mdl"
+		}
+		"Elite Combine"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/combine_Super_Soldier.mdl"
+		}
+		"Hunter (EP2)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/hunter.mdl"
+		}
+		"Zombie"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/Classic.mdl"
+		}
+		"Zombie Torso"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/Classic_torso.mdl"
+		}
+		"Zombie Legs"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/Classic_legs.mdl"
+		}
+		"Fast Zombie"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/Fast.mdl"
+		}
+		"Poison Zombie"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/Poison.mdl"
+		}
+		"Fast Zombie Torso"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Gibs/Fast_Zombie_Torso.mdl"
+		}
+		"Fast Zombie Legs"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Gibs/Fast_Zombie_legs.mdl"
+		}
+		"Zombine (EP1/2)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Zombie/zombie_soldier.mdl"
+		}
+		"Headcrab"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/headcrabclassic.mdl"
+		}
+		"Poison Headcrab"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/headcrabblack.mdl"
+		}
+		"Fast Headcrab"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/headcrab.mdl"
+		}
+		"Antlion"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/antlion.mdl"
+		}
+		"Antlion Worker (EP2)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/antlion_worker.mdl"
+		}
+		"Antlion Guard"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/antlion_guard.mdl"
+		}
+		"Crow"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Crow.mdl"
+		}
+		"Pigeon"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/pigeon.mdl"
+		}
+		"Seagull"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/seagull.mdl"
+		}
+		"Combine Turret"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/Combine_turrets/Floor_turret.mdl"
+		}
+		"Roller Mine"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/Roller.mdl"
+		}
+		"Combine Scanner"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Combine_Scanner.mdl"
+		}
+		"Shield Scanner"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/Shield_Scanner.mdl"
+		}
+		"Combine Dropship"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Combine_dropship.mdl"
+		}
+		"Combine Gunship"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/gunship.mdl"
+		}
+		"Manhack"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/manhack.mdl"
+		}
+		"Helicopter"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_physics_override model models/Combine_Helicopter.mdl"
+		}
+		"Strider"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/combine_strider.mdl"
+		}
+		"Male Cheaple"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_Cheaple.mdl"
+		}
+		"Male 01 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_01.mdl"
+		}
+		"Male 02 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_02.mdl"
+		}
+		"Male 03 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_03.mdl"
+		}
+		"Male 04 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_04.mdl"
+		}
+		"Male 05 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_05.mdl"
+		}
+		"Male 06 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_06.mdl"
+		}
+		"Male 07 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_07.mdl"
+		}
+		"Male 08 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_08.mdl"
+		}
+		"Male 09 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Male_09.mdl"
+		}
+		"Female 01 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_01.mdl"
+		}
+		"Female 02 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_02.mdl"
+		}
+		"Female 03 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_03.mdl"
+		}
+		"Female 04 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_04.mdl"
+		}
+		"Female 06 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_06.mdl"
+		}
+		"Female 07 (Group01)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group01/Female_07.mdl"
+		}
+		"Male 01 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_01.mdl"
+		}
+		"Male 02 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_02.mdl"
+		}
+		"Male 03 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_03.mdl"
+		}
+		"Male 04 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_04.mdl"
+		}
+		"Male 05 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_05.mdl"
+		}
+		"Male 06 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_06.mdl"
+		}
+		"Male 07 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_07.mdl"
+		}
+		"Male 08 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_08.mdl"
+		}
+		"Male 09 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Male_09.mdl"
+		}
+		"Female 01 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_01.mdl"
+		}
+		"Female 02 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_02.mdl"
+		}
+		"Female 03 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_03.mdl"
+		}
+		"Female 04 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_04.mdl"
+		}
+		"Female 06 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_06.mdl"
+		}
+		"Female 07 (Group02)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group02/Female_07.mdl"
+		}
+		"Male 01 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_01.mdl"
+		}
+		"Male 02 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_02.mdl"
+		}
+		"Male 03 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_03.mdl"
+		}
+		"Male 04 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_04.mdl"
+		}
+		"Male 05 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_05.mdl"
+		}
+		"Male 06 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_06.mdl"
+		}
+		"Male 07 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_07.mdl"
+		}
+		"Male 08 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_08.mdl"
+		}
+		"Male 09 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Male_09.mdl"
+		}
+		"Female 01 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_01.mdl"
+		}
+		"Female 02 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_02.mdl"
+		}
+		"Female 03 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_03.mdl"
+		}
+		"Female 04 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_04.mdl"
+		}
+		"Female 06 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_06.mdl"
+		}
+		"Female 07 (Group03)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03/Female_07.mdl"
+		}
+		"Male 01 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_01.mdl"
+		}
+		"Male 02 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_02.mdl"
+		}
+		"Male 03 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_03.mdl"
+		}
+		"Male 04 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_04.mdl"
+		}
+		"Male 05 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_05.mdl"
+		}
+		"Male 06 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_06.mdl"
+		}
+		"Male 07 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_07.mdl"
+		}
+		"Male 08 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_08.mdl"
+		}
+		"Male 09 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Male_09.mdl"
+		}
+		"Female 01 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_01.mdl"
+		}
+		"Female 02 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_02.mdl"
+		}
+		"Female 03 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_03.mdl"
+		}
+		"Female 04 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_04.mdl"
+		}
+		"Female 06 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_06.mdl"
+		}
+		"Female 07 (Medic)"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Group03m/Female_07.mdl"
+		}
+		"Corpse"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/corpse1.mdl"
+		}
+		"Corpse 2"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Charple01.mdl"
+		}
+		"Corpse 3"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Charple02.mdl"
+		}
+		"Corpse 4"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Charple03.mdl"
+		}
+		"Corpse 5"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/Humans/Charple04.mdl"
+		}
+	}
+	"TF2"
+	{
+		"Scout"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/scout.mdl"
+		}
+		"Soldier"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/soldier.mdl"
+		}
+		"Pyro"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/pyro.mdl"
+		}
+		"Demoman"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/demo.mdl"
+		}
+		"Heavy"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/heavy.mdl"
+		}
+		"Engineer"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/engineer.mdl"
+		}
+		"Medic"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/medic.mdl"
+		}
+		"Sniper"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/sniper.mdl"
+		}
+		"Spy"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create prop_ragdoll model models/player/spy.mdl"
+		}
+		"Health Kit Small"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create item_healthkit_small automaterialize 0"
+		}
+		"Health Kit Medium"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create item_healthkit_medium automaterialize 0"
+		}
+		"Health Kit Full"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create item_healthkit_full automaterialize 0"
+		}
+		"Sandvich"
+		{
+			"command"	"prop_physics_create props_junk/wood_crate001a.mdl;ent_setname fixpos;wait;ent_remove fixpos;ent_create item_healthkit_medium model models/items/plate.mdl automaterialize 0"
+		}
+	}
+	"NPCs"
+	{
+		"Kleiner"
+		{
+			"command"	"npc_create npc_kleiner"
+		}
+		"Gman"
+		{
+			"command"	"npc_create npc_gman"
+		}
+		"Breen"
+		{
+			"command"	"npc_create npc_breen"
+		}
+		"Barney"
+		{
+			"command"	"npc_create npc_barney"
+		}
+		"Eli"
+		{
+			"command"	"npc_create npc_eli"
+		}
+		"Grigori"
+		{
+			"command"	"npc_create npc_monk"
+		}
+		"Alyx"
+		{
+			"command"	"npc_create npc_alyx"
+		}
+		"Mossman"
+		{
+			"command"	"npc_create npc_mossman"
+		}
+		"Magnusson (EP2)"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/magnusson.mdl"
+		}
+		"Odessa"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/odessa.mdl"
+		}
+		"DOG"
+		{
+			"command"	"npc_create npc_dog"
+		}
+		"Citizen"
+		{
+			"command"	"npc_create npc_citizen"
+		}
+		"Refugee(Unarmed)"
+		{
+			"command"	"ent_create npc_citizen citizentype 2"
+		}
+		"Rebel(Ar2)"
+		{
+			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_ar2"
+		}
+		"Rebel(Smg1)"
+		{
+			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_smg1"
+		}
+		"Rebel(Shotgun)"
+		{
+			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_shotgun"
+		}
+		"Medic(Smg1)"
+		{
+			"command"	"ent_create npc_citizen citizentype 3 spawnflags 131072 additionalequipment weapon_smg1"
+		}
+		"Metropolice"
+		{
+			"command"	"npc_create npc_metropolice"
+		}
+		"Combine Soldier"
+		{
+			"command"	"npc_create npc_combine_s"
+		}
+		"Elite Soldier(AR2)"
+		{
+			"command"	"ent_create npc_combine_s model models/Combine_Super_Soldier.mdl additionalequipment weapon_ar2 tacticalvariant 2 NumGrenades 2"
+		}
+		"Prison Guard(SMG1)"
+		{
+			"command"	"ent_create npc_combine_s model models/Combine_Soldier_PrisonGuard.mdl additionalequipment weapon_smg1 NumGrenades 2"
+		}
+		"Zombie"
+		{
+			"command"	"npc_create npc_zombie"
+		}
+		"Fast Zombie"
+		{
+			"command"	"npc_create npc_fastzombie"
+		}
+		"Poison Zombie"
+		{
+			"command"	"npc_create npc_poisonzombie"
+		}
+		"Zombie torso"
+		{
+			"command"	"npc_create npc_zombie_torso"
+		}
+		"Headcrab"
+		{
+			"command"	"npc_create npc_headcrab"
+		}
+		"Fast Headcrab"
+		{
+			"command"	"npc_create npc_headcrab_fast"
+		}
+		"Poison Headcrab"
+		{
+			"command"	"npc_create npc_headcrab_poison"
+		}
+		"Vortigaunt"
+		{
+			"command"	"npc_create npc_vortigaunt"
+		}
+		"Antlion"
+		{
+			"command"	"npc_create npc_antlion"
+		}
+		"Antlion Guard"
+		{
+			"command"	"npc_create npc_antlionguard"
+		}
+		"Antlion Guardian"
+		{
+			"command"	"ent_create npc_antlionguard cavernbreed 1 incavern 1"
+		}
+		"Manhack"
+		{
+			"command"	"npc_create npc_manhack"
+		}
+		"City Scanner"
+		{
+			"command"	"npc_create npc_cscanner"
+		}
+		"Claw Scanner"
+		{
+			"command"	"npc_create npc_clawscanner"
+		}
+		"Rollermine"
+		{
+			"command"	"npc_create npc_rollermine"
+		}
+		"Turret"
+		{
+			"command"	"npc_create npc_turret_floor"
+		}
+		"Helicopter(CenterSpawn)"
+		{
+			"command"	"give npc_helicopter"
+		}
+		"Strider(CenterSpawn)"
+		{
+			"command"	"give npc_strider"
+		}
+		"Gunship(CenterSpawn)"
+		{
+			"command"	"give npc_combinegunship"
+		}
+		"Fisherman(Lost Coast)"
+		{
+			"command"	"npc_create npc_fisherman"
+		}
+		"Ichthyosaur"
+		{
+			"command"	"npc_create npc_ichthyosaur"
+		}
+		"Barnacle"
+		{
+			"command"	"ent_create npc_barnacle"
+		}
+		"Combine Mine"
+		{
+			"command"	"ent_create combine_mine"
+		}
+		"Crow"
+		{
+			"command"	"npc_create npc_crow"
+		}
+		"Pigeon"
+		{
+			"command"	"npc_create npc_pigeon"
+		}
+		"Seagull"
+		{
+			"command"	"npc_create npc_seagull"
+		}
+		"Hostage 1(CSS)"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_01.mdl"
+		}
+		"Hostage 2(CSS)"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_02.mdl"
+		}
+		"Hostage 3(CSS)"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_03.mdl"
+		}
+		"Hostage 4(CSS)"
+		{
+			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_04.mdl"
+		}
+		"NPC Weapon:None"
+		{
+			"command"	"npc_create_equipment weapon_none"
+		}
+		"NPC Weapon:Crowbar"
+		{
+			"command"	"npc_create_equipment weapon_crowbar"
+		}
+		"NPC Weapon:Stunstick"
+		{
+			"command"	"npc_create_equipment weapon_stunstick"
+		}
+		"NPC Weapon:Pistol"
+		{
+			"command"	"npc_create_equipment weapon_pistol"
+		}
+		"NPC Weapon:Smg1"
+		{
+			"command"	"npc_create_equipment weapon_smg1"
+		}
+		"NPC Weapon:Ar2"
+		{
+			"command"	"npc_create_equipment weapon_ar2"
+		}
+		"NPC Weapon:Shotgun"
+		{
+			"command"	"npc_create_equipment weapon_shotgun"
+		}
+		"NPC Weapon:RPG"
+		{
+			"command"	"npc_create_equipment weapon_rpg"
+		}
+		"NPC Weapon:Alyx Gun"
+		{
+			"command"	"npc_create_equipment weapon_alyxgun"
+		}
+		"NPC Weapon:Annabelle"
+		{
+			"command"	"npc_create_equipment weapon_annabelle"
+		}
+		"NPC Weapon:SuitCase"
+		{
+			"command"	"npc_create_equipment weapon_citizensuitcase"
+		}
+		"NPC Weapon:Package"
+		{
+			"command"	"npc_create_equipment weapon_citizenpackage"
+		}
+	}
+	
+	"Weapons"
+	{
+		"Physgun"
+		{
+			"command"	"give tf_weapon_physgun"
+		}
+		"Leafblower"
+		{
+			"command"	"give_econ 21"
+		}
+		"Crowbar"
+		{
+			"command"	"give_econ 9021"
+		}
+		"Pistol"
+		{
+			"command"	"give_econ 22"
+		}
+		"Sub Machine Gun"
+		{
+			"command"	"give_econ 16"
+		}
+		"Shotgun"
+		{
+			"command"	"give_econ 12"
+		}
+		"Syringe Gun"
+		{
+			"command"	"give_econ 17"
+		}
+		"Revolver"
+		{
+			"command"	"give_econ 24"
+		}
+		"Pipebomb Launcher"
+		{
+			"command"	"give_econ 19"
+		}
+		"Rocket Launcher"
+		{
+			"command"	"give_econ 18"
+		}
+		"Stickybomb Launcher"
+		{
+			"command"	"give_econ 20"
+		}
+		"Gravity Gun"
+		{
+			"command"	"give tf_weapon_physcannon"
+		}
+		"Cubemap"
+		{
+			"command"	"give weapon_cubemap"
+		}
+		"Pistol Ammo"
+		{
+			"command"	"give item_ammo_pistol"
+		}
+		"Health Kit"
+		{
+			"command"	"give item_healthkit"
+		}
+		"Health Vial"
+		{
+			"command"	"give item_healthvial"
+		}
+		"Suit Battery"
+		{
+			"command"	"give item_battery"
+		}
+	}
+	
+	"Entities"
+	{
+		"Physgun"
+		{
+			"command"	"ent_create weapon_physgun"
+		}
+		"Leafblower"
+		{
+			"command"	"ent_create weapon_leafblower"
+		}
+		"Crowbar"
+		{
+			"command"	"ent_create weapon_crowbar"
+		}
+		"Pistol"
+		{
+			"command"	"ent_create weapon_pistol"
+		}
+		"Sub Machine Gun"
+		{
+			"command"	"ent_create weapon_smg1"
+		}
+		"Shotgun"
+		{
+			"command"	"ent_create weapon_shotgun"
+		}
+		"Pulse Rifle"
+		{
+			"command"	"ent_create weapon_ar2"
+		}
+		"357 Magnum"
+		{
+			"command"	"ent_create weapon_357"
+		}
+		"Crossbow"
+		{
+			"command"	"ent_create weapon_crossbow"
+		}
+		"Frag Grenade"
+		{
+			"command"	"ent_create weapon_frag"
+		}
+		"Rocket Launcher"
+		{
+			"command"	"ent_create weapon_rpg"
+		}
+		"S.L.A.M"
+		{
+			"command"	"ent_create weapon_slam"
+		}
+		"Bugbait"
+		{
+			"command"	"ent_create weapon_bugbait"
+		}
+		"Gravity Gun"
+		{
+			"command"	"ent_create weapon_physcannon"
+		}
+		"Alyx Gun"
+		{
+			"command"	"ent_create weapon_alyxgun"
+		}
+		"Annabelle"
+		{
+			"command"	"ent_create weapon_annabelle"
+		}
+		"Suitcase"
+		{
+			"command"	"ent_create weapon_citizensuitcase"
+		}
+		"Package"
+		{
+			"command"	"ent_create weapon_citizenpackage"
+		}
+		"Pistol Ammo"
+		{
+			"command"	"ent_create item_ammo_pistol"
+		}
+		"Smg1 Ammo"
+		{
+			"command"	"ent_create item_ammo_smg1"
+		}
+		"Shotgun Ammo"
+		{
+			"command"	"ent_create item_box_buckshot"
+		}
+		"Pulse Ammo"
+		{
+			"command"	"ent_create item_ammo_ar2"
+		}
+		"357 Ammo"
+		{
+			"command"	"ent_create item_ammo_357"
+		}
+		"Crossbow Bolts"
+		{
+			"command"	"ent_create item_ammo_crossbow"
+		}
+		"RPG Round"
+		{
+			"command"	"ent_create item_rpg_round"
+		}
+		"Smg1 Grenade"
+		{
+			"command"	"ent_create item_ammo_smg1_grenade"
+		}
+		"Combine Ball"
+		{
+			"command"	"ent_create item_ammo_ar2_altfire"
+		}
+		"Health Kit"
+		{
+			"command"	"ent_create item_healthkit"
+		}
+		"Health Vial"
+		{
+			"command"	"ent_create item_healthvial"
+		}
+		"Suit Battery"
+		{
+			"command"	"ent_create item_battery"
+		}
+		"Health Charger"
+		{
+			"command"	"ent_create item_healthcharger"
+		}
+		"Suit Charger"
+		{
+			"command"	"ent_create item_suitcharger"
+		}
+		"Suit"
+		{
+			"command"	"ent_create item_suit"
+		}
+		"Soda Can"
+		{
+			"command"	"ent_create item_sodacan model models/props_junk/PopCan01a.mdl"
+		}
+		"Crate"
+		{
+			"command"	"ent_create item_item_crate ItemClass npc_manhack ItemCount 10"
+		}
+		"Ammo Crate(Pistol)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 0"
+		}
+		"Ammo Crate(Smg1)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 1"
+		}
+		"Ammo Crate(Ar2)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 2"
+		}
+		"Ammo Crate(RPG)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 3"
+		}
+		"Ammo Crate(Shotgun)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 4"
+		}
+		"Ammo Crate(Grenade)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 5"
+		}
+		"Ammo Crate(Combine Ball)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 8"
+		}
+		"Ammo Crate(Smg1 Grenade)"
+		{
+			"command"	"ent_create item_ammo_crate AmmoType 9"
+		}
+		"Spawn Jeep"
+		{
+			"command"	"ch_createjeep"
+		}
+		"Spawn Jalopy (EP2)"
+		{
+			"command"	"ent_create prop_vehicle_jeep actionScale 1 model models/vehicle.mdl vehiclescript scripts/vehicles/jalopy.txt enablegun 0"
+		}
+		"Spawn Airboat"
+		{
+			"command"	"ch_createairboat"
+		}
+		"Spawn Airboat w/Gun"
+		{
+			"command"	"ch_createairboat;ent_setname airboatwithgun;ent_fire airboatwithgun enablegun 1"
+		}
+		"Explosion"
+		{
+			"command"	"ent_create grenade_ar2"
+		}
+		"Helocopter Bomb"
+		{
+			"command"	"ent_create grenade_helicopter"
+		}
+		"Impact Smoke"
+		{
+			"command"	"ent_create ar2explosion"
+		}
+	}
+	
+	"Tools(Beta)"
+	{
+		"Weld Tool"
+		{
+			"command"	"WeldToggle"
+		}
+		"Ballsocket Tool"
+		{
+			"command"	"BallsocketToggle"
+		}
+		"Parent Tool"
+		{
+			"command"	"ParentToggle"
+		}
+		"Ignite Tool"
+		{
+			"command"	"vsm_ignite"
+		}
+		"Scale Tool"
+		{
+			"command"	"ScaleToggle"
+		}
+		"Spawn Camera"
+		{
+			"command"	"exec Misc/cameratool"
+		}
+		"Toggle Camera"
+		{
+			"command"	"ToggleCamera"
+		}
+		"Set Camera Target"
+		{
+			"command"	"SetCameraTarget"
+		}
+		"Spawn Camera Point"
+		{
+			"command"	"SpawnCameraPoint"
+		}
+		"Camera Follow Player"
+		{
+			"command"	"exec Misc/camplayertarget"
+		}
+		"Spawn Cannister"
+		{
+			"command"	"vsm_spawn_cannister"
+		}
+		"Toggle Cannisters"
+		{
+			"command"	"vsm_toggle_cannisters"
+		}
+		"Spawn JBCannister"
+		{
+			"command"	"ent_create_cannister"
+		}
+		"Activate JBCannisters"
+		{
+			"command"	"cannisters_activate"
+		}
+		"Disable JBCannisters"
+		{
+			"command"	"cannisters_deactivate"
+		}
+		"Ragdoll: Dance"
+		{
+			"command"	"vsm_ragdoll_dance"
+		}
+		"Ragdoll: Fade Out"
+		{
+			"command"	"vsm_ragdoll_fade"
+		}
+		"Swap Color"
+		{
+			"command"	"SwapColor"
+		}
+		"Remove Entity"
+		{
+			"command"	"ent_remove"
+		}
+		"Remove all props"
+		{
+			"command"	"ent_remove_all prop_physics"
+		}
+		"Remove all ragdolls"
+		{
+			"command"	"ent_remove_all prop_ragdoll"
+		}
+		"Disable/Enable AI"
+		{
+			"command"	"ai_disable"
+		}
+		"NPC Select"
+		{
+			"command"	"npc_select"
+		}
+		"Send NPC"
+		{
+			"command"	"npc_go"
+		}
+		"Freeze NPC"
+		{
+			"command"	"npc_freeze"
+		}
+		"Unfreeze NPC"
+		{
+			"command"	"npc_reset"
+		}
+		"Freeze Object"
+		{
+			"command"	"vsm_phys_freeze"
+		}
+		"Unfreeze Object"
+		{
+			"command"	"vsm_phys_unfreeze"
+		}
+	}
+	"Misc(req.sv_cheats)"
+	{
+		"Godmode Off/On"
+		{
+			"command"	"god"
+		}
+		"Noclip(Flymode)"
+		{
+			"command"	"noclip"
+		}
+		"Get all weapons"
+		{
+			"command"	"impulse 101"
+		}
+		"Get ammo for weapon"
+		{
+			"command"	"givecurrentammo"
+		}
+		"Super Gravity Gun"
+		{
+			"command"	"physcannon_mega_enabled 1"
+		}
+		"Normal Gravity Gun"
+		{
+			"command"	"physcannon_mega_enabled 0"
+		}
+		"Notarget On/Off"
+		{
+			"command"	"notarget"
+		}
+		"Restart Map"
+		{
+			"command"	"restart"
+		}
+		"Swap Playermodel"
+		{
+			"command"	"SwapModel"
+		}
+		"Thirdperson"
+		{
+			"command"	"thirdperson"
+		}
+		"Firstperson"
+		{
+			"command"	"firstperson"
+		}
+		"Suicide"
+		{
+			"command"	"kill"
+		}
+		"Hide HUD"
+		{
+			"command"	"cl_drawhud 0"
+		}
+		"Show HUD"
+		{
+			"command"	"cl_drawhud 1"
+		}
+		"Strip Weapons"
+		{
+			"command"	"ent_create  player_weaponstrip targetname stent;ent_fire stent strip;ent_fire stent kill"
+		}
+		"Infinite Suit Power"
+		{
+			"command"	"sv_infinite_aux_power 1"
+		}
+		"Limited Suit Power"
+		{
+			"command"	"sv_infinite_aux_power 0"
+		}
+		"Low Gravity"
+		{
+			"command"	"sv_gravity 50"
+		}
+		"Normal Gravity"
+		{
+			"command"	"sv_gravity 600"
+		}
+		"High Gravity"
+		{
+			"command"	"sv_gravity 2000"
+		}
+		"(Console)Print entity list"
+		{
+			"command"	"dumpentityfactories"
+		}
+		"Slowmo"
+		{
+			"command"	"host_timescale 0.2"
+		}
+		"Normal time"
+		{
+			"command"	"host_timescale 1"
+		}
+		"Fast time"
+		{
+			"command"	"host_timescale 3"
+		}
+		"Stop all sounds"
+		{
+			"command"	"stopsound"
+		}
+	}
+}
