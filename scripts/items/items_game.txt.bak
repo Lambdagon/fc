@@ -3021,6 +3021,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+                                "demoman"       "primary"
 			}
 			"attributes"
 			{
@@ -4009,6 +4010,11 @@
 			{
 				"animation_replacement"
 				{
+					"ACT_VM_DRAW" 							"ACT_MELEE_ALLCLASS_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_MELEE_ALLCLASS_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_PRIMARYATTACK"
+					"ACT_VM_SWINGHARD" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
+					"ACT_VM_MISSCENTER" 					"ACT_MELEE_ALLCLASS_VM_MISSCENTER"
 					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALLCLASS_VM_INSPECT_START"
 					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
 					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
@@ -4817,7 +4823,7 @@
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_name"	"#TF_Weapon_Spy_Sapper"
-			"item_description"	"#TF_Weapon_Spy_Sapper_desc"
+			"item_description"	"Place on enemy buildings to disable and slowly drain away its health. Placing a sapper does not remove your disguise."
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_slot"	"building"
 			"item_quality"	"unique"
@@ -5989,6 +5995,7 @@
 			"used_by_classes"
 			{
 				"scout"	"1"
+                                "engineer" "1"
 			}
 			"static_attrs"
 			{
@@ -6157,7 +6164,7 @@
 				"nameable"			"1"
 			}
 			"item_type_name"	"#TF_VoodooCursedSoul_Type"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_remap"		"Voodoo-Cursed Soul (Armory)"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -6192,7 +6199,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_Pyrovision_Goggles"
 			"item_type_name"	"#TF_Wearable_Pyrovision_Goggles_Type"
 			"item_description"	"#TF_Pyrovision_Goggles_Desc"
@@ -6418,12 +6425,18 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_knife"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_knife.mdl"
+			"model_player"	"models/weapons/v_models/v_knife_spy.mdl"
+			"attach_to_hands" "0"
 		}
 		"5"
 		{
 			"name"	"TF_WEAPON_FISTS"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_fists"
+			"item_description"	"Well we sure as hell didn't use guns!
+			We would just wrestle Hunters to the ground with our bare hands! 
+			I used to kill ten, twenty a day, just using my fists."
 			"baseitem" "1"
 		}
 		"6"
@@ -6511,6 +6524,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_scattergun"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_scattergun.mdl"
+			"model_player"	"models/weapons/v_models/v_scattergun_scout.mdl"
+			"attach_to_hands" "0"
 		}
 		"14"
 		{
@@ -6518,6 +6534,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_sniperrifle"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_sniperrifle.mdl"
+			"model_player"	"models/weapons/v_models/v_sniperrifle_sniper.mdl"
+			"attach_to_hands" "0"
 		}
 		"15"
 		{
@@ -6525,6 +6544,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_minigun"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_minigun.mdl"
+			"model_player"	"models/weapons/v_models/v_minigun_heavy.mdl"
+			"attach_to_hands" "0"
 		}
 		"16"
 		{
@@ -6554,8 +6576,9 @@
 			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_smg/c_smg.mdl"
-			"attach_to_hands"	"1"
+			"model_world"	"models/weapons/w_models/w_smg.mdl"
+			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
+			"attach_to_hands" "0"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -6569,6 +6592,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_syringegun"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_syringegun.mdl"
+			"model_player"	"models/weapons/v_models/v_syringegun_medic.mdl"
+			"attach_to_hands" "0"
 		}
 		"18"
 		{
@@ -6576,6 +6602,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_rocketlauncher"
 			"xifier_class_remap"	"rocket_launcher"
+			"model_world"	"models/weapons/w_models/w_rocketlauncher.mdl"
+			"model_player"	"models/weapons/v_models/v_rocketlauncher_soldier.mdl"
+			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"19"
@@ -6584,6 +6613,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_grenade_launcher"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_grenadelauncher.mdl"
+			"model_player"	"models/weapons/v_models/v_grenadelauncher_demo.mdl"
+			"attach_to_hands" "0"
 		}
 		"20"
 		{
@@ -6591,6 +6623,9 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_stickybomb_launcher"
 			"baseitem" "1"
+			"model_world"	"models/weapons/w_models/w_stickybomb_launcher.mdl"
+			"model_player"	"models/weapons/v_models/v_stickybomb_launcher_demo.mdl"
+			"attach_to_hands" "0"
 		}
 		"21"
 		{
@@ -6688,8 +6723,9 @@
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
-			"attach_to_hands" "1"
+			"model_world"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
+			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
+			"attach_to_hands" "0"
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -6896,7 +6932,7 @@
 			"item_name"			"#TF_Spellbook_Basic"
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"item_quality"		"normal"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
@@ -7696,6 +7732,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+                                "demoman"       "1"
 			}
 			"static_attrs"
 			{
@@ -8262,7 +8299,7 @@
 				"can_heal_allies"		"1"
 				"can_extinguish"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_Unique_Lunchbox_Chocolate"
 			"item_description" "#TF_Lunchbox_Chocolate_desc"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_chocolate/c_chocolate"
@@ -8467,7 +8504,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Unique_Golden_Wrench"
 			"item_slot"	"melee"
@@ -8609,7 +8646,7 @@
 			}
 			"item_logname"	"battleneedle"
 			"item_iconname"	"battleneedle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bonesaw"
 			"item_name"	"#TF_Unique_BattleSaw"
 			"item_description" "#TF_Unique_BattleSaw_Desc"
@@ -8738,7 +8775,7 @@
 			"prefab"	"weapon_holymackerel"
 			"first_sale_date"	"2010/09/29"
 			"particle_suffix"	"holy_mackerel"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -8807,7 +8844,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_LEtranger"
 			"item_slot"	"secondary"
@@ -9243,7 +9280,7 @@
 			"name"	"Gloves of Running Urgently"
 			"prefab"	"valve weapon_gru"
 			"first_sale_date"	"2010/09/29"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"visuals_red"
 			{
 				"use_visualsblock_as_base"	"visuals"
@@ -9280,7 +9317,7 @@
 			}
 			"item_logname"	"fryingpan"
 			"item_iconname"	"fryingpan"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_FryingPan"
 			"item_name"	"#TF_Unique_FryingPan"
 			"item_slot"	"melee"
@@ -9295,6 +9332,7 @@
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"xifier_class_remap"	"Frying Pan"
+			"anim_slot" "MELEE_ALLCLASS"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -9492,6 +9530,7 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
+                                "soldier"       "1"
 			}
 			"static_attrs"
 			{
@@ -9526,7 +9565,7 @@
 			"prefab" "weapon_lochnload"
 			"first_sale_date"	"2010/12/08"
 			"particle_suffix"	"loch_n_load"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -9644,7 +9683,7 @@
 			"model_player"	"models/workshop/weapons/c_models/c_buffalo_steak/c_buffalo_steak.mdl"
 			"propername"	"1"
 			"inspect_panel_dist" "31"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -11022,7 +11061,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Gloves"
 			"item_name"	"#TF_EvictionNotice"
 			"item_slot"	"melee"
@@ -11194,89 +11233,6 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"442"
-		{
-			"name"	"The Righteous Bison"
-			"first_sale_date"	"2011/07/13"
-			"item_class"	"tf_weapon_raygun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
-			"item_description"	"#TF_RighteousBison_Desc"
-			"item_name"	"#TF_RighteousBison"
-			"item_slot"	"secondary"
-			"anim_slot" "secondary2"
-			"item_quality"	"unique"
-			"item_logname"	"righteous_bison"
-			"item_iconname"	"righteous_bison"
-			"propername"	"1"
-			"min_ilevel"	"30"
-			"max_ilevel"	"30"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"45"
-			"model_player"	"models/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"soldier"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"
-			}
-			"attributes"
-			{
-				"energy weapon no ammo"
-				{
-					"attribute_class"	"energy_weapon_no_ammo"
-					"value" "1"
-				}
-				"energy weapon penetration"
-				{
-					"attribute_class"	"energy_weapon_penetration"
-					"value"	"1"
-				}
-				"energy weapon no hurt building"
-				{
-					"attribute_class"	"energy_weapon_no_hurt_building"
-					"value" "1"
-				}
-				"energy weapon no deflect"
-				{
-					"attribute_class"	"energy_weapon_no_deflect"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Bison.Single"
-				"sound_burst"		"Weapon_Bison.SingleCrit"
-				"sound_reload"		"Weapon_Bison.Reload"
-				"animation_replacement"
-				{
-					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_SECONDARY_ALT1_VM_INSPECT_START"
-					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_SECONDARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_SECONDARY_ALT1_VM_INSPECT_END"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
 		"444"
 		{
 			"name"			"The Mantreads"
@@ -11315,6 +11271,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+                                "demoman"       "primary"
 			}
 			"attributes"
 			{
@@ -11626,7 +11583,7 @@
 				"can_deal_critical_damage"		"1"
 				"can_deal_taunt_damage"			"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_BigEarner"
 			"propername"	"1"
 			"item_logname"	"big_earner"
@@ -11887,7 +11844,7 @@
 			"name"	"Power Up Canteen (MvM)"
 			"first_sale_date"	"2012/12/25"
 			"prefab"	"powerup_bottle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"attributes"
 			{
 				"lunchbox adds minicrits"
@@ -12008,7 +11965,7 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_DEX_Revolver"
 			"item_description"	"#TF_DEX_Revolver_Desc"
@@ -12284,7 +12241,7 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_TFBirthday"
@@ -12334,85 +12291,6 @@
 			"mouse_pressed_sound" 	"Game.HappyBirthdayNoiseMaker"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
 		}
-		"572"
-		{
-			"name"	"Unarmed Combat"
-			"first_sale_date"	"2011/10/28"
-			"item_class"	"tf_weapon_bat_fish"
-			"craft_material_type"	"weapon"
-			"craft_class"		"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_Severed_Arm"
-			"item_name"	"#TF_UnarmedCombat"
-			"item_description"	"#TF_UnarmedCombat_Desc"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"item_logname"	"unarmed_combat"
-			"item_iconname"	"unarmed_combat"
-			"min_ilevel"	"1"
-			"max_ilevel"	"100"
-			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_unarmed_combat/c_unarmed_combat"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"45"
-			"model_player"	"models/workshop/weapons/c_models/c_unarmed_combat/c_unarmed_combat.mdl"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"15 11 -9"
-			}
-			"attributes"
-			{
-				"fish damage override"
-				{
-					"attribute_class"	"fish_damage_override"
-					"value"				"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"7"									
-				}
-				"kill eater kill type"
-				{
-					"attribute_class"	"kill_eater_kill_type"
-					"value"	"7"			
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"	"Weapon_HolyMackerel.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_HolyMackerel.HitWorld"
-			}
-			"visuals_red"
-			{
-				"skin"  "0"
-				"sound_melee_hit"  "Weapon_HolyMackerel.HitFlesh"
-				"sound_melee_hit_world"  "Weapon_HolyMackerel.HitWorld"
-			}
-			"visuals_blu"
-			{
-				"skin"  "1"
-				"sound_melee_hit"  "Weapon_HolyMackerel.HitFlesh"
-				"sound_melee_hit_world"  "Weapon_HolyMackerel.HitWorld"
-			}
-			"mouse_pressed_sound"	"ui/item_gooey_pickup.wav"
-			"drop_sound"		"ui/item_gooey_pickup.wav"
-		}
 		"574"
 		{
 			"name"	"The Wanga Prick"
@@ -12461,7 +12339,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Fists"
 			"item_name"	"#TF_Apocofists"
 			"item_description"	"#TF_Apocofists_Desc"
@@ -12546,7 +12424,7 @@
 			"item_slot"	"primary"
 			"item_logname"	"pomson"
 			"item_iconname"	"pomson"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"10"
@@ -12646,7 +12524,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Wrenchmotron"
 			"item_description"	"#TF_Wrenchmotron_Desc"
@@ -12897,7 +12775,7 @@
 			}
 			"item_logname"	"manmelter"
 			"item_iconname"	"manmelter"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
 			"item_name"	"#TF_ManMelter"
 			"item_description"	"#TF_ManMelter_Desc"
@@ -13015,7 +12893,7 @@
 				"can_be_equipped_by_soldier_or_demo"	"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bottle"
 			"item_name"	"#TF_ScottishHandshake"
 			"item_description"	"#TF_ScottishHandshake_Desc"
@@ -13128,7 +13006,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Bat"
 			"item_name"	"#TF_BallBuster"
 			"item_description"	"#TF_BallBuster_Desc"
@@ -13212,7 +13090,7 @@
 				"can_deal_damage"			"1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_name"	"#TF_SpyCicle"
 			"item_description"	"#TF_SpyCicle_Desc"
 			"propername"	"1"
@@ -13393,7 +13271,7 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_Winter2011"
@@ -13456,7 +13334,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
 			"propername"	"1"
 			"item_quality"	"unique"
@@ -13532,7 +13410,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"			"#TF_DS_DumpsterDevice"
 			"item_description"	"#TF_DS_DumpsterDevice_Desc"
@@ -13626,7 +13504,7 @@
 			}
 			"item_logname"	"lollichop"
 			"item_iconname"	"lollichop"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#tf_weapon_fireaxe"
 			"item_name"	"#TF_Lollichop"
 			"item_description"	"#TF_Lollichop_Desc"
@@ -13674,7 +13552,7 @@
 			"prefab" "weapon_scorch_shot"
 			"first_sale_date"	"2012/06/27"
 			"particle_suffix"	"scorch_shot"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_be_festivized"		"1"
@@ -13716,7 +13594,7 @@
 			}
 			"item_logname"	"rainblower"
 			"item_iconname"	"rainblower"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Flamethrower"
 			"item_name"	"#TF_Rainblower"
 			"item_description"	"#TF_Rainblower_Desc"
@@ -13793,7 +13671,7 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name"	"#TF_Weapon_PEP_Scattergun"
 			"item_description"	"#TF_Weapon_PEP_Scattergun_Desc"
@@ -13888,6 +13766,7 @@
 			"used_by_classes"
 			{
 				"scout"	"1"
+                                "engineer" "1"
 			}
 			"static_attrs"
 			{
@@ -13961,6 +13840,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+                                "demoman"       "1"
 			}
 			"static_attrs"
 			{
@@ -14008,20 +13888,20 @@
 		{
 			"name"	"The Red-Tape Recorder"
 			"prefab"		"weapon_red_tape_recorder"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 		}
 		"811"
 		{
 			"name"	"The Huo Long Heatmaker"
 			"prefab"		"weapon_long_heatmaker"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"inspect_panel_dist" "88"
 		}
  		"812"
 		{
 			"name"	"The Flying Guillotine"
 			"prefab"		"weapon_guillotine"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"inspect_panel_dist" 			"40"
 		}
  		"813"
@@ -14030,70 +13910,6 @@
 			"prefab"		"weapon_annihilator"
 			"show_in_armory"	"1"
 			"inspect_panel_dist" 	"95"
-		}
-		"880"
-		{
-			"name"	"The Freedom Staff"
-			"first_sale_date"	"2012/10/09"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"		"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_Staff"
-			"item_name"	"#TF_TW_Staff"
-			"item_description"	"#TF_TW_Staff_Desc"
-			"propername"	"1"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"min_ilevel"	"25"
-			"max_ilevel"	"25"
-			"attach_to_hands"	"1"
-			"item_logname"	"freedom_staff"
-			"item_iconname"	"freedom_staff"
-			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"80"			
-			"model_player"	"models/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-				"engineer" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"20 0 -10"
-				"inspect_viewmodel_offset"				"5 0 -18"				
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
 		}
 		"933"
 		{
@@ -14108,10 +13924,10 @@
 			"prefab"	"weapon_sapper"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_Weapon_Ap_Sap"
-			"item_description"	"#TF_Weapon_Ap_Sap_desc"
+			"item_description"	"I, uhm- just wanted to give you the chance, to kill yourself. Now."
 			"item_slot"	"building"
 			"item_quality"	"unique"
 			"item_logname"	"psapper"
@@ -14146,99 +13962,6 @@
 					"value" "3.0"
 				}
 			}
-		}
-		"939"
-		{
-			"name"	"The Bat Outta Hell"
-			"first_sale_date"	"2012/10/26"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"		"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"skullbat"
-			"item_iconname"	"skullbat"
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_Skullbat"
-			"item_name"	"#TF_BatOuttaHell"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_skullbat/c_skullbat"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist"        "45"
-			"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-				"engineer" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -6"
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-				"styles"
-				{
-					"0"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat.mdl"
-						"name"		"#TF_BatOuttaHell_Style0"
-					}
-					"1"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s1.mdl"
-						"name"		"#TF_BatOuttaHell_Style1"
-					}
-					"2"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s2.mdl"
-						"name"		"#TF_BatOuttaHell_Style2"
-					}
-					"3"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"model_player"	"models/workshop/weapons/c_models/c_skullbat/c_skullbat_s3.mdl"
-						"name"		"#TF_BatOuttaHell_Style3"
-					}
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"940"
 		{
@@ -14484,7 +14207,7 @@
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Wearable_Balloon"
 			"item_name"	"#TF_Pet_Reindoonicorn"
 			"item_description"	"#TF_Pet_Reindoonicorn_Desc"
@@ -14595,7 +14318,7 @@
 			{
 				"can_heal_allies"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medigun_Resist"
 			"item_name"		"#TF_Unique_MediGun_Resist"
 			"item_description"	"#TF_Unique_MediGun_Resist_Desc"
@@ -14713,67 +14436,6 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"1013"
-		{
-			"name"	"The Ham Shank"
-			"first_sale_date"	"2013/05/10"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_material_type"	"weapon"
-			"craft_class"		"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"ham_shank"
-			"item_iconname"	"ham_shank"
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_Pork_Product"
-			"item_name"	"#TF_HamShank"
-			"item_description"	"#TF_HamShank_Desc"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_ham/c_ham"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"40"
-			"model_player"	"models/workshop/weapons/c_models/c_ham/c_ham.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -6"
-			}
-			"visuals"
-			{
-				"sound_melee_hit"	"Weapon_HolyMackerel.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_HolyMackerel.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_gooey_pickup.wav"
-			"drop_sound"		"ui/item_gooey_pickup.wav"
-		}
 		"1015"
 		{
 			"name"	"The Shred Alert"
@@ -14850,87 +14512,6 @@
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
 		}
-		"1071"
-		{
-			"name"	"Gold Frying Pan"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"golden_fryingpan"
-			"item_iconname"	"golden_fryingpan"
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_GoldFryingPan"
-			"item_name"	"#TF_Gold_FryingPan"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_frying_pan/c_frying_pan_gold"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"1"
-			"max_ilevel"	"100"
-			"anim_slot" "MELEE_ALLCLASS"
-			"xifier_class_remap"	"Frying Pan"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-				"engineer" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 -3 -7"
-			}
-			"attributes"
-			{
-				"turn to gold"
-				{
-					"attribute_class"	"set_turn_to_gold"
-					"value" "1"
-				}
-				"is marketable"
-				{
-					"attribute_class"	"is_marketable"
-					"value"	"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"FryingPan.HitFlesh"
-				"sound_melee_hit_world"	"FryingPan.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-
-				"styles"
-				{
-					"0"
-					{
-						"skin_red" "2"
-						"skin_blu" "3"
-					}
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
 		"1080"
 		{
 			"name"			"Festive Sapper"
@@ -14938,10 +14519,10 @@
 			"item_class"	"tf_weapon_sapper"		
 			"propername"	"0"
 			"craft_class"	""
-			"item_name"			"#TF_Weapon_Sapper_Festive2013"
+			"item_name"			"Festive Sapper"
 			"min_ilevel"	"1"
 			"max_ilevel"	"99"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_sapper/c_sapper_xmas"
 			"model_player"	"models/weapons/c_models/c_sapper/c_sapper_xmas.mdl"
 			"model_world"	"models/weapons/c_models/c_sapper/c_sapper_xmas.mdl"
@@ -15145,7 +14726,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Parachute"
 			"item_name"	"#TF_Weapon_BaseJumper"
 			"item_description"	"#TF_Weapon_BaseJumper_Desc"
@@ -15201,7 +14782,7 @@
 			"item_class"	"tf_weapon_sapper"
 			"craft_class" ""
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"propername"	"1"
 			"item_type_name"	"#TF_Weapon_Spy_Sapper"
 			"item_name"	"#TF_Weapon_SnackAttack"
@@ -16449,7 +16030,7 @@
 			"anim_slot"	"MELEE_ALLCLASS"
 			"attach_to_hands"	"1"
 			"hidden"	"1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"normal"
 			"baseitem"	"1"
 			"min_ilevel"	"1"
@@ -17014,7 +16595,7 @@
 			}
 			"item_logname"	"rocketpack"
 			"item_iconname"	"rocketpack"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketPack"
 			"item_name"			"#TF_ThermalThruster"
 			"item_description"	"#TF_ThermalThruster_Desc"
@@ -17088,7 +16669,7 @@
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Jar_Gas"
 			"item_name"	"#TF_GasPasser"
 			"item_description"	"#TF_GasPasser_Desc"
@@ -17159,7 +16740,7 @@
 			{
 				"can_deal_damage"			"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_class"	"tf_weapon_slap"
 			"craft_class"	"" 
 			"craft_material_type"	"weapon"
@@ -17691,7 +17272,7 @@
 		{
 			"name"	"Activated Campaign 3 Pass"
 			"item_class"	"tf_wearable"	
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Tracker"
 			"item_name"			"#TF_ActivatedCampaign3Pass"
 			"item_description"	"#TF_ActivatedCampaign3Pass_desc"						
@@ -17775,7 +17356,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physcannon"
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon"
@@ -17853,7 +17434,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physcannon"
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon_mega"
@@ -17937,7 +17518,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Physgun"
 			"item_name"		"#TF_Weapon_Physgun"
 			"item_logname"	"physcannon"
@@ -18009,7 +17590,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Portalgun"
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
@@ -18087,7 +17668,7 @@
 				"can_deal_taunt_damage" "1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Portalgun"
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
@@ -18476,6 +18057,7 @@
 		"9020"
 		{
 			"name"	"TFC Crowbar"
+			"prefab"	"weapon_melee_allclass"
 			"item_class"	"tf_weapon_tfc_crowbar"
 			"capabilities"
 			{
@@ -18487,21 +18069,21 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
-			"item_name"	"#TF_Weapon_Crowbar"
+			"item_name"	"TFC Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_tfccrowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_crowbar.mdl"
-			"model_player"	"models/weapons/tfc/v_tfc_crowbar.mdl"
-			"attach_to_hands"	"0"
+			"model_player"	"models/weapons/lambda/tfc/c_tfc_crowbar.mdl"
+			"attach_to_hands"	"1"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
+			"anim_slot" "MELEE_ALLCLASS"
 			"used_by_classes"
 			{
 				"scout"		"1"
@@ -18538,11 +18120,11 @@
 			}
 			"item_logname"	"crowbar"
 			"item_iconname"	"crowbar"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
-			"item_name"	"#TF_Weapon_Crowbar"
+			"item_name"	"HL2 Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/weapons/w_crowbar.mdl"
@@ -18604,17 +18186,19 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medikit"
 			"item_name"	"#TF_Weapon_Medikit"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_medigun/c_medigun"
+			"image_inventory"			"backpack/weapons/w_models/w_classic_medkit"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 				"53"
-			"model_world"	"models/weapons/w_crowbar.mdl"
-			"model_player"	"models/weapons/tfc/v_tfc_medkit.mdl"
-			"attach_to_hands"	"0"
+			"model_world"			"models/weapons/w_models/w_classic_medkit.mdl"
+			"model_player"			"models/weapons/v_models/v_classic_medkit_new.mdl"
+			"item_description"	"Heal Teammates with the all new portable medkit!
+			Model from Open Fortress"
+			"attach_to_hands"	"2"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"7"
@@ -18622,6 +18206,7 @@
 			"used_by_classes"
 			{
 				"medic"	"1"
+				"civilian"	"1"
 			}
 			"static_attrs"
 			{
@@ -18649,7 +18234,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_Shotgun"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
@@ -18698,7 +18283,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_TFC_Super_Shotgun"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
@@ -18746,7 +18331,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Nailgun"
 			"item_name"		"#TF_Weapon_Nailgun"
 			"image_inventory"	"backpack/weapons/w_models/w_syringegun"
@@ -18792,7 +18377,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Nailgun"
 			"item_name"		"#TF_Weapon_TFC_Super_Nailgun"
 			"item_slot"	"primary"
@@ -18826,7 +18411,7 @@
 			"item_class"	"tf_weapon_tfc_ar"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18868,7 +18453,7 @@
 			"item_class"	"tf_weapon_tfc_flamethrower"
 			"craft_class"	"weapon" 
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"tags"
 			{
 				"can_deal_damage"		"1"
@@ -18917,7 +18502,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"		"#TF_Weapon_TFC_IC"
 			"item_slot"	"action"
@@ -18960,7 +18545,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_be_festivized"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_TFC_AC"
 			"item_name"			"#TF_Weapon_TFC_AC"
 			"item_slot"	"primary"
@@ -19005,7 +18590,7 @@
 			"item_class"	"tf_weapon_pipebomblauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_PipebombLauncher"
 			"item_name"	"#TF_Weapon_PipebombLauncher"
 			"item_slot"	"secondary"
@@ -19054,7 +18639,7 @@
 			"item_class"	"tf_weapon_grenadelauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_slot"	"primary"
@@ -19103,7 +18688,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"#TF_Weapon_RocketLauncher"
 			"item_slot"	"primary"
@@ -19149,7 +18734,7 @@
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_gib_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"		"#TF_Weapon_SniperRifle"
 			"item_slot"	"primary"
@@ -19195,7 +18780,7 @@
 			"item_type_name"	"#TF_Weapon_TFC_Umbrella"
 			"item_name"	"#TF_Weapon_TFC_Umbrella"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_umbrella"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_umbrella_civilian.mdl"
@@ -19249,7 +18834,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
 			"item_name"	"#TF_Weapon_Knife"
 			"item_slot"	"melee"
@@ -19298,7 +18883,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_destroy_sappers"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Weapon_TFC_Spanner"
 			"item_slot"	"melee"
@@ -19344,7 +18929,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Railgun"
 			"item_name"		"#TF_Weapon_Railgun"
 			"item_slot"		"secondary"
@@ -19384,7 +18969,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
@@ -19403,8 +18988,8 @@
 			"used_by_classes"
 			{
 				"zombie"	"1"
-				"zombiefast"	"1"
-				"rebel"			"1"
+				"john"	"1"
+				
 			}
 			"static_attrs"
 			{
@@ -19453,10 +19038,10 @@
 				"min_viewmodel_offset"		"10 0 -7"
 			}
 		}
-		"9041"
+		"9041"  
 		{
 			"name"	"HL2 Shotgun"
-			"item_class"	"tf_weapon_shotgun"
+			"item_class"	"tf_weapon_shotgun_primary"
 			"baseitem" "1"
 			"tags"
 			{
@@ -19466,7 +19051,8 @@
 			}
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"#TF_Weapon_Shotgun"
-			"item_slot"	"secondary"
+			"item_slot"	"primary"
+			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -19481,6 +19067,7 @@
 			"used_by_classes"
 			{
 				"combine"			"1"
+				"john"				"1"
 			}
 			"particle_suffix"		"shotgun"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -19535,7 +19122,7 @@
 		}
 		"9050"
 		{
-			"name"		"Unused Ammo Sandvich"
+			"name"		"Ammo Sandvich"
 			"prefab"		"weapon_sandvich"
 			"craft_class"	"" 
 			"craft_material_type"	"weapon"
@@ -19543,7 +19130,11 @@
 			"item_description"	"#TF_Lunchbox_Banana_desc"
 			"model_player"		"models/items/ammopack_medium.mdl"
 			"propername"		"1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
+			"used_by_classes"
+			{
+				"heavy"			"1"
+			}
 			"static_attrs"
 			{
 				"item_meter_charge_rate"	"30"
@@ -19557,6 +19148,156 @@
 					"value"	"5"
 				}
 			}
+		}
+
+
+		"1184"
+		{
+			"name"	"Gloves of Running Urgently MvM"
+			"item_class"	"tf_weapon_fists"
+			"craft_class"	""		
+			"craft_material_type"	""	
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Gloves"
+			"item_name"	"Gloves of Running Urgently MvM"
+			"item_slot"	"melee"
+			"item_logname"	"gloves_running_urgently"
+			"item_iconname"	"gloves_running_urgently"
+			"image_inventory"	"backpack/weapons/c_models/c_boxing_gloves_urgency/c_boxing_gloves_urgency"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_boxing_gloves/c_boxing_gloves.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.3"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value" "2"
+				}
+				"self mark for death"
+				{
+					"attribute_class"	"self_mark_for_death"
+					"value"	"3"
+				}
+				"single wep holster time increased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"				"1.5"
+				}
+			}
+			"hide_bodygroups_deployed_only"	"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hands"			"1"
+				}
+				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
+				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+			}
+			"visuals_red"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"2"
+			}
+			"visuals_blu"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"skin"	"3"
+			}
+			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
+			"drop_sound" "ui/item_boxing_gloves_drop.wav"
+			"xifier_class_remap"	"gru"
+		}
+		"863"
+		{
+			"name"	"The Robo-Sandvich"
+			"first_sale_date"	"2012/09/19"
+			"prefab"	"weapon_lunchbox"
+			"craft_class"	""		
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
+			"item_name"	"#TF_Robot_Sandvich"
+			"item_description"	"#TF_Robot_Sandvich_Desc"
+			"image_inventory"	"backpack/weapons/c_models/c_sandwich/c_robo_sandwich"
+			"model_player"	"models/weapons/c_models/c_sandwich/c_robo_sandwich.mdl"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -11"
+				"item_meter_charge_type"			"1"
+				"item_meter_charge_rate"			"30"
+				"meter_label"				"#TF_Sandwich"
+			}
+			"attributes"
+			{
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"3"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9051"
 		{
@@ -19823,7 +19564,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Model"
 			"item_name"	"Female Scout"
-			"item_description"	"Model by: Sierra Foxtrot, AyesDyef "
+			"item_description"	"Model by: Sierra Foxtrot, AyesDyef"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -20025,6 +19766,26 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0.4"
 				}
+                               "maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"2.50"
+                                }
+                                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"125"
+                                }
+                                "move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "0.68"
+                                }
+                                "maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.30"
+                                }
 			}
 			"visuals"
 			{
@@ -20181,12 +19942,16 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Level 69 Ass"
+			"item_type_name"	"Level 420 Plastic Surgery"
 			"item_name"	"Big Slappy"
-			"item_description"	"Model by: Coolchu Zhao"
+			"item_description"	"Model by: Coolchu Zhao
+			This may be the 
+			most controversial item in 
+			Mann Co. history, 
+			but scout does have cake"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
+			"item_quality"	"unique" 
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
 			"image_inventory"	"backpack/big_booty_scout"
@@ -20212,10 +19977,10 @@
 			{
 
 			}
-			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
-			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"mouse_pressed_sound" 	"ui/item_rubber_pickup.wav"
+			"drop_sound" 		"ui/item_rubber_pickup.wav"
 		}
-			"9063"
+			"9063" 
 		{
 			"name"	"FemHHH Demo Playermodel"
 			"first_sale_date"	"2012/12/20"
@@ -20396,7 +20161,7 @@
 					"attribute_class"	"add_maxhealth"
 					"value" "-25"
 				}
-				"dmg taken decreased"
+				"dmg taken reduced"
 				{
 					"attribute_class"	"mult_dmgtaken"
 					"value"	"0.85"
@@ -20589,27 +20354,22 @@
 		{
 			"name"						"HL2 SMG"
 			"item_class"					"tf_weapon_smg"
-			"item_name"					"SMG1 HL2"
+			"item_name"					"SMG1"
 			"image_inventory"			"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
-			"item_slot"					"primary"
+			"show_in_armory"			"1"
+			"item_slot"					"secondary" 
 			"attach_to_hands"			"0"
 			"model_world"				"models/weapons/w_smg1.mdl"
 			"model_player"				"models/weapons/v_smg1.mdl"
 			"baseitem"	"1"
-			"baseitem"					"1"
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.7"
-				}
 				"clip size bonus"
 				{
-				"attribute_class"	"mult_clipsize"
-				"value"	"1.8"
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.8"
 				}
 				"fire rate bonus"
 				{
@@ -20619,8 +20379,7 @@
 			}
 			"used_by_classes"
 			{
-				"zombiefast"			"primary"
-				"rebel"					"primary"
+				"john"	"1"
 			}
 			"visuals"
 			{
@@ -20646,7 +20405,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"USP Match"
 			"item_description"	"Part of Lambda's  Weapon pack"
@@ -20656,17 +20415,17 @@
 			"image_inventory"	"backpack/weapons/w_models/w_pistol"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_pistol.mdl"
 			"model_player"	"models/weapons/v_pistol.mdl"
 			"attach_to_hands"	"0"
 			"item_quality"	"unique"
 			"propername"	"1"
-			"baseitem"		"1"
+			"baseitem"		"0"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"zombiefast"	"1"
-				"rebel"			"1"
+				"john"	"1"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -20977,6 +20736,2940 @@
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+                "9117"
+		{
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Pennyshot"
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"item_name"			"The Pennyshot"
+			"item_description"	"Medalman's First Weapon (Model by GoldInk9734)"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"pennyshot"
+			"item_iconname"	"pennyshot"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_pennyshot"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_dex_shotgun/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+                                "soldier"       "secondary"
+                                "heavy"       "secondary"
+                                "pyro"       "secondary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+                                "bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "2.30"
+                                }
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.40"
+                                }
+                                "spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.70"
+				}
+                                "clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.30"
+                                }
+                                "damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.60"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Lambda_revolver.Single"
+				"sound_burst" "Weapon_Lambda_revolver.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+		"9118"
+		{
+			"name"			"The Hacked Manhack"
+			"first_sale_date"	"2012/03/15"
+			"item_class"		"tf_wearable"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" 	"Manhack"
+			"item_name"	"The Hacked Manhack"
+			"item_description"	"How ironic"
+			"item_slot"		"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"FORCE_NOT_USED"
+			"item_quality"		"unique"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"image_inventory"	"backpack/player/items/all_class/c_manhack"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/all_class/pet_robro.mdl"
+			"extra_wearable" "models/player/items/all_class/pet_robro.mdl"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+				"scout"	        "1"
+				"heavy"	        "1"
+				"soldier"	        "1"
+				"pyro"	        "1"
+				"demoman"	        "1"
+				"engineer"	        "1"
+			}
+			"attributes"
+			{
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"5"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"1.50"
+				}
+                                "dmg taken from blast reduced"
+				{
+					"attribute_class"	"	mult_dmgtaken_from_explosions"
+					"value"	"0.00"
+				}
+                                "health from healers reduced"
+				{
+					"attribute_class"	"ult_health_fromhealers"
+					"value"	"0.25"
+				}
+                                "health from packs decreased"
+				{
+					"attribute_class"	"mult_health_frompacks"
+					"value"	"0.30"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+                }
+                "9119"
+		{
+			"name"			"The Assassin's Tire"
+			"first_sale_date"	"2012/03/15"
+			"item_class"		"tf_wearable"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" 	"Tire"
+			"item_name"	"The Assassin's Tire"
+			"item_description"	"This sure is heavy (Model By goober of the goof)"
+			"item_slot"		"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"FORCE_NOT_USED"
+			"item_quality"		"unique"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"image_inventory"	"backpack/player/items/all_class/c_tire"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/spy/spr18_assassins_attire/spr18_assassins_attire.mdl"
+			"extra_wearable" "models/player/items/spy/spr18_assassins_attire/spr18_assassins_attire.mdl"
+			"used_by_classes"
+			{
+				"spy"	        "1"
+				"medic"	        "primary"
+			}
+			"attributes"
+			{
+                                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"175"
+				}
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"3"
+                                }
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.35"
+				}
+                                "move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.65"
+				}
+                                "health from healers reduced"
+				{
+					"attribute_class"	"ult_health_fromhealers"
+					"value"	"0.30"
+				}
+                                "cloak regen rate decreased"
+				{
+					"attribute_class"	"mult_cloak_meter_regen_rate"
+					"value"	"0.25"
+				}
+                                "cloak consume rate increased"
+				{
+					"attribute_class"	"mult_cloak_meter_consume_rate"
+					"value"	"1.65"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+                }
+                "9121"
+		{
+	                "enabled"	"1"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Improvised Rocket Launcher"
+			"propername"	"1"
+			"item_name"	"The Pro-Pain"
+                        "item_description"	"(Model By goober of the goof)"
+			"item_logname"	"propain"
+			"item_iconname"	"propain"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"image_inventory"	"backpack/weapons/c_models/c_pain"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_pain/c_rocketlauncher.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "60"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -3 -10"
+			}
+			"attributes"
+			{
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value"	"1"
+				}
+                                "Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.80"
+				}
+                                "fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.45"
+				}
+                                "clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.50"
+				}
+                                "damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.25"
+				}
+                                "blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"1.65"
+				}
+                                "projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value"	"3"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Does_Dumpster.Single"
+				"sound_burst"		"Weapon_Does_Dumpster.SingleCrit"
+				"sound_reload"		"Weapon_DumpsterRocket.Reload"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9122"
+		{
+			"name"	"The Diagnostikiller"
+			"prefab"	"valve"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_syringegun_medic"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"0"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_logname"	"diagnose"
+			"item_iconname"	"diagnose"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SyringeGun"
+			"item_name"	"The Diagnostikiller"
+                        "item_description"	"Ze healing is not as zewarding as ze hurting! (Model By Apackofbadgers)"
+			"item_slot"	"primary"
+			"image_inventory"	"backpack/weapons/c_models/c_diagnose"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_diagnose/c_leechgun/c_leechgun.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "50"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -12"			
+			}
+			"attributes"
+			{
+                                "clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"3.00"
+				}
+                                "fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.75"
+				}
+                                "Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.40"
+                                }
+			}
+                        "visuals"
+			{
+				"sound_single_shot"	"Weapon_CrusadersCrossbow.Single"
+				"sound_burst"	"Weapon_CrusadersCrossbow.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
+		"9124"
+		{
+			"name"	"Scout Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Scout-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/scout/bot_scout.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+		
+		"9125"
+		{
+			"name"	"Soldier Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Soldier-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/soldier/bot_soldier.mdl"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+		"9126"
+		{
+			"name"	"Pyro Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Pyro-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/pyro/bot_pyro.mdl"
+			"used_by_classes"
+			{
+				"pyro" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9127"
+		{
+			"name"	"Demo Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Demo-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/demo/bot_demo.mdl"
+			"used_by_classes"
+			{
+				"demoman" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9128"
+		{
+			"name"	"Heavy Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Heavy-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/heavy/bot_heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9129"
+		{
+			"name"	"Engi Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Engi-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/engineer/bot_engineer.mdl"
+			"used_by_classes"
+			{
+				"engineer" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9130"
+		{
+			"name"	"Medic Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Medic-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/medic/bot_medic.mdl"
+			"used_by_classes"
+			{
+				"medic" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9131"
+		{
+			"name"	"Sniper Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Sniper-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/sniper/bot_sniper.mdl"
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9132"
+		{
+			"name"	"Spy Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Artifical Intelligence"
+			"item_name"	"Spy-bot"
+			"item_description"	"You ever wanted to be a bot?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"10"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"1"
+				}
+			}
+			"model_world" "models/bots/spy/bot_spy.mdl"
+			"used_by_classes"
+			{
+				"spy" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
+		"9400"
+		{
+			"name"	"Miku"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Waifu"
+			"item_name"	"Miku"
+			"item_description"	"Model by: Yu Higuchi"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/hatsune_miku/scout.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"scout"	"1"
+					"shoes_socks"	"1"
+					"headphones"	"1"
+					"hat"	"1"
+					"dogtags"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			}
+
+		"9401"
+		{
+			"name"	"John Base Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"1"
+			"model_world" "models/humans/group01/male_07.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Freeman"
+			"item_name"	"John Freeman"
+			"item_description"	"Who can go wrong with a classic?"
+			"item_slot"	"misc2"
+
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			}
+		
+		
+		
+		
+
+		"9403"
+		{
+			"name"	"John Rebel Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"0"
+			"model_world" "models/humans/group03/male_07.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Freeman"
+			"item_name"	"John Freeman (Rebel)"
+			"item_description"	"Who can go wrong with a classic?"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			}	
+		"9404"  
+		{
+			"name"	"John AR2"
+			"item_class"	"tf_weapon_syringegun_medic"
+			"baseitem" "0"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Combine Weapon"
+			"item_name"	"AR2"
+			"item_slot"	"primary"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_ar2"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_irifle.mdl"
+			"model_player"	"models/weapons/v_irifle.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"john"				"1"
+			}
+			"particle_suffix"		"ar2"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.75"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "2"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+			    "weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.4"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"				"0.8"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_AR2.Single"
+				"sound_double_shot"		"Weapon_AR2.Single"
+				"sound_burst"			"Weapon_AR2.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"Weapon_AR2.Reload"
+				"sound_special1"		"Weapon_AR2.Single"
+			}
+		}	
+
+		"9405"
+		{
+			"name"	"Your Buddy"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"npc_citizen"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Citizen Spawner"
+			"item_name"	"Your Buddy"
+			"item_description"	"Have you ever felt alone? Introducing the latest Mann Co. promotional item 'Your Buddy'!
+			NOTE: This item is sold to steam users who have Half-Life 2 or Garry's Mod in their library."
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"static_attrs"
+			{
+			}
+			"attributes"
+			{
+				"move speed bonus HIDDEN"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "1.1"
+				}
+			}	
+			"used_by_classes"
+			{
+				"heavy" "1"
+				"engineer" "1"
+				"demoman" "1"
+				"pyro" "1"
+				"sniper" "1"
+				"soldier" "1"
+				"spy" "1"
+				"scout" "1"
+				"medic" "1"
+			}
+			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}	
+		"9406"
+        {
+            "name"    "John 357"
+            "item_class"    "tf_weapon_revolver"
+            "baseitem" "0"
+            "tags"
+            {
+                "can_deal_damage"            "1"
+                "can_deal_mvm_penetration_damage"    "1"
+                "can_deal_long_distance_damage"    "1"
+            }
+            "item_type_name"    ".357 Magnum Revolver"
+            "item_name"    "Colt Python"
+            "item_slot"    "primary"
+            "show_in_armory"    "1"
+            "image_inventory"    "backpack/weapons/w_models/w_revolver"
+            "image_inventory_size_w"        "128"
+            "image_inventory_size_h"        "82"
+            "model_world"    "models/weapons/w_357.mdl"
+            "model_player"    "models/weapons/v_357.mdl"
+            "attach_to_hands" "0"
+            "inspect_panel_dist" "40"
+            "item_quality"    "unique"
+            "propername"    "1"
+            "min_ilevel"    "5"
+            "max_ilevel"    "5"
+            "used_by_classes"
+            {
+                "john"                "1"
+            }
+            "particle_suffix"        "ar2"
+            "mouse_pressed_sound"    "ui/item_heavy_gun_pickup.wav"
+            "drop_sound"        "ui/item_heavy_gun_drop.wav"
+            "attributes"
+            {
+                "damage bonus HIDDEN"
+                {
+                    "attribute_class"     "mult_dmg"
+                    "value" "2"
+                }
+                "weapon spread bonus"
+                {
+                    "attribute_class"    "mult_spread_scale"
+                    "value" "0.4"
+                }
+                "revolver use hit locations"
+                {
+                    "attribute_class"    "set_weapon_mode"
+                    "value"    "1"
+                }
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"    "2"
+                }
+
+            }
+            "static_attrs"
+            {
+                "min_viewmodel_offset"        "10 0 -9"
+            }
+            "visuals"
+            {
+                "sound_single_shot"        "Weapon_357.Single"
+                "sound_double_shot"        "Weapon_357.Single"
+                "sound_burst"            "Weapon_357.Single"
+                "sound_empty"            "HL2_Weapon_Shotgun.Empty"
+                "sound_reload"            "Weapon_357.Reload"
+                "sound_special1"        "Weapon_357.Single"
+            }
+        }
+		"9407"
+		{
+			"name"	"John Kleiner Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"0"
+			"model_world" "models/kleiner.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"eistein scintist"
+			"item_name"	"Dr. Isaac Kleiner"
+			"item_description"	"Everyone's favorite(?) doctor!"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"mouse_pressed_sound"	"items/kleiner_select.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+		}			
+		"9408"
+		{
+			"name"	"Femscout Big Slappy"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"0"
+			"model_world" "models/player/femscout/femscout_expand.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"H̸͍͝e̶̖̾r̸͉͐ẹ̸̍s̶̥͘y̷̫̏"
+			"item_name"	"Big Slappy (Femscout)"
+			"item_description"	""
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.08"
+				}
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"2"
+                }
+				"move speed penalty"
+				{
+					"attribute_class" 	"mult_player_movespeed"
+					"value" "0.8"
+				}
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "0.67"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"vo/taunts/spy/Spy_taunt_dosi_end_37.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+		}		
+		"9409"
+		{
+			"name"	"Mini-Scattergun"
+			"item_class"	"tf_weapon_scattergun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Minigun? Scattergun?"
+			"item_name"	"The War Crime"
+			"item_description"	"Model by goober of the goof"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"miniscattergun"
+			"item_iconname"	"minigun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_minigun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_miniscattergun/c_scattergun.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.44"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.25"
+                }
+				"clip size bonus"
+			{
+					"attribute_class"	"mult_clipsize"
+					"value" "2"
+			}
+            "maxammo primary increased"
+			{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "2"
+            }
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.45"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}	
+		"9410"
+		{
+			"name"	"Spyshotgun"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Shotgun"
+			"item_name"	"Shotgun"
+			"item_description"	""
+			"item_slot"	"secondary"
+			"anim_slot"	"primary"
+			"item_quality"	"normal"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"shotgun"
+			"item_iconname"	"shotgun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_shotgun_soldier.mdl"
+			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}			
+		"9411"
+		{
+			"name"	"big head"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_name"	"Big Head"
+			"item_type_name"	"abnormally large skull"
+			"item_slot"	"misc2"
+			"equip_region"		"head"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"vgui/marked_for_death"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer" "1"
+				"spy" "1"
+				"civilian"	"1"
+			}
+			"attributes"
+			{
+				"head scale"
+				{
+					"attribute_class"		"head_scale"
+					"value"		"3.0"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0.2"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/Scout_sf12_badmagic16.mp3"
+			"drop_sound"	"boner.mp3"
+		}		
+		"9412"
+		{
+			"name"	"midget"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_name"	"Dwarfism"
+			"item_type_name"	"A midget that will be laughed at by a fat kid"
+			"item_slot"	"misc2"
+			"equip_region"		"head"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"vgui/marked_for_death"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer" "1"
+				"spy" "1"
+				"civilian"	"1"
+			}
+			"attributes"
+			{
+				"torso scale"
+				{
+					"attribute_class"		"torso_scale"
+					"value"		"0.5"
+				} 
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"3.0"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/heavy_laughhappy02.mp3"
+			"drop_sound"	"boner.mp3"
+		}
+		"9413"
+		{
+			"name"	"projectile tester"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Rocket Launcher"
+			"item_name"	"D-IED"
+			"item_description"	"Model by AlreadyADemon
+			Faulty Tracking: Rockets might not go where
+			you want them to, so BEWAAAAAAAARE!"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"rpg"
+			"item_iconname"	"rpg"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_rocketlauncher"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_died/c_rocketlauncher.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"2"
+				}
+				"mod projectile homing"
+				{
+					"attribute_class"	"mod_projectile_homing"
+					"value"	"1"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.3"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.3"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"    "1.5"
+                }
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "2.66"
+				}
+				"Projectile speed decreased"
+				{
+					"atribute_class"	"mult_projectile_speed"
+					"value"	"0.3"
+				}
+				"crit mod disabled"
+				{
+					"atribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.7"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"850"
+		{
+			"name"			"Deflector"
+			"enabled"	"1"
+			"prefab"		"weapon_minigun"
+			"craft_class"	""
+			"baseitem"		"0"
+			"show_in_armory"	"1"
+			"item_name"		"#TF_Minigun_Deflector"
+			"item_quality"	"developer"
+			"attach_to_hands"	"1"
+			"propername"	"1"
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.5"
+				}
+				"attack projectiles"
+				{
+					"attribute_class" 	"attack_projectiles"
+					"value" "1"
+				}
+				"dmg taken increased"
+				{
+					"attribute_class" 	"mult_dmgtaken"
+					"value" "1.25"
+				}
+				"move speed penalty"
+				{
+					"attribute_class" 	"mult_player_movespeed"
+					"value" "0.8"
+				}
+			}
+			"visuals"
+			{
+				"sound_double_shot"	"MVM.GiantHeavyGunFire"
+				"sound_burst"		"MVM.GiantHeavyGunFire"
+				"sound_special1"	"MVM.GiantHeavyGunWindUp"
+				"sound_special2"	"MVM.GiantHeavyGunWindDown"
+				"sound_special3"	"MVM.GiantHeavyGunSpin"
+			}
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_tracer02"
+			}
+		}
+
+		"851"
+		{
+			"name"	"The AWPer Hand"
+			"prefab"	"weapon_sniperrifle weapon_sniperrifle_alt1"
+			"craft_class"	"weapon"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_CSGO_AWP"
+			"item_description"	"#TF_CSGO_AWP_Desc"
+			"item_quality"	"unique"
+			"baseitem"	"0"
+			"image_inventory"	"backpack/weapons/c_models/c_csgo_awp/c_csgo_awp"
+			"model_player"	"models/weapons/c_models/c_csgo_awp/c_csgo_awp.mdl"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"item_logname"	"awper_hand"
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_AWP.Single"
+				"sound_burst"		"Weapon_AWP.SingleCrit"
+			}
+		}
+		"9150"
+		{
+			"craft_class"	""
+			"baseitem"		"1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"anim_slot"	"melee"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"model_player"	"models/weapons/v_models/v_pistol_civilian.mdl"
+			"model_world"	"models/weapons/w_models/w_pistol.mdl"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		"9152"
+		{
+			"prefab"	"weapon_sword"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"base_item_name"	"The Eyelander"
+			"item_name"	"#TF_Unique_Achievement_Sword"
+			"item_description"	"#TF_Unique_Achievement_Sword_Desc"
+			"propername"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
+			"model_player"	"models/weapons/lambda/v_models/v_claymore.mdl"
+			"model_world"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"anim_slot"	"melee"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"12 -3 -10"
+			}
+			"visuals"
+			{
+				"sound_melee_miss"	"Weapon_Sword.Swing"
+				"sound_melee_hit"	"Weapon_Sword.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Sword.HitWorld"
+				"sound_burst"		"Weapon_Sword.SwingCrit"
+				"sound_special1"	"Sword.Hit"
+				"sound_special2"	"Sword.Idle"
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore_gold"
+					}
+				}
+			}
+			"attributes"
+			{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "-25"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"6"									
+				}
+				"kill eater kill type"
+				{
+					"attribute_class"	"kill_eater_kill_type"
+					"value"	"6"			
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"eyelander"
+		}
+                "9123"
+		{
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Stampede Destroyer"
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"item_name"			"The Stampede Destroyer"
+			"item_description"	"(Model by Toad)"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"stampede"
+			"item_iconname"	"stampede"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_stampede"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_stampede/c_frontierjustice/c_frontierjustice.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+                                "engineer" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.25"
+				}
+                                "bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "1.75"
+                                }
+                                "spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.60"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+                }
+                "move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "0.70"
+                }
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BackShot_Shotty.Single"
+				"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+                "9701"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"enabled"	"1"
+			"show_in_armory"	"1"
+			"item_class"	"tf_weapon_shovel"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Shovel"
+			"item_name"	"#TF_Weapon_Shovel"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_shovel"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"model_player"		"models/weapons/w_models/w_shovel.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"spy"	"1"
+                        }
+                        "visuals"
+			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"
+			}
+			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
+			"drop_sound"		"ui/item_shovel_drop.wav"
+                }
+		"9702"
+		{
+			"name"	"Shotgun Melee"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"fryingpan"
+			"item_iconname"	"fryingpan"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_FryingPan"
+			"item_name"	"Shotgun Melee"
+			"item_description"	"A shotgun...? (Model rigged by Lambdagon)"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/lambda/shotgun_melee/c_shotgun_melee.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"xifier_class_remap"	"Frying Pan"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer" "1"
+				"spy" "1"
+				"civilian"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+			{
+				"always tradable"
+				{
+					"attribute_class"	"always_tradable"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+                }
+		"9703"
+		{
+			"name"			"The Instant Fox"
+			"first_sale_date"	"2012/03/15"
+			"item_class"		"tf_wearable"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" 	"Fox Tail"
+			"item_name"	"The Instant Fox"
+			"item_description"	"Awh hell nah (Model by Reagy)"
+			"item_slot"		"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"FORCE_NOT_USED"
+			"item_quality"		"unique"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"image_inventory"	"backpack/player/items/all_class/c_fox"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/scout/batter_helmet.mdl"
+			"extra_wearable" "models/player/items/scout/batter_helmet.mdl"
+			"used_by_classes"
+			{
+				"scout"	        "1"
+			}
+			"attributes"
+			{
+                                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.50"
+				}
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"20"
+                                }
+                                "max health additive penalty"
+				{
+					"attribute_class"	"	add_maxhealth"
+					"value"	"-40"
+				}
+                                "dmg taken increased"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"	"0.65"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"9704"
+		{
+			"name"	"The Ullapool Caber"
+			"first_sale_date"	"2010/12/08"
+			"item_class"	"tf_weapon_stickbomb"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_StickBomb"
+			"item_name"	"#TF_UllapoolCaber"
+			"item_description"	"#TF_UllapoolCaber_Desc"
+			"item_logname"	"ullapool_caber"
+			"item_iconname"	"ullapool_caber"
+			"item_slot"	"melee"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory" "backpack/workshop/weapons/c_models/c_caber/c_caber"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"35"			
+			"model_player"	"models/workshop/weapons/c_models/c_caber/c_caber.mdl"
+			"attach_to_hands" "1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+                                "spy"       "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"12 0 -17"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"2.0"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+			}
+		}
+		"9705"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"enabled"	"1"
+			"show_in_armory"	"1"
+			"item_class"	"tf_weapon_shovel"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Bat with two axes strapped to it"
+			"item_name"	"The Teufort Slugger"
+			"item_description"	"(Model by Jeckler)"
+			"item_slot"	"melee"
+			"item_quality"		"unique"
+			"item_logname"	"slugger"
+			"item_iconname"	"slugger"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_slugger"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"model_player"		"models/weapons/c_models/c_slugger/c_claidheamohmor/c_claidheamohmor.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+				"heavy"	"1"
+				"sniper"	"1"
+				"pyro"	"1"
+                        }
+                        "visuals"
+			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"
+			}
+			"attributes"
+			{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"	"1"
+				}
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"	"5"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.15"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"2.0"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"	
+                        "ui/item_metal_weapon_drop.wav"
+		}
+		"9706"
+		{
+			"name"	"The C96"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Mauser C96"
+			"item_name"	"The C96"
+			"item_description"	"(Model by BadTitanTF2)"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"item_logname"	"c96"
+			"item_iconname"	"c96"
+			"image_inventory"	"backpack/weapons/c_models/c_c96"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_c96/c_revolver.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"spy" 		"1"
+			}
+                        "visuals"
+			{
+				"sound_single_shot"		"Weapon_PickPocket_Pistol.Single"
+				"sound_burst"			"Weapon_PickPocket_Pistol.SingleCrit"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "3.00"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "1.70"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.70"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.50"
+				}
+				"mult cloak meter consume rate"
+				{
+					"attribute_class"	"mult_cloak_meter_consume_rate"
+					"value"	"1.28"
+				}
+				"cloak consume rate increased"
+				{
+					"attribute_class"	"mult_cloak_meter_consume_rate"
+					"value"	"1.60"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9707"
+		{
+			"name"	"The Russian Repeater"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"1"
+			"item_type_name"	"PPSH"
+			"item_name"	"The Russian Repeater"
+			"item_description"	"(Model by G o a t K i n g)"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_ppsh"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_ppsh/c_smg.mdl"
+			"attach_to_hands"	"1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+                        "visuals"
+			{
+				"sound_single_shot"		"Weapon_PPSH.Single"
+				"sound_burst"			"Weapon_PPSH.SingleCrit"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "5.00"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.40"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.65"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"4.00"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.60"
+				}
+                        }
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+                }
+		"9708"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Shotgun"
+			"item_type_name"	"#TF_Weapon_shotgun"
+			"item_name"	"Model 37"
+			"item_description"	"Model by Svdl"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"model37"
+			"item_iconname"	"shotgun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_m37/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/weapons/lambda/model37/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"anim_slot"	"primary"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"engineer"	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.85"
+				}
+				"reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.55"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.6"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "lambda.executioner"
+				"sound_burst" "lambda.executioner"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+                "9709"
+		{
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Scopeless Bargain"
+			"item_type_name"	"Scopeless Bazaar Bargain"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"item_name"			"The Scopeless Bargain"
+			"item_description"	""
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"scopeless"
+			"item_iconname"	"scopeless"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_scopeless_bazaar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_scopelessbazaar/c_bazaar_sniper/c_bazaar_sniper.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+                                "weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0"
+                                }
+                                "maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.20"
+                                }
+                                "fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.50"
+                                }
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+                                "damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.50"
+                                }
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Bazaar_Bargain.Single"
+				"sound_burst"	"Weapon_Bazaar_Bargain.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9710"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_revolver"
+			"prefab"		"weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+				"weapon_stattrak_module_scale"				"0.66"
+
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_description"	"Model by Boomsta"
+			"item_name"	"MK-VI"
+			"item_slot"	"primary"
+			"anim_slot"	"secondary"
+			"item_quality"	"unique"
+			"item_logname"	"revolver"
+			"item_iconname"	"revolver"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_mkvi/c_mkvi"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/lambda/mkvi/c_shortstop.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "27"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"attributes"
+			{
+				"reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.8"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+                }
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
+					"ACT_VM_DRAW"	"ACT_SECONDARY_VM_DRAW_2"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK_2"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE" "ACT_MP_PUSH_STAND_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE""ACT_MP_PUSH_CROUCH_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"	"ACT_MP_PUSH_SWIM_SECONDARY"
+					"ACT_VM_RELOAD"	"ACT_SECONDARY_VM_RELOAD_2"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY_2"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY_2"
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY_2"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY_2"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+                }
+		"9711"
+		{
+ 			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Twenty Six Shooter"
+			"item_type_name"	"Revolver"
+			"item_name"	"The Twenty Six Shooter"
+			"item_description"	"(Model by Wowza)"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"twentysix"
+			"item_iconname"	"twentysix"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_twentysix"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_twentysix/c_pistol/c_pistol.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"	"1"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"2.00"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.30"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+                                "spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.50"
+                                }
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.40"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Ambassador.Single"
+				"sound_burst" "Weapon_Ambassador.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+		"9712"
+		{
+			"prefab"	"weapon_sniperrifle_alt1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sniperrifle"
+			"craft_material_type"	"weapon"
+			"craft_class"	"weapon"
+			"base_item_name"	"The Combined Shot"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Combine Sniper Rifle"
+			"item_name"	"The Combined Shot"
+			"item_description"	""
+			"show_in_armory"	"1"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"combsniper"
+			"item_iconname"	"combsniper"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_combinesniper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_combinesniper/c_dex_sniperrifle.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 0 -8"
+			}
+			"attributes"
+			{
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.20"
+				}
+				"SRifle Charge rate increased"
+				{
+					"attribute_class"	"mult_sniper_charge_per_sec"
+					"value"				"1.60"
+ 				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value"				"1"
+ 				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"				"0.20"
+ 				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.80"
+ 				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Combsniper_Large.Single"
+				"sound_burst"		"Weapon_Combsniper_Large.SingleCrit"
+				"sound_empty"		"Weapon_Combsniper.ClipEmpty"
+				"sound_special2"	"Weapon_SniperRailgun.NonScoped"
+				"sound_special3"	"Weapon_Combsniper.Single"
+				"muzzle_flash"		"dxhr_sniper_muzzleflash"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9713"
+		{
+			"name"	"The 18 Shot"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Revolver with ''extra ammo''"
+			"item_name"	"The 18 Shot"
+			"item_description"	"(Model by Sparkwire, Populus)"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"item_logname"	"c96"
+			"item_iconname"	"c96"
+			"image_inventory"	"backpack/weapons/c_models/c_18"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_18/c_revolver/c_revolver.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"spy" 		"1"
+			}
+                        "visuals"
+			{
+				"sound_single_shot"	"Weapon_Enforcer.Single"
+				"sound_burst"	"Weapon_Enforcer.SingleCrit"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "3.00"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"2.00"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "3.00"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"3.00"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"	"3"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.40"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -26697,11 +29390,11 @@
 		"444"
 		{
 			"name"	"head scale"
-			"attribute_class"	"head_scale"
+			"attribute_class"	"head_scale" 
 			"description_format"	"value_is_percentage"
 			"description_string"	"#Attrib_NoDoubleJump"
 			"description_format"	"value_is_additive"
-			"hidden"	"0"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
@@ -30353,6 +33046,24 @@
 		{
 			"name"	"stickybomb quickie"
 			"attribute_class"	"stickybomb_quickie"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10019"
+		{
+			"name"	"use robo voice"
+			"attribute_class"	"use_robo_voice"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10020"
+		{
+			"name"	"move speed bonus HIDDEN"
+			"attribute_class"	"mult_player_movespeed"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
