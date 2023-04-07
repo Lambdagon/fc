@@ -21884,8 +21884,8 @@
             "image_inventory_size_w"        "128"
             "image_inventory_size_h"        "82"
             "model_world"    "models/weapons/w_357.mdl"
-            "model_player"    "models/weapons/v_357.mdl"
-            "attach_to_hands" "0"
+            "model_player"    "models/weapons/c_357.mdl"
+            "attach_to_hands" "2"
             "inspect_panel_dist" "40"
             "item_quality"    "unique"
             "propername"    "1"
@@ -22299,7 +22299,7 @@
 		}
 		"9413"
 		{
-			"name"	"projectile tester"
+			"name"	"D-IED"
 			"item_class"	"tf_weapon_rocketlauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -22388,6 +22388,79 @@
 				{
 					"attribute_class"	"mult_reload_time"
 					"value"	"0.7"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9414"
+		{
+			"name"	"projectile tester"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Rocket Launcher"
+			"item_name"	"Projectile Tester"
+			"item_description"	"Model by AlreadyADemon
+Fires....... something"
+			"item_slot"	"primary"
+			"item_quality"	"rarity1"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"rpg"
+			"item_iconname"	"rpg"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_rocketlauncher"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_died/c_rocketlauncher.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"33"
+				}
+				"mod projectile homing"
+				{
+					"attribute_class"	"mod_projectile_homing"
+					"value"	"1"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.7"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/workshop/weapons/c_models/c_quadball/w_quadball_grenade.mdl"
 				}
 			}
 			"visuals"
