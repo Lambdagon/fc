@@ -1,0 +1,25 @@
+"Patch"
+{
+	include "materials/models/player/mercenary/mercenary_base.vmt"
+	
+	insert
+	{
+		"$baseTexture" "models/player/mercenary/mercenary_custom"
+		
+		"$blendtintbybasealpha"		"1"
+		//"$blendtintcoloroverbase"		"0"
+		"$colortint_base"		"{191 179 155}"
+		"$color2"		"{191 179 155}"
+		"$colortint_tmp"		"[0 0 0]"	
+		
+		"Proxies"
+		{
+			"SelectFirstIfNonZero"
+			{
+				"srcVar1"		"$colortint_tmp"
+				"srcVar2"		"$colortint_base"
+				"resultVar"		"$color2"
+			}
+		}
+	}
+}

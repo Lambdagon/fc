@@ -1,0 +1,100 @@
+"EyeRefract"
+{
+	"$Iris"               "models/player/shared/eye-iris-blue"		  // Iris color in RGB with cornea noise in A
+//	"$AmbientOcclTexture" "models/player/shared/eye-extra"				  // Ambient occlusion in RGB, A unused
+	"$Envmap"             "models/player/shared/eye-reflection-cubemap-"  // Reflection environment map
+	"$CorneaTexture"      "models/player/shared/eye-cornea"               // Special texture that has 2D cornea normal in RG and other data in BA
+	"$lightwarptexture"   "models/player/shared/eye_lightwarp.vtf"              // This enables TF NPR lighting
+
+//	"$EyeballRadius" "0.6"				// Default 0.5
+	"$AmbientOcclColor" "[1.0 1.0 1.0]"	// Default 0.33, 0.33, 0.33
+	"$Dilation" "0.5"					// Default 0.5
+	"$ParallaxStrength" "0.25"          // Default 0.25
+	"$CorneaBumpStrength" "1.0"			// Default 1.0
+
+	"$halflambert" "1"
+	"$nodecal" "1"
+
+	// These effects are only available in ps.2.0b and later
+	// DISABLED: these cause issues with scaling and waste performance for no gain!
+	"$RaytraceSphere" "0"				// Default 1 - Enables raytracing in the pixel shader to make the eyeball look round
+	"$SphereTexkillCombo" "0"			// Default 1 - Enables killing pixels that don't ray-intersect the sphere
+
+	"$ambientocclusion" "1"
+
+
+
+	"$rage" "1"
+	"$rage_compare" ".5"
+
+
+
+//	"$AmbientOcclTexture_orig" "models/player/shared/eye-extra"
+//	"$AmbientOcclTexture_rage" "black"
+	"$AmbientOcclTexture" "black"
+
+//	"$lightwarptexture_orig"   "models/player/shared/eye_lightwarp"
+//	"$lightwarptexture_rage"   "white"
+
+	"$EyeballRadius" "0.6"
+
+	"$AmbientOcclColor_orig" "[1.0 1.0 1.0]"
+	"$AmbientOcclColor_rage" "[100.0 10.0 0.5]"
+
+	"$Dilation_orig" "0.5"
+	"$Dilation_rage" "0.2"
+
+
+	
+	// DX8 ps.1.1 fallbacks, original HL2 eyes
+	"Eyes_dx8"
+	{
+		"$basetexture"  "models/player/shared/dxlevel80/eyeball_l"
+		"$iris"         "models/player/shared/dxlevel80/iris_blue_l"
+	}
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"RipAndTear"
+		{
+			"resultVar" "$rage"
+		}
+		"LessOrEqual"
+		{
+			"lessEqualVar"	"$AmbientOcclColor"
+			"greaterVar"	"$AmbientOcclColor_rage"
+			"srcVar1"		"$rage_compare"
+			"srcVar2"		"$rage"
+			"resultVar"		"$AmbientOcclColor"
+		}
+		"LessOrEqual"
+		{
+			"lessEqualVar"	"$Dilation"
+			"greaterVar"	"$Dilation_rage"
+			"srcVar1"		"$rage_compare"
+			"srcVar2"		"$rage"
+			"resultVar"		"$Dilation"
+		}
+		"LessOrEqual"
+		{
+			"lessEqualVar"	"$AmbientOcclColor"
+			"greaterVar"	"$AmbientOcclColor_orig"
+			"srcVar1"		"$rage"
+			"srcVar2"		"$rage_compare"
+			"resultVar"		"$AmbientOcclColor"
+		}
+		"LessOrEqual"
+		{
+			"lessEqualVar"	"$Dilation"
+			"greaterVar"	"$Dilation_orig"
+			"srcVar1"		"$rage"
+			"srcVar2"		"$rage_compare"
+			"resultVar"		"$Dilation"
+		}
+	}
+}
