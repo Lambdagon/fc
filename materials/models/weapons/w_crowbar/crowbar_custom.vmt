@@ -1,0 +1,52 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/weapons/w_crowbar/crowbar_custom"
+	"$surfaceprop"	"metal"
+	"$bumpmap"	"models/weapons/w_crowbar/crowbar_normal"
+
+	"$glowcolor" "1"
+	//phong properties
+	"$phong"	"1"
+	"$phongboost"	"1"
+	"$phongexponent"	"50"
+	"$phongfresnelranges"	"[1 2 5]"
+	"$rimlight"	"1"
+	"$rimlightexponent"	"1"
+
+	"$ambientocclusion" "1"
+
+	"$blendtintbybasealpha"		"1"
+	"$blendtintcoloroverbase"		"1"
+	"$colortint_base"		"{180 180 180}"
+	"$color2"		"{180 180 180}"
+	"$colortint_tmp"		"[0 0 0]"
+	
+	"$cloakPassEnabled" "1"
+	
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"spy_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar""$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"	"$glowcolor"
+			"resultVar"	"$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"	"$glowcolor"
+			"resultVar"	"$color2"
+		}
+		"spy_invis"
+		{
+		}
+	}
+}

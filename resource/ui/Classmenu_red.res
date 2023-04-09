@@ -30,10 +30,10 @@
 		"tabPosition"	"0"
 	}
 	
-	"randompc_red"
+	"civilian"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"randompc_red"
+		"fieldName"			"civilian"
 		"xpos"				"c250"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
@@ -58,10 +58,10 @@
 		"activeimage"		"class_sel_sm_civilian_red"
 		"inactiveimage"		"class_sel_sm_civilian_inactive"
 	}
-	"randompc_red1"
+	"john"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"randompc_red1"
+		"fieldName"			"john"
 		"xpos"				"c300"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
@@ -85,6 +85,34 @@
 		"scaleImage"		"1"
 		"activeimage"		"class_sel_sm_rebel_red"
 		"inactiveimage"		"class_sel_sm_rebel_inactive"
+	}
+	"mercenary"
+	{
+		"ControlName"		"ImageButton"
+		"fieldName"			"merc"
+		"xpos"				"c-350"
+		"xpos_lodef"				"c217"
+		"xpos_hidef"				"c238"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"				"6"
+		"wide"				"50"
+		"tall"				"100"
+		"autoResize"		"0"
+		"pinCorner"			"2"
+		"visible"			"1"
+		"enabled"			"1"
+		"tabPosition"		"0"
+		"labelText"			"merc"
+		"textAlignment"		"south-west"
+		"Command"			"joinclass mercenary"
+		"Default"			"1"
+		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
+		"scaleImage"		"1"
+		"activeimage"		"class_sel_sm_mercenary_red"
+		"inactiveimage"		"class_sel_sm_mercenary_inactive"
 	}
 	"Offense"
 	{
