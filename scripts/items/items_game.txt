@@ -18976,12 +18976,12 @@
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_crowbar.mdl"	
+			"model_player"	"models/weapons/c_crowbar.mdl"	
 			"model_world"	"models/weapons/w_crowbar.mdl"
-			"attach_to_hands"	"0"
+			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"baseitem"	"1"
@@ -19000,10 +19000,15 @@
 			}
 			"visuals"
 			{
-				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
-				"sound_melee_miss"		"Weapon_Crowbar.Miss"
-				"sound_burst"			"Weapon_Machete.MissCrit"
+				"sound_melee_hit"		"Weapon_Crowbar.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_Crowbar.Melee_Hit"
+				"sound_melee_miss"		"Weapon_Crowbar.Single"
+				"sound_burst"		"Weapon_Crowbar.Single"
+											"animation_replacement"
+				{
+					"ACT_VM_HITCENTER"	"ACT_VM_MISSCENTER"
+					"ACT_VM_SWINGHARD"	"ACT_VM_HITKILL"
+				}	
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"

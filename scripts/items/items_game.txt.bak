@@ -16073,6 +16073,7 @@
 				"scout"	"1"
 				"sniper"	"1"
 				"soldier"	"1"
+				"mercenary"	"1"
 				"demoman"	"1"
 				"medic"	"1"
 				"heavy"	"1"
@@ -16115,6 +16116,7 @@
 					"scout"		"scenes\player\scout\low\taunt_russian.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_russian.vcd"
 					"soldier"	"scenes\player\soldier\low\taunt_russian.vcd"
+					"mercenary"	"scenes\player\soldier\low\taunt_russian.vcd"
 					"demoman"	"scenes\player\demoman\low\taunt_russian.vcd"
 					"medic"		"scenes\player\medic\low\taunt_russian.vcd"
 					"heavy"		"scenes\player\heavy\low\taunt_russian.vcd"
@@ -18207,6 +18209,7 @@
 			{
 				"medic"	"1"
 				"civilian"	"1"
+				"mercenary"	"1"
 			}
 			"static_attrs"
 			{
@@ -18973,12 +18976,12 @@
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_crowbar.mdl"	
+			"model_player"	"models/weapons/c_crowbar.mdl"	
 			"model_world"	"models/weapons/w_crowbar.mdl"
-			"attach_to_hands"	"0"
+			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"baseitem"	"1"
@@ -18997,10 +19000,15 @@
 			}
 			"visuals"
 			{
-				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
-				"sound_melee_miss"		"Weapon_Crowbar.Miss"
-				"sound_burst"			"Weapon_Machete.MissCrit"
+				"sound_melee_hit"		"Weapon_Crowbar.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_Crowbar.Melee_Hit"
+				"sound_melee_miss"		"Weapon_Crowbar.Single"
+				"sound_burst"		"Weapon_Crowbar.Single"
+											"animation_replacement"
+				{
+					"ACT_VM_HITCENTER"	"ACT_VM_MISSCENTER"
+					"ACT_VM_HITCENTERCRIT"	"ACT_VM_HITKILL"
+				}	
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -22485,7 +22493,7 @@ Fires....... something"
 			"item_description"	"Model from GMod addon by Mac Tonight"
             "item_slot"    "secondary"
             "show_in_armory"    "1"
-            "image_inventory"    "backpack/weapons/w_models/w_revolver"
+            "image_inventory"    "backpack/weapons/oozi"
             "image_inventory_size_w"        "128"
             "image_inventory_size_h"        "82"
             "model_world"    "models/weapons/w_mw2_uzi_new.mdl"
@@ -23810,7 +23818,288 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-
+		"9714"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Rocket Launcher"
+			"item_logname"	"blackbox"
+			"item_iconname"	"blackbox"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RocketLauncher"
+			"item_name"	"Rocket Launcher"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/rocketlauncher_dm"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_rocketlauncher_dm.mdl"
+			"model_world"	"models/weapons/v_models/v_rocketlauncher_dm.mdl"
+			"anim_slot" 	"primary2"
+			"attach_to_hands" "2"
+			"baseitem"	"1"
+			"inspect_panel_dist" "55"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"12 -4 -8"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"blackbox"
+			"particle_suffix"		"blackbox"
+		}
+		"9715"
+		{
+			"craft_class"	""
+			"baseitem"		"1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"anim_slot"	"secondary"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/w_models/pistol_merc"
+			"model_player"	"models/weapons/v_models/v_pistol_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_pistol_mercenary.mdl"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		"9716"
+		{
+			"name"	"Merc Crowbar"
+			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Crowbar"
+			"item_name"	"Crowbar"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_tfccrowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_crowbar_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_crowbar.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"baseitem"		"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"9717"
+		{
+			"name"	"The tommy Gun"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"1"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"Chicago TypeWriter"
+			"item_description"	"Model from Open Fortress"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"primary2"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/tommygun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_tommygun_merc.mdl"
+			"model_world"	"models/weapons/w_models/w_tommygun.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+            "visuals"
+			{
+				"sound_single_shot"		"Weapon_PPSH.Single"
+				"sound_burst"			"Weapon_PPSH.SingleCrit"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "5.00"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.40"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"9718"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Super Shotgun"
+			"item_type_name"	"Shotgun"
+			"item_name"	"Super Shotgun"
+			"item_description"	"Model from Open Fortress"
+			"item_logname"	"force_a_nature"
+			"item_iconname"	"force_a_nature"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"primary"
+			"image_inventory"	"backpack/weapons/w_models/supershotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_supershotgun_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_supershotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.5"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "1.2"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.9"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.14"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BackShot_Shotty.Single"
+				"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
