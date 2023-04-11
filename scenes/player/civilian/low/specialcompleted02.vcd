@@ -1,0 +1,52 @@
+// Choreo version 1
+actor "civilian"
+{
+  channel "audio"
+  {
+    event speak "Civilian.SpecialCompleted02"
+    {
+      time 0.000000 0.853333
+      param "Civilian.SpecialCompleted02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "mad"
+    {
+      time 0.603333 1.634583
+      param "player\civilian\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.3788 0.7771 "curve_easein_to_curve_easeout"
+        0.7701 0.7657 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "madUpper"
+    {
+      time 0.000000 1.145000
+      param "player\civilian\emotion\emotion"
+      param2 "madUpper"
+      event_ramp
+      {
+        0.2500 1.0000 "curve_easein_to_curve_easeout"
+        0.6450 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "500"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

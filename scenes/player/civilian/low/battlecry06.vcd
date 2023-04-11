@@ -1,0 +1,42 @@
+// Choreo version 1
+actor "civilian"
+{
+  channel "audio"
+  {
+    event speak "Civilian.BattleCry06"
+    {
+      time 0.000000 1.300317
+      param "Civilian.BattleCry06"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "happyBigUpper"
+    {
+      time 0.031250 1.302083
+      param "player\civilian\emotion\emotion"
+      param2 "happyBigUpper"
+      event_ramp
+      {
+        0.0818 0.4343
+        0.5970 0.5943
+        1.1564 0.5171
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

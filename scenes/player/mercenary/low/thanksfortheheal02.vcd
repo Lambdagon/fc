@@ -1,0 +1,41 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+    event speak "Mercenary.ThanksForTheHeal02"
+    {
+      time 0.000000 1.015873
+      param "Mercenary.ThanksForTheHeal02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "defaultFaceUpper"
+    {
+      time 0.000000 1.265873
+      param "player\Mercenary\emotion\emotion"
+      param2 "defaultFaceUpper"
+      event_ramp
+      {
+        0.2500 1.0000 "curve_easein_to_curve_easeout"
+        0.7659 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,41 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+    event speak "Mercenary.PainSharp07"
+    {
+      time 0.000000 0.260499
+      param "Mercenary.PainSharp07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "painSmallUpper"
+    {
+      time 0.000000 0.406332
+      param "player\Mercenary\emotion\emotion"
+      param2 "painSmallUpper"
+      event_ramp
+      {
+        0.1044 1.0000 "curve_easein_to_curve_easeout"
+        0.2246 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

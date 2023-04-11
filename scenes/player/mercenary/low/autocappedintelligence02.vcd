@@ -1,0 +1,52 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+    event speak "Mercenary.AutoCappedIntelligence02"
+    {
+      time 0.000000 2.345215
+      param "Mercenary.AutoCappedIntelligence02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "mad"
+    {
+      time 2.095215 5.5952149999999996
+      param "player\Mercenary\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.5 1.0000 "curve_easein_to_curve_easeout"
+        2.75 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "madUpper"
+    {
+      time 0.0 2.595215
+      param "player\Mercenary\emotion\emotion"
+      param2 "madUpper"
+      event_ramp
+      {
+        0.2500 1.0000 "curve_easein_to_curve_easeout"
+        2.095215 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

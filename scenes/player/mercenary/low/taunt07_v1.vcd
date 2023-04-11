@@ -1,0 +1,70 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "body"
+  {
+    event speak "Mercenary.Scream"
+    {
+      time 0.000000 2.632562
+      param "Mercenary.Scream"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event sequence "taunt07"
+    {
+      time 0.000000 2.933333
+      param "taunt07"
+      fixedlength
+    }
+    event expression "mad"
+    {
+      time 0.006173 0.646173
+      param "player\soldier\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.0000 0.7608
+        0.4706 0.7098
+      }
+    }
+    event expression "mad"
+    {
+      time 2.376544 2.933000
+      param "player\soldier\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.0000 0.0118
+        0.1324 0.6902
+        0.5515 0.7137
+      }
+    }
+    event expression "aa2"
+    {
+      time 0.600000 2.265000
+      param "player\soldier\phonemes\phonemes_strong"
+      param2 "aa2"
+      event_ramp
+      {
+        0.0020 0.0078
+        0.1224 0.9569
+        0.2745 0.6902
+        0.4224 0.9961
+        0.5507 0.5647
+        0.6716 0.9922
+        0.7343 0.6902
+        0.8493 0.9451
+        0.9239 0.7176
+        0.9328 0.6118
+        1.0433 0.9373
+        1.2059 0.7765
+        1.5235 0.0078
+      }
+    }
+  }
+}
+
+fps 60
+snap off
+ignorePhonemes off

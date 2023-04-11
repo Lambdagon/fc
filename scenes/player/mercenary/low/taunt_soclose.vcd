@@ -1,0 +1,34 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+    event speak "Mercenary.LaughEvil01"
+    {
+      time 1.66 3.4
+      param "Mercenary.LaughEvil01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "body"
+  {
+    event sequence "taunt02"
+    {
+      time 0 2.93
+      param "taunt02"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "108"
+  "RampTool" "100"
+  "ExpressionTool" "74"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off

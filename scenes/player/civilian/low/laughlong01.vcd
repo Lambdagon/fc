@@ -1,0 +1,53 @@
+// Choreo version 1
+actor "civilian"
+{
+  channel "audio"
+  {
+    event speak "Civilian.LaughLong01"
+    {
+      time 0.000000 3.471383
+      param "Civilian.LaughLong01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "happyBigUpper"
+    {
+      time 0.031250 3.385417
+      param "player\civilian\emotion\emotion"
+      param2 "happyBigUpper"
+      event_ramp
+      {
+        0.2168 0.3600
+        0.5417 0.6171 "curve_easein_to_curve_easeout"
+        3.1143 0.6171 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "happyBig"
+    {
+      time 3.177083 4.510417
+      param "player\civilian\emotion\emotion"
+      param2 "happyBig"
+      event_ramp
+      {
+        0.2286 0.3657
+        1.1256 0.4800 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "56"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

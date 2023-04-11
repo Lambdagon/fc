@@ -1,0 +1,22 @@
+// Choreo version 1
+event loop "end loop"
+{
+  time 23.0416 -1.000000
+  param "0"
+  loopcount "-1"
+}
+actor "Spy"
+{
+  channel "sequence"
+  {
+    event sequence "idle"
+    {
+      time 0 23.0416
+      param "top3"
+    }
+  }
+}
+
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,44 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+  }
+  channel "emotion"
+  {
+    event expression "defaultFace"
+    {
+      time 0.000000 15.000000
+      param "player\Mercenary\emotion\emotion"
+      param2 "defaultFace"
+      event_ramp
+      {
+        0.2530 0.7343 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+        14.7714 0.7371 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+      }
+    }
+    event expression "CloseLid"
+    {
+      time 0.000000 15.000000
+      param "player\Mercenary\emotion\emotion"
+      param2 "CloseLid"
+      event_ramp leftedge curve_default_to_curve_default 0.500 rightedge curve_default_to_curve_default 0.500
+      {
+        0.25 0.2680 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+        14.7714 0.25 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "12"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

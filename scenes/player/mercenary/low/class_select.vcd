@@ -1,0 +1,29 @@
+// Choreo version 1
+event loop "end_cycle"
+{
+  time 6‬ -0
+  param "6‬"
+  loopcount "-1"
+}
+actor "mercenary"
+{
+  channel "body"
+  {
+  }
+  channel "sequence"
+  {
+    event sequence "loadout_idle"
+    {
+      time 0 6‬
+      param "loadout_idle"
+      fixedlength
+    }
+  }
+  channel "facial"
+  {
+  }
+}
+
+fps 60
+snap off
+ignorePhonemes off

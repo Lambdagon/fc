@@ -1,0 +1,41 @@
+// Choreo version 1
+actor "Mercenary"
+{
+  channel "audio"
+  {
+    event speak "Mercenary.GoodJob01"
+    {
+      time 0.000000 0.632744
+      param "Mercenary.GoodJob01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "emotion"
+  {
+    event expression "happySmallUpper"
+    {
+      time 0.000000 0.788994
+      param "player\Mercenary\emotion\emotion"
+      param2 "happySmallUpper"
+      event_ramp
+      {
+        0.2500 0.7486 "curve_easein_to_curve_easeout"
+        0.5769 0.7514 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,66 @@
+// Choreo version 1
+event loop "end_cycle"
+{
+  time 7.333000 -1.000000
+  param "4.166000"
+  loopcount "-1"
+}
+actor "civilian"
+{
+  channel "body"
+  {
+  }
+  channel "sequence"
+  {
+    event sequence "stand_MELEE"
+    {
+      time 0.000000 7.333333
+      param "stand_MELEE"
+      fixedlength
+    }
+  }
+  channel "facial"
+  {
+    event expression "m"
+    {
+      time 0.003883 3.466846
+      param "player\civilian\phonemes\phonemes"
+      param2 "m"
+      event_ramp
+      {
+        0.1618 0.5057
+        0.4265 0.9143 "curve_easein_to_curve_easeout"
+        0.9417 0.8171 "curve_easein_to_curve_easeout"
+        2.3176 0.8143 "curve_easein_to_curve_easeout"
+        2.9647 0.5371 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+      }
+    }
+    event expression "mad"
+    {
+      time 2.942353 7.334491
+      param "player\civilian\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.1789 0.1886
+        0.5279 0.7057 "curve_easein_to_curve_easeout"
+        1.2500 0.0000 "curve_easein_to_curve_easeout"
+        1.6000 0.1600
+        2.7500 0.0086
+        3.1819 0.1686 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "24"
+  "ExpressionTool" "74"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

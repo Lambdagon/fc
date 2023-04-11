@@ -1,0 +1,81 @@
+// Choreo version 1
+actor "civilian"
+{
+  channel "audio"
+  {
+  }
+  channel "emotion"
+  {
+    event expression "painSmall"
+    {
+      time 0.000000 15.000000
+      param "player\civilian\emotion\emotion"
+      param2 "painSmall"
+      event_ramp
+      {
+        0.2974 1.0000 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+        0.8111 0.8911
+        1.5778 0.8713
+        1.8778 0.9901
+        2.2333 0.8812
+        3.0889 0.7624
+        3.5556 0.7426
+        3.8333 0.9307
+        4.3667 0.7921
+        5.8647 0.7723
+        14.7714 0.9549 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+      }
+    }
+    event expression "painBig"
+    {
+      time 0.857143 6.059524
+      param "player\civilian\emotion\emotion"
+      param2 "painBig"
+      event_ramp
+      {
+        0.3961 0.2673
+        0.7902 0.2079
+        1.3529 0.2178
+        1.7412 0.1683
+        2.0059 0.2871
+        2.5235 0.2277
+        4.6221 0.2277
+      }
+    }
+    event expression "painBig"
+    {
+      time 7.369048 13.547620
+      param "player\civilian\emotion\emotion"
+      param2 "painBig"
+      event_ramp
+      {
+        0.2902 0.3267
+        0.6843 0.2277
+        1.2118 0.2277
+        1.5353 0.2574
+        1.8353 0.1980
+        2.4882 0.1485
+        2.7412 0.2970
+        3.1706 0.1980
+        3.6471 0.2178
+        4.0412 0.3168
+        4.5148 0.2475
+        4.8353 0.2376
+        5.0647 0.3465
+        5.5983 0.2277
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "56"
+  "ExpressionTool" "100"
+  "RampTool" "34"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
