@@ -1,0 +1,906 @@
+//--------------------------------------------------------------------------------------------------------------
+// Mercenary Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+//
+Criterion "MercenaryIsKillSpeechObject" "MercenaryKillSpeechObject" "1" "required" weight 0
+Criterion "MercenaryIsNotStillonFire" "MercenaryOnFire" "!=1" "required" weight 0
+Criterion "MercenaryIsStillonFire" "MercenaryOnFire" "1" "required" weight 0
+Criterion "MercenaryNotKillSpeech" "MercenaryKillSpeech" "!=1" "required" weight 0
+Criterion "MercenaryNotKillSpeechMelee" "MercenaryKillSpeechMelee" "!=1" "required" weight 0
+Criterion "MercenaryNotSaidHealThanks" "MercenarySaidHealThanks" "!=1" "required"
+Criterion "IsHelpCapMercenary" "MercenaryHelpCap" "1" "required" weight 0
+
+
+Response PlayerCloakedSpyDemomanMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify05.vcd" 
+}
+Rule PlayerCloakedSpyDemomanMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnDemoman
+	Response PlayerCloakedSpyDemomanMercenary
+}
+
+Response PlayerCloakedSpyEngineerMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify07.vcd" 
+}
+Rule PlayerCloakedSpyEngineerMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnEngineer
+	Response PlayerCloakedSpyEngineerMercenary
+}
+
+Response PlayerCloakedSpyHeavyMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify03.vcd" 
+}
+Rule PlayerCloakedSpyHeavyMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnHeavy
+	Response PlayerCloakedSpyHeavyMercenary
+}
+
+Response PlayerCloakedSpyMedicMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify06.vcd" 
+}
+Rule PlayerCloakedSpyMedicMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnMedic
+	Response PlayerCloakedSpyMedicMercenary
+}
+
+Response PlayerCloakedSpyPyroMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify04.vcd" 
+}
+Rule PlayerCloakedSpyPyroMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnPyro
+	Response PlayerCloakedSpyPyroMercenary
+}
+
+Response PlayerCloakedSpySniperMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify08.vcd" 
+}
+Rule PlayerCloakedSpySniperMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnSniper
+	Response PlayerCloakedSpySniperMercenary
+}
+
+Response PlayerCloakedSpyMercenaryMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify02.vcd" 
+}
+Rule PlayerCloakedSpyMercenaryMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnMercenary
+	Response PlayerCloakedSpyMercenaryMercenary
+}
+
+Response PlayerCloakedSpySpyMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpyIdentify09.vcd" 
+}
+Rule PlayerCloakedSpySpyMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary IsOnSpy
+	Response PlayerCloakedSpySpyMercenary
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech
+//--------------------------------------------------------------------------------------------------------------
+Response HealThanksMercenary
+{
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal01.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal02.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal03.vcd" 
+}
+Rule HealThanksMercenary
+{
+	criteria ConceptMedicChargeStopped IsMercenary SuperHighHealthContext MercenaryNotSaidHealThanks 50PercentChance
+	ApplyContext "MercenarySaidHealThanks:1:20"
+	Response HealThanksMercenary
+}
+
+Response PlayerRoundStartMercenary
+{
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry02.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry03.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry04.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry05.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry06.vcd" predelay "1.0, 5.0"
+}
+Rule PlayerRoundStartMercenary
+{
+	criteria ConceptPlayerRoundStart IsMercenary
+	Response PlayerRoundStartMercenary
+}
+
+Response PlayerCappedIntelligenceMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence03.vcd" 
+}
+Rule PlayerCappedIntelligenceMercenary
+{
+	criteria ConceptPlayerCapturedIntelligence IsMercenary
+	Response PlayerCappedIntelligenceMercenary
+}
+
+Response PlayerGrabbedIntelligenceMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoGrabbedIntelligence01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoGrabbedIntelligence02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoGrabbedIntelligence03.vcd" 
+}
+Rule PlayerGrabbedIntelligenceMercenary
+{
+	criteria ConceptPlayerGrabbedIntelligence IsMercenary
+	Response PlayerGrabbedIntelligenceMercenary
+}
+
+Response PlayerCapturedPointMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint03.vcd" 
+}
+Rule PlayerCapturedPointMercenary
+{
+	criteria ConceptPlayerCapturedPoint IsMercenary
+	Response PlayerCapturedPointMercenary
+}
+
+Response PlayerSuddenDeathMercenary
+{
+	scene "scenes/Player/Mercenary/low/Jeers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers06.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers07.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers08.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers09.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers10.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers11.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers12.vcd" 
+}
+Rule PlayerSuddenDeathMercenary
+{
+	criteria ConceptPlayerSuddenDeathStart IsMercenary
+	Response PlayerSuddenDeathMercenary
+}
+
+Response PlayerStalemateMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie03.vcd" 
+}
+Rule PlayerStalemateMercenary
+{
+	criteria ConceptPlayerStalemate IsMercenary
+	Response PlayerStalemateMercenary
+}
+
+Response PlayerTeleporterThanksMercenary
+{
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter01.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter02.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter03.vcd" 
+}
+Rule PlayerTeleporterThanksMercenary
+{
+	criteria ConceptTeleported IsNotEngineer IsMercenary 30PercentChance
+	Response PlayerTeleporterThanksMercenary
+}
+
+Response PlayerRespawnMercenary
+{
+	scene "scenes/Player/Mercenary/low/Respawn01.vcd" 
+	scene "scenes/Player/Mercenary/low/Respawn02.vcd" 
+	scene "scenes/Player/Mercenary/low/Respawn03.vcd" 
+}
+Rule PlayerRespawnMercenary
+{
+	criteria ConceptPlayerRespawn 30PercentChance IsMercenary NotKilled
+	Response PlayerRespawnMercenary
+}
+
+Response PlayerRespawnKilledMercenary
+{
+	scene "scenes/Player/Mercenary/low/Respawn01.vcd" 
+	scene "scenes/Player/Mercenary/low/Respawn02.vcd" 
+	scene "scenes/Player/Mercenary/low/Respawn03.vcd" 
+	scene "scenes/Player/Mercenary/low/RespawnKilled01.vcd" 
+}
+Rule PlayerRespawnKilledMercenary
+{
+	criteria ConceptPlayerRespawn 30PercentChance IsMercenary GotKilled
+	Response PlayerRespawnKilledMercenary
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Combat
+//--------------------------------------------------------------------------------------------------------------
+Response KilledPlayerManyMercenary
+{
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule KilledPlayerManyMercenary
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary IsWeaponNotMelee WeaponIsNotDMRevolver WeaponIsNotShotgunMercenary WeaponIsNotRocket WeaponIsNotGrenade WeaponIsNotOriginal WeaponIsNotDMGrenade WeaponIsNotDynamiteBundle WeaponIsNotPistolMercenary WeaponIsNotPistolAkimbo
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenary
+}
+
+Response KilledPlayerManyMercenaryRevolver
+{
+    scene "scenes/Player/Mercenary/low/RevolverKill01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts03.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule KilledPlayerManyMercenaryRevolver
+{
+    criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsDMRevolver
+    ApplyContext "MercenaryKillSpeech:1:10"
+    applycontexttoworld
+    Response KilledPlayerManyMercenaryRevolver
+}
+
+Response KilledPlayerManyMercenaryPistol
+{
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts03.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule KilledPlayerManyMercenaryPistol
+{
+    criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsPistolMercenary
+    ApplyContext "MercenaryKillSpeech:1:10"
+    applycontexttoworld
+    Response KilledPlayerManyMercenaryPistol
+}
+Rule KilledPlayerManyMercenaryAkimboPistol
+{
+    criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsPistolAkimbo
+    ApplyContext "MercenaryKillSpeech:1:10"
+    applycontexttoworld
+    Response KilledPlayerManyMercenaryPistol
+}
+
+Response KilledPlayerManyMercenaryShotgun
+{
+    scene "scenes/Player/Mercenary/low/ShotgunKill01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts03.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule KilledPlayerManyMercenaryShotgun
+{
+    criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsShotgun
+    ApplyContext "MercenaryKillSpeech:1:10"
+    applycontexttoworld
+    Response KilledPlayerManyMercenaryShotgun
+}
+
+Response KilledPlayerManyMercenaryExplosive
+{
+	scene "scenes/Player/Mercenary/low/ExplosiveKill01.vcd" 
+	scene "scenes/Player/Mercenary/low/ExplosiveKill02.vcd" 
+	scene "scenes/Player/Mercenary/low/ExplosiveKill03.vcd" 
+	scene "scenes/Player/Mercenary/low/ExplosiveKill04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughEvil01.vcd" 
+}
+Rule KilledPlayerManyMercenaryRL
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsRocket
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenaryExplosive
+}
+Rule KilledPlayerManyMercenaryRLDM
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsDMRocketLauncher
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenaryExplosive
+}
+Rule KilledPlayerManyMercenaryGL
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsGrenade
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenaryExplosive
+}
+Rule KilledPlayerManyMercenaryGLDM
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsChinaLake
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenaryExplosive
+}
+Rule KilledPlayerManyMercenaryDynamite
+{
+	criteria ConceptKilledPlayer 30PercentChance KilledPlayerDelay MercenaryNotKillSpeech IsMercenary WeaponIsDynamiteBundle
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyMercenaryExplosive
+}
+
+Response KilledPlayerMeleeMercenary
+{
+	scene "scenes/Player/Mercenary/low/SpecialCompleted05.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts04.vcd" 
+}
+Rule KilledPlayerMeleeMercenary
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  WeaponIsCrowbar MercenaryNotKillSpeechMelee IsMercenary
+	ApplyContext "MercenaryKillSpeechMelee:1:10"
+	applycontexttoworld
+	Response KilledPlayerMeleeMercenary
+}
+
+Response KilledPlayerVeryManyMercenary
+{
+	scene "scenes/Player/Mercenary/low/LaughEvil01.vcd" 
+}
+Rule KilledPlayerVeryManyMercenary
+{
+	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance IsWeaponPrimary KilledPlayerDelay MercenaryNotKillSpeech IsMercenary
+	ApplyContext "MercenaryKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerVeryManyMercenary
+}
+
+Response PlayerKilledCapperMercenary
+{
+	scene "scenes/Player/Mercenary/low/Cheers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule PlayerKilledCapperMercenary
+{
+	criteria ConceptCapBlocked IsMercenary
+	ApplyContext "MercenaryKillSpeech:1:10"
+	Response PlayerKilledCapperMercenary
+}
+
+Response PlayerKilledDominatingMercenary
+{
+	scene "scenes/Player/Mercenary/low/LaughEvil01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/LaughEvil02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/LaughHappy01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination03.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination04.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination05.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination06.vcd" predelay "2.5"
+}
+Rule PlayerKilledDominatingMercenary
+{
+	criteria ConceptKilledPlayer IsMercenary IsDominated
+	ApplyContext "MercenaryKillSpeech:1:10"
+	Response PlayerKilledDominatingMercenary
+}
+
+Response PlayerKilledForRevengeMercenary
+{
+	scene "scenes/Player/Mercenary/low/Revenge01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Revenge02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Revenge03.vcd" predelay "2.5"
+}
+Rule PlayerKilledForRevengeMercenary
+{
+	criteria ConceptKilledPlayer IsMercenary IsRevenge
+	ApplyContext "MercenaryKillSpeech:1:10"
+	Response PlayerKilledForRevengeMercenary
+}
+
+Response PlayerKilledObjectMercenary
+{
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule PlayerKilledObjectMercenary
+{
+	criteria ConceptKilledObject IsMercenary 30PercentChance IsARecentKill
+	ApplyContext "MercenaryKillSpeechObject:1:30"
+	applycontexttoworld
+	Response PlayerKilledObjectMercenary
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Pain
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerAttackerPainMercenary
+{
+	scene "scenes/Player/Mercenary/low/PainSevere01.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere02.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere03.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere04.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere05.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere06.vcd" 
+}
+Rule PlayerAttackerPainMercenary
+{
+	criteria ConceptAttackerPain IsMercenary
+	Response PlayerAttackerPainMercenary
+}
+
+Response PlayerOnFireMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoOnFire01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire03.vcd" 
+}
+Rule PlayerOnFireMercenary
+{
+	criteria ConceptFire IsMercenary MercenaryIsNotStillonFire
+	ApplyContext "MercenaryOnFire:1:7"
+	Response PlayerOnFireMercenary
+}
+
+Response PlayerOnFireRareMercenary
+{
+	scene "scenes/Player/Mercenary/low/AutoOnFire02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire03.vcd" 
+}
+Rule PlayerOnFireRareMercenary
+{
+	criteria ConceptFire IsMercenary 10PercentChance MercenaryIsNotStillonFire
+	ApplyContext "MercenaryOnFire:1:7"
+	Response PlayerOnFireRareMercenary
+}
+
+Response PlayerPainMercenary
+{
+	scene "scenes/Player/Mercenary/low/PainSharp01.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp02.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp03.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp04.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp05.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp06.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp07.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp08.vcd" 
+}
+Rule PlayerPainMercenary
+{
+	criteria ConceptPain IsMercenary
+	Response PlayerPainMercenary
+}
+
+Response PlayerStillOnFireMercenary
+{
+	scene "scenes/Player/Mercenary/low/autoonfiresecondary01.vcd" 
+}
+Rule PlayerStillOnFireMercenary
+{
+	criteria ConceptFire IsMercenary  MercenaryIsStillonFire
+	ApplyContext "MercenaryOnFire:1:7"
+	Response PlayerStillOnFireMercenary
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 1
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerGoMercenary
+{
+	scene "scenes/Player/Mercenary/low/Go01.vcd" 
+	scene "scenes/Player/Mercenary/low/Go02.vcd" 
+	scene "scenes/Player/Mercenary/low/Go03.vcd" 
+	scene "scenes/Player/Mercenary/low/Go04.vcd" 
+}
+Rule PlayerGoMercenary
+{
+	criteria ConceptPlayerGo IsMercenary
+	Response PlayerGoMercenary
+}
+
+Response PlayerHeadLeftMercenary
+{
+	scene "scenes/Player/Mercenary/low/HeadLeft01.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadLeft02.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadLeft03.vcd" 
+}
+Rule PlayerHeadLeftMercenary
+{
+	criteria ConceptPlayerLeft  IsMercenary
+	Response PlayerHeadLeftMercenary
+}
+
+Response PlayerHeadRightMercenary
+{
+	scene "scenes/Player/Mercenary/low/HeadRight01.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadRight02.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadRight03.vcd" 
+}
+Rule PlayerHeadRightMercenary
+{
+	criteria ConceptPlayerRight  IsMercenary
+	Response PlayerHeadRightMercenary
+}
+
+Response PlayerHelpMercenary
+{
+	scene "scenes/Player/Mercenary/low/HelpMe01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMe02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMe03.vcd" 
+}
+Rule PlayerHelpMercenary
+{
+	criteria ConceptPlayerHelp IsMercenary
+	Response PlayerHelpMercenary
+}
+
+Response PlayerHelpCaptureMercenary
+{
+	scene "scenes/Player/Mercenary/low/HelpMeCapture01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeCapture02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeCapture03.vcd" 
+}
+Rule PlayerHelpCaptureMercenary
+{
+	criteria ConceptPlayerHelp IsMercenary IsOnCappableControlPoint
+	ApplyContext "MercenaryHelpCap:1:10"
+	Response PlayerHelpCaptureMercenary
+}
+
+Response PlayerHelpCapture2Mercenary
+{
+	scene "scenes/Player/Mercenary/low/StandOnThePoint01.vcd" 
+	scene "scenes/Player/Mercenary/low/StandOnThePoint02.vcd" 
+	scene "scenes/Player/Mercenary/low/StandOnThePoint03.vcd" 
+}
+Rule PlayerHelpCapture2Mercenary
+{
+	criteria ConceptPlayerHelp IsMercenary IsOnCappableControlPoint IsHelpCapMercenary
+	Response PlayerHelpCapture2Mercenary
+}
+
+Response PlayerHelpDefendMercenary
+{
+	scene "scenes/Player/Mercenary/low/HelpMeDefend01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend03.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend04.vcd" 
+}
+Rule PlayerHelpDefendMercenary
+{
+	criteria ConceptPlayerHelp IsMercenary IsOnFriendlyControlPoint
+	Response PlayerHelpDefendMercenary
+}
+
+Response PlayerMedicMercenary
+{
+	scene "scenes/Player/Mercenary/low/Medic01.vcd" 
+	scene "scenes/Player/Mercenary/low/Medic02.vcd" 
+	scene "scenes/Player/Mercenary/low/Medic03.vcd"
+}
+Rule PlayerMedicMercenary
+{
+	criteria ConceptPlayerMedic IsMercenary
+	Response PlayerMedicMercenary
+}
+
+Response PlayerMoveUpMercenary
+{
+	scene "scenes/Player/Mercenary/low/MoveUp01.vcd" 
+	scene "scenes/Player/Mercenary/low/MoveUp02.vcd" 
+	scene "scenes/Player/Mercenary/low/MoveUp03.vcd" 
+}
+Rule PlayerMoveUpMercenary
+{
+	criteria ConceptPlayerMoveUp  IsMercenary
+	Response PlayerMoveUpMercenary
+}
+
+Response PlayerNoMercenary
+{
+	scene "scenes/Player/Mercenary/low/No01.vcd" 
+	scene "scenes/Player/Mercenary/low/No02.vcd" 
+	scene "scenes/Player/Mercenary/low/No03.vcd" 
+}
+Rule PlayerNoMercenary
+{
+	criteria ConceptPlayerNo  IsMercenary
+	Response PlayerNoMercenary
+}
+
+Response PlayerThanksMercenary
+{
+	scene "scenes/Player/Mercenary/low/Thanks01.vcd" 
+	scene "scenes/Player/Mercenary/low/Thanks02.vcd" 
+}
+Rule PlayerThanksMercenary
+{
+	criteria ConceptPlayerThanks IsMercenary
+	Response PlayerThanksMercenary
+}
+
+Response PlayerYesMercenary
+{
+	scene "scenes/Player/Mercenary/low/Yes01.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes02.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes03.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes04.vcd" 
+}
+Rule PlayerYesMercenary
+{
+	criteria ConceptPlayerYes  IsMercenary
+	Response PlayerYesMercenary
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 2
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerActivateChargeMercenary
+{
+	scene "scenes/Player/Mercenary/low/ActivateCharge01.vcd" 
+	scene "scenes/Player/Mercenary/low/ActivateCharge02.vcd" 
+	scene "scenes/Player/Mercenary/low/ActivateCharge03.vcd" 
+}
+Rule PlayerActivateChargeMercenary
+{
+	criteria ConceptPlayerActivateCharge IsMercenary
+	Response PlayerActivateChargeMercenary
+}
+
+Response PlayerCloakedSpyMercenary
+{
+	scene "scenes/Player/Mercenary/low/CloakedSpy01.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy02.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy03.vcd" 
+}
+Rule PlayerCloakedSpyMercenary
+{
+	criteria ConceptPlayerCloakedSpy IsMercenary
+	Response PlayerCloakedSpyMercenary
+}
+
+Response PlayerDispenserHereMercenary
+{
+	scene "scenes/Player/Mercenary/low/NeedDispenser01.vcd" 
+}
+Rule PlayerDispenserHereMercenary
+{
+	criteria ConceptPlayerDispenserHere IsMercenary
+	Response PlayerDispenserHereMercenary
+}
+
+Response PlayerIncomingMercenary
+{
+	scene "scenes/Player/Mercenary/low/Incoming01.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming02.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming03.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming04.vcd" 
+}
+Rule PlayerIncomingMercenary
+{
+	criteria ConceptPlayerIncoming IsMercenary
+	Response PlayerIncomingMercenary
+}
+
+Response PlayerSentryAheadMercenary
+{
+	scene "scenes/Player/Mercenary/low/SentryAhead01.vcd" 
+	scene "scenes/Player/Mercenary/low/SentryAhead02.vcd" 
+	scene "scenes/Player/Mercenary/low/SentryAhead03.vcd" 
+}
+Rule PlayerSentryAheadMercenary
+{
+	criteria ConceptPlayerSentryAhead IsMercenary
+	Response PlayerSentryAheadMercenary
+}
+
+Response PlayerSentryHereMercenary
+{
+	scene "scenes/Player/Mercenary/low/NeedSentry01.vcd" 
+}
+Rule PlayerSentryHereMercenary
+{
+	criteria ConceptPlayerSentryHere IsMercenary
+	Response PlayerSentryHereMercenary
+}
+
+Response PlayerTeleporterHereMercenary
+{
+	scene "scenes/Player/Mercenary/low/NeedTeleporter01.vcd" 
+}
+Rule PlayerTeleporterHereMercenary
+{
+	criteria ConceptPlayerTeleporterHere IsMercenary
+	Response PlayerTeleporterHereMercenary
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 3
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerBattleCryMercenary
+{
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry02.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry03.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry04.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry05.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry06.vcd" 
+}
+Rule PlayerBattleCryMercenary
+{
+	criteria ConceptPlayerBattleCry IsMercenary
+	Response PlayerBattleCryMercenary
+}
+
+Response PlayerCheersMercenary
+{
+	scene "scenes/Player/Mercenary/low/Cheers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule PlayerCheersMercenary
+{
+	criteria ConceptPlayerCheers IsMercenary
+	Response PlayerCheersMercenary
+}
+
+Response PlayerGoodJobMercenary
+{
+	scene "scenes/Player/Mercenary/low/GoodJob01.vcd" 
+	scene "scenes/Player/Mercenary/low/GoodJob02.vcd" 
+	scene "scenes/Player/Mercenary/low/GoodJob03.vcd" 
+}
+Rule PlayerGoodJobMercenary
+{
+	criteria ConceptPlayerGoodJob IsMercenary
+	Response PlayerGoodJobMercenary
+}
+
+Response PlayerJeersMercenary
+{
+	scene "scenes/Player/Mercenary/low/Jeers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers06.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers07.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers08.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers09.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers10.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers11.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers12.vcd" 
+}
+Rule PlayerJeersMercenary
+{
+	criteria ConceptPlayerJeers IsMercenary
+	Response PlayerJeersMercenary
+}
+
+Response PlayerLostPointMercenary
+{
+	scene "scenes/Player/Mercenary/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization05.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization06.vcd" 
+}
+Rule PlayerLostPointMercenary
+{
+	criteria ConceptPlayerLostPoint IsMercenary
+	Response PlayerLostPointMercenary
+}
+
+Response PlayerNegativeMercenary
+{
+	scene "scenes/Player/Mercenary/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization05.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization06.vcd" 
+}
+Rule PlayerNegativeMercenary
+{
+	criteria ConceptPlayerNegative IsMercenary
+	Response PlayerNegativeMercenary
+}
+
+Response PlayerNiceShotMercenary
+{
+	scene "scenes/Player/Mercenary/low/NiceShot01.vcd" 
+	scene "scenes/Player/Mercenary/low/NiceShot02.vcd" 
+	scene "scenes/Player/Mercenary/low/NiceShot03.vcd" 
+}
+Rule PlayerNiceShotMercenary
+{
+	criteria ConceptPlayerNiceShot IsMercenary
+	Response PlayerNiceShotMercenary
+}
+
+Response PlayerPositiveMercenary
+{
+	scene "scenes/Player/Mercenary/low/PositiveVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization05.vcd" 
+}
+Rule PlayerPositiveMercenary
+{
+	criteria ConceptPlayerPositive IsMercenary
+	Response PlayerPositiveMercenary
+}
+
+Response PlayerBerserkMercenary
+{
+	scene "scenes/Player/Mercenary/low/Berserk01.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk02.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk03.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk04.vcd" 
+}
+Rule PlayerBerserkMercenary
+{
+	criteria ConceptPlayerPositive IsMercenary IsBerserk
+	Response PlayerBerserkMercenary
+}
+
+Response PlayerPowerupSpentMercenary
+{
+	scene "scenes/Player/Mercenary/low/PowerupSpent01.vcd" 
+	scene "scenes/Player/Mercenary/low/PowerupSpent02.vcd" 
+	scene "scenes/Player/Mercenary/low/PowerupSpent03.vcd" 
+}
+Rule PlayerPowerupSpentMercenary
+{
+	criteria ConceptPlayerNegative IsMercenary InPowerup
+	Response PlayerPowerupSpentMercenary
+}
+
+Response PlayerTauntsMercenary
+{
+	scene "scenes/Player/Mercenary/low/LaughLong02.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort01.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort02.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort03.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort04.vcd" 
+}
+Rule PlayerTauntsMercenary
+{
+	criteria ConceptPlayerTaunts IsMercenary
+	Response PlayerTauntsMercenary
+}
+
