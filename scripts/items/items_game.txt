@@ -20878,7 +20878,7 @@
                                 "dmg taken from blast reduced"
 				{
 					"attribute_class"	"	mult_dmgtaken_from_explosions"
-					"value"	"0.00"
+					"value"	"0.20"
 				}
                                 "health from healers reduced"
 				{
@@ -24283,15 +24283,20 @@ Fires....... something"
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "3"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.9"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "1.05"
+					"value" "1.20"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.60"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.45"
 				}
 				"crit mod disabled"
 				{
@@ -24762,36 +24767,31 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"deploy time decreased"
+				"heal on hit for rapidfire"
 				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.35"
+					"attribute_class"	"add_onhit_addhealth"
+					"value"	"1"
 				}	
 				"crit vs wet player"
 				{
 					"attribute_class"	"crit_vs_wet_players"
 					"value" "1"
-                }	
-				"crit vs burning player"
-				{
-					"attribute_class"	"or_crit_vs_playercond"
-					"value" "1"
-                }
+                                }
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.3"
-                }
+					"value"	"1.25"
+                                }
 				"heal on kill"
 				{
 					"attribute_class"	"heal_on_kill"
-					"value"	"35"
-                }	
+					"value"	"15"
+                                }	
 				"max health additive penalty"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value" "-10"
-				}	
+					"value" "-25"
+                                }
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
