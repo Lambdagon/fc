@@ -18104,8 +18104,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
-		"9021"
+		}"9021"
 		{
 			"name"	"HL2 Crowbar"
 			"prefab"	"weapon_melee_allclass"
@@ -18153,16 +18152,19 @@
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
-			"attributes"
-			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
-			}
 			"visuals"
 			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW" 							"ACT_MELEE_ALLCLASS_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_MELEE_ALLCLASS_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_PRIMARYATTACK"
+					"ACT_VM_SWINGHARD" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
+					"ACT_VM_MISSCENTER" 					"ACT_MELEE_ALLCLASS_VM_MISSCENTER"
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALLCLASS_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
+				}
 				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
 				"sound_melee_miss"		"Weapon_Crowbar.Miss"
@@ -22131,7 +22133,7 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}	
-		"9410""9410"
+		"9410"
 		{
 			"name"	"Spyshotgun"
 			"item_class"	"tf_weapon_shotgun_primary"
