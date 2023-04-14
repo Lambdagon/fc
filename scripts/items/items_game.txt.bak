@@ -18104,12 +18104,11 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
-		"9021"
+		}"9021"
 		{
 			"name"	"HL2 Crowbar"
-			"item_class"	"saxxy"
 			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_tfc_crowbar"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18129,9 +18128,9 @@
 			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_crowbar.mdl"
-			"model_player"	"models/weapons/v_crowbar.mdl"
-			"attach_to_hands"	"0"
+			"model_player"	"models/weapons/lambda/c_models/crowbar/c_crowbar.mdl"
+			"attach_to_hands"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -18153,16 +18152,19 @@
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
-			"attributes"
-			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
-			}
 			"visuals"
 			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW" 							"ACT_MELEE_ALLCLASS_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_MELEE_ALLCLASS_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_PRIMARYATTACK"
+					"ACT_VM_SWINGHARD" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
+					"ACT_VM_MISSCENTER" 					"ACT_MELEE_ALLCLASS_VM_MISSCENTER"
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALLCLASS_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
+				}
 				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
 				"sound_melee_miss"		"Weapon_Crowbar.Miss"
@@ -24902,7 +24904,7 @@ Fires....... something"
 			"max_ilevel"	"10"
 			"attach_to_hands"	"1"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter_large"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
@@ -24973,7 +24975,7 @@ Fires....... something"
 			"max_ilevel"	"10"
 			"attach_to_hands"	"1"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter_large"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
@@ -25502,6 +25504,138 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9740"
+		{
+			"name"	"Megagun"
+			"prefab"	"valve"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_minigun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Not-So-Mini Gun"
+			"item_name"			"Megagun"
+			"item_slot"	"primary"
+			"image_inventory"	"backpack/weapons/w_models/w_minigun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_megagun/c_minigun.mdl"
+			"item_description"	"Model By: CoryP2001"
+			"inspect_panel_dist" "88"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"attributes"
+			{
+			
+                "fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.7"
+                }
+                "damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.6"
+                }
+				"accuracy scales damage"
+				{
+					"attribute_class"	"accuracy_scales_damage"
+					"value" "1"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "25"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2.5"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value" "2.33"
+				}
+
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_bignasty_tracer01"
+				"tracer_effect_crit"	"bullet_bignasty_tracercrit01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9141"
+		{
+			"name"	"Paper SOldier Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Wood Pulp"
+			"item_name"	"Paper Soldier"
+			"item_description"	""
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"-1"
+				}
+			}
+			"model_world" "models/papery/soldier.mdl"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+			
+			"mouse_pressed_sound"	"superguard.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
 		"30570"
 		{
