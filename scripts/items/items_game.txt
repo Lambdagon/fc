@@ -24010,7 +24010,7 @@ Fires....... something"
 			"craft_material_type"	"weapon"
 			"show_in_armory"	"1"
 			"item_type_name"	"Submachine Gun"
-			"item_name"	"Chicago TypeWriter"
+			"item_name"	"The Chicago Typewriter"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
@@ -24035,20 +24035,40 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "5.00"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
+					"value"	"1.15"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
 				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2.00"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "1.65"
+                                }
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "1.30"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "0.90"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -24072,9 +24092,9 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"Super Shotgun"
+			"base_item_name"	"The Super Shotgun"
 			"item_type_name"	"Double Barreled Shotgun"
-			"item_name"	"Super Shotgun"
+			"item_name"	"The Super Shotgun"
 			"item_description"	"Model from Open Fortress"
 			"item_logname"	"supershot"
 			"item_iconname"	"supershot"
@@ -25053,8 +25073,8 @@ Fires....... something"
 			}
 			"base_item_name"	"TF_WEAPON_PISTOL"
 			"show_in_armory"	"1"
-			"item_type_name"	"Dual Wielded sidearm"
-			"item_name"	"Akimbo Pistols"
+			"item_type_name"	"Dual Wielded Sidearm"
+			"item_name"	"The Akimbo Pistols"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
 			"min_ilevel"	"1"
@@ -25074,7 +25094,17 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.85"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.20"
 				}
 			}
 			"static_attrs"
@@ -25094,7 +25124,7 @@ Fires....... something"
 		}
 		"9734"
 		{
-			"name"	"The Assult Rifle"
+			"name"	"The Assault Rifle"
 			"prefab"	"weapon_smg"
 			"capabilities"
 			{
@@ -25112,7 +25142,7 @@ Fires....... something"
 			"craft_material_type"	"weapon"
 			"show_in_armory"	"1"
 			"item_type_name"	"Rifle"
-			"item_name"	"Assult Rifle"
+			"item_name"	"The Assault Rifle"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
@@ -25137,20 +25167,25 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "5.00"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.40"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.75"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.70"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -25197,7 +25232,17 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.85"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.20"
 				}
 			}
 			"static_attrs"
