@@ -25687,6 +25687,255 @@ Fires....... something"
 			"mouse_pressed_sound"	"superguard.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
+		"9145"
+		{
+			"name"	"The Owen"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"1"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"The Little Owen"
+			"item_description"	"Model by KrazyZark"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"primary"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/owen"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_owen_merc.mdl"
+			"model_world"	"models/weapons/w_models/w_owen.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+            "visuals"
+			{
+				"sound_single_shot"		"Weapon_Tommygun.Single"
+				"sound_burst"			"Weapon_Tommygun.SingleCrit"
+				
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.75"
+				}
+
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"9146"
+		{
+			"name"	"The AR2"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"0"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"The AR2"
+			"item_description"	"Model by Nullpoint"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"primary2"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/owen"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+				"model_player"	"models/weapons/ar2/v_models/v_assault_rifle_dm.mdl"
+			"model_world"	"models/weapons/ar2/w_models/w_assault_rifle.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+            "visuals"
+			{
+				"sound_single_shot"		"Weapon_Tommygun.Single"
+				"sound_burst"			"Weapon_Tommygun.SingleCrit"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.75"
+				}
+
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"9747"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Victorian Blast"
+			"item_type_name"	"Automatic Shotgun"
+			"item_name"	"The Victorian Blast"
+			"item_description"	"(Model from Deity Link)"
+			"item_logname"	"vic"
+			"item_iconname"	"vic"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"secondary"
+			"image_inventory"	"backpack/weapons/c_models/c_victorian"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_victorian/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value" "1"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"1.50"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.40"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.30"
+				}
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"1"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"add_onhit_addammo"
+					"value" "3"
+				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "0.30"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.7"
+				}
+				"panic_attack_negative"
+				{
+					"attribute_class"	"panic_attack_negative"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SuperShotgun.Single"
+				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -35085,6 +35334,16 @@ Fires....... something"
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"10021"
+        {
+            "name"    "bullets per shot hidden"
+            "attribute_class"    "mult_bullets_per_shot"
+            "description_string"    "#Attrib_BulletsPerShot_Bonus"
+            "description_format"    "value_is_percentage"
+            "hidden"    "1"
+            "effect_type"    "negative"
+            "stored_as_integer"    "0"
 		}
 	}
 	"attribute_controlled_attached_particles"
