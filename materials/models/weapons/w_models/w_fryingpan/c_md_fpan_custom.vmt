@@ -1,0 +1,49 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\w_models\w_fryingpan/c_md_fpan_custom"
+	"$bumpmap" "models\weapons\w_models\w_fryingpan/c_md_fpan_normal" 
+
+
+	"$rimlight" "1"						
+	"$rimlightexponent" "20"				
+	"$rimlightboost" ".25"
+
+	"$phong" "1"
+	"$phongexponent" "1"
+	"$phongboost" "2"
+	"$phongexponenttexture" "models\weapons\w_models\w_fryingpan/c_md_fpan_spec" 
+
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	//"$sheenmap" 		"cubemaps\cubemap_sheen001"
+	//"$sheenmapmask" 		"Effects\AnimatedSheen\animatedsheen0"
+	//"$sheenmaptint" 		"[ 1 1 1 ]"
+	//"$sheenmapmaskframe" 	"0"
+	//"$sheenindex" 		"0"
+
+		"$blendtintbybasealpha"		"1"
+		"$blendtintcoloroverbase"		"1"
+		"$colortint_base"		"{0 0 0}"
+		"$color2"		"{175 184 184}"
+		"$colortint_tmp"		"[0 0 0]"	
+		
+		"Proxies"
+		{
+			"ItemTintColor"
+			{
+				"resultVar"		"$colortint_tmp"
+			}
+			"SelectFirstIfNonZero"
+			{
+				"srcVar1"		"$colortint_tmp"
+				"srcVar2"		"$colortint_base"
+				"resultVar"		"$color2"
+			}
+		}
+
+}

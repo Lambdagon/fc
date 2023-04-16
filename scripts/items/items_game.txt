@@ -25935,6 +25935,167 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+		"9748"
+		{
+			"name"	"Merc Frying Pan"
+			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"enabled"	"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Frying Pan"
+			"item_name"	"The Skillet"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_tfccrowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_fryingpan/v_crowbar_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_fryingpan/w_crowbar.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"baseitem"		"0"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"attributes"
+			{
+				"critboost on kill"
+				{
+					"attribute_class"	"add_onkill_critboost_time"
+					"value" "1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.50"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_melee_hit_mvm_robot" "FryingPan.HitFlesh"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+                }
+		"9749"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Super-Short Shotgun"
+			"item_type_name"	"Shortened DB Shotgun"
+			"item_name"	"The Super-Short Shotgun"
+			"item_description"	"(Model from tholp)"
+			"item_logname"	"supershort"
+			"item_iconname"	"supershort"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"primary"
+			"image_inventory"	"backpack/weapons/w_models/w_supershort"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_supershort/v_supershotgun_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_supershort/w_supershotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "20.00"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "3.00"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.35"
+				}
+				"spread penalty hidden"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "8.00"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.16"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.08"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SuperShotgun.Single"
+				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"30570"
 		{
@@ -27626,6 +27787,16 @@ Fires....... something"
 			"description_string"	"#Attrib_Spread_Negative"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10022"
+		{
+			"name"	"spread penalty hidden"
+			"attribute_class"	"mult_spread_scale"
+			"description_string"	"#Attrib_Spread_Negative"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
