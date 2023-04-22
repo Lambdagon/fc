@@ -17387,6 +17387,9 @@
 				"pyro" "1"
 				"spy" "1"
 				"engineer" "1"
+				"mercenary"	"1"
+				"civilian"	"1"
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -17465,6 +17468,9 @@
 				"pyro" "1"
 				"spy" "1"
 				"engineer" "1"
+				"mercenary"	"1"
+				"civilian"	"1"
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -17549,6 +17555,9 @@
 				"pyro" "1"
 				"spy" "1"
 				"engineer" "1"
+				"mercenary"	"1"
+				"civilian"	"1"
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -17621,6 +17630,9 @@
 				"pyro" "1"
 				"spy" "1"
 				"engineer" "1"
+				"mercenary"	"1"
+				"civilian"	"1"
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -17699,6 +17711,9 @@
 				"pyro" "1"
 				"spy" "1"
 				"engineer" "1"
+				"mercenary"	"1"
+				"civilian"	"1"
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -21754,11 +21769,11 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"Combine Weapon"
+			"item_type_name"	"Standard Issue Pulse Rifle"
 			"item_name"	"AR2"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_ar2"
+			"image_inventory"	"backpack/weapons/c_models/c_ar2"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/weapons/w_irifle.mdl"
@@ -22455,7 +22470,7 @@ Fires....... something"
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
-					"value"				"33"
+					"value"				"1"
 				}
 				"mod projectile homing"
 				{
@@ -22475,6 +22490,7 @@ Fires....... something"
 			}
 			"visuals"
 			{
+
 			}
 			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -23967,7 +23983,7 @@ Fires....... something"
 			"item_type_name"	"#TF_Weapon_Crowbar"
 			"item_name"	"Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_tfccrowbar"
+			"image_inventory"	"backpack/weapons/w_models/w_ofcrowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_crowbar_mercenary.mdl"
@@ -24010,7 +24026,7 @@ Fires....... something"
 			"craft_material_type"	"weapon"
 			"show_in_armory"	"1"
 			"item_type_name"	"Submachine Gun"
-			"item_name"	"Chicago TypeWriter"
+			"item_name"	"The Chicago Typewriter"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
@@ -24035,20 +24051,40 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "5.00"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
+					"value"	"1.15"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
 				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2.00"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "1.65"
+                                }
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "1.30"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "0.90"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -24072,12 +24108,12 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"Super Shotgun"
-			"item_type_name"	"Shotgun"
-			"item_name"	"Super Shotgun"
+			"base_item_name"	"The Super Shotgun"
+			"item_type_name"	"Double Barreled Shotgun"
+			"item_name"	"The Super Shotgun"
 			"item_description"	"Model from Open Fortress"
-			"item_logname"	"force_a_nature"
-			"item_iconname"	"force_a_nature"
+			"item_logname"	"supershot"
+			"item_iconname"	"supershot"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"show_in_armory"	"1"
@@ -24102,25 +24138,30 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.5"
-				}
 				"bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.4"
+					"value" "2.50"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "0.70"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.9"
+					"value" "0.75"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.30"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.14"
+					"value" "0.10"
 				}
 			}
 			"visuals"
@@ -24803,7 +24844,7 @@ Fires....... something"
 		"9729"
 		{
 			"name"	"Leadpipe"
-			"item_class"	"tf_weapon_allclass"
+			"item_class"	"tf_weapon_fireaxe"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -25048,8 +25089,8 @@ Fires....... something"
 			}
 			"base_item_name"	"TF_WEAPON_PISTOL"
 			"show_in_armory"	"1"
-			"item_type_name"	"Dual Wielded sidearm"
-			"item_name"	"Akimbo Pistols"
+			"item_type_name"	"Dual Wielded Sidearm"
+			"item_name"	"The Akimbo Pistols"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
 			"min_ilevel"	"1"
@@ -25069,7 +25110,17 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.85"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.20"
 				}
 			}
 			"static_attrs"
@@ -25089,7 +25140,7 @@ Fires....... something"
 		}
 		"9734"
 		{
-			"name"	"The Assult Rifle"
+			"name"	"The Assault Rifle"
 			"prefab"	"weapon_smg"
 			"capabilities"
 			{
@@ -25107,7 +25158,7 @@ Fires....... something"
 			"craft_material_type"	"weapon"
 			"show_in_armory"	"1"
 			"item_type_name"	"Rifle"
-			"item_name"	"Assult Rifle"
+			"item_name"	"The Assault Rifle"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
@@ -25115,7 +25166,7 @@ Fires....... something"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/tommygun"
+			"image_inventory"	"backpack/weapons/w_models/w_assaultrifle"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_assault_rifle_dm.mdl"
@@ -25132,20 +25183,25 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "5.00"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.40"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.75"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.70"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -25192,7 +25248,17 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.85"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.20"
 				}
 			}
 			"static_attrs"
@@ -25610,7 +25676,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name"	"Wood Pulp"
 			"item_name"	"Paper Soldier"
-			"item_description"	""
+			"item_description"	"Model by Yakuza Merkitzi, Planub"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -25636,6 +25702,569 @@ Fires....... something"
 			
 			"mouse_pressed_sound"	"superguard.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+		"9145"
+		{
+			"name"	"The Owen"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"1"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"The Little Owen"
+			"item_description"	"Model by KrazyZark"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"primary"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/owen"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_owen_merc.mdl"
+			"model_world"	"models/weapons/w_models/w_owen.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+            "visuals"
+			{
+				"sound_single_shot"		"Weapon_Tommygun.Single"
+				"sound_burst"			"Weapon_Tommygun.SingleCrit"
+				
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.75"
+				}
+
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"9146"
+		{
+			"name"	"The AR2"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"0"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"The AR2"
+			"item_description"	"Model by Nullpoint"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"primary2"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/owen"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+				"model_player"	"models/weapons/ar2/v_models/v_assault_rifle_dm.mdl"
+			"model_world"	"models/weapons/ar2/w_models/w_assault_rifle.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+            "visuals"
+			{
+				"sound_single_shot"		"Weapon_Tommygun.Single"
+				"sound_burst"			"Weapon_Tommygun.SingleCrit"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.75"
+				}
+
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "1.25"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"9747"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Victorian Blast"
+			"item_type_name"	"Automatic Shotgun"
+			"item_name"	"The Victorian Blast"
+			"item_description"	"(Model from Deity Link)"
+			"item_logname"	"vic"
+			"item_iconname"	"vic"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"secondary"
+			"image_inventory"	"backpack/weapons/c_models/c_victorian"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_victorian/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value" "1"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"1.50"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.40"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.30"
+				}
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"1"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"add_onhit_addammo"
+					"value" "3"
+				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "0.30"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.7"
+				}
+				"panic_attack_negative"
+				{
+					"attribute_class"	"panic_attack_negative"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SuperShotgun.Single"
+				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+                }
+		"9748"
+		{
+			"name"	"Merc Frying Pan"
+			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"enabled"	"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Frying Pan"
+			"item_name"	"The Skillet"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/w_models/w_fryingpan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_fryingpan/v_crowbar_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_fryingpan/w_crowbar.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"baseitem"		"0"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"attributes"
+			{
+				"critboost on kill"
+				{
+					"attribute_class"	"add_onkill_critboost_time"
+					"value" "1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.50"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_melee_hit_mvm_robot" "FryingPan.HitFlesh"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+                }
+		"9749"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Super-Short Shotgun"
+			"item_type_name"	"Shortened DB Shotgun"
+			"item_name"	"The Super-Short Shotgun"
+			"item_description"	"(Model from tholp)"
+			"item_logname"	"supershort"
+			"item_iconname"	"supershort"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"primary"
+			"image_inventory"	"backpack/weapons/w_models/w_supershort"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_supershort/v_supershotgun_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_supershort/w_supershotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "20.00"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "3.00"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.35"
+				}
+				"spread penalty hidden"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "8.00"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.16"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.08"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SuperShotgun.Single"
+				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"9750"
+		{
+			"craft_class"	""
+			"baseitem"		"0"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_revolver"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Genuine Deagle"
+			"show_in_armory"	"1"
+			"item_type_name"	"Desert Eagle"
+			"item_description"	"(Model by The_Fanciest_Of_Pants)"
+			"item_name"	"The Genuine Deagle"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/w_models/w_deagle"
+			"model_player"	"models/weapons/v_models/v_deagle/v_revolver_spy.mdl"
+			"model_world"	"models/weapons/w_models/w_deagle/w_revolver.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.15"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.40"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "1.50"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.60"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "1.40"
+				}
+                        }
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Deagle.Single"
+				"sound_burst"			"Weapon_Deagle.SingleCrit"
+			}	
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		"9751"
+		{
+			"name"	"Shrekzooka"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"" 
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Banned Weapon"
+			"item_name"	"Shrekzooka"
+			"item_description"	"Model by gidz.co"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"attach_to_hands"	"0"
+			"propername"	"1"
+			"image_inventory"	"backpack/sent_shrek_ammo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/gidzco/shrekzooka/v_shrekzooka.mdl"
+			"model_world"	"models/weapons/gidzco/shrekzooka/w_shrekzooka.mdl"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"static_attrs"
+			{
+			"projectile_model_scale"	"0.4"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+
+				}
+				"sound_deploy"	"Weapon_GasCan.Draw"
+				"sound_single_shot"	"panzershrek.fire"
+				"sound_special1"		"panzershrek.kablooey"  
+			}
+			"attributes"
+			{
+			
+							"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/gormlesstosser/shrek.mdl"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "2.50"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.35"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.25"
+				}
+                "Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.5"
+				}
+			}
+			"mouse_pressed_sound"	"weapons/gidzco/shrek/shrek_deploy.wav"
+			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
 		"30570"
 		{
@@ -27327,6 +27956,16 @@ Fires....... something"
 			"description_string"	"#Attrib_Spread_Negative"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10022"
+		{
+			"name"	"spread penalty hidden"
+			"attribute_class"	"mult_spread_scale"
+			"description_string"	"#Attrib_Spread_Negative"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
@@ -35035,6 +35674,16 @@ Fires....... something"
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"10021"
+        {
+            "name"    "bullets per shot hidden"
+            "attribute_class"    "mult_bullets_per_shot"
+            "description_string"    "#Attrib_BulletsPerShot_Bonus"
+            "description_format"    "value_is_percentage"
+            "hidden"    "1"
+            "effect_type"    "negative"
+            "stored_as_integer"    "0"
 		}
 	}
 	"attribute_controlled_attached_particles"

@@ -1,0 +1,22 @@
+"EyeRefract"
+{
+	"$Iris"               "models\shrekislove/Shrekball" //"models/bloo_ltcom/l4d/riot/eyeball_l"			  // Iris color in RGB with cornea noise in A
+	"$AmbientOcclTexture" "models\shrekislove/eyeball_l_ambient"				  // Ambient occlusion in RGB, A unused
+	"$Envmap"             "models\shrekislove/eye-reflection-cubemap-"    // Reflection environment map
+	"$CorneaTexture"      "models\shrekislove/eye-cornea"                 // Special texture that has 2D cornea normal in RG and other data in BA
+
+	"$EyeballRadius" "3"				// Default 0.5
+	"$AmbientOcclColor" "[0.36 0.25 0.2]"	// Default 0.33, 0.33, 0.33
+	"$Dilation" "0.5"					// Default 0.5
+	"$ParallaxStrength" "0.25"          // Default 0.25
+	"$CorneaBumpStrength" "1.25"			// Default 1.0
+
+	"$halflambert" "1"
+	"$nodecal" "1"
+
+	// These effects are only available in ps.2.0b and later
+	"$RaytraceSphere" "1"				// Default 1 - Enables raytracing in the pixel shader to make the eyeball look round
+	"$SphereTexkillCombo" "0"			// Default 1 - Enables killing pixels that don't ray-intersect the sphere
+
+
+}
