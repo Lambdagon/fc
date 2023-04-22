@@ -19065,7 +19065,7 @@
 		}
 		"9041"  
 		{
-			"name"	"HL2 Shotgun"
+			"name"	"12-Gauge Shotgun"
 			"item_class"	"tf_weapon_shotgun_primary"
 			"baseitem" "1"
 			"tags"
@@ -19074,11 +19074,11 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"#TF_Weapon_Shotgun"
+			"item_type_name"	"SPAS-12"
+			"item_name"	"12-Gauge Shotgun"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory"	"backpack/weapons/c_models/c_spas"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/weapons/w_shotgun.mdl"
@@ -20377,10 +20377,11 @@
 		}
 		"9097"
 		{
-			"name"						"HL2 SMG"
+			"name"						"SMG1"
+			"item_type_name"	"MP7"
 			"item_class"					"tf_weapon_smg"
 			"item_name"					"SMG1"
-			"image_inventory"			"backpack/weapons/w_models/w_smg"
+			"image_inventory"			"backpack/weapons/c_models/c_smg1"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
 			"show_in_armory"			"1"
@@ -20431,13 +20432,13 @@
 				"can_deal_long_distance_damage"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_type_name"	"Pistol"
 			"item_name"	"USP Match"
-			"item_description"	"Part of Lambda's  Weapon pack"
+			"item_description"	"Part of Lambda's Weapon pack"
 			"item_slot"	"secondary"
 			"item_logname"	"maxgun"
 			"item_iconname"	"pistol"
-			"image_inventory"	"backpack/weapons/w_models/w_pistol"
+			"image_inventory"	"backpack/weapons/c_models/c_usp"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/weapons/w_pistol.mdl"
@@ -26265,6 +26266,95 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"weapons/gidzco/shrek/shrek_deploy.mp3"
 			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+                "9752"
+		{
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The EX Vermin8R"
+			"item_type_name"	"Shotgun"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"item_name"			"The EX Vermin8R"
+			"item_description"	"(Model by Sparkwire, Frying Dutchman, RainACA)"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"vermin"
+			"item_iconname"	"vermin"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_vermin"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_vermin/v_shotgun_merc.mdl"
+			"model_world"	"models/weapons/w_models/w_vermin/w_shotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.70"
+                                }
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.40"
+                                }
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.70"
+                                }
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "0.65"
+                                }
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "1.40"
+                                }
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.80"
+                                }
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_mult_bullets_per_shot"
+					"value" "0.50"
+                                }
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_ProSniperRifle.Single"
+				"sound_burst" "Weapon_ProSniperRifle.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"30570"
 		{

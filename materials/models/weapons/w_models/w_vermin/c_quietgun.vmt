@@ -1,0 +1,68 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\weapons\w_models\w_vermin\c_quietgun"
+
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.06 .06 .12]"
+	"$basealphaenvmapmask"		"1"
+
+	"$phongalbedotint"		"1"
+
+	"$phong" "1"
+	"$phongexponent" "20"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+
+	"$phongfresnelranges"	"[1 .5 .05]"
+	"$halflambert" "1"
+
+	"$basemapalphaphongmask" "1"
+
+
+	"360?$color2" "[ 0.5 0.5 0.5 ]"
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
