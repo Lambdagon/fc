@@ -26210,7 +26210,7 @@ Fires....... something"
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
-			"attach_to_hands"	"0"
+			"attach_to_hands"	"2"
 			"propername"	"1"
 			"image_inventory"	"backpack/sent_shrek_ammo"
 			"image_inventory_size_w"		"128"
@@ -26357,6 +26357,81 @@ Fires....... something"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"9753"
+		{
+			"name"	"John Crossbow"
+			"item_class"	"tf_weapon_crossbow"
+			"craft_class"	"" 
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Improvised Weapon"
+			"item_name"	"Crossbow"
+			"item_description"	""
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"attach_to_hands"	"2"
+			"propername"	"1"
+			"image_inventory"	"backpack/sent_shrek_ammo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_crossbow.mdl"
+			"model_world"	"models/weapons/w_crossbow.mdl"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Crossbow.Single"
+
+			}
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"8"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/crossbow_bolt.mdl"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.35"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
+				}
+				"mod use metal ammo type"
+				{
+					"attribute_class"	"mod_use_metal_ammo_type"
+					"value"	"1"
+				}
+				"projectile penetration"
+				{
+				"attribute_class"	"projectile_penetration"
+				"value"		"1"
+				}
+				"maxammo metal reduced"{
+				"attribute_class"	"mult_maxammo_metal"
+				"value"	"0.18"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_bottle_drop.wav"
+			"drop_sound"		"ui/item_bottle_drop.wav"
+
+		}
+		"9754"
 		{
 			"name"						"The Hunting Revolver"
 			"prefab"					"weapon_sniperrifle"
