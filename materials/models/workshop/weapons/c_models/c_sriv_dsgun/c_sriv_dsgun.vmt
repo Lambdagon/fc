@@ -1,0 +1,98 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/workshop/weapons/c_models/c_sriv_dsgun/c_sriv_dsgun"
+	"$phongexponenttexture" "models/workshop/weapons/c_models/c_sriv_dsgun/c_sriv_dsgun_exp"
+	"$bumpmap" "models/workshop/weapons/c_models/c_sriv_dsgun/c_sriv_dsgun_nrm"
+	
+//	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1"
+	//commented out to use the exponent mask
+//	"$phongexponent" "100"
+	"$phongboost" ".4"	
+	"$phongalbedotint" "1"
+	
+	//scales up the exponent texture which usually only has about 120 levels of exponent
+	"$phongexponentfactor"  "50"
+	
+	"$lightwarptexture" "models/lightwarps/softened_weapon_lightwarp"
+			
+	"$phongfresnelranges"	"[.3 .5 3]"
+	"$halflambert" "1"
+	"$glowcolor" "1"
+	
+	//"$envmaptint" "[.025 .025 .025]"
+
+	"$tempvar" "0"
+	
+	"360?$color2" "[ 0.8 0.8 0.8 ]"
+	
+	"$detail" "models/workshop/weapons/c_models/c_sriv_dsgun/c_sriv_dsgun_emit"
+	"$detailscale" "1"
+	"$detailblendmode" "5"
+	"$detailblendfactor" "1"
+
+	//commented out to use the exponent mask
+	"$basephongexponent" "15"
+	"$basephongboost" "3"
+
+	//"$basemapalphaphongmask" "1"
+	
+	"$rimlight" "1"						
+	"$rimlightexponent" "2"				
+	"$rimlightboost" "2.00"
+	"$rimmask" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 		"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 		"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	
+	
+		"WeaponSkin" {
+			
+		}
+	}
+}
