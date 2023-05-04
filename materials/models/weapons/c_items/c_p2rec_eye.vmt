@@ -1,0 +1,38 @@
+"VertexLitGeneric"
+{
+	$baseTexture "models/weapons/c_items/c_p2rec_eye"
+	
+	"$selfillum" 1
+	
+	"$yellow" "0"
+
+	"$colortint_tmp" "[0 0 0]"
+	"$colortint_base" "{253 253 253}"  
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"WheatlyEyeGlow"
+		{
+			"resultVar" "$selfillumtint"
+		}
+	}
+}
+
