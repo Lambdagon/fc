@@ -1,0 +1,43 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\v_ex41\ex41_diffuse"
+	"$basemapalphaphongmask"	"1"
+	"$bumpmap" "models\weapons\v_ex41\ex41_normal"
+	"$normalmapalphaenvmapmask" "models\weapons\v_ex41\ex41_specular"
+
+	"$phong" "1"
+	"$phongexponent" "12"
+	"$phongboost" "6"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "20"	
+	"$rimlightboost" ".08"
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
+}
+

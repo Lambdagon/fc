@@ -1,0 +1,44 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/weapons/c_stg-44/c_stg-44_gold"
+
+
+	"$envmap" "cubemaps/cubemap_gold001"	
+	"$envmaptint" "[2.5 2.5 1.15]"
+
+	"$phong" "1"
+	//commented out to use the exponent mask
+	//"$phongexponent" "2"
+	"$phongboost" "2.5"	
+	
+	//scales up the exponent texture which usually only has about 120 levels of exponent
+	"$phongexponentfactor"  "120"
+	"$phongalbedotint" "1"
+	
+	"$lightwarptexture" "models/lightwarps/softened_weapon_lightwarp"
+			
+	"$phongfresnelranges"	"[.3 .5 3]"
+	"$halflambert" "1"
+	"$glowcolor" "1"
+	
+
+	
+	"$tempvar" "0"
+
+	//commented out to use the exponent mask
+	//"$basephongexponent" "15"
+	//"$basephongboost" "3"
+
+	"$basemapalphaphongmask" "1"
+	
+	"$rimlight" "1"						
+	"$rimlightexponent" "1"				
+	"$rimlightboost" "2.25"
+	"$rimmask" "1"
+	
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+}
