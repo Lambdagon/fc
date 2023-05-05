@@ -16025,7 +16025,7 @@
 				"sticky arm time bonus"
 				{
 					"attribute_class"	"sticky_arm_time"
-					"value"	"-0.6"
+					"value"	"-0.2"
 				}
 				"stickybomb charge rate"
 				{
@@ -20698,7 +20698,7 @@
 			"item_iconname"	"ambassador"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
+			"image_inventory"	"backpack/weapons/lambda/sexygun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/lambda/revolver/c_revolver.mdl"
@@ -22007,7 +22007,7 @@
             "item_name"    "Colt Python"
             "item_slot"    "primary"
             "show_in_armory"    "1"
-            "image_inventory"    "backpack/weapons/w_models/w_revolver"
+            "image_inventory"    "backpack/weapons/c_models/c_357"
             "image_inventory_size_w"        "128"
             "image_inventory_size_h"        "82"
             "model_world"    "models/weapons/w_357.mdl"
@@ -22455,7 +22455,7 @@
 			"item_iconname"	"rpg"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/w_models/w_rocketlauncher"
+			"image_inventory"	"backpack/weapons/c_models/c_died"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_died/c_rocketlauncher.mdl"
@@ -23213,7 +23213,7 @@ Fires....... something"
 			"item_name"	"Shotgun Melee"
 			"item_description"	"A shotgun...? (Model rigged by Lambdagon)"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory"	"backpack/weapons/c_models/c_shotgunmelee"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/lambda/shotgun_melee/c_shotgun_melee.mdl"
@@ -23664,11 +23664,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.85"
-				}
 				"reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
@@ -23678,6 +23673,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.6"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.85"
 				}
 			}
 			"visuals"
@@ -26503,7 +26503,7 @@ Fires....... something"
 			"max_ilevel"	"100"
 			"attach_to_hands"	"2"
 			"propername"	"1"
-			"image_inventory"	"backpack/sent_shrek_ammo"
+			"image_inventory"	"backpack/weapons/c_models/c_shrek"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/gidzco/shrekzooka/v_shrekzooka.mdl"
@@ -27468,7 +27468,7 @@ Fires....... something"
 			"item_iconname"	"huntsman"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"image_inventory"	"backpack/weapons/c_models/c_bow/c_bow"
+			"image_inventory"	"backpack/weapons/c_models/c_boolet"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist"	 			"65"
@@ -27517,7 +27517,7 @@ Fires....... something"
 		}
 		"9565"
 		{
-			"name"	"The Pipegun Pipebomber"
+			"name"	"The Pipe-Gun Pipelauncher"
 			"prefab"	"valve"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_pipebomblauncher"
@@ -27537,14 +27537,14 @@ Fires....... something"
 				"can_be_festivized"		"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_PipebombLauncher"
-			"item_name"	"Pipe-Gun Pipebomber"
-			"item_description"	"Best used with the Gravity Gun"
+			"item_type_name"	"Improvised Stickybomb Launcher"
+			"item_name"	"The Homemade Homespun"
+			"item_description"	"Those shards of metal must hurt, laddie! (Model by mat500)"
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
-			"item_logname"	"stickybomb_defender"
+			"item_logname"	"improv"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"image_inventory"	"backpack/weapons/lambda/pipegun/pipegun"
@@ -27566,30 +27566,45 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.2"
-				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"3"
 				}
-				"damage bonus"
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/soupcan/w_grenade_grenadelauncher.mdl"
+				}
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"	"10"
+				}
+				"sticky arm time bonus"
+				{
+					"attribute_class"	"sticky_arm_time"
+					"value"	"-0.6"
+				}
+				"Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"2.30"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.2"
+				}
+				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"3"
+					"value"	"0.05"
 				}
-				"stickybomb charge rate"
+				"grenade not explode on impact"
 				{
-					"attribute_class"	"stickybomb_charge_rate"
-					"value"	"3"
-				}
-				"Projectile speed decreased"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"	"0.2"
+					"attribute_class"	"grenade_not_explode_on_impact"
+					"value"				"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -27616,7 +27631,7 @@ Fires....... something"
 			"item_type_name"	"Weed"
 			"item_name"	"Big Weed"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_bigweed"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/lambda/weed/c_frying_pan.mdl"
@@ -27666,7 +27681,7 @@ Fires....... something"
 			"name"	"1014_primary"
 			"prefab"	"valve"
 			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_tfc_pipebomblauncher"
+			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -27693,7 +27708,7 @@ Fires....... something"
 			"item_iconname"	"shotgun"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/lambda/pipegun/pipegun"
+			"image_inventory"	"backpack/weapons/c_models/c_xm"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands"	"1"
@@ -27701,6 +27716,8 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_1014/c_shotgun.mdl"
 			"visuals"
 			{
+				"sound_single_shot"		"Weapon_Deagle.Single"
+				"sound_burst"			"Weapon_Deagle.SingleCrit"
 			}
 			"used_by_classes"
 			{
@@ -27720,32 +27737,27 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.16"
+					"value"	"1.20"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.35"
-				}
-				"stickybomb charge rate"
-				{
-					"attribute_class"	"stickybomb_charge_rate"
-					"value"	"8"
+					"value" "0.65"
 				}
 				"mod max primary clip override"
 				{
 					"attribute_class"	"mod_max_primary_clip_override"
 					"value"	"7"
 				}
-				"spread penalty HIDDEN"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"50" 
-				}
 				"bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
-					"value" "9"
+					"value" "1.40"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.60" 
 				}
 			"visuals"																		
 			{

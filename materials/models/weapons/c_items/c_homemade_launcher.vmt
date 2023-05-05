@@ -1,0 +1,80 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\c_items\c_homemade_launcher"
+	"$basemapalphaphongmask" "1"
+
+	"$phong" "1"
+	"$phongexponent" "25"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "10"	
+	"$rimlightboost" ".5"
+
+	"$tempvar" "0"
+
+	"$basephongexponent" "25"
+	"$basephongboost" "5"
+
+	"$commadd_phongexponent" "30"
+	"$commadd_phongboost" 	"22.5"
+	"$commweapon"		"0"
+
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"CommunityWeapon"
+		{
+			"resultVar" "$commweapon"
+		}
+		"Multiply"
+		{
+			"srcVar1"  "$commweapon"
+			"srcVar2"  "$commadd_phongexponent" 
+			"resultVar" "$tempvar" 
+		}
+		"Add"
+		{
+			"srcVar1"  "$tempvar" 
+			"srcVar2"  "$basephongexponent" 
+			"resultVar" "$phongexponent" 
+		}
+		"Multiply"
+		{
+			"srcVar1"  "$commweapon"
+			"srcVar2"  "$commadd_phongboost" 
+			"resultVar" "$tempvar" 
+		}
+		"Add"
+		{
+			"srcVar1"  "$tempvar" 
+			"srcVar2"  "$basephongboost"
+			"resultVar" "$phongboost" 
+		}
+
+	}
+}
+
