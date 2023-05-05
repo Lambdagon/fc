@@ -5201,6 +5201,92 @@
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 
+		"weapon_shortstop2"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_handgun_scout_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+				"weapon_stattrak_module_scale"				"0.66"
+
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Peppergun"
+			"item_description"	"#TF_TheShortstop_Desc"
+			"item_name"	"Shotgun-In-A-Half"
+			"item_slot"	"primary"
+			"anim_slot"	"secondary"
+			"item_quality"	"unique"
+			"item_logname"	"shortstop"
+			"item_iconname"	"shortstop"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_shortstop/c_shortstop"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_shortstop/c_shortstop.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "27"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.2"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Shotgun.Single"
+				"sound_burst"	"Weapon_Shotgun.SingleCrit"
+				"sound_reload"		"Weapon_Pistol.WorldReload"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
+					"ACT_VM_DRAW"	"ACT_SECONDARY_VM_DRAW_2"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK_2"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE" "ACT_MP_PUSH_STAND_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE""ACT_MP_PUSH_CROUCH_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"	"ACT_MP_PUSH_SWIM_SECONDARY"
+					"ACT_VM_RELOAD"	"ACT_SECONDARY_VM_RELOAD_2"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY_2"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY_2"
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY_2"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY_2"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+
 		"weapon_shotgun"
 		{
 			"capabilities"
@@ -20638,6 +20724,16 @@
 					"attribute_class"	"mult_dmg"
 					"value" "1.15"
 				}
+				"faster reload rate"
+				{
+					"attribute_class"	"fast_reload"
+					"value" "1.2"
+                                }
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.7"
+                                }
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -20819,6 +20915,11 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.40"
                                 }
+				"faster reload rate"
+				{
+					"attribute_class"	"fast_reload"
+					"value" "0.8"
+                                }
                                 "spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -20827,7 +20928,7 @@
                                 "clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.30"
+					"value" "0.40"
                                 }
                                 "damage penalty"
 				{
@@ -20837,8 +20938,8 @@
 			}
 			"visuals"
 			{
-				"sound_single_shot" "Weapon_Lambda_revolver.Single"
-				"sound_burst" "Weapon_Lambda_revolver.SingleCrit"
+				"sound_single_shot"	"Weapon_FamilyBusiness.Single"
+				"sound_burst"	"Weapon_FamilyBusiness.SingleCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -22685,7 +22786,7 @@ Fires....... something"
 		"851"
 		{
 			"name"	"The AWPer Hand"
-			"prefab"	"weapon_sniperrifle weapon_sniperrifle_alt1"
+			"prefab"	"weapon_sniperrifle_alt1"
 			"craft_class"	"weapon"
 			"capabilities"
 			{
@@ -22699,6 +22800,7 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_csgo_awp/c_csgo_awp.mdl"
 			"propername"	"1"
 			"attach_to_hands"	"1"
+			"show_in_armory"	"1"
 			"item_logname"	"awper_hand"
 			"visuals"
 			{
@@ -22934,6 +23036,37 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9154"
+		{
+			"name"	"Shotgun-in-a-half"
+			"prefab" "weapon_shortstop2"
+			"first_sale_date"	"2010/09/29"
+			"particle_suffix"	"shortstop"
+			"show_in_armory"	"1"
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
+					}
+				}
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop/weapons/c_models/c_shortstop/c_shortstop_festivizer.mdl"
+					}
+				}
+			}
 		}	
                 "9123"
 		{
@@ -24179,7 +24312,7 @@ Fires....... something"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
-			"anim_slot"			"primary2"
+			"anim_slot"			"secondary"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -24193,7 +24326,7 @@ Fires....... something"
 			{
 				"mercenary"	"1"
 			}
-            "visuals"
+		        "visuals"
 			{
 				"sound_single_shot"		"Weapon_Tommygun.Single"
 				"sound_burst"			"Weapon_Tommygun.SingleCrit"
@@ -24224,11 +24357,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "1.25"
-				}
-				"Reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value" "1.30"
 				}
 				"move speed penalty"
 				{
@@ -24776,7 +24904,16 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"	"0.9"
 				}
-                
+				"faster reload rate"
+				{
+					"attribute_class"	"fast_reload"
+					"value" "1.2"
+                                }
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.8"
+                                }
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -25311,7 +25448,7 @@ Fires....... something"
 			"item_description"	"Model from Open Fortress"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
-			"anim_slot"			"primary2"
+			"anim_slot"			"primary"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -25948,7 +26085,7 @@ Fires....... something"
 			"item_description"	"Model by Nullpoint"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
-			"anim_slot"			"primary2"
+			"anim_slot"			"primary"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
