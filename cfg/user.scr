@@ -32,7 +32,7 @@
 
 
 // Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Wed May 18 13:16:46 AM
+// File generated:  Sat May 06 17:56:24 AM
 //
 //
 // Cvar	-	Setting
@@ -58,7 +58,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#LFE_EnhancedStereo"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"category1"
@@ -71,7 +71,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#TFOption_ammobucket"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"lfe_muzzlelight"
@@ -94,7 +94,7 @@ DESCRIPTION INFO_OPTIONS
 		"#LFEOption_Vignette"
 		"#LFEOption_Vignette"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"lfe_dof"
@@ -103,6 +103,20 @@ DESCRIPTION INFO_OPTIONS
 		"#LFEOption_DOF"
 		{ BOOL }
 		{ "0" }
+	}
+
+	"cl_wpn_sway_interp"
+	{
+		"Weapon sway interp"
+		{ SLIDER 0 0.1 }
+		{ "0.1" }
+	}
+
+	"cl_wpn_sway_scale"
+	{
+		"Weapon sway scale"
+		{ SLIDER 0 5 }
+		{ "0.48" }
 	}
 
 	"category2"
@@ -129,7 +143,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_autoreload"
 		"#Tooltip_autoreload"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"hud_fastswitch"
@@ -145,7 +159,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_Hitbeeps"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"tf_dingaling_volume"
@@ -196,7 +210,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_LastHitbeeps"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"tf_dingaling_lasthit_volume"
@@ -269,7 +283,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#TF_CombatText_Green"
 		{ SLIDER 0 255 }
-		{ "0" }
+		{ "255" }
 	}
 
 	"hud_combattext_blue"
@@ -284,7 +298,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_sniperbell"
 		"#Tooltip_sniperbell"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"category4"
@@ -298,7 +312,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_autozoom"
 		"#Tooltip_autozoom"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"tf_medigun_autoheal"
@@ -328,7 +342,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_UseGlowEffect"
 		"#Tooltip_UseGlowEffect"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"viewmodel_fov"
@@ -336,7 +350,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_viewmodelfov_option"
 		"#Tooltip_viewmodelfov_option"
 		{ SLIDER 54 70 }
-		{ "70" }
+		{ "54" }
 	}
 
 	"hud_freezecamhide"
@@ -386,14 +400,14 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_TargetID_Alpha"
 		"#ToolTip_TargetID_Alpha"
 		{ SLIDER 0 255 }
-		{ "200" }
+		{ "100" }
 	}
 
 	"tf_scoreboard_ping_as_text"
 	{
 		"#TF_ScoreBoard_PingAsText"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"tf_scoreboard_alt_class_icons"
@@ -414,7 +428,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_DisableWeatherParticles"
 		"#Tooltip_DisableWeatherParticles"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"cl_disablehtmlmotd"
@@ -422,7 +436,7 @@ DESCRIPTION INFO_OPTIONS
 		"#Valve_DisableHTMLMOTD"
 		"#Tooltip_DisableHTMLMOTD"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"mp_decals"
@@ -430,7 +444,7 @@ DESCRIPTION INFO_OPTIONS
 		"#Valve_Multiplayer_Decal_Limit"
 		"#Tooltip_Multiplayer_Decal_Limit"
 		{ SLIDER 0 4096 }
-		{ "4096" }
+		{ "200" }
 	}
 
 	"category8"
@@ -452,7 +466,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_classautokill"
 		"#Tooltip_classautokill"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"cl_flipviewmodels"

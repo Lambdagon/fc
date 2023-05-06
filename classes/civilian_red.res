@@ -1,6 +1,6 @@
 #base "default.res"
 
-"classes/Sniper_blue.res"
+"classes/Civilian_red.res"
 {
 	"classNameLabel"
 	{
@@ -22,14 +22,13 @@
 		
 		"model"
 		{
-			"modelname"	"models/player/sniper.mdl"
-			"modelname_hwm"	"models/player/hwm/sniper.mdl"
+			"modelname"	"models/player/civilian.mdl"
+			"modelname_hwm"	"models/player/hwm/civilian.mdl"
 			"skin"		"1"
-			"vcd"		"scenes/Player/Sniper/low/class_select.vcd"	
 						
 			"attached_model"
 			{
-				"modelname" "models/weapons/w_models/w_sniperrifle.mdl"
+				"modelname" "models/weapons/w_models/w_umbrella.mdl"
 				"skin"		"1"
 			}
 		}
