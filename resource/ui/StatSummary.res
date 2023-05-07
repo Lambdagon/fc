@@ -48,8 +48,8 @@
 		"ypos"			"0"
 		"wide"			"640"
 		"tall"			"480"
-		"visible"		"1"
-		"enabled"		"1"
+		"visible"		"0"
+		"enabled"		"0"
 		"image"			"stamp_background_map"
 		"scaleImage"		"1"
 	}
