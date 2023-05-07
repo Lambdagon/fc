@@ -5,8 +5,7 @@
 	"classNameLabel"
 	{
 		"labelText"		"JOHN FREEMAN"
-	}
-	
+	} 
 	"classInfo"
 	{
 		"text"			"I need to kill fast and bullets too slow."
@@ -24,12 +23,18 @@
 		{
 			"modelname"	"models/humans/group01/male_07.mdl"
 			"modelname_hwm"	"models/humans/group01/male_07.mdl"
-			"skin"		"0"
-						
-			"attached_model"
+			"skin" "0"
+			"angles_x" "0"
+			"angles_y" "180"
+			"angles_z" "0"
+			"origin_x" "320"
+			"origin_y" "10"
+			"origin_z" "-49"	
+			"spotlight" "1"	
+
+			"animation"
 			{
-				"modelname" ""
-				"skin"		"0"
+				"sequence"		"SelectionMenu_StartPose"
 			}
 		}
 	}
