@@ -27549,7 +27549,7 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"Improvised Stickybomb Launcher"
-			"item_name"	"The Homemade Homespun"
+			"item_name"	"The Pipe-Gun Pipelauncher"
 			"item_description"	"Those shards of metal must hurt, laddie! (Model by mat500)"
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
@@ -27602,15 +27602,25 @@ Fires....... something"
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"2.30"
 				}
-				"clip size penalty"
+				"grenade no bounce"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.2"
+					"attribute_class"	"grenade_no_bounce"
+					"value"	"1.80"
+				}
+				"stickybomb charge rate"
+				{
+					"attribute_class"	"stickybomb_charge_rate"
+					"value"	"0"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.05"
+					"value"	"0.10"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_mult_clipsize"
+					"value"	"0.25"
 				}
 				"grenade not explode on impact"
 				{
@@ -28328,15 +28338,20 @@ Fires....... something"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 			"attributes"
 			{
-				"is_a_sword"
+				"melee range multiplier"
 				{
-					"attribute_class"	"is_a_sword"
-					"value"	"1"
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.60"
 				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
+					"value"	"1.25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"	mult_postfiredelay"
+					"value"	"0.80"
 				}
 				"Construction rate decreased"
 				{
@@ -28347,6 +28362,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_repair_value"
 					"value"	"0.30"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.30"
 				}
 				"dmg penalty vs buildings"
 				{
