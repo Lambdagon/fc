@@ -30,11 +30,11 @@
 		"tabPosition"	"0"
 	}
 	
-	"civilian"
+	"civilian_red"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"civilian"
-		"xpos"				"c250"
+		"fieldName"			"civilian_red"
+		"xpos"				"c195"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
 		"ypos"				"-5"
@@ -58,11 +58,11 @@
 		"activeimage"		"class_sel_sm_civilian_red"
 		"inactiveimage"		"class_sel_sm_civilian_inactive"
 	}
-	"john"
+	"john_red"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"john"
-		"xpos"				"c300"
+		"fieldName"			"john_red"
+		"xpos"				"c-10"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
 		"ypos"				"-5"
@@ -86,11 +86,11 @@
 		"activeimage"		"class_sel_sm_rebel_red"
 		"inactiveimage"		"class_sel_sm_rebel_inactive"
 	}
-	"mercenary"
+	"mercenary_red"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"merc"
-		"xpos"				"c-350"
+		"fieldName"			"mercenary_red"
+		"xpos"				"c-205"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
 		"ypos"				"-5"
@@ -114,11 +114,109 @@
 		"activeimage"		"class_sel_sm_mercenary_red"
 		"inactiveimage"		"class_sel_sm_mercenary_inactive"
 	}
+	
+	"randompc_red"
+	{
+		"ControlName"		"ImageButton"
+		"fieldName"			"randompc_red"
+		"xpos"				"c250"
+		"xpos_lodef"				"c217"
+		"xpos_hidef"				"c238"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"				"6"
+		"wide"				"50"
+		"tall"				"100"
+		"autoResize"		"0"
+		"pinCorner"			"2"
+		"visible"			"1"
+		"enabled"			"1"
+		"tabPosition"		"0"
+		"labelText"			""
+		"textAlignment"		"south-west"
+		"Command"			"joinclass random"
+		"Default"			"1"
+		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
+		"scaleImage"		"1"
+		"activeimage"		"class_sel_sm_random_red"
+		"inactiveimage"		"class_sel_sm_random_inactive"
+	}
+	
+	"OffensiveBackground"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"OffensiveBackground"
+		"xpos"				"c-350"
+		"xpos_hidef"				"c-290"
+		"xpos_lodef"		"c-265"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"			"5"
+		"wide"			"190"
+		"tall"			"100"
+		"image"			"class_background"
+		"scaleImage"	"1"
+	}
+	
+	"DefenseBackground"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"DefenseBackground"
+		"xpos"				"c-150"
+		"xpos_hidef"				"c-290"
+		"xpos_lodef"		"c-265"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"			"5"
+		"wide"			"190"
+		"tall"			"100"
+		"image"			"class_background"
+		"scaleImage"	"1"
+	}
+	
+	"SupportBackground"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"SupportBackground"
+		"xpos"				"c50"
+		"xpos_hidef"				"c-290"
+		"xpos_lodef"		"c-265"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"			"5"
+		"wide"			"190"
+		"tall"			"100"
+		"image"			"class_background"
+		"scaleImage"	"1"
+	}
+	
+	"RandomBackground"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"RandomBackground"
+		"xpos"				"c250"
+		"xpos_lodef"				"c217"
+		"xpos_hidef"				"c238"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"100"
+		"image"			"class_background_single"
+		"scaleImage"	"1"
+	}
+	
 	"Offense"
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"Offense"
-		"xpos"			"c-300"
+		"xpos"			"c-350"
 		"xpos_hidef"			"c-287"
 		"xpos_lodef"	"c-260"
 		"ypos"			"96"
@@ -144,7 +242,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"scout_red"
-		"xpos"				"c-300"
+		"xpos"				"c-350"
 		"xpos_hidef"				"c-290"
 		"xpos_lodef"		"c-265"
 		"ypos"				"-5"
@@ -173,7 +271,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"soldier_red"
-		"xpos"				"c-250"
+		"xpos"				"c-300"
 		"xpos_hidef"				"c-244"
 		"xpos_lodef"		"c-225"
 		"ypos"				"-5"
@@ -202,7 +300,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"pyro_red"
-		"xpos"				"c-200"
+		"xpos"				"c-250"
 		"xpos_hidef"				"c-194"
 		"xpos_lodef"		"c-180"
 		"ypos"				"-5"
@@ -232,7 +330,7 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"Defense"
-		"xpos"			"c-110"
+		"xpos"			"c-150"
 		"xpos_hidef"			"c-105"
 		"xpos_lodef"	"c-95"
 		"ypos"			"96"
@@ -258,7 +356,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"demoman_red"
-		"xpos"				"c-110"
+		"xpos"				"c-150"
 		"xpos_lodef"		"c-100"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
@@ -286,7 +384,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"heavyweapons_red"
-		"xpos"				"c-60"
+		"xpos"				"c-100"
 		"xpos_lodef"		"c-55"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
@@ -314,7 +412,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"engineer_red"
-		"xpos"				"c-10"
+		"xpos"				"c-50"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
 		"ypos_hidef"				"0"
@@ -342,7 +440,7 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"Support"
-		"xpos"			"c76"
+		"xpos"			"c50"
 		"xpos_hidef"			"c74"
 		"xpos_lodef"	"c70"
 		"ypos"			"96"
@@ -368,7 +466,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"medic_red"
-		"xpos"				"c78"
+		"xpos"				"c50"
 		"xpos_hidef"				"c70"
 		"xpos_lodef"		"c65"
 		"ypos"				"-5"
@@ -397,7 +495,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"sniper_red"
-		"xpos"				"c128"
+		"xpos"				"c100"
 		"xpos_hidef"				"c120"
 		"xpos_lodef"		"c105"
 		"ypos"				"-5"
@@ -426,7 +524,7 @@
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"spy_red"
-		"xpos"				"c178"
+		"xpos"				"c150"
 		"xpos_hidef"				"c170"
 		"xpos_lodef"		"c145"
 		"ypos"				"-5"
@@ -491,6 +589,27 @@
 		"labelText"		"#TF_Cancel"
 		"textAlignment"	"center"
 		"Command"		"vguicancel"
+		"font"			"HudFontSmallBold"
+	}
+	
+	"Randombutton"
+	{
+		"ControlName"	"CExButton"
+		"fieldName"		"Randombutton"
+		"xpos"			"r510"
+		"ypos"			"r40"
+		"ypos_lodef"			"r64"
+		"zpos"			"8"
+		"wide"			"150"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"2"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"Random Class"
+		"textAlignment"	"center"
+		"Command"		"joinclass random"
 		"font"			"HudFontSmallBold"
 	}
 

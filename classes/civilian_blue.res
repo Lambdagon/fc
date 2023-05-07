@@ -1,19 +1,19 @@
 #base "default.res"
 
-"classes/Civilian_blue.res"
+"classes/Civilian_red.res"
 {
 	"classNameLabel"
 	{
-		"labelText"		"#TF_Sniper"
+		"labelText"		"#TF_Civilian"
 	}
 	
 	"classInfo"
 	{
-		"text"			"#ClassTips_2_1"
+		"text"			"Boost a teammate to give them an advantage in battle!"
 	}
 	"classInfo2"
 	{
-		"text"			"#ClassTips_2_2"
+		"text"			"Be helpless in fights!"
 	}
 	
 	"classModel"
@@ -29,7 +29,7 @@
 			"attached_model"
 			{
 				"modelname" "models/weapons/w_models/w_umbrella.mdl"
-				"skin"		"1"
+				"skin"		"0"
 			}
 		}
 	}

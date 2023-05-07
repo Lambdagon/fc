@@ -9,11 +9,11 @@
 	
 	"classInfo"
 	{
-		"text"			"#ClassTips_2_1"
+		"text"			"Boost a teammate to give them an advantage in battle!"
 	}
 	"classInfo2"
 	{
-		"text"			"#ClassTips_2_2"
+		"text"			"Be helpless in fights!"
 	}
 	
 	"classModel"
@@ -24,12 +24,12 @@
 		{
 			"modelname"	"models/player/civilian.mdl"
 			"modelname_hwm"	"models/player/hwm/civilian.mdl"
-			"skin"		"1"
+			"skin"		"0"
 						
 			"attached_model"
 			{
 				"modelname" "models/weapons/w_models/w_umbrella.mdl"
-				"skin"		"1"
+				"skin"		"0"
 			}
 		}
 	}
