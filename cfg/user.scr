@@ -1,38 +1,38 @@
 // NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
-//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
-// User options script
-//
-// Format:
-//  Version [float]
-//  Options description followed by 
-//  Options defaults
-//
-// Option description syntax:
-//
-//  "cvar" { "Prompt" { type [ type info ] } { default } }
-//
-//  type = 
-//   BOOL   (a yes/no toggle)
-//   STRING
-//   NUMBER
-//   LIST
-//
-// type info:
-// BOOL                 no type info
-// NUMBER       min max range, use -1 -1 for no limits
-// STRING       no type info
-// LIST          delimited list of options value pairs
-//
-//
-// default depends on type
-// BOOL is "0" or "1"
-// NUMBER is "value"
-// STRING is "value"
-// LIST is "index", where index "0" is the first element of the list
+			//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+			// User options script
+			//
+			// Format:
+			//  Version [float]
+			//  Options description followed by 
+			//  Options defaults
+			//
+			// Option description syntax:
+			//
+			//  "cvar" { "Prompt" { type [ type info ] } { default } }
+			//
+			//  type = 
+			//   BOOL   (a yes/no toggle)
+			//   STRING
+			//   NUMBER
+			//   LIST
+			//
+			// type info:
+			// BOOL                 no type info
+			// NUMBER       min max range, use -1 -1 for no limits
+			// STRING       no type info
+			// LIST          delimited list of options value pairs
+			//
+			//
+			// default depends on type
+			// BOOL is "0" or "1"
+			// NUMBER is "value"
+			// STRING is "value"
+			// LIST is "index", where index "0" is the first element of the list
 
 
 // Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Sat May 06 17:56:24 AM
+// File generated:  Sun May 07 12:36:52 AM
 //
 //
 // Cvar	-	Setting
@@ -71,7 +71,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#TFOption_ammobucket"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"lfe_muzzlelight"
@@ -116,7 +116,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"Weapon sway scale"
 		{ SLIDER 0 5 }
-		{ "0.48" }
+		{ "1" }
 	}
 
 	"category2"
@@ -129,7 +129,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#GameUI_PortalDepthLabel"
 		{ SLIDER 0 9 }
-		{ "1" }
+		{ "9" }
 	}
 
 	"category3"
@@ -350,7 +350,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_viewmodelfov_option"
 		"#Tooltip_viewmodelfov_option"
 		{ SLIDER 54 70 }
-		{ "54" }
+		{ "90" }
 	}
 
 	"hud_freezecamhide"
@@ -436,7 +436,7 @@ DESCRIPTION INFO_OPTIONS
 		"#Valve_DisableHTMLMOTD"
 		"#Tooltip_DisableHTMLMOTD"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"mp_decals"
