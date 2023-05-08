@@ -1,0 +1,16 @@
+bm_c1a0a
+{
+	entity
+	{
+		create {classname "lfe_weapon_progress" values {wpnprogress "0"} }
+		edit {classname "logic_achievement" values {classname "logic_relay"} }
+		create {classname "logic_auto"
+			values
+			{
+				OnMapSpawn "fixblock,AddOutput,OnPressed HEV_prop:kill::0:-1,0,-1"
+			}
+		}
+		edit {classname "func_button" origin "968 4177.31 454.5" values {targetname "fixblock"} }
+		//edit {classname "npc_human_security" values {classname "generic_actor" CitizenType "4" model "models/humans/guard.mdl" randbody "0,1,2,3,4,5" randskin "0,1,2,3,4,5,6" edt_addspawnflags "1048576" max_health "999" responsecontext "npc_human_security"} }
+	}
+}

@@ -1,0 +1,57 @@
+bm_c1a0b
+{
+	entity
+	{
+		create {classname "lfe_weapon_progress" values {wpnprogress "0"} }
+		delete {targetname "trigger_delete_old"}
+		create {classname "trigger_once" origin "-1328 1920 -177"
+			values
+			{
+				model "*90"
+				spawnflags "1"
+				OnTrigger "am_seq_sci31_bug_31_aedt,BeginSequence,,5,1"
+			}
+		}
+		delete {classname "trigger_once" origin "-1327.5 1395 -108"}
+		delete {classname "trigger_once" origin "-3392 1340.01 -360"}//kleiner
+		delete {targetname "Trigger_Eli_and_Kleiner_Scene"}//post kleiner
+		create {classname "trigger_once" origin "-3857.5 1344 -348"
+			values
+			{
+				model "*90"
+				spawnflags "1"
+				"OnStartTouch" "Eli_KLeinerSCENE,Start,,0,1"
+				"OnStartTouch" "eli_walkstoconsole,BeginSequence,,0.25,-1"
+				"OnStartTouch" "SCI43_walkstotable,BeginSequence,,3,1"
+			}
+		}
+		
+		delete {classname "info_landmark"}
+		delete {classname "trigger_changelevel"}
+
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "lab2_door4_trigger,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "lcs_controlroom_clipboard_grip,SetParent,Sci40,0.5,-1"
+				OnMapSpawn "lcs_controlroom_clipboard_grip,SetParentAttachment,anim_attachment_LH,0.51,-1"
+				//OnMapSpawn "disaster_teleport2,AddOutput,OnTrigger vort_spawnedt:ForceSpawn::0:1,0,-1"
+				OnMapSpawn "disaster_timeout,AddOutput,OnTrigger syn_reloadfailed:Reload::5:1,0,-1"
+				OnMapSpawn "gg_s1,AddOutput,OnCompletion am_seq_sci31_bug_31_aedt:CancelSequence::0:-1,0,-1"
+				OnMapSpawn "sci36_ionscr,BeginSequence,,1,1"
+				OnMapSpawn "sci37_ionscr,BeginSequence,,1,1"
+				OnMapSpawn "disaster_teleport2,AddOutput,OnTrigger ai_actbusy_search_time:Command:changelevel bm_c1a1a:14.3:-1,0,-1"
+			}
+		}
+
+		edit {targetname "offer_view3" values {spawnflags "140"} }
+		edit {targetname "disaster_pointteleport2" values {origin "-9216 -3232 -888"} }
+		
+		delete {targetname "console_speedmod"}
+		edit {targetname "am_seq_sci31_bug_31_a" values {targetname "am_seq_sci31_bug_31_aedt"} }
+		
+		create {classname "scripted_sequence" origin "-2496 2712 -255" values {m_iszEntity "SCI36_Ionization" m_iszPlay "am_console03c_work" targetname "sci36_ionscr" angles "0 90 0" m_fMoveTo "1" m_bLoopActionSequence "1" spawnflags "564"} }
+		create {classname "scripted_sequence" origin "-2628 2707 -255" values {m_iszEntity "SCI37_Ionization" m_iszPlay "am_console01b_work" targetname "sci37_ionscr" angles "0 90 0" m_fMoveTo "1" m_bLoopActionSequence "1" spawnflags "564"} }
+	}
+}
