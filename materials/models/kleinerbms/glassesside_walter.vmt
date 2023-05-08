@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitMaskedEnvMappedTexture
+	"$basetexture" "models/kleinerbms/glassesside_walter"
+	"$bumpmap" "models/kleinerbms/glassesside_normal"
+	"$basealphaenvmapmask" "0"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+
+// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+	"$phong" "1"
+	"$phongboost" "5"
+	"$phongexponenttexture" ""
+	"$phongfresnelranges"	"[0.05 0.5 1]"
+	"$halflambert" 1
+
+// Rim lighting parameters
+	"$rimlight" "1"				// To enable rim lighting (requires phong)
+	"$rimlightexponent" "80"             // Exponent for phong component of rim lighting
+	"$rimlightboost" "1"	               // Boost for ambient cube component of rim lighting
+}
