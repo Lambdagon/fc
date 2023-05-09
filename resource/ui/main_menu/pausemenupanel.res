@@ -1,4 +1,4 @@
-"Resource/UI/main_menu/PauseMenuPanel.res"
+ "Resource/UI/main_menu/PauseMenuPanel.res"
 {
 	"CTFPauseMenuPanel"
 	{
@@ -717,7 +717,7 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"labelText"			"Version: April 2023"
+		"labelText"			"Version: May 2023"
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"
