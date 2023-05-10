@@ -19143,7 +19143,7 @@
 		}
 		"9040"
 		{
-			"name"	"Antlion Claw"
+			"name"	"Antlion Claws"
 			"item_class"	"tf_weapon_antlion_claw"
 			"baseitem" "1"
 			"tags"
@@ -19151,9 +19151,10 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"#TF_Weapon_Claw"
-			"item_name"	"#TF_Weapon_Claw"
+			"item_type_name"	"Claws"
+			"item_name"	"Antlion Claws"
 			"item_slot"	"melee"
+                        "anim_slot"     "melee"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -19175,6 +19176,23 @@
 				{
 					"attribute_class"	"melee_range_multiplier"
 					"value"	"1.60"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.60"
+				}	
+                        }
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_HITCENTER"	"ACT_MELEE_ATTACK1"
+					"ACT_VM_SWINGHARD"	"ACT_MELEE_ATTACK1"
+					"ACT_MP_ATTACK_STAND_PRIMARYFIRE"	"ACT_MELEE_ATTACK1"
+					"ACT_MP_ATTACK_CROUCH_PRIMARYFIRE"	"ACT_MELEE_ATTACK1"
+					"ACT_MP_ATTACK_SWIM_PRIMARYFIRE"	"ACT_MELEE_ATTACK1"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARYFIRE"	"ACT_MELEE_ATTACK1"
 				}
                         }
 			"static_attrs"
@@ -28777,7 +28795,17 @@ Fires....... something"
 				"major increased jump height"
 				{
 					"attribute_class"	"major_jump_height"
+					"value" "6.00"
+				}
+				"increased air control"
+				{
+					"attribute_class"	"mod_air_control"
 					"value" "4.00"
+				}
+				"cancel falling damage"
+				{
+					"attribute_class"	"cancel_falling_damage"
+					"value" "1"
 				}
 			}
 			"static_attrs"
