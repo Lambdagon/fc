@@ -58,6 +58,8 @@
 		"activeimage"		"class_sel_sm_civilian_red"
 		"inactiveimage"		"class_sel_sm_civilian_inactive"
 	}
+
+
 	"john_red"
 	{
 		"ControlName"		"ImageButton"
@@ -144,6 +146,35 @@
 		"inactiveimage"		"class_sel_sm_random_inactive"
 	}
 	
+	"combine_red"
+	{
+		"ControlName"		"ImageButton"
+		"fieldName"			"combine_red"
+		"xpos"				"c310"
+		"xpos_lodef"				"c217"
+		"xpos_hidef"				"c238"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"				"6"
+		"wide"				"50"
+		"tall"				"100"
+		"autoResize"		"0"
+		"pinCorner"			"2"
+		"visible"			"1"
+		"enabled"			"1"
+		"tabPosition"		"0"
+		"labelText"			"combine"
+		"textAlignment"		"south-west"
+		"Command"			"joinclass combinesoldier"
+		"Default"			"0"
+		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
+		"scaleImage"		"1"
+		"activeimage"		"class_sel_sm_combinesoldier_blu"
+		"inactiveimage"		"class_sel_sm_combinesoldier_inactive"
+	}
+
 	"OffensiveBackground"
 	{
 		"ControlName"	"CTFImagePanel"
@@ -212,6 +243,23 @@
 		"scaleImage"	"1"
 	}
 	
+	"ExtraBackground"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"ExtraBackground"
+		"xpos"				"c310"
+		"xpos_lodef"				"c217"
+		"xpos_hidef"				"c238"
+		"ypos"				"-5"
+		"ypos_lodef"				"9"
+		"ypos_hidef"				"0"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"100"
+		"image"			"class_background_single"
+		"scaleImage"	"1"
+	}
+
 	"Offense"
 	{
 		"ControlName"	"CExLabel"
