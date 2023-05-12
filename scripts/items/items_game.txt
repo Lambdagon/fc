@@ -19210,7 +19210,52 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-
+		"9501"
+		{
+			"name"	"HL2 Shotgun"
+			"item_class"	"tf_weapon_shotgun"
+			"baseitem" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"	"#TF_Weapon_Shotgun"
+			"item_slot"	"secondary"
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_shotgun.mdl"
+			"model_player"	"models/weapons/v_shotgun.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"			"1"
+			}
+			"particle_suffix"		"shotgun"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
+				"sound_double_shot"		"HL2_Weapon_Shotgun.Double"
+				"sound_burst"			"HL2_Weapon_Shotgun.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
+				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
+			}
+		}
 		"9040"
 		{
 			"name"	"Antlion Claws"
@@ -19298,7 +19343,6 @@
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"combine"			"1"
 				"john"				"1"
 			}
 			"particle_suffix"		"shotgun"
@@ -19331,7 +19375,7 @@
 			}
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"#TF_Weapon_AR2"
-			"item_slot"	"secondary"
+			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -24164,6 +24208,7 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"sniper"	"1"
+				"combine"	"1"
 			}
 			"static_attrs"
 			{
