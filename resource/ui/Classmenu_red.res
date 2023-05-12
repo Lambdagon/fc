@@ -117,10 +117,10 @@
 		"inactiveimage"		"class_sel_sm_mercenary_inactive"
 	}
 	
-	"randompc_red"
+	"antlion_red"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"randompc_red"
+		"fieldName"			"antlion_red"
 		"xpos"				"c250"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
@@ -137,7 +137,7 @@
 		"tabPosition"		"0"
 		"labelText"			""
 		"textAlignment"		"south-west"
-		"Command"			"joinclass random"
+		"Command"			"joinclass jerry"
 		"Default"			"1"
 		"font"				"MenuKeys"
 		"fgcolor"			"TanDark"
@@ -146,10 +146,10 @@
 		"inactiveimage"		"class_sel_sm_random_inactive"
 	}
 	
-	"combine_red"
+	"combinesoldier_red"
 	{
 		"ControlName"		"ImageButton"
-		"fieldName"			"combine_red"
+		"fieldName"			"combinesoldier_red"
 		"xpos"				"c310"
 		"xpos_lodef"				"c217"
 		"xpos_hidef"				"c238"
@@ -652,7 +652,7 @@
 		"tall"			"30"
 		"autoResize"	"0"
 		"pinCorner"		"2"
-		"visible"		"0"
+		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"labelText"		"Random Class"
