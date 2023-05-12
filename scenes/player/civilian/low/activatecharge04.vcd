@@ -1,0 +1,43 @@
+//Choreo version 1
+actor "civilian"
+{
+	channel "audio"
+	{
+		event speak "Civilian.ActivateCharge04"
+		{
+			time 0 1.497687
+			param "Civilian.ActivateCharge04"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "emotion"
+	{
+		event expression "player\civilian\emotion\emotion/mad"
+		{
+			time 0 3
+			param "player\civilian\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.48 0.478484
+				0.95 0.400044
+				1.074 0.76479
+				2.53 0.145114
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

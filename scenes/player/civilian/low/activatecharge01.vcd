@@ -1,51 +1,45 @@
-// Choreo version 1
+//Choreo version 1
 actor "civilian"
 {
-  channel "audio"
-  {
-    event speak "Civilian.ActivateCharge01"
-    {
-      time 0.000000 0.801088
-      param "Civilian.ActivateCharge01"
-      fixedlength
-      cctype "cc_master"
-      cctoken ""
-    }
-  }
-  channel "emotion"
-  {
-    event expression "mad"
-    {
-      time 0.55108800000000002 4.051088
-      param "player\civilian\emotion\emotion"
-      param2 "mad"
-      event_ramp
-      {
-        0.5 1.0000 "curve_easein_to_curve_easeout"
-        2.75 1.0000 "curve_easein_to_curve_easeout"
-      }
-    }
-    event expression "madUpper"
-    {
-      time 0.0 1.051088
-      param "player\civilian\emotion\emotion"
-      param2 "madUpper"
-      event_ramp
-      {
-        0.2500 1.0000 "curve_easein_to_curve_easeout"
-        0.55108800000000002 1.0000 "curve_easein_to_curve_easeout"
-      }
-    }
-  }
+	channel "audio"
+	{
+		event speak "Civilian.ActivateCharge01"
+		{
+			time 0 1.410612
+			param "Civilian.ActivateCharge01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "emotion"
+	{
+		event expression "player\civilian\emotion\emotion/mad"
+		{
+			time 0 2.98
+			param "player\civilian\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.252 0.129426
+				0.66 0.564768
+				1.006 0.84323
+				1.15 0.49025002
+				1.544 0.251008
+				2.112 0.203944
+			}
+			
+		}
+	}
 }
-
-scalesettings
+"scalesettings"
 {
-  "CChoreoView" "64"
-  "ExpressionTool" "100"
-  "RampTool" "66"
-  "GestureTool" "100"
-  "SceneRampTool" "100"
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
 }
 fps 60
 snap off

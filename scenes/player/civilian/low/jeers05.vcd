@@ -1,41 +1,26 @@
-// Choreo version 1
+//Choreo version 1
 actor "civilian"
 {
-  channel "audio"
-  {
-    event speak "Civilian.Jeers05"
-    {
-      time 0.000000 2.054966
-      param "Civilian.Jeers05"
-      fixedlength
-      cctype "cc_master"
-      cctoken ""
-    }
-  }
-  channel "emotion"
-  {
-    event expression "madUpper"
-    {
-      time 0.000000 2.138299
-      param "player\civilian\emotion\emotion"
-      param2 "madUpper"
-      event_ramp
-      {
-        0.2924 0.5571 "curve_easein_to_curve_easeout"
-        1.8747 0.5543 "curve_easein_to_curve_easeout"
-      }
-    }
-  }
+	channel "audio"
+	{
+		event speak "Civilian.Jeers05"
+		{
+			time 0 3.012789
+			param "Civilian.Jeers05"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
 }
-
-scalesettings
+"scalesettings"
 {
-  "CChoreoView" "64"
-  "ExpressionTool" "100"
-  "RampTool" "66"
-  "GestureTool" "100"
-  "SceneRampTool" "100"
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
 }
 fps 60
 snap off
-ignorePhonemes off

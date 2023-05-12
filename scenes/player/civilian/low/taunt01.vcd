@@ -1,25 +1,145 @@
-// Choreo version 1
+//Choreo version 1
 actor "civilian"
 {
-  channel "body"
-  {
-    event sequence "taunt01"
-    {
-      time 0.000000 3.800000
-      param "taunt01"
-      fixedlength
-    }
-  }
+	channel "body"
+	{
+		event sequence "taunt01"
+		{
+			time 0 6.25
+			param "taunt01"
+			fixedlength
+			
+		}
+		event flexanimation "Look"
+		{
+			time -0.422991 3.868676
+			param ""
+			flexanimations samples_use_time
+			{
+				"CloseLid" combo0.424 0.513782 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.329448 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.54908 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.54908 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.5883 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.545158 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.517704 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.505938 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.502016 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.349058 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				0.424 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"multi_CloseLid"0.424 0.72557 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.644 0.839308 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.66 0.84323 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.85107404 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.847152 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.839308 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.929514 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.776556 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.898138 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.80401003 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.73733604 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.956968 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"BrowInV" combo0.424 0.619676 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.644 0.678506 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.66 0.678506 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.54908 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.678506 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.670662 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.658896 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.639286 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.60791004 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.56084603 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.545158 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.57653403 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				0.424 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.644 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.66 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"LipsV" combo0.424 0.486328 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.541236 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.62752 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.639286 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.611832 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.56869 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.553002 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.553002 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				0.424 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"Smile" combo0.424 0.141192 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.66 0.286306 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.403966 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.839308 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.858918 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.796166 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.639286 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.478484 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.266696 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.027454 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.027454 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				0.424 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.66 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.772 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.156 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.282 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.492 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.8327 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.298 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.03 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"Platysmus" combo3.32 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.909904 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					3.32 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+	}
 }
-
-scalesettings
+"scalesettings"
 {
-  "CChoreoView" "108"
-  "RampTool" "24"
-  "ExpressionTool" "74"
-  "GestureTool" "100"
-  "SceneRampTool" "100"
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
 }
 fps 60
 snap off
-ignorePhonemes off

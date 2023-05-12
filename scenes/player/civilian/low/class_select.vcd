@@ -1,66 +1,66 @@
-// Choreo version 1
-event loop "end_cycle"
+//Choreo version 1
+event loop "loop"
 {
-  time 7.333000 -1.000000
-  param "4.166000"
-  loopcount "-1"
+	time 3.97 -1
+	param "2.380000"
+	loopcount 255
+	
 }
 actor "civilian"
 {
-  channel "body"
-  {
-  }
-  channel "sequence"
-  {
-    event sequence "stand_MELEE"
-    {
-      time 0.000000 7.333333
-      param "stand_MELEE"
-      fixedlength
-    }
-  }
-  channel "facial"
-  {
-    event expression "m"
-    {
-      time 0.003883 3.466846
-      param "player\civilian\phonemes\phonemes"
-      param2 "m"
-      event_ramp
-      {
-        0.1618 0.5057
-        0.4265 0.9143 "curve_easein_to_curve_easeout"
-        0.9417 0.8171 "curve_easein_to_curve_easeout"
-        2.3176 0.8143 "curve_easein_to_curve_easeout"
-        2.9647 0.5371 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
-      }
-    }
-    event expression "mad"
-    {
-      time 2.942353 7.334491
-      param "player\civilian\emotion\emotion"
-      param2 "mad"
-      event_ramp
-      {
-        0.1789 0.1886
-        0.5279 0.7057 "curve_easein_to_curve_easeout"
-        1.2500 0.0000 "curve_easein_to_curve_easeout"
-        1.6000 0.1600
-        2.7500 0.0086
-        3.1819 0.1686 "curve_easein_to_curve_easeout"
-      }
-    }
-  }
+	channel "sequence"
+	{
+		event sequence "intro"
+		{
+			time -0.764706 -0.764706
+			param "selectionMenu_StartPose"
+			fixedlength
+			
+		}
+		event sequence "selectionMenu_Anim01"
+		{
+			time 0 2.333333
+			param "selectionMenu_Anim01"
+			fixedlength
+			
+		}
+		event sequence "idle"
+		{
+			time -0.754902 -0.254902
+			param "selectionMenu_Idle"
+			
+		}
+		event sequence "selectionMenu_Idle"
+		{
+			time 2.337925 3.994624
+			param "selectionMenu_Idle"
+			
+		}
+	}
+	channel "facial"
+	{
+		event expression "painBigUpper"
+		{
+			time 0.934211 1.934211
+			param "player\scout\emotion\emotion"
+			param2 "painBigUpper"
+			event_ramp
+			{
+				0.1118 0.141192
+				0.1882 0.400044
+				0.7941 0.403966
+			}
+			
+		}
+	}
 }
-
-scalesettings
+"scalesettings"
 {
-  "CChoreoView" "100"
-  "RampTool" "24"
-  "ExpressionTool" "74"
-  "GestureTool" "100"
-  "SceneRampTool" "100"
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
 }
 fps 60
 snap off
-ignorePhonemes off
