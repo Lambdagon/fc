@@ -19104,6 +19104,7 @@
 			{
 				"zombie"	"1"
 				"john"	"1"
+//				"combine"	"1"
 				
 			}
 			"static_attrs"
@@ -19141,6 +19142,75 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+		"9500"
+		{
+			"name"	"Stun Baton"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"prefab"	"weapon_melee_allclass"
+			"baseitem"	"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Peacekeeping Tool"
+			"item_description"	"Standard Issue Peacekeeping Tool for the average Combine Beat-Cop"
+			"item_name"	"Peacekeeper's Stun Baton"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_stunbaton.mdl"	
+			"model_world"	"models/weapons/w_stunbaton.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"	"1"
+				
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
+				"sound_melee_miss"		"Weapon_StunStick.Swing"
+				"sound_burst"		"Weapon_StunStick.Swing"	
+
+			}
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 	"1.65" 
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 	"0.55" 
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+
 		"9040"
 		{
 			"name"	"Antlion Claws"
