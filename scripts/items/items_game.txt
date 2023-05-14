@@ -4676,8 +4676,21 @@
 			{
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 -3 -10"
-				"damage bonus vs burning"				"1.2"
-				"rocket specialist"				"2"
+			}
+			"attributes"
+			{
+			
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.5"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
+				}
+				
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -12018,6 +12031,16 @@
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
+				}
+				"Projectile speed increased HIDDEN"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.8"
+				}
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
 				}
 			}
 			"visuals"
@@ -24921,12 +24944,7 @@ Fires....... something"
 				{
 					"attribute_class"	"set_dmgtype_ignite"
 					"value" "1"
-				}		
-				"minicrit vs burning player"
-				{
-					"attribute_class"	"or_minicrit_vs_playercond_burning"
-					"value" "1"
-				}
+				}	
 				"dmg taken from bullets increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -25203,11 +25221,6 @@ Fires....... something"
 					"attribute_class"	"set_dmgtype_ignite"
 					"value" "1"
 				}		
-				"minicrit vs burning player"
-				{
-					"attribute_class"	"or_minicrit_vs_playercond_burning"
-					"value" "1"
-				}
 				"dmg taken from bullets increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -38455,6 +38468,16 @@ Fires....... something"
             "hidden"    "1"
             "effect_type"    "negative"
             "stored_as_integer"    "0"
+		}
+		"10022"
+		{
+			"name"	"Projectile speed increased HIDDEN"
+			"attribute_class"	"mult_projectile_speed"
+			"description_string"	"#Attrib_ProjectileSpeed_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 	}
 	"attribute_controlled_attached_particles"
