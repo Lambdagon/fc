@@ -4665,14 +4665,19 @@
 			}
 			"visuals"
 			{
-				"sound_single_shot"	"MVM.GiantSoldierRocketShoot"
-				"sound_burst"		"MVM.GiantSoldierRocketShootCrit"
-				"sound_special1"	"MVM.GiantSoldierRocketExplode"
+				"animation_replacement"
+				{
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_LOOP"	"ACT_MP_RELOAD_SWIM_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_END"	"ACT_MP_RELOAD_STAND_PRIMARY_END"
+				}
 			}
 			"static_attrs"
 			{
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 -3 -10"
+				"damage bonus vs burning"				"1.2"
+				"rocket specialist"				"2"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
