@@ -2921,6 +2921,21 @@
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 0 -10"
 			}
+			"attributes"
+			{
+			
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.5"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
+				}
+				
+			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"grenade_launcher"
@@ -5350,7 +5365,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"	"models/weapons/w_models/w_shotgun.mdl"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"shotgun"
@@ -5390,7 +5405,7 @@
 			"max_ilevel"		"99"
 			"attach_to_hands"	"1"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"	"models/weapons/w_models/w_shotgun.mdl"
 			"used_by_classes"
 			{
 				"engineer"	"primary"
@@ -5443,7 +5458,7 @@
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" "45"
 			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_shovel/c_shovel.mdl"
+			"model_player"	"models/weapons/w_models/w_shovel.mdl"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -5484,7 +5499,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_smg/c_smg.mdl"
+			"model_player"	"models/weapons/w_models/w_smg.mdl"
 			"attach_to_hands"	"1"
 			"used_by_classes"
 			{
@@ -5549,7 +5564,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands" "1"
-			"model_player"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle.mdl"
+			"model_player"	"models/weapons/w_models/w_sniperrifle.mdl"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -6721,7 +6736,7 @@
 		{
 			"name"	"TF_WEAPON_ROCKETLAUNCHER"
 			"first_sale_date"	"2010/09/29"
-			"prefab"	"weapon_rocketlauncher"
+			"prefab"	"weapon_rocketlauncher"Z
 			"xifier_class_remap"	"rocket_launcher"
 			"model_world"	"models/weapons/w_models/w_rocketlauncher.mdl"
 			"model_player"	"models/weapons/v_models/v_rocketlauncher_soldier.mdl"
@@ -11035,11 +11050,6 @@
 					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.4"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.75"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -11049,6 +11059,16 @@
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
 					"value" "0.75"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
 				}
 			}
 			"visuals"
@@ -11979,6 +11999,7 @@
 		{
 			"name"	"The Original"
 			"first_sale_date"	"2011/08/09"
+			"prefab"	"weapon_rocketlauncher"Z
 			"item_class"	"tf_weapon_rocketlauncher"
 			"craft_material_type"	"weapon"
 			"craft_class"	"weapon"
@@ -12035,12 +12056,12 @@
 				"Projectile speed increased HIDDEN"
 				{
 					"attribute_class"	"mult_projectile_speed"
-					"value"	"1.8"
+					"value"	"1.5"
 				}
-				"damage bonus vs burning"
+				"damage bonus HIDDEN"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
+					"attribute_class" 	"mult_dmg"
+					"value" "1.2"
 				}
 			}
 			"visuals"
@@ -12054,6 +12075,9 @@
 					"ACT_VM_RELOAD"	"ACT_VM_RELOAD_QRL"
 					"ACT_RELOAD_START"	"ACT_VM_RELOAD_START_QRL"
 					"ACT_RELOAD_FINISH"	"ACT_VM_RELOAD_FINISH_QRL"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
 					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MP_RELOAD_STAND_PRIMARY3"
 					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MP_RELOAD_CROUCH_PRIMARY3"
 					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MP_RELOAD_AIRWALK_PRIMARY3"
@@ -22720,12 +22744,7 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "2.66"
-				}
-				"Projectile speed decreased"
-				{
-					"atribute_class"	"mult_projectile_speed"
-					"value"	"0.3"
+					"value" "1.2"
 				}
 				"crit mod disabled"
 				{
@@ -22977,7 +22996,9 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_name"		"#TF_Minigun_Deflector"
 			"item_quality"	"developer"
-			"attach_to_hands"	"1"
+			"model_world"	"models/weapons/w_models/w_minigun.mdl"
+			"model_player"	"models/weapons/v_models/v_minigun_heavy.mdl"
+			"attach_to_hands" "0"
 			"propername"	"1"
 			"attributes"
 			{
@@ -24679,6 +24700,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_dmg"
 					"value" "1.2"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
 				}
 				"fire rate bonus"
 				{
@@ -26625,6 +26651,16 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "8.00"
+				}
+				"speed_boost_on_hit"
+				{
+					"attribute_class"	"speed_boost_on_hit"
+					"value"	"3"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
 				}
 				"hidden secondary max ammo penalty"
 				{
