@@ -20955,12 +20955,12 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "1.2"
+					"value" "1.5"
 				}
 				"faster reload rate"
 				{
 					"attribute_class"	"fast_reload"
-					"value" "1.2"
+					"value" "0.5"
                 }
 				"turn to gold"
 				{
@@ -20976,6 +20976,11 @@
 				{
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.8"
 				}
 			}
 			"visuals"
@@ -29091,6 +29096,37 @@ Fires....... something"
 				{
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"1.08"
+				}
+			}
+		}
+		"9782"
+		{
+			"name"						"M1 GARAND"
+			"prefab"					"weapon_sniperrifle"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_revolver"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_type_name"			"Rifle"
+			"item_name"					"M1 Garand"
+			"propername"				"1"
+			"min_ilevel"				"8"
+			"max_ilevel"				"8"
+			"image_inventory"			"backpack/weapons/w_models/w_revrifle"
+			"model_world"				"models/weapons/lambda/m1garand/w_revrifle_sniper.mdl"
+			"model_player"				"models/weapons/lambda/m1garand/v_revrifle_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.3"
 				}
 			}
 		}
