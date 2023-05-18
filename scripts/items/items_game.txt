@@ -9652,12 +9652,12 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"			"1.3"
+					"value"			"1.5"
 				}
-				"crit mod disabled hidden"
+				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
-					"value"			"1.3"
+					"value"			"1.0"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -20680,10 +20680,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"spy"	"models/female/spy.mdl"
-			}
+			"model_world" "models/female/spy.mdl"
 			"used_by_classes"
 			{
 				"spy" "1"
@@ -23930,6 +23927,58 @@ Fires....... something"
 			"mouse_pressed_sound"	"vo/heavy_laughhappy02.mp3"
 			"drop_sound"	"boner.mp3"
 		}
+		"9417"
+		{
+			"name"	"Sentry Buster Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Ticking bomb"
+			"item_name"	"Sentry Buster"
+			"item_description"	"Tick tock, goes the clock. Are you ready to be a kamikaze bomber?"
+			"item_slot"	"head"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/robot/c_robot_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"7"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
+				}
+			}
+			"model_world" "models/bots/demo/bot_sentry_buster.mdl"
+			"used_by_classes"
+			{
+				"demoman" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
 		"850"
 		{
 			"name"			"Deflector"
