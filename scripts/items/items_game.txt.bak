@@ -1356,6 +1356,16 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.75"
 				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
@@ -1623,10 +1633,10 @@
 					"attribute_class"	"mult_dmgtaken"
 					"value"	"1.15"
 				}
-				"crit mod disabled"
+				"crit mod disabled hidden"
 				{
 					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
+					"value"	"1"
 				}
 				"special taunt"
 				{
@@ -1884,6 +1894,11 @@
 				{
 					"attribute_class"	"kill_eater_score_type_2"
 					"value" 	"65"	
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
 				}
 			}
 			"visuals"
@@ -2910,6 +2925,21 @@
 			{
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+			
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.5"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
+				}
+				
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -4639,9 +4669,10 @@
 			"image_inventory"	"backpack/weapons/w_models/w_rocketlauncher"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attach_to_hands" "1"
+			"attach_to_hands" "0"
 			"inspect_panel_dist" "68"
-			"model_player"	"models/weapons/c_models/c_rocketlauncher/c_rocketlauncher.mdl"
+			"model_player"	"models/weapons/v_models/v_rocketlauncher_soldier.mdl"
+			"model_world"	"models/weapons/w_models/w_rocketlauncher.mdl"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -4652,10 +4683,34 @@
 				"sound_burst"		"MVM.GiantSoldierRocketShootCrit"
 				"sound_special1"	"MVM.GiantSoldierRocketExplode"
 			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_LOOP"	"ACT_MP_RELOAD_SWIM_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_END"	"ACT_MP_RELOAD_STAND_PRIMARY_END"
+				}
+			}
 			"static_attrs"
 			{
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 -3 -10"
+			}
+			"attributes"
+			{
+			
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.5"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
+				}
+				
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -5034,6 +5089,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
+				}
 			}
 			"visuals"
 			{
@@ -5257,6 +5317,11 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.2"
 				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
+				}
 			}
 			"visuals"
 			{
@@ -5315,7 +5380,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"	"models/weapons/w_models/w_shotgun.mdl"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"shotgun"
@@ -5355,7 +5420,7 @@
 			"max_ilevel"		"99"
 			"attach_to_hands"	"1"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"	"models/weapons/w_models/w_shotgun.mdl"
 			"used_by_classes"
 			{
 				"engineer"	"primary"
@@ -5408,7 +5473,7 @@
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" "45"
 			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_shovel/c_shovel.mdl"
+			"model_player"	"models/weapons/w_models/w_shovel.mdl"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -5449,7 +5514,7 @@
 			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_smg/c_smg.mdl"
+			"model_player"	"models/weapons/w_models/w_smg.mdl"
 			"attach_to_hands"	"1"
 			"used_by_classes"
 			{
@@ -5514,7 +5579,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands" "1"
-			"model_player"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle.mdl"
+			"model_player"	"models/weapons/w_models/w_sniperrifle.mdl"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -6572,6 +6637,9 @@
 			"prefab"	"weapon_shotgun"
 			"hidden"	"1"
 			"item_slot"	"secondary"
+			"attach_to_hands" "0"
+            "model_player"    "models/weapons/v_models/original/v_shotgun_soldier.mdl"
+            "model_world"    "models/weapons/w_models/w_shotgun.mdl"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -6585,6 +6653,9 @@
 			"prefab"	"weapon_shotgun"
 			"hidden"	"1"
 			"item_slot"	"secondary"
+			"attach_to_hands" "0"
+            "model_player"    "models/weapons/v_models/v_shotgun_heavy.mdl"
+            "model_world"    "models/weapons/w_models/w_shotgun.mdl"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -6598,6 +6669,9 @@
 			"prefab"	"weapon_shotgun"
 			"hidden"	"1"
 			"item_slot"	"secondary"
+			"attach_to_hands" "0"
+            "model_player"    "models/weapons/v_models/v_shotgun_pyro.mdl"
+            "model_world"    "models/weapons/w_models/w_shotgun.mdl"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -9407,7 +9481,7 @@
 			"item_type_name"	"#TF_Weapon_FryingPan"
 			"item_name"	"#TF_Unique_FryingPan"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory"	"backpack/weapons/c_models/c_pan"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
@@ -9534,6 +9608,935 @@
 				"sound_single_shot"	"Weapon_Sticky_Jumper.Single"
 				"sound_special1"		"Weapon_Sticky_Jumper.Explode"
 			}
+		}
+		"266"
+		{
+			"name"	"The Horseless Headless Horseman's Headtaker"
+			"prefab"	"weapon_eyelander"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_type_name"	"#TF_Weapon_Axe"
+			"item_name"	"#TF_HalloweenBoss_Axe"
+			"item_description"	"#TF_HalloweenBoss_Axe_Desc"
+			"item_quality"	"rarity4"
+			"item_logname"	"headtaker"
+			"item_iconname"	"headtaker"
+			"propername"	"1"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_headtaker/c_headtaker"
+			"model_player"	"models/weapons/c_models/c_headtaker/c_headtaker.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"visuals"
+			{
+				"sound_melee_miss"	"Weapon_Sword.Swing"
+				"sound_melee_hit"	"Halloween.HeadlessBossAxeHitFlesh"
+				"sound_melee_hit_world"	"Halloween.HeadlessBossAxeHitWorld"
+				"sound_burst"		"Weapon_Sword.SwingCrit"
+				"sound_special1"	"Sword.Hit"
+				"sound_special2"	"Sword.Idle"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"			"1.5"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"			"1.0"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"Horseman's Headtaker"
+		}
+
+
+		"268"
+		{
+			"name"	"Halloween Mask - Scout"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Scout"
+			"item_description"	"#TF_Halloween_Mask_Scout_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_scout_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_scout_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_scout_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_scout_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_scout_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_scout_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_scout_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_scout_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_scout_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_scout"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"269"
+		{
+			"name"	"Halloween Mask - Sniper"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Sniper"
+			"item_description"	"#TF_Halloween_Mask_Sniper_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_sniper_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_sniper_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_sniper_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_sniper_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_sniper_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_sniper_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_sniper_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_sniper_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_sniper_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_sniper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"270"
+		{
+			"name"	"Halloween Mask - Soldier"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Soldier"
+			"item_description"	"#TF_Halloween_Mask_Soldier_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_soldier_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_soldier_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_soldier_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_soldier_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_soldier_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_soldier_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_soldier_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_soldier_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_soldier_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_soldier"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"271"
+		{
+			"name"	"Halloween Mask - Demoman"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Demoman"
+			"item_description"	"#TF_Halloween_Mask_Demoman_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_demo_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_demo_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_demo_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_demo_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_demo_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_demo_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_demo_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_demo_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_demo_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"272"
+		{
+			"name"	"Halloween Mask - Medic"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Medic"
+			"item_description"	"#TF_Halloween_Mask_Medic_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_demo_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_demo_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_demo_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_demo_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_demo_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_demo_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_demo_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_demo_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_demo_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_medic"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"273"
+		{
+			"name"	"Halloween Mask - Heavy"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Heavy"
+			"item_description"	"#TF_Halloween_Mask_Heavy_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_heavy_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_heavy_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_heavy_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_heavy_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_heavy_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_heavy_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_heavy_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_heavy_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_heavy_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"274"
+		{
+			"name"	"Halloween Mask - Spy"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Spy"
+			"item_description"	"#TF_Halloween_Mask_Spy_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_spy_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_spy_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_spy_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_spy_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_spy_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_spy_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_spy_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_spy_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_spy_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_spy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"275"
+		{
+			"name"	"Halloween Mask - Engineer"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Engineer"
+			"item_description"	"#TF_Halloween_Mask_Engineer_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_engineer_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_engineer_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_engineer_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_engineer_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_engineer_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_engineer_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_engineer_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_engineer_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_engineer_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_engineer"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"276"
+		{
+			"name"	"Halloween Mask - Pyro"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_Pyro"
+			"item_description"	"#TF_Halloween_Mask_Pyro_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_pyro_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_pyro_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_pyro_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_pyro_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_pyro_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_pyro_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_pyro_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_pyro_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_pyro_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_pyro"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+		"277"
+		{
+			"name"	"Halloween Mask - Saxton Hale"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Mask_SaxtonHale"
+			"item_description"	"#TF_Halloween_Mask_SaxtonHale_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/halloween_bag_saxton_scout.mdl"
+				"sniper"	"models/player/items/all_class/halloween_bag_saxton_sniper.mdl"
+				"soldier"	"models/player/items/all_class/halloween_bag_saxton_soldier.mdl"
+				"demoman"	"models/player/items/all_class/halloween_bag_saxton_demo.mdl"
+				"medic"	"models/player/items/all_class/halloween_bag_saxton_medic.mdl"
+				"heavy"	"models/player/items/all_class/halloween_bag_saxton_heavy.mdl"
+				"spy"	"models/player/items/all_class/halloween_bag_saxton_spy.mdl"
+				"engineer"	"models/player/items/all_class/halloween_bag_saxton_engineer.mdl"
+				"pyro"	"models/player/items/all_class/halloween_bag_saxton_pyro.mdl"
+			}
+			"image_inventory"	"backpack/player/items/all_class/halloween_bag_saxton"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+				"use_per_class_bodygroups" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
+			"drop_sound" 		"ui/item_paper_pickup.wav"
+		}
+
+		"278"
+		{
+			"name"	"Horseless Headless Horseman's Head"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_Head"
+			"item_description"	"#TF_Halloween_Head_Desc"
+			"item_slot"	"head"
+			"equip_region"	"whole_head"
+			"item_quality"	"unique"
+			"min_ilevel"	"31"
+			"max_ilevel"	"31"
+			"image_inventory"	"backpack/player/items/all_class/pumkin_hat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/pumpkin_hat_scout.mdl"
+				"sniper"	"models/player/items/all_class/pumpkin_hat_sniper.mdl"
+				"soldier"	"models/player/items/all_class/pumpkin_hat_soldier.mdl"
+				"demoman"	"models/player/items/all_class/pumpkin_hat_demo.mdl"
+				"medic"	"models/player/items/all_class/pumpkin_hat_medic.mdl"
+				"heavy"	"models/player/items/all_class/pumpkin_hat_heavy.mdl"
+				"spy"	"models/player/items/all_class/pumpkin_hat_spy.mdl"
+				"engineer"	"models/player/items/all_class/pumpkin_hat_engineer.mdl"
+				"pyro"	"models/player/items/all_class/pumpkin_hat_pyro.mdl"
+			}
+			"drop_type"	"none"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound" 	"ui/item_default_pickup.wav"
+			"drop_sound" 		"ui/item_default_drop.wav"
+		}
+
+		"6940"
+		{
+			"name"	"Ghostly Gibus"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"#TF_Domination_Hat_Ghostly"
+			"item_description"	"#TF_Domination_Hat_Ghostly_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/player/items/all_class/ghostly_gibus_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/ghostly_gibus_scout.mdl"
+				"sniper"	"models/player/items/all_class/ghostly_gibus_sniper.mdl"
+				"soldier"	"models/player/items/all_class/ghostly_gibus_soldier.mdl"
+				"demoman"	"models/player/items/all_class/ghostly_gibus_demo.mdl"
+				"medic"	"models/player/items/all_class/ghostly_gibus_medic.mdl"
+				"heavy"	"models/player/items/all_class/ghostly_gibus_heavy.mdl"
+				"spy"	"models/player/items/all_class/ghostly_gibus_spy.mdl"
+				"engineer"	"models/player/items/all_class/ghostly_gibus_engineer.mdl"
+				"pyro"	"models/player/items/all_class/ghostly_gibus_pyro.mdl"
+			}
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6941"
+		{
+			"name"	"The Skull Island Topper"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Hat"
+			"item_name"	"#TF_Halloween_MerasmusLoot_Hat"
+			"item_description"	"#TF_Halloween_MerasmusLoot_Hat_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"min_ilevel"	"31"
+			"max_ilevel"	"31"
+			"image_inventory"	"backpack/player/items/all_class/merasmus_skull"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+ 			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/merasmus_skull_scout.mdl"
+				"sniper"	"models/player/items/all_class/merasmus_skull_sniper.mdl"
+				"soldier"	"models/player/items/all_class/merasmus_skull_soldier.mdl"
+				"demoman"	"models/player/items/all_class/merasmus_skull_demo.mdl"
+				"medic"	"models/player/items/all_class/merasmus_skull_medic.mdl"
+				"heavy"	"models/player/items/all_class/merasmus_skull_heavy.mdl"
+				"spy"	"models/player/items/all_class/merasmus_skull_spy.mdl"
+				"engineer"	"models/player/items/all_class/merasmus_skull_engineer.mdl"
+				"pyro"	"models/player/items/all_class/merasmus_skull_pyro.mdl"
+			}
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_default_pickup.wav"
+			"drop_sound"		"ui/item_default_drop.wav"
+		}
+		
+		"pyrovision_goggles"
+		{
+			"first_sale_date"	"2012/06/27"
+			"prefab"		"cosmetic_killeater_attribs"
+			"item_class"	"tf_wearable"
+			"hidden"	"0"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"item_name"	"#TF_Pyrovision_Goggles"
+			"item_type_name"	"#TF_Wearable_Pyrovision_Goggles_Type"
+			"item_description"	"#TF_Pyrovision_Goggles_Desc"
+			"item_slot"	"misc"
+			"equip_region"	"glasses"
+			"item_quality"	"unique"
+			"drop_type"	"drop"
+			"image_inventory"	"backpack/player/items/all_class/pyrovision_goggles_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"		"models/player/items/all_class/pyrovision_goggles_scout.mdl"
+				"sniper"	"models/player/items/all_class/pyrovision_goggles_sniper.mdl"
+				"soldier"	"models/player/items/all_class/pyrovision_goggles_soldier.mdl"
+				"demoman"	"models/player/items/all_class/pyrovision_goggles_demo.mdl"
+				"medic"		"models/player/items/all_class/pyrovision_goggles_medic.mdl"
+				"heavy"		"models/player/items/all_class/pyrovision_goggles_heavy.mdl"
+				"spy"		"models/player/items/all_class/pyrovision_goggles_spy.mdl"
+				"engineer"	"models/player/items/all_class/pyrovision_goggles_engineer.mdl"
+				"pyro"		"models/player/items/all_class/pyrovision_goggles_pyro.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+				"min_viewmodel_offset"					"10 0 -7"
+			}
+			"attributes"
+			{
+				"vision opt in flags"
+				{
+					"attribute_class"		"vision_opt_in_flags"
+					"value"					"1"
+				}
+				"pyrovision opt in DISPLAY ONLY"
+				{
+					"attribute_class" 	"pyrovision_opt_in_display_only"
+					"value"		  		"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_mtp_pickup.wav"
+			"drop_sound"			"ui/item_mtp_drop.wav"
+		}
+		
+		"744"
+		{
+			"name"	"Pyrovision Goggles"
+			"prefab"	"pyrovision_goggles"
 		}
 		"304"
 		{
@@ -11000,11 +12003,6 @@
 					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.4"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.75"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -11014,6 +12012,16 @@
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
 					"value" "0.75"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
+				}
+				"rocket specialist"
+				{
+					"attribute_class"	"rocket_specialist"
+					"value"	"2"
 				}
 			}
 			"visuals"
@@ -11997,6 +13005,16 @@
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
+				"Projectile speed increased HIDDEN"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.5"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.2"
+				}
 			}
 			"visuals"
 			{
@@ -12009,6 +13027,9 @@
 					"ACT_VM_RELOAD"	"ACT_VM_RELOAD_QRL"
 					"ACT_RELOAD_START"	"ACT_VM_RELOAD_START_QRL"
 					"ACT_RELOAD_FINISH"	"ACT_VM_RELOAD_FINISH_QRL"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
 					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MP_RELOAD_STAND_PRIMARY3"
 					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MP_RELOAD_CROUCH_PRIMARY3"
 					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MP_RELOAD_AIRWALK_PRIMARY3"
@@ -12044,7 +13065,7 @@
 				"nameable"		"1"
 				"can_craft_count"	"1"
 			}
-			"tags"
+			"tags"	
 			{
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
@@ -12483,114 +13504,6 @@
 			}
 			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
 			"drop_sound" "ui/item_boxing_gloves_drop.wav"
-		}
-
-		"588"
-		{
-			"name"	"The Pomson 6000"
-			"first_sale_date"	"2011/12/15"
-			"item_class"	"tf_weapon_drg_pomson"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
-			"item_name"	"#TF_Pomson"
-			"item_description"	"#TF_Pomson_Desc"
-			"item_slot"	"primary"
-			"item_logname"	"pomson"
-			"item_iconname"	"pomson"
-			"show_in_armory"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_pomson/c_drg_pomson"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"55"
-			"model_player"	"models/workshop/weapons/c_models/c_drg_pomson/c_drg_pomson.mdl"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -10"
-			}
-			"attributes"
-			{
-				"energy weapon no ammo"
-				{
-					"attribute_class"	"energy_weapon_no_ammo"
-					"value" "1"
-				}
-				"energy weapon no deflect"
-				{
-					"attribute_class"	"energy_weapon_no_deflect"
-					"value" "1"
-				}
-				"subtract victim medigun charge on hit"
-				{
-					"attribute_class"	"subtract_victim_medigun_charge_onhit"
-					"value" "10"
-				}
-				"subtract victim cloak on hit"
-				{
-					"attribute_class"	"subtract_victim_cloak_on_hit"
-					"value" "20"
-				}
-				"energy weapon no hurt building"
-				{
-					"attribute_class"	"energy_weapon_no_hurt_building"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Pomson.Single"
-				"sound_burst"		"Weapon_Pomson.SingleCrit"
-				"sound_reload"		"Weapon_Pomson.Reload"
-				"muzzle_flash"		"drg_pomson_muzzleflash"
-
-				"animation_replacement"
-				{
-					"ACT_VM_IDLE"	"ACT_SECONDARY2_VM_IDLE"
-					"ACT_VM_DRAW"	"ACT_SECONDARY2_VM_DRAW"
-					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY2_VM_PRIMARYATTACK"
-					"ACT_RELOAD_START"	"ACT_SECONDARY2_RELOAD_START"
-					"ACT_RELOAD_FINISH"	"ACT_SECONDARY2_RELOAD_FINISH"
-					"ACT_VM_RELOAD"	"ACT_SECONDARY2_VM_RELOAD"
-					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY2"
-					"ACT_MP_RELOAD_STAND_LOOP"	"ACT_MP_RELOAD_STAND_SECONDARY2_LOOP"
-					"ACT_MP_RELOAD_STAND_END"	"ACT_MP_RELOAD_STAND_SECONDARY2_END"
-					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY2"
-					"ACT_MP_RELOAD_CROUCH_LOOP"	"ACT_MP_RELOAD_CROUCH_SECONDARY2_LOOP"
-					"ACT_MP_RELOAD_CROUCH_END"	"ACT_MP_RELOAD_CROUCH_SECONDARY2_END"
-					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY2"
-					"ACT_MP_RELOAD_SWIM_LOOP"	"ACT_MP_RELOAD_SWIM_SECONDARY2_LOOP"
-					"ACT_MP_RELOAD_SWIM_END"	"ACT_MP_RELOAD_SWIM_SECONDARY2_END"
-					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2"
-					"ACT_MP_RELOAD_AIRWALK_LOOP"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2_LOOP"
-					"ACT_MP_RELOAD_AIRWALK_END"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2_END"
-					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_SECONDARY_ALT1_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_SECONDARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_SECONDARY_ALT1_VM_INSPECT_END"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"589"
 		{
@@ -18161,7 +19074,7 @@
 		{
 			"name"	"TFC Crowbar"
 			"prefab"	"weapon_melee_allclass"
-			"item_class"	"tf_weapon_tfc_crowbar"
+			"item_class"	"saxxy"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18209,7 +19122,7 @@
 		{
 			"name"	"HL2 Crowbar"
 			"prefab"	"weapon_melee_allclass"
-			"item_class"	"tf_weapon_tfc_crowbar"
+			"item_class"	"saxxy"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -19104,6 +20017,7 @@
 			{
 				"zombie"	"1"
 				"john"	"1"
+//				"combine"	"1"
 				
 			}
 			"static_attrs"
@@ -19122,15 +20036,15 @@
 					"ACT_VM_HITCENTER"	"ACT_VM_MISSCENTER"
 					"ACT_VM_SWINGHARD"	"ACT_VM_HITKILL"
 
-					"ACT_MP_STAND_IDLE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
 					"ACT_MP_RUN"	"ACT_HL2MP_RUN_MELEE"
-					"ACT_MP_SWIM"	"ACT_HL2MP_RUN_MELEE"
-					"ACT_MP_SWIM_IDLE"	"ACT_HL2MP_IDLE_MELEE"
-					"ACT_MP_CROUCH_IDLE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
-					"ACT_MP_CROUCH_IDLE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
-					"ACT_MP_CROUCHWALK"	"ACT_HL2MP_WALK_CROUCH_MELEE"
-					"ACT_MP_JUMP_START"	"ACT_HL2MP_JUMP_MELE"
-					"ACT_MP_JUMP_FLOAT" "ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_RUN_MELEE"
+					"ACT_MP_SWIM_IDLE_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_CROUCH_MELE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_HL2MP_WALK_CROUCH_MELEE"
+					"ACT_MP_JUMP_START_MELEE"	"ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_JUMP_FLOAT_MELEE" "ACT_HL2MP_JUMP_MELEE"
 					"ACT_MP_JUMP_LAND"	"ACT_LAND"
 					"ACT_MP_ATTACK_STAND_PRIMARYFIRE"	"ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE"
 					"ACT_MP_ATTACK_CROUCH_PRIMARYFIRE"	"ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE"
@@ -19140,6 +20054,127 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"9500"
+		{
+			"name"	"Stun Baton"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"prefab"	"weapon_melee_allclass"
+			"baseitem"	"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Peacekeeping Tool"
+			"item_description"	"Standard Issue Peacekeeping Tool for the average Combine Beat-Cop"
+			"item_name"	"Peacekeeper's Stun Baton"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_stunbaton.mdl"	
+			"model_world"	"models/weapons/w_stunbaton.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"	"1"
+				
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
+				"sound_melee_miss"		"Weapon_StunStick.Swing"
+				"sound_burst"		"Weapon_StunStick.Swing"	
+
+			}
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 	"1.65" 
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 	"0.55" 
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"9501"
+		{
+			"name"	"HL2 Shotgun"
+			"item_class"	"tf_weapon_shotgun"
+			"baseitem" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"	"#TF_Weapon_Shotgun"
+			"item_slot"	"secondary"
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_shotgun.mdl"
+			"model_player"	"models/weapons/v_shotgun.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"			"1"
+			}
+			"particle_suffix"		"shotgun"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
+				"sound_double_shot"		"HL2_Weapon_Shotgun.Double"
+				"sound_burst"			"HL2_Weapon_Shotgun.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
+				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"combine"		"scenes\player\combinesoldier\low\shotTaunt.vcd"
+				}
+			}
 		}
 		"9040"
 		{
@@ -19228,7 +20263,6 @@
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"combine"			"1"
 				"john"				"1"
 			}
 			"particle_suffix"		"shotgun"
@@ -19252,7 +20286,6 @@
 		{
 			"name"	"HL2 AR2"
 			"item_class"	"tf_weapon_ar2"
-			"baseitem" "1"
 			"tags"
 			{
 				"can_deal_damage"			"1"
@@ -19275,7 +20308,7 @@
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"combine"			"1"
+				//"combine"			"1"
 			}
 			"static_attrs"
 			{
@@ -19531,7 +20564,7 @@
 			"item_type_name"	"Model"
 			"item_name"	"Female Spy"
 			"item_description"	"Spy model by: Chemical Alia"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19539,10 +20572,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"spy"	"models/female/spy.mdl"
-			}
+			"model_player" "models/female/spy.mdl"
+			"model_world" "models/female/spy.mdl"
 			"used_by_classes"
 			{
 				"spy" "1"
@@ -19589,7 +20620,7 @@
 			
 			LAMBDA FORCED ME TO ADD THIS I'M 
 			CHAINED UP IN HIS BASEMENT HELP"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19597,10 +20628,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"pyro"	"models/female/pyro.mdl"
-			}
+			"model_player" "models/female/pyro.mdl"
+			"model_world" "models/female/pyro.mdl"
 			"used_by_classes"
 			{
 				"pyro" "1"
@@ -19610,7 +20639,7 @@
 				"voice pitch scale"
 				{
 					"attribute_class"	"voice_pitch_scale"
-					"value"		"1.0"
+					"value"		"1.2"
 				}
 			}
 			"visuals"
@@ -19729,7 +20758,7 @@
 			"item_type_name"	"Model"
 			"item_name"	"Female Scout"
 			"item_description"	"Model by: Sierra Foxtrot, AyesDyef"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19737,10 +20766,8 @@
 			"image_inventory"	"backpack/class_scoutred"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"scout"	"models/female/scout.mdl"
-			}
+			"model_player"	"models/female/scout.mdl"
+			"model_world"	"models/female/scout.mdl"
 			"used_by_classes"
 			{
 				"scout" "1"
@@ -19751,17 +20778,6 @@
 				{
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"1.08"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"scout"	"1"
-					"shoes_socks"	"1"
-					"headphones"	"1"
-					"hat"	"1"
-					"dogtags"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
@@ -19788,7 +20804,7 @@
 			"item_type_name"	"Model"
 			"item_name"	"HL1 Barney"
 			"item_description"	"Model adapted by ZorvShadow"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19796,10 +20812,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"spy"	"models/player/barney/spy.mdl"
-			}
+			"model_player" "models/player/barney/spy.mdl"
+			"model_world" "models/player/barney/spy.mdl"
 			"used_by_classes"
 			{
 				"spy" "1"
@@ -19846,7 +20860,7 @@
 			"item_description"	"Model by Con, Max, Py-bun, 
 			Uberchain, Ankle Pain
 			"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19854,10 +20868,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"pyro"	"models/player/buff_pyro/pyro.mdl"
-			}
+			"model_player" "models/player/buff_pyro/pyro.mdl"
+			"model_world" "models/player/buff_pyro/pyro.mdl"
 			"used_by_classes"
 			{
 				"pyro" "1"
@@ -19868,17 +20880,6 @@
 				{
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0.9"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"pyro"	"1"
-					"backpack"	"1"
-					"head"	"1"
-					"righthand"	"1"
-					"grenades"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
@@ -19907,7 +20908,7 @@
 			"item_description"	"Model by A Paint Bucket
 			Named Huey
 			"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -19915,10 +20916,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"pyro"	"models/player/cremator/pyro.mdl"
-			}
+			"model_player" "models/player/cremator/pyro.mdl"
+			"model_world" "models/player/cremator/pyro.mdl"
 			"used_by_classes"
 			{
 				"pyro" "1"
@@ -19950,17 +20949,6 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "0.30"
                                 }
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"pyro"	"1"
-					"backpack"	"1"
-					"head"	"1"
-					"righthand"	"1"
-					"grenades"	"1"
-				}
 			}
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"			"tfc/misc/teleport_in.wav"
@@ -19999,10 +20987,8 @@
 			"static_attrs"
 			{
 			}
-			"model_player_per_class"
-			{
-				"demoman"	"models/player/cj/demo.mdl"
-			}
+			"model_player" "models/player/cj/demo.mdl"
+			"model_world" "models/player/cj/demo.mdl"
 			"used_by_classes"
 			{
 				"demoman" "1"
@@ -20043,7 +21029,7 @@
 			"item_type_name"	"Calcic Formation"
 			"item_name"	"Boner"
 			"item_description"	"BAAAD TO THE BONE"
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -20051,14 +21037,8 @@
 			"image_inventory"	"vgui/marked_for_death"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"static_attrs"
-			{
-			}
-			"model_player_per_class"
-			{
-				"sniper"	"models/bots/skeleton_sniper/skeleton_sniper.mdl"
-				"spy"		"models/bots/skeleton_sniper/skeleton_sniper.mdl"
-			}
+			"model_player"		"models/bots/skeleton_sniper/skeleton_sniper.mdl"
+			"model_world"		"models/bots/skeleton_sniper/skeleton_sniper.mdl"
 			"used_by_classes"
 			{
 				"sniper" "1"
@@ -20075,14 +21055,6 @@
 				{
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"sniper"	"1"
-					"spyreal"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"boner.mp3"
@@ -20164,10 +21136,8 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Nightmare Waifu"
 			"item_name"	"Femme HHH"
-			"item_description"	"Model by TappySFM
-			'Yeah, I wanna fuck an 
-			ancient pumpkin demon'"
-			"item_slot"	"misc2"
+			"item_description"	"Model by TappySFM"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -20178,10 +21148,8 @@
 			"static_attrs"
 			{
 			}
-			"model_player_per_class"
-			{
-				"demoman"	"models/player/female_hhh/demo.mdl"
-			}
+			"model_player" "models/player/female_hhh/demo.mdl"
+			"model_world" "models/player/female_hhh/demo.mdl"
 			"used_by_classes"
 			{
 				"demoman" "1"
@@ -20224,7 +21192,7 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Twink- I mean Link"
+			"item_type_name"	"Just Link"
 			"item_name"	"Link (OOT, Adult)"
 			"item_description"	"Model adaptor unknown"
 			"item_slot"	"misc2"
@@ -20238,6 +21206,7 @@
 			"static_attrs"
 			{
 			}
+			"model_player"	"models/oot3d/adult_link.mdl"
 			"model_world"	"models/oot3d/adult_link.mdl"
 			"used_by_classes"
 			{
@@ -20286,7 +21255,7 @@
 			"item_description"	"Model adapted by: Litronom
 			No, she's not rigged to Demoman.
 			Sorry :("
-			"item_slot"	"misc2"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -20297,10 +21266,12 @@
 			"static_attrs"
 			{
 			}
+			"model_player"		"models/custom/player/megumin/megumin.mdl"
 			"model_world"		"models/custom/player/megumin/megumin.mdl"
 			"used_by_classes"
 			{
 				"sniper" "1"
+				"demoman" "1"
 			}
 			"attributes"
 			{
@@ -20368,6 +21339,7 @@
 			"static_attrs"
 			{
 			}
+			"model_player"	"models/player/solid_snake/solid_snake.mdl"
 			"model_world"	"models/player/solid_snake/solid_snake.mdl"
 			"used_by_classes"
 			{
@@ -20477,10 +21449,10 @@
 					"attribute_class"	"custom_projectile_model"
 					"value"				"models/weapons/w_models/w_drg_ball.mdl"
 				}
-				"damage bonus"
+				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"5"
+					"value"	"0.4"
 				}
 			}
 			"visuals"
@@ -20793,23 +21765,13 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "1.15"
+					"value" "1.5"
 				}
 				"faster reload rate"
 				{
 					"attribute_class"	"fast_reload"
-					"value" "1.2"
-                                }
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.7"
-                                }
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0"
-				}
+					"value" "0.5"
+                }
 				"turn to gold"
 				{
 					"attribute_class"	"set_turn_to_gold"
@@ -20824,6 +21786,11 @@
 				{
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.8"
 				}
 			}
 			"visuals"
@@ -20981,11 +21948,6 @@
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "2.30"
                                 }
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.40"
-                                }
 				"faster reload rate"
 				{
 					"attribute_class"	"fast_reload"
@@ -21001,10 +21963,15 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.40"
                                 }
-                                "damage penalty"
+				"clip size bonus"
 				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.60"
+					"attribute_class"	"mult_clipsize"
+					"value" "1.33"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.85"
 				}
 			}
 			"visuals"
@@ -21068,7 +22035,7 @@
                                 "dmg taken from blast reduced"
 				{
 					"attribute_class"	"	mult_dmgtaken_from_explosions"
-					"value"	"0.20"
+					"value"	"0.60"
 				}
                                 "health from healers reduced"
 				{
@@ -21339,15 +22306,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Baseball-Bot 8008"
 			"item_name"	"Scout-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"This is what Baseball in the year 8008 will look like!"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_scout"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21363,6 +22330,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/scout/bot_scout.mdl"
 			"model_world" "models/bots/scout/bot_scout.mdl"
 			"used_by_classes"
 			{
@@ -21391,15 +22359,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Mass-Produced Soldier"
 			"item_name"	"Soldier-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"The future of war... or at least SkyNet War Reenactment Parties."
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_soldier"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			
@@ -21416,6 +22384,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/soldier/bot_soldier.mdl"
 			"model_world" "models/bots/soldier/bot_soldier.mdl"
 			"used_by_classes"
 			{
@@ -21443,15 +22412,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Charnel Creation"
 			"item_name"	"Pyro-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"The latest in Automation-Cremation Technology!"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_pyro"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21467,6 +22436,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/pyro/bot_pyro.mdl"
 			"model_world" "models/bots/pyro/bot_pyro.mdl"
 			"used_by_classes"
 			{
@@ -21495,15 +22465,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Whiskey Engine"
 			"item_name"	"Demo-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"This is really just a distillery that we strapped a bomb launcher onto..."
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_demo"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21519,6 +22489,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/demo/bot_demo.mdl"
 			"model_world" "models/bots/demo/bot_demo.mdl"
 			"used_by_classes"
 			{
@@ -21547,15 +22518,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Glorious Russian Steel"
 			"item_name"	"Heavy-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"The Peoples' Robot"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21571,6 +22542,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/heavy/bot_heavy.mdl"
 			"model_world" "models/bots/heavy/bot_heavy.mdl"
 			"used_by_classes"
 			{
@@ -21599,15 +22571,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Full Roboticization"
 			"item_name"	"Engi-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"You thought we'd stop at the Gunslinger? NO! Now YOU are the robot!"
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_engi"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21623,6 +22595,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/engineer/bot_engineer.mdl"
 			"model_world" "models/bots/engineer/bot_engineer.mdl"
 			"used_by_classes"
 			{
@@ -21651,15 +22624,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Auto-Doc"
 			"item_name"	"Medic-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"The greatest in Auto-Doc technology! Too bad we forgot to program the Hippocratic Oath into it..."
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_medic"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21675,6 +22648,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/medic/bot_medic.mdl"
 			"model_world" "models/bots/medic/bot_medic.mdl"
 			"used_by_classes"
 			{
@@ -21703,15 +22677,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Sharpshooting Pisstillery"
 			"item_name"	"Sniper-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"Clean. Efficient. Professional. Can process urine into drinkable water."
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_sniper"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21727,6 +22701,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/sniper/bot_sniper.mdl"
 			"model_world" "models/bots/sniper/bot_sniper.mdl"
 			"used_by_classes"
 			{
@@ -21755,15 +22730,15 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Artifical Intelligence"
+			"item_type_name"	"Espion d'étain"
 			"item_name"	"Spy-bot"
-			"item_description"	"You ever wanted to be a bot?"
-			"item_slot"	"misc2"
+			"item_description"	"Built for espionage, fashion, and wine quality testing."
+			"item_slot"	"head"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/player/items/robot/c_robot_spy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -21779,6 +22754,7 @@
 					"value"				"1"
 				}
 			}
+			"model_player" "models/bots/spy/bot_spy.mdl"
 			"model_world" "models/bots/spy/bot_spy.mdl"
 			"used_by_classes"
 			{
@@ -21818,10 +22794,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player_per_class"
-			{
-				"scout"	"models/player/hatsune_miku/scout.mdl"
-			}
+			"model_player"	"models/player/hatsune_miku/scout.mdl"
+			"model_world"	"models/player/hatsune_miku/scout.mdl"
 			"used_by_classes"
 			{
 				"scout" "1"
@@ -21858,7 +22832,8 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"1"
-			"model_world" "models/player/rebel/classic_male_07_citizen.mdl"
+			"model_player" "models/humans/group01/male_07.mdl"
+			"model_world" "models/humans/group01/male_07.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
 			{
@@ -21902,6 +22877,7 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
+			"model_player" "models/humans/group03/male_07.mdl"
 			"model_world" "models/humans/group03/male_07.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -22176,6 +23152,7 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
+			"model_player" "models/kleiner.mdl"
 			"model_world" "models/kleiner.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -22214,6 +23191,7 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
+			"model_player" "models/player/femscout/femscout_expand.mdl"
 			"model_world" "models/player/femscout/femscout_expand.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -22603,12 +23581,7 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "2.66"
-				}
-				"Projectile speed decreased"
-				{
-					"atribute_class"	"mult_projectile_speed"
-					"value"	"0.3"
+					"value" "1.2"
 				}
 				"crit mod disabled"
 				{
@@ -22850,6 +23823,59 @@ Fires....... something"
 			"mouse_pressed_sound"	"vo/heavy_laughhappy02.mp3"
 			"drop_sound"	"boner.mp3"
 		}
+		"9417"
+		{
+			"name"	"Sentry Buster Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Ticking bomb"
+			"item_name"	"Sentry Buster"
+			"item_description"	"Tick tock, goes the clock. Are you ready to be a kamikaze bomber?"
+			"item_slot"	"head"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/robot/c_robot_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"7"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
+				}
+			}
+			"model_player" "models/bots/demo/bot_sentry_buster.mdl"
+			"model_world" "models/bots/demo/bot_sentry_buster.mdl"
+			"used_by_classes"
+			{
+				"demoman" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+
 		"850"
 		{
 			"name"			"Deflector"
@@ -22860,7 +23886,9 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_name"		"#TF_Minigun_Deflector"
 			"item_quality"	"developer"
-			"attach_to_hands"	"1"
+			"model_world"	"models/weapons/w_models/w_minigun.mdl"
+			"model_player"	"models/weapons/v_models/v_minigun_heavy.mdl"
+			"attach_to_hands" "0"
 			"propername"	"1"
 			"attributes"
 			{
@@ -22932,6 +23960,14 @@ Fires....... something"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"5 0 -8"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.2"
+				}
 			}
 			"visuals"
 			{
@@ -23423,25 +24459,30 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "2.30"
+				}
                                 "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"1.50"
 				}
-				"health regen"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"	"20"
-                                }
                                 "max health additive penalty"
 				{
-					"attribute_class"	"	add_maxhealth"
+					"attribute_class"	"add_maxhealth"
 					"value"	"-40"
 				}
                                 "dmg taken increased"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.65"
+					"value"	"0.55"
+				}
+                                "no double jump"
+				{
+					"attribute_class"	"set_scout_doublejump_disabled"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
@@ -24115,6 +25156,7 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"sniper"	"1"
+				"combine"	"1"
 			}
 			"static_attrs"
 			{
@@ -24554,6 +25596,11 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value" "1.2"
 				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -24818,12 +25865,7 @@ Fires....... something"
 				{
 					"attribute_class"	"set_dmgtype_ignite"
 					"value" "1"
-				}		
-				"minicrit vs burning player"
-				{
-					"attribute_class"	"or_minicrit_vs_playercond_burning"
-					"value" "1"
-				}
+				}	
 				"dmg taken from bullets increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -25100,11 +26142,6 @@ Fires....... something"
 					"attribute_class"	"set_dmgtype_ignite"
 					"value" "1"
 				}		
-				"minicrit vs burning player"
-				{
-					"attribute_class"	"or_minicrit_vs_playercond_burning"
-					"value" "1"
-				}
 				"dmg taken from bullets increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -26112,6 +27149,7 @@ Fires....... something"
 					"value"				"-1"
 				}
 			}
+			"model_player" "models/papery/soldier.mdl"
 			"model_world" "models/papery/soldier.mdl"
 			"used_by_classes"
 			{
@@ -26509,6 +27547,16 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "8.00"
+				}
+				"speed_boost_on_hit"
+				{
+					"attribute_class"	"speed_boost_on_hit"
+					"value"	"3"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "1.0"
 				}
 				"hidden secondary max ammo penalty"
 				{
@@ -26910,7 +27958,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/lambda/grenade/v_grenade_frag_new.mdl"
-			"model_world"	"models/weapons/lambda/grenade/w_grenade_frag.mdl"
+			"model_world"	"models/weapons/lambda/grenade/w_grenade_frag.mdl" 
 			"static_attrs"
 			{
 				"item_meter_charge_type"						"1"
@@ -27250,6 +28298,7 @@ Fires....... something"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -10"
+				"mult_spread_scale"						"0.50"
 			}
 			"attributes"
 			{
@@ -27271,7 +28320,7 @@ Fires....... something"
 			}
 						"visuals"																		
 			{
-				"sound_double_shot"		"Weapon_Revolver.Fire"
+				"sound_single_shot"		"Weapon_Revolver.Fire"
 				"sound_burst"			"Weapon_Revolver.FireCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -27769,7 +28818,8 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"Weed"
-			"item_name"	"Big Weed"
+			"item_name"	"Saxton Hash"
+			"item_description"	"Mann Co.: We sell products and smoke blunts!"
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/c_models/c_bigweed"
 			"image_inventory_size_w"		"128"
@@ -27956,7 +29006,7 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				".75"
+					"value"				".5"
 				}
 				"crit mod disabled"
 				{
@@ -28473,12 +29523,12 @@ Fires....... something"
 				"Construction rate decreased"
 				{
 					"attribute_class"	"mult_construction_value"
-					"value"	"0.30"
+					"value"	"1.50"
 				}
 				"Repair rate decreased"
 				{
 					"attribute_class"	"mult_repair_value"
-					"value"	"0.30"
+					"value"	"1.50"
 				}
 				"single wep deploy time increased"
 				{
@@ -28573,7 +29623,7 @@ Fires....... something"
 			"item_name"	"The Highlander"
 			"item_description"	"Model by Mr Funreal"
 			"propername"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
+			"image_inventory"	"backpack/weapons/c_models/c_highlander"
 			"model_player"	"models/weapons/lambda/v_models/v_highlander.mdl"
 			"model_world"	"models/weapons/lambda/w_models/w_highlander.mdl"
 			"show_in_armory"	"1"
@@ -28608,7 +29658,7 @@ Fires....... something"
 						"skin_red"	"2"
 						"skin_blu"	"3"
 						"selectable"	"0"
-						"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore_gold"
+						"image_inventory"	"backpack/weapons/c_models/c_highlander"
 					}
 				}
 			}
@@ -28864,9 +29914,6 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"static_attrs"
-			{
-			}
 			"model_world"	"models/player/hatkid/scout.mdl"
 			"used_by_classes"
 			{
@@ -28894,6 +29941,152 @@ Fires....... something"
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 			}
+		"9781"
+		{
+			"name"	"Female Sniper Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Gender Swap"
+			"item_name"	"Femsniper"
+			"item_description"	"Model by Maxxy"
+			"item_slot"	"head"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"vgui/marked_for_death"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/player/female_sniper/sniper.mdl"
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.08"
+				}
+			}
+		}
+		"9782"
+		{
+			"name"						"M1 GARAND"
+			"prefab"					"weapon_sniperrifle"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_revolver"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_type_name"			"Rifle"
+			"item_name"					"M1 Garand"
+			"propername"				"1"
+			"min_ilevel"				"8"
+			"max_ilevel"				"8"
+			"image_inventory"			"backpack/weapons/m1"
+			"model_world"				"models/weapons/lambda/m1garand/w_revrifle_sniper.mdl"
+			"model_player"				"models/weapons/lambda/m1garand/v_revrifle_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.3"
+				}
+			}
+		}
+		"9783"
+		{
+			"name"						"M1 GARAND SOLDIER"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_revolver"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_type_name"			"Rifle"
+			"item_name"					"M1 Garand"
+			"item_slot"					"primary"
+			"show_in_armory"			"1"
+			"propername"				"1"
+			"min_ilevel"				"8"
+			"max_ilevel"				"8"
+			"anim_slot"					"secondary"
+			"image_inventory"			"backpack/weapons/m1"
+			"model_world"				"models/weapons/lambda/m1garand/w_revrifle_sniper.mdl"
+			"model_player"				"models/weapons/lambda/m1garand/v_revrifle_soldier.mdl"
+			"attach_to_hands"			"0"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.3"
+				}
+			}
+		}
+		"479"
+		{
+			"name"	"Security Shades"
+			"first_sale_date"	"2011/07/05"
+			"prefab"		"base_misc"
+			"loadondemand" "1"
+			"item_class"	"tf_wearable"
+			"craft_material_type"	"hat"
+			"craft_class"	"hat"
+			"capabilities"
+			{
+				"nameable"				"1"
+				"can_craft_count"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Glasses"
+			"item_name"	"Security Shades"
+			"item_description"	"Pootis Status: Engaged."
+			"item_slot"	"misc"
+			"equip_region"	"glasses"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/heavy/cop_glasses"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/heavy/cop_glasses.mdl"
+			"drop_type"	"drop"
+			"propername"	"0"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -38312,6 +39505,16 @@ Fires....... something"
             "hidden"    "1"
             "effect_type"    "negative"
             "stored_as_integer"    "0"
+		}
+		"10022"
+		{
+			"name"	"Projectile speed increased HIDDEN"
+			"attribute_class"	"mult_projectile_speed"
+			"description_string"	"#Attrib_ProjectileSpeed_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 	}
 	"attribute_controlled_attached_particles"
