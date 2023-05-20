@@ -12,4 +12,4 @@ Improved Main Menu
 
 Because this project is more community based anyone can submit additions/modifications to be added
 
-NOTE: Lambda Fortress: Community Edition is not affilated with Concussion Studios or Nicknine, this is a community-made mod. Get it?
+NOTE: Lambda Fortress: Community Edition is not affiliated with Concussion Studios or Nicknine, this is a community-made mod. Get it?
