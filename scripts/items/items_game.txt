@@ -18743,11 +18743,10 @@
 		}
 		"9010"
 		{
-			"name"	"Extended Rocket Launcher"
+			"name"	"Lambda Rocket Launcher"
 			"prefab"	"weapon_rocketlauncher"
 			"baseitem"	"0"
 			"item_quality"	"developer"
-			"extra_wearable" "models/player/items/all_class/ghostly_gibus_scout.mdl"
 			"attributes"
 			{
 				"damage bonus"
@@ -18790,25 +18789,19 @@
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
-				"cosmetic taunt sound"
+				"use robo voice"
 				{
-					"attribute_class"	"PortalPlayer.EnterPortal"
-					"value"				"scout.boombox"
-				}
-				"is australium item"
-				{
-					"attribute_class"	"is_australium_item"
-					"value"				"1"
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
 				}
 			}
 		}
 		"9011"
 		{
-			"name"	"Extended Flamethrower"
+			"name"	"Lambda Flamethrower"
 			"prefab"	"weapon_flamethrower"
 			"baseitem"	"0"
 			"item_quality"	"developer"
-			"extra_wearable" "models/player/items/all_class/ghostly_gibus_scout.mdl"
 			"attributes"
 			{
 				"damage bonus"
@@ -18846,15 +18839,15 @@
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"2.0"
 				}
-				"SPELL: Halloween green flames"
-				{
-					"attribute_class"	"halloween_green_flames"
-					"value"	"1"
-				}
 				"attach particle effect name"
 				{
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
 				}
 			}
 		}
@@ -21452,7 +21445,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.4"
+					"value"	"0.75"
 				}
 			}
 			"visuals"
@@ -23876,6 +23869,79 @@ Fires....... something"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
 
+		"9418"
+		{
+			"name"	"Giant Scout Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Baseball-Bot 8008"
+			"item_name"	"Giant Scout-bot"
+			"item_description"	"This is what Baseball in the year 8008 will look like! 
+			Don't use this in PVP, or else..."
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/robot/c_robot_scout"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.7"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class"	"airblast_vulnerability_multiplier"
+					"value"	"0.7"
+				}
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"5"
+				}
+				"model scale"
+				{
+					"attribute_class"	"model_scale"
+					"value"				"1.75"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
+				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "1475"
+				}
+			}
+			"model_player" "models/bots/scout_boss/bot_scout_boss.mdl"
+			"model_world" "models/bots/scout_boss/bot_scout_boss.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
 		"850"
 		{
 			"name"			"Deflector"
@@ -39514,6 +39580,16 @@ Fires....... something"
 			"description_format"	"value_is_percentage"
 			"hidden"	"1"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10023"
+		{
+			"name"	"model scale"
+			"attribute_class"	"model_scale"
+			"description_string"	"#Attrib_ModelScale"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
 	}
