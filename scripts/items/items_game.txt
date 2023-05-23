@@ -11467,11 +11467,7 @@
 			{
 				"min_viewmodel_offset"					"10 -5 -10"
 			}
-			"model_player_per_class"
-			{
-				"soldier"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
-				"demoman"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana.mdl"
-			}
+			"model_player" "models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
 			"attributes"
 			{
 				"is_a_sword"
@@ -15559,7 +15555,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
+					"value"	"0.95"
 				}
 			}
 		}
@@ -23944,6 +23940,28 @@ Fires....... something"
 			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
+		
+		"9419"
+		{
+			"name"	"Multi-Class Family Business"
+			"item_name"	"Multi-Class Family Business"
+			"prefab"	"weapon_russian_riot"
+			"first_sale_date"	"2011/04/14"
+			"particle_suffix"	"family_business"
+			"show_in_armory"	"1"
+			
+			"used_by_classes"
+			{
+				"engineer"	"primary"
+				"spy"	"secondary"
+				"pyro" "secondary"
+				"soldier" "secondary"
+			}
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+		}
 		"850"
 		{
 			"name"			"Deflector"
@@ -24003,7 +24021,7 @@ Fires....... something"
 		{
 			"name"	"The AWPer Hand"
 			"prefab"	"weapon_sniperrifle_alt1"
-			"item_class"	"tf_weapon_sniperrifle"
+			"item_class"	"tf_weapon_sniperrifle_decap"
 			"craft_material_type"	"weapon"
 			"craft_class"	"weapon"
 			"capabilities"
@@ -24034,7 +24052,27 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.2"
+					"value" "1.3"
+				}
+				"rage on kill"
+				{
+					"attribute_class"	"rage_on_kill"
+					"value" "35"
+				}
+				"rage on assists"
+				{
+					"attribute_class"	"rage_on_assists"
+					"value" "15"
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value" "6"			
+				}
+				"sniper rage DISPLAY ONLY"
+				{
+					"attribute_class"	"sniper_rage_DISPLAY_ONLY"
+					"value" "0"
 				}
 			}
 			"visuals"
@@ -24046,6 +24084,139 @@ Fires....... something"
 		
 	
 		"9150"
+		{
+			"craft_class"	""
+			"baseitem"		"1"
+			"enabled"	"1"
+			"item_class"	"tf_wearable"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Wearable"
+			"item_name"	"Base Secondary Item"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		"30474"
+		{
+			"name"		"The Nostromo Napalmer"
+			"first_sale_date"		"2014/11/13"
+			"item_class"		"tf_weapon_flamethrower"
+			"prefab"		"weapon_flamethrower"
+			"craft_class"		"weapon"
+			"craft_material_type"		"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_reflect_projectiles"		"1"
+				"can_extinguish"		"1"
+				"can_deal_posthumous_damage"		"1"
+				"can_deal_critical_damage"		"1"
+				"is_flamethrower"		"1"
+			}
+			"item_logname"		"ai_flamethrower"
+			"item_iconname"		"ai_flamethrower"
+			"show_in_armory"		"1"
+			"item_type_name"		"#TF_Weapon_Flamethrower"
+			"item_name"		"#TF_NostromoNapalmer"
+			"item_description"		"#TF_NostromoNapalmer_Desc"
+			"item_slot"		"primary"
+			"image_inventory"		"backpack/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist"		"75"
+			"model_player"		"models/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower.mdl"
+			"attach_to_hands"		"1"
+			"item_quality"		"unique"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"attirbutes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.15"
+				}
+                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.30"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.5" 
+				}
+				"heal on hit for rapidfire"
+				{
+					"attribute_class"	"add_onhit_addhealth"
+					"value"	"5"
+				}
+				"heal on kill"
+				{
+					"attribute_class"	"heal_on_kill"
+					"value"	"8"
+                }	
+				"melts in fire"
+				{
+					"attribute_class"	"melts_in_fire"
+					"value"	"5"
+                }
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"	"1"
+                }	
+			}	
+			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"		"flamethrower"
+		}
+		"9151"
 		{
 			"craft_class"	""
 			"baseitem"		"1"
@@ -24637,7 +24808,7 @@ Fires....... something"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"Bat with two axes strapped to it"
-			"item_name"	"The Teufort Slugger"
+			"item_name"	"Teufort Slugger"
 			"item_description"	"(Model by Jeckler)"
 			"item_slot"	"melee"
 			"item_quality"		"unique"
@@ -26345,22 +26516,22 @@ Fires....... something"
 				{
 					"attribute_class"	"crit_vs_wet_players"
 					"value" "1"
-                                }
+                }
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"1.25"
-                                }
+                }
 				"heal on kill"
 				{
 					"attribute_class"	"heal_on_kill"
 					"value"	"15"
-                                }	
+                }	
 				"max health additive penalty"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value" "-25"
-                                }
+					"value" "-75"
+                }
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -26438,7 +26609,7 @@ Fires....... something"
 
 		"9730"
 		{
-			"name"	"Heavy's Reserve Shooter"
+			"name"	"Multi-Class Reserve Shooter"
 			"first_sale_date"	"2011/03/23"
 			"item_class"	"tf_weapon_shotgun_hwg"
 			"craft_class"	"weapon"
@@ -26477,78 +26648,9 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
 			"used_by_classes"
 			{
-				"heavy"	"1"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Reserve_Shooter.Single"
-				"sound_burst"		"Weapon_Reserve_Shooter.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"bullet_shotgun_tracer01"
-			}
-			"attributes"
-			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
-				}
-				"mod mini-crit airborne deploy"
-				{
-					"attribute_class"	"mini_crit_airborne_deploy"
-					"value" "3"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.85"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-		"9731"
-		{
-			"name"	"Engineer's Reserve Shooter"
-			"first_sale_date"	"2011/03/23"
-			"item_class"	"tf_weapon_shotgun_primary"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_peusermessageration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-				"can_deal_taunt_damage"		"1"
-			}
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"#TF_ReserveShooter"
-			"item_slot"	"primary"
-			"item_logname"	"reserve_shooter"
-			"item_iconname"	"reserve_kill"
-			"show_in_armory"	"1"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"attach_to_hands"	"1"
-			"show_in_armory"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
-			"used_by_classes"
-			{
-				"engineer"	"1"
+				"engineer"	"primary"
+				"heavy"	"secondary"
+				"spy"	"primary"
 			}
 			"visuals"
 			{
@@ -27802,6 +27904,91 @@ Fires....... something"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+		"752"
+		{
+			"name"	"The Hitman's Heatmaker"
+			"first_sale_date"	"2012/06/27"
+			"item_class"	"tf_weapon_sniperrifle"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_logname"	"pro_rifle"
+			"item_iconname"	"pro_rifle"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_name"	"#TF_Pro_SniperRifle"
+			"item_description"	"#TF_Pro_SniperRifle_Desc"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"inspect_panel_dist" "58"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pro_rifle/c_pro_rifle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_pro_rifle/c_pro_rifle.mdl"
+			"attach_to_hands"	"1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 0 -8"				
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0.80"
+				}
+				"rage on kill"
+				{
+					"attribute_class"	"rage_on_kill"
+					"value" "35"
+				}
+				"rage on assists"
+				{
+					"attribute_class"	"rage_on_assists"
+					"value" "15"
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value" "6"			
+				}
+				"sniper rage DISPLAY ONLY"
+				{
+					"attribute_class"	"sniper_rage_DISPLAY_ONLY"
+					"value" "0"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ProSniperRifle.Single"
+				"sound_burst"			"Weapon_ProSniperRifle.SingleCrit"
+			}
 		}
                 "9752"
 		{
@@ -30124,6 +30311,12 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"				"1.3"
 				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_M1.Single"
+				"sound_burst" "Weapon_M1.Single"
+				"sound_reload"	"Weapon_M1.Reload"
 			}
 		}
 		"479"
