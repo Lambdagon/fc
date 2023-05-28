@@ -30405,7 +30405,16 @@ Fires....... something"
 			}
 			"attributes"
 			{
-
+                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"25"
+				}
+				"dmg taken from blast increased"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"	"1.3"
+				}
 			}
 			"visuals"
 			{
@@ -30417,6 +30426,79 @@ Fires....... something"
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 			}
+		"9785"
+		{
+			"name"	"Security Shades DX"
+			"first_sale_date"	"2011/07/05"
+			"prefab"		"base_misc"
+			"loadondemand" "1"
+			"item_class"	"tf_wearable"
+			"craft_material_type"	"hat"
+			"craft_class"	"hat"
+			"capabilities"
+			{
+				"nameable"				"1"
+				"can_craft_count"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "Glasses"
+			"item_name"	"Security Shades Deluxe"
+			"item_description"	"MAD: 100%"
+			"item_slot"	"misc"
+			"equip_region"	"glasses"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/cop_glasses_dx"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/heavy/cop_glasses.mdl"
+			"drop_type"	"drop"
+			"propername"	"0"
+			"attributes"
+			{
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0"
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"0"
+				}
+				"maxammo grenades1 increased"
+				{
+					"attribute_class"	"mult_maxammo_grenades1"
+					"value"	"7"
+				}
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "2.30"
+				}
+                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.50"
+				}
+                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"120"
+				}
+				"dmg taken from bullets reduced"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"	"0.55"
+				}
+			}
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"mouse_pressed_sound"	"pootis.mp3"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
