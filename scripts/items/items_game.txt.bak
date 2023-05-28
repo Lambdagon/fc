@@ -11467,11 +11467,7 @@
 			{
 				"min_viewmodel_offset"					"10 -5 -10"
 			}
-			"model_player_per_class"
-			{
-				"soldier"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
-				"demoman"	"models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana.mdl"
-			}
+			"model_player" "models/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana_soldier.mdl"
 			"attributes"
 			{
 				"is_a_sword"
@@ -15549,6 +15545,19 @@
 			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_bow_thief/c_bow_thief"
 			"model_player"	"models/workshop_partner/weapons/c_models/c_bow_thief/c_bow_thief.mdl"
 			"inspect_panel_dist" 			"55"
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"	"10"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.95"
+				}
+			}
 		}
 		"1098"
 		{
@@ -18743,11 +18752,10 @@
 		}
 		"9010"
 		{
-			"name"	"Extended Rocket Launcher"
+			"name"	"Lambda Rocket Launcher"
 			"prefab"	"weapon_rocketlauncher"
 			"baseitem"	"0"
 			"item_quality"	"developer"
-			"extra_wearable" "models/player/items/all_class/ghostly_gibus_scout.mdl"
 			"attributes"
 			{
 				"damage bonus"
@@ -18790,25 +18798,19 @@
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
-				"cosmetic taunt sound"
+				"use robo voice"
 				{
-					"attribute_class"	"PortalPlayer.EnterPortal"
-					"value"				"scout.boombox"
-				}
-				"is australium item"
-				{
-					"attribute_class"	"is_australium_item"
-					"value"				"1"
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
 				}
 			}
 		}
 		"9011"
 		{
-			"name"	"Extended Flamethrower"
+			"name"	"Lambda Flamethrower"
 			"prefab"	"weapon_flamethrower"
 			"baseitem"	"0"
 			"item_quality"	"developer"
-			"extra_wearable" "models/player/items/all_class/ghostly_gibus_scout.mdl"
 			"attributes"
 			{
 				"damage bonus"
@@ -18846,15 +18848,15 @@
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"2.0"
 				}
-				"SPELL: Halloween green flames"
-				{
-					"attribute_class"	"halloween_green_flames"
-					"value"	"1"
-				}
 				"attach particle effect name"
 				{
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
 				}
 			}
 		}
@@ -19238,6 +19240,11 @@
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value" 	"0" 
+				}
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"	"30"
 				}
 			}
 			"mouse_pressed_sound" 	"ui/item_boxing_gloves_pickup.wav"
@@ -21452,7 +21459,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.4"
+					"value"	"0.75"
 				}
 			}
 			"visuals"
@@ -21943,36 +21950,51 @@
 			}
 			"attributes"
 			{
-                                "bullets per shot bonus"
+				"panic_attack"
 				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "2.30"
-                                }
-				"faster reload rate"
-				{
-					"attribute_class"	"fast_reload"
-					"value" "0.8"
-                                }
-                                "spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "1.70"
+					"attribute_class"	"panic_attack"
+					"value"	"1.0"
 				}
-                                "clip size penalty"
+				"panic_attack_negative"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.40"
-                                }
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "1.33"
+					"attribute_class"	"panic_attack_negative"
+					"value"	"2.5"
 				}
-				"fire rate bonus"
+				"auto fires full clip penalty"
+				{
+					"attribute_class"	"auto_fires_full_clip"
+					"value"	"1"
+				}
+				"fire rate bonus with reduced health"
+				{
+					"attribute_class"	"mult_postfiredelay_with_reduced_health"
+					"value"	"0.50"
+				}
+				"fire rate bonus HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.85"
+					"value"	"0.70"
 				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.60"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.66"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.5"
+				}
+                "bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "1.30"
+                }
 			}
 			"visuals"
 			{
@@ -23184,15 +23206,13 @@
 		}			
 		"9408"
 		{
-			"name"	"Femscout Big Slappy"
+			"name"	"(Formerly) Femscout Big Slappy"
 			"first_sale_date"	"2012/12/20"
 			"prefab"	""
 			"hidden"	"0"
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
-			"model_player" "models/player/femscout/femscout_expand.mdl"
-			"model_world" "models/player/femscout/femscout_expand.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
 			{
@@ -23203,15 +23223,16 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"H̸͍͝e̶̖̾r̸͉͐ẹ̸̍s̶̥͘y̷̫̏"
-			"item_name"	"Big Slappy (Femscout)"
-			"item_description"	""
+			"item_type_name"	"Performance Enhancement"
+			"item_name"	"5 gram crack"
+			"item_description"	"'Some say it's the charred remains of something else.
+			Best not to dwell on it.'"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/crafting/ash"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"used_by_classes"
@@ -23220,33 +23241,23 @@
 			}
 			"attributes"
 			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"1.08"
-				}
-				"health regen"
+				"health drain"
 				{
 					"attribute_class"	"add_health_regen"
-					"value"	"2"
+					"value"	"-1"
                 }
-				"move speed penalty"
+				"move speed bonus"
 				{
 					"attribute_class" 	"mult_player_movespeed"
-					"value" "0.8"
+					"value" "1.5"
 				}
 				"increased jump height"
 				{
 					"attribute_class"	"mod_jump_height"
-					"value" "0.67"
-				}
-				"boots falling stomp"
-				{
-					"attribute_class"	"boots_falling_stomp"
-					"value" "1"
+					"value" "1.5"
 				}
 			}
-			"mouse_pressed_sound"	"vo/taunts/spy/Spy_taunt_dosi_end_37.wav"
+			"mouse_pressed_sound"	"snorty.mp3"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 		}		
 		"9409"
@@ -23509,7 +23520,7 @@
 		"9413"
 		{
 			"name"	"D-IED"
-			"item_class"	"tf_weapon_rocketlauncher"
+			"item_class"	"tf_weapon_rocketlauncher_mortar"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -23557,11 +23568,6 @@
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"2"
-				}
-				"mod projectile homing"
-				{
-					"attribute_class"	"mod_projectile_homing"
-					"value"	"1"
 				}
 				"clip size penalty"
 				{
@@ -23876,6 +23882,101 @@ Fires....... something"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
 
+		"9418"
+		{
+			"name"	"Giant Scout Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Baseball-Bot 8008"
+			"item_name"	"Giant Scout-bot"
+			"item_description"	"This is what Baseball in the year 8008 will look like! 
+			Don't use this in PVP, or else..."
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/robot/c_robot_scout"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.7"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class"	"airblast_vulnerability_multiplier"
+					"value"	"0.7"
+				}
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"5"
+				}
+				"model scale"
+				{
+					"attribute_class"	"model_scale"
+					"value"				"1.75"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
+				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "1475"
+				}
+			}
+			"model_player" "models/bots/scout_boss/bot_scout_boss.mdl"
+			"model_world" "models/bots/scout_boss/bot_scout_boss.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			
+			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+		}
+		
+		"9419"
+		{
+			"name"	"Multi-Class Family Business"
+			"item_name"	"Multi-Class Family Business"
+			"prefab"	"weapon_russian_riot"
+			"first_sale_date"	"2011/04/14"
+			"particle_suffix"	"family_business"
+			"show_in_armory"	"1"
+			
+			"used_by_classes"
+			{
+				"engineer"	"primary"
+				"spy"	"secondary"
+				"pyro" "secondary"
+				"soldier" "secondary"
+			}
+			"tags"
+			{
+				"can_be_festivized"		"1"
+			}
+		}
 		"850"
 		{
 			"name"			"Deflector"
@@ -23935,7 +24036,7 @@ Fires....... something"
 		{
 			"name"	"The AWPer Hand"
 			"prefab"	"weapon_sniperrifle_alt1"
-			"item_class"	"tf_weapon_sniperrifle"
+			"item_class"	"tf_weapon_sniperrifle_decap"
 			"craft_material_type"	"weapon"
 			"craft_class"	"weapon"
 			"capabilities"
@@ -23966,7 +24067,27 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.2"
+					"value" "1.3"
+				}
+				"rage on kill"
+				{
+					"attribute_class"	"rage_on_kill"
+					"value" "35"
+				}
+				"rage on assists"
+				{
+					"attribute_class"	"rage_on_assists"
+					"value" "15"
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value" "6"			
+				}
+				"sniper rage DISPLAY ONLY"
+				{
+					"attribute_class"	"sniper_rage_DISPLAY_ONLY"
+					"value" "0"
 				}
 			}
 			"visuals"
@@ -23978,6 +24099,138 @@ Fires....... something"
 		
 	
 		"9150"
+		{
+			"craft_class"	""
+			"baseitem"		"1"
+			"enabled"	"1"
+			"item_class"	"tf_wearable"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Wearable"
+			"item_name"	"Base Secondary Item"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		"30474"
+		{
+			"name"		"The Nostromo Napalmer"
+			"first_sale_date"		"2014/11/13"
+			"item_class"		"tf_weapon_flamethrower"
+			"craft_class"		"weapon"
+			"craft_material_type"		"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_reflect_projectiles"		"1"
+				"can_extinguish"		"1"
+				"can_deal_posthumous_damage"		"1"
+				"can_deal_critical_damage"		"1"
+				"is_flamethrower"		"1"
+			}
+			"item_logname"		"ai_flamethrower"
+			"item_iconname"		"ai_flamethrower"
+			"show_in_armory"		"1"
+			"item_type_name"		"#TF_Weapon_Flamethrower"
+			"item_name"		"#TF_NostromoNapalmer"
+			"item_description"		"#TF_NostromoNapalmer_Desc"
+			"item_slot"		"primary"
+			"image_inventory"		"backpack/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist"		"75"
+			"model_player"		"models/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower.mdl"
+			"attach_to_hands"		"1"
+			"item_quality"		"unique"
+			"propername"		"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.15"
+				}
+                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.15"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.5" 
+				}
+				"heal on hit for rapidfire"
+				{
+					"attribute_class"	"add_onhit_addhealth"
+					"value"	"5"
+				}
+				"heal on kill"
+				{
+					"attribute_class"	"heal_on_kill"
+					"value"	"8"
+                }	
+				"melts in fire"
+				{
+					"attribute_class"	"melts_in_fire"
+					"value"	"5"
+                }
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"	"1"
+                }	
+			}	
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"		"flamethrower"
+		}
+		"9151"
 		{
 			"craft_class"	""
 			"baseitem"		"1"
@@ -24569,7 +24822,7 @@ Fires....... something"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"Bat with two axes strapped to it"
-			"item_name"	"The Teufort Slugger"
+			"item_name"	"Teufort Slugger"
 			"item_description"	"(Model by Jeckler)"
 			"item_slot"	"melee"
 			"item_quality"		"unique"
@@ -24604,7 +24857,7 @@ Fires....... something"
 				"is_a_sword"
 				{
 					"attribute_class"	"is_a_sword"
-					"value"	"1"
+					"value"	"72"
 				}
 				"bleeding duration"
 				{
@@ -25854,7 +26107,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
-			"attach_to_hands" "0"
+			"attach_to_hands" "1"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -26277,22 +26530,22 @@ Fires....... something"
 				{
 					"attribute_class"	"crit_vs_wet_players"
 					"value" "1"
-                                }
+                }
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"1.25"
-                                }
+                }
 				"heal on kill"
 				{
 					"attribute_class"	"heal_on_kill"
 					"value"	"15"
-                                }	
+                }	
 				"max health additive penalty"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value" "-25"
-                                }
+					"value" "-75"
+                }
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -26370,7 +26623,7 @@ Fires....... something"
 
 		"9730"
 		{
-			"name"	"Heavy's Reserve Shooter"
+			"name"	"Multi-Class Reserve Shooter"
 			"first_sale_date"	"2011/03/23"
 			"item_class"	"tf_weapon_shotgun_hwg"
 			"craft_class"	"weapon"
@@ -26409,78 +26662,9 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
 			"used_by_classes"
 			{
-				"heavy"	"1"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Reserve_Shooter.Single"
-				"sound_burst"		"Weapon_Reserve_Shooter.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"bullet_shotgun_tracer01"
-			}
-			"attributes"
-			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
-				}
-				"mod mini-crit airborne deploy"
-				{
-					"attribute_class"	"mini_crit_airborne_deploy"
-					"value" "3"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.85"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-		"9731"
-		{
-			"name"	"Engineer's Reserve Shooter"
-			"first_sale_date"	"2011/03/23"
-			"item_class"	"tf_weapon_shotgun_primary"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_peusermessageration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-				"can_deal_taunt_damage"		"1"
-			}
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"#TF_ReserveShooter"
-			"item_slot"	"primary"
-			"item_logname"	"reserve_shooter"
-			"item_iconname"	"reserve_kill"
-			"show_in_armory"	"1"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"attach_to_hands"	"1"
-			"show_in_armory"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
-			"used_by_classes"
-			{
-				"engineer"	"1"
+				"engineer"	"primary"
+				"heavy"	"secondary"
+				"spy"	"primary"
 			}
 			"visuals"
 			{
@@ -27734,6 +27918,91 @@ Fires....... something"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
+		"752"
+		{
+			"name"	"The Hitman's Heatmaker"
+			"first_sale_date"	"2012/06/27"
+			"item_class"	"tf_weapon_sniperrifle"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_logname"	"pro_rifle"
+			"item_iconname"	"pro_rifle"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_name"	"#TF_Pro_SniperRifle"
+			"item_description"	"#TF_Pro_SniperRifle_Desc"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"inspect_panel_dist" "58"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pro_rifle/c_pro_rifle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_pro_rifle/c_pro_rifle.mdl"
+			"attach_to_hands"	"1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 0 -8"				
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0.80"
+				}
+				"rage on kill"
+				{
+					"attribute_class"	"rage_on_kill"
+					"value" "35"
+				}
+				"rage on assists"
+				{
+					"attribute_class"	"rage_on_assists"
+					"value" "15"
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value" "6"			
+				}
+				"sniper rage DISPLAY ONLY"
+				{
+					"attribute_class"	"sniper_rage_DISPLAY_ONLY"
+					"value" "0"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ProSniperRifle.Single"
+				"sound_burst"			"Weapon_ProSniperRifle.SingleCrit"
+			}
 		}
                 "9752"
 		{
@@ -29487,7 +29756,7 @@ Fires....... something"
 			{
 				"engineer"	"1"
 			}
-			"visuals"
+			"visuals" 
 			{
 				"sound_melee_miss"	"Weapon_Sword.Swing"
 				"sound_melee_hit"	"Weapon_Sword.HitFlesh"
@@ -29523,12 +29792,12 @@ Fires....... something"
 				"Construction rate decreased"
 				{
 					"attribute_class"	"mult_construction_value"
-					"value"	"1.50"
+					"value"	"0.30"
 				}
 				"Repair rate decreased"
 				{
 					"attribute_class"	"mult_repair_value"
-					"value"	"1.50"
+					"value"	"0.30"
 				}
 				"single wep deploy time increased"
 				{
@@ -30014,6 +30283,12 @@ Fires....... something"
 					"value"				"1.3"
 				}
 			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_M1.Single"
+				"sound_burst" "Weapon_M1.Single"
+				"sound_reload"	"Weapon_M1.Reload"
+			}
 		}
 		"9783"
 		{
@@ -30051,6 +30326,12 @@ Fires....... something"
 					"value"				"1.3"
 				}
 			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_M1.Single"
+				"sound_burst" "Weapon_M1.Single"
+				"sound_reload"	"Weapon_M1.Reload"
+			}
 		}
 		"479"
 		{
@@ -30068,7 +30349,7 @@ Fires....... something"
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name" "#TF_Wearable_Glasses"
+			"item_type_name" "Glasses"
 			"item_name"	"Security Shades"
 			"item_description"	"Pootis Status: Engaged."
 			"item_slot"	"misc"
@@ -30087,6 +30368,59 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
+			"9784"
+		{
+			"name"	"Patchouli Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Magical Girl"
+			"item_name"	"Patchouli"
+			"item_description"	"Model adapted by: Litronom
+			No, she's not rigged to Demoman.
+			Sorry :("
+			"item_slot"	"head"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"static_attrs"
+			{
+			}
+			"model_world"		"models/player/patchouli/sniper.mdl"
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			"attributes"
+			{
+
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+
+				}
+			}
+			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
+			"drop_sound"	"tfc/misc/teleport_in.wav"
+			}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -39514,6 +39848,16 @@ Fires....... something"
 			"description_format"	"value_is_percentage"
 			"hidden"	"1"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10023"
+		{
+			"name"	"model scale"
+			"attribute_class"	"model_scale"
+			"description_string"	"#Attrib_ModelScale"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
 	}
