@@ -30499,6 +30499,125 @@ Fires....... something"
 			"mouse_pressed_sound"	"pootis.mp3"
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
+		"9786"
+		{
+			"name"	"Zombine Claws"
+			"item_class"	"tf_weapon_antlion_claw"
+			"baseitem" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Zombified Hands"
+			"item_name"	"Zombine Claws"
+			"item_description"	"(Viewmodel from Zombie SWEPs, by sean and Pillow)"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/zombine/v_models/v_zombine.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"zombiefast"  "1"
+			}
+			"attributes"
+			{
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.60"
+				}
+				"fire rate bonus HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.70"
+				}
+				"damage penalty hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.70"
+				}
+                        }
+			"visuals" 
+			{
+				"sound_melee_miss"	"Empty"
+				"sound_melee_hit"	"Zombie.AttackHit"
+				"sound_melee_hit_world"	"Jerry.MeleeAttack"
+				"sound_burst"		"Zombine.Alert"
+                        }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+		}
+		"9779"
+		{
+			"name"	"Enforcing Tool"
+			"item_class"	"tf_wearable"
+			"baseitem" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Bloodied Combine Armor"
+			"item_name"	"Enforcing Tool"
+			"item_slot"	"secondary"
+			"item_description"	"Standard... Issue."
+			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/empty.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"zombiefast"  "1"
+			}
+			"attributes"
+			{
+				"dmg taken from bullets reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_bullets"
+					"value"	"0.20"
+				}
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"	"0.30"
+				}
+				"dmg taken from crit reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_crit"
+					"value"	"0.70"
+				}
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.80"
+				}
+				"dmg taken from blast increased"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"	"0.70"
+				}
+                        }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -31831,6 +31950,16 @@ Fires....... something"
 			"description_string"	"#Attrib_DamageDone_Negative"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10024"
+		{
+			"name"	"damage penalty hidden"
+			"attribute_class"	"mult_dmg"
+			"description_string"	"#Attrib_DamageDone_Negative"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
