@@ -142,8 +142,8 @@
 		"font"				"MenuKeys"
 		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		"activeimage"		"class_sel_sm_random_red"
-		"inactiveimage"		"class_sel_sm_random_inactive"
+		"activeimage"		"class_sel_sm_jerry"
+		"inactiveimage"		"class_sel_sm_jerry_inactive"
 	}
 	
 	"combinesoldier_red"
