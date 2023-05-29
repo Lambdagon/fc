@@ -1,0 +1,72 @@
+testchmb_a_03
+{
+	entity
+	{
+		edit {classname "filter_combineball_type" values {balltype "3"} }
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "-733 0 -128"
+			values
+			{
+				angles "0 0 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_coop" origin "680 5 50" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 180 0" parentname "a03-middle_elevator_body"} }
+		create {classname "info_player_coop" origin "-960 190 1430" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0" parentname "a02-a03_elevator_body"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_portalgun "1"
+			}
+		}
+		delete {targetname "a03-middle_trigger_elevator_move"}
+		edit {targetname "a03-middle_elevator_door_model_close" values {targetname "a03middleelevatorclose"} }
+		create {classname "trigger_coop" origin "729.58 0.94 60"
+			values
+			{
+				edt_getbspmodelfor_targetname "a03-middle_trigger_elevator_move"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele1"
+				wait "2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.9,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+				OnPlayersIn "a03-middle_elevator_body,StartForward,,5,-1"
+				OnPlayersIn "a03middleelevatorclose,Trigger,,0,-1"
+				OnPlayersIn "portal_a_rm4,Fizzle,,0,-1"
+				OnPlayersIn "a03-middle_elevator_shake,StartShake,,5,-1"
+				OnPlayersIn "a03-middle_block_crazy_player,Enable,,0,-1"
+				OnPlayersIn "a03-middle_elevator_start,PlaySound,,5,-1"
+			}
+		}
+		create {classname "info_target" origin "680 5 50" values {targetname "syn_coopele1" startdisabled "0" angles "0 180 0" parentname "a03-middle_elevator_body"} }
+		delete {targetname "a02-a03_trigger_elevator_move"}
+		create {classname "trigger_coop" origin "-969.58 -0.94 -644"
+			values
+			{
+				edt_getbspmodelfor_targetname "a02-a03_trigger_elevator_move"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele2"
+				wait "2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.9,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+				OnPlayersIn "a02-a03_elevator_body,StartForward,,5,-1"
+				OnPlayersIn "a02-a03_elevator_door_model_close,Trigger,,0,-1"
+				OnPlayersIn "a02-a03_elevator_lights,TurnOn,,0.03,-1"
+			}
+		}
+		create {classname "info_target" origin "-960 190 1430" values {targetname "syn_coopele2" startdisabled "0" angles "0 0 0" parentname "a02-a03_elevator_body"} }
+	}
+}

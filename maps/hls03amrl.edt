@@ -1,0 +1,15 @@
+hls03amrl
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values
+			{
+				OnMapSpawn "platformmm,AddOutput,OnTrigger platform:Start::0:-1,0,-1"
+				OnMapSpawn "syn_endbutton,AddOutput,OnPressed transition_to_hls04amrl:Enable::0:-1,0,-1"
+			}
+		}
+		edit {targetname "changetoc1a1e" values {spawnflags "6"} }
+		edit {classname "func_button" origin "-761 -559 1156" values {targetname "syn_endbutton"} }
+	}
+}

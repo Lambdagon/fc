@@ -1,0 +1,25 @@
+hls03amrl
+{
+	entity
+	{
+		delete {targetname "player_spawn_items"}
+		delete {targetname "player_spawn_template"}
+		create {classname "info_player_equip"
+			values
+			{
+				item_suit "1"
+				item_longjump "1"
+			}
+		}
+		edit {classname "trigger_changelevel"
+			values
+			{
+				edt_map "hls14amrl"
+				edt_landmark "hls14amrltohls14bmrl"
+				spawnflags "6"
+				startdisabled "1"
+			}
+		}
+		edit {classname "hl1_xen_plantlight" values {classname "xen_plantlight"} }
+	}
+}

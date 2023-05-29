@@ -1,0 +1,47 @@
+testchmb_a_05
+{
+	entity
+	{
+		edit {classname "filter_combineball_type" values {balltype "3"} }
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "792 -64 0"
+			values
+			{
+				angles "0 180 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_coop" origin "-445 825 40" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0" parentname "a05_a06_elevator_body"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_portalgun "1"
+			}
+		}
+		delete {classname "trigger_once" origin "64 736 64"}
+		create {classname "trigger_coop" origin "64 736 64"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "64 736 64"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele1"
+				wait "2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.9,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+				OnPlayersIn "a05_a06_elevator_body,StartForward,,0,-1"
+				OnPlayersIn "crusher01_tc15,Open,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-445 825 40" values {targetname "syn_coopele1" startdisabled "0" angles "0 0 0" parentname "a05_a06_elevator_body"} }
+	}
+}

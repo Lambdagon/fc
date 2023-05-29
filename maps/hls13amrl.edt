@@ -1,0 +1,26 @@
+hls03amrl
+{
+	entity
+	{
+		delete {targetname "player_spawn_items"}
+		delete {targetname "player_spawn_template"}
+		edit {classname "item_longjump" values {targetname "syn_longjumpspawn" OnCacheInteraction "longjumppickup,ForceSpawn,,1,-1"} }
+		create {classname "point_template"
+			values
+			{
+				targetname "longjumppickup"
+				spawnflags "3"
+				Template01 "syn_longjumpspawn"
+			}
+		}
+		edit {classname "trigger_changelevel"
+			values
+			{
+				edt_map "hls12amrl"
+				edt_landmark "hls12amrltohls13amrl"
+				spawnflags "6"
+				startdisabled "1"
+			}
+		}
+	}
+}

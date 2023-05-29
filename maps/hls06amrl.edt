@@ -1,0 +1,17 @@
+hls03amrl
+{
+	entity
+	{
+		delete {targetname "player_spawn_items"}
+		delete {targetname "player_spawn_template"}
+		edit {classname "trigger_changelevel"
+			values
+			{
+				edt_map "hls05bmrl"
+				edt_landmark "hls05bmrltohls06amrl"
+				spawnflags "6"
+				startdisabled "1"
+			}
+		}
+	}
+}

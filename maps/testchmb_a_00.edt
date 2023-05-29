@@ -1,0 +1,122 @@
+testchmb_a_00
+{
+	entity
+	{
+		create {classname "lfe_weapon_progress"
+			values 
+			{
+				targetname "wpnprogress"
+				wpnprogress "0"
+			}
+		}
+		edit {classname "filter_combineball_type" values {balltype "3"} }
+		edit {classname "weapon_portalgun" values {classname "tf_weapon_portalgun"} }
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "trigger_once" origin "-607.788 -346.674 161"
+			values
+			{
+				spawnflags "1"
+				edt_maxs "20 20 20"
+				edt_mins "-20 -20 -20"
+				OnTrigger "syn_hudtimer,Start,20,0,-1"
+			}
+		}
+		create {classname "info_player_coop" origin "-607.788 -346.674 161" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 180 0" } }
+		create {classname "info_player_coop" origin "-1480 -863 190" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0" parentname "elevator_body_middle"} }
+		create {classname "info_player_coop" origin "-377 -260 630" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 180 0" parentname "body"} }
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "relay_start_map,Trigger,,0.2,-1"
+				OnTimer "blackout_viewcontroller,Enable,,0,-1"
+				OnTimer "blackout_viewcontroller,SetParentAttachment,vehicle_driver_eyes,0,-1"
+				OnTimer "blackout_viewcontroller,Disable,,10,-1"
+				OnTimer "relay_commentary_fade,Trigger,,0,-1"
+				OnTimer "hint_move_ctrls,Kill,,0,-1"
+				OnTimer "door_left_a00,Open,,30,-1"
+			}
+		}
+		delete {classname "logic_auto" origin "-1376 -544 640"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-672 -288 208"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-563.835 -300.761 169"}//Replaced in hud_timer
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "0"
+				OnNewGame "hud_hint_enable,Trigger,,0.2,-1"
+				OnLoadGame "radio_sound,PlaySound,,0,-1"
+				OnMapSpawn "disabledPortal,Open,,1,1"
+				OnMapSpawn "door_left_a00,AddOutput,OnOpen door_right_a00:Open::0:-1,0,-1"
+				OnMapSpawn "door_right_a00,AddOutput,OnOpen door_left_a00:Open::0:-1,0,-1"
+				OnMapSpawn "radio,AddOutput,OnPlayerPickup radio_sound:Volume:10:0:-1,0,-1"
+				OnMapSpawn "radio,AddOutput,OnBreak radio_sound:kill::1:-1,0,-1"
+			}
+		}
+		edit {targetname "door_left_a00" values {spawnflags "1024"} }
+		edit {targetname "door_right_a00" values {spawnflags "1024"} }
+		delete {targetname "trigger_door_close_rm1"}
+		create {classname "trigger_once" origin "-544 -788 188"
+			values
+			{
+				edt_getbspmodelfor_targetname "trigger_door_close_rm1"
+				spawnflags "1"
+				OnStartTouch "trigger_hudhint_a00,Enable,,2,1"
+				OnStartTouch "logic_drop_box,Trigger,2,1"
+				OnStartTouch "autosave_rm1,Save,,0,1"
+			}
+		}
+		edit {targetname "trigger_elevator_move" values {startdisabled "1"} }
+		create {classname "trigger_coop" origin "-1500 -864 186.5"
+			values
+			{
+				edt_getbspmodelfor_targetname "trigger_elevator_move"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "trigger_elevator_move,Enable,,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.9,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+			}
+		}
+		create {classname "info_target" origin "-1480 -863 190" values {targetname "syn_coopele1" startdisabled "0" angles "0 0 0" parentname "elevator_body_middle"} }
+		create {classname "trigger_coop" origin "-356 -256 634.5"
+			values
+			{
+				edt_getbspmodelfor_targetname "a00-a01_trigger_elevator_move"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnPlayersIn "a00-a01_trigger_elevator_move,Enable,,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.9,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+			}
+		}
+		create {classname "info_target" origin "-377 -260 630" values {targetname "syn_coopele2" startdisabled "0" angles "0 180 0" parentname "body"} }
+		edit {targetname "a00-a01_trigger_elevator_move" values {startdisabled "1"} }
+		delete {targetname "destination_knockout_1"}
+		delete {targetname "block_boxes"}
+		delete {targetname "trigger_section2_start"}
+		create {classname "trigger_once" origin "-1088 -752 768"
+			values
+			{
+				edt_getbspmodelfor_targetname "trigger_section2_start"
+				spawnflags "1"
+				OnStartTouch "autosave_rm1,Save,,0,1"
+				OnStartTouch "logic_change_tonemap,Trigger,,0,1"
+			}
+		}
+	}
+}

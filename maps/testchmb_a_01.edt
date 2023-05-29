@@ -1,0 +1,85 @@
+testchmb_a_01
+{
+	entity
+	{
+		edit {classname "filter_combineball_type" values {balltype "3"} }
+		edit {classname "weapon_portalgun" values {classname "tf_weapon_portalgun"} }
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "688 32 6.4413"
+			values
+			{
+				angles "0 120 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_coop" origin "-260 -395 50" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 90 0" parentname "a01-middleelevator_body"} }
+		create {classname "info_player_coop" origin "-1915 890 620" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0" parentname "a01-a02_elevator_body"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapTransition "a00-a01_elevator_lights,TurnOff,,0,-1"
+				OnMapTransition "a00-a01_elevator_logic_stop,Trigger,,0,-1"
+				OnMapSpawn "weapon_portalgun,AddOutput,OnPlayerPickup porpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_portalgun,AddOutput,OnPlayerPickup porpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_portalgun,AddOutput,OnPlayerPickup wpnprogress:SetWeaponProgress:2:0:-1,0,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "porpickup" startdisabled "1" tf_weapon_portalgun "1"} }
+		delete {classname "trigger_once" origin "-255.06 -393.58 60"}
+		create {classname "trigger_coop" origin "-255.06 -393.58 60"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-255.06 -393.58 60"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,-1"
+				OnPlayersIn "!self,kill,,1.1,-1"
+				OnPlayersIn "a01-middleelevator_body,StartForward,,5,-1"
+				OnPlayersIn "a01-middleelevator_door_model_close,Trigger,,0,-1"
+				OnPlayersIn "a01-middleelevator_beam,TurnOff,,0,-1"
+				OnPlayersIn "a01-middle_elevator_shake,StartShake,,5,-1"
+				OnPlayersIn "a01-middle_elevator_start,PlaySound,,5,-1"
+				OnPlayersIn "a01-middle_block_crazy_player,Enable,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-260 -395 50" values {targetname "syn_coopele1" startdisabled "0" angles "0 90 0" parentname "a01-middleelevator_body"} }
+		delete {targetname "a01-a02_trigger_elevator_move"}
+		create {classname "trigger_coop" origin "-1929.58 895.06 636"
+			values
+			{
+				edt_getbspmodelfor_targetname "a01-a02_trigger_elevator_move"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				counttype "1"
+				target "syn_coopele2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,-1"
+				OnPlayersIn "!self,kill,,1.1,-1"
+				OnPlayersIn "a01-a02_elevator_body,StartForward,,5,-1"
+				OnPlayersIn "a01-a02_elevator_door_model_close,Trigger,,0,-1"
+				OnPlayersIn "a01-a02_elevator_beam,TurnOff,,0,-1"
+				OnPlayersIn "a01-a02_elevator_shake,StartShake,,5,-1"
+				OnPlayersIn "a01-a02_elevator_start,PlaySound,,5,-1"
+				OnPlayersIn "a01-a02_block_crazy_player,Enable,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-1915 890 620" values {targetname "syn_coopele2" startdisabled "0" angles "0 0 0" parentname "a01-a02_elevator_body"} }
+	}
+}

@@ -1,0 +1,29 @@
+testchmb_a_07
+{
+	entity
+	{
+		edit {classname "filter_combineball_type" values {balltype "3"} }
+		delete {classname "info_player_start"}
+		delete {targetname "point_spawn_single_portalgun_rm6"}
+		delete {targetname "portalgun"}
+		delete {targetname "elevator_door_model_close_a06_07"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "920 -384 293"
+			values
+			{
+				angles "0 167 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_portalgun "1"
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+hls02amrl
+{
+	entity
+	{
+		//edit {classname "multi_manager" values {classname "logic_relay"} }
+		delete {classname "multi_manager" origin "1145 692 -308"}
+		create {classname "multi_manager" origin "1145 692 -308"
+			values
+			{
+				"targetname" "portal_begin_mm"
+				//"OnTrigger" "tldoor,Close,,0,-1"
+				"OnTrigger" "portal_speaker_1,PlaySound,,10,-1"
+				"OnTrigger" "portal_speaker_2,PlaySound,,20,-1"
+				"OnTrigger" "portal_remind_mm,Trigger,,35,-1"
+				"OnTrigger" "motor_button_cover,Open,,35,-1"
+				"OnTrigger" "motor_button,Unlock,,35,-1"
+				"OnTrigger" "bretinal_scanner_looper,Kill,,0,-1"
+				"OnTrigger" "cretinal_scanner_looper,Kill,,0,-1"
+			}
+		}
+	}
+}
