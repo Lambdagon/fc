@@ -30418,7 +30418,7 @@ Fires....... something"
 				"voice pitch scale"
 				{
 					"attribute_class"	"voice_pitch_scale"
-					"value"		"1.08"
+					"value"		"0"
 				}
 			}
 			"visuals"
@@ -30506,7 +30506,7 @@ Fires....... something"
 		}
 		"9786"
 		{
-			"name"	"Zombine Claws"
+			"name"	"Inhuman Claws"
 			"item_class"	"tf_weapon_antlion_claw"
 			"baseitem" "1"
 			"tags"
@@ -30515,7 +30515,7 @@ Fires....... something"
 				"can_deal_critical_damage"	"1"
 			}
 			"item_type_name"	"Zombified Hands"
-			"item_name"	"Zombine Claws"
+			"item_name"	"Inhuman Claws"
 			"item_description"	"(Viewmodel from Zombie SWEPs, by sean and Pillow)"
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
@@ -30595,17 +30595,17 @@ Fires....... something"
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"0.20"
+					"value"	"-5.50"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.30"
+					"value"	"-1.50"
 				}
 				"dmg taken from crit reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"0.70"
+					"value"	"0.50"
 				}
 				"damage force reduction"
 				{
@@ -30622,6 +30622,195 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+		}
+		"9787"
+		{
+			"name" "Juandeag"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"Juandeag"
+			"item_description"	"Becomes perfectly accurate again
+			1.5 seconds after firing.
+			Goes in Primary Slot, 
+			hud_fastswitch 0 to access
+			Heavy can handle bigger magazines"
+			"item_logname"	"pep_pistol"
+			"item_iconname"	"pep_pistol"
+			"item_slot"	"secondary"
+			"anim_slot"	"ITEM1"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/csgo/v_deagle.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.55"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.6"
+				}
+				"headshot damage increase"
+				{
+					"attribute_class"	"headshot_damage_modify"
+					"value"	"3"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"2"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Deagle.Single"
+				"sound_burst"			"Weapon_Deagle.SingleCrit"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9788"
+		{
+			"name" "JuandeagSniper"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"Juandeag"
+			"item_description"	"Becomes perfectly accurate again
+			1.5 seconds after firing."
+			"item_logname"	"pep_pistol"
+			"item_iconname"	"pep_pistol"
+			"item_slot"	"primary"
+			"anim_slot"	"ITEM1"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/csgo/v_deagle.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.65"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.85"
+				}
+				"headshot damage increase"
+				{
+					"attribute_class"	"headshot_damage_modify"
+					"value"	"4"
+				}
+
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Deagle.Single"
+				"sound_burst"			"Weapon_Deagle.SingleCrit"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"30570"
 		{
