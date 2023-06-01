@@ -30812,6 +30812,83 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+		"9789"
+		{
+			"name" "Scatman John Gun"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "1970/06/27"
+			"item_class"	"tf_weapon_minigun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Scat(ter)gun"
+			"item_name"	"Scat Gun"
+			"item_description"	""
+			"item_logname"	"scatgun"
+			"item_iconname"	"scattergun"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_scattergun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/c_models/c_scattergun.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.35"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value" "1.4"
+				}
+				"aiming movespeed increased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value" "3"
+				}
+			}
+			"visuals"
+			{
+				"sound_empty"	"ScatmanJohn.Rev"
+				"sound_double_shot"	"ScatmanJohn.Double"
+				"sound_special1"	"ScatmanJohn.RevUp"
+				"sound_special2"	"ScatmanJohn.RevDown"
+				"sound_special3"	"ScatmanJohn.Rev"
+				"sound_burst"	"ScatmanJohn.Crit"
+			}
+			"mouse_pressed_sound"	"weapons/scatman/scatman_sworld.mp3"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
