@@ -1792,25 +1792,21 @@ DebugMenu
 		{
 			"command"	"npc_create npc_citizen"
 		}
-		"Refugee(Unarmed)"
+		"Refugee"
 		{
 			"command"	"ent_create npc_citizen citizentype 2"
 		}
-		"Rebel(Ar2)"
+		"Rebel"
 		{
-			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_ar2"
+			"command"	"ent_create npc_citizen citizentype 3"
 		}
-		"Rebel(Smg1)"
+		"Medic"
 		{
-			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_smg1"
+			"command"	"ent_create npc_citizen citizentype 3 spawnflags 131072"
 		}
-		"Rebel(Shotgun)"
+		"Hunter"
 		{
-			"command"	"ent_create npc_citizen citizentype 3 additionalequipment weapon_shotgun"
-		}
-		"Medic(Smg1)"
-		{
-			"command"	"ent_create npc_citizen citizentype 3 spawnflags 131072 additionalequipment weapon_smg1"
+			"command"	"npc_create npc_hunter"
 		}
 		"Metropolice"
 		{
@@ -1820,17 +1816,21 @@ DebugMenu
 		{
 			"command"	"npc_create npc_combine_s"
 		}
-		"Elite Soldier(AR2)"
+		"Elite Soldier"
 		{
-			"command"	"ent_create npc_combine_s model models/Combine_Super_Soldier.mdl additionalequipment weapon_ar2 tacticalvariant 2 NumGrenades 2"
+			"command"	"ent_create npc_combine_s model models/Combine_Super_Soldier.mdl tacticalvariant 2 NumGrenades 2"
 		}
-		"Prison Guard(SMG1)"
+		"Prison Guard"
 		{
-			"command"	"ent_create npc_combine_s model models/Combine_Soldier_PrisonGuard.mdl additionalequipment weapon_smg1 NumGrenades 2"
+			"command"	"ent_create npc_combine_s model models/Combine_Soldier_PrisonGuard.mdl NumGrenades 2"
 		}
 		"Zombie"
 		{
 			"command"	"npc_create npc_zombie"
+		}
+		"Zombine"
+		{
+			"command"	"npc_create npc_zombine"
 		}
 		"Fast Zombie"
 		{
@@ -1840,7 +1840,7 @@ DebugMenu
 		{
 			"command"	"npc_create npc_poisonzombie"
 		}
-		"Zombie torso"
+		"Zombie Torso"
 		{
 			"command"	"npc_create npc_zombie_torso"
 		}
@@ -1932,22 +1932,6 @@ DebugMenu
 		{
 			"command"	"npc_create npc_seagull"
 		}
-		"Hostage 1(CSS)"
-		{
-			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_01.mdl"
-		}
-		"Hostage 2(CSS)"
-		{
-			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_02.mdl"
-		}
-		"Hostage 3(CSS)"
-		{
-			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_03.mdl"
-		}
-		"Hostage 4(CSS)"
-		{
-			"command"	"ent_create npc_citizen citizentype 4 model models/characters/hostage_04.mdl"
-		}
 		"NPC Weapon:None"
 		{
 			"command"	"npc_create_equipment weapon_none"
@@ -1967,6 +1951,10 @@ DebugMenu
 		"NPC Weapon:Smg1"
 		{
 			"command"	"npc_create_equipment weapon_smg1"
+		}
+		"NPC Weapon:AKM"
+		{
+			"command"	"npc_create_equipment weapon_ar1"
 		}
 		"NPC Weapon:Ar2"
 		{
@@ -2004,7 +1992,11 @@ DebugMenu
 		{
 			"command"	"give tf_weapon_physgun"
 		}
-		"Leafblower"
+		"Ouch"
+		{
+			"command"	"give_econ 9578"
+		}
+		"Flamethrower"
 		{
 			"command"	"give_econ 21"
 		}
@@ -2019,6 +2011,34 @@ DebugMenu
 		"Sub Machine Gun"
 		{
 			"command"	"give_econ 16"
+		}
+		"Medigun"
+		{
+			"command"	"give_econ 29"
+		}
+		"Sapper"
+		{
+			"command"	"give_econ 735"
+		}
+		"Sniper Rifle"
+		{
+			"command"	"give_econ 14"
+		}
+		"Minigun"
+		{
+			"command"	"give_econ 15"
+		}
+		"Sandvich"
+		{
+			"command"	"give_econ 42"
+		}
+		"Killing Gloves of Boxing"
+		{
+			"command"	"give_econ 43"
+		}
+		"Flaregun"
+		{
+			"command"	"give_econ 39"
 		}
 		"Shotgun"
 		{
@@ -2044,9 +2064,57 @@ DebugMenu
 		{
 			"command"	"give_econ 20"
 		}
+		"Umbrella"
+		{
+			"command"	"give_econ 9035"
+		}
 		"Gravity Gun"
 		{
 			"command"	"give tf_weapon_physcannon"
+		}
+		"TFC Nail Gun"
+		{
+			"command"	"give_econ 9025"
+		}
+		"TFC Super Nail Gun"
+		{
+			"command"	"give_econ 9026"
+		}
+		"TFC Automatic Rifle"
+		{
+			"command"	"give_econ 9027"
+		}
+		"TFC Flamethrower"
+		{
+			"command"	"give_econ 9028"
+		}
+		"TFC Incendiary Cannon"
+		{
+			"command"	"give_econ 9029"
+		}
+		"TFC Assault Cannon"
+		{
+			"command"	"give_econ 9030"
+		}
+		"TFC Rocket Launcher"
+		{
+			"command"	"give_econ 9033"
+		}
+		"TFC Sniper Rifle"
+		{
+			"command"	"give_econ 9034"
+		}
+		"TFC Knife"
+		{
+			"command"	"give_econ 9036"
+		}
+		"TFC Spanner"
+		{
+			"command"	"give_econ 9037"
+		}
+		"TFC Railgun"
+		{
+			"command"	"give_econ 9038"
 		}
 		"Cubemap"
 		{
@@ -2072,14 +2140,6 @@ DebugMenu
 	
 	"Entities"
 	{
-		"Physgun"
-		{
-			"command"	"ent_create weapon_physgun"
-		}
-		"Leafblower"
-		{
-			"command"	"ent_create weapon_leafblower"
-		}
 		"Crowbar"
 		{
 			"command"	"ent_create weapon_crowbar"
@@ -2295,26 +2355,6 @@ DebugMenu
 		"Scale Tool"
 		{
 			"command"	"ScaleToggle"
-		}
-		"Spawn Camera"
-		{
-			"command"	"exec Misc/cameratool"
-		}
-		"Toggle Camera"
-		{
-			"command"	"ToggleCamera"
-		}
-		"Set Camera Target"
-		{
-			"command"	"SetCameraTarget"
-		}
-		"Spawn Camera Point"
-		{
-			"command"	"SpawnCameraPoint"
-		}
-		"Camera Follow Player"
-		{
-			"command"	"exec Misc/camplayertarget"
 		}
 		"Spawn Cannister"
 		{
