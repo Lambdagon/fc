@@ -31038,6 +31038,80 @@ Fires....... something"
 			"mouse_pressed_sound"	"weapons/scock1.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+		"9795"
+		{
+			"name"	"Spy Police Gun"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Revolver"
+			"item_name"	"Prosecutor's Pain-Bringer"
+			"item_description"	"Model by Mariodox"
+			"item_slot"	"secondary"
+			"anim_slot"	"secondary"
+			"item_quality"	"normal"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"police_revolver"
+			"item_iconname"	"357"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/w_revolver"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_police_snubnose/c_snub_nose.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"static_attrs"
+			{
+				"viewmodel_offset"					"0 0 -4"
+				"weapon_stattrak_module_scale"				"0.608"				
+			}
+			"attributes"
+			{
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"	"1"
+                }	
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.65"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.85"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"weapons/scock1.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
