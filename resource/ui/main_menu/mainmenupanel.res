@@ -670,7 +670,7 @@
 		"zpos"				"10"
 		"wide"				"32"
 		"tall"				"32"
-		"visible"			"0"
+		"visible"			"1"
 		"enabled"			"1"
 		"bordervisible"		"1"
 		"labelText" 		""
