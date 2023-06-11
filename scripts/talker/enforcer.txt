@@ -1,0 +1,21 @@
+//--------------------------------------------------------------------------------------------------------------
+// Enforcer Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Criterion "EnforcerIsNotStillonFire" "EnforcerOnFire" "!=1" "required" weight 0
+Criterion "EnforcerIsStillonFire" "EnforcerOnFire" "1" "required" weight 0
+Criterion "NotEnforcerGrabbedIntelligence" "EnforcerGrabbedIntelligence" "!=1" "required"
+Criterion "EnforcerNotKillSpeechMelee" "EnforcerKillSpeechMelee" "!=1" "required" weight 0
+
+
+Response PlayerBattleCryEnforcer
+{
+	speak "Enforcer.BattleCry01"
+	speak "Enforcer.BattleCry02"
+	speak "Enforcer.BattleCry03"
+}
+Rule PlayerBattleCryEnforcer
+{
+	criteria ConceptPlayerBattleCry IsEnforcer
+	Response PlayerBattleCryEnforcer
+}

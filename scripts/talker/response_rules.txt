@@ -288,6 +288,7 @@ criterion "IsOnEngineer" "crosshair_on" "Engineer" "required"
 criterion "IsOnCivilian" "crosshair_on" "Civilian" "required"
 criterion "IsOnCombineSoldier" "crosshair_on" "Combine" "required"
 criterion "IsOnZombie" "crosshair_on" "Zombie" "required"
+criterion "IsOnEnforcer" "crosshair_on" "zombiefast" "required"
 criterion "IsOnAntlion" "crosshair_on" "Antlion" "required"
 criterion "IsOnMercenary" "crosshair_on" "Mercenary" "required"
 
@@ -319,6 +320,7 @@ criterion "IsJohn" "playerclass" "John" "required"
 criterion "IsCombineSoldier" "playerclass" "Combine" "required"
 criterion "IsZombie" "playerclass" "Zombie" "required"
 criterion "IsZombine" "playerclass" "Zombine" "required"
+criterion "IsEnforcer" "playerclass" "zombiefast" "required"
 criterion "IsAntlion" "playerclass" "Antlion" "required"
 criterion "IsAntlionWorker" "playerclass" "AntlionWorker" "required"
 
@@ -336,6 +338,7 @@ criterion "IsNotCivilian" "playerclass" "!=Civilian" "required"
 criterion "IsNotCombineSoldier" "playerclass" "!=Combine" "required"
 criterion "IsNotZombie" "playerclass" "!=Zombie" "required"
 criterion "IsNotZombine" "playerclass" "!=Zombine" "required"
+criterion "IsNotEnforcer" "playerclass" "!=zombiefast" "required"
 criterion "IsNotAntlion" "playerclass" "!=Antlion" "required"
 criterion "IsNotJohn" "playerclass" "!=John" "required"
 criterion "IsNotAntlionWorker" "playerclass" "!=AntlionWorker" "required"
@@ -353,6 +356,7 @@ criterion "IsVictimEngineer" "victimclass" "Engineer" "required"  weight 0
 criterion "IsVictimCivilian" "victimclass" "Civilian" "required"  weight 0
 criterion "IsVictimCombineSoldier" "victimclass" "Combine" "required"  weight 0
 criterion "IsVictimZombie" "victimclass" "Zombie" "required"  weight 0
+criterion "IsVictimEnforcer" "victimclass" "zombiefast" "required"  weight 0
 criterion "IsVictimAntlion" "victimclass" "Antlion" "required"  weight 0
 criterion "IsVictimJohn" "victimclass" "John" "required"
 criterion "IsNotMercenary" "playerclass" "!=Mercenary" "required"
@@ -369,6 +373,7 @@ criterion "IsNotVictimEngineer" "victimclass" "!=Engineer" "required" weight 0
 criterion "IsNotVictimCivilian" "victimclass" "!=Civilian" "required" weight 0
 criterion "IsNotVictimCombineSoldier" "victimclass" "!=Combine" "required" weight 0
 criterion "IsNotVictimZombie" "victimclass" "!=Zombie" "required" weight 0
+criterion "IsNotVictimEnforcer" "victimclass" "!=zombiefast" "required" weight 0
 criterion "IsNotVictimAntlion" "victimclass" "!=Antlion" "required" weight 0
 criterion "IsNotVictimJohn" "victimclass" "!=John" "required"
 criterion "IsNotVictimMercenary" "victimclass" "!=Mercenary" "required"
@@ -758,3 +763,4 @@ criterion "ConceptPlayerMatchOverComp" "Concept" "TLK_MATCH_OVER_COMP" required
 #include "talker/Spy_auto.txt"
 #include "talker/mercenary.txt"
 #include "talker/john.txt"
+#include "talker/enforcer.txt"
