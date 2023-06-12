@@ -23167,11 +23167,10 @@ Fires....... something"
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"1"
-			"item_type_name"	"Baseball-Bot 8008"
+			"show_in_armory"	"0"
+			"item_type_name"	""
 			"item_name"	"Giant Scout-bot"
-			"item_description"	"This is what Baseball in the year 8008 will look like! 
-			Don't use this in PVP, or else..."
+			"item_description"	""
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -23244,6 +23243,75 @@ Fires....... something"
 			"tags"
 			{
 				"can_be_festivized"		"1"
+			}
+		}
+		
+		"9420"
+		{
+			"name"	"Giant Heavy Bot Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"0"
+			"item_type_name"	""
+			"item_name"	"Giant Heavy-bot"
+			"item_description"	""
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/robot/c_robot_scout"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attributes"
+			{
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.3"
+				}
+                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.5"
+				}
+				"airblast vulnerability multiplier"
+				{
+					"attribute_class"	"airblast_vulnerability_multiplier"
+					"value"	"0.3"
+				}
+				"override footstep sound set"
+				{
+					"attribute_class"	"override_footstep_sound_set"
+					"value"				"2"
+				}
+				"model scale"
+				{
+					"attribute_class"	"model_scale"
+					"value"				"1.75"
+				}
+				"use robo voice"
+				{
+					"attribute_class"	"use_robo_voice"
+					"value"				"2"
+				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "4700"
+				}
 			}
 		}
 		"850"
