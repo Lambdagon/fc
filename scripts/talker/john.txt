@@ -1,13 +1,10 @@
+Criterion "JohnNotKillSpeechMelee" "JohnKillSpeechMelee" "!=1" "required" weight 0
+Criterion "JohnNotKillSpeech" "JohnKillSpeech" "!=1" "required" weight 0
+
 Rule MvMDefenderDied
 {
 	criteria ConceptMvMDefenderDied IsMvMDefender 50PercentChance IsJohn 
 	Response johnmourn
-}
-criterion "LoadoutIsUzi" "loadout_slot_action" "Gravity Gun" "required"
-Rule MeleeDareCombatJohn
-{
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsJohn IsCrosshairEnemy
-	Response MeleeDareCombatJohn
 }
 response "johnmourn"
 {
@@ -24,33 +21,338 @@ response "johnmourn"
 }
 Response PlayerBattleCryJohn
 {
-	speak "vo\npc\male01\squad_follow02.wav"
-	speak "vo\episode_1\npc\male01\cit_hurryup.wav"
-	speak "vo\episode_1\npc\male01\cit_thisway.wav"
-}
-Response PlayerBattleCryJohnTest
-{
-	speak "boner.mp3"
-
+	speak "player\john\johnbattlecry01.wav"
+	speak "player\john\johnbattlecry02.wav"
+	speak "player\john\johnbattlecry03.wav"
+	speak "player\john\johnbattlecry04.wav"
+	speak "player\john\johnbattlecry05.wav"
 }
 Rule PlayerBattleCryJohn
 {
 	criteria ConceptPlayerBattleCry IsJohn
 	Response PlayerBattleCryJohn
 }
-Rule PlayerBattleCryJohnTest
+
+Response PlayerMedicJohn
 {
-	criteria ConceptPlayerBattleCry IsJohn LoadoutIsUzi
-	Response PlayerBattleCryJohnTest
+	speak "player\john\johnmedic01.wav"
+	speak "player\john\johnmedic02.wav"
 }
-Rule PlayerCloakedSpyJohn
+Rule PlayerMedicJohn
 {
-	criteria ConceptPlayerCloakedSpy IsJohn
-	Response PlayerCloakedSpyJohn
-}
-response PlayerCloakedSpyJohn
-{
-	speak "sound/vo/npc/male01/behindyou01.wav"
-	speak "sound/vo/npc/male01/behindyou02.wav"
+	criteria ConceptPlayerMedic IsJohn
+	Response PlayerMedicJohn
 }
 
+Response PlayerGoJohn
+{
+	speak "player\john\johngo01.wav"
+	speak "player\john\johngo02.wav"
+	speak "player\john\johngo03.wav"
+	speak "player\john\johngo04.wav"
+}
+Rule PlayerGoJohn
+{
+	criteria ConceptPlayerGo IsJohn
+	Response PlayerGoJohn
+}
+
+Response PlayerYesJohn
+{
+	speak "player\john\johnyes01.wav"
+	speak "player\john\johnyes02.wav"
+	speak "player\john\johnyes03.wav"
+	speak "player\john\johnyes04.wav"
+}
+Rule PlayerYesJohn
+{
+	criteria ConceptPlayerYes  IsJohn
+	Response PlayerYesJohn
+}
+
+Response PlayerIncomingJohn
+{
+	speak "player\john\johnincoming01.wav"
+	speak "player\john\johnincoming02.wav"
+	speak "player\john\johnincoming03.wav"
+	speak "player\john\johnincoming04.wav"
+	speak "player\john\johnincoming05.wav"
+	speak "player\john\johnincoming06.wav"
+}
+Rule PlayerIncomingJohn
+{
+	criteria ConceptPlayerIncoming IsJohn
+	Response PlayerIncomingJohn
+}
+
+Response PlayerActivateChargeJohn
+{
+	speak "player\john\johncharge01.wav"
+	speak "player\john\johncharge02.wav"
+	speak "player\john\johncharge03.wav"
+	speak "player\john\johncharge04.wav"
+}
+Rule PlayerActivateChargeJohn
+{
+	criteria ConceptPlayerActivateCharge IsJohn
+	Response PlayerActivateChargeJohn
+}
+
+Response PlayerHelpJohn
+{
+	speak "player\john\johnhelp01.wav"
+	speak "player\john\johnhelp02.wav"
+	speak "player\john\johnhelp03.wav"
+	speak "player\john\johnhelp04.wav"
+	speak "player\john\johnhelp05.wav"
+	speak "player\john\johnhelp06.wav"
+}
+Rule PlayerHelpJohn
+{
+	criteria ConceptPlayerHelp IsJohn
+	Response PlayerHelpJohn
+}
+
+Response PlayerCheersJohn
+{
+	speak "player\john\johncheers01.wav"
+	speak "player\john\johncheers02.wav"
+	speak "player\john\johncheers03.wav"
+	speak "player\john\johncheers04.wav"
+	speak "player\john\johncheers05.wav"
+	speak "player\john\johncheers06.wav"
+}
+Rule PlayerCheersJohn
+{
+	criteria ConceptPlayerCheers IsJohn
+	Response PlayerCheersJohn
+}
+
+Response PlayerJeersJohn
+{
+	speak "player\john\johnjeers01.wav"
+	speak "player\john\johnjeers02.wav"
+	speak "player\john\johnjeers03.wav"
+	speak "player\john\johnjeers04.wav"
+	speak "player\john\johnjeers05.wav"
+	speak "player\john\johnjeers06.wav"
+}
+Rule PlayerJeersJohn
+{
+	criteria ConceptPlayerJeers IsJohn
+	Response PlayerJeersJohn
+}
+
+Response PlayerPositiveJohn
+{
+	speak "player\john\johnpositive01.wav"
+	speak "player\john\johnpositive02.wav"
+	speak "player\john\johnpositive03.wav"
+	speak "player\john\johnpositive04.wav"
+	speak "player\john\johnpositive05.wav"
+	speak "player\john\johnpositive06.wav"
+}
+Rule PlayerPositiveJohn
+{
+	criteria ConceptPlayerPositive IsJohn
+	Response PlayerPositiveJohn
+}
+
+Response PlayerNegativeJohn
+{
+	speak "player\john\johnnegative01.wav"
+	speak "player\john\johnnegative02.wav"
+	speak "player\john\johnnegative03.wav"
+	speak "player\john\johnnegative04.wav"
+	speak "player\john\johnnegative05.wav"
+	speak "player\john\johnnegative06.wav"
+	speak "player\john\johnnegative07.wav"
+}
+Rule PlayerNegativeJohn
+{
+	criteria ConceptPlayerNegative IsJohn
+	Response PlayerNegativeJohn
+}
+
+Response PlayerNiceShotJohn
+{
+	speak "player\john\johnniceshot01.wav"
+}
+Rule PlayerNiceShotJohn
+{
+	criteria ConceptPlayerNiceShot IsJohn
+	Response PlayerNiceShotJohn
+}
+
+Response PlayerThanksJohn
+{
+	speak "player\john\johnthanks01.wav"
+	speak "player\john\johnthanks02.wav"
+	speak "player\john\johnthanks03.wav"
+}
+Rule PlayerThanksJohn
+{
+	criteria ConceptPlayerThanks IsJohn
+	Response PlayerThanksJohn
+}
+
+Response PlayerCapturedPointJohn
+{
+	speak "player\john\johnpointcap01.wav"
+	speak "player\john\johnpointcap02.wav"
+	speak "player\john\johnpointcap03.wav"
+	speak "player\john\johnpointcap04.wav"
+}
+Rule PlayerCapturedPointJohn
+{
+	criteria ConceptPlayerCapturedPoint IsJohn
+	Response PlayerCapturedPointJohn
+}
+
+Response PlayerCappedIntelligenceJohn
+{
+	speak "player\john\johnpointcap01.wav"
+	speak "player\john\johnpointcap02.wav"
+	speak "player\john\johnpointcap03.wav"
+	speak "player\john\johnpointcap04.wav"
+}
+Rule PlayerCappedIntelligenceJohn
+{
+	criteria ConceptPlayerCapturedIntelligence IsJohn
+	Response PlayerCappedIntelligenceJohn
+}
+
+Response PlayerLostPointJohn
+{
+	speak "player\john\johnlosepoint01.wav"
+	speak "player\john\johnlosepoint02.wav"
+	speak "player\john\johnlosepoint03.wav"
+}
+Rule PlayerLostPointJohn
+{
+	criteria ConceptPlayerLostPoint IsJohn
+	Response PlayerLostPointJohn
+}
+
+Response PlayerSuccessJohn
+{
+	speak "player\john\johnpointcap03.wav"
+	speak "player\john\johnpointcap04.wav"
+	speak "player\john\johncheers04.wav"
+	speak "player\john\johncheers06.wav"
+	speak "player\john\johnpositive04.wav"
+	speak "player\john\johnpositive02.wav"
+	speak "player\john\johnpositive05.wav"
+}
+Rule PlayerSuccessJohn
+{
+	criteria ConceptPlayerSuccess IsJohn
+	Response PlayerSuccessJohn
+}
+
+Response PlayerFailureJohn
+{
+	speak "player\john\johnlosepoint03.wav" predelay "6.0"
+	speak "player\john\johnjeers05.wav" predelay "6.0"
+	speak "player\john\johnjeers06.wav" predelay "6.0"
+	speak "player\john\johnnegative02.wav" predelay "6.0"
+	speak "player\john\johnnegative04.wav" predelay "6.0"
+}
+Rule PlayerFailureJohn
+{
+	criteria ConceptPlayerFailure IsJohn
+	Response PlayerFailureJohn
+}
+
+Response KilledPlayerMeleeJohn
+{
+	speak "player\john\johndomination01.wav"
+	speak "player\john\johndomination02.wav"
+	speak "player\john\johndomination03.wav"
+	speak "player\john\johndomination04.wav"
+}
+Rule KilledPlayerMeleeJohn
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 50PercentChance IsWeaponMelee JohnNotKillSpeechMelee IsJohn
+	ApplyContext "JohnKillSpeechMelee:1:10"
+	Response KilledPlayerJohnCivilian
+}
+
+Response PlayerKilledDominatingJohn
+{
+	speak "player\john\johndomination01.wav" predelay "2.5"
+	speak "player\john\johndomination02.wav" predelay "2.5"
+	speak "player\john\johndomination03.wav" predelay "2.5"
+	speak "player\john\johndomination04.wav" predelay "2.5"
+	speak "player\john\johndomination05.wav" predelay "2.5"
+	speak "player\john\johndomination06.wav" predelay "2.5"
+	speak "player\john\johndomination07.wav" predelay "2.5"
+	speak "player\john\johndomination08.wav" predelay "2.5"
+}
+Rule PlayerKilledDominatingJohn
+{
+	criteria ConceptKilledPlayer IsJohn IsDominated
+	ApplyContext "JohnKillSpeech:1:7"
+	ApplyContext "IsDominating:1:7"
+	Response PlayerKilledDominatingJohn
+}
+
+Response PlayerRoundStartJohn
+{
+	speak "player\john\johnbattlecry01.wav" predelay "1.0, 5.0"
+	speak "player\john\johnbattlecry02.wav" predelay "1.0, 5.0"
+	speak "player\john\johnbattlecry03.wav" predelay "1.0, 5.0"
+	speak "player\john\johnbattlecry04.wav" predelay "1.0, 5.0"
+	speak "player\john\johnbattlecry05.wav" predelay "1.0, 5.0"
+}
+Rule PlayerRoundStartJohn
+{
+	criteria ConceptPlayerRoundStart IsJohn
+	Response PlayerRoundStartJohn
+}
+
+Response PlayerSuddenDeathJohn
+{
+	speak "player\john\johnjeers01.wav"
+	speak "player\john\johnjeers02.wav"
+	speak "player\john\johnjeers03.wav"
+	speak "player\john\johnjeers04.wav"
+	speak "player\john\johnjeers05.wav"
+	speak "player\john\johnjeers06.wav"
+}
+Rule PlayerSuddenDeathJohn
+{
+	criteria ConceptPlayerSuddenDeathStart IsJohn
+	Response PlayerSuddenDeathJohn
+}
+
+Response PlayerAttackerPainJohn
+{
+	speak "player\john\johnsevere01.wav"
+	speak "player\john\johnsevere02.wav"
+	speak "player\john\johnsevere03.wav"
+	speak "player\john\johnsevere04.wav"
+	speak "player\john\johnsevere05.wav"
+	speak "player\john\johnsevere06.wav"
+}
+Rule PlayerAttackerPainJohn
+{
+	criteria ConceptAttackerPain IsJohn
+	Response PlayerAttackerPainJohn
+}
+
+Response PlayerPainJohn
+{
+	speak "player\john\johnsharp01.wav"
+	speak "player\john\johnsharp02.wav"
+	speak "player\john\johnsharp03.wav"
+	speak "player\john\johnsharp04.wav"
+	speak "player\john\johnsharp05.wav"
+	speak "player\john\johnsharp06.wav"
+	speak "player\john\johnsharp07.wav"
+}
+Rule PlayerPainJohn
+{
+	criteria ConceptPain IsJohn
+	Response PlayerPainJohn
+}
