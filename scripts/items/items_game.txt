@@ -20556,7 +20556,7 @@
 				"voice pitch scale"
 				{
 					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
+					"value"		"-1"
 				}
 				"rocket jump damage reduction"	
 				{
@@ -20580,6 +20580,21 @@
 				{
 
 				}
+			"animation_replacement"
+			{
+					"ACT_MP_CROUCH_ITEM1" "ACT_MP_CROUCH_MELEE"	
+					"ACT_MP_CROUCHWALK_ITEM1" "ACT_MP_CROUCHWALK_MELEE"	
+					"ACT_MP_RUN_ITEM1" "ACT_MP_RUN_MELEE"	
+					"ACT_MP_SWIM_ITEM1" "ACT_MP_SWIM_MELEE"	
+					"ACT_MP_AIRWALK_ITEM1" "ACT_MP_AIRWALK_MELEE"	
+					"ACT_MP_JUMP_START_ITEM1" "ACT_MP_JUMP_START_MELEE"	
+						"ACT_MP_JUMP_FLOAT_ITEM1" "ACT_MP_JUMP_FLOAT_MELEE"
+					"ACT_MP_ATTACK_STAND_ITEM1" "ACT_MP_ATTACK_STAND_MELEE"	
+					"ACT_MP_ATTACK_CROUCH_ITEM1" "ACT_MP_ATTACK_CROUCH_MELEE"	
+					"ACT_MP_ATTACK_SWIM_ITEM1" "ACT_MP_ATTACK_SWIM_MELEE"	
+					"ACT_MP_STAND_ITEM1" "ACT_MP_STAND_MELEE"	
+			
+			}
 			}
 			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
@@ -30009,6 +30024,7 @@ Fires....... something"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"
 			"model_player"	"models/weapons/csgo/v_deagle.mdl"
+			"model_world"	"models/weapons/w_models/w_deagle/w_revolver.mdl"
 			"capabilities"
 			{
 				"can_collect" "1"
@@ -30109,6 +30125,7 @@ Fires....... something"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"
 			"model_player"	"models/weapons/csgo/v_deagle.mdl"
+			"model_world"	"models/weapons/w_models/w_deagle/w_revolver.mdl"
 			"capabilities"
 			{
 				"can_collect" "1"
@@ -30462,6 +30479,129 @@ Fires....... something"
 			{
 			}
 			"mouse_pressed_sound"	"weapons/scock1.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9796"
+		{
+			"name"	"Demoman Demolition Hammer"
+			"item_class"	"tf_weapon_wrench"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Huge Hammer"
+			"item_name"	"Demo's Demolisher"
+			"item_description"	"Model by Mariodox
+			Said to have once been used by a different
+			short-tempered alcoholic demolitionist."
+			"item_slot"	"melee"
+			"anim_slot"	"melee"
+			"item_quality"	"normal"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"bighammer"
+			"item_iconname"	"bighammer"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/anton_hammer"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_bighammer/c_bighammer.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+		
+			}
+			"attributes"
+			{
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.3"
+				}
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
+				}
+				"minicrits become crits"
+				{
+					"attribute_class"	"minicrits_become_crits"
+					"value" "1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.65"
+				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"	"1.93"
+				}
+				"dmg bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.5"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"self dmg push force decreased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value"		"0.25"
+				}
+				"damage applies to sappers"
+				{
+					"attribute_class"	"set_dmg_apply_to_sapper"
+					"value"	"1"
+				}
+				"hit self on miss"
+				{
+					"attribute_class"	"hit_self_on_miss"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+			"animation_replacement"
+			{
+					"ACT_MP_CROUCH_MELEE"	"ACT_MP_CROUCH_ITEM1"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_MP_CROUCHWALK_ITEM1"
+					"ACT_MP_RUN_MELEE"	"ACT_MP_RUN_ITEM1"
+					"ACT_MP_SWIM_MELEE"	"ACT_MP_SWIM_ITEM1"
+					"ACT_MP_AIRWALK_MELEE"	"ACT_MP_AIRWALK_ITEM1"
+					"ACT_MP_JUMP_START_MELEE"	"ACT_MP_JUMP_START_ITEM1"
+					"ACT_MP_JUMP_FLOAT_MELEE"	"ACT_MP_JUMP_FLOAT_ITEM1"
+					"ACT_MP_ATTACK_STAND_MELEE"	"ACT_MP_ATTACK_CROUCH_ITEM1"
+					"ACT_MP_ATTACK_CROUCH_MELEE"	"ACT_MP_ATTACK_CROUCH_ITEM1"
+					"ACT_MP_ATTACK_SWIM_MELEE"	"ACT_MP_ATTACK_CROUCH_ITEM1"
+					"ACT_MP_STAND_MELEE"	"ACT_MP_STAND_ITEM1"
+					"ACT_MELEE_VM_DRAW"	"ACT_VM_DRAW_SPECIAL"
+					"ACT_MELEE_VM_IDLE"	"ACT_VM_IDLE_SPECIAL"
+					"ACT_MELEE_VM_HITCENTER"	"ACT_VM_HITCENTER_SPECIAL"
+					"ACT_MELEE_VM_SWINGHARD"	"ACT_VM_SWINGHARD_SPECIAL"
+			}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"30570"
