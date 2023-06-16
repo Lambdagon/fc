@@ -1,6 +1,6 @@
 #base "default.res"
 
-"classes/john_red.res"
+"classes/john_blue.res"
 {
 	"classNameLabel"
 	{
@@ -24,7 +24,14 @@
 		{
 			"modelname"	"models/humans/group01/male_07.mdl"
 			"modelname_hwm"	"models/humans/group01/male_07.mdl"
-			"skin"		"0"
+			"skin" "0"
+			"angles_x" "0"
+			"angles_y" "180"
+			"angles_z" "0"
+			"origin_x" "320"
+			"origin_y" "10"
+			"origin_z" "-49"	
+			"spotlight" "1"	
 						
 			"attached_model"
 			{

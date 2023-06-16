@@ -18,6 +18,8 @@
 	
 	"classModel"
 	{	
+		"fov"			"23"
+
 		"model"
 		{
 			"modelname"	"models/combine_soldier_ep2.mdl"
