@@ -22,4 +22,34 @@ VertexLitGeneric
 
 	$ambientocclusion 1
 	$model 1
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"360?$color2" "[ 0.65 0.65 0.7 ]"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
 }
