@@ -28,7 +28,7 @@
 
 			"attached_model"
 			{
-				"modelname" "models/weapons/w_models/w_umbrella.mdl"
+				"modelname" "models/empty.mdl"
 				"skin"		"0"
 			}
 			"animation"

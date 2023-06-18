@@ -24,7 +24,13 @@
 		{
 			"modelname"	"models/combine_soldier_ep2.mdl"
 			"modelname_hwm"	"models/combine_guard.mdl"
-			"skin"	"1"		
+			"skin"	"1"	
+
+				"attached_model"
+			{
+				"modelname" "models/empty.mdl"
+				"skin"		"0"
+			}
 			"animation"
 			{
 				"sequence"	"Man_Gun"

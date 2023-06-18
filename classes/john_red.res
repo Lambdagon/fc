@@ -32,6 +32,11 @@
 			"origin_z" "-49"	
 			"spotlight" "1"	
 
+				"attached_model"
+			{
+				"modelname" "models/empty.mdl"
+				"skin"		"0"
+			}
 			"animation"
 			{
 				"sequence"		"SelectionMenu_StartPose"

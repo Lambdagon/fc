@@ -5,12 +5,11 @@
 	"classNameLabel"
 	{
 		"labelText"		"JOHN FREEMAN"
-	}
-	
+	} 
 	"classInfo"
 	{
 		"text"			"I need to kill fast and bullets too slow."
-
+	}
 	"classInfo2"
 	{
 		"text"			"its time for me to live up to my family name and face full life consequences"
@@ -32,11 +31,15 @@
 			"origin_y" "10"
 			"origin_z" "-49"	
 			"spotlight" "1"	
-						
-			"attached_model"
+
+				"attached_model"
 			{
-				"modelname" ""
+				"modelname" "models/empty.mdl"
 				"skin"		"0"
+			}
+			"animation"
+			{
+				"sequence"		"SelectionMenu_StartPose"
 			}
 		}
 	}
