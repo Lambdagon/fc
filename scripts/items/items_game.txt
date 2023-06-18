@@ -17407,152 +17407,6 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"1179"
-		{
-			"name"	"The Thermal Thruster"
-			"item_class"			"tf_weapon_rocketpack"
-			"craft_class"	"" 
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"item_logname"	"rocketpack"
-			"item_iconname"	"rocketpack"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_RocketPack"
-			"item_name"			"#TF_ThermalThruster"
-			"item_description"	"#TF_ThermalThruster_Desc"
-			"item_slot"			"secondary"
-			"equip_region"		"back"
-			"anim_slot"			"ITEM4"
-			"image_inventory"	"backpack/weapons/c_models/c_rocketpack/c_rocketpack"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"60"			
-			"model_player"	"models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
-			"attach_to_hands"	"1"
-			"attach_to_hands_vm_only"	"1"
-			"extra_wearable" "models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"1"
-			"max_ilevel"	"100"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"backpack"		"1"
-				}
-			}
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"	
-				"damage force increase hidden"	"1.5"
-				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
-				"taunt attack time"		"4.7"
-				"item_meter_charge_type"						"1"
-				"item_meter_charge_rate"			"30"
-				"holster_anim_time"		"0.8"
-				"falling_impact_radius_pushback"	"1"
-				"thermal_thruster"					"1"
-			}
-			"taunt"
-			{
-				"custom_taunt_scene_per_class"
-				{
-					"pyro"	"scenes/player/pyro/low/taunt_gasblast.vcd"
-				}
-				"custom_taunt_prop_per_class"
-				{
-					"pyro"	"models/player/items/taunts/matchbox/matchbox.mdl"
-				}
-			}
-			"visuals_red"
-			{
-				"skin" "0"
-			}
-			"visuals_blu"
-			{
-				"skin" "1"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
-		"1180"
-		{
-			"name"	"The Gas Passer"
-			"item_class"	"tf_weapon_jar_gas"
-			"craft_class"	"" 
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Jar_Gas"
-			"item_name"	"#TF_GasPasser"
-			"item_description"	"#TF_GasPasser_Desc"
-			"item_slot"	"secondary"
-			"item_quality"	"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"100"
-			"attach_to_hands"	"1"
-			"propername"	"1"
-			"anim_slot" "MELEE_ALLCLASS"
-			"image_inventory"	"backpack/weapons/c_models/c_gascan/c_gascan"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_gascan/c_gascan.mdl"
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 3 -7"				
-				"item_meter_charge_type"						"3"
-				"item_meter_charge_rate"			"60"
-				"item_meter_damage_for_full_charge"			"750"
-				"item_meter_resupply_denied"		"1"
-				"grenades1_resupply_denied"				"1"
-				"item_meter_starts_empty_DISPLAY_ONLY"	"1"
-				"item_meter_charge_type_3_DISPLAY_ONLY"	"1"
-				"meter_label"							"#TF_Gas"
-			}
-			"visuals"
-			{
-				"animation_replacement"
-				{
-					"ACT_VM_DRAW"				"ACT_ITEM2_VM_DRAW"
-					"ACT_VM_IDLE"				"ACT_ITEM2_VM_IDLE"
-					"ACT_VM_PRIMARYATTACK"		"ACT_ITEM2_VM_FIRE"
-					"ACT_MP_ATTACK_STAND_MELEE_ALLCLASS"		"ACT_MP_ATTACK_STAND_ITEM2"
-					"ACT_MP_ATTACK_CROUCH_MELEE_ALLCLASS"		"ACT_MP_ATTACK_CROUCH_ITEM2"
-					"ACT_MP_ATTACK_SWIM_MELEE_ALLCLASS"			"ACT_MP_ATTACK_SWIM_ITEM2"
-					"ACT_SECONDARY_VM_INSPECT_START"		"ACT_ITEM2_VM_INSPECT_START"
-					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
-					"ACT_SECONDARY_VM_INSPECT_END"			"ACT_ITEM2_VM_INSPECT_END"
-				}
-				"custom_particlesystem"
-				{
-					"system"	"energydrink_milk_splash"
-				}
-				"player_poseparam"
-				{
-					"r_hand_grip"		"16"
-				}
-				"sound_deploy"	"Weapon_GasCan.Draw"
-				"sound_single_shot"	"Weapon_GasCan.Throw"
-				"sound_special1"		"Weapon_GasCan.Explode"  
-			}
-			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
-			"drop_sound"		"ui/item_bottle_drop.wav"
-		}
 		"1181"
 		{
 			"name"	"The Hot Hand"
@@ -21230,51 +21084,31 @@
 			}
 			"attributes"
 			{
-				"panic_attack"
+				"dmg pierces resists absorbs"
 				{
-					"attribute_class"	"panic_attack"
-					"value"	"1.0"
-				}
-				"panic_attack_negative"
-				{
-					"attribute_class"	"panic_attack_negative"
-					"value"	"2.5"
-				}
-				"auto fires full clip penalty"
-				{
-					"attribute_class"	"auto_fires_full_clip"
+					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"	"1"
 				}
-				"fire rate bonus with reduced health"
+				"damage bonus"
 				{
-					"attribute_class"	"mult_postfiredelay_with_reduced_health"
-					"value"	"0.50"
+					"attribute_class"	"mult_dmg"
+					"value"	"1.20"
 				}
-				"fire rate bonus HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.70"
-				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.60"
-				}
-				"clip size penalty HIDDEN"
+				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"0.66"
+					"value"	"0.50"
 				}
-				"single wep deploy time decreased"
+				"fire rate penalty"
 				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"0.5"
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.30"
 				}
-                "bullets per shot bonus"
+				"Reload time increased"
 				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.30"
-                }
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.30"
+				}
 			}
 			"visuals"
 			{
@@ -23232,30 +23066,6 @@ Fires....... something"
 			"mouse_pressed_sound"	"physics/metal/metal_box_break2.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
-		
-		"9419"
-		{
-			"name"	"Multi-Class Family Business"
-			"item_name"	"Multi-Class Family Business"
-			"prefab"	"weapon_russian_riot"
-			"first_sale_date"	"2011/04/14"
-			"particle_suffix"	"family_business"
-			"show_in_armory"	"1"
-			
-			"used_by_classes"
-			{
-				"engineer"	"primary"
-				"spy"	"secondary"
-				"pyro" "secondary"
-				"soldier" "secondary"
-				"heavy" "0"
-			}
-			"tags"
-			{
-				"can_be_festivized"		"1"
-			}
-		}
-		
 		"9420"
 		{
 			"name"	"Giant Heavy Bot Playermodel"
@@ -23803,37 +23613,6 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
-		"9154"
-		{
-			"name"	"Shotgun-in-a-half"
-			"prefab" "weapon_shortstop2"
-			"first_sale_date"	"2010/09/29"
-			"particle_suffix"	"shortstop"
-			"show_in_armory"	"1"
-			"tags"
-			{
-				"can_be_festivized"		"1"
-			}
-			"visuals"
-			{
-				"styles"
-				{
-					"0"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"selectable"	"0"
-					}
-				}
-				"attached_models_festive"
-				{
-					"0"
-					{
-						"model"	"models/workshop/weapons/c_models/c_shortstop/c_shortstop_festivizer.mdl"
-					}
-				}
-			}
 		}	
                 "9123"
 		{
@@ -24460,7 +24239,7 @@ Fires....... something"
 		}
                 "9709"
 		{
-			"item_class"	"tf_weapon_shotgun_primary"
+			"item_class"	"tf_weapon_sniperrifle_decap"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -24502,31 +24281,26 @@ Fires....... something"
 			}
 			"attributes"
 			{
-                                "weapon spread bonus"
+                                "fire rate bonus"
 				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0"
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.60"
                                 }
                                 "maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value" "0.20"
                                 }
-                                "fire rate penalty"
+                                "sniper no charge"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.50"
+					"attribute_class"	"unimplemented_mod_sniper_no_charge"
+					"value" "1"
                                 }
 				"mod max primary clip override"
 				{
 					"attribute_class"	"mod_max_primary_clip_override"
 					"value"	"-1"
 				}
-                                "damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.50"
-                                }
 			}
 			"visuals"
 			{
@@ -25226,544 +25000,7 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-	
-	        "9719"
-		{
-			"name"	"Brutal Bat"
-			"item_class"	"tf_weapon_bat"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Knife"
-			"item_name"	"Brutal Bat"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"item_logname"	"bat"
-			"item_iconname"	"bat"
-			"image_inventory"	"backpack/weapons/c_models/c_bat"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist"        "45"
-			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_bat.mdl"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"attributes"
-			{
-				"heal on kill"
-				{
-					"attribute_class"	"heal_on_kill"
-					"value"	"25"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.1"
-				}			
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "15"
-				}
-				"fire speed penalty"
-				{
-					"attribute_class"	"mult_postfirerate"
-					"value" "1.2"
-				}
-				"hit self on miss"
-				{
-					"attribute_class"	"hit_self_on_miss"
-					"value"	"1"
-				}
-			}			
-			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
-		"9720"
-		{
-			"name"	"The Laser Rifle"
-			"item_class"	"tf_weapon_sniperrifle"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_SniperRifle"
-			"item_name"	"The Laser Rifle"
-			"item_description"	"#TF_DEX_Rifle_Desc"
-			"item_slot"	"primary"
-			"item_quality"	"genuine"
-			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop_partner/weapons/c_models/c_dex_sniperrifle/c_dex_sniperrifle.mdl"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"attach_to_hands"	"1"
-			"show_in_armory"	"1"
-			"used_by_classes"
-			{
-				"sniper"	"1"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_SniperRailgun_Large.Single"
-				"sound_burst"		"Weapon_SniperRailgun_Large.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"sniper_dxhr_rail"	
-			}
-			"attributes"
-			{			
-				"damage penalty on bodyshot"
-				{
-					"attribute_class"	"bodyshot_damage_modify"
-					"value" "-1"
-				}
-				"dmg taken from bullets increased"
-				{
-					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value" "2"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"		"1.10"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
         	}
-        
-		"9721"
-		{
-			"name"	"Scout's Shotgun"
-			"item_class"	"tf_weapon_scattergun"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Scattergun"
-			"item_name"	"Scout's Shotgun"
-			"item_logname"	"shotgun"
-			"item_iconname"	"shotgun"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_pep_scattergun.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"attributes"
-			{
-				"bullets per shot bonus"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "3"
-				}
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "1.20"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "1.60"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.45"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}				
-			}
-			"allowed_attributes"
-			{
-				"all_items"	"1"
-				"dmg_reductions" "1"
-				"player_health" "1"
-				"attrib_healthregen" "1"
-				"player_movement" "1"
-				"attrib_dmgdone"	"1"
-				"attrib_critboosts"	"1"
-				"attrib_onhit_slow" "1"
-				"attrib_vs_burning" "1"
-				"attrib_clip"	"1"
-				"attrib_firerate" "1"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Scatter_Gun_Double.Single"
-				"sound_burst"	"Weapon_Scatter_Gun_Double.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"bullet_bignasty_tracer01"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-		"9722"
-		{
-			"name"	"Pyro's Flaming Shotgun"
-			"item_class"	"tf_weapon_shotgun_pyro"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"Pyro's Flaming Shotgun"
-			"item_logname"	"shotgun"
-			"item_iconname"	"shotgun"
-			"item_slot"	"secondary"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"attributes"
-			{
-				"Set DamageType Ignite"
-				{
-					"attribute_class"	"set_dmgtype_ignite"
-					"value" "1"
-				}	
-				"dmg taken from bullets increased"
-				{
-					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"1.1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class" "mult_crit_chance"
-					"value"		"0"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Scatter_Gun_Double.Single"
-				"sound_burst"	"Weapon_Scatter_Gun_Double.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"bullet_bignasty_tracer01"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
-        	"9723"
-		{
-			"name"	"Poison Knife"
-			"item_class"	"tf_weapon_knife"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Knife"
-			"item_name"	"Poison Knife"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"item_logname"	"eternal_reward"
-			"item_iconname"	"eternal_reward"
-			"image_inventory"	"backpack/weapons/w_models/w_knife"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"attach_to_hands" "1"
-			"model_player"	"models/weapons/w_models/w_knife.mdl"
-			"used_by_classes"
-			{
-				"spy"	"1"
-			}
-			"attributes"
-			{
-				"heal on kill"
-				{
-					"attribute_class"	"heal_on_kill"
-					"value"	"25"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.1"
-				}
-				"health drain"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"	"-2"
-				}
-				"bleeding duration"
-				{
-					"attribute_class"	"bleeding_duration"
-					"value" "5"
-				}
-			}		
-			"visuals"
-			{
-				"animation"
-				{
-					"activity"		"ACT_VM_DRAW"
-					"replacement"		"ACT_ITEM2_VM_DRAW"
-				}
-				"animation"
-				{ 
-					"activity"		"ACT_VM_IDLE"
-					"replacement"		"ACT_ITEM2_VM_IDLE"
-				}
-				"animation"
-				{
-					"activity"		"ACT_VM_HITCENTER"
-					"replacement"		"ACT_ITEM2_VM_HITCENTER"
-				}
-				"animation"
-				{
-					"activity"		"ACT_VM_SWINGHARD"
-					"replacement"		"ACT_ITEM2_VM_SWINGHARD"
-				}
-			}		
-			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-        	}
-
-		"9724"
-		{
-			"name"	"Pyro's Rocket Launcher"
-			"item_class"	"tf_weapon_rocketlauncher"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_RocketLauncher"
-			"item_name"	"Pyro's Rocket Launcher"
-			"item_slot"	"primary"
-			"anim_slot"	"item1"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_scorch_shot/c_scorch_shot.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"allowed_attributes"
-			{
-				"all_items"	"1"
-				"dmg_reductions" "1"
-				"player_health" "1"
-				"attrib_healthregen" "1"
-				"player_movement" "1"
-				"attrib_dmgdone"	"1"
-				"attrib_critboosts"	"1"
-				"attrib_onhit_slow" "1"
-				"attrib_clip"	"1"
-				"attrib_firerate" "1"
-				"wpn_explosive" "1"
-				"ammo_primary" "1"
-				"wpn_fires_projectiles" "1"
-			}
-			"visuals"
-			{
-				"muzzle_flash"	""
-				"tracer_effect"	""
-				"sound_special1"	"weapons\quake_explosion_remastered.wav"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-        }
-							
-		"9725"
-		{
-			"name"	"Classic Pistol"
-			"item_class"	"tf_weapon_pistol"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"Classic Pistol"
-			"item_description"	"#TF_TTG_MaxGun_Desc"
-			"item_slot"	"secondary"
-			"item_logname"	"maxgun"
-			"item_iconname"	"maxgun"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_ttg_max_gun/c_ttg_max_gun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_ttg_max_gun/c_ttg_max_gun.mdl"
-			"attach_to_hands"	"1"
-			"show_in_armory"	"1"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"engineer"	"1"
-			}
-			"allowed_attributes"
-			{
-				"all_items"	"1"
-				"dmg_reductions" "1"
-				"player_health" "1"
-				"attrib_healthregen" "1"
-				"player_movement" "1"
-				"attrib_dmgdone"	"1"
-				"attrib_critboosts"	"1"
-				"attrib_onhit_rapid" "1"
-				"attrib_vs_burning" "1"
-				"attrib_clip"	"1"
-				"ammo_metal" "1"
-            }
-
-			"attributes"
-			{
-				"heal on kill"
-				{
-					"attribute_class"	"heal_on_kill"
-					"value"	"25"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.9"
-				}
-				"faster reload rate"
-				{
-					"attribute_class"	"fast_reload"
-					"value" "1.2"
-                                }
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.8"
-                                }
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "1.3"
-				}
-			}		
-			"visuals"
-			{
-				"muzzle_flash"	"muzzle_pistol"
-				"tracer_effect"	"bullet_tracer01"
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-        }
-
-		"9726"
-		{
-			"name"	"Soldier's Flaming Shotgun"
-			"item_class"	"tf_weapon_shotgun_pyro"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_name"	"Soldier's Flaming Shotgun"
-			"item_logname"	"shotgun"
-			"item_iconname"	"shotgun"
-			"item_slot"	"secondary"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
-			"attach_to_hands" "1"
-			"used_by_classes"
-			{
-				"soldier"	"1"
-			}
-			"attributes"
-			{
-				"Set DamageType Ignite"
-				{
-					"attribute_class"	"set_dmgtype_ignite"
-					"value" "1"
-				}		
-				"dmg taken from bullets increased"
-				{
-					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"1.1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class" "mult_crit_chance"
-					"value"		"0"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_FrontierJustice.Single"
-				"sound_burst"	"Weapon_FrontierJustice.SingleCrit"
-				"muzzle_flash"	"muzzle_shotgun"
-				"tracer_effect"	"bullet_bignasty_tracer01"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-        }
-
 		"9727"
 		{
 			"name"	"Heavy's Hammer"
@@ -25833,72 +25070,7 @@ Fires....... something"
 			}			
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-        }
-        	 
-		"9728"
-		{
-			"name"	"Pyro's Spy Checker 3000"
-			"item_class"	"tf_weapon_flamethrower"
-			"craft_class"	"weapon"
-			"show_in_armory"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-			}
-			"item_logname"	"degreaser"
-			"item_iconname"	"degreaser"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Flamethrower"
-			"item_name"	"Pyro's Spy Checker 3000"
-			"item_slot"	"primary"
-			"image_inventory"	"backpack/weapons/c_models/c_flamethrower/c_flamethrower"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_flamethrower/c_flamethrower.mdl"
-			"attach_to_hands"	"1"
-			"show_in_armory"	"1"
-			"item_quality"	"unique"
-			"propername"	"0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"used_by_classes"
-			{
-				"pyro"	"1"
-			}
-			"attributes"
-			{
-				"heal on hit for rapidfire"
-				{
-					"attribute_class"	"add_onhit_addhealth"
-					"value"	"1"
-				}	
-				"crit vs wet player"
-				{
-					"attribute_class"	"crit_vs_wet_players"
-					"value" "1"
                 }
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
-                }
-				"heal on kill"
-				{
-					"attribute_class"	"heal_on_kill"
-					"value"	"15"
-                }	
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "-75"
-                }
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-			"item_set"	"polycount_pyro"
-		}
-
 		"9729"
 		{
 			"name"	"Leadpipe"
@@ -27061,7 +26233,12 @@ Fires....... something"
 				"bullets per shot hidden"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
-					"value" "20.00"
+					"value" "30.00"
+				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "30.00"
 				}
 				"fire rate penalty"
 				{
@@ -27078,15 +26255,10 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value" "8.00"
 				}
-				"speed_boost_on_hit"
-				{
-					"attribute_class"	"speed_boost_on_hit"
-					"value"	"3"
-				}
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
-					"value" "1.0"
+					"value" "20"
 				}
 				"hidden secondary max ammo penalty"
 				{
@@ -27677,11 +26849,6 @@ Fires....... something"
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.1"
 				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.6"
-				}
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -27691,11 +26858,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.20"
-				}
-				"Projectile range decreased"
-				{
-					"attribute_class"	"mult_projectile_range"
-					"value"	"0.15"
 				}
 				"maxammo primary reduced"
 				{
@@ -29894,6 +29056,11 @@ Fires....... something"
 					"attribute_class"	"melee_range_multiplier"
 					"value"	"1.60"
 				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"	"1.30"
+				}
 				"fire rate bonus HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -29952,30 +29119,35 @@ Fires....... something"
 					"attribute_class"	"set_blockbackstab_once"
 					"value"	"1"
 				}
+				"SET BONUS: dmg from sentry reduced"
+				{
+					"attribute_class"	"dmg_from_sentry_reduced"
+					"value"	"5.00"
+				}
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"-5.50"
+					"value"	"9.50"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"-1.50"
+					"value"	"2.50"
 				}
 				"dmg taken from crit reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"0.50"
+					"value"	"1.50"
 				}
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"1.80"
+					"value"	"2.80"
 				}
 				"dmg taken from blast increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.70"
+					"value"	"-1.30"
 				}
                         }
 			"static_attrs"
