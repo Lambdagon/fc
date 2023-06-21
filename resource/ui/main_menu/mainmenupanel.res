@@ -601,7 +601,7 @@
 		"enabled"			"1"
 		"bordervisible"		"1"
 		"labelText" 		""
-		"cvar_name"			"lfe_ui_mainmenu_music"	
+		"cvar_name"			"lfce_ui_mainmenu_music"	
 		"autochange"		"1"
 		"inverted"			"1"
 
@@ -674,7 +674,7 @@
 		"enabled"			"1"
 		"bordervisible"		"1"
 		"labelText" 		""
-		"cvar_name"			"lfe_ui_mainmenu_news"	
+		"cvar_name"			"lfce_ui_mainmenu_news"	
 		"autochange"		"1"
 		"inverted"			"0"
 

@@ -29826,6 +29826,43 @@ Fires....... something"
 			"mouse_pressed_sound"	"items/battery_pickup.wav"
 			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}
+		
+		"9799"
+		{
+			"name"						"The Shotgun Revolver"
+			"prefab"					"weapon_sniperrifle"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_scattergun"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_type_name"			"#TF_Weapon_SniperRifle"
+			"item_name"					"Revolving Shotgun"
+			"propername"				"1"
+			"min_ilevel"				"8"
+			"max_ilevel"				"8"
+			"image_inventory"			"backpack/weapons/w_models/w_revshotgun"
+			"model_world"				"models/weapons/w_models/w_revshotgun_sniper.mdl"
+			"model_player"				"models/weapons/v_models/v_revshotgun_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.5"
+				}
+				"scattergun no reload single"
+				{
+					"attribute_class"	"set_scattergun_no_reload_single"
+					"value"	"1"
+				}
+			}
+		}
 
 		"30570"
 		{
