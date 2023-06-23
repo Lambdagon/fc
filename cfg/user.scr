@@ -81,14 +81,6 @@ DESCRIPTION INFO_OPTIONS
 		{ "1" }
 	}
 
-	"cl_pyrovision"
-	{
-		"#TF_PyroVision"
-		"#TF_PyroVision"
-		{ BOOL }
-		{ "0" }
-	}
-
 	"mat_vignette_enable"
 	{
 		"#LFEOption_Vignette"
@@ -361,40 +353,6 @@ DESCRIPTION INFO_OPTIONS
 		{ "1" }
 	}
 
-	"pyro_vignette"
-	{
-		"#TF_Pyrovision_Vignette"
-		{
-			LIST
-			"#TF_Pyrovision_Disable" "0"
-			"#TF_Pyrovision_Vignette_Static" "1"
-			"#TF_Pyrovision_Vignette_Dynamic" "2"
-		}
-		{ "2" }
-	}
-
-	"pyro_vignette_distortion"
-	{
-		"#TF_Pyrovision_Distortion"
-		{
-			LIST
-			"#TF_Pyrovision_Disable" "0"
-			"#TF_Pyrovision_Enable" "1"
-		}
-		{ "1" }
-	}
-
-	"pyro_dof"
-	{
-		"#TF_Pyrovision_Dof"
-		{
-			LIST
-			"#TF_Pyrovision_Disable" "0"
-			"#TF_Pyrovision_Enable" "1"
-		}
-		{ "1" }
-	}
-
 	"tf_hud_target_id_alpha"
 	{
 		"#TF_TargetID_Alpha"
@@ -459,14 +417,6 @@ DESCRIPTION INFO_OPTIONS
 		"#Tooltip_takesshots"
 		{ BOOL }
 		{ "0" }
-	}
-
-	"hud_classautokill"
-	{
-		"#TF_classautokill"
-		"#Tooltip_classautokill"
-		{ BOOL }
-		{ "1" }
 	}
 
 	"cl_flipviewmodels"
