@@ -62,19 +62,24 @@
 {
 	"dsp"	"1"
 
-
 	"playlooping"
 	{
-		"volume"	".6"
+		"volume"	"0.5"
+		"wave"		"ambient/atmosphere/drone4lp.wav"
 		"pitch"		"100"
-		"wave"		"ambient/indoors.wav"
 	}
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".05"
+		"time"		"4, 4"
+		"volume"	"0.3"
+		"rndwave"
+		{
+			"wave"		"ambient/atmosphere/metallic1.wav"
+			"wave"		"ambient/atmosphere/metallic2.wav"
+		}
+
 		"pitch"		"100"
-		"wave"		"ambient/lighthum.wav"
 	}
 
 
@@ -87,27 +92,10 @@
 
 	"playlooping"
 	{
-		"volume"	".25"
+		"volume"	"0.35"
+		"wave"		"ambient/wind/wind1.wav"
 		"pitch"		"100"
-		"wave"		"ambient/desert_wind.wav"
-	}
-
-
-
-	"playrandom"
-	{
-		"time"		"10,20"
-		"volume"	"1"
-		"pitch"		"100"
-		"rndwave"
-		{
-			"wave"		"ambient_mp3/dog1.mp3"
-			"wave"		"ambient_mp3/dog2.mp3"
-			"wave"		"ambient_mp3/dog3.mp3"
-			"wave"		"ambient_mp3/dog4.mp3"
-			"wave"		"ambient_mp3/owl3.mp3"
-			"wave"		"ambient_mp3/owl4.mp3"
-		}
+		"attenuation"	"0"
 	}
 
 }

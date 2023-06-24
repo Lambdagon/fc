@@ -63,73 +63,26 @@
 {
 	"dsp"	"1"
 
-
 	"playlooping"
 	{
-		"volume"	".6"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/hole_amb3.wav"
 		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
 	}
-
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".30"
+		"volume"	"0.08"
 		"pitch"		"100"
-		"wave"		"ambient/machine_hum2.wav"
-	}
-	
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
+		"time"		"3.0, 8.0"
+		"soundlevel" "SNDLVL_80dB"
 		"position"	"0"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/machine_hum.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".4"
-		"pitch"		"100"
-		"position"	"1"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_tape.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"position"	"2"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_working.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".4"
-		"pitch"		"100"
-		"position"	"3"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_tape2.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"position"	"4"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/command_center.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"position"	"5"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/printer.wav"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/windchine1.wav"
+			"wave"	"ambient/levels/canals/windchime2.wav"
+			"wave"	"ambient/levels/canals/windchime4.wav"
+			"wave"	"ambient/levels/canals/windchime5.wav"
+		}
 	}
 }
 
@@ -140,200 +93,302 @@
 
 	"playlooping"
 	{
-		"volume"	".6"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/hole_amb3.wav"
 		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
 	}
+	"playrandom"
+	{
+		"time"		"3, 10"
+		"volume"	"0.05,0.15"
+		"pitch"		"95,105"
+		"position"	"random"
 
-	"playlooping"
-	{
-		"volume"	".3"
-		"pitch"		"100"
-		"wave"		"ambient/machine_hum2.wav"
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal_rattle2.wav"
+			"wave"	"ambient/materials/metal_rattle3.wav"
+		}
+		
 	}
-	
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".75"
+		"volume"	"0.5"
 		"pitch"		"100"
+		"time"		"60.0"
+		"soundlevel" "SNDLVL_80dB"
 		"position"	"0"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/machine_hum.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".4"
-		"pitch"		"100"
-		"position"	"1"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_tape.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"position"	"2"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_working.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".4"
-		"pitch"		"100"
-		"position"	"3"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_tape2.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".85"
-		"pitch"		"100"
-		"position"	"4"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/command_center.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".85"
-		"pitch"		"100"
-		"position"	"5"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/printer.wav"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/windchime5.wav"
+		}
 	}
 }
 
 "2fort.OutdoorPond"
 {
-	"dsp"	"1"
+	"dsp"	"0"
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"		".35"
-		"pitch"		"100"
-		"wave"		"ambient/outdoors_quiet_birds.wav"
-	}
+		"time"		"8,30"
+		"volume"	"0.15,0.38"
+		"pitch"		"90,115"
+		"soundlevel"	"SNDLVL_140dB"
+		
+		"position"	"random"
 
-	"playlooping"
-	{
-		"volume"		".35"
-		"pitch"		"100"
-		"wave"		"ambient/outdoors.wav"
-	}
+		"rndwave"
+		{
+			"wave"	"ambient/levels/coast/coastbird1.wav"
+			"wave"	"ambient/levels/coast/coastbird2.wav"
+			"wave"	"ambient/levels/coast/coastbird3.wav"
+			"wave"	"ambient/levels/coast/coastbird4.wav"
+			"wave"	"ambient/levels/coast/coastbird5.wav"
+			"wave"	"ambient/levels/coast/coastbird6.wav"
+			"wave"	"ambient/levels/coast/coastbird7.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient1.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient2.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient3.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient4.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient5.wav"
 
-	"playlooping"
-	{
-		"volume"		".45"
-		"pitch"		"100"
-		"wave"		"ambient/pondlife.wav"
-	}
-	
-	"playlooping"
-	{
-		"volume"		".15"
-		"pitch"		"100"
-		"wave"		"ambient/pondwater.wav"
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/flies5.wav"
+
+		}
 	}
 
 	"playrandom"
 	{
 		"time"		"5,15"
-		"volume"	".35"
-		"pitch"		"100"
-		"position"	"0"
-		"attenuation"	"0.25"	
+		"volume"	"0.15,0.38"
+		"pitch"		"90,115"
+		"soundlevel"	"SNDLVL_140dB"
+		
+		"position"	"random"
+
 		"rndwave"
 		{
-			"wave"		"ambient_mp3/cow1.mp3"
-			"wave"		"ambient_mp3/cow2.mp3"
-			"wave"		"ambient_mp3/cow3.mp3"
-			"wave"		"ambient_mp3/bird1.mp3"
-			"wave"		"ambient_mp3/bird2.mp3"
-			"wave"		"ambient_mp3/bird3.mp3"
+			"wave"	"ambient/levels/canals/critter1.wav"
+			"wave"	"ambient/levels/canals/critter2.wav"
+			"wave"	"ambient/levels/canals/critter3.wav"
+			"wave"	"ambient/levels/canals/critter4.wav"
+			"wave"	"ambient/levels/canals/critter5.wav"
+			"wave"	"ambient/levels/canals/critter6.wav"
+			"wave"	"ambient/levels/canals/critter7.wav"
+			"wave"	"ambient/levels/canals/critter8.wav"
+
+		}
+	}
+	"playlooping"
+	{
+		"volume"	"0.2"
+		"wave"		"ambient/levels/canals/swamp_frogs_loop2.wav"
+		"pitch"		"100"
+	}
+
+	"playrandom"
+	{
+		"volume"	"0.4,0.9"
+		"pitch"		"100"
+		"time"		"5.0, 12.0"
+		"pitch"		"90,130"
+		"soundlevel"	"SNDLVL_140dB"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave" "ambient/wind/wind_med1.wav"
+			"wave" "ambient/wind/wind_hit1.wav"
+			"wave" "ambient/wind/wind_hit2.wav"
+			"wave" "ambient/wind/wind_snippet3.wav"
+			"wave" "ambient/wind/wind_snippet4.wav"
+			"wave" "ambient/wind/wind_snippet5.wav"
 		}
 	}
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".35"
+		"volume"	"0.45,0.65"
 		"pitch"		"100"
-		"position"	"1"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/train_engine_idle.wav"
+		"time"		"3.0, 4.0"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/shore1.wav"
+			"wave"	"ambient/levels/canals/shore2.wav"
+			"wave"	"ambient/levels/canals/shore3.wav"
+			"wave"	"ambient/levels/canals/shore4.wav"
+		}
 	}
 
-	"playlooping"
-	{
-		"volume"	".35"
-		"pitch"		"100"
-		"position"	"2"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/engine_idle.wav"
-	}
 
+	"playrandom"
+	{
+		"volume"	"0.05,0.1"
+		"pitch"		"100"
+		"time"		"3.0, 8.0"
+		"soundlevel" "SNDLVL_80dB"
+		"position"	"0"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/windchine1.wav"
+			"wave"	"ambient/levels/canals/windchime2.wav"
+			"wave"	"ambient/levels/canals/windchime4.wav"
+			"wave"	"ambient/levels/canals/windchime5.wav"
+		}
+	}
 }
 
 
 "2fort.OutdoorFort"
 {
-	"dsp"	"1"
+	"dsp"	"2"
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"		".35"
-		"pitch"		"100"
-		"wave"		"ambient/outdoors_quiet_birds.wav"
-	}
+		"time"		"8,30"
+		"volume"	"0.08,0.14"
+		"pitch"		"90,115"
+		"soundlevel"	"SNDLVL_140dB"
+		
+		"position"	"random"
 
-	"playlooping"
-	{
-		"volume"		".35"
-		"pitch"		"100"
-		"wave"		"ambient/outdoors.wav"
-	}
+		"rndwave"
+		{
+			"wave"	"ambient/levels/coast/coastbird1.wav"
+			"wave"	"ambient/levels/coast/coastbird2.wav"
+			"wave"	"ambient/levels/coast/coastbird3.wav"
+			"wave"	"ambient/levels/coast/coastbird4.wav"
+			"wave"	"ambient/levels/coast/coastbird5.wav"
+			"wave"	"ambient/levels/coast/coastbird6.wav"
+			"wave"	"ambient/levels/coast/coastbird7.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient1.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient2.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient3.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient4.wav"
+			"wave"	"ambient/levels/coast/seagulls_ambient5.wav"
 
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/flies5.wav"
+
+		}
+	}
 
 	"playrandom"
 	{
 		"time"		"5,15"
-		"volume"	".35"
-		"pitch"		"100"
-		"position"	"0"
-		"attenuation"	"0.7"	
+		"volume"	"0.15,0.38"
+		"pitch"		"90,115"
+		"soundlevel"	"SNDLVL_140dB"
+		
+		"position"	"random"
+
 		"rndwave"
 		{
-			"wave"		"ambient_mp3/cow1.mp3"
-			"wave"		"ambient_mp3/cow2.mp3"
-			"wave"		"ambient_mp3/cow3.mp3"
-			"wave"		"ambient_mp3/bird1.mp3"
-			"wave"		"ambient_mp3/bird2.mp3"
-			"wave"		"ambient_mp3/bird3.mp3"
+			"wave"	"ambient/levels/canals/critter1.wav"
+			"wave"	"ambient/levels/canals/critter2.wav"
+			"wave"	"ambient/levels/canals/critter3.wav"
+			"wave"	"ambient/levels/canals/critter4.wav"
+			"wave"	"ambient/levels/canals/critter5.wav"
+			"wave"	"ambient/levels/canals/critter6.wav"
+			"wave"	"ambient/levels/canals/critter7.wav"
+			"wave"	"ambient/levels/canals/critter8.wav"
+
 		}
 	}
-
-	
 	"playlooping"
 	{
-		"volume"	".35"
+		"volume"	"0.04"
+		"wave"		"ambient/levels/canals/swamp_frogs_loop2.wav"
 		"pitch"		"100"
-		"position"	"1"
-		"attenuation"	".07"	
-		"wave"		"ambient/factory_outdoor.wav"
+	}
+
+	"playrandom"
+	{
+		"volume"	"0.05,0.1"
+		"pitch"		"100"
+		"time"		"3.0, 8.0"
+		"soundlevel" "SNDLVL_80dB"
+		"position"	"0"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/windchine1.wav"
+			"wave"	"ambient/levels/canals/windchime2.wav"
+			"wave"	"ambient/levels/canals/windchime4.wav"
+			"wave"	"ambient/levels/canals/windchime5.wav"
+		}
 	}
 }
 
 "2fort.Indoor"
 {
-	"dsp"	"1"
+	"dsp"	"3"
 
 	"playlooping"
 	{
-		"volume"	"1"
+		"volume"	"0.2"
+		"wave"		"ambient/atmosphere/Drone4LP.wav"
 		"pitch"		"100"
-		"wave"		"ambient/indoors.wav"
+		"attenuation"	"0"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"wave"		"ambient/atmosphere/indoor1.wav"
+		"pitch"		"90"
+		"attenuation"	"0"
+	}
+
+	"playrandom"
+	{
+		"time"		"3,15"
+		"volume"	"0.2,0.5"
+		"pitch"		"95,105"
+		"attenuation"	"0"
+
+		"rndwave"
+		{
+			"wave"		"ambient/creatures/flies1.wav"
+			"wave"		"ambient/creatures/flies2.wav"
+			"wave"		"ambient/creatures/flies3.wav"
+			"wave"		"ambient/creatures/flies4.wav"
+			"wave"		"ambient/creatures/flies5.wav"
+		}
+		
+	}
+
+	"playrandom"
+	{
+		"time"		"20,40"
+		"volume"	"0.1,0.3"
+		"pitch"		"95,105"
+		"attenuation"	"0"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+			"wave"	"ambient/creatures/rats4.wav"
+		}
+		
+	}
+
+	"playrandom"
+	{
+		"volume"	"0.05,0.1"
+		"pitch"		"100"
+		"time"		"3.0, 8.0"
+		"soundlevel" "SNDLVL_80dB"
+		"position"	"0"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/windchine1.wav"
+			"wave"	"ambient/levels/canals/windchime2.wav"
+			"wave"	"ambient/levels/canals/windchime4.wav"
+			"wave"	"ambient/levels/canals/windchime5.wav"
+		}
 	}
 }

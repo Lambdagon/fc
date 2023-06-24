@@ -60,51 +60,140 @@
 
 "Upward.Outside"
 {
-	"dsp"	"1"
-
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"wave"		"ambient/desert_wind.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	"1"
-		"pitch"		"100"
-		"wave"		"ambient/lightwindcreaks.wav"
-	}
-
+	"dsp"	"2"
 	
 	"playlooping"
 	{
-		"volume"	".25"
+		"volume"	"0.35"
+		"wave"		"ambient/wind/wind1.wav"
 		"pitch"		"100"
-		"wave"		"ambient/desert_wind_low.wav"
+		"attenuation"	"0"
 	}
 
 	"playrandom"
 	{
-		"time"		"10,20"
-		"volume"	".5"
-		"pitch"		"100"
+		"time"		"6,12"
+		"volume"	"0.04,0.1"
+		"pitch"		"95,105"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+
 		"rndwave"
 		{
-			"wave"		"ambient_mp3/wind_gust2.mp3"
-			"wave"		"ambient_mp3/wind_gust1.mp3"
+			"wave"	"ambient/materials/shutter7.wav"
+			"wave"	"ambient/materials/shutter8.wav"
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/atmosphere/cave_hit5.wav"
+			"wave"	"ambient/atmosphere/cave_hit6.wav"
+		}
+	}
+
+	"playrandom"
+	{
+		"volume"	"0.4,0.9"
+		"pitch"		"100"
+		"time"		"5.0, 12.0"
+		"pitch"		"90,130"
+		"soundlevel"	"SNDLVL_140dB"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave" "ambient/wind/wind_med1.wav"
+			"wave" "ambient/wind/wind_hit1.wav"
+			"wave" "ambient/wind/wind_hit2.wav"
+			"wave" "ambient/wind/wind_snippet3.wav"
+			"wave" "ambient/wind/wind_snippet4.wav"
+			"wave" "ambient/wind/wind_snippet5.wav"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"		"5,15"
+		"volume"	"0.5,0.8"
+		"pitch"		"90,105"
+		"soundlevel"	"SNDLVL_140dB"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/materials/rock2.wav"
+			"wave"	"ambient/materials/rock3.wav"
+			"wave"	"ambient/materials/rock5.wav"
 		}
 	}
 }
 
 "Upward.Inside"
 {
-	"dsp"	"1"
+	"dsp"	"2"
 
 	"playlooping"
 	{
-		"volume"	".5"
+		"volume"	"0.57"
 		"pitch"		"100"
-		"wave"		"ambient/desert_indoors.wav"
+		"wave"		"ambient/levels/canals/tunnel_wind_loop1.wav" 
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.08"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/captain_room.wav"
+	}
+
+	"playrandom"
+	{
+		"time"		"9,16"
+		"volume"	"0.35,0.6"
+		"pitch"		"95,105"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/wood_creak1.wav"
+			"wave"	"ambient/materials/wood_creak2.wav"
+			"wave"	"ambient/materials/wood_creak3.wav"
+			"wave"	"ambient/materials/wood_creak4.wav"
+			"wave"	"ambient/materials/wood_creak5.wav"
+			"wave"	"ambient/materials/wood_creak6.wav"
+			"wave"	"ambient/materials/shutter7.wav"
+			"wave"	"ambient/materials/shutter8.wav"
+		}
+	
+	}
+
+	"playrandom"
+	{
+
+		"time"		"15,30"
+		"volume"	"0.08,0.12"
+		"pitch"		"90,105"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+		"rndwave"
+		{
+			"wave"	"ambient/atmosphere/hole_hit1.wav"
+			"wave"	"ambient/atmosphere/hole_hit2.wav"
+			"wave"	"ambient/atmosphere/hole_hit3.wav"
+			"wave"	"ambient/atmosphere/hole_hit4.wav"
+			"wave"	"ambient/atmosphere/hole_hit5.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"3, 10"
+		"volume"	"0.05,0.15"
+		"pitch"		"95,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal_rattle2.wav"
+			"wave"	"ambient/materials/metal_rattle3.wav"
+		}
+		
 	}
 }

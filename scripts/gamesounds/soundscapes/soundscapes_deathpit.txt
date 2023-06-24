@@ -65,19 +65,11 @@
 	"dsp"	"1"
 
 	"playlooping"
-	{  
-		"volume"	".5"
-		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
-	}
-	
-	"playlooping"
 	{
-		"volume"	".25"
-		"pitch"		"100"
-		"position"	"1"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_working.wav"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/undercity_loop1.wav"
+		"pitch"		"110"
+		"soundlevel"	"0"
 	}
 }
 
@@ -86,19 +78,58 @@
 	"dsp"	"1"
 
 	"playlooping"
-	{  
-		"volume"	".5"
-		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
+	{
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/undercity_loop1.wav"
+		"pitch"		"110"
+		"soundlevel"	"0"
 	}
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".25"
-		"position"	"1"
-		"pitch"		"100"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/computer_working2.wav"
+		"time"		"15, 60"
+		"volume"	"0.05,0.15"
+		"pitch"		"90,110"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/town_moan1.wav"
+			"wave"	"ambient/creatures/town_zombie_call1.wav"
+			"wave"	"ambient/creatures/town_scared_breathing1.wav"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"		"3, 10"
+		"volume"	"0.05,0.15"
+		"pitch"		"95,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal_rattle2.wav"
+			"wave"	"ambient/materials/metal_rattle3.wav"
+		}
+		
+	}
+
+	"playrandom"
+	{
+		"time"		"20,40"
+		"volume"	"0.1,0.3"
+		"pitch"		"95,105"
+		"attenuation"	"0"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+			"wave"	"ambient/creatures/rats4.wav"
+		}
+		
 	}
 
 }
@@ -106,18 +137,30 @@
 "Deathpit.Inside"
 {
 	"dsp"	"1"
-	"playlooping"
-	{
-		"volume"	".2"
-		"pitch"		"100"
-		"wave"		"ambient/desert_wind.wav"
-	}
 
 	"playlooping"
 	{
-		"volume"	".7"
-		"pitch"		"100"
-		"wave"		"ambient/lightwindcreaks.wav"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/undercity_loop1.wav"
+		"pitch"		"110"
+		"soundlevel"	"0"
+	}
+
+	"playrandom"
+	{
+		"time"		"20,40"
+		"volume"	"0.1,0.3"
+		"pitch"		"95,105"
+		"attenuation"	"0"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+			"wave"	"ambient/creatures/rats4.wav"
+		}
+		
 	}
 }
 
@@ -127,63 +170,26 @@
 
 	"playlooping"
 	{
-		"volume"	".3"
+		"volume"	"0.35"
+		"wave"		"ambient/wind/wind_rooftop1.wav"
 		"pitch"		"100"
-		"wave"		"ambient/desert_wind.wav"
-	}
-
-	"playlooping"
-	{
-		"volume"	".3"
-		"pitch"		"100"
-		"wave"		"ambient/desert_rustle.wav"
+		"attenuation"	"0"
 	}
 
 	"playrandom"
 	{
-		"time"		"7,12"
-		"volume"	"0.4"
-		"pitch"		"100"
+		"time"		"3, 10"
+		"volume"	"0.05,0.15"
+		"pitch"		"95,105"
+		"position"	"random"
+
 		"rndwave"
 		{
-			"wave"		"ambient_mp3/dog1.mp3"
-			"wave"		"ambient_mp3/dog2.mp3"
-			"wave"		"ambient_mp3/dog3.mp3"
-			"wave"		"ambient_mp3/dog4.mp3"
-			"wave"		"ambient_mp3/crow1.mp3"
-			"wave"		"ambient_mp3/crow2.mp3"
-			"wave"		"ambient_mp3/crow3.mp3"
-			"wave"		"ambient_mp3/crow4.mp3"
-			"wave"		"ambient_mp3/hawk.mp3"
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal_rattle2.wav"
+			"wave"	"ambient/materials/metal_rattle3.wav"
 		}
+		
 	}
-	
-		"playlooping"
-	{
-		"volume"	".5"
-		"position"	"1"
-		"pitch"		"100"
-		"soundlevel"	"SNDLVL_65dB"	
-		"wave"		"ambient/computer_working.wav"
-	}
-	
-		"playlooping"
-	{
-		"volume"	".3"
-		"pitch"		"100"
-		"position"	"2"
-		"soundlevel"	"SNDLVL_60dB"	
-		"wave"		"ambient/lighthum.wav"
-	}
-	
-			"playlooping"
-	{
-		"volume"	".5"
-		"position"	"5"
-		"pitch"		"100"
-		"soundlevel"	"SNDLVL_65dB"	
-		"wave"		"ambient/computer_working2.wav"
-	}
-	
 }
 

@@ -61,27 +61,52 @@
 "Goldrush.DeepInside"
 {
 	"dsp"	"1"
-
-
 	"playlooping"
 	{
-		"volume"	".6"
-		"pitch"		"100"
-		"wave"		"ambient/indoors.wav"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/undercity_loop1.wav"
+		"pitch"		"110"
+		"soundlevel"	"0"
 	}
-
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".20"
+		"volume"	"0.1,0.3"
 		"pitch"		"100"
-		"wave"		"ambient/lighthum.wav"
+		"time"		"0.5, 5.0"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/drip1.wav"
+			"wave"	"ambient/levels/canals/drip2.wav"
+			"wave"	"ambient/levels/canals/drip3.wav"
+			"wave"	"ambient/levels/canals/drip4.wav"
+			"wave"	"ambient/water/rain_drip1.wav"
+			"wave"	"ambient/water/rain_drip2.wav"
+			"wave"	"ambient/water/rain_drip3.wav"
+			"wave"	"ambient/water/rain_drip4.wav"
+		}
 	}
-
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".4"
-		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
+		"time"		"1,15"
+		"volume"	"0.25,0.5"
+		"pitch"		"90,105"	
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140dB"		
+		"rndwave"
+		{
+			"wave"	"ambient/levels/prison/inside_battle1.wav"
+			"wave"	"ambient/levels/prison/inside_battle2.wav"
+			"wave"	"ambient/levels/prison/inside_battle3.wav"
+			"wave"	"ambient/levels/prison/inside_battle4.wav"
+			"wave"	"ambient/levels/prison/inside_battle5.wav"
+			"wave"	"ambient/levels/prison/inside_battle6.wav"
+			"wave"	"ambient/levels/prison/inside_battle7.wav"
+			"wave"	"ambient/levels/prison/inside_battle8.wav"
+			"wave"	"ambient/levels/prison/inside_battle9.wav"
+		}
+		
 	}
 }
 
@@ -94,30 +119,75 @@
 	{
 		"volume"	".75"
 		"pitch"		"100"
-		"wave"		"ambient/desert_wind.wav"
+		"wave"		"ambient/wind/wind1.wav"
 	}
 
 
 	"playrandom"
 	{
-		"time"		"10,20"
-		"volume"	"1"
-		"pitch"		"100"
+		"time"		"8,30"
+		"volume"	"0.2,0.4"
+		"pitch"		"90,115"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
 		"rndwave"
 		{
-			"wave"		"ambient_mp3/dog1.mp3"
-			"wave"		"ambient_mp3/dog2.mp3"
-			"wave"		"ambient_mp3/dog3.mp3"
-			"wave"		"ambient_mp3/dog4.mp3"
-			"wave"		"ambient_mp3/hawk.mp3"
-			"wave"		"ambient_mp3/hawk.mp3"
-			"wave"		"ambient_mp3/hawk.mp3"
-			"wave"		"ambient_mp3/owl3.mp3"
-			"wave"		"ambient_mp3/owl4.mp3"
-			"wave"		"ambient_mp3/warbler.mp3"
+			"wave"	"ambient/levels/canals/swamp_bird1.wav"
+			"wave"	"ambient/levels/canals/swamp_bird2.wav"
+			"wave"	"ambient/levels/canals/swamp_bird3.wav"
+			"wave"	"ambient/levels/canals/swamp_bird4.wav"
+			"wave"	"ambient/levels/canals/swamp_bird5.wav"
+			"wave"	"ambient/levels/canals/swamp_bird6.wav"
 		}
 	}
 
+	"playrandom"
+	{
+		"time"		"5,15"
+		"volume"	"0.5,0.8"
+		"pitch"		"90,105"
+		"soundlevel"	"SNDLVL_140dB"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/materials/rock2.wav"
+			"wave"	"ambient/materials/rock3.wav"
+			"wave"	"ambient/materials/rock5.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"1,15"
+		"volume"	"0.25,0.5"
+		"pitch"		"90,105"	
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140dB"		
+		"rndwave"
+		{
+			"wave"	"ambient/levels/streetwar/city_battle1.wav"
+			"wave"	"ambient/levels/streetwar/city_battle2.wav"
+			"wave"	"ambient/levels/streetwar/city_battle3.wav"
+			"wave"	"ambient/levels/streetwar/city_battle4.wav"
+			"wave"	"ambient/levels/streetwar/city_battle5.wav"
+			"wave"	"ambient/levels/streetwar/city_battle6.wav"
+			"wave"	"ambient/levels/streetwar/city_battle7.wav"
+			"wave"	"ambient/levels/streetwar/city_battle8.wav"
+			"wave"	"ambient/levels/streetwar/city_battle9.wav"
+			"wave"	"ambient/levels/streetwar/city_battle10.wav"
+
+			
+			"wave"	"ambient/levels/prison/inside_battle1.wav"
+			"wave"	"ambient/levels/prison/inside_battle2.wav"
+			"wave"	"ambient/levels/prison/inside_battle3.wav"
+			"wave"	"ambient/levels/prison/inside_battle4.wav"
+			"wave"	"ambient/levels/prison/inside_battle5.wav"
+			"wave"	"ambient/levels/prison/inside_battle6.wav"
+			"wave"	"ambient/levels/prison/inside_battle7.wav"
+			"wave"	"ambient/levels/prison/inside_battle8.wav"
+			"wave"	"ambient/levels/prison/inside_battle9.wav"
+		}
+		
+	}
 }
 
 "Goldrush.Inside"
@@ -126,16 +196,50 @@
 
 	"playlooping"
 	{
-		"volume"	".50"
-		"pitch"		"100"
-		"wave"		"ambient/desert_indoors.wav"
+		"volume"	"0.3"
+		"wave"		"ambient/atmosphere/undercity_loop1.wav"
+		"pitch"		"110"
+		"soundlevel"	"0"
 	}
-
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".35"
+		"volume"	"0.1,0.3"
 		"pitch"		"100"
-		"wave"		"ambient/desert_rustle.wav"
+		"time"		"0.5, 5.0"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+		"rndwave"
+		{
+			"wave"	"ambient/levels/canals/drip1.wav"
+			"wave"	"ambient/levels/canals/drip2.wav"
+			"wave"	"ambient/levels/canals/drip3.wav"
+			"wave"	"ambient/levels/canals/drip4.wav"
+			"wave"	"ambient/water/rain_drip1.wav"
+			"wave"	"ambient/water/rain_drip2.wav"
+			"wave"	"ambient/water/rain_drip3.wav"
+			"wave"	"ambient/water/rain_drip4.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"1,15"
+		"volume"	"0.25,0.5"
+		"pitch"		"90,105"	
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140dB"		
+		"rndwave"
+		{
+			"wave"	"ambient/levels/prison/inside_battle1.wav"
+			"wave"	"ambient/levels/prison/inside_battle2.wav"
+			"wave"	"ambient/levels/prison/inside_battle3.wav"
+			"wave"	"ambient/levels/prison/inside_battle4.wav"
+			"wave"	"ambient/levels/prison/inside_battle5.wav"
+			"wave"	"ambient/levels/prison/inside_battle6.wav"
+			"wave"	"ambient/levels/prison/inside_battle7.wav"
+			"wave"	"ambient/levels/prison/inside_battle8.wav"
+			"wave"	"ambient/levels/prison/inside_battle9.wav"
+		}
+		
 	}
 }
 
