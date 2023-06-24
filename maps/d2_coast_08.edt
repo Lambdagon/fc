@@ -1,0 +1,37 @@
+"d2_coast_08"
+{
+"entity"
+	{
+		"create" // this entry will create a new entity
+		{
+			"classname" "info_player_teamspawn"
+			"origin" "3287 -3626 1745"
+
+			"values"
+			{
+				"teamnum" "3"
+			}
+		}
+			"create" // this entry will create a new entity
+		{
+			"classname" "filter_activator_tfteam"
+			"targetname"	"filter_tfteamred"
+			"values"
+			{
+				"teamnum" "2"
+			}
+		}
+		"edit" // this entry will create a new entity
+		{
+			"classname" "trigger_coop"
+
+			"values"
+			{
+				"teamnum" "2"
+				"PlayerValue" "100"
+				"CountType"	  "1"	
+				"filtername"	"filter_tfteamred"
+			}
+		}
+}
+}
