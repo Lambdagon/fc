@@ -1,0 +1,137 @@
+"construct.outside"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"pitch"		"110"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		"@ambient/construct_tone.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.05"
+		"pitch"		"80"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		")ambient/atmosphere/city_rumble_loop1.wav"
+	}
+	"playlooping"
+	{
+		"volume"		".1"
+		"pitch"		"100"
+		"wave"		"test/temp/soundscape_test/outdoor.wav"
+	}
+}
+
+"construct.inside"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	"0.3"
+		"pitch"		"70"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		"ambient/construct_tone.wav"
+	}
+	"playrandom"
+	{
+		"time"		"2.0,25.0"
+		"volume"	"0.15,0.25"
+		"pitch"		"80,125"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+ 
+		"rndwave" 
+		{
+			"wave"		"ambient/atmosphere/hole_hit1.wav"
+			"wave"		"ambient/atmosphere/hole_hit2.wav"
+			"wave"		"ambient/atmosphere/hole_hit3.wav"
+			"wave"		"ambient/atmosphere/hole_hit4.wav"
+			"wave"		"ambient/atmosphere/hole_hit5.wav"
+		}
+	}
+}
+
+"construct.lake"
+{
+	"dsp"	"1"
+
+	"playrandom"
+	{
+		"time"		"4.0,4.0"
+		"volume"	"0.2,0.5"
+		"pitch"		"80,125"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+
+		"rndwave" 
+		{
+			"wave"		"ambient/levels/canals/shore1.wav"
+			"wave"		"ambient/levels/canals/shore2.wav"
+			"wave"		"ambient/levels/canals/shore3.wav"
+			"wave"		"ambient/levels/canals/shore4.wav"
+		}
+	}
+	
+	"playlooping"
+	{
+		"volume"	"0.1"
+		"pitch"		"90"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		")ambient/atmosphere/city_rumble_loop1.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.05"
+		"pitch"		"80"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		")ambient/atmosphere/city_rumble_loop1.wav"
+	}
+	"playlooping"
+	{
+		"volume"		".2"
+		"pitch"		"100"
+		"wave"		"test/temp/soundscape_test/outdoor.wav"
+	}
+}
+
+"construct.garage"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	"0.3"
+		"pitch"		"90"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		"ambient/construct_tone.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.05"
+		"pitch"		"80"
+		"soundlevel" "SNDLVL_30dB"
+		"wave"		")ambient/atmosphere/city_rumble_loop1.wav"
+	}
+	"playlooping"
+	{
+		"volume"		".1"
+		"pitch"		"100"
+		"wave"		"test/temp/soundscape_test/outdoor.wav"
+	}
+
+	"playrandom"
+	{
+		"time"		"4, 4"
+		"volume"	"0.08"
+		"rndwave"
+		{
+			"wave"		"ambient/atmosphere/metallic1.wav"
+			"wave"		"ambient/atmosphere/metallic2.wav"
+		}
+
+		"pitch"		"100"
+	}
+}
