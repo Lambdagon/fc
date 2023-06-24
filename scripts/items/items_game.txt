@@ -18920,13 +18920,9 @@
 		}
 		"9035"
 		{
-			"name"	"Base Melee Item Civ"
-			"first_sale_date"	"2012/12/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
+			"name"	"TFC Umbrella"
+			"item_class"	"tf_weapon_tfc_umbrella"
+			"baseitem" "1"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18941,20 +18937,46 @@
 			"item_name"	"Base melee item"
 			"item_description"	""
 			"item_slot"	"melee"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/weapons/c_models/c_umbrella"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_umbrella_civilian.mdl"
+			"model_world"	"models/weapons/w_models/w_umbrella.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
 			"used_by_classes"
 			{
 				"civilian"	"1"
 			}
 			"attributes"
 			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"51" 
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value"	"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.70"
+				}
 			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9036"
 		{
@@ -22991,7 +23013,7 @@ Fires....... something"
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	""
 			"item_name"	"Giant Scout-bot"
 			"item_description"	""
@@ -23063,7 +23085,7 @@ Fires....... something"
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	""
 			"item_name"	"Giant Heavy-bot"
 			"item_description"	""
