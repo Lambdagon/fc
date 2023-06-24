@@ -9,11 +9,11 @@
 	
 	"classInfo"
 	{
-		"text"			"Boost a teammate to give them an advantage in battle!"
+		"text"			"Be stuck in the reference animation!"
 	}
 	"classInfo2"
 	{
-		"text"			"Be helpless in fights!"
+		"text"			"Make others laugh!"
 	}
 	
 	"classModel"
@@ -22,14 +22,18 @@
 		
 		"model"
 		{
-			"modelname"	"models/player/civilian.mdl"
-			"modelname_hwm"	"models/player/hwm/civilian.mdl"
+			"modelname"	"models/player/scout.mdl"
+			"modelname_hwm"	"models/player/hwm/scout.mdl"
 			"skin"		"0"
 						
 			"attached_model"
 			{
-				"modelname" "models/weapons/w_models/w_umbrella.mdl"
+				"modelname" "models/empty.mdl"
 				"skin"		"0"
+			}	
+			"animation"
+			{
+				"sequence"	"competitive_loserstate_idle"
 			}
 		}
 	}
