@@ -1,0 +1,20 @@
+"LightmappedGeneric"
+{
+	// Original shader: BaseTimesLightmapPlusMaskedSphericalEnvMap
+	"$detail" "detail/detail_noise1"
+	"$detailscale" 2.5
+	"$basetexture" "halflife/lab1_comp10b"
+	"$envmapsphere" 1
+	"$envmap" "env_cubemap"
+	"$envmapmask" "halflife/lab1_comp10b000r"
+	"$surfaceprop" "metal"
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" 8
+		}
+	}
+}

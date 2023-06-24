@@ -1,0 +1,50 @@
+"UnlitGeneric"
+{
+        "$abovewater" 1	
+	"$basetexture" "hlstextures/hls_!bwater1"
+	"$scale" "[.5 .5]"
+	"$translucent" "1"
+                "$alpha" "0.85"
+
+        	"$refracttexture" "_rt_WaterRefraction"
+	"$refractamount" "0"
+
+
+        
+	"%compilewater" 1
+	"$surfaceprop" "water"
+	"$bumpframe" "0"
+	"$fogenable" 1
+	"$fogcolor" "{ 24 28 32}"
+	"$fogstart" 0.00
+	"$fogend" 300.00
+	
+
+	"$translate" "[0.0 0.0]"
+	
+	"Proxies"
+	{
+		"Sine"
+		{
+			"sineperiod" 6
+			"sinemin" "1.5"
+			"sinemax" "1.51"
+			"resultVar" "$scale"
+		}
+		
+		"Sine"
+		{
+			"sineperiod" 12
+			"sinemin" "-.1"
+			"sinemax" ".1"
+			"resultVar" "$translate"
+		}
+
+		"TextureTransform"
+		{
+			"translateVar" "$translate"
+			"scaleVar" "$scale"
+			"resultVar" "$basetexturetransform"
+		}
+	}
+}
