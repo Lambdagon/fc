@@ -18920,37 +18920,41 @@
 		}
 		"9035"
 		{
-			"name"	"Base Melee Item"
+			"name"	"Base Melee Item Civ"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
 			"item_class"	"tf_wearable"
-			"baseitem" "1"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
 			"capabilities"
 			{
 				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
 			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"show_in_armory" "1"
-			"baseitem"		"1"
+			"loadondemand" "1"
+			"propername" "1" 
+			"baseitem"	"1"
+			"show_in_armory"	"1"
+			"item_type_name"	"base item"
+			"item_name"	"Base melee item"
+			"item_description"	""
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"2"
-			"equip_region"		"disconnected_floating_item"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
 			"used_by_classes"
 			{
 				"civilian"	"1"
 			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+			}
 		}
 		"9036"
 		{
@@ -23110,64 +23114,6 @@ Fires....... something"
 				}
 			}
 		}
-		"9421"
-		{
-			"name"	"TFC Umbrella"
-			"item_class"	"tf_weapon_tfc_umbrella"
-			"baseitem" "1"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_TFC_Umbrella"
-			"item_name"	"#TF_Weapon_TFC_Umbrella"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_umbrella"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_models/v_umbrella_civilian.mdl"
-			"model_world"	"models/weapons/w_models/w_umbrella.mdl"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"civilian"	"1"
-			}
-			"attributes"
-			{
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"51" 
-				}
-				"mod soldier buff type"
-				{
-					"attribute_class"	"set_buff_type"
-					"value"	"1"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.70"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
 		"850"
 		{
 			"name"			"Deflector"
@@ -23291,40 +23237,41 @@ Fires....... something"
 	
 		"9150"
 		{
-			"craft_class"	""
-			"baseitem"		"1"
-			"enabled"	"1"
+			"name"	"Base Secondary Item Civ"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
 			"item_class"	"tf_wearable"
-			"craft_material_type"	"weapon"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
 			"capabilities"
 			{
 				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
 			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"baseitem"		"1"
+			"loadondemand" "1"
+			"propername" "1" 
+			"baseitem"	"1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Wearable"
-			"item_name"	"Base Secondary Item"
+			"item_type_name"	"base item"
+			"item_name"	"Base secondary item"
+			"item_description"	""
 			"item_slot"	"secondary"
-			"item_quality"		"unique"
 			"equip_region"		"disconnected_floating_item"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
 			"used_by_classes"
 			{
 				"civilian"	"1"
 			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
+			"attributes"
+			{
+			}
 		}
 		"30474"
 		{
@@ -23422,51 +23369,6 @@ Fires....... something"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"xifier_class_remap"		"flamethrower"
-		}
-		"9151"
-		{
-			"craft_class"	""
-			"baseitem"		"1"
-			"enabled"	"1"
-			"item_class"	"tf_weapon_pistol"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"#TF_Weapon_Pistol"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"anim_slot"	"melee"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
-			"model_player"	"models/weapons/v_models/v_pistol_civilian.mdl"
-			"model_world"	"models/weapons/w_models/w_pistol.mdl"
-			"used_by_classes"
-			{
-				"civilian"	"1"
-			}
-			"static_attrs"
-			{
-				"weapon_stattrak_module_scale"			"0.723"
-				"min_viewmodel_offset"				"10 0 -10"
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
 		}
 		"9152"
 		{
