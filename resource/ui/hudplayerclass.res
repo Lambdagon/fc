@@ -283,6 +283,76 @@
 				"origin_z"		"-82"
 				"origin_z_minmode"	"-52"
 			}
+			"Antlion"
+			{
+				"fov"			"20"
+				"angles_x"		"-10"
+				"angles_x_minmode"	"0"
+				"angles_y"		"168"
+				"angles_z"		"0"
+				"origin_x"		"140"
+				"origin_x_minmode"	"160"
+				"origin_y"		"-2"
+				"origin_y_minmode"	"-7"
+				"origin_z"		"-82"
+				"origin_z_minmode"	"-52"
+			}
+			"John"
+			{
+				"fov"			"20"
+				"angles_x"		"-10"
+				"angles_x_minmode"	"0"
+				"angles_y"		"168"
+				"angles_z"		"0"
+				"origin_x"		"140"
+				"origin_x_minmode"	"160"
+				"origin_y"		"-2"
+				"origin_y_minmode"	"-7"
+				"origin_z"		"-82"
+				"origin_z_minmode"	"-52"
+			}
+			"Mercenary"
+			{
+				"fov"			"20"
+				"angles_x"		"-10"
+				"angles_x_minmode"	"0"
+				"angles_y"		"168"
+				"angles_z"		"0"
+				"origin_x"		"140"
+				"origin_x_minmode"	"160"
+				"origin_y"		"-2"
+				"origin_y_minmode"	"-7"
+				"origin_z"		"-82"
+				"origin_z_minmode"	"-52"
+			}
+			"ZombieFast"
+			{
+				"fov"			"20"
+				"angles_x"		"-10"
+				"angles_x_minmode"	"0"
+				"angles_y"		"168"
+				"angles_z"		"0"
+				"origin_x"		"140"
+				"origin_x_minmode"	"160"
+				"origin_y"		"-2"
+				"origin_y_minmode"	"-7"
+				"origin_z"		"-82"
+				"origin_z_minmode"	"-52"
+			}
+			"Combine"
+			{
+				"fov"			"20"
+				"angles_x"		"-10"
+				"angles_x_minmode"	"0"
+				"angles_y"		"168"
+				"angles_z"		"0"
+				"origin_x"		"140"
+				"origin_x_minmode"	"160"
+				"origin_y"		"-2"
+				"origin_y_minmode"	"-7"
+				"origin_z"		"-82"
+				"origin_z_minmode"	"-52"
+			}
 		}
 	}
 
