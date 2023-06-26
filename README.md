@@ -1,15 +1,12 @@
-# tf_coop_lambda
-Lambda Fortress: Community Edition
+# Lambda Fortress: Community Edition
 
-LF:CE is a modified version of Lambda Fortress: Extended to have more features, fixes, new weapons, support
+LF:CE is a modified version of Lambda Fortress: Extended to have more features, fixes, new weapons, custom classes, grenades, 4 team mode, and more!
 
-Fixes include:
-Weapon improvements 
-Map improvements
-Episodic tweaks
-Improved Main Menu
+# TO INSTALL REFER TO THIS TUTORIAL 
+
+https://github.com/Lambdagon/tf_coop_lambda/wiki/How-to-install-LF:CE 
 
 
-Because this project is more community based anyone can submit additions/modifications to be added
+Anyone is allowed to contribute towards this project
 
-NOTE: Lambda Fortress: Community Edition is not affiliated with Concussion Studios or Nicknine, this is a community-made mod. Get it?
+NOTE: Lambda Fortress: Community Edition is not affiliated with Concussion Studios or Nicknine, this is a community-made mod.
