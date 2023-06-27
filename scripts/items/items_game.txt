@@ -18770,7 +18770,8 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}"9021"
+		}
+		"9021"
 		{
 			"name"	"HL2 Crowbar"
 			"prefab"	"weapon_melee_allclass"
@@ -25763,7 +25764,7 @@ Fires....... something"
 		}
 		"9141"
 		{
-			"name"	"Paper SOldier Playermodel"
+			"name"	"Paper Soldier Playermodel"
 			"first_sale_date"	"2012/12/20"
 			"prefab"	"valve base_misc"
 			"hidden"	"0"
@@ -29924,6 +29925,96 @@ Fires....... something"
 			
 			"mouse_pressed_sound"	"ui/item_robot_arm_pickup.wav"
 			"drop_sound"		"ui/item_robot_arm_drop.wav"
+		}
+		
+		"9801"
+		{
+			"name"	"Minecraft Weapon"
+			"item_class"	"tf_weapon_club"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"minecraft_kukri"
+			"item_iconname"	"minecraft"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Club"
+			"item_description"	"1 stick, two ingots, and a lot of glue."
+			"item_name"	"Pixel Punisher"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/minecraft/c_machete"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models\weapons\c_models\minecraft\c_machete.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"inspect_panel_dist" 				"45"			
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"				
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.07"
+				}
+				"dmg from ranged reduced passive"
+				{
+					"attribute_class" "dmg_from_ranged"
+					"value" "0.1"
+				}
+				"dmg from melee reduced"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"0.1"
+				}
+				"dmg taken from crit reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_crit"
+					"value"	"0.3"
+				}
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"2"
+				}
+				//"crit mod disabled"
+				//{
+				//	"attribute_class"	"mult_crit_chance"
+				//	"value"	"1"
+				//}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"-85"
+				}
+				
+				
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_melee_miss"		"Weapon_Crowbar.Miss"
+				"sound_burst"			"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 			
 		"30570"
@@ -39375,6 +39466,18 @@ Fires....... something"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
+		"10024"
+		{
+			"name"	"dmg from ranged reduced passive"
+			"attribute_class"	"dmg_from_melee"
+			"description_string"	"s1% damage from ranged sources"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"armory_desc" "on_wearer"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+
 	}
 	"attribute_controlled_attached_particles"
 	{
