@@ -28711,13 +28711,13 @@ Fires....... something"
 		}
 		"9782"
 		{
-			"name"						"M1 GARAND"
+			"name"						"M1 GARAND SNIPER"
 			"prefab"					"weapon_sniperrifle"
 			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_revolver"
 			"item_quality"		"unique"
-			"item_logname"				"hunterrifle"
-			"item_iconname"				"hunterrifle"
+			"item_logname"				"garand_sniper"
+			"item_iconname"				"garand"
 			"item_type_name"			"Rifle"
 			"item_name"					"M1 Garand"
 			"propername"				"1"
@@ -28739,7 +28739,49 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"				"1.3"
 				}
+				"increased jump height from weapon"
+				{
+					"attribute_class"	"mod_jump_height_from_weapon"
+					"value"				"1.15"
+				}
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"				"1.15"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"				"1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.9"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				
 			}
+			
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"sniper"	"scenes\player\sniper\low\taunt01.vcd"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"taunt_concept"	"TLK_TAUNT_PRIMARY"
+				}
+			}
+			
 			"visuals"
 			{
 				"sound_single_shot" "Weapon_M1.Single"
@@ -28753,8 +28795,8 @@ Fires....... something"
 			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_revolver"
 			"item_quality"		"unique"
-			"item_logname"				"hunterrifle"
-			"item_iconname"				"hunterrifle"
+			"item_logname"				"garand_soldier"
+			"item_iconname"				"garand"
 			"item_type_name"			"Rifle"
 			"item_name"					"M1 Garand"
 			"item_slot"					"primary"
@@ -29831,8 +29873,8 @@ Fires....... something"
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Character"
-			"item_name"	"Self-Proclaimed Ninja"
+			"item_type_name"	"Self-Proclaimed Ninja"
+			"item_name"	"Classic Man"
 			"item_description"	"Will do anything it takes to get War Paint 
 			support for the Classic.
 			Model by DudeTheNinja"
