@@ -356,3 +356,14 @@ Rule PlayerPainJohn
 	criteria ConceptPain IsJohn
 	Response PlayerPainJohn
 }
+
+Response PlayerCombineJohn
+{
+	speak "player\john\johncombine01.wav"
+	speak "player\john\johncombine02.wav"
+}
+Rule PlayerCombineJohn
+{
+	criteria ConceptPlayerCombine IsJohn
+	Response PlayerCombineJohn
+}
