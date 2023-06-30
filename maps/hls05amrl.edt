@@ -1,4 +1,4 @@
-hls03amrl
+hls05amrl
 {
 	entity
 	{
@@ -11,6 +11,17 @@ hls03amrl
 				edt_landmark "hls04amrltohls05amrl"
 				spawnflags "6"
 				startdisabled "1"
+			}
+		}
+		
+		edit {classname "trigger_once" origin "8489 12119.5 332.5" values {targetname "tentactivate"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "0"
+				OnMapSpawn "tentactivate,AddOutput,OnTrigger tentacle_thrash:BeginSequence::0:-1,0,-1"
+				OnMapSpawn "tentactivate,AddOutput,OnTrigger tentacle_thrash:CancelSequence::1:-1,0,-1"
+				OnMapSpawn "talking_barney2s,AddOutput,OnEndSequence tent_barney2:SetHealth:0:5:-1,0,-1"
 			}
 		}
 	}
