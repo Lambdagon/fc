@@ -21,8 +21,8 @@
 		
 		"model"
 		{
-			"modelname"	"models/humans/group01/male_07.mdl"
-			"modelname_hwm"	"models/humans/group01/male_07.mdl"
+			"modelname"	"models/player/john/classic_male_07_citizen.mdl"
+			"modelname_hwm"	"models/player/john/classic_male_07_citizen.mdl"
 			"skin" "0"
 			"angles_x" "0"
 			"angles_y" "180"

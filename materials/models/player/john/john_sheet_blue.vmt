@@ -1,0 +1,48 @@
+VertexLitGeneric
+{
+	$basetexture "models/player/john/john_sheet_blue"
+
+	$nocull 1
+
+	$phong 1
+	$phongfresnelranges "[0.12 0.25 0.45]"
+	$halflambert 1
+	$phongalbedotint 1
+	$phongexponent 2
+	$phongboost 1.1
+
+	$rimlight 1
+	$rimlightexponent 2
+	$rimlightboost 0.4
+
+	$ambientocclusion 1
+	$model 1
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
