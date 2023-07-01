@@ -29986,7 +29986,109 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-			
+		"9802"  
+		{
+			"name"	"John CSS AK47"
+			"item_class"	"tf_weapon_syringegun_medic"
+			"baseitem" "0"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"AK47"
+			"item_name"	"The Kalashnikov Kommander"
+			"item_slot"	"primary"
+			"item_description"	"Is this a beta reference?"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_ak"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_rif_ak47.mdl"
+			"model_player"	"models/weapons/cstrike/c_rif_ak47.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"john"				"1"
+			}
+			"particle_suffix"		"ar2"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"	"1"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.75"
+				}
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.50"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.50"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"				"0.50"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_AK47.Single"
+				"sound_double_shot"		"Weapon_AK47.Single"
+				"sound_burst"			"Weapon_AK47.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"Weapon_AR2.Reload"
+				"sound_special1"		"Weapon_AK47.Single"
+
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_AR2"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_HL2MP_IDLE_CROUCH_AR2"
+					"ACT_MP_RUN_PRIMARY"	"ACT_HL2MP_RUN_AR2"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_HL2MP_JUMP_AR2"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_HL2MP_WALK_CROUCH_AR2"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_HL2MP_JUMP_AR2"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_HL2MP_JUMP_AR2"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_HL2MP_JUMP_AR2"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_HL2MP_AIRWALK_AR2"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_HL2MP_SWIM_AR2"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_HL2MP_ATTACK_AR2"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_HL2MP_ATTACK_AR2"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_HL2MP_ATTACK_AR2"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_HL2MP_ATTACK_AR2"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
+				}
+			}
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
