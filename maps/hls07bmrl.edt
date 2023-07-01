@@ -8,6 +8,8 @@ hls03amrl
 		create {classname "info_player_start" origin "155 -725 -180" values {parentname "train"} }
 		create {classname "trigger_teleport" origin "155 -725 -180" values {target "startspawn" spawnflags "1" model "*1"} }
 		create {classname "info_teleport_destination" origin "155 -725 -180" values {targetname "startspawn" parentname "train"} }
+		delete {targetname "timetrain1"}
+		delete {targetname "trainlift2-2"}
 		
 		edit {classname "trigger_changelevel"
 			values
