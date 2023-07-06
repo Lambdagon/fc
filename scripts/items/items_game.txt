@@ -19367,6 +19367,19 @@
 			{
 				"john"				"1"
 			}
+			"attributes"
+			{
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.5"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.6"
+				}
+			}
 			"particle_suffix"		"shotgun"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -20610,14 +20623,19 @@
 			"baseitem"	"1"
 			"attributes"
 			{
-				"clip size bonus"
+				"clip size bonus HIDDEN"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.8"
 				}
-				"fire rate bonus"
+				"fire rate bonus HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.75"
+				}
+				"spread penalty HIDDEN"
+				{
+					"attribute_class"	"mult_spread_scale"
 					"value"	"0.75"
 				}
 			}
@@ -20718,14 +20736,23 @@
 				"clip size bonus"
 				{
 				"attribute_class"	"mult_clipsize"
-				"value"	"1.8"
+				"value"	"1.5"
+				}
+				"weapon spread bonus"
+				{
+				"attribute_class"	"mult_spread_scale"
+				"value"	"0.2"
+				}
+				"maxammo secondary reduced"
+				{
+				"attribute_class"	"mult_spread_scale"
+				"value"	"0.90"
 				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
-
 			}
 		}
 		"9100"
@@ -22054,6 +22081,11 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"	"1"
+				}
 				"clip size penalty HIDDEN"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -22115,63 +22147,6 @@
 					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
 				}
 			}
-		}	
-
-		"9405"
-		{
-			"name"	"Your Buddy"
-			"first_sale_date"	"2012/12/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"npc_citizen"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"show_in_armory"	"1"
-			"item_type_name"	"Citizen Spawner"
-			"item_name"	"Your Buddy"
-			"item_description"	"Have you ever felt alone? Introducing the latest Mann Co. promotional item 'Your Buddy'!
-			NOTE: This item is sold to steam users who have Half-Life 2 or Garry's Mod in their library."
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"static_attrs"
-			{
-			}
-			"attributes"
-			{
-				"move speed bonus HIDDEN"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value" "1.1"
-				}
-			}	
-			"used_by_classes"
-			{
-				"heavy" "1"
-				"engineer" "1"
-				"demoman" "1"
-				"pyro" "1"
-				"sniper" "1"
-				"soldier" "1"
-				"spy" "1"
-				"scout" "1"
-				"medic" "1"
-			}
-			"mouse_pressed_sound"	"tfc/misc/teleport_in.wav"
-			"drop_sound"	"tfc/misc/teleport_in.wav"
 		}	
 		"9406"
         {
@@ -26356,20 +26331,30 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value" "1.25"
 				}
+			        "Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.5"
+				}
+			        "rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value"	"0.40"
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.25"
 				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.20"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0"
-				}
-			        "Blast radius increased"
-				{
-					"attribute_class"	"mult_explosion_radius"
-					"value"	"1.5"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -30029,20 +30014,20 @@ Fires....... something"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class"	"mod_pierce_resists_absorbs"
-					"value"	"1"
-				}
 				"clip size penalty HIDDEN"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.75"
 				}
+				"mark for death"
+				{
+					"attribute_class" 	"mark_for_death"
+					"value" "1"
+				}
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.50"
+					"value" "2.00"
 				}
 				"override projectile type"
 				{
@@ -30095,6 +30080,100 @@ Fires....... something"
 					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
 				}
 			}
+		}	
+		"9803"
+        {
+            "name"    "John CSS TMP"
+            "item_class"    "tf_weapon_smg"
+            "baseitem" "0"
+            "tags"
+            {
+                "can_deal_damage"            "1"
+                "can_deal_mvm_penetration_damage"    "1"
+                "can_deal_long_distance_damage"    "1"
+            }
+            "item_type_name"    "TMP"
+            "item_name"    "The Schmidt"
+			"item_description"	"Definitely tactical."
+            "item_slot"    "secondary"
+            "show_in_armory"    "1"
+            "image_inventory"    "backpack/weapons/c_models/c_357"
+            "image_inventory_size_w"        "128"
+            "image_inventory_size_h"        "82"
+            "model_world"    "models/weapons/w_smg_tmp.mdl"
+            "model_player"    "models/weapons/cstrike/c_smg_tmp.mdl"
+            "attach_to_hands" "2"
+            "inspect_panel_dist" "40"
+            "item_quality"    "unique"
+            "propername"    "1"
+            "min_ilevel"    "5"
+            "max_ilevel"    "5"
+            "used_by_classes"
+            {
+                "john"                "1"
+            }
+            "particle_suffix"        "ar2"
+            "mouse_pressed_sound"    "ui/item_heavy_gun_pickup.wav"
+            "drop_sound"        "ui/item_heavy_gun_drop.wav"
+            "attributes"
+            {
+				"revolver use hit locations"
+				{
+				"attribute_class"	"set_weapon_mode"
+				"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+				"attribute_class"	"mult_spread_scale"
+				"value"	"0.10"
+				}
+				"clip size bonus"
+				{
+				"attribute_class"	"mult_clipsize"
+				"value"	"1.50"
+				}
+				"fire rate bonus"
+				{
+				"attribute_class"	"mult_postfiredelay"
+				"value"	"0.70"
+				}
+				"damage penalty"
+				{
+				"attribute_class"	"mult_dmg"
+				"value"	"0.5"
+				}
+				"crit mod disabled"
+				{
+				"attribute_class"	"mult_crit_chance"
+				"value"	"0"
+				}
+            }
+            "static_attrs"
+            {
+                "min_viewmodel_offset"        "10 0 -9"
+            }
+            "visuals"
+            {
+                "sound_single_shot"        "Weapon_TMP.Single"
+                "sound_double_shot"        "Weapon_TMP.Single"
+                "sound_burst"            "Weapon_TMP.Single"
+                "sound_empty"            "HL2_Weapon_Shotgun.Empty"
+                "sound_reload"            "Weapon_AR2.Reload"
+                "sound_special1"        "Weapon_TMP.Single"
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_AIRWALK_SMG1"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
+				}
+            }
 		}
 		"30570"
 		{
@@ -31461,6 +31540,16 @@ Fires....... something"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
+		"10026"
+		{
+			"name"	"clip size bonus HIDDEN"
+			"attribute_class"	"mult_clipsize"
+			"description_string"	"#Attrib_ClipSize_Positive"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		"4"
 		{
 			"name"	"clip size bonus"
@@ -32522,6 +32611,16 @@ Fires....... something"
 			"description_format"	"value_is_inverted_percentage"
 			"hidden"	"0"
 			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10027"
+		{
+			"name"	"weapon spread bonus HIDDEN"
+			"attribute_class"	"mult_spread_scale"
+			"description_string"	"#Attrib_Spread_Positive"
+			"description_format"	"value_is_inverted_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
 		"106"
