@@ -14801,6 +14801,11 @@
 				"engineer" "1"
 				"pyro" "1"
 				"combine"	"1"
+				"antlion" "1"
+				"john" "1"
+				"zombiefast" "1"
+				"mercenary" "1"
+				"civilian" "1"
 			}
 			"attributes"
 			{
@@ -14857,6 +14862,11 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+				"antlion" "1"
+				"john" "1"
+				"zombiefast" "1"
+				"mercenary" "1"
+				"civilian" "1"
 			}
 			"attributes"
 			{
@@ -14970,6 +14980,11 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+				"antlion" "1"
+				"john" "1"
+				"zombiefast" "1"
+				"mercenary" "1"
+				"civilian" "1"
 			}
 			"attributes"
 			{
@@ -19119,7 +19134,7 @@
 			"model_world"	"models/weapons/w_crowbar.mdl"
 			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"baseitem"	"1"
 			"propername"	"1"
 			"min_ilevel"	"5"
@@ -19652,6 +19667,9 @@
 				"engineer" "1"
 				"pyro" "1"
 				"civilian"	"1"
+				"antlion" "1"
+				"zombiefast" "1"
+				"mercenary" "1"
 			}
 			"attributes"
 			{
@@ -30019,10 +30037,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.75"
 				}
-				"mark for death"
+				"restore health on kill"
 				{
-					"attribute_class" 	"mark_for_death"
-					"value" "1"
+					"attribute_class" 	"restore_health_on_kill"
+					"value" "5"
 				}
 				"damage bonus"
 				{
@@ -30037,11 +30055,6 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.50"
-				}
-				"crits_become_minicrits"
-				{
-					"attribute_class"	"crits_become_minicrits"
 					"value"				"0.50"
 				}
 			}
@@ -30156,7 +30169,7 @@ Fires....... something"
             {
                 "sound_single_shot"        "Weapon_TMP.Single"
                 "sound_double_shot"        "Weapon_TMP.Single"
-                "sound_burst"            "Weapon_TMP.Single"
+                "sound_burst"            "Weapon_TMP.SingleCrit"
                 "sound_empty"            "HL2_Weapon_Shotgun.Empty"
                 "sound_reload"            "Weapon_AR2.Reload"
                 "sound_special1"        "Weapon_TMP.Single"
@@ -30255,7 +30268,7 @@ Fires....... something"
             {
                 "sound_single_shot"        "Weapon_M249.Single"
                 "sound_double_shot"        "Weapon_M249.Single"
-                "sound_burst"            "Weapon_M249.Single"
+                "sound_burst"            "Weapon_M249.SingleCrit"
                 "sound_empty"            "HL2_Weapon_Shotgun.Empty"
                 "sound_reload"            "Weapon_AR2.Reload"
                 "sound_special1"        "Weapon_M249.Single"
@@ -30282,7 +30295,7 @@ Fires....... something"
 				}
             }
 		}
-		"9804"
+		"9805"
 		{
 			"name"	"Placeholder"
 			"item_class"	"tf_wearable"
@@ -30314,6 +30327,91 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+		}
+		"9806"
+		{
+			"name"	"John Stunstick"
+			"item_class"	"saxxy"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Stunstick"
+			"item_name"	"The Electric Batty"
+			"item_description"	"Taken off a Metro Cop unit's corpse."
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_stunstick"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_stunstick.mdl"	
+			"model_world"	"models/weapons/w_stunbaton.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"john"	"1"
+				
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
+				"sound_melee_miss"		"Weapon_StunStick.Melee_Miss"
+				"sound_burst"		"Weapon_StunStick.Swing"
+			"animation_replacement"
+			{
+					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_RUN_MELEE"	"ACT_HL2MP_RUN_MELEE"
+					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_SWIM_MELEE"
+					"ACT_MP_SWIM_IDLE_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_HL2MP_WALK_CROUCH_MELEE"
+					"ACT_MP_JUMP_START_MELEE"	"ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_JUMP_FLOAT_MELEE" "ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_AIRWALK_MELEE"	"ACT_HL2MP_AIRWALK_MELEE"
+				}		
+			}
+            "attributes"
+            {
+				"slow enemy on hit major"
+				{
+				"attribute_class"	"mult_onhit_enemyspeed_major"
+				"value"	"3"
+				}
+				"damage bonus"
+				{
+				"attribute_class"	"mult_dmg"
+				"value"	"1.2"
+				}
+				"fire rate penalty"
+				{
+				"attribute_class"	"mult_postfiredelay"
+				"value"	"1.8"
+				}
+				"crit mod disabled"
+				{
+				"attribute_class"	"mult_crit_chance"
+				"value"	"0"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"30570"
 		{
