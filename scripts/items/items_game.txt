@@ -30112,11 +30112,6 @@ Fires....... something"
             "drop_sound"        "ui/item_heavy_gun_drop.wav"
             "attributes"
             {
-				"revolver use hit locations"
-				{
-				"attribute_class"	"set_weapon_mode"
-				"value"	"1"
-				}
 				"weapon spread bonus"
 				{
 				"attribute_class"	"mult_spread_scale"
@@ -30183,7 +30178,8 @@ Fires....... something"
             }
             "item_type_name"    "M249-SAW"
             "item_name"    "The Mountain Saw"
-			"item_description"	"Found this thing in the back of a dumpster."
+			"item_description"	"     This weapons uses secondary ammo
+			  Found this thing in the back of a dumpster."
             "item_slot"    "primary"
             "show_in_armory"    "1"
             "image_inventory"    "backpack/weapons/c_models/c_m249"
@@ -30488,6 +30484,105 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"9808"  
+		{
+			"name"	"John CSS Deagle"
+			"item_class"	"tf_weapon_revolver"
+			"baseitem" "0"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Desert Eagle.50 AE"
+			"item_name"	"The Johnathan Eagle"
+			"item_slot"	"primary"
+			"item_description"	"    This weapons uses secondary ammo
+			     This right here'll mess some shit up!"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_cssdeagle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_pist_deagle.mdl"
+			"model_player"	"models/weapons/cstrike/c_pist_deagle.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"john"				"1"
+			}
+			"particle_suffix"		"ar2"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"	"1"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "0.70"
+				}
+				"clip size bonus"
+				{
+					"attribute_class" 	"mult_clipsize"
+					"value" "1.20"
+				}
+				"crit_dmg_falloff"
+				{
+					"attribute_class" 	"crit_dmg_falloff"
+					"value" "1"
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"0.40"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_DEagle.Single"
+				"sound_double_shot"		"Weapon_DEagle.Single"
+				"sound_burst"			"Weapon_DEagle.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"Weapon_AR2.Reload"
+				"sound_special1"		"Weapon_DEagle.Single"
+
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_357"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_357"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_357"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_357"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_AIRWALK_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					"ACT_MP_ATTACK_CROUCH_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					"ACT_MP_ATTACK_SWIM_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					"ACT_MP_ATTACK_AIRWALK_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					"ACT_MP_RELOAD_STAND_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_CROUCH_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_SWIM_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+				}
+			}
 		}
 		"30570"
 		{
