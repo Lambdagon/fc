@@ -30712,6 +30712,82 @@ Fires....... something"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
+		
+		"9811"
+		{
+			"name" "Spy Combat Pistol WIP"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"Combat Pistol WIP"
+			"item_description"	"If you kill them quick enough, there's no need to be sneaky."
+			"item_logname"	"combat_pistol"
+			"item_iconname"	"pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"selfmade"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/weapons/w_models/w_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/v_models/v_pistol_engineer.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+                "spy" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.3"
+				}
+				"cannot cloak"
+				{
+					"attribute_class" "mod_no_cloak"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Pistol.Single"
+				"sound_burst"			"HL2_Weapon_Pistol.NPC_Single"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -40210,9 +40286,27 @@ Fires....... something"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"positive"
-			"stored_as_integer"	"0"
 		}
-		
+		"10027"
+		{
+			"name"	"non sniper can scope"
+			"attribute_class"	"mod_can_scope"
+			"description_string"	"Can scope"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}
+		"10028"
+		{
+			"name"	"cannot cloak"
+			"attribute_class"	"mod_no_cloak"
+			"description_string"	"Cannot cloak"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+			"armory_desc" "on_wearer"
+		}
 	}
 	"attribute_controlled_attached_particles"
 	{
