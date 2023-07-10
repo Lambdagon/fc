@@ -30633,15 +30633,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"attach particle effect"
+				{
+					"atribute_class"	"set_attached_particle"
+					"value"	"4"
+				}
 				"revolver use hit locations"
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"attach particle effect"
+				"weapon spread bonus"
 				{
-					"atribute_class"	"set_attached_particle"
-					"value"	"4"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.3"
 				}
 			}
 			"visuals"
@@ -30656,7 +30661,7 @@ Fires....... something"
 		"9810"
 		{
 			"name" "Test Primary SMG"
-			"enabled"	"0"
+			"enabled"	"1"
 			"item_class"	"tf_weapon_smg_primary"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -30670,7 +30675,7 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"TF_WEAPON_SMG_PRIMARY"
+			//"base_item_name"	"TF_WEAPON_SMG_PRIMARY"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"TEST SMG Primary"
