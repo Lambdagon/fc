@@ -30585,6 +30585,77 @@ Fires....... something"
 				}
 			}
 		}
+		
+		"9809"
+		{
+			"name" "Pistol Headshot TEST"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"TEST Headshot Pistol"
+			"item_description"	"I AM TESTING SOMETHING!"
+			"item_logname"	"test_headshot_pistol"
+			"item_iconname"	"pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"selfmade"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+                "engineer" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"attach particle effect"
+				{
+					"atribute_class"	"set_attached_particle"
+					"value"	"4"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Pistol.Single"
+				"sound_burst"			"HL2_Weapon_Pistol.NPC_Single"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -40075,7 +40146,17 @@ Fires....... something"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
-
+		"10026"
+		{
+			"name"	"weapon can headshot"
+			"attribute_class"	"allow_headshot"
+			"description_string"	"#Attrib_RevolverUseHitLocations"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		
 	}
 	"attribute_controlled_attached_particles"
 	{
