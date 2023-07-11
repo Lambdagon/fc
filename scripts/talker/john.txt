@@ -227,6 +227,7 @@ Response PlayerLostPointJohn
 	speak "player\john\johnlosepoint01.wav"
 	speak "player\john\johnlosepoint02.wav"
 	speak "player\john\johnlosepoint03.wav"
+	speak "player\john\johnlosepoint04.wav"
 }
 Rule PlayerLostPointJohn
 {
@@ -367,3 +368,91 @@ Rule PlayerCombineJohn
 	criteria ConceptPlayerCombine IsJohn
 	Response PlayerCombineJohn
 }
+
+Response PlayerStriderJohn
+{
+	speak "player\john\johnstrider01.wav"
+}
+Rule PlayerStriderJohn
+{
+	criteria ConceptPlayerStrider IsJohn
+	Response PlayerStriderJohn
+}
+
+Response PlayerZombieJohn
+{
+	speak "player\john\johnzombies01.wav"
+	speak "player\john\johnzombies02.wav"
+}
+Rule PlayerZombieJohn
+{
+	criteria ConceptPlayerZombie IsJohn
+	Response PlayerZombieJohn
+}
+
+Response PlayerHeadcrabJohn
+{
+	speak "player\john\johnheadcrabs01.wav"
+	speak "player\john\johnheadcrabs02.wav"
+}
+Rule PlayerHeadcrabJohn
+{
+	criteria ConceptPlayerHeadcrab IsJohn
+	Response PlayerHeadcrabJohn
+}
+
+Response PlayerTrapJohn
+{
+	speak "player\john\johntrap01.wav"
+	speak "player\john\johntrap02.wav"
+}
+Rule PlayerTrapJohn
+{
+	criteria ConceptPlayerTrap IsJohn
+	Response PlayerTrapJohn
+}
+
+Response PlayerAmmoJohn
+{
+	speak "player\john\johnammo01.wav"
+	speak "player\john\johnammo02.wav"
+	speak "player\john\johnammo03.wav"
+	speak "player\john\johnammo04.wav"
+	speak "player\john\johnammo05.wav"
+}
+Rule PlayerAmmoJohn
+{
+	criteria ConceptPlayerAmmo IsJohn
+	Response PlayerAmmoJohn
+}
+
+Response PlayerHealthJohn
+{
+	speak "player\john\johnhealth01.wav"
+	speak "player\john\johnhealth02.wav"
+	speak "player\john\johnhealth03.wav"
+	speak "player\john\johnhealth04.wav"
+	speak "player\john\johnhealth05.wav"
+}
+Rule PlayerHealthJohn
+{
+	criteria ConceptPlayerHealth IsJohn
+	Response PlayerHealthJohn
+}
+Response PlayerNoJohn
+{
+	speak "player\john\johnno01.wav"
+	speak "player\john\johnno02.wav"
+	speak "player\john\johnno03.wav"
+	speak "player\john\johnno04.wav"
+	speak "player\john\johnno05.wav"
+	speak "player\john\johnno06.wav"
+	speak "player\john\johnno07.wav"
+	speak "player\john\johnno08.wav"
+}
+Rule PlayerNoJohn
+{
+	criteria ConceptPlayerNo IsJohn
+	Response PlayerNoJohn
+}
+
