@@ -136,6 +136,72 @@ Rule PlayerJeersEnforcer
 	Response PlayerJeersEnforcer
 }
 
+Response PlayerActivateChargeEnforcer
+{
+	speak "Enforcer.UberMe01"
+	speak "Enforcer.UberMe02"
+}
+Rule PlayerActivateChargeEnforcer
+{
+	criteria ConceptPlayerActivateCharge IsEnforcer
+	Response PlayerActivateChargeEnforcer
+}
+
+Response PlayerSentryAheadEnforcer
+{
+	speak "Enforcer.SentryAhead01"
+	speak "Enforcer.SentryAhead02"
+}
+Rule PlayerSentryAheadEnforcer
+{
+	criteria ConceptPlayerSentryAhead IsEnforcer
+	Response PlayerSentryAheadEnforcer
+}
+
+Response PlayerYesEnforcer
+{
+	speak "Enforcer.Yes01"
+	speak "Enforcer.Yes02"
+}
+Rule PlayerYesEnforcer
+{
+	criteria ConceptPlayerYes  IsEnforcer
+	Response PlayerYesEnforcer
+}
+
+Response PlayerThanksEnforcer
+{
+	speak "Enforcer.Thanks01"
+	speak "Enforcer.Thanks02"
+}
+Rule PlayerThanksEnforcer
+{
+	criteria ConceptPlayerThanks IsEnforcer
+	Response PlayerThanksEnforcer
+}
+
+Response PlayerPositiveEnforcer
+{
+	speak "Enforcer.Positive01"
+}
+Rule PlayerPositiveEnforcer
+{
+	criteria ConceptPlayerPositive IsEnforcer
+	Response PlayerPositiveEnforcer
+}
+
+Response PlayerNoEnforcer
+{
+	speak "Enforcer.No01"
+	speak "Enforcer.No02"
+	speak "Enforcer.No03"
+}
+Rule PlayerNoEnforcer
+{
+	criteria ConceptPlayerNo  IsEnforcer
+	Response PlayerNoEnforcer
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Auto Speech Pain
 //--------------------------------------------------------------------------------------------------------------
