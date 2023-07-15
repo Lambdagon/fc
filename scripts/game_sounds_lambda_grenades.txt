@@ -1,0 +1,432 @@
+// Channels
+//	CHAN_AUTO		= 0,
+//	CHAN_WEAPON		= 1,
+//	CHAN_VOICE		= 2,
+//	CHAN_ITEM		= 3,
+//	CHAN_BODY		= 4,
+//	CHAN_STREAM		= 5,		// allocate stream channel from the static or dynamic area
+//	CHAN_STATIC		= 6,		// allocate channel from the static area 
+// these can be set with "channel" "2" or "channel" "chan_voice"
+
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	// 3.9
+//	SNDLVL_55dB		= 55,	// 3.0
+//	SNDLVL_IDLE		= 60,	// 2.0
+//	SNDLVL_TALKING	= 60,	// 2.0
+//	SNDLVL_60dB		= 60,	// 2.0
+//	SNDLVL_65dB		= 65,	// 1.5
+//	SNDLVL_STATIC	= 66,	// 1.25
+//	SNDLVL_70dB		= 70,	// 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	// 0.8
+//	SNDLVL_80dB		= 80,	// 0.7
+//	SNDLVL_85dB		= 85,	// 0.6
+//	SNDLVL_90dB		= 90,	// 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	// 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140,	// 0.27
+//	SNDLVL_140dB	= 140,	// 0.2
+//	SNDLVL_150dB	= 150,	// 0.2
+//
+// ------------------------------------------------------------------------------------ //
+//
+// Grenades
+//
+// ------------------------------------------------------------------------------------ //
+"Weapon_Grenade.Timer"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"0.6"
+	"wave"			"weapons/hl2grenade_ticking.wav"
+}
+"Weapon_Grenade_Normal.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		"weapons/grenade_throw.wav"
+}
+"Weapon_Grenade.Beep"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/grenade_beep.wav"
+}
+"Weapon_Grenade.FinalBeep"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/grenade_finalbeep.wav"
+}
+"Weapon_Grenade.Disarm"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		")weapons/grenade_disarm.wav"
+}
+"Weapon_Grenade.PullPin"
+{
+	"channel"	"CHAN_ITEM"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"0.35"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_pin_pull1.wav"
+		"wave"		"weapons/grenade_pin_pull2.wav"
+		"wave"		"weapons/grenade_pin_pull3.wav"
+	}
+}
+// ------------------------------------------------------------------------------------ //
+// DET PACK GRENADE
+// ------------------------------------------------------------------------------------ //
+"Weapon_Grenade_Det_Pack.Plant"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/det_pack_plant.wav"
+}
+
+"Weapon_Grenade_Det_Pack.Explode"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_95dB"
+	"pitch"		"PITCH_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/det_pack_explode.wav"
+}
+
+"Weapon_Grenade_Det_Pack.Timer"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/det_pack_timer.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// NAIL GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Nail.Launch"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		")weapons/nail_grenade_launch.wav"
+}
+
+"Weapon_Grenade_Nail.Disarm"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		")weapons/nail_grenade_stop.wav"
+}
+
+"Weapon_Grenade_Nail.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/nail_grenade_shoot.wav"
+}
+
+"Weapon_Grenade_Nail.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_nail_impact1.wav"
+		"wave"		"weapons/grenade_nail_impact2.wav"
+		"wave"		"weapons/grenade_nail_impact3.wav"
+	}
+}
+
+
+// ------------------------------------------------------------------------------------ //
+// MIRV GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Mirv.Fuse"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"0.5"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/mirv_fuse.wav"
+}
+
+"Weapon_Grenade_Mirv.Swing"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"0.4"
+	"soundlevel"	"SNDLVL_74dB"
+	"wave"		"weapons/mirv_swing.wav"
+}
+
+"Weapon_Grenade_Mirv.Draw"
+{
+	"channel"	"CHAN_AUTO"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		".5"
+	"wave"		"weapons/draw_secondary.wav"
+}
+
+"Weapon_Grenade_Mirv.LeadIn"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"wave"		")weapons/grenade_MIRV_leadin.wav"
+}
+
+"Weapon_Grenade_Mirv.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		"weapons/grenade_throw.wav"
+}
+
+"Weapon_Grenade_Mirv.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_MIRV_impact1.wav"
+		"wave"		"weapons/grenade_MIRV_impact2.wav"
+		"wave"		"weapons/grenade_MIRV_impact3.wav"
+	}
+}
+
+"Weapon_Grenade_Mirv.ButtonPress"
+{
+    "channel"        "CHAN_AUTO"
+    "volume"        ".75"
+    "soundlevel"    "SNDLVL_95db"
+    "wave"        ")weapons/mirv_button_press.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// CONCUSSION GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Concussion.Explode"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_95dB"
+	"wave"		")weapons/grenade_conc_explode.wav"
+}
+
+"Weapon_Grenade_Concussion.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_conc_impact1.wav"
+		"wave"		"weapons/grenade_conc_impact2.wav"
+		"wave"		"weapons/grenade_conc_impact3.wav"
+	}
+}
+
+"Weapon_Grenade_Concussion.Armed"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_75dB"
+	"wave"		")weapons/grenade_conc_armed.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// HEAL GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Heal.Explode"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"wave"			"weapons/heal_explode.wav"
+}
+
+"Weapon_Grenade_Heal.LeadIn"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"wave"		")weapons/grenade_heal_leadin.wav"
+}
+
+"Weapon_Grenade_Heal.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_heal_impact1.wav"
+		"wave"		"weapons/grenade_heal_impact2.wav"
+		"wave"		"weapons/grenade_heal_impact3.wav"
+	}
+}
+
+// ------------------------------------------------------------------------------------ //
+// NAPALM GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Napalm.Fire"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"wave"		")weapons/napalm_fire.wav"
+}
+
+"Weapon_Grenade_Napalm.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_napalm_impact1.wav"
+		"wave"		"weapons/grenade_napalm_impact2.wav"
+		"wave"		"weapons/grenade_napalm_impact3.wav"
+	}
+}
+
+// ------------------------------------------------------------------------------------ //
+// GAS GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"BaseSmokeEffect.Sound"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"wave"		")weapons/gas_explode.wav"
+}
+
+"Weapon_Grenade_Gas.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_gas_impact1.wav"
+		"wave"		"weapons/grenade_gas_impact2.wav"
+		"wave"		"weapons/grenade_gas_impact3.wav"
+	}
+}
+
+"Weapon_Grenade_Gas.Open"
+{
+    "channel"        "CHAN_AUTO"
+    "volume"        ".5"
+    "soundlevel"    "SNDLVL_74db"
+    "wave"        ")weapons/gas_open.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// EMP GRENADE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Grenade_Emp.Explode"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+    "wave"		"weapons/grenade_EMP_explode.wav"
+}
+
+"Weapon_Grenade_Emp.Prime"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_75dB"
+	"wave"		")weapons/grenade_EMP_twist.wav"
+}
+
+"Weapon_Grenade_Emp.LeadIn"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_80dB"
+	"wave"		")weapons/grenade_EMP_leadin.wav"
+}
+
+"Weapon_Grenade_Emp.Bounce"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"soundlevel"	"SNDLVL_78dB"
+	"rndwave"
+	{
+		"wave"		"weapons/grenade_EMP_impact1.wav"
+		"wave"		"weapons/grenade_EMP_impact2.wav"
+		"wave"		"weapons/grenade_EMP_impact3.wav"
+	}
+}
+
+// ------------------------------------------------------------------------------------ //
+// Caltrop Grenade
+// ------------------------------------------------------------------------------------ //
+"Weapon_Grenade_Caltrop.Open"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_74dB"
+	"wave"			"weapons/beartrap_open.wav"
+}
+
+"Weapon_Grenade_Caltrop.Close"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_74dB"
+	"rndwave"
+	{
+		"wave"		"weapons/beartrap_close01.wav"
+		"wave"		"weapons/beartrap_close02.wav"
+		"wave"		"weapons/beartrap_close03.wav"
+	}
+}
+"Weapon_Grenade_Caltrop.Throw"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5"
+	"soundlevel"		"SNDLVL_74dB"
+	"wave"			"weapons/grenade_throw.wav"
+}
