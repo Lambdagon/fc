@@ -11,20 +11,16 @@
 			"local"			"tf/downloads"
 
 			"local"			"tf/tf2_textures.vpk"
-			"local"			"tf/tf2_sound_vo_spanish.vpk"
-			"local"			"tf/tf2_sound_vo_russian.vpk"
 			"local"			"tf/tf2_sound_vo_english.vpk"
 			"local"			"tf/tf2_sound_misc.vpk"
 			"local"			"tf/tf2_misc.vpk"
 
 			"dedicated"		"tf"			
-			"dedicated"			"tf/downloads"
-			"dedicated"		"tf/tf2_textures.vpk"
-			"dedicated"			"tf/tf2_sound_vo_russian.vpk"
-			"dedicated"			"tf/tf2_sound_vo_spanish.vpk"
-			"dedicated"		"tf/tf2_sound_vo_english.vpk"
-			"dedicated"		"tf/tf2_sound_misc.vpk"
-			"dedicated"		"tf/tf2_misc.vpk"
+			"dedicated"		"tf/downloads"
+			"dedicated"		"tf/tf2_textures_dir.vpk"
+			"dedicated"		"tf/tf2_sound_vo_english_dir.vpk"
+			"dedicated"		"tf/tf2_sound_misc_dir.vpk"
+			"dedicated"		"tf/tf2_misc_dir.vpk"
 		}
 	}
 
@@ -36,97 +32,10 @@
 		"paths"
 		{	
 			"dedicated"		"tf"
-			"dedicated"		"tf/tf2_textures.vpk"
-			"dedicated"		"tf/tf2_sound_vo_english.vpk"
-			"dedicated"		"tf/tf2_sound_misc.vpk"
-			"dedicated"		"tf/tf2_misc.vpk"
-		}
-	}
-	
-	"Half-Life 2: Episode Two"	[!$DEDICATED]
-	{
-		"appid"		"420"
-		"required"	"0"
-		
-		"paths"
-		{
-			"local"			"ep2"
-			"local"			"ep2/ep2_sound_vo_spanish.vpk"
-			"local"			"ep2/ep2_sound_vo_russian.vpk"
-			"local"			"ep2/ep2_sound_vo_english.vpk"
-			"local"			"ep2/ep2_pak.vpk"
-			
-			"dedicated"		"ep2"
-			"dedicated"		"ep2/ep2_sound_vo_english.vpk"
-			"dedicated"		"ep2/ep2_pak.vpk"
-		}
-	}
-
-	"Half-Life 2: Episode One"	[!$DEDICATED]
-	{
-		"appid"		"380"
-		"required"	"0"
-		
-		"paths"
-		{
-			"local"			"episodic"
-			"local"			"episodic/ep1_sound_vo_spanish.vpk"
-			"local"			"episodic/ep1_sound_vo_russian.vpk"
-			"local"			"episodic/ep1_sound_vo_english.vpk"
-			"local"			"episodic/ep1_pak.vpk"
-			
-			"dedicated"		"episodic"
-			"dedicated"		"episodic/ep1_sound_vo_english.vpk"
-			"dedicated"		"episodic/ep1_pak.vpk"
-		}
-	}
-
-	"Half-Life 2: Lost Coast"	[!$DEDICATED]
-	{
-		"appid"		"340"
-		"required"	"0"
-		
-		"paths"
-		{
-			"local"			"lostcoast"
-			"local"			"lostcoast/lostcoast_sound_vo_spanish.vpk"
-			"local"			"lostcoast/lostcoast_sound_vo_russian.vpk"
-			"local"			"lostcoast/lostcoast_sound_vo_english.vpk"
-			"local"			"lostcoast/lostcoast_pak.vpk"
-			
-			"dedicated"		"lostcoast"
-			"dedicated"		"lostcoast/lostcoast_sound_vo_english.vpk"
-			"dedicated"		"lostcoast/lostcoast_pak.vpk"
-		}
-	}
-
-	"Half-Life 2"	[$DEDICATED]
-	{
-		"appid"		"220"
-		"required"	"0"
-		
-		"paths"
-		{
-			"dedicated"		"ep2"
-			"dedicated"		"ep2/ep2_sound_vo_english.vpk"
-			"dedicated"		"ep2/ep2_sound_vo_spanish.vpk"
-			"dedicated"		"ep2/ep2_sound_vo_russian.vpk"
-			"dedicated"		"ep2/ep2_pak.vpk"
-			"dedicated"		"episodic"
-			"dedicated"		"episodic/ep1_sound_vo_spanish.vpk"
-			"dedicated"		"episodic/ep1_sound_vo_russian.vpk"
-			"dedicated"		"episodic/ep1_sound_vo_english.vpk"
-			"dedicated"		"episodic/ep1_pak.vpk"
-			"dedicated"		"hl2/hl2_misc_dir.vpk"
-			"dedicated"		"hl2/hl2_sound_misc_dir.vpk"
-			"dedicated"		"hl2/hl2_sound_vo_spanish_dir.vpk"
-			"dedicated"		"hl2/hl2_sound_vo_russian_dir.vpk"
-			"dedicated"		"hl2/hl2_sound_vo_english_dir.vpk"
-			"dedicated"		"hl2/hl2_textures_dir.vpk"
-			"dedicated"		"hl2/hl2_pak_dir.vpk"
-			"dedicated"		"hl2"
-			"dedicated"		"hl1/hl1_sound_vo_english.vpk"
-			"dedicated"		"hl1/hl1_pak.vpk"
+			"dedicated"		"tf/tf2_textures_dir.vpk"
+			"dedicated"		"tf/tf2_sound_vo_english_dir.vpk"
+			"dedicated"		"tf/tf2_sound_misc_dir.vpk"
+			"dedicated"		"tf/tf2_misc_dir.vpk"
 		}
 	}
 
@@ -134,6 +43,7 @@
 	{
 		"appid"		"220"
 		"required"	"0"
+		"notmainmenu"	"1"
 		
 		"paths"
 		{
@@ -145,16 +55,94 @@
 			"local"		"hl2"
 		}
 	}
+	
+	"Half-Life 2: Episode Two"	[!$DEDICATED]
+	{
+		"appid"		"420"
+		"required"	"0"
+		"notmainmenu"	"1"
+		
+		"paths"
+		{
+			"localep2"		"ep2"
+			"localep2"		"ep2/ep2_sound_vo_english.vpk"
+			"localep2"		"ep2/ep2_pak.vpk"
+			
+			"dedicated"		"ep2"
+			"dedicated"		"ep2/ep2_sound_vo_english.vpk"
+			"dedicated"		"ep2/ep2_pak.vpk"
+		}
+	}
+
+	"Half-Life 2: Episode One"	[!$DEDICATED]
+	{
+		"appid"		"380"
+		"required"	"0"
+		"notmainmenu"	"1"
+		
+		"paths"
+		{
+			"localep1"		"episodic"
+			"localep1"		"episodic/ep1_sound_vo_english.vpk"
+			"localep1"		"episodic/ep1_pak.vpk"
+			
+			"dedicated"		"episodic"
+			"dedicated"		"episodic/ep1_sound_vo_english.vpk"
+			"dedicated"		"episodic/ep1_pak.vpk"
+		}
+	}
+
+	"Half-Life 2"	[$DEDICATED]
+	{
+		"appid"		"220"
+		"required"	"0"
+		
+		"paths"
+		{
+			"dedicated"		"hl2/hl2_misc_dir.vpk"
+			"dedicated"		"hl2/hl2_sound_misc_dir.vpk"
+			"dedicated"		"hl2/hl2_sound_vo_english_dir.vpk"
+			"dedicated"		"hl2/hl2_textures_dir.vpk"
+			"dedicated"		"hl2/hl2_pak_dir.vpk"
+			"dedicated"		"hl2"
+			"dedicated"		"hl1/hl1_sound_vo_english_dir.vpk"
+			"dedicated"		"hl1/hl1_pak_dir.vpk"
+			"dedicatedep2"		"ep2"
+			"dedicatedep2"		"ep2/ep2_sound_vo_english_dir.vpk"
+			"dedicatedep2"		"ep2/ep2_pak_dir.vpk"
+			"dedicatedep1"		"episodic"
+			"dedicatedep1"		"episodic/ep1_sound_vo_english_dir.vpk"
+			"dedicatedep1"		"episodic/ep1_pak_dir.vpk"
+		}
+	}
+
+	"Half-Life 2: Lost Coast"	[!$DEDICATED]
+	{
+		"appid"		"340"
+		"required"	"0"
+		"notmainmenu"	"1"
+		
+		"paths"
+		{
+			"local"			"lostcoast"
+			"local"			"lostcoast/lostcoast_sound_vo_english.vpk"
+			"local"			"lostcoast/lostcoast_pak.vpk"
+			
+			"dedicated"		"lostcoast"
+			"dedicated"		"lostcoast/lostcoast_sound_vo_english.vpk"
+			"dedicated"		"lostcoast/lostcoast_pak.vpk"
+		}
+	}
 
 	"Portal"
 	{
 		"appid"		"400"
 		"required"	"0"
+		// For portal gun loadout materials
+		"notmainmenu"	"0"
 		
 		"paths"
 		{                                                
-                        "local"                 "portal/portal_sound_vo_russian.vpk"
-                        "local"                 "portal/portal_sound_vo_spanish.vpk"
                         "local"                 "portal/portal_sound_vo_english.vpk"
 			"local"			"portal/portal_pak.vpk"
 			"local"			"portal"
@@ -169,6 +157,7 @@
 	{
 		"appid"		"4000"
 		"required"	"0"
+		"notmainmenu"	"1"
 		
 		"paths"
 		{                                                
@@ -186,6 +175,7 @@
 	{
 		"appid"		"280"
 		"required"	"0"
+		"notmainmenu"	"1"
 		
 		"paths"
 		{
