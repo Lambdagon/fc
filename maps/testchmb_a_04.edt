@@ -20,7 +20,7 @@ testchmb_a_04
 			values
 			{
 				targetname "syn_equipment_base"
-				weapon_portalgun "1"
+				tf_weapon_portalgun "1"
 			}
 		}
 		delete {targetname "a04-a05_trigger_elevator_move"}
@@ -45,6 +45,6 @@ testchmb_a_04
 				OnPlayersIn "a04-a05_elevator_start,PlaySound,,5,-1"
 			}
 		}
-		create {classname "info_target" origin "900 125 60" values {targetname "syn_coopele1" startdisabled "0" angles "0 180 0" parentname "a04-a05_elevator_body"} }
+		create {classname "info_target" origin "950 125 50" values {targetname "syn_coopele1" startdisabled "0" angles "0 180 0" parentname "a04-a05_elevator_body"} }
 	}
 }

@@ -1,0 +1,745 @@
+cp_d2_coast_03
+{
+	console
+	{
+		sk_gunship_health_increments "12"
+	}
+	entity
+	{
+		edit {classname "func_areaportal" values {targetname "disabledPortals" startopen "1"} }
+		edit {classname "prop_physics" origin "-3353.47 -6252.63 614.849" values {classname "prop_dynamic" solid "6"} }
+		edit {targetname "citizen_tower_guy" values {classname "npc_combine_s" NumGrenades "5" spawnflags "1796" additionalequipment "weapon_csmg1"} }
+		edit {classname "trigger_changelevel" values {spawnflags "6"} }
+		
+		create {classname "point_servercommand" values {targetname "concommand"} }
+		create {classname "logic_auto"
+			values
+			{
+				OnMapSpawn "house1_door1,Unlock,,1,-1"
+				OnMapSpawn "concommand,Command,mp_gamemode 0,0,1"
+				//OnMultiNewRound "concommand,Command,mp_gamemode 0,0,1"
+				OnMapSpawn "concommand,Command,edtprefix none,0,-1"
+				
+				OnMapSpawn "citizen_tower_guy_template,ForceSpawn,,0,-1"
+				OnMapSpawn "nlo_occluder,Deactivate,,0,-1"
+				OnMapSpawn "actbusy,Activate,,0,-1"
+				OnMapSpawn "thumper_battle_template,ForceSpawn,,0,-1"
+				OnMapSpawn "lr_binoc_scene_cleanup,Trigger,,0,-1"
+				OnMapSpawn "spypost_template,ForceSpawn,,0,-1"
+				OnMapSpawn "boathouse_thumper_template,ForceSpawn,,0,-1"
+				
+				OnMapSpawn "gunship_spawner_2,Spawn,,0,-1"
+				OnMapSpawn "gunship1,FlyToSpecificTrackViaPath,path_b_16,1,-1"
+				OnMapSpawn "gunship1,StartPatrol,,4,-1"
+				OnMapSpawn "func_occluder,Deactivate,,1,-1"
+				OnMapSpawn "village_gate,Open,,1,-1"
+			}
+		}
+		
+		edit {targetname "barrel_1" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_2" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_3" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_4" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_5" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_6" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_7" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+		edit {targetname "barrel_8" values {classname "prop_physics_respawnable" RespawnTime "60"} }
+
+		delete {classname "info_player_start"}
+		delete {classname "logic_autosave"}
+		delete {classname "trigger_autosave"}
+		delete {classname "trigger_once" origin "8192 2688 384"}
+		delete {classname "trigger_once" origin "7108 604 320"}
+		delete {classname "trigger_once" origin "5760 384 256"}
+		delete {classname "trigger_once" origin "4208.77 6380.16 -64"}
+		delete {classname "trigger_once" origin "-6656 8704 64"}
+		delete {classname "trigger_once" origin "-4540.2 2560 602.67"}
+		delete {classname "trigger_once" origin "6048 2368 1984"}
+		delete {targetname "telescope_button"}
+		delete {targetname "lcs_actbusy_post3_2"}
+		delete {targetname "trigger_post3"}
+		delete {targetname "ss_post3"}
+		delete {targetname "citizen_b_regular_respawn"}
+		delete {targetname "citizen_a_ammo_respawn"}
+		delete {targetname "citizen_a_medic_respawn"}
+		delete {targetname "citizen_a_precmbt_1"}
+		delete {targetname "citizen_a_precmbt_2"}
+		delete {targetname "jeep_lost_in_water"}
+		delete {targetname "reload"}
+		delete {targetname "jeep"}
+		delete {targetname "player_spawn_items_maker"}
+		delete {targetname "player_spawn_items"}
+		delete {targetname "gman_template"}
+		delete {targetname "gman"}
+		delete {targetname "binoc_odessa"}
+		delete {targetname "lfe_sp_red2_trig"}
+		delete {targetname "lfe_sp_red3_trig"}
+		delete {classname "game_text_tf"}
+		delete {classname "trigger_once" origin "5120 11776 2144"}
+		delete {classname "func_illusionary" origin "4768 11967.3 296"}
+		delete {classname "lfe_vehiclespawner"}
+		create {classname "lfe_vehiclespawner" origin "-6912 -12565 1120"
+			values
+			{
+				vehicle_to_spawn "2"
+				StartDisabled "0"
+				max_vehicles "6"
+				effects "0"
+				delay "3"
+				angles "0 0 0"
+			}
+		}
+		create {classname "lfe_vehiclespawner" origin "-4970 -6220 635"
+			values
+			{
+				vehicle_to_spawn "2"
+				StartDisabled "0"
+				max_vehicles "6"
+				effects "0"
+				delay "3"
+				angles "0 0 0"
+			}
+		}
+		create {classname "lfe_vehiclespawner" origin "-5760 3456 352"
+			values
+			{
+				vehicle_to_spawn "2"
+				targetname "lfe_sp_red2_vehicle"
+				StartDisabled "0"
+				max_vehicles "6"
+				effects "0"
+				delay "3"
+				angles "0 90 0"
+			}
+		}
+		create {classname "lfe_vehiclespawner" origin "7936 4704 508"
+			values
+			{
+				vehicle_to_spawn "2"
+				targetname "lfe_sp_red3_vehicle"
+				StartDisabled "0"
+				max_vehicles "6"
+				effects "0"
+				delay "3"
+				angles "0 180 0"
+			}
+		}
+		
+		// CP Points
+		delete {classname "func_door" origin "-5164.01 -6131 548"}
+		delete {targetname "thumper_1"}
+		delete {targetname "thumper_1_button_model"}
+		delete {targetname "thumper_1_button_sprite"}
+		delete {classname "func_door" origin "-5482.38 3516 312.19"}
+		delete {targetname "thumper_2"}
+		delete {targetname "thumper_2_button_model"}
+		delete {targetname "thumper_2_button_sprite"}
+		delete {classname "func_door" origin "-214 9984 308.19"}
+		delete {targetname "thumper_3"}
+		delete {targetname "thumper_3_button_model"}
+		delete {targetname "thumper_3_button_sprite"}
+		delete {classname "func_door" origin "5510.38 899 122.19"}
+		delete {targetname "thumper_5"}
+		delete {targetname "thumper_5_button_model"}
+		delete {targetname "thumper_5_button_sprite"}
+		
+		create {classname "prop_dynamic" origin "5534 888 72"
+			values
+			{
+				model "models/props_gameplay/cap_point_base.mdl"
+				targetname "cap_blue_1_model"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fademindist "1500"
+				fademaxdist "1800"
+				disableshadows "1"
+				disablereceiveshadows "0"
+				skin "2"
+				solid "6"
+			}
+		}
+		create {classname "trigger_capture_area" origin "5533 887 95"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_gethspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				team_startcap_3 "1"
+				team_startcap_2 "1"
+				team_numcap_3 "1"
+				team_numcap_2 "1"
+				team_cancap_3 "1"
+				team_cancap_2 "1"
+				StartDisabled "0"
+				area_time_to_cap "2"
+				area_cap_point "cap_blue_1"
+			}
+		}
+		create {classname "team_control_point" origin "5534 888 72"
+			values
+			{
+				targetname "cap_blue_1"
+				team_timedpoints_3 "0"
+				team_timedpoints_2 "0"
+				team_model_3 "models/effects/cappoint_hologram.mdl"
+				team_model_2 "models/effects/cappoint_hologram.mdl"
+				team_model_0 "models/effects/cappoint_hologram.mdl"
+				team_icon_3 "sprites/obj_icons/icon_obj_blu"
+				team_icon_2 "sprites/obj_icons/icon_obj_red"
+				team_icon_0 "sprites/obj_icons/icon_obj_neutral"
+				team_bodygroup_3 "0"
+				team_bodygroup_2 "1"
+				team_bodygroup_0 "3"
+				StartDisabled "0"
+				spawnflags "4"
+				point_warn_sound "ControlPoint.CaptureWarn"
+				point_warn_on_cap "1"
+				point_printname "Granary_cap_blue_cp1"
+				point_index "1"
+				point_group "0"
+				point_default_owner "3"
+				angles "0 90 0"
+				OnCapTeam1 "cap_blue_1_model,Skin,1,0,-1"
+				OnCapTeam2 "cap_blue_1_model,Skin,2,0,-1"
+			}
+		}
+		
+		create {classname "prop_dynamic" origin "-204 10008 257"
+			values
+			{
+				model "models/props_gameplay/cap_point_base.mdl"
+				targetname "cap_blue_2_model"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fademindist "1500"
+				fademaxdist "1800"
+				disableshadows "1"
+				disablereceiveshadows "0"
+				skin "2"
+				solid "6"
+			}
+		}
+		create {classname "trigger_capture_area" origin "-204 10008 280"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_gethspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				team_startcap_3 "1"
+				team_startcap_2 "1"
+				team_spawn_2 "-3"
+				team_numcap_3 "2"
+				team_numcap_2 "2"
+				team_cancap_3 "1"
+				team_cancap_2 "1"
+				StartDisabled "0"
+				area_time_to_cap "3"
+				area_cap_point "cap_blue_2"
+			}
+		}
+		create {classname "team_control_point" origin "-204 10008 257"
+			values
+			{
+				"targetname" "cap_blue_2"
+				"team_timedpoints_3" "0"
+				"team_timedpoints_2" "0"
+				"team_model_3" "models/effects/cappoint_hologram.mdl"
+				"team_model_2" "models/effects/cappoint_hologram.mdl"
+				"team_model_0" "models/effects/cappoint_hologram.mdl"
+				"team_icon_3" "sprites/obj_icons/icon_obj_blu"
+				"team_icon_2" "sprites/obj_icons/icon_obj_red"
+				"team_icon_0" "sprites/obj_icons/icon_obj_neutral"
+				"team_bodygroup_3" "0"
+				"team_bodygroup_2" "1"
+				"team_bodygroup_0" "3"
+				"StartDisabled" "0"
+				"spawnflags" "4"
+				"point_warn_sound" "ControlPoint.CaptureWarn"
+				"point_printname" "Granary_cap_blue_cp2"
+				"point_index" "2"
+				"point_group" "0"
+				"point_default_owner" "3"
+				"angles" "0 180 0"
+				"OnCapTeam2" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam1" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam2" "cap_blue_2_model,Skin,2,0,-1"
+				"OnCapTeam1" "cap_blue_2_model,Skin,1,0,-1"
+			}
+		}
+		
+		
+		create {classname "prop_dynamic" origin "-8005 9285 15"
+			values
+			{
+				model "models/props_gameplay/cap_point_base.mdl"
+				targetname "cap_middle_model"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fademindist "1500"
+				fademaxdist "1800"
+				disableshadows "1"
+				disablereceiveshadows "0"
+				skin "0"
+				solid "6"
+			}
+		}
+		create {classname "trigger_capture_area" origin "-8002 9285 30"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_gethspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				team_startcap_3 "1"
+				team_startcap_2 "1"
+				team_numcap_3 "3"
+				team_numcap_2 "3"
+				team_cancap_3 "1"
+				team_cancap_2 "1"
+				StartDisabled "0"
+				area_time_to_cap "4"
+				area_cap_point "cap_middle"
+			}
+		}
+		create {classname "team_control_point" origin "-8005 9285 15"
+			values
+			{
+				"targetname" "cap_middle"
+				"team_timedpoints_3" "0"
+				"team_timedpoints_2" "0"
+				"team_model_3" "models/effects/cappoint_hologram.mdl"
+				"team_model_2" "models/effects/cappoint_hologram.mdl"
+				"team_model_0" "models/effects/cappoint_hologram.mdl"
+				"team_icon_3" "sprites/obj_icons/icon_obj_blu"
+				"team_icon_2" "sprites/obj_icons/icon_obj_red"
+				"team_icon_0" "sprites/obj_icons/icon_obj_neutral"
+				"team_bodygroup_3" "0"
+				"team_bodygroup_2" "1"
+				"team_bodygroup_0" "3"
+				"StartDisabled" "0"
+				"spawnflags" "4"
+				"point_warn_sound" "ControlPoint.CaptureWarn"
+				"point_printname" "Granary_cap_cp3"
+				"point_index" "3"
+				"point_group" "0"
+				"point_default_owner" "0"
+				"angles" "0 270 0"
+				"OnCapTeam2" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam1" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam2" "cap_mid_model,Skin,2,0,-1"
+				"OnCapTeam1" "cap_mid_model,Skin,1,0,-1"
+			}
+		}
+		
+		create {classname "prop_dynamic" origin "-5307 -6051 505"
+			values
+			{
+				model "models/props_gameplay/cap_point_base.mdl"
+				targetname "cap_red_1_model"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fademindist "1500"
+				fademaxdist "1800"
+				disableshadows "1"
+				disablereceiveshadows "0"
+				skin "2"
+				solid "6"
+			}
+		}
+		create {classname "trigger_capture_area" origin "-5303 -6056 527"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_gethspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				team_startcap_3 "1"
+				team_startcap_2 "1"
+				team_numcap_3 "1"
+				team_numcap_2 "1"
+				team_cancap_3 "1"
+				team_cancap_2 "1"
+				StartDisabled "0"
+				area_time_to_cap "2"
+				area_cap_point "cap_red_1"
+			}
+		}
+		create {classname "team_control_point" origin "-5307 -6051 505"
+			values
+			{
+				"targetname" "cap_red_1"
+				"team_timedpoints_3" "0"
+				"team_timedpoints_2" "0"
+				"team_model_3" "models/effects/cappoint_hologram.mdl"
+				"team_model_2" "models/effects/cappoint_hologram.mdl"
+				"team_model_0" "models/effects/cappoint_hologram.mdl"
+				"team_icon_3" "sprites/obj_icons/icon_obj_blu"
+				"team_icon_2" "sprites/obj_icons/icon_obj_red"
+				"team_icon_0" "sprites/obj_icons/icon_obj_neutral"
+				"team_bodygroup_3" "0"
+				"team_bodygroup_2" "1"
+				"team_bodygroup_0" "3"
+				"StartDisabled" "0"
+				"spawnflags" "4"
+				"point_warn_sound" "ControlPoint.CaptureWarn"
+				"point_warn_on_cap" "1"
+				"point_printname" "Granary_cap_red_cp1"
+				"point_index" "5"
+				"point_group" "0"
+				"point_default_owner" "2"
+				"angles" "0 270 0"
+				"OnCapTeam2" "cap_red_1_model,Skin,2,0,-1"
+				"OnCapTeam1" "cap_red_1_model,Skin,1,0,-1"
+			}
+		}
+		
+		create {classname "prop_dynamic" origin "-5505 3593 260"
+			values
+			{
+				model "models/props_gameplay/cap_point_base.mdl"
+				targetname "cap_red_2_model"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fademindist "1500"
+				fademaxdist "1800"
+				disableshadows "1"
+				disablereceiveshadows "0"
+				skin "2"
+				solid "6"
+			}
+		}
+		create {classname "trigger_capture_area" origin "-5505 3595 283"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_gethspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				team_startcap_3 "1"
+				team_startcap_2 "1"
+				team_spawn_3 "-3"
+				team_numcap_3 "2"
+				team_numcap_2 "2"
+				team_cancap_3 "1"
+				team_cancap_2 "1"
+				StartDisabled "0"
+				area_time_to_cap "3"
+				area_cap_point "cap_red_2"
+			}
+		}
+		create {classname "team_control_point" origin "-5505 3593 260"
+			values
+			{
+				"targetname" "cap_red_2"
+				"team_timedpoints_3" "0"
+				"team_timedpoints_2" "0"
+				"team_model_3" "models/effects/cappoint_hologram.mdl"
+				"team_model_2" "models/effects/cappoint_hologram.mdl"
+				"team_model_0" "models/effects/cappoint_hologram.mdl"
+				"team_icon_3" "sprites/obj_icons/icon_obj_blu"
+				"team_icon_2" "sprites/obj_icons/icon_obj_red"
+				"team_icon_0" "sprites/obj_icons/icon_obj_neutral"
+				"team_bodygroup_3" "0"
+				"team_bodygroup_2" "1"
+				"team_bodygroup_0" "3"
+				"StartDisabled" "0"
+				"spawnflags" "4"
+				"point_warn_sound" "ControlPoint.CaptureWarn"
+				"point_printname" "Granary_cap_red_cp2"
+				"point_index" "4"
+				"point_group" "0"
+				"point_default_owner" "2"
+				"angles" "0 0 0"
+				"OnCapTeam1" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam2" "relay_resettimer,Trigger,,0,-1"
+				"OnCapTeam2" "cap_red_2_model,Skin,2,0,-1"
+				"OnCapTeam1" "cap_red_2_model,Skin,1,0,-1"
+			}
+		}
+		
+		create {classname "team_control_point_master"
+			values
+			{
+				targetname "master_control_point"
+				team_base_icon_3 "sprites/obj_icons/icon_base_blu"
+				team_base_icon_2 "sprites/obj_icons/icon_base_red"
+				StartDisabled "0"
+				custom_position_y "-1"
+				custom_position_x "-1"
+			}
+		}
+		create {classname "logic_relay"
+			values
+			{
+				targetname "relay_resettimer"
+				OnTrigger "timer_round,AddTime,600,0,-1"
+			}
+		}
+		create {classname "team_round_timer"
+			values
+			{
+				targetname "timer_round"
+				timer_length "600"
+				StartDisabled "0"
+				start_paused "0"
+				show_time_remaining "1"
+				show_in_hud "1"
+				reset_time "0"
+				max_length "600"
+				auto_countdown "1"
+				OnFinished "end_round_suddendeath,RoundWin,,0,-1"
+			}
+		}
+		create {classname "game_round_win"
+			values
+			{
+				targetname "end_round_suddendeath"
+				TeamNum "0"
+				force_map_reset "1"
+			}
+		}
+		
+		// RED
+		create {classname "npc_maker" origin "-3427 -6149 788"
+			values
+			{
+				maxnpccount "2"
+				spawnfrequency "10"
+				maxlivechildren "2"
+				spawnflags "48"
+				startdisabled "0"
+				angles "0 110 0"
+				npctype "npc_citizen"
+				npctargetname "redroof"
+				npcsquadname "redroofers"
+				additionalequipment "weapon_smg1"
+			}
+		}
+		
+		// BLU
+		delete {classname "prop_physics" origin "8338.47 4535.45 400.254"}
+		delete {classname "prop_physics" origin "8306 4540.49 420"}
+		delete {classname "prop_physics" origin "8284.22 4529.41 422.465"}
+		delete {classname "prop_physics" origin "8338.46 4284.3 394.605"}
+		delete {classname "prop_physics" origin "8338.46 4284.3 394.6"}
+		delete {classname "prop_physics" origin "8324 4484 394.605"}
+		delete {classname "prop_physics" origin "8326 4603 394"}
+		delete {classname "trigger_once" origin "8852 4376 276.08"}
+		delete {classname "npc_citizen" origin "5136 5224 279"}
+		delete {targetname "ss_seegunship"}
+		delete {targetname "lcs_playernotice_1"}
+		delete {targetname "lcs_playernotice_2"}
+		delete {targetname "basement_template"}
+		delete {targetname "citizen_a_regular_original"}
+		delete {targetname "citizen_b_regular_original"}
+		delete {targetname "citizen_a_medic_original"}
+		delete {targetname "citizen_b_medic_original"}
+		delete {targetname "citizen_a_ammo_original"}
+		delete {classname "npc_citizen" origin "8552 4416 256"}
+		delete {classname "npc_citizen" origin "8487.38 4381.08 257"}
+		delete {targetname "gunship_arrival_relay"}
+		delete {targetname "rocketman"}
+		delete {targetname "ss_gordongreet"}
+		delete {targetname "vort"}
+		delete {targetname "trigger_classover"}
+		
+		///////////////////// BLU ////////////////////
+		create {classname "func_respawnroom" origin "8426.19 4450.69 404"
+			values
+			{
+				//edt_getbspmodelfor_classname "trigger_once"
+				//edt_getbspmodelfor_origin "8852 4376 276.08"
+				model "*97"
+				TeamNum "3"
+				targetname "blurespawn"
+				StartDisabled "0"
+				effects "0"
+			}
+		}
+		create {classname "func_regenerate" origin "8309 4616 438"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-3344 -6016 652"
+				TeamNum "3"
+				OnStartTouch "bluregendynamic,SetAnimation,Open,0,-1"
+				OnEndTouchAll "bluregendynamic,SetAnimation,Close,0,-1"
+			}
+		}
+		create {classname "prop_dynamic" origin "8282 4610 386"
+			values
+			{
+				//TeamNum "3"
+				targetname "bluregendynamic"
+				angles "0 0 0"
+				model "models/props_gameplay/resupply_locker.mdl"
+				DisableShadows "1"
+				solid "6"
+			}
+		}
+		create {classname "info_player_teamspawn" origin "8483 4640 421" values {TeamNum "3" angles "0 180 0"} }
+		create {classname "info_player_teamspawn" origin "8483 4620 421" values {TeamNum "3" angles "0 180 0"} }
+		create {classname "info_player_teamspawn" origin "8463 4640 421" values {TeamNum "3" angles "0 180 0"} }
+		create {classname "info_player_teamspawn" origin "8463 4620 421" values {TeamNum "3" angles "0 180 0"} }
+		create {classname "tf_weapon_physcannon" origin "8483 4640 421" values {angles "0 0 0"} }
+		create {classname "weapon_pistol" origin "8483 4640 421" values {angles "0 0 0"} }
+		create {classname "weapon_smg1" origin "8483 4640 421" values {angles "0 0 0"} }
+		create {classname "prop_dynamic" origin "8405 4501 396"
+			values
+			{
+				model "models/props_combine/combineinnerwall001c.mdl"
+				angles "0 -90 0"
+				modelscale "0.28"
+				solid "6"
+				spawnflags "8"
+				overridescript "mass,0"
+				DisableShadows "1"
+			}
+		}
+		create {classname "prop_dynamic" origin "8340 4501 396"
+			values
+			{
+				model "models/props_combine/combineinnerwall001c.mdl"
+				angles "0 -90 0"
+				modelscale "0.28"
+				solid "6"
+				spawnflags "8"
+				overridescript "mass,0"
+				DisableShadows "1"
+			}
+		}
+		create {classname "prop_dynamic" origin "8295 4501 396"
+			values
+			{
+				model "models/props_combine/combineinnerwall001c.mdl"
+				angles "0 -90 0"
+				modelscale "0.28"
+				solid "6"
+				spawnflags "8"
+				overridescript "mass,0"
+				DisableShadows "1"
+			}
+		}
+		create {classname "func_brush" origin "8322 4505 446"
+			values
+			{
+				edt_getbspmodelfor_classname "func_illusionary"
+				edt_getbspmodelfor_origin "-5046 4125.5 318"
+				rendermode "10"
+				renderfx "6"
+			}
+		}
+		create {classname "func_brush" origin "8390 4505 446"
+			values
+			{
+				edt_getbspmodelfor_classname "func_illusionary"
+				edt_getbspmodelfor_origin "-5046 4125.5 318"
+				rendermode "10"
+				renderfx "6"
+			}
+		}
+		create {classname "func_respawnroomvisualizer" origin "8395 4505 440"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "8864 4568 312"
+				TeamNum "3"
+				spawnflags "2"
+				Solidity "1"
+				solid_to_enemies "1"
+				respawnroomname "blurespawn"
+			}
+		}
+		
+		///////////////////// RED ////////////////////
+		create {classname "func_respawnroom" origin "-6935 -13782 1216"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-5440 3552 448"
+				TeamNum "2"
+				targetname "redrespawn"
+				StartDisabled "0"
+				effects "0"
+				angles "0 90 0"
+			}
+		}
+		create {classname "func_respawnroomvisualizer" origin "-6912 -12731 1120"
+			values
+			{
+				edt_getbspmodelfor_classname "func_illusionary"
+				edt_getbspmodelfor_origin "-6912 -12731 1120"
+				angles "0 0 0"
+				TeamNum "2"
+				spawnflags "2"
+				Solidity "1"
+				solid_to_enemies "1"
+				renderamt "0"
+				rendercolor "0 0 0"
+				respawnroomname "redrespawn"
+			}
+		}
+		create {classname "func_regenerate" origin "-7116 -13138 1088"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-3344 -6016 652"
+				TeamNum "2"
+				OnStartTouch "redregendynamic,SetAnimation,Open,0,-1"
+				OnEndTouchAll "redregendynamic,SetAnimation,Close,0,-1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-7140 -13130 1024"
+			values
+			{
+				//TeamNum "2"
+				targetname "redregendynamic"
+				angles "0 0 0"
+				model "models/props_gameplay/resupply_locker.mdl"
+				DisableShadows "1"
+				solid "6"
+			}
+		}
+		create {classname "func_regenerate" origin "-6700 -13138.1 1088"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-3344 -6016 652"
+				TeamNum "2"
+				OnStartTouch "redregendynamic2,SetAnimation,Open,0,-1"
+				OnEndTouchAll "redregendynamic2,SetAnimation,Close,0,-1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6673 -13130 1024"
+			values
+			{
+				//TeamNum "2"
+				targetname "redregendynamic2"
+				angles "0 180 0"
+				model "models/props_gameplay/resupply_locker.mdl"
+				DisableShadows "1"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6980 -12736 1045"
+			values
+			{
+				model "models/props_combine/combineinnerwall001c.mdl"
+				angles "0 90 0"
+				solid "6"
+				spawnflags "8"
+				overridescript "mass,0"
+				DisableShadows "1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6842 -12735 1045"
+			values
+			{
+				model "models/props_combine/combineinnerwall001c.mdl"
+				angles "0 90 0"
+				solid "6"
+				spawnflags "8"
+				overridescript "mass,0"
+				DisableShadows "1"
+			}
+		}
+		// *69 func_illusionary platform
+	}
+}

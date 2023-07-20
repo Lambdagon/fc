@@ -23,12 +23,12 @@ testchmb_a_05
 				weapon_portalgun "1"
 			}
 		}
-		delete {classname "trigger_once" origin "64 736 64"}
-		create {classname "trigger_coop" origin "64 736 64"
+		//delete {classname "trigger_once" origin "64 736 64"}
+		create {classname "trigger_coop" origin "-480 834 60"
 			values
 			{
-				edt_getbspmodelfor_classname "trigger_once"
-				edt_getbspmodelfor_origin "64 736 64"
+				edt_mins "-80 -60 -50"
+				edt_maxs "20 80 50"
 				spawnflags "1"
 				UseHud "1"
 				PlayerValue "66"
