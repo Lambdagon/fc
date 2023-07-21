@@ -29101,7 +29101,7 @@ Fires....... something"
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Enhanced Human"
+			"item_type_name"	"Enhanced 'Human'"
 			"item_name"	"Benefactor's Bowl"
 			"item_description"	""
 			"item_slot"	"head"
@@ -29109,7 +29109,7 @@ Fires....... something"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	""
+			"image_inventory"	"backpack/player/items/pyro/c_bowl"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attributes"
@@ -31129,6 +31129,580 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"npc/antlion/idle2.wav"
 			"drop_sound"			"npc/antlion/idle2.wav"
+		}
+		"9839"
+		{
+			"name"		"The Cuban Bristle Crisis"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_the_cuban_coverup"
+			"item_description"		"#TF_fall2013_the_cuban_coverup_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"soldier"		"models/workshop/player/items/all_class/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup_soldier.mdl"
+				"heavy"		"models/workshop/player/items/all_class/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup_heavy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"heavy"		"1"
+				"engineer"		"1"
+			}
+			"attributes"
+			{
+				"attach particle effect static"
+				{
+					"attribute_class"		"set_attached_particle_static"
+					"value"		"28"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9840"
+		{
+			"name"		"The Gold Digger"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_the_gold_digger"
+			"item_description"		"#TF_fall2013_the_gold_digger_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_the_gold_digger/fall2013_the_gold_digger"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/fall2013_the_gold_digger/fall2013_the_gold_digger.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9841"
+		{
+			"name"		"Das Ubersternmann"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/08/26"
+			"item_name"		"#TF_jul13_secret_state_surgeon"
+			"item_description"		"#TF_jul13_secret_state_surgeon_Desc"
+			"equip_region"		"hat"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/medic/jul13_secret_state_surgeon/jul13_secret_state_surgeon"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/jul13_secret_state_surgeon/jul13_secret_state_surgeon.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+				"spy"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9842"
+		{
+			"name"	"Potato Hat"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Helmet"
+			"item_name"	"#TF_PotatoHat"
+			"item_description"	"#TF_PotatoHat_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/all_class/hardhat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"basename"	"models/player/items/%s/hardhat.mdl"
+				"scout"	"models/player/items/scout/hardhat.mdl"
+				"sniper"	"models/player/items/sniper/hardhat.mdl"
+				"soldier"	"models/player/items/soldier/hardhat.mdl"
+				"mercenary"	"models/player/items/demo/hardhat.mdl"
+				"demoman"	"models/player/items/demo/hardhat.mdl"
+				"medic"	"models/player/items/medic/hardhat.mdl"
+				"heavy"	"models/player/items/heavy/hardhat.mdl"
+				"spy" "models/player/items/spy/hardhat.mdl"
+				"engineer" "models/player/items/engineer/hardhat.mdl"
+				"pyro" "models/player/items/pyro/hardhat.mdl"
+			}
+			"drop_type"	"drop"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+				"mercenary"	"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
+		"9843"
+		{
+			"name"	"Blighted Beak"
+			"prefab"		"base_misc"
+			"first_sale_date"	"2010/12/20"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Mask"
+			"item_name"	"#TF_BlightedBeak"
+			"item_slot"	"misc"
+			"equip_region"	"face"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/medic/blighted_beak"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/medic/medic_blighted_beak.mdl"
+			"drop_type"	"none"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 		"ui/item_hat_drop.wav"
+		}
+		"9844"
+		{
+			"name"		"Das Naggenvatcher"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/08/26"
+			"item_name"		"#TF_jul13_bro_plate"
+			"item_description"		"#TF_jul13_bro_plate_Desc"
+			"equip_region"		"hat"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/medic/jul13_bro_plate/jul13_bro_plate"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/jul13_bro_plate/jul13_bro_plate.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
+		"9845"	
+		{
+			"name"	"Prussian Pickelhaube"
+			"prefab"	"valve base_hat"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_wearable"
+			"loadondemand" "1"
+			"craft_class"	""
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Helmet"
+			"item_name"	"#TF_Medic_Hat_1"
+			"item_description"	"#TF_Medic_Hat_1_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/medic/medic_helmet"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/medic/medic_helmet.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"9846"	
+		{
+			"name"	"Soldier's Stash"
+			"prefab"	"valve misc"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_wearable"
+			"loadondemand" "1"
+			"craft_class"	""
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_name"	"#TF_Soldier_Hat_1"
+			"item_description"	"#TF_Soldier_Hat_1_Desc"
+			"item_slot"	"head"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/soldier/soldier_hat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/soldier/soldier_hat.mdl"
+			"drop_type"	"none"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"9847"
+		{
+			"name"		"The Rotation Sensation"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_cc_summer2015_the_rotation_sensation"
+			"item_type_name"	"Drip"
+			"item_description"		""
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9848"
+		{
+			"name"	"Medic Gatsby"
+			"first_sale_date"	"2010/09/29"
+			"prefab"		"base_hat"
+			"loadondemand"	"1"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_MedicGatsby"
+			"item_description"	"#TF_MedicGatsby_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/medic/medic_gatsby"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/medic/medic_gatsby.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9849"
+		{
+			"name"		"The Wide-Brimmed Bandito"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_hwn2016_wide_brimmed_bandito"
+			"item_description"		"#TF_hwn2016_wide_brimmed_bandito_Desc"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2016_wide_brimmed_bandito/hwn2016_wide_brimmed_bandito"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2016_wide_brimmed_bandito/hwn2016_wide_brimmed_bandito.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9850"
+		{
+			"name"		"Dad Duds"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_may16_dad_duds"
+			"item_description"		"#TF_may16_dad_duds_Desc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_slot"	"misc2"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/all_work_and_no_plaid/all_work_and_no_plaid"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/all_work_and_no_plaid/all_work_and_no_plaid.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9851"
+		{
+			"name"	"The Idea Tube"
+			"first_sale_date"	"2012/07/10"
+			"prefab"	"misc"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"	"1"
+			}
+			"equip_region"	"back"
+			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_name"			"#TF_EngineerBlueprintsBack"
+			"item_description"	"#TF_EngineerBlueprintsBack_desc"
+			"item_slot"	"misc"
+			"image_inventory"	"backpack/player/items/engineer/engineer_blueprints_back"
+			"model_player"	"models/player/items/engineer/engineer_blueprints_back.mdl"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"9852"
+		{
+			"name"	"The Virtual Reality Headset"
+			"first_sale_date"	"2011/09/19"
+			"prefab"	"hat"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Headset"
+			"item_name"	"#TF_EngineerHat2"
+			"item_description"	"#TF_EngineerHat2_Desc"
+			"item_slot"	"misc"
+			"equip_region"		"hat"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"propername"	"1"
+			"image_inventory"	"backpack/player/items/engineer/fwk_engineer_cranial"
+			"model_player"	"models/player/items/engineer/fwk_engineer_cranial.mdl"
+			"drop_type"		"none"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_robot_arm_pickup.wav"
+			"drop_sound"		"ui/item_robot_arm_drop.wav"
+		}
+		"9853"
+		{
+			"name"		"Cabinet Mann"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2022_cabinet_mann"
+			"item_description"		""
+			"item_type_name"		"#TF_Wearable_ArcadeMachine"
+			"item_slot"	"head"
+			"equip_region" 
+			{
+				"whole_head"		"1"
+				"head_skin"		"1"
+			}
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/hwn2022_cabinet_mann/hwn2022_cabinet_mann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/hwn2022_cabinet_mann/hwn2022_cabinet_mann.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"9854"
+		{
+			"name"	"The Brainiac Goggles"
+			"prefab"		"base_misc"
+			"first_sale_date"	"2011/12/15"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_type_name"	"#TF_Wearable_Glasses"
+			"item_name"	"#TF_Brainiac_Goggles"
+			"item_description"	"#TF_Brainiac_Goggles_Desc"
+			"item_slot"	"misc"
+			"equip_region"	"glasses"
+			"item_quality"	"unique"
+			"propername" "1"
+			"image_inventory"	"backpack/player/items/engineer/drg_brainiac_goggles"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/engineer/drg_brainiac_goggles.mdl"
+			"drop_type"	"none"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
+			"drop_sound"		"ui/item_rubber_pickup.wav"
+		}
+		"9855"
+		{
+			"name"	"The Hat With No Name"
+			"first_sale_date"	"2011/09/21"
+			"prefab"	"hat"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_SoldierHat2"
+			"item_description"	"#TF_SoldierHat2_Desc"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"propername"	"1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat"
+			"drop_type"		"drop"
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_demo.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fwk_cowboyhat/fwk_cowboyhat_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"engineer"		"1"
+			}
 		}
 		"30570"
 		{
