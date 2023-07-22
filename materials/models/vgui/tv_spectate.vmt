@@ -1,0 +1,24 @@
+"UnlitTwoTexture"
+{
+	"$baseTexture" "models/vgui/tv_spectate"
+	"$texture2" "models/vgui/tv_noise"
+	"$selfillum" 1
+	"$model" 1
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" .6
+			"texturescrollangle" 90
+		}
+
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$texture2"
+			"animatedtextureframenumvar" "$frame2"
+			"animatedtextureframerate" 30
+		}
+	}
+
+}
