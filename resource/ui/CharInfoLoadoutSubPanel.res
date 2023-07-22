@@ -365,7 +365,7 @@
 		"font"				"MenuKeys"
 		"scaleImage"		"1"
 		"activeimage"		"class_sel_sm_enforcer_red"
-		"inactiveimage"		"class_sel_sm_enforcer_red_inactive"
+		"inactiveimage"		"class_sel_sm_enforcer_inactive"
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
 	}
