@@ -1,0 +1,56 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/player/demo/hwm/demoman_head"
+	"$basemapalphaphongmask" "1"
+	// wrinkle maps need to have $bumpmap enabled to show up
+	"$compress"    "models/player/demo/hwm/demoman_head_compress"
+	"$stretch"     "models/player/demo/hwm/demoman_head_stretch"
+	// $bumpmap is a shared 16x16 flat normal map, and is needed or lightwarp won't shade correctly.
+	"$bumpmap"     "models/player/shared/shared_normal"
+	"$surfaceprop"	"default"
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "1"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+// 	"$bbqamount" "1"	
+// 	"$two" "2.35"
+// 	"$one" "1"
+// 	"$absburnminusone" "1"
+// 	"$burnminusone" "1"
+// 	"$finalburnlevel" "1"
+// 	"$burnlevel" "0"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/player/demo/hwm/demoman_head_exponent"
+	"$phongboost" "1"	
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[0.007 0.4 5]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "2"										// Boost for ambient cube component of rim lighting
+	"$rimmask" "1"                  // Use the alpha channel of the $phongexponenttexture as a rim mask.
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$cloakColorTint" "[1 0.5 0.4]"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+	}
+}

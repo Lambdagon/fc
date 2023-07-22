@@ -1,6 +1,6 @@
 #base "default.res"
 
-"classes/Civilian_red.res"
+"classes/Civilian_blue.res"
 {
 	"classNameLabel"
 	{

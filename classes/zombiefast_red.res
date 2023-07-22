@@ -4,16 +4,25 @@
 {
 	"classNameLabel"
 	{
+		// Should be changed translation token
 		"labelText"		"Enforcer"
 	}
 	
 	"classInfo"
 	{
-		"text"			"Fend off your foes, stand your ground as a... former overwatch unit."
+		"text"			"#ClassTips_8_1"
 	}
 	"classInfo2"
 	{
-		"text"			"Use your grenade to do immense damage all around you, but damaging you in the process. (not yet implemented)"
+		"text"			"#ClassTips_8_2"
+	}
+	"classInfo3"
+	{
+		"text"			"#ClassTips_8_3"
+	}
+	"classInfo4"
+	{
+		"text"			"#ClassTips_8_4"
 	}
 	
 	"classModel"
@@ -22,18 +31,19 @@
 		
 		"model"
 		{
-			"modelname"	"models/player/zombine/Zombie_Soldier.mdl"
-			"modelname_hwm"	"models/player/zombine/Zombie_Soldier.mdl"
-			"skin"		"0"
-
-			"attached_model"
-			{
-				"modelname" "models/empty.mdl"
-				"skin"		"0"
-			}
+			"modelname"	"models/player/zombine/zombie_soldier.mdl"
+			"modelname_hwm"	"models/player/zombine/zombie_soldier.mdl"
+			"skin" "0"
+			
 			"animation"
 			{
-				"sequence"	"pullGrenade"
+				"sequence"		"idle"
+			}
+								
+			"attached_model"
+			{
+				"modelname" ""
+				"skin"		"0"
 			}
 		}
 	}

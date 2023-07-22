@@ -1,11 +1,12 @@
 #base "default.res"
 
-"classes/john_red.res"
+"classes/John_red.res"
 {
 	"classNameLabel"
 	{
-		"labelText"		"JOHN FREEMAN"
-	} 
+		"labelText"		"John Freeman"
+	}
+	
 	"classInfo"
 	{
 		"text"			"I need to kill fast and bullets too slow."
@@ -17,13 +18,12 @@
 	
 	"classModel"
 	{
-		"fov"			"23"
-		
+		"fov"			"20"
 		"model"
 		{
 			"modelname"	"models/player/john/classic_male_07_citizen.mdl"
 			"modelname_hwm"	"models/player/john/classic_male_07_citizen.mdl"
-			"skin" "0"
+			"skin"		"0"
 			"angles_x" "0"
 			"angles_y" "180"
 			"angles_z" "0"
@@ -32,14 +32,15 @@
 			"origin_z" "-49"	
 			"spotlight" "1"	
 
-				"attached_model"
-			{
-				"modelname" "models/empty.mdl"
-				"skin"		"0"
-			}
 			"animation"
 			{
-				"sequence"		"SelectionMenu_StartPose"
+				"sequence"		"idle_default"
+			}
+			
+			"attached_model"
+			{
+				"modelname" "models/weapons/w_smg1.mdl"
+				"skin"		"0"
 			}
 		}
 	}

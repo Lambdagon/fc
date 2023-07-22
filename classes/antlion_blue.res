@@ -1,6 +1,6 @@
 #base "default.res"
 
-"classes/Combine_red.res"
+"classes/antlion_blue.res"
 {
 	"classNameLabel"
 	{
@@ -9,12 +9,11 @@
 	
 	"classInfo"
 	{
-		"text"			"An antlion tamed by bugbait, was taken in by vorts and taught how to use various equipment. Also canonically has a driver's license."
+		"text"			"Jerry"
 	}
 	"classInfo2"
 	{
-		"text"			"
-Use your speed and jump height to your advantage!"
+		"text"			"Jerry"
 	}
 	
 	"classModel"
@@ -25,16 +24,16 @@ Use your speed and jump height to your advantage!"
 		{
 			"modelname"	"models/player/jerry/antlion.mdl"
 			"modelname_hwm"	"models/player/jerry/antlion.mdl"
-			"skin"	"1"	
-	
-			"attached_model"
-			{
-				"modelname" "models/empty.mdl"
-				"skin"		"0"
-			}
+			"skin"	"1"		
 			"animation"
 			{
-				"sequence"	"attack_pounce1"
+				"sequence"	"idle"
+			}
+								
+			"attached_model"
+			{
+				"modelname" ""
+				"skin"		"0"
 			}
 		}
 	}

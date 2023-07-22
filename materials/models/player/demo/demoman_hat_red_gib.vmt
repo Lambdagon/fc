@@ -1,0 +1,72 @@
+"Patch"
+{
+	include "materials\models\player\demo\demoman_head_red.vmt"
+	// By using the include syntax in this patch VMT I can make sure that this material will use whatever settings are specified in the VMT for the class texture. This means no matter what custom texture settings are applied by any mod, they will always carry to this static prop as well, save for the exceptions exhibited in the insert proxy below.
+	
+	insert
+	{
+	"$surfaceprop"	"flesh"
+
+	"$detail" "models/player/scout/scout_head_gore"	
+	// In order to apply ambient occlusion to the texture without baking it into the actual basetexture, I chose to instead create ambientocclusion overlay sheets that get applied through the $detail syntax to whatever $basetexture is reference by the local VMT in the respective player folder.
+	// This is a rather genius way of making the model compatiable with any custom texture used to replace a class's sheet.
+	
+	"$detailscale" "1"
+	// Detailscale fits the detail texture onto the material the <float> number of times, which in this case is "1". Since I'm using the detail syntax to apply Ambient Occlusion, this should never be anything but "1".
+
+	"$detailblendfactor" "1.05"
+	// Since I'm using the DecalModulate shader, the blend factor needs to be 0.2 higher than 1. DecalModulate by default isn't as opaque as an overlay, so I raised this value to make the Ambient Occlusion darker.
+
+	"$detailblendmode" "2"
+	// When 0 is set as the float value for this syntax it uses DecalModulate as the blendmode, which is the same shader used for bullet hole decals in HL2. This is the only blendmode that supported dark overlays as opposed to bright ones from what I could tell while experimenting.
+	// DecalModulate lightens destination pixels for every source pixel that is over mid-range grey (128) and darkens any destination pixels for every source pixel that is below mid-range grey. In this case the source is the detail texture. 
+	// 128 is referring to RGB. So R would be 128, along with G and B, which together make mid-range grey. So for every number below 128 in RGB the shader darkens the basetexture, and the reverse happens for every number above in RGB. So 255 is the brighest and 0 is the darkest, while 128 is nothing changed at all.
+
+	"$rimlight" "0"
+	// Rimlight was introduced to make players and NPCs more visible against map surfaces during gameplay. Since this is now going onto a static prop, having rimlighting only serves to make it look worse in this context. Therefore, rimlighting is set to "0".
+
+//	"$nocull" "1"
+	// VALVe decided to leave a bunch of faces with outward facing normals clearly visible. So I just disabled culling to fix most of those issues.
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$rimlight"
+			// This is only here so that the BurnLevel proxy from the inclusion doesn't cancel out the detail blend factor above thats required for the AO.
+		}
+	}
+
+	}
+}
+
+	// This VMT was written by Allen Scott from Gamebanana.
+	// https://gamebanana.com/members/1242417
+
+	//  ,cEtt33zs.                       ,.+==..                                                                                                                     
+	//      `"ttttt3x,              ,zztttt3F*^^^.                                                                                                                   
+	//        Jtt/```*4.         ,zE>==EttL                                                                                                                          
+	//      "*<ztL                     |tt3y.                                                                                                                        
+	//          EjEp..,     ,<ctZtz. ,c5t^                                                                ,,,                                                        
+	//              \"*3.,c5>[ttttz[)^`?;.,      _,,,                                                ,c5t3>=<zEh.                                                    
+	//                 Jtt/ .EttttL  Atttt)   .EttttL                                              ;5tttF     Et3.                                 ,..+cg    ,.+=z)  
+	//               ,Ct5`  |tttt7  JttttQ.   |ttttj                                               EttttL    ;1ty                                  EttttL   JttttQ.  
+	//              Ztt/    EttttL  [tttt[    EttttL         ,,_                                   Vtttt3.  `**^          ,,            ,,,       Jtttt3    (tttt)   
+	//     ,zCttjzztttzZt>s/tttt7  J3tttq.   |ttttV     ,zCttjizt5   ]tttt]z5tttE5.                 \ttttt3.         ,zCtt32zt\     zttttjjth.   KEtttt)=7J4ttttt==L 
+	//    ;tttZ  /3tt/    3EttttL  (tttt)    EttttL    /ttttZ  |ttL .Etttt3F*{tttt1                  `ttttttZx      Zttt3^  [ttL  z5ttt/   Et3.  JttttQ    ]tttt)    
+	// ;*`?yz3' /ttt7     |ttttV  .5ttttL   |ttttV    CttttL  ,Ety  |tttty   |tttt]                    "Qttttt3.  .Ettt3L   **^  Atttt/   Etttkcc2tttt[    EttttL    
+	// B.cttZ^ /tttV      EttttL  |tttt]    EttttL   Atttt[ ,z5jZ   EttttL   [ttttL             zc5tt3.  \ttttt3. Etttt[        (tttt7    "Etq^`JttttQ.   |ttttj     
+	// 'k `*= /tttQ.     ;ttttV   EttttL   JttttJ   Jtttttji>*`    |ttttV   Jtttt7            .Cttt5*``   VtttttL|ttttQ        JtttttL    ;tt7  (tttt)    EttttL     
+	//   "e. :5ttt[      EttttL  |ttttj    6tttt[   |tttt3        z5ttttL   (ttttL   /9       |tttV       [ttttQ [ttttJ       ,ZttttH    ;5t3.  5ttttL   /ttttV    c7
+	//      `[tttQ      |ttttV   [tttt1.,z5tttttL.,/{tttt3L   ,,c51ttttJ    EttttL.,cy`       Ittt3.     /tttt3L !tttt3.   ,.c54tttttL,,ztty`  Jtttt3...cjtttt1.,z5/ 
+	//       [ttt]               "Etttttj2`\ttttttjP \ztttttttjP^ Etttt[    \ztttttjZ          \EtttZ2zEtttt3*    \jtttttttjP`  "Qttttttt7^     Vtttttt3*"Etttttt7`  
+

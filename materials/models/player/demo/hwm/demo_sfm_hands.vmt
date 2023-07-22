@@ -1,0 +1,95 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/player/demo/hwm/demo_sfm_hands"
+	"$bumpmap" "models/player/demo/hwm/demo_sfm_hands_phongmask"
+	"$surfaceprop"	"default"
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .0
+	"$detailblendmode" 6
+
+
+	"$yellow" "0"
+	"$bbqamount" "1"	
+	"$two" "2.35"
+	"$one" "1"
+	"$absburnminusone" "1"
+	"$burnminusone" "1"
+	"$finalburnlevel" "1"
+	"$burnlevel" "0"
+
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/player/demo/hwm/demo_sfm_hands_exponent"
+	"$phongboost" "[.5]"	
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.3 1 8]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" ".75"										// Boost for ambient cube component of rim lighting
+	
+	"$ambientocclusion" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"360?$color2" "[ 0.7 0.7 0.7 ]"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$burnlevel"
+		}
+		"Subtract"
+		{
+			"srcVar1" "$burnlevel"
+			"srcVar2" "$one"
+			"resultVar" "$burnminusone"
+		}
+		"Abs"
+		{
+			"srcVar1" "$burnminusone" 
+			"resultVar" "$absburnminusone"
+		}
+
+		"Subtract"
+		{
+			"srcVar1" "$one"
+			"srcVar2" "$absburnminusone"
+			"resultVar" "$finalburnlevel"
+		}
+
+
+		"Equals"
+		{
+			"srcVar1" "$finalburnlevel"
+			"resultVar" "$detailblendfactor"
+		}
+		
+		
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$yellow"
+			"resultVar" "$color2"
+		}
+
+		
+	}
+}

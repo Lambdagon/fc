@@ -9,7 +9,7 @@
 	
 	"classInfo"
 	{
-		"text"			"Shoot your enemies until they die!"
+		"text"			"Shoot your enemies until they die!!"
 	}
 	"classInfo2"
 	{
@@ -24,16 +24,13 @@
 		{
 			"modelname"	"models/player/mercenary.mdl"
 			"modelname_hwm"	"models/player/mercenary.mdl"
+			"vcd"		"scenes/Player/Mercenary/low/class_select.vcd"
 			"skin"		"0"
 						
 			"attached_model"
 			{
-				"modelname" "models/empty.mdl"
+				"modelname" "models/weapons/w_models/w_supershotgun.mdl"
 				"skin"		"0"
-			}
-			"animation"
-			{
-				"sequence"		"classselect_anim"
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 {
 	"classNameLabel"
 	{
-		"labelText"		"#TF_Civilian"
+		"labelText"		"#TF_Sniper"
 	}
 	
 	"classInfo"

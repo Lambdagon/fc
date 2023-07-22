@@ -1,15 +1,15 @@
 #base "default.res"
 
-"classes/Combinesoldier_blue.res"
+"classes/Combine_blue.res"
 {
 	"classNameLabel"
 	{
-		"labelText"		"Combine Soldier"
+		"labelText"		"Rebel Combine Soldier"
 	}
 	
 	"classInfo"
 	{
-		"text"			"A soldier of the Combine."
+		"text"			"A disgruntled soldier of the Combine, now turned towards rebel causes."
 	}
 	"classInfo2"
 	{
@@ -17,23 +17,22 @@
 	}
 	
 	"classModel"
-	{	
-		"fov"			"23"
-
+	{
+		"fov"			"20"
 		"model"
 		{
-			"modelname"	"models/combine_soldier_ep2.mdl"
-			"modelname_hwm"	"models/combine_guard.mdl"
-			"skin"	"0"	
-
-				"attached_model"
-			{
-				"modelname" "models/empty.mdl"
-				"skin"		"0"
-			}	
+			"modelname"	"models/combine_soldier.mdl"
+			"modelname_hwm"	"models/combine_soldier.mdl"
+			"skin"	"1"		
 			"animation"
 			{
-				"sequence"	"Man_Gun"
+				"sequence"		"idle1"
+			}
+								
+			"attached_model"
+			{
+				"modelname" "models/weapons/w_smg1.mdl"
+				"skin"		"0"
 			}
 		}
 	}
