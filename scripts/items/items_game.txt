@@ -23947,9 +23947,20 @@ Fires....... something"
 
 			"visuals"
 			{
-				"sound_single_shot"	"OF_Weapon_QuakeRPG.Single"
-				"sound_burst"		"OF_Weapon_QuakeRPG.SingleCrit"
-				"sound_special1"	"OF_Weapon_QuakeRPG.Explode"
+				"sound_single_shot"	"Weapon_QuakeRPG.Single"
+				"sound_burst"		"Weapon_QuakeRPG.SingleCrit"
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_ROCKETLAUNCHER"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_ROCKETLAUNCHER"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_ROCKETLAUNCHER"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_ROCKETLAUNCHER"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_ROCKETLAUNCHER"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_ROCKETLAUNCHER"
+				}
 				"styles"
 				{
 					"0"
@@ -24054,6 +24065,13 @@ Fires....... something"
 			{
 				"mercenary"	"1"
 			}
+			"visuals"
+			{
+                "sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_melee_miss"	"Weapon_Crowbar.Miss"
+				"sound_melee_hit"	"Weapon_Crowbar.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}	
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
@@ -24101,6 +24119,26 @@ Fires....... something"
 			}
 		        "visuals"
 			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_SECONDARY"	"ACT_MERC_STAND_TOMMY"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_MERC_CROUCH_TOMMY"
+					"ACT_MP_RUN_SECONDARY"	"ACT_MERC_RUN_TOMMY"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_MERC_AIRWALK_TOMMY"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_MERC_CROUCHWALK_TOMMY"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_MERC_JUMP_TOMMY"
+					"ACT_MP_JUMP_START_SECONDARY"	"ACT_MERC_JUMP_START_TOMMY"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_MERC_JUMP_FLOAT_TOMMY"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_MERC_SWIM_TOMMY"
+					"ACT_MP_RELOAD_STAND_SECONDARY"	"ACT_MERC_RELOAD_STAND_TOMMY"
+					"ACT_MP_RELOAD_CROUCH_SECONDARY"	"ACT_MERC_RELOAD_CROUCH_TOMMY"
+					"ACT_MP_RELOAD_SWIM_SECONDARY"	"ACT_MERC_RELOAD_SWIM_TOMMY"
+					"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_MERC_RELOAD_AIRWALK_TOMMY"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_MERC_ATTACK_STAND_TOMMY"
+					"ACT_MP_ATTACK_CROUCH_SECONDARY"	"ACT_MERC_ATTACK_CROUCH_TOMMY"
+					"ACT_MP_ATTACK_SWIM_SECONDARY"	"ACT_MERC_ATTACK_SWIM_TOMMY"
+					"ACT_MP_ATTACK_AIRWALK_SECONDARY"	"ACT_MERC_ATTACK_AIRWALK_TOMMY"
+				}
 				"sound_single_shot"		"Weapon_Tommygun.Single"
 				"sound_burst"			"Weapon_Tommygun.SingleCrit"
 			}
@@ -24457,6 +24495,29 @@ Fires....... something"
             {
                 "mercenary"    "1"
             }
+			"visuals"
+			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_SHOTGUN"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_SHOTGUN"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_SHOTGUN"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_SHOTGUN"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_SHOTGUN"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_SHOTGUN"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_SHOTGUN"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_SHOTGUN"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_SHOTGUN"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MERC_RELOAD_STAND_SHOTGUN"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MERC_RELOAD_CROUCH_SHOTGUN"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MERC_RELOAD_SWIM_SHOTGUN"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MERC_RELOAD_AIRWALK_SHOTGUN"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MERC_ATTACK_STAND_SHOTGUN"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MERC_ATTACK_CROUCH_SHOTGUN"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MERC_ATTACK_SWIM_SHOTGUN"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MERC_ATTACK_AIRWALK_SHOTGUN"
+				}
+			}
         }
 		"9733"
 		{
@@ -24489,7 +24550,7 @@ Fires....... something"
 			"inspect_panel_dist" "31"
 			"image_inventory"	"backpack/weapons/w_models/pistol_merc"
 			"model_player"	"models/weapons/v_models/v_akimbo_pistols_mercenary.mdl"
-			"model_world"	"models/weapons/w_models/w_pistol_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_pistol_akimbo.mdl"
 			"used_by_classes"
 			{
 				"mercenary"	"1"
@@ -24519,6 +24580,26 @@ Fires....... something"
 			}
 			"visuals"
 			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_SECONDARY"	"ACT_MERC_STAND_AKIMBO"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_MERC_CROUCH_AKIMBO"
+					"ACT_MP_RUN_SECONDARY"	"ACT_MERC_RUN_AKIMBO"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_MERC_AIRWALK_AKIMBO"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_MERC_CROUCHWALK_AKIMBO"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_MERC_JUMP_AKIMBO"
+					"ACT_MP_JUMP_START_SECONDARY"	"ACT_MERC_JUMP_START_AKIMBO"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_MERC_JUMP_FLOAT_AKIMBO"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_MERC_SWIM_AKIMBO"
+					"ACT_MP_RELOAD_STAND_SECONDARY"	"ACT_MERC_RELOAD_STAND_AKIMBO"
+					"ACT_MP_RELOAD_CROUCH_SECONDARY"	"ACT_MERC_RELOAD_CROUCH_AKIMBO"
+					"ACT_MP_RELOAD_SWIM_SECONDARY"	"ACT_MERC_RELOAD_SWIM_AKIMBO"
+					"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_MERC_RELOAD_AIRWALK_AKIMBO"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_MERC_ATTACK_STAND_AKIMBO"
+					"ACT_MP_ATTACK_CROUCH_SECONDARY"	"ACT_MERC_ATTACK_CROUCH_AKIMBO"
+					"ACT_MP_ATTACK_SWIM_SECONDARY"	"ACT_MERC_ATTACK_SWIM_AKIMBO"
+					"ACT_MP_ATTACK_AIRWALK_SECONDARY"	"ACT_MERC_ATTACK_AIRWALK_AKIMBO"
+				}
 				"sound_single_shot"	"Weapon_PistolDM.Single"
 				"sound_burst"		"Weapon_PistolDM.SingleCrit"
 				"sound_reload"		"Weapon_PistolDM.WorldReload"
@@ -24567,6 +24648,26 @@ Fires....... something"
 			}
 		        "visuals"
 			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_RIFLE"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_RIFLE"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_RIFLE"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_RIFLE"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_RIFLE"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_RIFLE"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_RIFLE"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_RIFLE"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_RIFLE"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MERC_RELOAD_STAND_RIFLE"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MERC_RELOAD_CROUCH_RIFLE"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MERC_RELOAD_SWIM_RIFLE"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MERC_RELOAD_AIRWALK_RIFLE"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MERC_ATTACK_STAND_RIFLE"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MERC_ATTACK_CROUCH_RIFLE"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MERC_ATTACK_SWIM_RIFLE"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MERC_ATTACK_AIRWALK_RIFLE"
+				}
 				"sound_single_shot"		"Weapon_AR.Single"
 				"sound_burst"			"Weapon_AR.SingleCrit"
 				"sound_reload"			"Weapon_AR.WorldReload"
@@ -24591,75 +24692,6 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-        }
-		"9735"
-		{
-			"craft_class"	""
-			"baseitem"		"0"
-			"enabled"	"0"
-			"item_class"	"tf_weapon_pistol"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"0"
-			"item_type_name"	"Dual Wielded sidearm"
-			"item_name"	"Akimbo Pistols (BUGGY!!!)"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"anim_slot"	"secondary"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
-			"model_player"	"models/weapons/v_models/v_akimbo/v_smg_sniper.mdl"
-			"model_world"	"models/weapons/c_models/c_pistol.mdl"
-			"used_by_classes"
-			{
-				"sniper"	"1"
-			}
-			"attributes"
-			{
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"2"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.85"
-				}
-				"Reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"1.20"
-				}
-			}
-			"static_attrs"
-			{
-				"weapon_stattrak_module_scale"			"0.723"
-				"min_viewmodel_offset"				"10 0 -10"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_PistolDM.Single"
-				"sound_burst"		"Weapon_PistolDM.SingleCrit"
-				"sound_reload"		"Weapon_PistolDM.WorldReload"
-			}	
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
 		}
 		"9736"
 		{
@@ -25129,9 +25161,28 @@ Fires....... something"
 			}
             "visuals"
 			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_TOMMY"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_TOMMY"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_TOMMY"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_TOMMY"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_TOMMY"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_TOMMY"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_TOMMY"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_TOMMY"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_TOMMY"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MERC_RELOAD_STAND_TOMMY"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MERC_RELOAD_CROUCH_TOMMY"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MERC_RELOAD_SWIM_TOMMY"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MERC_RELOAD_AIRWALK_TOMMY"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MERC_ATTACK_STAND_TOMMY"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MERC_ATTACK_CROUCH_TOMMY"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MERC_ATTACK_SWIM_TOMMY"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MERC_ATTACK_AIRWALK_TOMMY"
+				}
 				"sound_single_shot"		"Weapon_Tommygun.Single"
 				"sound_burst"			"Weapon_Tommygun.SingleCrit"
-				
 			}
 			"attributes"
 			{
@@ -25848,6 +25899,26 @@ Fires....... something"
 			}
 			"visuals"
 			{
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_SHOTGUN"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_SHOTGUN"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_SHOTGUN"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_SHOTGUN"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_SHOTGUN"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_SHOTGUN"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_SHOTGUN"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_SHOTGUN"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_SHOTGUN"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MERC_RELOAD_STAND_SHOTGUN"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MERC_RELOAD_CROUCH_SHOTGUN"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MERC_RELOAD_SWIM_SHOTGUN"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MERC_RELOAD_AIRWALK_SHOTGUN"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MERC_ATTACK_STAND_SHOTGUN"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MERC_ATTACK_CROUCH_SHOTGUN"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MERC_ATTACK_SWIM_SHOTGUN"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MERC_ATTACK_AIRWALK_SHOTGUN"
+				}
 				"sound_single_shot" "Weapon_ProSniperRifle.Single"
 				"sound_burst" "Weapon_ProSniperRifle.SingleCrit"
 			}
