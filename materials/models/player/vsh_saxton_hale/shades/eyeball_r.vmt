@@ -1,0 +1,40 @@
+"EyeRefract"
+{
+	"$Iris"               		"models/player/vsh_saxton_hale/shades/eye"
+	"$ambientoccltexture" 	"models/player/vsh_saxton_hale/shades/eye-extra"
+	"$envmap"            		"models/player/shared/eye-reflection-cubemap-"
+	"$corneatexture"     	"models/player/shared/eye-cornea"
+	"$lightwarptexture"   	"models/player/shared/eye_lightwarp"
+
+	"$eyeballradius" 		"0.9"
+	"$ambientocclcolor" 	"[0.23 0.23 0.23]"
+	"$dilation" 		"0.5"
+	"$parallaxstrength" 		"0.25"
+	"$corneabumpstrength" 	"1.0"
+
+	"$halflambert" 		"1"
+	"$nodecal" 		"1"
+
+	"$raytracesphere" 		"0"
+	"$spheretexkillcombo" 	"0"
+
+	"Eyes_dx8"
+	{
+		"$basetexture"	"models/player/shared/dxlevel80/eyeball_r"
+		"$iris"         	"models/player/shared/dxlevel80/iris_blue_r"
+	}
+
+	"$cloakPassEnabled" "1"
+
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+	}
+
+	// "$ambientocclusion" "1"
+}

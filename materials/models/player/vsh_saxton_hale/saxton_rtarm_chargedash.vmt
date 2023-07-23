@@ -1,0 +1,80 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 		"models/player/vsh_saxton_hale/saxton_body"
+	"$bumpmap" 		"models/player/vsh_saxton_hale/saxton_body_normal"
+
+	"$phong" 		"1"
+	"$phongexponenttexture" 	"models/player/vsh_saxton_hale/saxton_body_exp"
+	"$phongboost" 		"0.09"	
+	"$lightwarptexture" 		"models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.3 5 2]"
+
+	"$rimlight" 		"1"
+	"$rimlightexponent" 		"4"
+	"$rimlightboost" 		"2"
+	"$rimmask" 		"1"
+
+	"$detail" 			"models/player/vsh_saxton_hale/saxton_rtarm_chargedash"	
+	"$detailscale" 		"1"
+	"$detailblendfactor" 	"0.10"
+	"$detailblendmode" 	"6"
+
+	"$EmissiveBlendEnabled" 		"1"
+	"$EmissiveBlendStrength" 		"1"
+	"$EmissiveBlendTexture" 		"vgui/white"
+	"$EmissiveBlendBaseTexture" 	"models/player/vsh_saxton_hale/saxton_rtarm_chargedash"
+	"$EmissiveBlendFlowTexture" 	"vgui/white"
+	"$EmissiveBlendTint" 		"[0 0.75 1]"
+	"$EmissiveBlendScrollVector"		"[0 0]" 	
+
+	"$halflambert" 	 "0"
+	"$ambientocclusion" "0.75"	
+
+	//"$yellow" "0"
+	//"$one" 	"1"
+
+	"$cloakPassEnabled" "1"
+
+	"Proxies"
+	{
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		//"AnimatedTexture"
+		//{
+		//	"animatedtexturevar" "$detail"
+		//	"animatedtextureframenumvar" "$detailframe"
+		//	"animatedtextureframerate" 30
+		//}
+		//"BurnLevel"
+		//{
+		//	"resultVar" "$detailblendfactor"
+		//}
+		//"YellowLevel"
+		//{
+		//	"resultVar" "$yellow"
+		//}
+		//"Equals"
+		//{
+		//	"srcVar1" "$yellow"
+		//	"resultVar" "$color2"
+		//}
+		//"Sine"
+		//{
+		//	"resultVar" "$EmissiveBlendTint[0]"
+		//	"sineperiod" "0.5"
+		//	"sinemin" "0.8"
+		//	"sinemax" "1.2"
+		//}
+		//"Sine"
+		//{
+		//	"resultVar" "$sheenmaptint[0]"
+		//	"sineperiod" "0.5"
+		//	"sinemin" "15.8"
+		//	"sinemax" "16.2"
+		//}
+	}
+}
