@@ -10,3 +10,5 @@ https://github.com/Lambdagon/tf_coop_lambda/wiki/How-to-install-LF:CE
 Anyone is allowed to contribute towards this project
 
 NOTE: Lambda Fortress: Community Edition is not affiliated with Concussion Studios or Nicknine, this is a community-made mod.
+
+Go open the "credits.txt" for the credits about everything in this mod.
