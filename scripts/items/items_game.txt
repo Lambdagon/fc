@@ -2534,7 +2534,7 @@
 			}
 			"first_sale_date"	"2010/09/29"
 			"enabled"	"0"
-			"item_class"	"tf_weapon_fists"
+			"item_class"	"tf_weapon_shovel"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Fists"
@@ -2543,6 +2543,8 @@
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
+			"item_logname"	"fists"
+			"item_iconname"	"fists"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"model_player"		"models/weapons/c_models/c_saxton_arms.mdl"
 			"model_world"		""
@@ -2561,20 +2563,14 @@
 					"ACT_VM_IDLE"	"ACT_FISTS_VM_IDLE"
 					"ACT_VM_HITLEFT"	"ACT_FISTS_VM_HITLEFT"
 					"ACT_VM_HITRIGHT"	"ACT_FISTS_VM_HITRIGHT"
+					"ACT_VM_SWINGCENTER"	"ACT_FISTS_VM_HITRIGHT"
 					"ACT_VM_SWINGHARD"	"ACT_FISTS_VM_SWINGHARD"
 					"ACT_VM_DRAW"	"ACT_FISTS_VM_DRAW"
 				}
-				"styles"
-				{
-					"0"
-					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
-						"v_skin_red"	"2"
-						"v_skin_blu"	"3"
-						"selectable"	"0"
-					}
-				}
+				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
+				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
 			}
 			"static_attrs"
 			{
@@ -30290,6 +30286,114 @@ Fires....... something"
 			{
 				"limited quantity item"		"1"
 			}
+		}
+		"9859"
+		{
+			"name"			"SAXTOOOOOONNN CHARGE"
+			"first_sale_date"	"2011/03/21"
+			"item_class"		"tf_wearable_demoshield"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" 	"#TF_Wearable_Shield"
+			"item_logname" "splendid_screen"
+			"item_iconname" "splendid_screen"
+			"item_name"		"Saxton Charge"
+			"item_slot"		"secondary"
+			"equip_region"	"arms"
+			"anim_slot"		"FORCE_NOT_USED"
+			"baseitem"		"1"
+			"item_quality"		"unique"
+			"propername"	"1"
+			"min_ilevel"		"10"
+			"max_ilevel"		"10"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_persian_shield/c_persian_shield"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"35"
+			"model_player"	""
+			"act_as_wearable" "1"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"drop_type"	"none"
+			"used_by_classes"
+			{
+				"saxton"	"1"
+			}
+			"attributes"
+			{
+				"charge recharge rate increased"
+				{
+					"attribute_class"	"charge_recharge_rate"
+					"value"	"1.5"
+				}
+				"charge impact damage increased"
+				{
+					"attribute_class"	"charge_impact_damage"
+					"value"			"1.7"
+				}
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"			"0.8"
+				}
+				"dmg taken from blast reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"			"0.8"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0"
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"0"
+				}
+				"maxammo grenades1 increased"
+				{
+					"attribute_class"	"mult_maxammo_grenades1"
+					"value"	"7"
+				}
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "2.30"
+				}
+                "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.50"
+				}
+                "max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"	"120"
+				}
+				"dmg taken from bullets reduced"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"	"0.55"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"		"ui/item_wood_pole_drop.wav"
 		}
 		"30570"
 		{
