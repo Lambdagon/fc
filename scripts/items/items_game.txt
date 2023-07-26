@@ -30312,7 +30312,7 @@ Fires....... something"
 			"item_class"	"tf_weapon_smg_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"item_type_name"	"LMG"
+			"item_type_name"	"Modified Pulse Machine Gun"
 			"item_name"	"Suppressing LMG"
 			"item_description"	""
 			"item_logname"	"lmg"
@@ -30339,14 +30339,54 @@ Fires....... something"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"					"0 0 10"
+				"min_viewmodel_offset"					"-20 20 0"
 			}
 			"attributes"
 			{
+				"subtract victim medigun charge on hit"
+				{
+					"attribute_class"	"subtract_victim_medigun_charge_onhit"
+					"value" "3"
+				}
+				"subtract victim cloak on hit"
+				{
+					"attribute_class"	"subtract_victim_cloak_on_hit"
+					"value" "3"
+				}
+				"ragdolls plasma effect"
+				{
+					"attribute_class"	"ragdolls_plasma_effect"
+					"value" "1"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
 				"clip size bonus"
 				{
 				"attribute_class"	"mult_clipsize"
 				"value"	"4.80"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "20"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.80"
+				}
+				"mod use metal ammo type"
+				{
+					"attribute_class"	"mod_use_metal_ammo_type"
+					"value"	"1"
+				}
+				"dmg penalty vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value" "0.30"
 				}
 			}
 			"visuals"
@@ -30426,6 +30466,11 @@ Fires....... something"
 				{
 				"attribute_class"	"mult_onhit_enemyspeed_major"
 				"value"	"2"
+				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"	"1.50"
 				}
 				"damage bonus"
 				{
