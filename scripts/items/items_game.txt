@@ -18586,74 +18586,6 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"9500"
-		{
-			"name"	"Stun Baton"
-			"item_class"	"tf_weapon_tfc_crowbar"
-			"prefab"	"weapon_melee_allclass"
-			"baseitem"	"1"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"Peacekeeping Tool"
-			"item_description"	"Standard Issue Peacekeeping Tool for the average Combine Beat-Cop"
-			"item_name"	"Peacekeeper's Stun Baton"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_stunbaton.mdl"	
-			"model_world"	"models/weapons/w_stunbaton.mdl"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"combine"	"1"
-				
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
-				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
-				"sound_melee_miss"		"Weapon_StunStick.Swing"
-				"sound_burst"		"Weapon_StunStick.Swing"	
-
-			}
-			"attributes"
-			{
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" 	"1.65" 
-				}
-
-				"damage penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" 	"0.55" 
-				}
-			}
-
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}
 		"9501"
 		{
 			"name"	"HL2 Shotgun"
@@ -18681,7 +18613,6 @@
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"combine"			"1"
 			}
 			"particle_suffix"		"shotgun"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -18829,39 +18760,6 @@
 				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
 				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
 				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
-			}
-		}
-		"9042"
-		{
-			"name"	"HL2 AR2"
-			"item_class"	"tf_weapon_ar2"
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_SMG"
-			"item_name"	"#TF_Weapon_AR2"
-			"item_slot"	"primary"
-			"image_inventory"	"backpack/weapons/w_models/w_smg"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_irifle.mdl"
-			"model_player"	"models/weapons/v_irifle.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				//"combine"			"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
 			}
 		}
 		"9050"
@@ -22403,7 +22301,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"sniper"	"1"
-				"combine"	"1"
 			}
 			"static_attrs"
 			{
@@ -28083,7 +27980,7 @@ Fires....... something"
 		"9806"
 		{
 			"name"	"John Stunstick"
-			"item_class"	"saxxy"
+			"item_class"	"tf_weapon_fireaxe"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -30394,6 +30291,160 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
+		}
+		"9860"
+		{
+			"name" "Suppressing LMG"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "1970/06/27"
+			"baseitem"	"1"
+			"item_class"	"tf_weapon_smg_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"LMG"
+			"item_name"	"Suppressing LMG"
+			"item_description"	""
+			"item_logname"	"lmg"
+			"item_iconname"	"lmg"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/weapons/w_models/w_scattergun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/c_suppressor.mdl"
+			"model_world"	"models/weapons/w_suppressor.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"combine"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"0 0 10"
+			}
+			"attributes"
+			{
+				"clip size bonus"
+				{
+				"attribute_class"	"mult_clipsize"
+				"value"	"4.80"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"LMG.Shoot"
+				"sound_double_shot"		"LMG.Shoot"
+				"sound_burst"			"LMG.Shoot"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"Empty"
+				"sound_special1"		"LMG.Shoot"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+		}
+		"9861"
+		{
+			"name"	"Peacekeeper's Stun Baton"
+			"item_class"	"tf_weapon_wrench"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"baseitem"	"1"
+			"item_type_name"	"Stunstick"
+			"item_name"	"Peacekeeper's Stun Baton"
+			"item_description"	"This weapon can repair friendly buildings"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_stunstick"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_stunstick.mdl"	
+			"model_world"	"models/weapons/w_stunbaton.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"	"1"
+				
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
+				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
+				"sound_melee_miss"		"Weapon_StunStick.Melee_Miss"
+				"sound_burst"		"Weapon_StunStick.Swing"
+			"animation_replacement"
+			{
+					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_RUN_MELEE"	"ACT_HL2MP_RUN_MELEE"
+					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_SWIM_MELEE"
+					"ACT_MP_SWIM_IDLE_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_HL2MP_WALK_CROUCH_MELEE"
+					"ACT_MP_JUMP_START_MELEE"	"ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_JUMP_FLOAT_MELEE" "ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_AIRWALK_MELEE"	"ACT_HL2MP_AIRWALK_MELEE"
+				}		
+			}
+            "attributes"
+            {
+				"slow enemy on hit major"
+				{
+				"attribute_class"	"mult_onhit_enemyspeed_major"
+				"value"	"2"
+				}
+				"damage bonus"
+				{
+				"attribute_class"	"mult_dmg"
+				"value"	"1.2"
+				}
+				"fire rate penalty"
+				{
+				"attribute_class"	"mult_postfiredelay"
+				"value"	"1.8"
+				}
+				"crit mod disabled"
+				{
+				"attribute_class"	"mult_crit_chance"
+				"value"	"0"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"30570"
 		{
