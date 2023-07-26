@@ -5634,8 +5634,9 @@
 			"image_inventory"	"backpack/weapons/w_models/w_sniperrifle"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attach_to_hands" "1"
-			"model_player"	"models/weapons/w_models/w_sniperrifle.mdl"
+			"attach_to_hands" "2"
+			"model_world"	"models/weapons/w_models/w_sniperrifle.mdl"
+			"model_player"	"models/weapons/v_models/v_sniperrifle_sniper.mdl"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -6764,7 +6765,7 @@
 			"prefab"	"weapon_sniperrifle"
 			"model_world"	"models/weapons/w_models/w_sniperrifle.mdl"
 			"model_player"	"models/weapons/v_models/v_sniperrifle_sniper.mdl"
-			"attach_to_hands" "0"
+			"attach_to_hands" "2"
 			"baseitem" "1"
 		}
 		"15"
@@ -12204,6 +12205,7 @@
 				"spy" 		"1"
 				"engineer" 	"1"
 				"pyro" 		"1"
+				"mercenary"	"1"
 			}
 			"taunt"
 			{
@@ -12212,6 +12214,7 @@
 					"scout"		"scenes\player\scout\low\taunt_laugh.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_laugh.vcd"
 					"soldier"	"scenes\player\soldier\low\taunt_laugh.vcd"
+					"mercenary"	"scenes\player\soldier\low\taunt_laugh.vcd"
 					"demoman"	"scenes\player\demoman\low\taunt_laugh.vcd"
 					"medic"		"scenes\player\medic\low\taunt_laugh.vcd"
 					"heavy"		"scenes\player\heavy\low\taunt_laugh.vcd"
@@ -24522,7 +24525,7 @@ Fires....... something"
 			"name"						"The Hunting Revolver"
 			"prefab"					"weapon_sniperrifle"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver_primary"
+			"item_class"				"tf_weapon_revolver"
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
 			"item_type_name"			"#TF_Weapon_SniperRifle"
@@ -30067,7 +30070,7 @@ Fires....... something"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_pda_engineer"
+			"image_inventory"	"backpack/weapons/c_models/c_partner/c_partner"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"attach_to_hands"	"1"
@@ -30312,7 +30315,7 @@ Fires....... something"
 			"item_class"	"tf_weapon_smg_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"item_type_name"	"Modified Pulse Machine Gun"
+			"item_type_name"	"LMG"
 			"item_name"	"Suppressing LMG"
 			"item_description"	""
 			"item_logname"	"lmg"
@@ -30339,54 +30342,14 @@ Fires....... something"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"					"-20 20 0"
+				"min_viewmodel_offset"					"0 0 10"
 			}
 			"attributes"
 			{
-				"subtract victim medigun charge on hit"
-				{
-					"attribute_class"	"subtract_victim_medigun_charge_onhit"
-					"value" "3"
-				}
-				"subtract victim cloak on hit"
-				{
-					"attribute_class"	"subtract_victim_cloak_on_hit"
-					"value" "3"
-				}
-				"ragdolls plasma effect"
-				{
-					"attribute_class"	"ragdolls_plasma_effect"
-					"value" "1"
-				}
-				"damage bonus HIDDEN"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
-				}
 				"clip size bonus"
 				{
 				"attribute_class"	"mult_clipsize"
 				"value"	"4.80"
-				}
-				"damage causes airblast"
-				{
-					"attribute_class"	"damage_causes_airblast"
-					"value" "20"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.80"
-				}
-				"mod use metal ammo type"
-				{
-					"attribute_class"	"mod_use_metal_ammo_type"
-					"value"	"1"
-				}
-				"dmg penalty vs buildings"
-				{
-					"attribute_class"	"mult_dmg_vs_buildings"
-					"value" "0.30"
 				}
 			}
 			"visuals"
@@ -30466,11 +30429,6 @@ Fires....... something"
 				{
 				"attribute_class"	"mult_onhit_enemyspeed_major"
 				"value"	"2"
-				}
-				"dmg bonus vs buildings"
-				{
-					"attribute_class"	"mult_dmg_vs_buildings"
-					"value"	"1.50"
 				}
 				"damage bonus"
 				{
