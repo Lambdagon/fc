@@ -28363,7 +28363,7 @@ Fires....... something"
 			"anim_slot"	"secondary"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_smg"
+			"image_inventory"	"backpack/weapons/c_models/c_smg/c_smg"
 			"model_player" "models/weapons/c_models/c_smg/c_smg.mdl"
 			"used_by_classes"
 			{
@@ -28371,7 +28371,21 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				
+				"scattergun has knockback"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
+				}
+				"scattergun knockback mult"
+				{
+					"attribute_class"	"scattergun_knockback_mult"
+					"value"	"0.25"
+				}
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"3"
+				}
 			}
 			"static_attrs"
 			{
