@@ -1,0 +1,392 @@
+//--------------------------------------------------------------------------------------------------------------
+// Repressor Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Criterion "RepressorIsNotStillonFire" "RepressorOnFire" "!=1" "required" weight 0
+Criterion "RepressorIsStillonFire" "RepressorOnFire" "1" "required" weight 0
+Criterion "NotRepressorGrabbedIntelligence" "RepressorGrabbedIntelligence" "!=1" "required"
+Criterion "RepressorNotKillSpeechMelee" "RepressorKillSpeechMelee" "!=1" "required" weight 0
+Criterion "RepressorNotKillSpeechPrimary" "RepressorKillSpeechPrimary" "!=1" "required" weight 0
+
+
+Response PlayerBattleCryRepressor
+{
+	speak "Repressor.BattleCry01"
+	speak "Repressor.BattleCry02"
+	speak "Repressor.BattleCry03"
+}
+Rule PlayerBattleCryRepressor
+{
+	criteria ConceptPlayerBattleCry IsRepressor
+	Response PlayerBattleCryRepressor
+}
+
+Response PlayerMedicRepressor
+{
+	speak "Repressor.Medic01"
+	speak "Repressor.Medic02"
+	speak "Repressor.Medic03"
+}
+Rule PlayerMedicRepressor
+{
+	criteria ConceptPlayerMedic IsRepressor
+	Response PlayerMedicRepressor
+}
+
+Response KilledPlayerMeleeRepressor
+{
+	speak "Repressor.Domination01"
+	speak "Repressor.Domination02"
+	speak "Repressor.Domination03"
+	speak "Repressor.Domination04"
+	speak "Repressor.Domination05"
+	speak "Repressor.Domination06"
+	speak "Repressor.Domination07"
+	speak "Repressor.Domination08"
+}
+Rule KilledPlayerMeleeRepressor
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 80PercentChance IsWeaponMelee RepressorNotKillSpeechMelee IsRepressor
+	ApplyContext "RepressorKillSpeechMelee:1:10"
+	Response KilledPlayerMeleeRepressor
+}
+
+Response KilledPlayerPrimaryRepressor
+{
+	speak "Repressor.Domination01"
+	speak "Repressor.Domination02"
+	speak "Repressor.Domination03"
+	speak "Repressor.Domination04"
+	speak "Repressor.Domination05"
+	speak "Repressor.Domination06"
+	speak "Repressor.Domination07"
+	speak "Repressor.Domination08"
+}
+Rule KilledPlayerPrimaryRepressor
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 80PercentChance IsWeaponPrimary RepressorNotKillSpeechMelee IsRepressor
+	ApplyContext "RepressorKillSpeechPrimary:1:10"
+	Response KilledPlayerPrimaryRepressor
+}
+
+
+Response PlayerKilledDominatingRepressor
+{
+	speak "Repressor.Domination01"
+	speak "Repressor.Domination02"
+	speak "Repressor.Domination03"
+	speak "Repressor.Domination04"
+	speak "Repressor.Domination05"
+	speak "Repressor.Domination06"
+	speak "Repressor.Domination07"
+	speak "Repressor.Domination08"
+}
+Rule PlayerKilledDominatingRepressor
+{
+	criteria ConceptKilledPlayer IsRepressor IsDominated
+	ApplyContext "RepressorKillSpeech:1:7"
+	ApplyContext "IsDominating:1:7"
+	Response PlayerKilledDominatingRepressor
+}
+
+Response PlayerGoRepressor
+{
+	speak "Repressor.Go01"
+	speak "Repressor.Go02"
+}
+Rule PlayerGoRepressor
+{
+	criteria ConceptPlayerGo IsRepressor
+	Response PlayerGoRepressor
+}
+
+Response PlayerHelpRepressor
+{
+	speak "Repressor.HelpMe01"
+	speak "Repressor.HelpMe02"
+	speak "Repressor.HelpMe03"
+	speak "Repressor.HelpMe04"
+}
+Rule PlayerHelpRepressor
+{
+	criteria ConceptPlayerHelp IsRepressor
+	Response PlayerHelpRepressor
+}
+
+Response PlayerSentryHereRepressor
+{
+	speak "Repressor.NeedSentry01"
+	speak "Repressor.NeedSentry02"
+}
+Rule PlayerSentryHereRepressor
+{
+	criteria ConceptPlayerSentryHere IsRepressor
+	Response PlayerSentryHereRepressor
+}
+
+Response PlayerDispenserHereRepressor
+{
+	speak "Repressor.NeedDispenser01"
+	speak "Repressor.NeedDispenser02"
+}
+Rule PlayerDispenserHereRepressor
+{
+	criteria ConceptPlayerDispenserHere IsRepressor
+	Response PlayerDispenserHereRepressor
+}
+
+Response PlayerTeleporterHereRepressor
+{
+	speak "Repressor.NeedTeleporter01"
+	speak "Repressor.NeedTeleporter02"
+}
+Rule PlayerTeleporterHereRepressor
+{
+	criteria ConceptPlayerTeleporterHere IsRepressor
+	Response PlayerTeleporterHereRepressor
+}
+
+Response PlayerIncomingRepressor
+{
+	speak "Repressor.Incoming01"
+	speak "Repressor.Incoming02"
+	speak "Repressor.Incoming03"
+	speak "Repressor.Incoming04"
+	speak "Repressor.Incoming05"
+	speak "Repressor.Incoming06"
+	speak "Repressor.Incoming07"
+	speak "Repressor.Incoming08"
+	speak "Repressor.Incoming09"
+}
+Rule PlayerIncomingRepressor
+{
+	criteria ConceptPlayerIncoming IsRepressor
+	Response PlayerIncomingRepressor
+}
+
+Response MvMSniperCalloutRepressor
+{
+	speak "Repressor.Sniper01"
+	speak "Repressor.Sniper02"
+}
+Rule MvMSniperCalloutRepressor
+{
+	criteria ConceptMvMSniperCallout IsMvMDefender IsRepressor
+	Response MvMSniperCalloutRepressor
+}
+
+Response PlayerJeersRepressor
+{
+	speak "Repressor.Jeers01"
+	speak "Repressor.Jeers02"
+	speak "Repressor.Jeers03"
+}
+Rule PlayerJeersRepressor
+{
+	criteria ConceptPlayerJeers IsRepressor
+	Response PlayerJeersRepressor
+}
+
+Response PlayerActivateChargeRepressor
+{
+	speak "Repressor.UberMe01"
+	speak "Repressor.UberMe02"
+}
+Rule PlayerActivateChargeRepressor
+{
+	criteria ConceptPlayerActivateCharge IsRepressor
+	Response PlayerActivateChargeRepressor
+}
+
+Response PlayerSentryAheadRepressor
+{
+	speak "Repressor.SentryAhead01"
+	speak "Repressor.SentryAhead02"
+}
+Rule PlayerSentryAheadRepressor
+{
+	criteria ConceptPlayerSentryAhead IsRepressor
+	Response PlayerSentryAheadRepressor
+}
+
+Response PlayerYesRepressor
+{
+	speak "Repressor.Yes01"
+	speak "Repressor.Yes02"
+	speak "Repressor.Yes03"
+	speak "Repressor.Yes04"
+	speak "Repressor.Yes05"
+}
+Rule PlayerYesRepressor
+{
+	criteria ConceptPlayerYes  IsRepressor
+	Response PlayerYesRepressor
+}
+
+Response PlayerThanksRepressor
+{
+	speak "Repressor.Thanks01"
+	speak "Repressor.Thanks02"
+}
+Rule PlayerThanksRepressor
+{
+	criteria ConceptPlayerThanks IsRepressor
+	Response PlayerThanksRepressor
+}
+
+Response PlayerPositiveRepressor
+{
+	speak "Repressor.Positive01"
+	speak "Repressor.Positive02"
+	speak "Repressor.Positive03"
+	speak "Repressor.Positive04"
+}
+Rule PlayerPositiveRepressor
+{
+	criteria ConceptPlayerPositive IsRepressor
+	Response PlayerPositiveRepressor
+}
+
+Response PlayerNegativeRepressor
+{
+	speak "Repressor.Negative01"
+	speak "Repressor.Negative02"
+}
+Rule PlayerNegativeRepressor
+{
+	criteria ConceptPlayerNegative IsRepressor
+	Response PlayerNegativeRepressor
+}
+
+Response PlayerNoRepressor
+{
+	speak "Repressor.No01"
+	speak "Repressor.No02"
+	speak "Repressor.No03"
+	speak "Repressor.No04"
+	speak "Repressor.No05"
+}
+Rule PlayerNoRepressor
+{
+	criteria ConceptPlayerNo  IsRepressor
+	Response PlayerNoRepressor
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech
+//--------------------------------------------------------------------------------------------------------------
+
+Response PlayerAttackerPainRepressor
+{
+	speak "Repressor.Pain01"
+	speak "Repressor.Pain02"
+	speak "Repressor.Pain03"
+	speak "Repressor.Pain04"
+	speak "Repressor.Pain05"
+	speak "Repressor.Pain06"
+}
+Rule PlayerAttackerPainRepressor
+{
+	criteria ConceptAttackerPain IsRepressor
+	Response PlayerAttackerPainRepressor
+}
+
+Response PlayerPainRepressor
+{
+	speak "Repressor.Pain01"
+	speak "Repressor.Pain02"
+	speak "Repressor.Pain03"
+	speak "Repressor.Pain04"
+	speak "Repressor.Pain05"
+	speak "Repressor.Pain06"
+}
+Rule PlayerPainRepressor
+{
+	criteria ConceptPain IsRepressor
+	Response PlayerPainRepressor
+}
+
+Response PlayerOnFireRareRepressor
+{
+	speak "Repressor.OnFire01"
+	speak "Repressor.OnFire02"
+	speak "Repressor.OnFire03"
+	speak "Repressor.OnFire04"
+	speak "Repressor.OnFire05"
+	speak "Repressor.OnFire06"
+}
+Rule PlayerOnFireRareRepressor
+{
+	criteria ConceptFire IsRepressor 10PercentChance RepressorIsNotStillonFire
+	ApplyContext "RepressorOnFire:1:7"
+	Response PlayerOnFireRareRepressor
+}
+
+Response PlayerStillOnFireRepressor
+{
+	speak "Repressor.OnFire01"
+	speak "Repressor.OnFire02"
+	speak "Repressor.OnFire03"
+	speak "Repressor.OnFire04"
+	speak "Repressor.OnFire05"
+	speak "Repressor.OnFire06"
+}
+Rule PlayerStillOnFireRepressor
+{
+	criteria ConceptFire IsRepressor  RepressorIsStillonFire
+	ApplyContext "RepressorOnFire:1:7"
+	Response PlayerStillOnFireRepressor
+}
+
+Response PlayerLostPointRepressor
+{
+	speak "Repressor.PointLost01"
+	speak "Repressor.PointLost02"
+	speak "Repressor.PointLost03"
+	speak "Repressor.PointLost04"
+	speak "Repressor.PointLost05"
+}
+Rule PlayerLostPointRepressor
+{
+	criteria ConceptPlayerLostPoint IsRepressor
+	Response PlayerLostPointRepressor
+}
+
+Response PlayerSuccessRepressor
+{
+	speak "Repressor.PointWon01"
+	speak "Repressor.PointWon02"
+	speak "Repressor.PointWon03"
+	speak "Repressor.PointWon04"
+}
+Rule PlayerSuccessRepressor
+{
+	criteria ConceptPlayerSuccess IsRepressor
+	Response PlayerSuccessRepressor
+}
+
+Response PlayerFailureRepressor
+{
+	speak "Repressor.PointLost01"
+	speak "Repressor.PointLost02"
+	speak "Repressor.PointLost03"
+	speak "Repressor.PointLost04"
+	speak "Repressor.PointLost05"
+}
+Rule PlayerFailureRepressor
+{
+	criteria ConceptPlayerFailure IsRepressor
+	Response PlayerFailureRepressor
+}
+
+Response PlayerRoundStartRepressor
+{
+	speak "Repressor.BattleCry01"
+	speak "Repressor.BattleCry02"
+	speak "Repressor.BattleCry03"
+}
+Rule PlayerRoundStartRepressor
+{
+	criteria ConceptPlayerRoundStart IsRepressor
+	Response PlayerRoundStartRepressor
+}

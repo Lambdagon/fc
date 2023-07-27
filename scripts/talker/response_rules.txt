@@ -295,7 +295,7 @@ criterion "IsOnPyro" "crosshair_on" "Pyro" "required"
 criterion "IsOnSpy" "crosshair_on" "Spy" "required"
 criterion "IsOnEngineer" "crosshair_on" "Engineer" "required"
 criterion "IsOnCivilian" "crosshair_on" "Civilian" "required"
-criterion "IsOnCombineSoldier" "crosshair_on" "Combine" "required"
+criterion "IsOnRepressor" "crosshair_on" "Combine" "required"
 criterion "IsOnZombie" "crosshair_on" "Zombie" "required"
 criterion "IsOnEnforcer" "crosshair_on" "zombiefast" "required"
 criterion "IsOnAntlion" "crosshair_on" "Antlion" "required"
@@ -326,7 +326,7 @@ criterion "IsMetropolice" "playerclass" "Metropolice" "required"
 criterion "IsMercenary" "playerclass" "Mercenary" "required"
 criterion "IsCivilian" "playerclass" "Civilian" "required"
 criterion "IsJohn" "playerclass" "John" "required"
-criterion "IsCombineSoldier" "playerclass" "Combine" "required"
+criterion "IsRepressor" "playerclass" "Combine" "required"
 criterion "IsZombie" "playerclass" "Zombie" "required"
 criterion "IsZombine" "playerclass" "Zombine" "required"
 criterion "IsEnforcer" "playerclass" "zombiefast" "required"
@@ -344,7 +344,7 @@ criterion "IsNotSpy" "playerclass" "!=Spy" "required"
 criterion "IsNotEngineer" "playerclass" "!=Engineer" "required"
 criterion "IsNotMetropolice" "playerclass" "!=Metropolice" "required"
 criterion "IsNotCivilian" "playerclass" "!=Civilian" "required"
-criterion "IsNotCombineSoldier" "playerclass" "!=Combine" "required"
+criterion "IsNotRepressor" "playerclass" "!=Combine" "required"
 criterion "IsNotZombie" "playerclass" "!=Zombie" "required"
 criterion "IsNotZombine" "playerclass" "!=Zombine" "required"
 criterion "IsNotEnforcer" "playerclass" "!=zombiefast" "required"
@@ -363,7 +363,7 @@ criterion "IsVictimPyro" "victimclass" "Pyro" "required" weight 0
 criterion "IsVictimSpy" "victimclass" "Spy" "required" weight 0
 criterion "IsVictimEngineer" "victimclass" "Engineer" "required"  weight 0
 criterion "IsVictimCivilian" "victimclass" "Civilian" "required"  weight 0
-criterion "IsVictimCombineSoldier" "victimclass" "Combine" "required"  weight 0
+criterion "IsVictimRepressor" "victimclass" "Combine" "required"  weight 0
 criterion "IsVictimZombie" "victimclass" "Zombie" "required"  weight 0
 criterion "IsVictimEnforcer" "victimclass" "zombiefast" "required"  weight 0
 criterion "IsVictimAntlion" "victimclass" "Antlion" "required"  weight 0
@@ -380,7 +380,7 @@ criterion "IsNotVictimPyro" "victimclass" "!=Pyro" "required" weight 0
 criterion "IsNotVictimSpy" "victimclass" "!=Spy" "required" weight 0
 criterion "IsNotVictimEngineer" "victimclass" "!=Engineer" "required" weight 0
 criterion "IsNotVictimCivilian" "victimclass" "!=Civilian" "required" weight 0
-criterion "IsNotVictimCombineSoldier" "victimclass" "!=Combine" "required" weight 0
+criterion "IsNotVictimRepressor" "victimclass" "!=Combine" "required" weight 0
 criterion "IsNotVictimZombie" "victimclass" "!=Zombie" "required" weight 0
 criterion "IsNotVictimEnforcer" "victimclass" "!=zombiefast" "required" weight 0
 criterion "IsNotVictimAntlion" "victimclass" "!=Antlion" "required" weight 0
@@ -773,3 +773,4 @@ criterion "ConceptPlayerMatchOverComp" "Concept" "TLK_MATCH_OVER_COMP" required
 #include "talker/mercenary.txt"
 #include "talker/john.txt"
 #include "talker/enforcer.txt"
+#include "talker/repressor.txt"
