@@ -30588,7 +30588,7 @@ Fires....... something"
 		"9863"
 		{
 			"name"	"Test Recoil Rocketlauncher"
-			"prefab"	"valve weapon_rocketlauncher"
+			//"prefab"	"valve weapon_rocketlauncher"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_rocketlauncher"
 			"craft_class"	"weapon"
@@ -30631,15 +30631,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"scattergun has knockback"
+				"rocketlauncher has recoil"
 				{
-					"attribute_class"	"set_scattergun_has_knockback"
+					"attribute_class"	"set_rocket_has_recoil"
 					"value"	"1"
 				}
-				"scattergun knockback mult"
+				"rocketlauncher recoil mult"
 				{
-					"attribute_class"	"scattergun_knockback_mult"
+					"attribute_class"	"rocket_recoil_mult"
 					"value"	"2"
+				}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"1.50"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -40191,6 +40196,25 @@ Fires....... something"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10031"
+		{
+			"name"	"rocketlauncher has recoil"
+			"attribute_class"	"set_rocket_has_recoil"
+			"description_string"	"#Attrib_RocketHasRecoil"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10032"
+		{
+			"name"	"rocketlauncher recoil mult"
+			"attribute_class"	"rocket_recoil_mult"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
 	}
