@@ -4,7 +4,7 @@
 {
 	"classNameLabel"
 	{
-		"labelText"		"John Freeman"
+		"labelText"		"JOHN FREEMAN"
 	}
 	
 	"classInfo"
@@ -13,7 +13,7 @@
 	}
 	"classInfo2"
 	{
-		"text"			"its time for me to live up to my family name and face full life consequences"
+		"text"			"It's time for me to live up to my family name and face full life consequences!"
 	}
 	
 	"classModel"
@@ -34,12 +34,12 @@
 
 			"animation"
 			{
-				"sequence"		"idle_default"
+				"sequence"		"SelectionMenu_StartPose"
 			}
 			
 			"attached_model"
 			{
-				"modelname" "models/weapons/w_smg1.mdl"
+				"modelname" ""
 				"skin"		"0"
 			}
 		}

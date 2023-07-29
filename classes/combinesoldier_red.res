@@ -4,16 +4,17 @@
 {
 	"classNameLabel"
 	{
-		"labelText"		"Rebel Combine Soldier"
+		"labelText"		"REPRESSOR"
 	}
 	
 	"classInfo"
 	{
-		"text"			"A disgruntled soldier of the Combine, now turned towards rebel causes."
+		"text"			"An ex-metrocop, now rogue and a thief of a full suppressor suit and pulse minigun. Which, both he has modified himself."
 	}
 	"classInfo2"
 	{
-		"text"			"Use High-Tech Weaponry and Grenades!"
+		"text"			"
+Use your drone to supply ammo to nearby friendlies! (Not yet implemented)"
 	}
 	
 	"classModel"
@@ -21,17 +22,17 @@
 		"fov"			"20"
 		"model"
 		{
-			"modelname"	"models/combine_soldier.mdl"
-			"modelname_hwm"	"models/combine_soldier.mdl"
+			"modelname"	"models/player/repressor/combine_suppresor.mdl"
+			"modelname_hwm"	"models/player/repressor/combine_suppresor.mdl"
 			"skin"	"0"		
 			"animation"
 			{
-				"sequence"		"idle1"
+				"sequence"		"classselect_anim"
 			}
 								
 			"attached_model"
 			{
-				"modelname" "models/weapons/w_smg1.mdl"
+				"modelname" ""
 				"skin"		"0"
 			}
 		}

@@ -5,12 +5,16 @@
 	"classNameLabel"
 	{
 		// Should be changed translation token
-		"labelText"		"Enforcer"
+		"labelText"		"ENFORCER"
 	}
 	
 	"classInfo"
 	{
-		"text"			"Brains..."
+		"text"			"Fend off your foes, stand your ground as a... former overwatch unit."
+	}
+	"classInfo2"
+	{
+		"text"			"Use your grenade to do immense damage all around you, but damaging you in the process. (not yet implemented)"
 	}
 	
 	"classModel"
@@ -25,7 +29,7 @@
 			
 			"animation"
 			{
-				"sequence"		"idle"
+				"sequence"		"pullGrenade"
 			}
 								
 			"attached_model"

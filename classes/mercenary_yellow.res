@@ -28,7 +28,7 @@
 						
 			"attached_model"
 			{
-				"modelname" "models/empty.mdl"
+				"modelname" ""
 				"skin"		"0"
 			}
 			"animation"
