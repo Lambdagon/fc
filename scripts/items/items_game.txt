@@ -27185,7 +27185,6 @@ Fires....... something"
             "used_by_classes"
             {
                 "demoman"    "secondary"
-				"sniper"	 "secondary"
             }
         }
 		"9791"
@@ -30566,13 +30565,13 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_models/v_shotgun_merc.mdl"
+			"model_player"	"models/weapons/v_models/v_shotgun_sniper.mdl"
 			"model_world"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
 			"attach_to_hands" "2"
 			"inspect_panel_dist" "60"
 			"used_by_classes"
 			{
-				"engineer"	"1"
+				"sniper"	"1"
 			}
 			"attributes"
 			{
@@ -30658,7 +30657,33 @@ Fires....... something"
 			}
 			
 		}
-
+		"9864"
+		 {
+            "name"    "TF_WEAPON_SHOTGUN_SNIPER_SECONDARY"
+            "first_sale_date"    "2010/09/29"
+            "prefab"    "weapon_shotgun"
+			"item_class" "tf_weapon_shotgun_hwg"
+            "baseitem"    "0"
+			"item_name"		"Shotgun"
+            "item_slot"    "primary"
+			"show_in_armory"	"1"
+            "model_player"    "models/weapons/v_models/v_shotgun_sniper.mdl"
+            "model_world"    "models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"anim_slot"		 "primary"
+            "attach_to_hands"    "2"
+            "used_by_classes"
+            {
+				"sniper"	 "secondary"
+            }
+			"attributes"
+			{
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.32"
+				}
+			}
+        }
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
