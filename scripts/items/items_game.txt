@@ -25557,11 +25557,19 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"				"1.60" 
 				}
-			"visuals"																		
+			}
+			"visuals"
 			{
 				"sound_single_shot"		"HL2_Weapon_Shotgun.Double"
 				"sound_burst"			"HL2_Weapon_Shotgun.Double"
-			}
+				"sound_empty"		"Weapon_WidowMaker.Empty"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"	"ACT_VM_PRIMARYATTACK_SPECIAL"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
