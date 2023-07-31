@@ -20269,7 +20269,7 @@
             }
             "item_type_name"    "#TF_Weapon_Revolver"
             "item_name"    "The Colt Python"
-            "item_slot"    "primary"
+            "item_slot"    "secondary"
             "show_in_armory"    "1"
             "image_inventory"    "backpack/weapons/c_models/c_357"
             "image_inventory_size_w"        "128"
@@ -20315,6 +20315,11 @@
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"				"0.175"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.5"
 				}
             }
             "static_attrs"
@@ -27068,6 +27073,7 @@ Fires....... something"
 				//	"attribute_class"	"headshot_damage_modify"
 				//	"value"	"4"
 				//}
+				
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -27078,10 +27084,10 @@ Fires....... something"
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"revolver use hit locations"
+				"maxammo primary increased"
 				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"1.1"
 				}
 				"spread penalty"
 				{
@@ -27096,12 +27102,7 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" "1.5"
-				}
-				"maxammo secondary reduced"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.46666"
+					"value" "1.75"
 				}
 				"crit mod disabled"
 				{
@@ -27150,7 +27151,7 @@ Fires....... something"
 			"item_description"	""
 			"item_logname"	"pep_pistol"
 			"item_iconname"	"pep_pistol"
-			"item_slot"	"primary"
+			"item_slot"	"secondary"
 			"anim_slot"	"ITEM1"
 			"item_quality"	"unique"
 			"baseitem" "0"
@@ -28385,7 +28386,7 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" "1.5"
+					"value" "2"
 				}
 			}
 			"static_attrs"
