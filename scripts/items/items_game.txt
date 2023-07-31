@@ -5839,7 +5839,7 @@
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		
-		"weapon_nailgun"
+		"weapon_nailgun_tfc"
 		{
 			"capabilities"
 			{
@@ -5862,7 +5862,7 @@
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_syringegun"
+			"image_inventory"	"backpack/weapons/w_models/w_nailgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 				"44"					
@@ -6346,6 +6346,118 @@
 			}
 		}
 
+		"weapon_nailgun"
+		{
+			"tags"
+			{
+				"can_deal_damage"						"1"
+				"can_deal_critical_damage"				"1"
+				"can_deal_mvm_penetration_damage"		"1"
+				"can_deal_long_distance_damage"			"1"
+			}
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_syringegun_medic"
+			"item_type_name"			"Nail Gun"
+			"item_name"					"Nail Gun"
+			"item_quality"				"normal"
+			"propername"				"1"
+			"min_ilevel"				"5"
+			"max_ilevel"				"5"
+			"image_inventory"			"backpack/weapons/w_models/w_nailgun"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"128"
+			"attach_to_hands"			"2"
+			"model_world"				"models/weapons/w_models/w_nailgun.mdl"
+			"model_player"				"models/weapons/v_models/v_nailgun_scout.mdl"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+			}
+			"attributes"
+			{
+							"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"5.1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\w_nail.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_NailGun.Single"
+				"sound_burst"			"Weapon_NailGun.SingleCrit"
+				"sound_reload"			"Weapon_NailGun.Reload"
+				"sound_deploy"			"Weapon_Nailgun.Draw"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		
+		"weapon_nailgun_pistol"
+		{
+			"tags"
+			{
+				"can_deal_damage"						"1"
+				"can_deal_critical_damage"				"1"
+				"can_deal_mvm_penetration_damage"		"1"
+				"can_deal_long_distance_damage"			"1"
+			}
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_pistol"
+			"item_type_name"			"Nail Gun"
+			"item_name"					"Nail Gun"
+			"item_quality"				"normal"
+			"propername"				"1"
+			"min_ilevel"				"5"
+			"max_ilevel"				"5"
+			"image_inventory"			"backpack/weapons/w_models/w_nailgun"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"128"
+			"attach_to_hands"			"2"
+			"model_world"				"models/weapons/w_models/w_nailgun.mdl"
+			"model_player"				"models/weapons/v_models/v_nailgun_scout.mdl"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+			}
+			"attributes"
+			{
+							"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"5.1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\w_nail.mdl"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\w_nail.mdl"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"5" 
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_NailGun.Single"
+				"sound_burst"			"Weapon_NailGun.SingleCrit"
+				"sound_reload"			"Weapon_NailGun.Reload"
+				"sound_deploy"			"Weapon_Nailgun.Draw"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		
 		"weapon_wrench"
 		{
 			"capabilities"
@@ -22991,7 +23103,6 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
 			"used_by_classes"
 			{
-				"engineer"	"primary"
 				"heavy"	"secondary"
 				"spy"	"primary"
 			}
@@ -24708,7 +24819,7 @@ Fires....... something"
 		{
 			"name"						"TF_WEAPON_NAILGUN"
 			"prefab"					"weapon_nailgun"
-			"show_in_armory"			"1"
+			"show_in_armory"			"0"
 			"used_by_classes"
 			{
 				"scout"					"1"
@@ -25511,11 +25622,6 @@ Fires....... something"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "50"
 			"model_player"	"models/weapons/c_models/c_1014/c_shotgun.mdl"
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_Deagle.Single"
-				"sound_burst"			"Weapon_Deagle.SingleCrit"
-			}
 			"used_by_classes"
 			{
 				"engineer"	"1"
@@ -25556,11 +25662,18 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"				"1.60" 
 				}
+			}
 			"visuals"																		
 			{
 				"sound_single_shot"		"HL2_Weapon_Shotgun.Double"
 				"sound_burst"			"HL2_Weapon_Shotgun.Double"
-			}
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"	"ACT_VM_PRIMARYATTACK_SPECIAL"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -30683,6 +30796,68 @@ Fires....... something"
 				}
 			}
         }
+		"9865"
+		{
+			"name"						"TF_WEAPON_NAILGUN"
+			"prefab"					"weapon_nailgun"
+			"item_description"			"Bang! I make it look easy!"
+			"item_slot"					"primary"
+			"anim_slot"					"item2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"attributes"
+			{
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"5.1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\w_nail.mdl"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+			}
+		}
+		"9866"
+		{
+			"name"						"TF_WEAPON_NAILGUN_MERCENARY"
+			"prefab"					"weapon_nailgun_pistol"
+			"anim_slot"					"secondary"
+			"item_slot"					"secondary"
+			"used_by_classes"
+			{
+				"mercenary"					"1"
+			}
+			"attributes"
+			{
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"5.1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models\w_nail.mdl"
+				}
+				"clip size bonus"
+				{
+				"attribute_class"	"mult_clipsize"
+					"value"	"3.2"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -11"
+			}
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
