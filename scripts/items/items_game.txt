@@ -18789,7 +18789,7 @@
 		"9039"
 		{
 			"name"	"HL2 Crowbar"
-			"item_class"	"saxxy"
+			"item_class"	"tf_weapon_knife"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18801,7 +18801,7 @@
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Certified Headcrab Killer"
+			"item_type_name"	"Crowbar"
 			"item_name"	"#TF_Weapon_Crowbar"
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
@@ -18826,6 +18826,25 @@
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.6"
+				}
+				"damage penalty HIDDEN"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "0.8"
+				}
+				"cannot backstab HIDDEN"
+				{
+					"attribute_class" 	"mod_cannot_backstab"
+					"value" "1"
+				}
+			}
+			
 			"visuals"
 			{
 				"sound_melee_hit"		"Weapon_Crowbar.Melee_Hit"
@@ -18971,7 +18990,7 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"SPAS-12"
+			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_name"	"12-Gauge Shotgun"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
@@ -28268,7 +28287,7 @@ Fires....... something"
 		"9806"
 		{
 			"name"	"John Stunstick"
-			"item_class"	"tf_weapon_fireaxe"
+			"item_class"	"tf_weapon_knife"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -28336,15 +28355,15 @@ Fires....... something"
 				"attribute_class"	"mult_dmg"
 				"value"	"1.2"
 				}
-				"fire rate penalty"
-				{
-				"attribute_class"	"mult_postfiredelay"
-				"value"	"1.8"
-				}
 				"crit mod disabled"
 				{
 				"attribute_class"	"mult_crit_chance"
 				"value"	"0"
+				}
+				"cannot backstab HIDDEN"
+				{
+					"attribute_class" 	"mod_cannot_backstab"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -40685,6 +40704,25 @@ Fires....... something"
 			"description_format"	"value_is_additive"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"10034"
+		{
+			"name" "cannot backstab"
+			"attribute_class" "mod_cannot_backstab"
+			"description_string" "#Attrib_NoBackstabs"
+			"description_format"	"value_is_additive"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"10035"
+		{
+			"name" "cannot backstab HIDDEN"
+			"attribute_class" "mod_cannot_backstab"
+			"description_string" "#Attrib_NoBackstabs"
+			"description_format"	"value_is_additive"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+			"hidden" "1"
 		}
 	}
 	"attribute_controlled_attached_particles"
