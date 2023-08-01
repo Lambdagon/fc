@@ -4281,7 +4281,7 @@
 			}
 			"base_item_name"	"TF_WEAPON_PISTOL"
 			"show_in_armory"	"1"
-			"item_type_name"	"Colt 1911 Pistol"
+			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_description"	"It's longer than you think"
 			"item_name"	"#TF_Weapon_Pistol"
 			"item_slot"	"secondary"
@@ -12268,6 +12268,11 @@
 				{
 					"attribute_class"	"air_dash_count"
 					"value"	"1"
+				}
+				"minicrit when jumping"
+				{
+					"attribute_class" "mod_jump_hit"
+					"value" "1"
 				}
 				"single wep deploy time increased"
 				{
@@ -27904,35 +27909,20 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"	"1.07"
 				}
-				"dmg from ranged reduced passive"
+				"minicrit when jumping"
 				{
-					"attribute_class" "dmg_from_ranged"
-					"value" "0.1"
+					"attribute_class" "mod_jump_hit"
+					"value" "1"
 				}
-				"dmg from melee reduced"
+				"crit mod disabled"
 				{
-					"attribute_class"	"dmg_from_melee"
-					"value"	"0.1"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
-				"dmg taken from crit reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"0.3"
-				}
-				"health regen"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"	"2"
-				}
-				//"crit mod disabled"
-				//{
-				//	"attribute_class"	"mult_crit_chance"
-				//	"value"	"1"
-				//}
 				"max health additive penalty"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value"	"-85"
+					"value"	"-15"
 				}
 				
 				
@@ -28647,7 +28637,7 @@ Fires....... something"
 		
 		"9810"
 		{
-			"name" "Test Primary SMG"
+			"name" "Primary SMG"
 			"prefab"	"weapon_smg"
 			"enabled"	"1"
 			"item_class"	"tf_weapon_smg_primary"
@@ -28664,7 +28654,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			//"base_item_name"	"TF_WEAPON_SMG_PRIMARY"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"TEST SMG Primary"
 			"item_slot"	"primary"
@@ -28674,7 +28664,7 @@ Fires....... something"
 			"anim_slot"	"secondary"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_smg/c_smg"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"model_player" "models/weapons/c_models/c_smg/c_smg.mdl"
 			"used_by_classes"
 			{
@@ -28690,7 +28680,7 @@ Fires....... something"
 				"scattergun knockback mult"
 				{
 					"attribute_class"	"scattergun_knockback_mult"
-					"value"	"2"
+					"value"	"1"
 				}
 				"hidden primary max ammo bonus"
 				{
@@ -28743,7 +28733,7 @@ Fires....... something"
 			"baseitem" "0"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"1"
 			"image_inventory"	"backpack/weapons/w_models/w_pistol"
 			"image_inventory_size_w"		"128"
@@ -40631,7 +40621,7 @@ Fires....... something"
 		{
 			"name"	"non sniper can scope"
 			"attribute_class"	"mod_can_scope"
-			"description_string"	"Can scope"
+			"description_string"	"#Attrib_CanScope"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"neutral"
@@ -40651,7 +40641,7 @@ Fires....... something"
 		{
 			"name"	"no reload single"
 			"attribute_class"	"set_no_reload_single"
-			"description_string"	"No Reload Single"
+			"description_string"	"#Attrib_NoReloadSingle"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"neutral"
@@ -40674,7 +40664,7 @@ Fires....... something"
 			"description_string"	"#Attrib_RocketHasRecoil"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
-			"effect_type"	"positive"
+			"effect_type"	"neutral"
 			"stored_as_integer"	"0"
 		}
 		"10032"
@@ -40682,7 +40672,17 @@ Fires....... something"
 			"name"	"rocketlauncher recoil mult"
 			"attribute_class"	"rocket_recoil_mult"
 			"description_format"	"value_is_percentage"
+			"description_string"	"#Attrib_RocketRecoilMult"
 			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10033"
+		{
+			"name" "minicrit when jumping"
+			"attribute_class" "mod_jump_hit"
+			"description_string" "#Attrib_JumpHitting"
+			"description_format"	"value_is_additive"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
