@@ -20091,7 +20091,7 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Freeman"
+			"item_type_name"	"Outfit"
 			"item_name"	"John Freeman"
 			"item_description"	"Who can go wrong with a classic?"
 			"item_slot"	"misc2"
@@ -20136,7 +20136,7 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Freeman"
+			"item_type_name"	"Outfit"
 			"item_name"	"John Freeman (Rebel)"
 			"item_description"	"Who can go wrong with a classic?"
 			"item_slot"	"misc2"
@@ -20165,8 +20165,8 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"Standard Issue Pulse Rifle"
-			"item_name"	"AR2"
+			"item_type_name"	"Pulse Rifle"
+			"item_name"	"Overwatch Standard Issue"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_ar2"
@@ -20259,7 +20259,7 @@
 		"9406"
         {
             "name"    "John 357"
-            "item_class"    "tf_weapon_revolver"
+            "item_class"    "tf_weapon_pistol"
             "baseitem" "0"
             "tags"
             {
@@ -20267,9 +20267,9 @@
                 "can_deal_mvm_penetration_damage"    "1"
                 "can_deal_long_distance_damage"    "1"
             }
-            "item_type_name"    ".357 Magnum Revolver"
+            "item_type_name"    "#TF_Weapon_Revolver"
             "item_name"    "The Colt Python"
-            "item_slot"    "primary"
+            "item_slot"    "secondary"
             "show_in_armory"    "1"
             "image_inventory"    "backpack/weapons/c_models/c_357"
             "image_inventory_size_w"        "128"
@@ -20291,6 +20291,11 @@
             "drop_sound"        "ui/item_heavy_gun_drop.wav"
             "attributes"
             {
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
                 "damage bonus HIDDEN"
                 {
                     "attribute_class"     "mult_dmg"
@@ -20301,17 +20306,21 @@
                     "attribute_class"    "mult_spread_scale"
                     "value" "0"
                 }
-                "revolver use hit locations"
-                {
-                    "attribute_class"    "set_weapon_mode"
-                    "value"    "1"
-                }
                 "fire rate penalty"
                 {
                     "attribute_class"    "mult_postfiredelay"
-                    "value"    "2"
+                    "value"    "4"
                 }
-
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"0.175"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.5"
+				}
             }
             "static_attrs"
             {
@@ -20369,7 +20378,7 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Eistein scintist (Real)"
+			"item_type_name"	"Outfit"
 			"item_name"	"Dr. Isaac Kleiner"
 			"item_description"	"Everyone's favorite(?) doctor!"
 			"item_slot"	"misc2"
@@ -20864,7 +20873,7 @@ Fires....... something"
                 "can_deal_mvm_penetration_damage"    "1"
                 "can_deal_long_distance_damage"    "1"
             }
-            "item_type_name"    "Machine Pistol"
+            "item_type_name"    "#TF_Weapon_SMG"
             "item_name"    "UZI"
 			"item_description"	"Model from GMod addon by Mac Tonight"
             "item_slot"    "secondary"
@@ -24260,7 +24269,7 @@ Fires....... something"
 				"nameable"		"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Rocket Launcher"
+			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"The RPG"
 			"item_description"	"Hold RMB to guide rockets"
 			"item_slot"	"primary"
@@ -24551,7 +24560,7 @@ Fires....... something"
 				"nameable"		"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Improvised Weapon"
+			"item_type_name"	"#TF_Weapon_Crossbow"
 			"item_name"	"Crossbow"
 			"item_description"	""
 			"item_slot"	"primary"
@@ -25270,7 +25279,7 @@ Fires....... something"
 			"item_class"	"tf_weapon_grenadelauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"item_type_name"	"Pump Action Grenade Launcher"
+			"item_type_name"	"#TF_Weapon_GrenadeLauncher"
 			"item_name"	"Pumpy"
 			"item_slot"	"primary"
 			"anim_slot"	"secondary"
@@ -25430,7 +25439,7 @@ Fires....... something"
 				"can_be_festivized"		"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Improvised Stickybomb Launcher"
+			"item_type_name"	"#TF_Weapon_PipebombLauncher"
 			"item_name"	"The Pipe-Gun Pipelauncher"
 			"item_description"	"Those shards of metal must hurt, laddie! 
 			Model by mat500"
@@ -25687,7 +25696,7 @@ Fires....... something"
 			"item_slot"					"primary"				
 			"propername"				"1"
 			"item_name"					"Rust Valley Relic"
-			"item_type_name"			"(Experpimental gun)"
+			"item_type_name"			"Machine Gun"
 			"item_quality"	"unique"
 			"item_logname" 				"machinegun"
 			"item_iconname" 			"machinegun"
@@ -25769,7 +25778,7 @@ Fires....... something"
 			"item_logname"	"blutsauger"
 			"item_iconname"	"blutsauger"
 			"show_in_armory"	"1"
-			"item_type_name"	"Sturmgewehr-44"
+			"item_type_name"	"Assault Rifle"
 			"item_name"	"Storm-Goer"
 			"item_description"	"An illegal wonder made by German Engineering"
 			"item_slot"	"primary"
@@ -25840,7 +25849,7 @@ Fires....... something"
 				"can_deal_gib_damage"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Breech Loading Sniper Rifle"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"		"One Hit Wonder"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
@@ -26187,7 +26196,7 @@ Fires....... something"
 				"can_destroy_sappers"		"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"Sword"
+			"item_type_name"	"#TF_Weapon_Sword"
 			"item_name"	"The Excalibrated"
 			"item_description"	"A soon to be haunted sword. 
 			Model by Haau"
@@ -26533,7 +26542,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"Jump Ability"
+			"item_type_name"	"Ability"
 			"item_name"	"High Jump"
 			"item_slot"	"primary"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
@@ -26875,7 +26884,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"Zombified Hands"
+			"item_type_name"	"#TF_Weapon_Fists"
 			"item_name"	"Transhuman Claws"
 			"item_description"	"(Viewmodel from Zombie SWEPs, by sean and Pillow)"
 			"item_slot"	"melee"
@@ -26945,7 +26954,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"Bloodied Combine Armor"
+			"item_type_name"	"Armor"
 			"item_name"	"Enforcing Tool"
 			"item_slot"	"secondary"
 			"item_description"	"Standard... Issue."
@@ -27023,16 +27032,12 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"first_sale_date" "2012/06/27"
-			"item_class"	"tf_weapon_revolver"
+			"item_class"	"tf_weapon_pistol"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"Juandeag"
-			"item_description"	"Becomes perfectly accurate again
-			1.5 seconds after firing.
-			Goes in Primary Slot, 
-			hud_fastswitch 0 to access
-			Heavy can handle bigger magazines"
+			"item_description"	""
 			"item_logname"	"pep_pistol"
 			"item_iconname"	"pep_pistol"
 			"item_slot"	"secondary"
@@ -27063,35 +27068,46 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"fire rate bonus"
+				//"headshot damage increase"
+				//{
+				//	"attribute_class"	"headshot_damage_modify"
+				//	"value"	"4"
+				//}
+				
+				"damage bonus"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.55"
+					"attribute_class"	"mult_dmg"
+					"value"	"2.66666666667"
 				}
 				"revolver use hit locations"
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"weapon spread bonus"
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"1.1"
+				}
+				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.35"
+					"value"	"1.85"
 				}
-				"headshot damage increase"
+				"clip size penalty"
 				{
-					"attribute_class"	"headshot_damage_modify"
-					"value"	"3"
+					"attribute_class" 	"mult_clipsize"
+					"value" "0.58"
 				}
-				"clip size bonus"
+				"fire rate penalty"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value"				"2"
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "1.75"
 				}
 				"crit mod disabled"
 				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
+				"attribute_class"	"mult_crit_chance"
+				"value"	"0"
 				}
 				"decapitate type"
 				{
@@ -27127,16 +27143,15 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"first_sale_date" "2012/06/27"
-			"item_class"	"tf_weapon_revolver"
+			"item_class"	"tf_weapon_pistol"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"Juandeag"
-			"item_description"	"Becomes perfectly accurate again
-			1.5 seconds after firing."
+			"item_description"	""
 			"item_logname"	"pep_pistol"
 			"item_iconname"	"pep_pistol"
-			"item_slot"	"primary"
+			"item_slot"	"secondary"
 			"anim_slot"	"ITEM1"
 			"item_quality"	"unique"
 			"baseitem" "0"
@@ -27164,10 +27179,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"fire rate bonus"
+				//"headshot damage increase"
+				//{
+				//	"attribute_class"	"headshot_damage_modify"
+				//	"value"	"4"
+				//}
+				"damage bonus"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.65"
+					"attribute_class"	"mult_dmg"
+					"value"	"2.66666666667"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
 				}
 				"revolver use hit locations"
 				{
@@ -27179,10 +27204,25 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"	"1.85"
 				}
-				"headshot damage increase"
+				"clip size penalty"
 				{
-					"attribute_class"	"headshot_damage_modify"
-					"value"	"4"
+					"attribute_class" 	"mult_clipsize"
+					"value" "0.58"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "1.5"
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"0.46666"
+				}
+				"crit mod disabled"
+				{
+				"attribute_class"	"mult_crit_chance"
+				"value"	"0"
 				}
 
 			}
@@ -27774,7 +27814,7 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"AK47"
+			"item_type_name"	"Assault Rifle"
 			"item_name"	"The Kalashnikov Kommander"
 			"item_slot"	"primary"
 			"item_description"	"Is this a beta reference?"
@@ -27872,7 +27912,7 @@ Fires....... something"
                 "can_deal_mvm_penetration_damage"    "1"
                 "can_deal_long_distance_damage"    "1"
             }
-            "item_type_name"    "TMP"
+            "item_type_name"    "#TF_Weapon_SMG"
             "item_name"    "The Schmidt"
 			"item_description"	"Definitely tactical."
             "item_slot"    "secondary"
@@ -27961,7 +28001,7 @@ Fires....... something"
                 "can_deal_mvm_penetration_damage"    "1"
                 "can_deal_long_distance_damage"    "1"
             }
-            "item_type_name"    "M249-SAW"
+            "item_type_name"    "Machine Gun"
             "item_name"    "The Mountain Saw"
 			"item_description"	"     This weapons uses secondary ammo
 			  Found this thing in the back of a dumpster."
@@ -28273,19 +28313,20 @@ Fires....... something"
 		"9808"  
 		{
 			"name"	"John CSS Deagle"
-			"item_class"	"tf_weapon_revolver"
+			"item_class"	"tf_weapon_pistol"
 			"baseitem" "0"
 			"tags"
 			{
-				"can_deal_damage"			"1"
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"Desert Eagle.50 AE"
+			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"The Johnathan Eagle"
-			"item_slot"	"primary"
-			"item_description"	"    This weapons uses secondary ammo
-			     This right here'll mess some shit up!"
+			"item_slot"	"secondary"
+			"item_description"	""
 			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_cssdeagle"
 			"image_inventory_size_w"		"128"
@@ -28307,20 +28348,30 @@ Fires....... something"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"2.66666666667"
+				}
 				"dmg pierces resists absorbs"
 				{
 					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"	"1"
 				}
-				"fire rate bonus"
+				"weapon spread bonus"
 				{
-					"attribute_class" 	"mult_postfiredelay"
-					"value" "0.70"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.3"
 				}
-				"clip size bonus"
+				"clip size penalty"
 				{
 					"attribute_class" 	"mult_clipsize"
-					"value" "1.20"
+					"value" "0.58"
 				}
 				"crit_dmg_falloff"
 				{
@@ -28330,7 +28381,12 @@ Fires....... something"
 				"maxammo secondary reduced"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.40"
+					"value"				"0.175"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "2"
 				}
 			}
 			"static_attrs"
@@ -28399,7 +28455,7 @@ Fires....... something"
 			"baseitem" "0"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"1"
 			"image_inventory"	"backpack/weapons/w_models/w_pistol"
 			"image_inventory_size_w"		"128"
