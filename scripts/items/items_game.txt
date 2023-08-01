@@ -4260,6 +4260,149 @@
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
+		
+		"weapon_1911"
+		{
+			"craft_class"	""
+			"baseitem"		"0"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_pistol"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"Colt 1911 Pistol"
+			"item_description"	"It's longer than you think"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"attributes"
+			{
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.50"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.90"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.85"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.8"
+				}
+            }
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
+		
+		"weapon_1911_primary"
+		{
+			"craft_class"	""
+			"baseitem"		"0"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_syringegun_medic"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"Colt 1911 Pistol"
+			"item_description"	"It's longer than you think"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.723"
+				"min_viewmodel_offset"				"10 0 -10"
+			}
+			"attributes"
+			{
+				"weapon spread bonus"
+				{
+				"attribute_class"	"mult_spread_scale"
+				"value"	"0.30"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.85"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.05"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.25"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1" 
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.9"
+				}
+            }
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+		}
 
 		"weapon_powerjack"
 		{
@@ -19521,7 +19664,7 @@
 			"item_name"	"Lambda's Double Action"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"propername"	"1"
 			"item_logname"	"ambassador"
 			"item_iconname"	"ambassador"
@@ -19604,7 +19747,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_Knife"
 			"propername"	"1"
 			"item_quality"	"unique"
@@ -26884,7 +27027,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"Claws"
+			"item_type_name"	"#TF_Weapon_Fists"
 			"item_name"	"Transhuman Claws"
 			"item_description"	"(Viewmodel from Zombie SWEPs, by sean and Pillow)"
 			"item_slot"	"melee"
@@ -30914,6 +31057,76 @@ Fires....... something"
 				"min_viewmodel_offset"					"10 0 -11"
 			}
 		}
+		"9867"
+        {
+            "name"    "TF_WEAPON_1911"
+            "first_sale_date"    "2010/09/29"
+            "prefab"    "weapon_1911"
+			"item_name"	"1911"
+            "baseitem"    "0"
+			"item_name"		"The Casual"
+			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
+            "model_world"    "models/weapons/c_1911/c_pistol.mdl"
+            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
+            "attach_to_hands"    "2"
+            "used_by_classes"
+            {
+                "engineer"    "1"
+				"mercenary"	  "1"
+				"demoman"	  "1"
+            }
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_1911.Single"
+				"sound_burst"			"Weapon_1911.SingleCrit"
+			}
+        }
+		"9868"
+        {
+            "name"    "TF_WEAPON_1911_SOLDIER"
+            "first_sale_date"    "2010/09/29"
+            "prefab"    "weapon_1911"
+			"item_name"	"1911"
+            "baseitem"    "0"
+			"item_name"		"The Casual"
+			"anim_slot" "secondary2"
+			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
+            "model_world"    "models/weapons/c_1911/c_pistol_soldier.mdl"
+            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
+            "attach_to_hands"    "2"
+            "used_by_classes"
+            {
+				"soldier"	"1"
+            }
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_1911.Single"
+				"sound_burst"			"Weapon_1911.SingleCrit"
+			}
+        }
+		"9868"
+        {
+            "name"    "TF_WEAPON_1911_MEDIC"
+            "first_sale_date"    "2010/09/29"
+            "prefab"    "weapon_1911_primary"
+			"item_slot" 	"primary"
+			"item_name"	"1911"
+            "baseitem"    "0"
+			"item_name"		"The Casual"
+			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
+            "model_world"    "models/weapons/c_1911/c_pistol.mdl"
+            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
+            "attach_to_hands"    "2"
+            "used_by_classes"
+            {
+				"medic"	"1"
+            }
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_1911.Single"
+				"sound_burst"			"Weapon_1911.SingleCrit"
+			}
+        }
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
