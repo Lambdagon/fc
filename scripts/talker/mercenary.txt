@@ -904,3 +904,110 @@ Rule PlayerTauntsMercenary
 	Response PlayerTauntsMercenary
 }
 
+Response PlayerCombineMercenary
+{
+	speak "Mercenary.WarnCombine1"
+	speak "Mercenary.WarnCombine2"
+	speak "Mercenary.WarnCombine3"
+}
+Rule PlayerCombineMercenary
+{
+	criteria ConceptPlayerCombine IsMercenary
+	Response PlayerCombineMercenary
+}
+
+Response PlayerStriderMercenary
+{
+	speak "Mercenary.WarnStrider1"
+	speak "Mercenary.WarnStrider2"
+	speak "Mercenary.WarnStrider3"
+	speak "Mercenary.WarnStrider4"
+}
+Rule PlayerStriderMercenary
+{
+	criteria ConceptPlayerStrider IsMercenary
+	Response PlayerStriderMercenary
+}
+
+Response PlayerZombieMercenary
+{
+	speak "Mercenary.WarnZombie1"
+	speak "Mercenary.WarnZombie2"
+}
+Rule PlayerZombieMercenary
+{
+	criteria ConceptPlayerZombie IsMercenary
+	Response PlayerZombieMercenary
+}
+
+Response PlayerHeadcrabMercenary
+{
+	speak "Mercenary.WarnHeadcrabs1"
+	speak "Mercenary.WarnHeadcrabs2"
+}
+Rule PlayerHeadcrabMercenary
+{
+	criteria ConceptPlayerHeadcrab IsMercenary
+	Response PlayerHeadcrabMercenary
+}
+
+Response PlayerTrapMercenary
+{
+	speak "Mercenary.WarnTrap1"
+	speak "Mercenary.WarnTrap2"
+}
+Rule PlayerTrapMercenary
+{
+	criteria ConceptPlayerTrap IsMercenary
+	Response PlayerTrapMercenary
+}
+
+Response PlayerAmmoMercenary
+{
+	speak "Mercenary.WarnAmmo1"
+	speak "Mercenary.WarnAmmo2"
+	speak "Mercenary.WarnAmmo3"
+	speak "Mercenary.WarnAmmo4"
+}
+Rule PlayerAmmoMercenary
+{
+	criteria ConceptPlayerAmmo IsMercenary
+	Response PlayerAmmoMercenary
+}
+
+Response PlayerHealthMercenary
+{
+	speak "Mercenary.WarnHealth1"
+	speak "Mercenary.WarnHealth2"
+	speak "Mercenary.WarnHealth3"
+}
+Rule PlayerHealthMercenary
+{
+	criteria ConceptPlayerHealth IsMercenary
+	Response PlayerHealthMercenary
+}
+
+Response PlayerRebelMercenary
+{
+	speak "Mercenary.WarnRebels1"
+	speak "Mercenary.WarnRebels2"
+	speak "Mercenary.WarnRebels3"
+}
+Rule PlayerRebelMercenary
+{
+	criteria ConceptPlayerRebel IsMercenary
+	Response PlayerRebelMercenary
+}
+
+Response PlayerAntlionMercenary
+{
+	speak "Mercenary.WarnAntlion1"
+	speak "Mercenary.WarnAntlion1"
+	speak "Mercenary.WarnAntlion3"
+	speak "Mercenary.WarnAntlion4"
+}
+Rule PlayerAntlionMercenary
+{
+	criteria ConceptPlayerAntlion IsMercenary
+	Response PlayerAntlionMercenary
+}
