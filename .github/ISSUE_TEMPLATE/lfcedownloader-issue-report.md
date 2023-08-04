@@ -17,7 +17,8 @@ assignees: PracticeMedicine03
 BEHHHHHHHHHHHHHHHHH
 ```
 
-## Did you get a Python traceback error or some errors? If so, provide the whole log here.
+## Did you get a Python traceback error and version details? If so, provide the whole log here. 
+### (The version details are at the very bottom.)
 ```
 helloworld.py, line 1, you screwed up mf
 ```
