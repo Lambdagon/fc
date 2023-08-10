@@ -1120,9 +1120,9 @@
 		"enabled" "1"
 		"xpos"	"r95"
 		"xpos_minmode"	"r85"
-		"ypos"	"r105"
+		"ypos"	"r90"
 		"ypos_minmode"	"r86"
-		"wide"	"74"
-		"tall"	"40"
+		"wide"	"100"
+		"tall"	"150"
 	}
 }
