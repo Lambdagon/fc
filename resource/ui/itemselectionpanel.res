@@ -15,7 +15,7 @@
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"settitlebarvisible"	"0"
-		"bgcolor_override"	"46 43 42 255"
+		"bgcolor_override"	"53 42 58 255"
 		
 		"item_ypos"		"60"
 		"item_ydelta"	"80"
