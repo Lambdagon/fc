@@ -1,0 +1,13 @@
+mvm_bigrock
+{
+	entity
+	{
+		delete {classname "tf_logic_mann_vs_machine"}
+		delete {targetname "game_timer"}
+		// Enemy types:
+		// 0 bots
+		// 1 Combine
+		// 2 Zombies
+		create {classname "tf_logic_raid" values {targetname "hordemanager" enemytype "0"} }
+	}
+}
