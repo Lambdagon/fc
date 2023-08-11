@@ -353,6 +353,36 @@
 		"PaintBackgroundType"	"2"
 	}
 	
+	HudMannVsMachineStatus
+	{
+		"fieldName" "HudMannVsMachineStatus"
+		"visible"	"1"
+		"enabled"	"1"
+		"xpos"		"0"
+		"ypos"		"0"
+		"zpos"		"1"
+		"wide"		"f0"
+		"tall"		"480"
+		
+		"PaintBackgroundType"	"2"
+	}
+	
+	"CurrencyStatusPanel"
+	{
+		"ControlName"		"CCurrencyStatusPanel"
+		"fieldName"			"CurrencyStatusPanel"
+		"xpos"				"0"
+		"ypos"				"r100"
+		"wide"				"100"
+		"tall"				"100"
+		"xpos_minmode"		"65"
+		"ypos_minmode"		"r88"
+		"visible" 			"0"
+		"enabled" 			"1"
+		
+		"PaintBackgroundType"	"2"
+	}
+	
 	HudProgressBar
 	{
 		"fieldName" "HudProgressBar"
@@ -622,6 +652,22 @@
 		"ItemFont"				"Default"
 		"ItemFontPulsing"		"Default"
 
+	}
+	
+	HudSpellMenu
+	{
+		"fieldName" "HudSpellMenu"
+		"visible" "1"
+		"enabled" "1"
+		"wide"	 "640"
+		"tall"	 "480"
+		"zpos" 	"2"
+		"xpos"			"130"
+		"ypos"			"r61"
+		
+		"TextFont"				"Default"
+		"ItemFont"				"Default"
+		"ItemFontPulsing"		"Default"
 	}
 
 	HudCloseCaption
@@ -926,6 +972,22 @@
 		"wide"					"100"
 		"tall"					"50"
 	}
+	
+	AnnotationsPanelCallout
+	{
+		"fieldName"			"AnnotationsPanelCallout"
+		"visible"				"1"
+		"enabled"				"1"
+		"xpos"					"200"
+		"ypos"					"200"
+		"wide"					"100"
+		"tall"					"50"
+	}
+	
+	AnnotationsPanel
+	{
+		
+	}
 
 	WaitingForPlayersPanel
 	{
@@ -1054,6 +1116,44 @@
 		"tall"					"100"
 	}
 	
+	HudTournament
+	{
+		"fieldName"				"HudTournament"
+		"visible"				"0"
+		"enabled"				"1"
+		"xpos"					"c-125"
+		"ypos"					"5"
+		"ypos_lodef"				"75"
+		"zpos"					"2"
+		"wide"					"250"
+		"tall"					"80"
+	}
+
+	HudTournamentSetup
+	{
+		"fieldName"				"HudTournamentSetup"
+		"visible"				"0"
+		"enabled"				"1"
+		"xpos"					"c-90"
+		"ypos"					"-70"
+		"ypos_lodef"				"75"
+		"wide"					"180"
+		"tall"					"65"
+	}
+
+	HudStopWatch
+	{
+		"fieldName"				"HudStopWatch"
+		"visible"				"1"
+		"enabled"				"1"
+		"xpos"					"c-160"
+		"ypos"					"5"
+		"ypos_minmode"				"15"
+		"ypos_lodef"				"75"
+		"wide"					"125"
+		"tall"					"70"
+	}
+	
 	NotificationPanel
 	{
 		"fieldName"				"NotificationPanel"
@@ -1120,9 +1220,32 @@
 		"enabled" "1"
 		"xpos"	"r95"
 		"xpos_minmode"	"r85"
-		"ypos"	"r90"
+		"ypos"	"r105"
 		"ypos_minmode"	"r86"
-		"wide"	"100"
-		"tall"	"150"
+		"wide"	"74"
+		"tall"	"40"
+	}
+	
+	MatchSummary
+	{
+		"fieldName" "MatchSummary"
+		"visible" "0"
+		"enabled" "1"
+		"xpos"	"0"
+		"ypos"	"0"
+		"wide"	"f0"
+		"tall"	"f0"
+	}
+
+	HudMatchStatus
+	{
+		"fieldName"				"HudMatchStatus"
+		"visible"				"1"
+		"enabled"				"1"
+		"xpos"					"0"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"f0"
+		"tall"					"f0"
 	}
 }
