@@ -4,8 +4,9 @@ LF:CE is a modified version of Lambda Fortress: Extended to have more features, 
 
 # TO INSTALL REFER TO THIS TUTORIAL 
 
-https://github.com/Lambdagon/tf_coop_lambda/wiki/How-to-install-LF:CE 
+https://github.com/Lambdagon/tf_coop_lambda/wiki/How-to-install-LF:CE-(New)
 
+----
 
 Anyone is allowed to contribute towards this project
 
