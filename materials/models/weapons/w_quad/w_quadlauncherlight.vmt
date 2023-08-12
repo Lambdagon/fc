@@ -1,0 +1,27 @@
+"unLitGeneric"
+{
+	"$baseTexture" "models\weapons\w_quad\w_quadlauncherlight"
+	"$selfillum" "1"
+	"$BASEMAPALPHAPHONGMASK"  "1"
+	"$glowcolor" "1"
+	"$phong" "1"
+	"$phongexponent" "35"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges" "[0.25 0.5 1]"
+	//"$colortint_base"		"{ 184 56 59 }"
+	//"$color2"		"{ 184 56 59 }"
+
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" $selfillumtint
+			"sinemin" .1
+			"sinemax" 2.00
+			"sineperiod" 0.30
+		}
+	}
+
+}

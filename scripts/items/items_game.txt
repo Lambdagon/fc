@@ -24191,7 +24191,7 @@ Fires....... something"
 		"9749"
 		{
 			"enabled"	"1"
-			"item_class"	"tf_weapon_smg"
+			"item_class"	"tf_weapon_shotgun_hwg"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -24236,45 +24236,31 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"bullets per shot hidden"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "30.00"
-				}
-				"bullets per shot hidden"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "30.00"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "3.00"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.35"
-				}
-				"spread penalty hidden"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "8.00"
-				}
+
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
-					"value" "20"
+					"value" "30"
 				}
-				"hidden secondary max ammo penalty"
+				"fire rate bonus"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "0.16"
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.50"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "2"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.08"
+					"value" "0.30"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -31295,6 +31281,7 @@ Fires....... something"
 		{
 			"name"	"Shoestring Budget"
 			"prefab"	"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Hwn_SoldierMisc2"
 			"item_description"	""
@@ -31314,6 +31301,7 @@ Fires....... something"
 		{
 			"name"		"tw_engineerbot_armor"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw_engineerbot_armor"
@@ -31332,6 +31320,7 @@ Fires....... something"
 		{
 			"name"		"tw_demobot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_name"		"#TF_tw_demobot_helmet"
 			"item_type_name"		"Helmet"
@@ -31350,6 +31339,7 @@ Fires....... something"
 		{
 			"name"		"tw_engineerbot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_name"		"#TF_tw_engineerbot_helmet"
 			"item_type_name"		"Accessory"
@@ -31368,6 +31358,7 @@ Fires....... something"
 		{
 			"name"		"tw_heavybot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_name"		"#TF_tw_heavybot_helmet"
 			"item_type_name"		"Helmet"
@@ -31386,6 +31377,7 @@ Fires....... something"
 		{
 			"name"		"tw_medibot_hat"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_name"		"#TF_tw_medibot_hat"
 			"item_type_name"		"Helmet"
@@ -31404,6 +31396,7 @@ Fires....... something"
 		{
 			"name"		"tw_pyrobot_armor"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw_pyrobot_armor"
@@ -31422,6 +31415,7 @@ Fires....... something"
 		{
 			"name"		"tw_pyrobot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"Helmet"
 			"item_name"		"#TF_tw_pyrobot_helmet"
@@ -31440,6 +31434,7 @@ Fires....... something"
 		{
 			"name"		"tw_scoutbot_armor"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw_scoutbot_armor"
@@ -31458,6 +31453,7 @@ Fires....... something"
 		{
 			"name"		"tw_scoutbot_hat"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"Helmet"
 			"item_name"		"#TF_tw_scoutbot_hat"
@@ -31484,6 +31480,7 @@ Fires....... something"
 		{
 			"name"		"tw_sniperbot_armor"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw_sniperbot_armor"
@@ -31502,6 +31499,7 @@ Fires....... something"
 		{
 			"name"		"tw_sniperbot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"Helmet"
 			"item_name"		"#TF_tw_sniperbot_helmet"
@@ -31527,6 +31525,7 @@ Fires....... something"
 		{
 			"name"		"tw_soldierbot_armor"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw_soldierbot_armor"
@@ -31545,6 +31544,7 @@ Fires....... something"
 		{
 			"name"		"tw_soldierbot_helmet"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"show_in_armory"		"1"
 			"item_type_name"		"Helmet"
 			"item_name"		"#TF_tw_soldierbot_helmet"
@@ -31592,6 +31592,7 @@ Fires....... something"
 		"9889"
 		{
 			"name"	"Web Easteregg Medal"
+			"item_class"	"tf_wearable"
 			"first_sale_date"	"2010/09/29"
 			"prefab"		"base_misc"
 			"loadondemand"	"1"
@@ -31681,6 +31682,7 @@ Fires....... something"
 			"name"	"Rimmed Raincatcher"
 			"first_sale_date"	"2011/04/07"
 			"prefab"		"base_hat"
+			"item_class"	"tf_wearable"
 			"loadondemand"	"1"
 			"hidden"	"0"
 			"item_class"	"tf_wearable"
@@ -31864,7 +31866,9 @@ Fires....... something"
 			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_dec17_melody_of_misery"
 			"item_type_name"		"#TF_Wearable_Bagpipes"
+			"item_class"	"tf_wearable"
 			"equip_region"		"back"
+			"show_in_armory"	"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/dec17_melody_of_misery/dec17_melody_of_misery"
 			"capabilities"
 			{
@@ -31885,6 +31889,7 @@ Fires....... something"
 			"prefab"		"base_hat"
 			"item_name"		"#TF_spr18_frag_proof_fragger"
 			"item_type_name"		"#TF_Wearable_Helmet"
+			"item_class"	"tf_wearable"
 			"equip_region"		"whole_head"
 			"item_slot"	"head"
 			"item_quality"	"unique"
@@ -31916,6 +31921,7 @@ Fires....... something"
 		{
 			"name"		"Head Banger"
 			"prefab"		"no_craft hat marketable"
+			"item_class"	"tf_wearable"
 			"item_name"		"#TF_sum22_head_banger"
 			"equip_region"		"hat"
 			"item_slot"	"head"
@@ -31951,6 +31957,7 @@ Fires....... something"
 			"name"		"EOTL_summerhat"
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_summerhat"
+			"item_class"	"tf_wearable"
 			"equip_region"		"hat"
 			"item_slot"	"head"
 			"item_quality"	"unique"
@@ -31973,6 +31980,7 @@ Fires....... something"
 		{
 			"name"	"The King of Scotland Cape"
 			"first_sale_date"	"2012/10/09"
+			"item_class"	"tf_wearable"
 			"prefab"	"misc"
 			"capabilities"
 			{
@@ -31999,6 +32007,7 @@ Fires....... something"
 			"name"	"The Menpo"
 			"first_sale_date"	"2012/10/09"
 			"prefab"	"misc"
+			"item_class"	"tf_wearable"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -32282,6 +32291,7 @@ Fires....... something"
 			"item_description"	"#TF_ScoutBoombox_Desc"
 			"image_inventory"	"backpack/player/items/scout/boombox"
 			"model_player"	"models/player/items/scout/boombox.mdl"
+			"show_in_armory"	"1"
 			"propername"	"1"
 			"drop_type"	"none"
 			"used_by_classes"
@@ -32351,6 +32361,7 @@ Fires....... something"
 			"item_description"		"#TF_hw2013_halloweiner_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"show_in_armory"	"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -32401,10 +32412,13 @@ Fires....... something"
 		{
 			"name"		"Aloha Apparel"
 			"prefab"		"base_misc"
+			"item_class"	"tf_wearable"
 			"item_name"		"#TF_fall17_aloha_apparel"
 			"item_slot"     "misc2"
+			"item_quality"	"unique"
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"equip_region"		"shirt"
+			"show_in_armory"	"1"
 			"image_inventory"		"backpack/workshop/player/items/all_class/fall17_aloha_apparel/fall17_aloha_apparel"
 			"capabilities"
 			{
@@ -32458,6 +32472,7 @@ Fires....... something"
 			"equip_region"		"shirt"
 			"item_quality"		"unique"
 			"item_slot"		"misc2"
+			"item_class"	"tf_wearable"
 			"propername"		"1"
 			"show_in_armory"	"1"
 			"visuals"
@@ -32486,6 +32501,7 @@ Fires....... something"
 			"prefab"		"no_craft misc marketable"
 			"first_sale_date"		"2016/12/15"
 			"item_name"		"#TF_dec16_snowwing"
+			"item_class"	"tf_wearable"
 			"item_type_name"		"#TF_Wearable_Snowboard"
 			"equip_region"		"scout_backpack"
 			"image_inventory"		"backpack/workshop/player/items/scout/dec16_snowwing/dec16_snowwing"
@@ -32757,6 +32773,295 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9924"
+		{
+			"name"		"The Shogun's Shoulder Guard"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/08/26"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_jul13_shoguns_guard"
+			"item_description"		"#TF_jul13_shoguns_guard_Desc"
+			"equip_region"		"sleeves"
+			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_shoguns_guard/jul13_shoguns_guard"
+			"propername"		"1"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/jul13_shoguns_guard/jul13_shoguns_guard.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
+		"9925"
+		{
+			"name"	"The First American"
+			"prefab"	"hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Mask"
+			"item_name"	"#TF_FirstAmerican"
+			"item_description"	"#TF_FirstAmerican_Desc"
+			"image_inventory"	"backpack/workshop/player/items/soldier/bi_franklin_mask/bi_franklin_mask"
+			"model_player"	"models/workshop/player/items/soldier/bi_franklin_mask/bi_franklin_mask.mdl"
+			"equip_region"	"whole_head"
+			"propername" "1"
+			"used_by_classes"
+			{
+				"soldier" "1"
+				"mercenary" "1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"9926"
+		{
+			"name"		"The Whirly Warrior"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/08/26"
+			"item_type_name"		"#TF_Wearable_Helmet"
+			"item_name"		"#TF_jul13_helicopter_helmet"
+			"item_description"		"#TF_jul13_helicopter_helmet_Desc"
+			"equip_region"		"whole_head"
+			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_helicopter_helmet/jul13_helicopter_helmet"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/jul13_helicopter_helmet/jul13_helicopter_helmet.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary" "1"
+			}
+			"mouse_pressed_sound"		"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
+		"9927"
+		{
+			"name"		"War Blunder"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_hwn2020_war_blunder"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"item_slot"         "misc2"
+			"equip_region"		"soldier_legs"
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/hwn2020_war_blunder/hwn2020_war_blunder"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/hwn2020_war_blunder/hwn2020_war_blunder.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_cardboard_pickup.wav"
+			"drop_sound"		"ui/item_cardboard_drop.wav"
+		}
+		"9928"
+		{
+			"name"		"The Compatriot"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/08/26"
+			"item_type_name"		"#TF_Wearable_Mascot"
+			"item_name"		"#TF_jul13_soldier_eagle"
+			"item_description"		"#TF_jul13_soldier_eagle_Desc"
+			"item_slot"		"misc"
+			"equip_region"		"left_shoulder"
+			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_soldier_eagle/jul13_soldier_eagle"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/jul13_soldier_eagle/jul13_soldier_eagle.mdl"
+			"propername"		"1"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary" "1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9929"
+		{
+			"first_sale_date"		"2015/12/03"
+			"name"		"The Caped Crusader"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_bak_caped_crusader"
+			"item_description"		"#TF_bak_caped_crusader_Desc"
+			"item_type_name"		"#TF_Wearable_Cape"
+			"equip_region"		"soldier_coat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/bak_caped_crusader/bak_caped_crusader.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary" "1"
+			}
+			"mouse_pressed_sound"		"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_bak_caped_crusader_style1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+					}
+				}
+			}
+		}
+		"9930"
+		{
+			"name"		"The Chaser"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_sum22_chaser"
+			"item_description"		"#TF_sum22_chaser_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"item_slot"         "misc2"
+			"equip_region"		"sleeves"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/sum22_chaser/sum22_chaser"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sum22_chaser_style2/sum22_chaser_style2.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9931"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_rocketlauncher_mortar"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Quad Launcher"
+			"item_description"		"A quad launcher for a quad man."
+			"item_logname"	"blackbox"
+			"item_iconname"	"blackbox"
+			"show_in_armory"	"1"
+			"item_type_name"	"Rocket Launcher"
+			"item_name"	"The Quad Launcher"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/w_models/rocketlauncher_dm"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_quad.mdl"
+			"model_world"	"models/weapons/w_models/w_quadtest.mdl"
+			"anim_slot" 	"primary2"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "55"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"12 -4 -8"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"blackbox"
+			"particle_suffix"		"blackbox"
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.20"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.60"
+				}
+				"rocket guide display"
+				{
+					"attribute_class"	"force_level_display"
+					"value" "1"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Quad.Single"
+				"sound_burst"		"Weapon_Quad.SingleCrit"
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_ROCKETLAUNCHER"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_ROCKETLAUNCHER"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_ROCKETLAUNCHER"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_ROCKETLAUNCHER"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_ROCKETLAUNCHER"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_ROCKETLAUNCHER"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_ROCKETLAUNCHER"
+				}
+			}
         }
 		"30143"
 		{
@@ -36605,6 +36910,16 @@ Fires....... something"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
+		"77799"
+		{
+			"name"	"rocket guide display"
+			"attribute_class"	"force_level_display"
+			"description_format"	"value_is_additive"
+			"description_string"	"#Attrib_RocketGuide"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"0"
+		}
 		"214"
 		{
 			"name"	"kill eater"
@@ -39530,6 +39845,7 @@ Fires....... something"
 		{
 			"name"	"damage causes airblast"
 			"attribute_class"	"damage_causes_airblast"
+			"description_string"	"Attrib_DamageCausesAirblast"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"positive"
@@ -42596,7 +42912,7 @@ Fires....... something"
 			"attribute_class"	"set_no_reload_single"
 			"description_string"	"#Attrib_NoReloadSingle"
 			"description_format"	"value_is_additive"
-			"hidden"	"1"
+			"hidden"	"0"
 			"effect_type"	"neutral"
 			"stored_as_integer"	"0"
 		}
