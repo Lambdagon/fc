@@ -27440,15 +27440,24 @@ Fires....... something"
             "prefab"    "weapon_shotgun"
             "baseitem"    "0"
 			"item_name"		"Shotgun"
+			"item_description" "Generally weaker than a Scattergun. Holds more reserve"
             "item_slot"    "primary"
 			"show_in_armory"	"1"
-            "model_player"    "models/weapons/v_models/v_shotgun_merc.mdl"
+            "model_player"    "models/weapons/v_models/v_shotgun_scout.mdl"
             "model_world"    "models/weapons/w_models/w_shotgun_multiclass.mdl"
 			"anim_slot"		 "primary"
-            "attach_to_hands"    "2"
+            "attach_to_hands"    "0"
             "used_by_classes"
             {
 				"scout"	 "1"
+            }
+			"attributes"
+			{
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"1.30"
+				}
             }
 		}			
 		"9793"
