@@ -24,6 +24,8 @@
 		"scaleImage"	"1"	
 		"teambg_2"		"../hud/weapon_selection_red"
 		"teambg_3"		"../hud/weapon_selection_blue"
+		"teambg_4"		"../hud/weapon_selection_green"
+		"teambg_5"		"../hud/weapon_selection_yellow"
 	}
 
 	"SquadStatusLabel"

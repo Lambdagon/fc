@@ -18,7 +18,11 @@
 		"teambg_2"		"../hud/ammo_red_bg"
 		"teambg_2_lodef"	"../hud/ammo_red_bg_lodef"
 		"teambg_3"		"../hud/ammo_blue_bg"
-		"teambg_3_lodef"	"../hud/ammo_blue_bg_lodef"			
+		"teambg_3_lodef"	"../hud/ammo_blue_bg_lodef"		
+		"teambg_4"		"../hud/ammo_green_bg"
+		"teambg_4_lodef"	"../hud/ammo_green_bg_lodef"		
+		"teambg_5"		"../hud/ammo_yellow_bg"
+		"teambg_5_lodef"	"../hud/ammo_yellow_bg_lodef"	
 	}
 	"WeaponBucket"
 	{
@@ -56,7 +60,11 @@
 		"teambg_2"		"../hud/ammo_red_bg"
 		"teambg_2_lodef"	"../hud/ammo_red_bg_lodef"
 		"teambg_3"		"../hud/ammo_blue_bg"
-		"teambg_3_lodef"	"../hud/ammo_blue_bg_lodef"			
+		"teambg_3_lodef"	"../hud/ammo_blue_bg_lodef"		
+		"teambg_4"		"../hud/ammo_green_bg"
+		"teambg_4_lodef"	"../hud/ammo_green_bg_lodef"		
+		"teambg_5"		"../hud/ammo_yellow_bg"
+		"teambg_5_lodef"	"../hud/ammo_yellow_bg_lodef"		
 	}
 	"AmmoInClip"
 	{
