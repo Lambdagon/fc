@@ -1218,7 +1218,7 @@
 		"fieldName" "HudGrenadeAmmo"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"r95"
+		"xpos"	"r90"
 		"xpos_minmode"	"r85"
 		"ypos"	"r105"
 		"ypos_minmode"	"r86"
