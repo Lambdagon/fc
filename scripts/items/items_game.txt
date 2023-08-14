@@ -33409,12 +33409,13 @@ Fires....... something"
 		{
             "name"    "TF_WEAPON_SHOTGUN_MEDIC"
             "first_sale_date"    "1969/12/08"
-            "item_class"    "tf_weapon_shotgun"
+            "item_class"    "tf_weapon_shotgun_hwg"	
             "baseitem"    "0"
-			"item_name"		"Medic Shotgun"
-			"item_description" "Kill zhem, kill zhem all!"
-			"item_type_name"	"Shotgun"
-            "item_slot"    "primary"
+			"item_name"		"Battle Medic"
+			"item_description" "For a more direct approach.
+			Without a medigun, you will need alternate sources of healing."
+			"item_type_name"	"Medic Shotgun"
+            "item_slot"    "Secondary"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"show_in_armory"	"1"
             "model_player"    "models/weapons/v_models/v_shotgun_medic.mdl"
@@ -33423,7 +33424,7 @@ Fires....... something"
             "attach_to_hands"    "2"
             "used_by_classes"
             {
-				"medic"	"1"
+				"medic"	"secondary"
 			}
 			"static_attrs"
 			{
@@ -33431,10 +33432,10 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"maxammo primary reduced"
+				"maxammo secondary reduced"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.50"
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"0.35"
 				}
 				"move speed penalty"
 				{
@@ -33445,8 +33446,15 @@ Fires....... something"
 				{
 					"attribute_class"	"add_health_regen"
 					"value"	"-2"
+					}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"medic_backpack"			"2"
 				}
-            }
+			}
 		}			
 		"30570"
 		{
