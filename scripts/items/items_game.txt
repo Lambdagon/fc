@@ -26159,10 +26159,10 @@ Fires....... something"
 					"attribute_class"	"mult_medigun_healrate"
 					"value" "1.9"
 				}
-				"overheal penalty"
+				"no overheal medigun"
 				{
-					"attribute_class"	"mult_medigun_overheal_amount"
-					"value"	"0.01"
+					"attribute_class"	"mod_disable_overheal"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -43055,6 +43055,16 @@ Fires....... something"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 			"hidden" "1"
+		}
+		"10037"
+		{
+			"name" "no overheal medigun"
+			"attribute_class" "mod_disable_overheal"
+			"description_string" "#Attrib_DisableOverheal"
+			"description_format" "value_is_additive"
+			"effect_type" "negative"
+						"stored_as_integer"	"0"
+
 		}
 	}
 	"attribute_controlled_attached_particles"
