@@ -1222,8 +1222,8 @@
 		"xpos_minmode"	"r85"
 		"ypos"	"r105"
 		"ypos_minmode"	"r86"
-		"wide"	"74"
-		"tall"	"40"
+		"wide"	"94"
+		"tall"	"70"
 	}
 	
 	MatchSummary
