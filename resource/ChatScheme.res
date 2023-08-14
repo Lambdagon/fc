@@ -22,6 +22,7 @@ Scheme
 		"Orange"			"255 155 0 255"
 		"TransparentBlack"		"0 0 0 128"
 		"Black"				"0 0 0 255"
+		"Green"				"60 215 130 255"
 
 		"Blank"				"0 0 0 0"
 	}
@@ -33,17 +34,18 @@ Scheme
 	BaseSettings
 	{
 		// vgui_controls color specifications
-		Border.Bright					"80 80 80 196"		// the lit side of a control
-		Border.Dark						"80 80 80 196"		// the dark/unlit side of a control
+		Border.Bright					"200 200 200 196"	// the lit side of a control
+		Border.Dark						"40 40 40 196"		// the dark/unlit side of a control
 		Border.Selection				"0 0 0 196"			// the additional border color for displaying the default/selected button
 
 		Button.TextColor				"White"
-		Button.BgColor					"150 150 150 150"
+		Button.BgColor					"Blank"
 		Button.ArmedTextColor			"White"
-		Button.ArmedBgColor				"180 180 180 150"
+		Button.ArmedBgColor				"Blank"				[$WIN32]
+		Button.ArmedBgColor				"190 115 0 255"		[$X360]
 		Button.DepressedTextColor		"White"
 		Button.DepressedBgColor			"Blank"
-		Button.FocusBorderColor			"120 120 120 150"
+		Button.FocusBorderColor			"Black"
 		
 		CheckButton.TextColor			"OffWhite"
 		CheckButton.SelectedTextColor	"White"
@@ -62,8 +64,10 @@ Scheme
 		Frame.TitleTextInsetX			16
 		Frame.ClientInsetX				8
 		Frame.ClientInsetY				6
-		Frame.BgColor					"160 160 160 128"
-		Frame.OutOfFocusBgColor			"160 160 160 32"
+		Frame.BgColor					"160 160 160 128"	[$WIN32]
+		Frame.BgColor					"80 80 80 192"		[$X360]
+		Frame.OutOfFocusBgColor			"160 160 160 32"	[$WIN32]
+		Frame.OutOfFocusBgColor			"80 80 80 192"		[$X360]
 		Frame.FocusTransitionEffectTime	"0.3"	// time it takes for a window to fade in/out on focus/out of focus
 		Frame.TransitionEffectTime		"0.3"	// time it takes for a window to fade in/out on open/close
 		Frame.AutoSnapRange				"0"
@@ -124,20 +128,20 @@ Scheme
 
 		RichText.TextColor				"OffWhite"
 		RichText.BgColor				"TransparentBlack"
-		RichText.SelectedTextColor		"White"
+		RichText.SelectedTextColor		"Black"
 		RichText.SelectedBgColor		"Orange"
 
-		ScrollBar.Wide					10
+		ScrollBar.Wide					17
 
 		ScrollBarButton.FgColor				"White"
-		ScrollBarButton.BgColor				"150 150 150 150"
+		ScrollBarButton.BgColor				"Blank"
 		ScrollBarButton.ArmedFgColor		"White"
-		ScrollBarButton.ArmedBgColor		"180 180 180 150"
+		ScrollBarButton.ArmedBgColor		"Blank"
 		ScrollBarButton.DepressedFgColor	"White"
-		ScrollBarButton.DepressedBgColor	"120 120 120 150"
+		ScrollBarButton.DepressedBgColor	"Blank"
 
-		ScrollBarSlider.FgColor				"131 131 131 150"	// nob color
-		ScrollBarSlider.BgColor				"60 60 60 180"		// slider background color
+		ScrollBarSlider.FgColor				"Blank"			// nob color
+		ScrollBarSlider.BgColor				"255 255 255 64"	// slider background color
 
 		SectionedListPanel.HeaderTextColor	"White"
 		SectionedListPanel.HeaderBgColor	"Blank"
@@ -157,11 +161,11 @@ Scheme
 		Slider.DisabledTextColor2	"30 30 30 255"
 
 		TextEntry.TextColor			"OffWhite"
-		TextEntry.BgColor			"0 0 0 150"
+		TextEntry.BgColor			"TransparentBlack"
 		TextEntry.CursorColor		"OffWhite"
 		TextEntry.DisabledTextColor	"DullWhite"
 		TextEntry.DisabledBgColor	"Blank"
-		TextEntry.SelectedTextColor	"White"
+		TextEntry.SelectedTextColor	"Black"
 		TextEntry.SelectedBgColor	"Orange"
 		TextEntry.OutOfFocusSelectedBgColor	"255 155 0 128"
 		TextEntry.FocusEdgeColor	"0 0 0 196"
@@ -308,54 +312,94 @@ Scheme
 			}
 		}
 
+		"MarlettSmall"
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"7"
+				"weight"	"0"
+				"yres"		"480 599"
+				"symbol"	"1"
+			}
+			"2"
+			{
+				"name"		"Marlett"
+				"tall"		"9"
+				"weight"	"0"
+				"yres"		"600 767"
+				"symbol"	"1"
+			}
+			"3"
+			{
+				"name"		"Marlett"
+				"tall"		"11"
+				"weight"	"0"
+				"yres"		"768 1023"
+				"symbol"	"1"
+			}
+			"4"
+			{
+				"name"		"Marlett"
+				"tall"		"13"
+				"weight"	"0"
+				"yres"		"1024 1199"
+				"symbol"	"1"
+			}
+			"5"
+			{
+				"name"		"Marlett"
+				"tall"		"17"
+				"weight"	"0"
+				"yres"		"1200 10000"
+				"symbol"	"1"
+			}
+		}
+
 		"ChatFont"
 		{
 			"1"
 			{
 				"name"		"Verdana"
-				"tall"		"12"	[$WIN32]
-				"tall"		"15"	[$X360]
+				"tall"		"15"	
 				"weight"	"700"
 				"yres"		"480 599"
-				"dropshadow"	"1"
+				"outline"	"1"
 			}
 			"2"
 			{
 				"name"		"Verdana"
-				"tall"		"14"	[$WIN32]
-				"tall"		"17"	[$X360]
+				"tall"		"17"	
 				"weight"	"700"
 				"yres"		"600 767"
-				"dropshadow"	"1"
+				"outline"	"1"
 			}
 			"3"
 			{
 				"name"		"Verdana"
-				"tall"		"15"	[$WIN32]
-				"tall"		"18"	[$X360]
+				"tall"		"18"	
 				"weight"	"700"
 				"yres"		"768 1023"
-				"dropshadow"	"1"
+				"outline"	"1"
 			}
 			"4"
 			{
 				"name"		"Verdana"
-				"tall"		"17"	[$WIN32]
-				"tall"		"20"	[$X360]
+				"tall"		"20"	
 				"weight"	"700"
 				"yres"		"1024 1199"
-				"dropshadow"	"1"
+				"outline"	"1"
 			}
 			"5"
 			{
 				"name"		"Verdana"
-				"tall"		"22"	[$WIN32]
-				"tall"		"25"	[$X360]
+				"tall"		"25"	
 				"weight"	"700"
 				"yres"		"1200 10000"
-				"dropshadow"	"1"
+				"outline"	"1"
 			}
 		}
+
 
 	}
 

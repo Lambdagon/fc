@@ -1,0 +1,71 @@
+"Resource/UI/HudItemEffectMeter_Kart.res"
+{	
+	HudItemEffectMeter
+	{
+		"fieldName"		"HudItemEffectMeter"
+		"xpos"			"r138"
+		"ypos"			"r69"
+		"wide"			"200"
+		"tall"			"100"
+		"visible" 		"1"
+		"enabled" 		"1"
+		"MeterFG"		"White"
+		"MeterBG"		"Gray"
+	}
+	"ItemEffectMeterBG"
+	{
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"ItemEffectMeterBG"
+		"xpos"			"0"
+		"ypos"			"0"
+		"zpos"			"0"
+		"wide"			"130"
+		"tall"			"65"
+		"visible"		"1"
+		"enabled"		"1"
+		"image"			"replay/thumbnails/hud_right_primary_brown"	
+		"teambg_1"		"replay/thumbnails/hud_right_primary_brown"	
+		"teambg_2"		"replay/thumbnails/hud_right_primary_red"
+		"teambg_3"		"replay/thumbnails/hud_right_primary_blue"		
+	}
+	
+	"ItemEffectMeterLabel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"ItemEffectMeterLabel"
+		"xpos"			"30"
+		"ypos"			"24"
+		"zpos"			"2"
+		"wide"			"90"
+		"tall"			"15"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"#TF_Ubercharge"
+		"textAlignment"	"west"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"font"			"HudFontSmallest"
+	}
+	
+	"ItemEffectMeter"
+	{	
+		"ControlName"	"ContinuousProgressBar"
+		"fieldName"		"ItemEffectMeter"
+		"font"			"Default"
+		"xpos"			"30"
+		"ypos"			"38"
+		"zpos"			"2"
+		"wide"			"86"
+		"tall"			"8"				
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+	}
+}

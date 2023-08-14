@@ -80,29 +80,25 @@
 		"tabPosition"		"0"
 		"paintborder"	"0"
 	}
-	
-	"ok"
+
+	"ok" [$WIN32] 
 	{
-		"ControlName"		"CExButton"
+		"ControlName"	"CExButton"
 		"fieldName"		"ok"
-		"xpos"			"r190"
-		"ypos"			"r40"
+		"xpos"			"r140"
+		"ypos"			"r38"
 		"zpos"			"6"
-		"wide"			"150"
-		"tall"			"30"
+		"wide"			"100"
+		"tall"			"25"
 		"autoResize"	"0"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"0"
+		"tabPosition"	"0"
 		"labelText"		"#TF_Continue"
-		"textAlignment"		"center"
-		"dulltext"		"0"
-		"brighttext"		"0"
-		"wrap"		"0"
+		"textAlignment"	"center"
 		"command"		"okay"
-		"default"		"1"
-		"font"			"MenuSmallFont"
+		"font"			"HudFontSmallBold"
 	}
 	
 	"MenuBG"
