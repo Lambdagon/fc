@@ -10,6 +10,8 @@ hls03amrl
 		create {classname "trigger_teleport" origin "-730 -2140 -985" values {target "startspawn" spawnflags "1" model "*1"} }
 		create {classname "info_teleport_destination" origin "-730 -2140 -985" values {targetname "startspawn" parentname "crashtrain"} }
 		
+		edit {targetname "crashtrain" values {globalname ""} }
+
 		edit {classname "trigger_changelevel"
 			values
 			{
