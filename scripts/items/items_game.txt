@@ -24385,7 +24385,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"The RPG"
-			"item_description"	"Hold RMB to guide rockets"
+			"item_description"	""
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
@@ -24432,20 +24432,15 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.25"
-				}
 			        "Blast radius increased"
 				{
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"1.5"
 				}
-			        "rocket jump damage reduction"
+			    "rocket jump damage reduction"
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
-					"value"	"0.40"
+					"value"	"0.20"
 				}
 				"clip size penalty"
 				{
@@ -24455,12 +24450,22 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.20"
+					"value" "0.08"
 				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0"
+				}
+				"rocket guide display"
+				{
+					"attribute_class"	"force_level_display"
+					"value" "1"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"36"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -33031,7 +33036,7 @@ Fires....... something"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/w_models/rocketlauncher_dm"
+			"image_inventory"	"backpack/weapons/w_models/w_quad"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_quad.mdl"
@@ -33053,15 +33058,20 @@ Fires....... something"
 			"particle_suffix"		"blackbox"
 			"attributes"
 			{
+                "Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.30"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"0.20"
 				}
-				"damage penalty"
+				"projectile spread angle penalty"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"0.60"
+					"attribute_class"	"projectile_spread_angle"
+					"value"				"8"
 				}
 				"rocket guide display"
 				{
