@@ -267,16 +267,56 @@ Rule PlayerFailureJohn
 
 Response KilledPlayerMeleeJohn
 {
-	speak "player/john/johndomination01.wav"
-	speak "player/john/johndomination02.wav"
-	speak "player/john/johndomination03.wav"
-	speak "player/john/johndomination04.wav"
+	speak "player/john/johndomination01.wav" predelay "2.5"
+	speak "player/john/johndomination02.wav" predelay "2.5"
+	speak "player/john/johndomination03.wav" predelay "2.5"
+	speak "player/john/johndomination04.wav" predelay "2.5"
+	speak "player/john/johndomination05.wav" predelay "2.5"
+	speak "player/john/johndomination06.wav" predelay "2.5"
+	speak "player/john/johndomination07.wav" predelay "2.5"
+	speak "player/john/johndomination08.wav" predelay "2.5"
 }
 Rule KilledPlayerMeleeJohn
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 50PercentChance IsWeaponMelee JohnNotKillSpeechMelee IsJohn
+	criteria ConceptKilledPlayer KilledPlayerDelay 20PercentChance IsWeaponMelee JohnNotKillSpeechMelee IsJohn
 	ApplyContext "JohnKillSpeechMelee:1:10"
-	Response KilledPlayerJohnCivilian
+	Response KilledPlayerMeleeJohn
+}
+
+Response KilledPlayerPrimaryJohn
+{
+	speak "player/john/johndomination01.wav" predelay "2.5"
+	speak "player/john/johndomination02.wav" predelay "2.5"
+	speak "player/john/johndomination03.wav" predelay "2.5"
+	speak "player/john/johndomination04.wav" predelay "2.5"
+	speak "player/john/johndomination05.wav" predelay "2.5"
+	speak "player/john/johndomination06.wav" predelay "2.5"
+	speak "player/john/johndomination07.wav" predelay "2.5"
+	speak "player/john/johndomination08.wav" predelay "2.5"
+}
+Rule KilledPlayerPrimaryJohn
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 20PercentChance IsWeaponPrimary JohnNotKillSpeechPrimary IsJohn
+	ApplyContext "JohnKillSpeechPrimary:1:10"
+	Response KilledPlayerPrimaryJohn
+}
+
+Response KilledPlayerSecondaryJohn
+{
+	speak "player/john/johndomination01.wav" predelay "2.5"
+	speak "player/john/johndomination02.wav" predelay "2.5"
+	speak "player/john/johndomination03.wav" predelay "2.5"
+	speak "player/john/johndomination04.wav" predelay "2.5"
+	speak "player/john/johndomination05.wav" predelay "2.5"
+	speak "player/john/johndomination06.wav" predelay "2.5"
+	speak "player/john/johndomination07.wav" predelay "2.5"
+	speak "player/john/johndomination08.wav" predelay "2.5"
+}
+Rule KilledPlayerSecondaryJohn
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 20PercentChance IsWeaponSecondary JohnNotKillSpeechSecondary IsJohn
+	ApplyContext "JohnKillSpeechSecondary:1:10"
+	Response KilledPlayerSecondaryJohn
 }
 
 Response PlayerKilledDominatingJohn
