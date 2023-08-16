@@ -2917,6 +2917,12 @@
 		2 : "RED"
 		3 : "BLU"
 	]
+
+	OnlyPlayersCollide(Choices) : "Only collide with players" : 0 =
+	[
+		0 : "All Collisions"
+		1 : "Only players"
+	]
 	
 	input SimpleDisable(void) : "Disable without func_antirush features."
 	input SimpleToggle(void) : "Toggle on/off without func_antirush features."
@@ -9497,11 +9503,11 @@
 		1 : "Percentage"
 	]
 
-	//UseHud(choices) : "Use HUD" : 1 : "Should we use the HUD to display the number of players?" =
-	//[
-	//	0 : "No"
-	//	1 : "Yes"
-	//]
+	UseHud(choices) : "Use HUD" : 1 : "Use HUD to display the number of players?" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
 
 	PlayerValue(integer) : "Number of Players" : 50 : "The value this trigger will use to compare with.  Use value range of 0 - 100 for percentage."
 
