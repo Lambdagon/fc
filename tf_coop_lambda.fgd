@@ -2715,6 +2715,46 @@
 	output OnSetupFinished(void) : "Sent when the setup time is finished."
 ]
 
+@PointClass base(Targetname,EnableDisable) iconsprite("editor/logic_relay.vmt") = info_spawn_manager :
+	"Spawn manager for managing checkpoints and teleporting players."
+[
+	initialcheckpoint(string) : "InitialCheckpoint" : "" : "Sets the initial spawn point when this is created."
+
+	teamnum(choices) : "teamnum" : 0 : "Team that this should manage" =
+	[
+		0 : "Applies to any team if there is no corresponding spawn manager."
+		2 : "Red"
+		3 : "Blue"
+		4 : "Green"
+		5 : "Yellow"
+	]
+	
+	input RespawnPlayers(void) : "Respawn all players on this team (if set)"
+	input SetCheckPoint(string) : "Sets the active checkpoint and clears the others."
+	input TeleportPlayers(string) : "Teleports players to the named entity's origin."
+	input MovePlayers(void) : "Move all players to the !activator's position. Use this on triggers usually."
+	input ClearCheckpoint(void) : "Clears all checkpoints, in the future, this will disable respawning for the team."
+	input AddCheckPoint(string) : "Add a checkpoint for multiple players spawning in an area."
+]
+
+@PointClass base(Targetname,EnableDisable) iconsprite("editor/logic_relay.vmt") = hud_timer :
+	"Hud Timer. Timer starts paused by default."
+[
+	TimerText(string) : "TimerText" : "COUNT DOWN" : "Sets the label displayed on this timer."
+	TimerType(choices) : "TimerType" : 1 : "Sets the type of timer, either count down or up" =
+	[
+		1 : "Count down"
+		2 : "Count up"
+	]
+
+	input Start(integer) : "Starts the timer for the input amount of seconds."
+	input Stop(void) : "Stops the timer."
+	input Change(integer) : "Update the timer time - value is added to current timer time; allows positive and negative values."
+	input SetTimerLabel(string) : "Sets the label displayed on the timer."
+	
+	output OnTimer(void) : "Sent when the timer ends."
+]
+
 //
 // Items
 //
@@ -2873,6 +2913,46 @@
 	output IsValentines(void) : ""
 	output IsFullMoon(void) : ""
 	output IsAprilFools(void) : ""
+]
+
+@PointClass base(Targetname, EnableDisable) iconsprite("editor/logic_relay.vmt") = logic_difficulty : "Fires various outputs based on the current difficulty setting and number of active players."// for difficulty-based events.
+[
+	LowerPlayer(float) : "Lower Player Range" : 3 : "If the number of players is less than X, 'Low' Outputs will fire. ('Med' will fire between Lower and Upper ranges, inclusive.)"
+	UpperPlayer(float) : "Upper Player Range" : 5 : "If the number of players is greater than X, 'High' Outputs will fire."
+
+	input CheckSkill(void) : "Fires all applicable outputs based on the current difficulty and number of players."
+
+	output OnEasy(void) : "Fires when CheckSkill reports, Difficulty: Easy, PlayerCount: Any."
+		output OnEasyLow(void) : "Fires when CheckSkill reports, Difficulty: Easy, PlayerCount: Low."
+		output OnEasyMed(void) : "Fires when CheckSkill reports, Difficulty: Easy, PlayerCount: Medium."
+		output OnEasyHigh(void) : "Fires when CheckSkill reports, Difficulty: Easy, PlayerCount: High."
+	output OnNormal(void) : "Fires when CheckSkill reports, Difficulty: Normal, PlayerCount: Any."
+		output OnNormalLow(void) : "Fires when CheckSkill reports, Difficulty: Normal, PlayerCount: Low."
+		output OnNormalMed(void) : "Fires when CheckSkill reports, Difficulty: Normal, PlayerCount: Medium."
+		output OnNormalHigh(void) : "Fires when CheckSkill reports, Difficulty: Normal, PlayerCount: High."
+	output OnHard(void) : "Fires when CheckSkill reports, Difficulty: Hard, PlayerCount: Any."
+		output OnHardLow(void) : "Fires when CheckSkill reports, Difficulty: Hard, PlayerCount: Low."
+		output OnHardMed(void) : "Fires when CheckSkill reports, Difficulty: Hard, PlayerCount: Medium."
+		output OnHardHigh(void) : "Fires when CheckSkill reports, Difficulty: Hard, PlayerCount: High."
+
+	output OnUnusual(void) : "Fires when CheckSkill reports, Difficulty: Unusual, PlayerCount: Any."
+		output OnUnusualLow(void) : "Fires when CheckSkill reports, Difficulty: Unusual, PlayerCount: Low."
+		output OnUnusualMed(void) : "Fires when CheckSkill reports, Difficulty: Unusual, PlayerCount: Medium."
+		output OnUnusualHigh(void) : "Fires when CheckSkill reports, Difficulty: Unusual, PlayerCount: High."
+
+	output OnHaunted(void) : "Fires when CheckSkill reports, Difficulty: Haunted, PlayerCount: Any."
+		output OnHauntedLow(void) : "Fires when CheckSkill reports, Difficulty: Haunted, PlayerCount: Low."
+		output OnHauntedMed(void) : "Fires when CheckSkill reports, Difficulty: Haunted, PlayerCount: Medium."
+		output OnHauntedHigh(void) : "Fires when CheckSkill reports, Difficulty: Haunted, PlayerCount: High."
+
+	output OnLow(void) : "Fires when CheckSkill reports, Difficulty: Any, PlayerCount: Low."
+	output OnMed(void) : "Fires when CheckSkill reports, Difficulty: Any, PlayerCount: Medium."
+	output OnHigh(void) : "Fires when CheckSkill reports, Difficulty: Any, PlayerCount: High."
+
+	spawnflags(flags) =
+	[
+		1: "Remove on fire" : 1
+	]
 ]
 
 //
@@ -8218,7 +8298,6 @@
 	input Disable(void) : "Pauses the countdown due to a temporary malfunction. A warning sign will appear on the linked vgui screens."
 	input Enable(void) : "Restarts the countdown since the malfunction is finished."
 ]
-
 
 
 @PointClass base(BaseDriveableVehicle, Parentname) studioprop() = prop_vehicle_choreo_generic :
