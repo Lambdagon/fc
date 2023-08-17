@@ -1,0 +1,69 @@
+"az_c4_4"
+{
+	entity
+	{
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		create {classname "lfce_logic_blucoop"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_zoom" values {allplayers "1"} }
+		edit {classname "env_message" values {spawnflags "2"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "VC_2,Disable,,0,-1"
+				//There are no outro credits and the env_message variable is not loaded as of current
+				OnMapSpawn "Go_Credits,AddOutput,OnTrigger rollsomecredits:RollCredits::25.5:-1,0,-1"
+				OnMapSpawn "Go_Credits,AddOutput,OnTrigger endgame:EndGame::38:1,0,-1"
+				OnMapSpawn "Go_Credits,AddOutput,OnTrigger endgame:EndGame::292:1,0,-1"
+			}
+		}
+		create {classname "game_end" values {targetname "endgame"} }
+		create {classname "env_credits" values {targetname "rollsomecredits"} }
+		create {classname "info_player_coop" origin "2645 200 100" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		edit {classname "weapon_crowbar" values {classname "weapon_stunstick"} }
+		create {classname "trigger_multiple" origin "2645 200 100"
+			values
+			{
+				edt_mins "-40 -40 -40"
+				edt_maxs "40 40 40"
+				startdisabled "0"
+				spawnflags "1"
+				OnTrigger "Player_Pod,EnterVehicleImmediate,,0,-1"
+				OnTrigger "weapon_stripclub,StripWeaponsAndSuit,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,1"
+			}
+		}
+		delete {classname "logic_auto" origin "296 -160 9"}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "TEXT_1,Display,,2,-1"
+				OnTimer "augmentor_sound_4,PlaySound,,2,-1"
+				OnTimer "augmentor_sound_3,PlaySound,,6,-1"
+				OnTimer "TEXT_2,Display,,6,-1"
+				OnTimer "Mask_LiftOff,Press,,11,-1"
+				OnTimer "ScreenFX,StartEffect,2,2,-1"
+				OnTimer "AMB,PlaySound,,11,-1"
+				OnTimer "Mask_LiftOff,Kill,,13,-1"
+				OnTimer "Breath1,PlaySound,,12,-1"
+				OnTimer "intro_fade,Fade,,0,-1"
+				OnTimer "Player_Pod,Lock,,0,-1"
+				OnTimer "Hiss,PlaySound,,13,-1"
+				OnTimer "Huffin,SpawnDust,,13,-1"
+				OnTimer "MI_D1,Open,,0,-1"
+				OnTimer "Proj_Texture,TurnOff,,0,-1"
+				OnTimer "Tek_off_mask,BeginSequence,,11.5,-1"
+				OnTimer "Guard_Dooty,Trigger,,13,-1"
+			}
+		}
+	}
+}

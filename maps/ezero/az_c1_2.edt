@@ -1,0 +1,370 @@
+"az_c1_2"
+{
+	console
+	{
+		sk_zombie_soldier_health "100"
+		sk_citizen_health "100"
+		sk_npc_dmg_smg1 "6"
+	}
+	entity
+	{
+		delete {classname "prop_ragdoll" origin "1744 2764 124" }
+		delete {classname "prop_physics" origin "-431 257 -34" }
+		delete {classname "item_ammo_pistol" origin "-431 236 -16.6348" }
+		delete {classname "info_player_start"}
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		create {classname "lfce_logic_blucoop"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_zoom" values {allplayers "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				ammo_Pistol "72"
+				ammo_SMG1 "135"
+				item_Armor "30"
+				item_Suit "1"
+				targetname "azc12IPE"
+				weapon_pistol "1"
+				weapon_smg1 "1"
+				weapon_stunstick "1"
+				ResponseContext "weapon_medkit"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "manhackw" startdisabled "1" ResponseContext "weapon_manhacktoss"} }
+		create {classname "info_player_coop" origin "-558 -138 -25" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-650 1980 35" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 80 0"} }
+
+		create {classname "npc_zombie" origin "-476.636 501.168 -25.3613"
+			values
+			{
+				angles "0 235 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-457.77 757.679 -17.969"
+			values
+			{
+				angles "0 235 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-547.167 861.526 -30.3561"
+			values
+			{
+				angles "0 235 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-675.311 1199.74 -13.1574"
+			values
+			{
+				angles "0 320 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-516.566 1364.65 23.6861"
+			values
+			{
+				angles "0 235 0"
+				spawnflags "516"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-506.7 1194.71 23.6861"
+			values
+			{
+				angles "0 275 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombie" origin "-570.895 1087.66 -18.1237"
+			values
+			{
+				angles "0 320 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_5"
+			}
+		}
+		create {classname "npc_zombine" origin "-601.242 3666.78 -3"
+			values
+			{
+				targetname "syn_vint_zombie"
+				spawnflags "516"
+			}
+		}
+
+		create {classname "npc_zombine" origin "-678.219 3668.18 -3"
+			values
+			{
+				targetname "syn_vint_zombie"
+				spawnflags "516"
+			}
+		}
+
+		create {classname "npc_barnacle" origin "-86.8145 3537.27 363.698"
+			values
+			{
+				targetname "syn_vint_barnacle"
+				RestDist		"16"
+				spawnflags		"516"
+			}
+		}
+		create {classname "npc_barnacle" origin "-34.3532 3518.12 363.698"
+			values
+			{
+				targetname "syn_vint_barnacle"
+				RestDist "16"
+				spawnflags "516"
+			}
+		}
+		create {classname "npc_barnacle" origin "19.0664 3527.76 363.698"
+			values
+			{
+				targetname "syn_vint_barnacle"
+				RestDist "16"
+				spawnflags "516"
+			}
+		}
+		create {classname "npc_turret_floor" origin "1747.23 2769.72 76"
+			values
+			{
+				angles "0 270 0"
+				spawnflags "544"
+			}
+		}
+		create {classname "npc_zombine" origin "1737.59 2295.8 31"
+			values
+			{
+				angles "0 90 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_4"
+			}
+		}
+		create {classname "npc_zombine" origin "1916.14 2277.3 31.9294"
+			values
+			{
+				angles "0 90 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_4"
+			}
+		}
+		create {classname "npc_zombine" origin "1725.03 2455.73 32.7809"
+			values
+			{
+				angles "0 90 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_4"
+			}
+		}
+		create {classname "npc_zombine" origin "1819.19 2160.3 35.5281"
+			values
+			{
+				angles "0 90 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_4"
+			}
+		}
+		create {classname "npc_zombine" origin "1988.17 2445.77 36.8898"
+			values
+			{
+				angles "0 90 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_4"
+			}
+		}
+		create {classname "npc_zombie" origin "1426.74 2489.79 31"
+			values
+			{
+				angles "0 180 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_2"
+			}
+		}
+		create {classname "npc_zombie" origin "1290.61 2608.05 18.4081"
+			values
+			{
+				angles "0 180 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_2"
+			}
+		}
+		create {classname "npc_zombie" origin "1264 2504.05 31"
+			values
+			{
+				angles "0 180 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_2"
+			}
+		}
+		create {classname "npc_zombie" origin "1551.84 2289.31 31.0633"
+			values
+			{
+				angles "0 180 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_2"
+			}
+		}
+		create {classname "npc_zombie" origin "1568.84 2617.1 31"
+			values
+			{
+				angles "0 180 0"
+				spawnflags "4"
+				targetname "syn_vint_Zombie_2"
+			}
+		}
+		create {classname "npc_citizen" origin "2304.56 2516.96 273"
+			values
+			{
+				additionalequipment "weapon_smg1"
+				angles "0 180 0"
+				citizentype "3"
+				spawnflags "1048580"
+				squadname "rebels"
+				OnDeath "player_taunts_relay,Trigger,,1,-1"
+				OnFoundPlayer "Yell_Combine,PlaySound,,0,1"
+			}
+		}
+		create {classname "npc_citizen" origin "2306.89 2345.02 272"
+			values
+			{
+				additionalequipment "weapon_smg1"
+				angles "0 180 0"
+				citizentype "3"
+				spawnflags "1048580"
+				squadname "rebels"
+				OnDeath "player_taunts_relay,Trigger,,1,-1"
+				OnFoundPlayer "Yell_Combine,PlaySound,,0,1"
+			}
+		}
+		create {classname "npc_citizen" origin "2306.88 2224.28 272"
+			values
+			{
+				additionalequipment "weapon_smg1"
+				angles "0 180 0"
+				citizentype "3"
+				spawnflags "1048580"
+				squadname "rebels"
+				OnDeath "player_taunts_relay,Trigger,,1,-1"
+				OnFoundPlayer "Yell_Combine,PlaySound,,0,1"
+			}
+		}
+		create {classname "npc_citizen" origin "2940.64 2718.81 66.7822"
+			values
+			{
+				additionalequipment "weapon_smg1"
+				angles "0 270 0"
+				citizentype "3"
+				spawnflags "1048580"
+				squadname "rebels"
+				OnDeath "player_taunts_relay,Trigger,,1,-1"
+				OnFoundPlayer "Yell_Combine,PlaySound,,0,1"
+			}
+		}
+		create {classname "item_ammo_smg1_large" origin "3148.38 3416.33 76.3447" values {angles "0 90 0"} }
+		create {classname "ai_relationship"
+			values
+			{
+				disposition "1"
+				rank "99"
+				Reciprocal "1"
+				StartActive "1"
+				subject "npc_citizen"
+				target "player"
+			}
+		}
+		create {classname "ai_relationship"
+			values
+			{
+				disposition "1"
+				rank "99"
+				Reciprocal "1"
+				StartActive "1"
+				subject "npc_vortigaunt"
+				target "player"
+			}
+		}
+		create {classname "ai_relationship"
+			values
+			{
+				disposition "3"
+				rank "99"
+				Reciprocal "1"
+				StartActive "1"
+				subject "npc_metropolice"
+				target "player"
+			}
+		}
+		create {classname "ai_relationship"
+			values
+			{
+				disposition "3"
+				rank "99"
+				Reciprocal "1"
+				StartActive "1"
+				subject "npc_combine_s"
+				target "player"
+			}
+		}
+
+		create {classname "prop_physics" origin "-435.073 240.006 -29.868"
+			values
+			{
+				angles "0 180 0"
+				model "models/props_wasteland/controlroom_desk001b.mdl"
+				physdamagescale "0.1"
+				spawnflags "264"
+			}
+		}
+
+		create {classname "trigger_coop" origin "-550 1705 190"
+			values
+			{
+				targetname "syn_antirush_coop"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-551 170 16.41"
+				CountType "1"
+				PlayerValue "66"
+				spawnflags "1"
+				UseHud "1"
+				OnTrigger "syn_antirush_wall,Enable,,2,1"
+				OnPlayersIn "!self,Kill,,0,-1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,-1"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+			}
+		}
+		create {classname "syn_transition_wall" origin "-515 1785 35" values {angles "0 -90 0" targetname "syn_antirush_wall" startdisabled "1"} }
+
+		create {classname "trigger_coop" origin "3215 3420 150"
+			values
+			{
+				targetname "syn_antirush_coop2"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-551 170 16.41"
+				CountType "1"
+				PlayerValue "66"
+				spawnflags "1"
+				UseHud "1"
+				OnTrigger "syn_antirush_wall2,Enable,,2,1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_antirush_wall2,Kill,,0,-1"
+			}
+		}
+		create {classname "syn_transition_wall" origin "3090 3570 0" values {angles "0 -90 0" targetname "syn_antirush_wall2" startdisabled "1"} }
+	}
+}

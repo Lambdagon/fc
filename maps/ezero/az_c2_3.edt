@@ -1,0 +1,54 @@
+"az_c2_3"
+{
+	entity
+	{
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		create {classname "lfce_logic_blucoop"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_zoom" values {allplayers "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		delete {classname "logic_auto" origin "-301.972 106.573 1160"}
+		create {classname "info_player_coop" origin "-514 0 1018" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 234 0"} }
+		create {classname "trigger_once" origin "-514 0 1018"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-10 -10 -10"
+				edt_maxs "10 10 10"
+				OnTrigger "syn_hudtimer,start,15,0,1"
+				OnTrigger "syn_viewcontrol,Enable,,0,1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "screenfx,StartEffect,3,0,-1"
+				OnTimer "Screenoverlay,StartOverlays,,0,-1"
+				OnTimer "Camera_1,SetParentAttachment,eyes,0,-1"
+				OnTimer "tonemap,SetAutoExposureMax,0.3,0,-1"
+				OnTimer "Camera_1,Enable,,0,-1"
+				OnTimer "Start_fade,Fade,,0,-1"
+				OnTimer "ambient_whine,PlaySound,,0,-1"
+				OnTimer "sub1,Command,crosshair 0,0,-1"
+				OnTimer "ws,Strip,,0,-1"
+				OnTimer "Barney_HelmetBack,SetParentAttachment,helmet_attachment,0.01,-1"
+				OnTimer "Barney_HelmetFront,SetParentAttachment,helmet_attachment,0.01,-1"
+				OnTimer "Barney_HelmetHand,SetParentAttachment,faceplate_attachment,0.01,-1"
+				OnTimer "ss_Helmet_Reveal,BeginSequence,,2,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "-275 130 1250"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "90 110 0"
+			}
+		}
+	}
+}

@@ -1,0 +1,155 @@
+"az_c4_2"
+{
+	console
+	{
+		sk_max_ar2_altfire "5"
+	}
+	entity
+	{
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		create {classname "lfce_logic_blucoop"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_zoom" values {allplayers "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "LIFT_MAIN,Stop,,0,-1"
+				OnMapSpawn "LIFT_MAIN,StartBackwards,,0.1,-1"
+				OnMapSpawn "Dispense_Hack,AddOutput,OnTrigger syn_checkcustom:Trigger::0.5:-1,0,-1"
+				OnMapSpawn "Open_stalker,AddOutput,OnOpen autosavedishoe:Save::1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:MovePlayers::0.5:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnTrigger cdoors_4noclose:Unlock::0:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnTrigger cdoors_4noclose:Open::0.1:-1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnTrigger cdoors_7noclose:Open::0:-1,0,-1"
+				OnMapSpawn "syn_trig5,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"
+				OnMapSpawn "LG_Counter,AddOutput,OnHitMax cdoors_7noclose:Unlock::2:-1,0,-1"
+				OnMapSpawn "Lenny,AddOutput,OnHalfHealth !self:SetHealth:2000:0:-1,0,-1"
+			}
+		}
+		create {classname "info_player_coop" origin "-988 -25 550" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0" parentname "LIFT_MAIN"} }
+		create {classname "info_player_coop" origin "-2220 590 975" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-1690 1380 975" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-1690 1505 975" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-1835 3560 950" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 75 0"} }
+		create {classname "info_player_coop" origin "-1185 4280 950" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 -90 0" parentname "Cargo_lift_main"} }
+		create {classname "trigger_teleport" origin "-940 5 590" values {targetname "syn_starttptrig" startdisabled "1" edt_getbspmodelfor_classname "trigger_once" edt_getbspmodelfor_origin "-1033 589 1011.6" spawnflags "1" target "syn_starttp"} }
+		create {classname "info_teleport_destination" origin "-988 -25 550" values {targetname "syn_starttp" startdisabled "0" angles "0 90 0" parentname "LIFT_MAIN"} }
+		delete {classname "logic_auto" origin "-1002.43 24.7664 523"}
+		create {classname "trigger_once" origin "-940 5 590"
+			values
+			{
+				startdisabled "0"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-1033 589 1011.6"
+				spawnflags "1"
+				OnTrigger "syn_hudtimer,Start,10,0,1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "Intro_Fade,Fade,,0,-1"
+				//OnTimer "start_move_player,Teleport,,0,-1"
+				OnTimer "LIFT_MAIN,StartForward,,2,-1"
+				OnTimer "syn_starttptrig,Enable,,5,1"
+			}
+		}
+		create {classname "logic_relay"
+			values
+			{
+				targetname "syn_checkcustom"
+				OnTrigger "weapon_manhacktoss,AddOutput,OnUser1 syn_fragreplace:kill::0:-1,0,-1"
+				OnTrigger "weapon_manhacktoss,AddOutput,OnUser1 syn_checkcustom:kill::0:-1,0,-1"
+				OnTrigger "weapon_manhacktoss,FireUser1,,0.1,-1"
+				OnTrigger "syn_fragreplace,ForceSpawn,,0.5,-1"
+			}
+		}
+		create {classname "point_template" values {targetname "syn_fragreplace" Template01 "syn_frag" OnEntitySpawned "Vent_1,Break,,0,1"} }
+		create {classname "weapon_frag" origin "-1073 411 990" values {targetname "syn_frag"} }
+		delete {classname "weapon_manhacktoss" origin "-1072 411 990"}
+		create {classname "weapon_manhacktoss" origin "-1072 411 990"
+			values
+			{
+				OnPlayerPickup "manhackpickup,Enable,,0,-1"
+				OnPlayerPickup "manhackpickup,EquipAllPlayers,,0,-1"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				ammo_AR2 "60"
+				ammo_Buckshot "18"
+				ammo_Pistol "72"
+				ammo_SMG1 "135"
+				ammo_SMG1_Grenade "1"
+				item_Armor "45"
+				item_Suit "1"
+				targetname "az42IPE"
+				weapon_ar2 "1"
+				weapon_frag "1"
+				weapon_pistol "1"
+				weapon_shotgun "1"
+				weapon_smg1 "1"
+				weapon_stunstick "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "manhackpickup" startdisabled "1" ResponseContext "weapon_manhacktoss"} }
+		create {classname "trigger_teleport" origin "-846 465.97 1085" values {targetname "syn_fragtonext" edt_mins "-10 -5 -15" edt_maxs "10 5 15" spawnflags "10" filtername "frags" target "syn_fragnext"} }
+		create {classname "info_teleport_destination" origin "-806 465.97 1085" values {targetname "syn_fragnext" angles "0 0 0"} }
+		create {classname "trigger_push" origin "-806 465.97 1085" values {filtername "frags" spawnflags "10" edt_mins "-10 -5 -15" edt_maxs "10 5 15" pushdir "0 10 0" speed "100"} }
+		create {classname "filter_activator_class" values {targetname "frags" filterclass "npc_grenade_frag" Negated "0"} }
+		create {classname "item_ammo_crate" origin "-846 1052 953" values {targetname "syn_ar2alt" AmmoType "8"} }
+		edit {classname "trigger_once" origin "-1703.5 1545 969.5" values {targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "-1694 1447 969.5" values {targetname "syn_trig2" startdisabled "1"} }
+		edit {classname "trigger_once" origin "-2121 593 969.5" values {targetname "syn_trig3"} }
+		edit {classname "trigger_multiple" origin "-1694 1902 969.5" values {targetname "syn_trig4"} }
+		edit {classname "trigger_once" origin "-1688 3430 945" values {targetname "syn_trig5"} }
+		edit {targetname "cdoors_4" values {targetname "cdoors_4noclose"} }
+		edit {targetname "cdoors_7" values {targetname "cdoors_7noclose"} }
+		create {classname "trigger_coop" origin "-1690 1470 1010"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-1033 589 1011.6"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnPlayersIn "syn_trig2,Enable,,0,1"
+				OnPlayersIn "!self,kill,,0.5,1"
+			}
+		}
+		edit {targetname "Lenny" values {damagefilter "nocombball"} }
+		create {classname "filter_activator_class" values {targetname "nocombball" filterclass "prop_combine_ball" negated "1"} }
+		create {classname "trigger_coop" origin "-1190 4420 985"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-1033 589 1011.6"
+				targetname "syn_endcoop"
+				target "syn_cooptarg_01"
+				CountType "1"
+				PlayerValue "66"
+				spawnflags "1"
+				UseHud "1"
+				parentname "Cargo_lift_main"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_05,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "!self,kill,,1.5,-1"
+				OnPlayersIn "Cargo_doors,Close,,0,-1"
+				OnPlayersIn "Cargo_lift_main,StartForward,,5,-1"
+			}
+		}
+		create {classname "info_target" origin "-1185 4280 950" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 -90 0" parentname "Cargo_lift_main"} }
+		edit {targetname "10_to_11" values {origin "-940 -2 620"} }
+	}
+}
