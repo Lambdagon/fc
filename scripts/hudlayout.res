@@ -390,6 +390,52 @@
 	{
 
 	}
+	
+		HudLocator
+	{
+		"fieldName" "HudLocator"
+		"visible" "1"
+		"PaintBackgroundType"	"2"
+		"xpos"	"c8"	[$WIN32]
+		"ypos"	"r36"	[$WIN32]
+		"xpos"	"c-32"	[$X360]
+		"ypos_hidef"	"r52"	[$X360]
+		"ypos_lodef"	"r95"	[$X360]		// 52 is aligned to bottom of HudSuit
+		"wide"	"64"
+		"tall"  "24"
+	}
+
+	HudSquadStatus
+	{
+		"fieldName"	"HudSquadStatus"
+		"visible"	"1"
+		"enabled" "1"
+		"xpos"	"r118"
+		"ypos"	"375"
+		"wide"	"120"
+		"tall"	"46"
+		"text_xpos"	"8"
+		"text_ypos"	"34"
+		"SquadIconColor"	"255 220 0 160"
+		"IconInsetX"	"8"
+		"IconInsetY"	"0"
+		"IconGap"		"24"
+
+		"PaintBackgroundType"	"0"
+	}
+
+	HudCredits
+	{
+		"fieldName"	"HudCredits"
+		"TextFont"	"Default"
+		"visible"	"1"
+		"xpos"	"0"
+		"ypos"	"0"
+		"wide"	"640"
+		"tall"	"480"
+		"TextColor"	"255 255 255 192"
+
+	}
 
 	HudCommentary
 	{
