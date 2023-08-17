@@ -3392,6 +3392,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_watch_spy.mdl"
+			"model_world"	""
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -6866,6 +6867,7 @@
 		}
 		
 
+		
 		"0"
 		{
 			"name"	"TF_WEAPON_BAT"
@@ -6900,18 +6902,12 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_knife"
 			"baseitem" "1"
-			"model_world"	"models/weapons/w_models/w_knife.mdl"
-			"model_player"	"models/weapons/v_models/v_knife_spy.mdl"
-			"attach_to_hands" "0"
 		}
 		"5"
 		{
 			"name"	"TF_WEAPON_FISTS"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_fists"
-			"item_description"	"Well we sure as hell didn't use guns!
-			We would just wrestle Hunters to the ground with our bare hands! 
-			I used to kill ten, twenty a day, just using my fists."
 			"baseitem" "1"
 		}
 		"6"
@@ -6940,16 +6936,15 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 		}
-         "9"
+        "9"
         {
             "name"    "TF_WEAPON_SHOTGUN_PRIMARY"
             "first_sale_date"    "2010/09/29"
             "prefab"    "weapon_shotgun"
             "baseitem"    "1"
             "item_slot"    "primary"
-			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
-			"model_player"	"models/weapons/v_models/v_shotgun_engineer.mdl"
-			"attach_to_hands" "0"
+            "model_player"    "models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+            "attach_to_hands"    "1"
             "used_by_classes"
             {
                 "engineer"    "1"
@@ -6966,9 +6961,6 @@
 			{
 				"soldier"	"1"
 			}
-			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
-			"model_player"	"models/weapons/v_models/original/v_shotgun_soldier.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"11"
@@ -6982,9 +6974,6 @@
 			{
 				"heavy"	"1"
 			}
-			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
-			"model_player"	"models/weapons/v_models/v_shotgun_heavy.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"12"
@@ -6998,9 +6987,6 @@
 			{
 				"pyro"	"1"
 			}
-			"model_world"	"models/weapons/w_models/w_shotgun.mdl"
-			"model_player"	"models/weapons/v_models/v_shotgun_pyro.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"13"
@@ -7008,9 +6994,6 @@
 			"name"	"TF_WEAPON_SCATTERGUN"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_scattergun"
-			"model_world"	"models/weapons/w_models/w_scattergun.mdl"
-			"model_player"	"models/weapons/v_models/v_scattergun_scout.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"14"
@@ -7018,9 +7001,6 @@
 			"name"	"TF_WEAPON_SNIPERRIFLE"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_sniperrifle"
-			"model_world"	"models/weapons/w_models/w_sniperrifle.mdl"
-			"model_player"	"models/weapons/v_models/v_sniperrifle_sniper.mdl"
-			"attach_to_hands" "2"
 			"baseitem" "1"
 		}
 		"15"
@@ -7028,9 +7008,6 @@
 			"name"	"TF_WEAPON_MINIGUN"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_minigun"
-			"model_world"	"models/weapons/w_models/w_minigun.mdl"
-			"model_player"	"models/weapons/v_models/v_minigun_heavy.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"16"
@@ -7061,9 +7038,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_models/w_smg.mdl"
-			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
-			"attach_to_hands" "0"
+			"model_player"	"models/weapons/c_models/c_smg/c_smg.mdl"
+			"attach_to_hands"	"1"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -7077,9 +7053,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_syringegun"
 			"baseitem" "1"
-			"model_world"	"models/weapons/w_models/w_syringegun.mdl"
-			"model_player"	"models/weapons/v_models/v_syringegun_medic.mdl"
-			"attach_to_hands" "0"
 		}
 		"18"
 		{
@@ -7087,9 +7060,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_rocketlauncher"
 			"xifier_class_remap"	"rocket_launcher"
-			"model_world"	"models/weapons/w_models/w_rocketlauncher.mdl"
-			"model_player"	"models/weapons/v_models/v_rocketlauncher_soldier.mdl"
-			"attach_to_hands" "0"
 			"baseitem" "1"
 		}
 		"19"
@@ -7098,9 +7068,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_grenade_launcher"
 			"baseitem" "1"
-			"model_world"	"models/weapons/w_models/w_grenadelauncher.mdl"
-			"model_player"	"models/weapons/v_models/v_grenadelauncher_demo.mdl"
-			"attach_to_hands" "0"
 		}
 		"20"
 		{
@@ -7108,9 +7075,6 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_stickybomb_launcher"
 			"baseitem" "1"
-			"model_world"	"models/weapons/w_models/w_stickybomb_launcher.mdl"
-			"model_player"	"models/weapons/v_models/v_stickybomb_launcher_demo.mdl"
-			"attach_to_hands" "0"
 		}
 		"21"
 		{
@@ -7135,9 +7099,8 @@
             "first_sale_date"    "2010/09/29"
             "prefab"    "weapon_pistol"
             "baseitem"    "1"
-            "model_player"    "models/weapons/v_models/v_pistol_engineer.mdl"
-            "model_world"    "models/weapons/c_models/c_pistol/c_pistol.mdl"
-            "attach_to_hands"    "2"
+            "model_player"    "models/weapons/c_models/c_pistol/c_pistol.mdl"
+            "attach_to_hands"    "1"
             "used_by_classes"
             {
                 "engineer"    "1"
@@ -7209,9 +7172,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
-			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
-			"attach_to_hands" "0"
+			"model_player"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
+			"attach_to_hands" "1"
 			"used_by_classes"
 			{
 				"spy"	"1"
