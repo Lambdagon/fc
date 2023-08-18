@@ -21520,7 +21520,7 @@ Fires....... something"
 
 		"9153"
 		{
-			"name"	"SpyPanic Attack"
+			"name"	"Spy's Panic Attack"
 			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -21538,7 +21538,8 @@ Fires....... something"
 			}
 			"item_type_name"	"Shotgun"
 			"item_name"	"Spy's Panic Attack"
-			"item_description"	""
+			"item_description"	"Spy is not the best with larger guns.
+				Wielder cannot cloak."
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
 			"item_quality"	"normal"
@@ -21566,6 +21567,26 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.35"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.80"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.93"
+				}
+				"cannot cloak"
+				{
+					"attribute_class" "mod_no_cloak"
+					"value" "1"
+				}				
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
