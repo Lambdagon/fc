@@ -4447,6 +4447,11 @@
 			}
 			"attributes"
 			{
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
 				"heal on kill"
 				{
 					"attribute_class"	"heal_on_kill"
@@ -4461,11 +4466,6 @@
 				{
 					"attribute_class"	"mult_dmgtaken"
 					"value"	"1.2"
-				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value" "1"
 				}
 			}
 			"visuals"
@@ -18403,58 +18403,13 @@
 		}
 		"9020"
 		{
-			"name"	"TFC Crowbar"
-			"prefab"	"weapon_melee_allclass"
-			"item_class"	"saxxy"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Crowbar"
-			"item_name"	"TFC Crowbar"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_tfccrowbar"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/tfc/c_tfc_crowbar.mdl"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"		"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"		"1"
-				"heavy"		"1"
-				"pyro"		"1"
-				"engineer"	"1"
-				"spy" 		"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+//was tfc crowbar
 		}
 		"9021"
 		{
-			"name"	"HL2 Crowbar"
+			"name"	"Merc Crowbar ALT"
 			"prefab"	"weapon_melee_allclass"
-			"item_class"	"saxxy"
+			"item_class"	"tf_weapon_tfc_crowbar"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -18465,42 +18420,35 @@
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"item_logname"	"crowbar"
-			"item_iconname"	"crowbar"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crowbar"
-			"item_name"	"HL2 Crowbar"
+			"item_name"	"Crowbar"
 			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_hl2crowbar"
+			"image_inventory"	"backpack/weapons/w_models/w_ofcrowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/c_models/crowbar/c_crowbar.mdl"
-			"attach_to_hands"	"1"
+			"model_player"	"models/weapons/v_models/v_crowbar_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_crowbar.mdl"
+			"attach_to_hands"	"2"
+			"item_logname"	"crowbar"
+			"item_iconname"	"crowbar"
 			"anim_slot" "MELEE_ALLCLASS"
 			"inspect_panel_dist" "40"
+			"baseitem"		"1"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
+				"heavy"		"1"
+				"pyro"	"1"
 				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"engineer" "1"
-				"spy" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
+				"sniper"	"1"
 			}
 			"visuals"
 			{
-				"animation_replacement"
+			"animation_replacement"
 				{
 					"ACT_VM_DRAW" 							"ACT_MELEE_ALLCLASS_VM_DRAW"
 					"ACT_VM_IDLE" 							"ACT_MELEE_ALLCLASS_VM_IDLE"
@@ -18511,10 +18459,14 @@
 					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
 					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
 				}
-				"sound_melee_hit"		"Weapon_Crowbar.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
-				"sound_melee_miss"		"Weapon_Crowbar.Miss"
-				"sound_burst"			"Weapon_Machete.MissCrit"
+                "sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_melee_miss"	"Weapon_Crowbar.Miss"
+				"sound_melee_hit"	"Weapon_Crowbar.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}	
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -20613,86 +20565,7 @@
 		}		
 		"9409"
 		{
-			"name"	"Mini-Scattergun"
-			"item_class"	"tf_weapon_scattergun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"		"1"
-				"can_headshot"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"Minigun? Scattergun? Scattering Minigun"
-			"item_name"	"The War Crime"
-			"item_description"	"Model by goober of the goof"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"show_in_armory"	"1"
-			"propername"	"1"
-			"item_logname"	"miniscattergun"
-			"item_iconname"	"minigun"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_warcrime"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_miniscattergun/c_scattergun.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "32"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -6"
-			}
-			"attributes"
-			{
-
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.44"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"2"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.25"
-                }
-				"clip size bonus"
-			{
-					"attribute_class"	"mult_clipsize"
-					"value" "2"
-			}
-            "maxammo primary increased"
-			{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "2"
-            }
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.45"
-				}
-			}
-			"visuals"
-			{
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+//was warcrime
 		}	
 		"9410"
 		{
@@ -21290,7 +21163,7 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class" 	"mult_maxammo_primary"
-					"value" "0.8"
+					"value" "0.55"
 				}
 				"fire rate penalty"
 				{
@@ -21596,12 +21469,12 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.35"
+					"value"	"1.1"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.80"
+					"value"	"1.7"
 				}
 				"move speed penalty"
 				{
@@ -21772,72 +21645,8 @@ Fires....... something"
                 }
 		"9702"
 		{
-			"name"	"Shotgun Melee"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"fryingpan"
-			"item_iconname"	"fryingpan"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_FryingPan"
-			"item_name"	"Shotgun Melee"
-			"item_description"	"A shotgun...? 
-			Model edit by Lambdagon"
-			"item_slot"	"melee"
-			"anim_slot"	"melee_allclass"
-			"image_inventory"	"backpack/weapons/c_models/c_shotgunmelee"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/shotgun_melee/c_shotgun_melee.mdl"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"xifier_class_remap"	"Frying Pan"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"spy" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
-			}
-			"attributes"
-			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"FryingPan.HitFlesh"
-				"sound_melee_hit_world"	"FryingPan.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-                }
+//was shotgun melee
+        }
 		"9703"
 		{
 			"name"			"The Instant Fox"
@@ -22863,13 +22672,19 @@ Fires....... something"
 			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
 			"baseitem"		"1"
+			"item_logname"	"crowbar"
+			"item_iconname"	"crowbar"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"soldier"	"1"
+				"demoman"	"1"
 				"mercenary"	"1"
+				"civilian" 	"1"
 			}
 			"visuals"
 			{
@@ -24329,9 +24144,9 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name"	"Desert Eagle"
 			"item_description"	"Model by The_Fanciest_Of_Pants"
-			"item_name"	"The Genuine Deagle"
+			"item_name"	"The Deagle"
 			"item_slot"	"secondary"
-			"item_quality"		"unique"
+			"item_quality"		"rarity2"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"attach_to_hands"	"2"
@@ -25217,40 +25032,35 @@ Fires....... something"
 			}
            	"attributes"
             {
-				"heal on hit for rapidfire"
-				{
-					"attribute_class"	"add_onhit_addhealth"
-					"value"				"2"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"0.85"
 				}
-				"max health additive penalty"
+				"move speed penalty"
 				{
-					"attribute_class"	"add_maxhealth"
-					"value"				"-25"
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
 				}
                 "no damage falloff over distance"
 				{
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
 				}
-				"clip size bonus"
+				"mod max primary clip override"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value"				"1.3"
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"30"
 				}
                 "crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"				"0"
 				}	
-				"maxammo secondary increased"
+				"maxammo secondary reduced"
 				{
 				"attribute_class"	"mult_maxammo_secondary"
-				"value"	"3"
+				"value"	"0.45"
 				}
 			}
 			"taunt"
@@ -25309,10 +25119,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"soldier"               "1"
-				"demoman"				"1"
-				"pyro"					"1"
-				"sniper"				"1"
-				"heavy"					"1"
 			}
 			"static_attrs"
 			{
@@ -25322,11 +25128,6 @@ Fires....... something"
 			}
            	"attributes"
             {
-				"heal on hit for rapidfire"
-				{
-					"attribute_class"	"add_onhit_addhealth"
-					"value"				"2"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -25342,7 +25143,7 @@ Fires....... something"
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
 				}
-				"clip size bonus"
+				"clip size bonus HIDDEN"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"				"1.3"
@@ -25657,73 +25458,7 @@ Fires....... something"
 		}
 		"9566"
 		{
-			"first_sale_date"	"2011/09/07"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"		"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_customize_texture"	"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"Weed"
-			"item_name"	"Saxton Hash"
-			"item_description"	"Mann Co.: We sell products and smoke blunts!"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_bigweed"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/weed/c_frying_pan.mdl"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"anim_slot"	"melee_allclass"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"xifier_class_remap"	"Frying Pan"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"engineer" "1"
-				"spy" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -7"
-			}
-			"attributes"
-			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"FryingPan.HitFlesh"
-				"sound_melee_hit_world"	"FryingPan.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+//was saxton hash
 		}
 				"9567"
 		{
@@ -25778,11 +25513,6 @@ Fires....... something"
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -25798,10 +25528,20 @@ Fires....... something"
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.40"
 				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"1.60" 
+					"value"				"1.20" 
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "1"
 				}
 			}
 			"visuals"																		
@@ -27373,85 +27113,8 @@ Fires....... something"
 		}
 		"9789"
 		{
-			"name" "Scatman John Gun"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"first_sale_date" "1970/06/27"
-			"item_class"	"tf_weapon_minigun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"Scat(ter)gun"
-			"item_name"	"Scat Gun"
-			"item_description"	""
-			"item_logname"	"scatgun"
-			"item_iconname"	"scattergun"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"baseitem" "0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"show_in_armory"	"1"
-			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_scattergun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"31"
-			"model_player"	"models/weapons/c_models/c_scattergun.mdl"
-			"capabilities"
-			{
-				"can_collect" "1"
-			}
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -10"
-			}
-			"attributes"
-			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.35"
-				}
-				"minigun spinup time increased"
-				{
-					"attribute_class"	"mult_minigun_spinup_time"
-					"value" "1.8"
-				}
-				"aiming movespeed increased"
-				{
-					"attribute_class"	"mult_player_aiming_movespeed"
-					"value" "6"
-				}
-				"maxammo primary increased"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"6"
-				}
-			}
-			"visuals"
-			{
-				"sound_empty"	"ScatmanJohn.Rev"
-				"sound_double_shot"	"ScatmanJohn.Double"
-				"sound_special1"	"ScatmanJohn.RevUp"
-				"sound_special2"	"ScatmanJohn.RevDown"
-				"sound_special3"	"ScatmanJohn.Rev"
-				"sound_burst"	"ScatmanJohn.Crit"
-			}
-			"mouse_pressed_sound"	"weapons/scatman/scatman_sworld.mp3"
+// was scatgun
+			
 		}
 		"9790"
         {
