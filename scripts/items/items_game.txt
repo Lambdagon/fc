@@ -18407,12 +18407,63 @@
 			}
 		}
 		"9020"
+//Merc Crowbar with DEFAULT TP melee anims
 		{
-//was tfc crowbar
+			"name"	"Merc Crowbar ALT2"
+			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Crowbar"
+			"item_name"	"Crowbar"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/w_models/w_ofcrowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_crowbar_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_crowbar.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"baseitem"		"0"
+			"item_logname"	"crowbar"
+			"item_iconname"	"crowbar"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"soldier"	"1"
+				"demoman"	"1"
+			}
+			"visuals"
+			{
+                "sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_melee_miss"	"Weapon_Crowbar.Miss"
+				"sound_melee_hit"	"Weapon_Crowbar.HitFlesh"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}	
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"9021"
+// Merc crowbar with ALLCLASS TP anims
 		{
-			"name"	"Merc Crowbar ALT"
+			"name"	"Merc Crowbar ALT1"
 			"prefab"	"weapon_melee_allclass"
 			"item_class"	"tf_weapon_tfc_crowbar"
 			"capabilities"
@@ -18450,9 +18501,6 @@
 				"pyro"	"1"
 				"medic"	"1"
 				"sniper"	"1"
-				"scout"		"1"
-				"soldier"	"1"
-				"demoman"	"1"
 			}
 			"visuals"
 			{
@@ -21176,11 +21224,14 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.4"
+					"value"	"1.35"
+				}
+ 				"sniper fires tracer"
+ 				{
+					"attribute_class"	"sniper_fires_tracer"
+					"value"	"1"
 				}
 				
-				
-
 			}
 			"visuals"
 			{
@@ -21976,6 +22027,7 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"sniper"	"1"
+				"heavy" 	"1"
 			}
                         "visuals"
 			{
@@ -22654,6 +22706,7 @@ Fires....... something"
 			"particle_suffix"		"pistol"
 		}
 		"9716"
+//Merc Crowbar, Mercenary's base melee
 		{
 			"name"	"Merc Crowbar"
 			"prefab"	"weapon_melee_allclass"
@@ -26895,225 +26948,12 @@ Fires....... something"
 		}
 		"9787"
 		{
-			"name" "Juandeag"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"first_sale_date" "2012/06/27"
-			"item_class"	"tf_weapon_pistol"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"Juandeag"
-			"item_description"	""
-			"item_logname"	"pep_pistol"
-			"item_iconname"	"pep_pistol"
-			"item_slot"	"secondary"
-			"anim_slot"	"ITEM1"
-			"item_quality"	"unique"
-			"baseitem" "0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"show_in_armory"	"1"
-			"attach_to_hands"	"2"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"31"
-			"model_player"	"models/weapons/csgo/v_deagle.mdl"
-			"model_world"	"models/weapons/w_models/w_deagle/w_revolver.mdl"
-			"capabilities"
-			{
-				"can_collect" "1"
-			}
-			"used_by_classes"
-			{
-				"heavy"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -10"
-			}
-			"attributes"
-			{
-				//"headshot damage increase"
-				//{
-				//	"attribute_class"	"headshot_damage_modify"
-				//	"value"	"4"
-				//}
-				
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"2.66666666667"
-				}
-				"revolver use hit locations"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"maxammo primary increased"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"1.1"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.85"
-				}
-				"clip size penalty"
-				{
-					"attribute_class" 	"mult_clipsize"
-					"value" "0.58"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class" 	"mult_postfiredelay"
-					"value" "1.75"
-				}
-				"crit mod disabled"
-				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
-				}
-				"decapitate type"
-				{
-					"attribute_class"	"decapitate_type"
-					"value"	"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_Deagle.Single"
-				"sound_burst"			"Weapon_Deagle.SingleCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+//was JuandeagHeavy
 		}
 		"9788"
 		{
-			"name" "JuandeagSniper"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"first_sale_date" "2012/06/27"
-			"item_class"	"tf_weapon_pistol"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"Juandeag"
-			"item_description"	""
-			"item_logname"	"pep_pistol"
-			"item_iconname"	"pep_pistol"
-			"item_slot"	"secondary"
-			"anim_slot"	"ITEM1"
-			"item_quality"	"unique"
-			"baseitem" "0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"show_in_armory"	"1"
-			"attach_to_hands"	"2"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"31"
-			"model_player"	"models/weapons/csgo/v_deagle.mdl"
-			"model_world"	"models/weapons/w_models/w_deagle/w_revolver.mdl"
-			"capabilities"
-			{
-				"can_collect" "1"
-			}
-			"used_by_classes"
-			{
-				"sniper"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -10"
-			}
-			"attributes"
-			{
-				//"headshot damage increase"
-				//{
-				//	"attribute_class"	"headshot_damage_modify"
-				//	"value"	"4"
-				//}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"2.66666666667"
-				}
-				"revolver use hit locations"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"revolver use hit locations"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.85"
-				}
-				"clip size penalty"
-				{
-					"attribute_class" 	"mult_clipsize"
-					"value" "0.58"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class" 	"mult_postfiredelay"
-					"value" "1.5"
-				}
-				"maxammo secondary reduced"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.46666"
-				}
-				"crit mod disabled"
-				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
-				}
+//was JuandeagSniper
 
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_Deagle.Single"
-				"sound_burst"			"Weapon_Deagle.SingleCrit"
-				"animation_replacement"
-				{
-					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"9789"
 		{
