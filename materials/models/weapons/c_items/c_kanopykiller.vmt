@@ -1,0 +1,71 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/weapons/c_items/c_kanopykiller"
+	"$bumpmap"	"models/weapons/c_items/c_kanopykiller_normal"
+	"$basemapalphaphongmask" "1"
+	"$phong" "1"
+	"$phongexponent" "10"
+	"$phongboost" "2.8"	
+	"$phongtint" "[0.529411765 0.501960784 0.68627451]"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"	
+
+	"$rimlight" "1"
+	"$rimlightexponent" "25"	
+	"$rimlightboost" "0.6"
+	
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"CommunityWeapon"
+		{
+			"resultVar" "$commweapon"
+		}
+		"Multiply"
+		{
+			"srcVar1"  "$commweapon"
+			"srcVar2"  "$commadd_phongexponent" 
+			"resultVar" "$tempvar" 
+		}
+		"Add"
+		{
+			"srcVar1"  "$tempvar" 
+			"srcVar2"  "$basephongexponent" 
+			"resultVar" "$phongexponent" 
+		}
+		"Multiply"
+		{
+			"srcVar1"  "$commweapon"
+			"srcVar2"  "$commadd_phongboost" 
+			"resultVar" "$tempvar" 
+		}
+		"Add"
+		{
+			"srcVar1"  "$tempvar" 
+			"srcVar2"  "$basephongboost"
+			"resultVar" "$phongboost" 
+		}
+
+	}
+}
