@@ -14030,6 +14030,16 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.25"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -14520,6 +14530,16 @@
 				{
 					"attribute_class"	"sapper_voice_pak_idle_wait"
 					"value" "3.0"
+				}
+				"sapper health bonus"
+				{
+					"attribute_class"	"mult_sapper_health"
+					"value"				"3"								
+				}
+				"sapper damage penalty"
+				{
+					"attribute_class"	"mult_sapper_damage"
+					"value" "0.25"
 				}
 			}
 		}
@@ -15336,7 +15356,25 @@
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
-				"min_viewmodel_offset"		"10 0 -6"				
+				"min_viewmodel_offset"		"10 0 -6"	
+			}
+			"attributes"
+			{
+				"sapper damage bonus"
+				{
+					"attribute_class"	"mult_sapper_damage"
+					"value"				"1.25"								
+				}
+				"sapper damage leaches health HIDDEN"
+				{
+					"attribute_class"	"sapper_damage_leaches_health"
+					"value"	"2"
+				}
+				"sapper health penalty"
+				{
+					"attribute_class"	"mult_sapper_health"
+					"value" "0.05"
+				}
 			}
 		}
 		"1103"
@@ -19091,7 +19129,7 @@
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_Gloves"
 			"item_name"	"Gloves of Running Urgently MvM"
 			"item_slot"	"melee"
@@ -23509,15 +23547,15 @@ Fires....... something"
 					"attribute_class"	"see_enemy_health"
 					"value" "1"
 				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.90"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.85"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -25910,11 +25948,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.01"
-				}
-				"mult cloak meter regen rate"
-				{
-					"attribute_class"	"mult_cloak_meter_regen_rate"
-					"value"	"0.7"
 				}
 				"elevate quality"
 				{
