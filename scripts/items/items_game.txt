@@ -22960,11 +22960,154 @@ Fires....... something"
         	}
 		"9727"
 		{
-// was broken heavy's hammer
-        }
+//REQUIRES SEVERAL FIXES BEFORE BEING ADDED, FOR NOW ITS NOT IN THE ARMORY, UNLIKE HEAVY'S.
+			"name"	"Merc Lead Pipe"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"0"
+			"item_type_name"	"Average Lead Pipe"
+			"item_name"	"Lead Pipe"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/w_models/w_of_leadpipe"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_lead_pipe.mdl"
+			"model_world"	"models/weapons/w_models/w_leadpipe_merc.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"baseitem"		"0"
+			"item_logname"	"lead pipe"
+			"item_iconname"	"crowbar"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"visuals"
+			{
+                "sound_melee_hit_world"	"Weapon_Crowbar_OF.HitWorld"
+				"sound_melee_miss"	"Weapon_Crowbar_OF.Miss"
+				"sound_melee_hit"	"Weapon_Crowbar_OF.HitFlesh"
+				"sound_burst"		"Weapon_Crowbar_OF.MissCrit"
+			}	
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+		{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.30"
+				}
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"				"1"
+				}					
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.45"
+				}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+    }
 		"9729"
 		{
-	//heavypipe goes here		
+			"name"	"Heavy Lead Pipe"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Average Lead Pipe"
+			"item_name"	"Lead Pipe"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/w_models/w_of_leadpipe"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_lead_pipe.mdl"
+			"model_world"	"models/weapons/w_models/w_leadpipe_merc.mdl"
+			"attach_to_hands"	"2"
+			"item_logname"	"crowbar"
+			"item_iconname"	"crowbar"
+			"anim_slot" "MELEE_ALLCLASS"
+			"inspect_panel_dist" "40"
+			"baseitem"		"0"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+			"animation_replacement"
+				{
+					"ACT_VM_DRAW" 							"ACT_MELEE_ALLCLASS_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_MELEE_ALLCLASS_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_PRIMARYATTACK"
+					"ACT_VM_SWINGHARD" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
+					"ACT_VM_MISSCENTER" 					"ACT_MELEE_ALLCLASS_VM_MISSCENTER"
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALLCLASS_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_MELEE_ALLCLASS_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_MELEE_ALLCLASS_VM_INSPECT_END"
+				}
+                "sound_melee_hit_world"	"Weapon_Crowbar_OF.HitWorld"
+				"sound_melee_miss"	"Weapon_Crowbar_OF.Miss"
+				"sound_melee_hit"	"Weapon_Crowbar_OF.HitFlesh"
+				"sound_burst"		"Weapon_Crowbar_OF.MissCrit"
+			}	
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+		{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.30"
+				}
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"				"1"
+				}					
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.45"
+				}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+        }	
 	}
 		"9730"
 		{
@@ -25634,6 +25777,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"0.88"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
