@@ -32822,8 +32822,9 @@ Fires....... something"
 		"30163"
 		{
 			"name"	"Drake"
-			"item_class"	"saxxy"
 			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_katana"
+			"anim_slot" 	"melee_allclass"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -32868,15 +32869,40 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "112312.25"
-				}
 				"attach particle effect name"
 				{
 					"atribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
+				}
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"150"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"honorbound"
+				{
+					"attribute_class"	"honorbound"
+					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"static_attrs"
