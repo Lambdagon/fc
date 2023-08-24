@@ -11181,6 +11181,7 @@
 			{
 				"soldier"	"1"
 				"demoman"	"1"
+				"civilian"  "1"
 			}
 			"static_attrs"
 			{
@@ -19587,11 +19588,6 @@
 				"attribute_class"	"mult_spread_scale"
 				"value"	"0.2"
 				}
-				"maxammo secondary reduced"
-				{
-				"attribute_class"	"mult_spread_scale"
-				"value"	"0.90"
-				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
@@ -24367,6 +24363,11 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0"
 				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"2.5"
+				}
 				"rocket guide display"
 				{
 					"attribute_class"	"force_level_display"
@@ -27785,7 +27786,7 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"Knife"
-			"item_name"	"The La Menthe"
+			"item_name"	"La Menthe"
 			"item_description"	"This weapon can backstab"
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/c_models/c_cssknife"
@@ -27858,6 +27859,16 @@ Fires....... something"
 				{
 				"attribute_class"	"mult_crit_chance"
 				"value"	"0"
+				}
+				"self mark for death"
+				{
+					"attribute_class"	"self_mark_for_death"
+					"value"	"1"
+				}
+				"cannot pick up intelligence"
+				{
+					"attribute_class"	"cannot_pick_up_intelligence"
+					"value"				"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -32985,7 +32996,7 @@ Fires....... something"
 			}
 			"item_logname"	"fryingpan"
 			"item_iconname"	"fryingpan"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_FryingPan"
 			"item_description"	"+10 INCHES TO PENIS"
 			"item_name"	"Drake"
@@ -32996,7 +33007,7 @@ Fires....... something"
 			"model_player"	"models/weapons/drake.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"RARITY4"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -33025,7 +33036,7 @@ Fires....... something"
 				"is_a_sword"
 				{
 					"attribute_class"	"is_a_sword"
-					"value"				"72"
+					"value"				"42"
 				}
 				"decapitate type"
 				{
@@ -33035,7 +33046,7 @@ Fires....... something"
 				"restore health on kill"
 				{
 					"attribute_class"	"restore_health_on_kill"
-					"value"	"150"
+					"value"	"100"
 				}
 				"crit mod disabled"
 				{
