@@ -20720,11 +20720,11 @@
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"0.93"
 				}
-				"cannot cloak"
+				"mod_no_cloak_when_active HIDDEN"
 				{
-					"attribute_class" "mod_no_cloak"
+					"attribute_class" "mod_no_cloak_when_active"
 					"value" "1"
-				}				
+				}
 			}
 			"visuals"
 			{
@@ -42693,8 +42693,28 @@ Fires....... something"
 			"description_string" "#Attrib_DisableOverheal"
 			"description_format" "value_is_additive"
 			"effect_type" "negative"
-						"stored_as_integer"	"0"
+			"stored_as_integer"	"0"
 
+		}
+		"10038"
+		{
+			"name"	"mod_no_cloak_when_active"
+			"attribute_class"	"mod_no_cloak_when_active"
+			"description_string"	"#Attrib_NoCloakWhileActive"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"1"
+		}
+		"10039"
+		{
+			"name"	"mod_no_cloak_when_active HIDDEN"
+			"attribute_class"	"mod_no_cloak_when_active"
+			"description_string"	"#Attrib_NoCloakWhileActive"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"1"
 		}
 	}
 	"attribute_controlled_attached_particles"
