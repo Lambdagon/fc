@@ -7493,6 +7493,11 @@
 
     purchasesound(sound) : "Purchase Sound" : "" : "Name of the GameSound entry for the sound to play on purchase. Also supports direct .wav filenames."
     CostOf(integer) : "Cost of Purchase" : 5
+	CostType(choices) : "CostType" : 0 : "Type of currency to use" =
+	[
+		0 : "Currency"
+		1 : "Frags"
+	]
     MaxPointsTake(integer) : "Max Points to take ( Shared Only )" : 0 : "How many points should be taken from the player when they input purchase? 0 Means as much as needed."
     PurchaseName(string) : "Name of Purchase" : "A New Car!" : "Name of the purchase, which will appear in relay messages from this entity."
 
@@ -9496,7 +9501,7 @@
 	atv16(float) : "Attributes Value 16" : "0" : "Value of The Attribute"
 ]
 
-@PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfe_weapon_progress : 
+@PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfce_weapon_progress : 
 "'Weapon progression' disables the automatic "+
 "giveaway of weapons on the beggining of a 'round'. "+
 "Players have to earn weapons by picking them up in the map. "+
@@ -9514,10 +9519,19 @@
 	physcannon_progress(choices) : "Give the Gravity Gun on round start?" : 0 : "Gives the Gravity Gun to all players on the beginning of a round." =
 	[
 		0 : "No"
-		1 : "Yes"
+		1 : "Regular Physcannon"
+		2 : "Mega"
 	]
 	
-	input SetWeaponProgress(integer) : "Sets weapon progress." // either buggy or I fecked something up
+	portalgun_progress(choices) : "Give the Portal Gun on spawn" : 0 : "Gives the Portal gun on spawn." =
+	[
+		0 : "No"
+		1 : "Blue Portal Only"
+		2 : "Both Portals"
+	]
+	
+	input SetWeaponProgress(integer) : "Sets weapon progress."
+	input SetPhyscannonProgress(integer) : "Sets Physcannon progress."
 ]
 
 @PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfe_team_weapon_manager : ""
@@ -10015,6 +10029,13 @@
 @PointClass base(Item) studio("models/items/currencypack_small.mdl") = item_currencypack_small : "Small Credits Pickup" []
 
 @PointClass base(Item) studio("models/items/currencypack_small.mdl") = item_currencypack_custom : "Custom Credits Pickup" []
+
+@PointClass base(Targetname) iconsprite("editor/logic_relay.vmt") = logic_currencymanager :
+	"An entity that is used to give currency to the activator or all players"
+[
+	input GiveCurrency(integer) : "Give this much currency to the activator."
+	input GiveCurrencyToAll(integer) : "Give this much currency to all players."
+]
 
 @PointClass base(Targetname) = point_event_proxy : "An entity that allows fires simple game events from map logic"
 [
