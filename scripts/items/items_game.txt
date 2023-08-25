@@ -20915,7 +20915,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_died/c_rocketlauncher.mdl"
-			"attach_to_hands" "1"
+			"attach_to_hands" "0"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
 			{
@@ -23954,7 +23954,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"The Victorian Blast"
-			"item_type_name"	"Automatic Shotgun"
+			"item_type_name"	"Heavy Flaregun"
 			"item_name"	"The Victorian Blast"
 			"item_description"	"(Model from Deity Link)"
 			"item_logname"	"vic"
@@ -23982,10 +23982,10 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"Set DamageType Ignite"
+				"override projectile type"
 				{
-					"attribute_class"	"set_dmgtype_ignite"
-					"value" "1"
+					"attribute_class"	"override_projectile_type"
+					"value"				"6"
 				}
 				"maxammo primary increased"
 				{
@@ -23997,40 +23997,30 @@ Fires....... something"
 					"attribute_class"	"mod_max_primary_clip_override"
 					"value"	"-1"
 				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"0.40"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.30"
+					"value" "0.50"
 				}
 				"mod no reload DISPLAY ONLY"
 				{
 					"attribute_class"	"mod_no_reload_display_only"
 					"value"				"1"
 				}
+				"projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value"				"5"
+				}
 				"mod ammo per shot"
 				{
 					"attribute_class"	"add_onhit_addammo"
 					"value" "3"
 				}
-				"bullets per shot hidden"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "0.30"
-				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.7"
-				}
-				"panic_attack_negative"
-				{
-					"attribute_class"	"panic_attack_negative"
-					"value" "1"
+					"value" "0.80"
 				}
 			}
 			"visuals"
@@ -30313,7 +30303,7 @@ Fires....... something"
 					"value"	"1"
 				}
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			
 		}
 		"9863"
@@ -30337,7 +30327,7 @@ Fires....... something"
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"Test Recoil Rocket Launcher"
 			"item_logname"	"recoil_rocketlauncher"
@@ -32459,7 +32449,7 @@ Fires....... something"
 		"9931"
 		{
 			"enabled"	"1"
-			"item_class"	"tf_weapon_rocketlauncher_mortar"
+			"item_class"	"tf_weapon_rocketlauncher"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -32522,12 +32512,12 @@ Fires....... something"
 				"projectile spread angle penalty"
 				{
 					"attribute_class"	"projectile_spread_angle"
-					"value"				"8"
+					"value"				"10"
 				}
-				"rocket guide display"
+				"damage penalty"
 				{
-					"attribute_class"	"force_level_display"
-					"value" "1"
+				"attribute_class"	"mult_dmg"
+				"value"	"0.5"
 				}
 				"no reload single"
 				{
