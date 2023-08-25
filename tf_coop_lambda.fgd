@@ -9530,8 +9530,15 @@
 		2 : "Both Portals"
 	]
 	
+	progression_paused(choices) : "Progression Paused" : 0 : "Pause progression at the current stage." =
+	[
+		0 : "Enable progression"
+		1 : "Pause progression"
+	]
+	
 	input SetWeaponProgress(integer) : "Sets weapon progress."
 	input SetPhyscannonProgress(integer) : "Sets Physcannon progress."
+	input SetProgressionPaused(integer) : "Prevent or allow weapon progression."
 ]
 
 @PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfe_team_weapon_manager : ""
