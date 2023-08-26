@@ -1,0 +1,207 @@
+coast_1
+{
+	console
+	{
+		sk_gunship_health_increments "10"
+	}
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_message" values {edt_addedspawnflags "2"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "148.503 -2729.32 480.014" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-5210 665 100" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 190 0"} }
+		create {classname "info_player_coop" origin "-6760 730 85" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-13525 2420 275" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 -10 0"} }
+		create {classname "info_player_coop" origin "-10180 2290 730" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-11505 2395 940" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 80 0"} }
+		create {classname "info_player_coop" origin "-11885 2235 1135" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 90 0" parentname "ele2"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				weapon_crowbar "1"
+				weapon_frag "1"
+					ammo_grenade "1"
+				weapon_pistol "1"
+					ammo_pistol "22"
+				weapon_shotgun "1"
+					ammo_buckshot "6"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "weapon_ar2,AddOutput,OnPlayerPickup ar2pickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_ar2,AddOutput,OnPlayerPickup ar2pickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xbopickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xbopickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup phypickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup phypickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "bugsdead,AddOutput,OnHitMax syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "oviauki,AddOutput,OnTrigger syn_cooptele_01:TeleportPlayersNotTouching::0:1,0,-1"
+				OnMapSpawn "oviauki,AddOutput,OnTrigger syn_cooptele_01:kill::1:1,0,-1"
+				OnMapSpawn "syn_combcheck,AddOutput,OnDeath syn_trig3:Enable::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor1:Open::0.1:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor2:Open::0.2:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor3:Open::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor4:Open::0.1:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor5:Open::0.2:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed securedoor6:Open::0.3:1,0,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "ar2pickup" startdisabled "1" weapon_ar2 "1" ammo_ar2 "45"} }
+		create {classname "info_player_equip" values {targetname "xbopickup" startdisabled "1" weapon_crossbow "1" ammo_xbowbolt "2"} }
+		create {classname "info_player_equip" values {targetname "phypickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "rpgpickup" startdisabled "1" weapon_rpg "1" ammo_rpg_round "1"} }
+		edit {classname "func_button" origin "188.01 -202.01 117.03" values {wait "-1"} }
+		delete {classname "trigger_once" origin "-5504 -32 162"}
+		create {classname "trigger_coop" origin "-5504 -32 162"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-5504 -32 162"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "70"
+				CountType "1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_wall1,kill,,0,-1"
+				OnPlayersIn "guardtalk2,Start,,0,1"
+				OnPlayersIn "guardrebel_script4,BeginSequence,,2,1"
+			}
+		}
+		create {classname "func_brush" origin "-5416 -264 144.24" values {targetname "syn_wall1" edt_getbspmodelfor_classname "func_door" edt_getbspmodelfor_origin "-5988 1044 175.76" solidity "2" excludednpc "npc_citizen" renderfx "6" rendermode "10"} }
+		edit {classname "trigger_once" origin "-6428.41 687.28 180.24" values {targetname "syn_trig1"} }
+		edit {classname "trigger_once" origin "-13076 2304 296" values {targetname "syn_trig2"} }
+		create {classname "trigger_coop" origin "-12945 3020 430"
+			values
+			{
+				edt_mins "-450 -500 -200"
+				edt_maxs "310 500 300"
+				spawnflags "1"
+				targetname "syn_cooptele_01"
+				target "syn_cooptarg_01"
+			}
+		}
+		create {classname "info_target" origin "-12670 2880 410" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 0 0"} }
+		delete {classname "trigger_multiple" origin "-10056 2288 320"}
+		create {classname "trigger_multiple" origin "-10056 2288 320"
+			values
+			{
+				edt_mins "-80 -20 -80"
+				edt_maxs "80 40 30"
+				spawnflags "1"
+				parentname "ele1"
+				wait "3"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnStartTouch "ele1,Open,,1,-1"
+				OnEndTouchAll "ele1,Close,,0,-1"
+			}
+		}
+		create {classname "func_brush" origin "-10054 2282 272" values {edt_getbspmodelfor_classname "func_movelinear" edt_getbspmodelfor_origin "-10056 2280 272" solidity "2"} }
+		delete {classname "func_button" origin "-11472 2340 791.36"}
+		edit {classname "func_button" origin "-11472 2316 791.36" values {wait "-1"} }
+		create {classname "trigger_once" origin "-11355 2650 1005"
+			values
+			{
+				edt_mins "-40 -10 -40"
+				edt_maxs "40 10 100"
+				targetname "syn_trig3"
+				startdisabled "1"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_05,0,1"
+			}
+		}
+		edit {classname "npc_combine_s" origin "-11612 2396 912" values {targetname "syn_combcheck"} }
+		edit {classname "func_button" origin "-11620 2384 1140.82" values {targetname "syn_button1"} }
+		delete {targetname "bossdeath"}
+		create {classname "logic_relay"
+			values
+			{
+				targetname "bossdeath"
+				OnTrigger "coastalertsound,PlaySound,,5,-1"
+				OnTrigger "guardwarning,PlaySound,,19,-1"
+				OnTrigger "bossmusa,StopSound,,0,-1"
+				OnTrigger "towerpush,Enable,,10,-1"
+				OnTrigger "towerpush,Disable,,15,-1"
+				OnTrigger "ringsrot,Kill,,0,-1"
+				OnTrigger "shaker,StartShake,,10,-1"
+				OnTrigger "explosions_trig,Trigger,,10,-1"
+				OnTrigger "relaymonitor,Skin,1,10,-1"
+				OnTrigger "relaymonitor,EnableMotion,,10,-1"
+				OnTrigger "siltasavut,Toggle,,5,-1"
+				OnTrigger "vilkku,Disable,,0,-1"
+				OnTrigger "bossdonesave,Save,,5,-1"
+			}
+		}
+		edit {classname "trigger_multiple" origin "-11888 2236 1328" values {classname "logic_relay" targetname "syn_rel1"} }
+		delete {classname "trigger_multiple" origin "-11888 2224 1144"}
+		create {classname "trigger_coop" origin "-11888 2224 1144"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-11888 2224 1144"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "70"
+				CountType "1"
+				parentname "ele2"
+				target "syn_cooptarg_02"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_06,0,1"
+				OnPlayersIn "syn_blockele,Enable,,0,1"
+				OnPlayersIn "ele2,Open,,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "!self,kill,,1.5,-1"
+				OnPlayersIn "syn_blockele,kill,,5,1"
+				OnPlayersIn "syn_rel1,Trigger,,5,1"
+			}
+		}
+		create {classname "info_target" origin "-11885 2235 1135" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 90 0" parentname "ele2"} }
+		create {classname "func_brush" origin "-11888 2306 1153" values {targetname "syn_blockele" edt_getbspmodelfor_targetname "movingdoor1" startdisabled "1" solidity "0" spawnflags "2" renderfx "6" rendermode "10"} }
+		create {classname "syn_transition_wall" origin "-12165 -3683 700" values {solid "6" disableshadows "1" targetname "syn_antirush_wall" angles "0 0 0"} }
+		create {classname "trigger_coop" origin "-11955 -3820 775"
+			values
+			{
+				edt_mins "-200 -250 -100"
+				edt_maxs "300 250 100"
+				targetname "syn_antirush_coop"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "75"
+				CountType "1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_antirush_wall,kill,,0,-1"
+			}
+		}
+		//Change level causes ai_disabled on this change
+		delete {classname "trigger_changelevel"}
+		create {classname "trigger_changelevel" values {edt_mins "-1 -1 -1" edt_maxs "1 1 1" spawnflags "6" startdisabled "1" map "sewers_1" landmark "LM_2"} }
+		create {classname "trigger_changelevel" values {edt_mins "-1 -1 -1" edt_maxs "1 1 1" startdisabled "1" map "tunnel_1" landmark "LM_3"} }
+		create {classname "point_servercommand" values {targetname "syn_ps"} }
+		create {classname "trigger_once" origin "-12195 -3810 850"
+			values
+			{
+				edt_mins "-10 -260 -120"
+				edt_maxs "10 250 200"
+				spawnflags "1"
+				OnStartTouch "syn_ps,Command,changelevel amalgam tunnel_1,1,1"
+			}
+		}
+	}
+}

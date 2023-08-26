@@ -1,0 +1,83 @@
+"final_credits"
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trEARTH3,AddOutput,OnStartTouch syn_equipment_base:Enable::29:-1,0,-1"
+				OnMapSpawn "trEARTH3,AddOutput,OnStartTouch syn_equipment_base:EquipAllPlayers::30:-1,0,-1"
+				OnMapSpawn "trEARTH3,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint1:30:1,0,-1"
+				OnMapSpawn "trEARTH3,AddOutput,OnStartTouch syn_autosave:Save::35:1,0,-1"
+				OnMapSpawn "trSTREET23,AddOutput,OnTrigger syn_autosave:Save::0:1,0,-1"
+				OnMapSpawn "trSTREET23,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint2:0:1,0,-1"
+				OnMapSpawn "trSTREET4,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint3:0:1,0,-1"
+				OnMapSpawn "trSTREET24,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint4:0:1,0,-1"
+				OnMapSpawn "trSTREET24,AddOutput,OnTrigger syn_autosave:Save::0.5:1,0,-1"
+				OnMapSpawn "tr2,AddOutput,OnTrigger endgame:EndGame::35:-1,0,-1"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "1"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "90"
+			}
+		}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		create {classname "info_player_coop" origin "555 810 20" values {targetname "syn_spawnpoint0" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-2655 2110 1210" values {targetname "syn_spawnpoint1" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-4390 3470 1370" values {targetname "syn_spawnpoint2" startdisabled "1" angles "0 50 0"} }
+		create {classname "info_player_coop" origin "-4670 5320 1500" values {targetname "syn_spawnpoint3" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-5105 6370 1500" values {targetname "syn_spawnpoint4" startdisabled "1" angles "0 180 0"} }
+		delete {targetname "trSTREET16"}
+		delete {targetname "command1"}
+		edit
+		{
+			classname "trigger_teleport"
+			origin "552 810 26"
+			values
+			{
+				targetname "telefirst"
+				startdisabled "1"
+			}
+		}
+		create {classname "trigger_once" origin "552 810 28"
+			values
+			{
+				spawnflags "1"
+				model "*1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "RESUMING IN..."
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "telefirst,Enable,,0,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "552 830 28"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+		edit {targetname "doorSTREET1" values {targetname "doorSTREET1noclose" angles "0 90 0"} }
+	}
+}

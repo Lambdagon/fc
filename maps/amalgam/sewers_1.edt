@@ -1,0 +1,119 @@
+sewers_1
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_message" values {edt_addedspawnflags "2"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "232.047 383.128 -1375" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "3095 -285 -1180" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "3170 -30 -1180" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 10 0"} }
+		create {classname "info_player_coop" origin "3860 -10 -1115" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 80 0"} }
+		create {classname "info_player_coop" origin "3405 2220 -1020" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "5210 3810 -1080" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "7055 7870 -1050" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "7485 7875 -1050" values {targetname "syn_spawnpoint_07" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				weapon_crowbar "1"
+				weapon_frag "1"
+					ammo_grenade "1"
+				weapon_pistol "1"
+					ammo_pistol "22"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+			}
+		}
+		delete {classname "item_suit" origin "7120 7872 -960"}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup shopickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup shopickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger brokendoortimernodisable:Enable::16:-1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "Trigger_RO_2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "Trigger_RO_2,AddOutput,OnStartTouch syn_autosave:Save::0.5:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:2:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:2:1,0,-1"
+				OnMapSpawn "zombilaskuri,AddOutput,OnHitMax syn_spawn_manager:SetCheckPoint:syn_spawnpoint_07:0:1,0,-1"
+				OnMapSpawn "zombilaskuri,AddOutput,OnHitMax syn_autosave:Save::1:1,0,-1"
+				OnMapSpawn "zombilaskuri,AddOutput,OnHitMax syn_cooptele_01:TeleportPlayersNotTouching::17:-1,0,-1"
+				OnMapSpawn "zombilaskuri,AddOutput,OnHitMax syn_cooptele_01:kill::17.5:-1,0,-1"
+				OnMapSpawn "zombilaskuri,AddOutput,OnHitMax controldoor1edt:Close::16:-1,0,-1"
+			}
+		}
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip" values {targetname "shopickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "6"} }
+		edit {classname "trigger_once" origin "896 4 -1320" values {targetname "syn_trig1"} }
+		edit {targetname "brokendoortimer" values {targetname "brokendoortimernodisable"} }
+		edit {classname "trigger_once" origin "3108 -288 -1120" values {targetname "syn_trig2"} }
+		edit {classname "trigger_once" origin "3896 16 -1088" values {targetname "syn_trig3"} }
+		edit {classname "trigger_once" origin "3424 2256 -1000" values {targetname "syn_trig4"} }
+		edit {classname "trigger_once" origin "7248 7872 -960" values {classname "logic_relay" targetname "syn_rel1"} }
+		create {classname "trigger_once" origin "5680 3745 -1070"
+			values
+			{
+				edt_mins "-20 -150 -100"
+				edt_maxs "20 150 100"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_05,0,1"
+			}
+		}
+		delete {classname "func_button" origin "6672.01 6336.5 -1038.7"}
+		delete {targetname "zombikiller"}
+		edit {targetname "controldoor1" values {targetname "controldoor1edt"} }
+		create {classname "trigger_coop" origin "7185 7870 -1030"
+			values
+			{
+				edt_mins "-200 -70 -100"
+				edt_maxs "320 60 100"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_06,0,1"
+				OnPlayersIn "!self,kill,,1.2,-1"
+				OnPlayersIn "syn_rel1,Trigger,,0,1"
+				OnPlayersIn "controldoor1edt,Open,,8,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+			}
+		}
+		create {classname "info_target" origin "7055 7870 -1050" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 0 0"} }
+		create {classname "trigger_coop" origin "8070 7830 -1000"
+			values
+			{
+				edt_mins "-615 -800 -100"
+				edt_maxs "600 500 100"
+				spawnflags "1"
+				targetname "syn_cooptele_01"
+				target "syn_cooptarg_02"
+			}
+		}
+		create {classname "info_target" origin "7485 7875 -1050" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 0 0"} }
+		create {classname "syn_transition_wall" origin "9205 7875 -1200" values {solid "6" disableshadows "1" angles "0 180 0" targetname "syn_antirush_wall"} }
+		create {classname "trigger_coop" origin "9012 7870 -990"
+			values
+			{
+				targetname "syn_antirush_coop"
+				edt_mins "-200 -70 -100"
+				edt_maxs "320 60 100"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				CountType "1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_antirush_wall,kill,,0,-1"
+			}
+		}
+	}
+}

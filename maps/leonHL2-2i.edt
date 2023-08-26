@@ -1,0 +1,210 @@
+"leonHL2-2i"
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "synwall,close,,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_pistol,AddOutput,OnPlayerPickup ppickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_pistol,AddOutput,OnPlayerPickup ppickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup 357pickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup 357pickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_ar2,AddOutput,OnPlayerPickup apickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_ar2,AddOutput,OnPlayerPickup apickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch suitpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch suitpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "train_door_2_trig2,AddOutput,OnStartTouch train_door_2noclose:Unlock::0:-1,0,-1"
+				OnMapSpawn "train_door_2_trig2,AddOutput,OnTrigger train_door_2noclose:Open::0.3:-1,0,-1"
+				OnMapSpawn "aatr,AddOutput,OnTrigger ddnoclose:Open::0:-1,0,-1"
+				OnMapSpawn "tr28,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:34:-1,0,-1"
+				OnMapSpawn "tr18,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_05:0:-1,0,-1"
+				OnMapSpawn "trs12,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_06:0:-1,0,-1"
+				OnMapSpawn "trs39,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_07:0:-1,0,-1"
+				OnMapSpawn "trs39,AddOutput,OnStartTouch syn_autosave:Save::1:1,0,-1"
+				OnMapSpawn "button1,Lock,,0,1"
+				OnMapSpawn "drs33,AddOutput,OnFullyOpen button1:Unlock::0:-1,0,-1"
+				OnMapSpawn "trs44,AddOutput,OnTrigger drs42noclose:Open::0:1,0,-1"
+				OnMapSpawn "trs53,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_09:0:1,0,-1"
+				OnMapSpawn "trs56,AddOutput,OnStartTouch drs57noclose:Open::0:-1,0,-1"
+				OnMapSpawn "button6,AddOutput,OnPressed drs57noclose:Open::0:-1,0,-1"
+				OnMapSpawn "trs58,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_10:0:1,0,-1"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		delete {classname "trigger_remove"}
+		delete {classname "info_player_start"}
+		delete {targetname "resupply_start_master"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "global_newgame_spawner_357"}
+		delete {targetname "global_newgame_spawner_physcannon"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_entmaker"}
+		delete {targetname "global_newgame_spawner_jeep"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_player_equip" values {targetname "cpickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_equip" values {targetname "ppickup" startdisabled "1" weapon_pistol "1" ammo_pistol "54"} }
+		create {classname "info_player_equip" values {targetname "357pickup" startdisabled "1" weapon_357 "1" ammo_357 "12"} }
+		create {classname "info_player_equip" values {targetname "smgpickup" startdisabled "1" weapon_smg1 "1" ammo_smg1 "135"} }
+		create {classname "info_player_equip" values {targetname "apickup" startdisabled "1" weapon_ar2 "1" ammo_ar2 "90"} }
+		create {classname "info_player_equip" values {targetname "bpickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "24"} }
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_xbowbolt "5"} }
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "rpgpickup" startdisabled "1" weapon_rpg "1" ammo_rpg_round "3"} }
+		create {classname "info_player_equip" values {targetname "suitpickup" startdisabled "1" item_suit "1"} }
+		create {classname "info_player_coop" origin "1135 900 125" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "5440 4640 3405" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 -90 0"} }
+		create {classname "info_player_coop" origin "-4695 -6120 4900" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "150 -200 305" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "4975 -2215 -60" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "7935 -385 -1300" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0" parentname "dr13"} }
+		create {classname "info_player_coop" origin "-1610 -2700 1350" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-4020 -8465 5115" values {targetname "syn_spawnpoint_07" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "3065 -8680 2930" values {targetname "syn_spawnpoint_08" startdisabled "1" angles "0 0 0" parentname "drs35"} }
+		create {classname "info_player_coop" origin "3450 -8375 2860" values {targetname "syn_spawnpoint_09" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "2645 -7925 3265" values {targetname "syn_spawnpoint_10" startdisabled "1" angles "0 0 0"} }
+		delete {targetname "trs65"}
+		edit {targetname "train_door_2" values {targetname "train_door_2noclose"} }
+		edit {targetname "dd" values {targetname "ddnoclose"} }
+		edit {targetname "drs42" values {targetname "drs42noclose"} }
+		edit {targetname "drs57" values {targetname "drs57noclose"} }
+		edit {targetname "teleportDestenation1" values {parentname "xtrainx1"} }
+		edit {targetname "teleportDestenation2" values {parentname "dr13"} }
+		edit {targetname "teleportDestenation8" values {origin "3065 -8680 2930" parentname "drs35"} }
+		edit {targetname "assault_point08" values {allowdiversion "0"} }
+		edit {targetname "drsx10" values {targetname "drsx10edit"} }
+		create {classname "trigger_once" origin "-1710 -2775 1350"
+			values
+			{
+				model "*1"
+				spawnflags "1"
+				angles "0 -90 0"
+				OnTrigger "drsx10edit,Open,,0,-1"
+			}
+		}
+		edit {targetname "drs18" values {targetname "drs18edit"} }
+		create {classname "trigger_once" origin "-1634 -3448 1354"
+			values
+			{
+				model "*1"
+				spawnflags "1"
+				angles "0 -90 0"
+				OnTrigger "drs18edit,Open,,0,-1"
+			}
+		}
+		delete {targetname "trs17"}
+		create {classname "trigger_coop" origin "-4695 -6120 4910"
+			values
+			{
+				targetname "syn_cooptele2"
+				model "*8"
+				parentname "drs34"
+				spawnflags "1"
+				startdisabled "0"
+				angles "0 90 0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				target "syn_cooptarg2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnTrigger "steam4,TurnOff,,0,1"
+				OnStartTouch "group2,TurnOff,,0,1"
+				OnStartTouch "sn22,StopSound,,0,1"
+				OnStartTouch "timer2,Disable,,0,1"
+				OnPlayersIn "drs32,Close,,0,1"
+				OnPlayersIn "drs33,Open,,0,1"
+				OnPlayersIn "sn28,PlaySound,,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "drs35,Close,,3,1"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_08,10,1"
+				OnPlayersIn "!self,Disable,,0,1"
+			}
+		}
+		create {classname "info_target" origin "-4695 -6120 4900" values {targetname "syn_cooptarg2" angles "0 0 0" parentname "drs34"} }
+		create {classname "trigger_coop" origin "150 -200 325"
+			values
+			{
+				targetname "syn_cooptele3"
+				model "*8"
+				spawnflags "1"
+				startdisabled "0"
+				angles "0 0 0"
+				target "syn_cooptarg3"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnTrigger "!self,TeleportPlayersNotTouching,,1,1"
+				OnTrigger "!self,Disable,,1.5,-1"
+			}
+		}
+		create {classname "info_target" origin "150 -200 305" values {targetname "syn_cooptarg3" angles "0 0 0"} }
+		edit {targetname "drs59" values {targetname "synwall" angles "0 180 0"} }
+		create {classname "trigger_coop" origin "2838 -7634 3820"
+			values
+			{
+				model "*8"
+				spawnflags "1"
+				angles "0 90 90"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "synwall,open,,0,-1"
+				OnPlayersIn "!self,Disable,,0.5,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "7885 -310 -1255"
+			values
+			{
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 0 90"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "7885 -310 -1255"
+			values
+			{
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 90 90"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "7995 -440 -1255"
+			values
+			{
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 180 90"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "7995 -440 -1255"
+			values
+			{
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 -90 90"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+	}
+}

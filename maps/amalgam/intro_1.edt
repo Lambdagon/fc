@@ -1,0 +1,221 @@
+intro_1
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_message" values {edt_addedspawnflags "2"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {classname "trigger_once" origin "568 -80 -744"}
+		create {classname "trigger_coop" origin "568 -80 -744"
+			values
+			{
+				edt_mins "-60 -250 -50"
+				edt_maxs "60 80 50"
+				StartDisabled "0"
+				spawnflags "1"
+				target "syn_cooptarg_01"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnTrigger "ovi1,Close,,1,1"
+				OnTrigger "ovi1,Lock,,1.1,1"
+				OnTrigger "doorsmash,Trigger,,1,1"
+				OnTrigger "intromusa1,FadeOut,30,0,1"
+				OnTrigger "nogohere,Enable,,1,1"
+				OnTrigger "guardboiscript,BeginSequence,,0,1"
+				OnTrigger "talk1,BeginSequence,,0,1"
+				OnTrigger "talk2,BeginSequence,,0,1"
+				OnTrigger "!self,TeleportPlayersNotTouching,,1,1"
+				OnTrigger "!self,kill,,1.5,-1"
+			}
+		}
+		create {classname "info_target" origin "525 -45 -763" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 0 0"} }
+		create {classname "trigger_once" origin "8232 4772 2"
+			values
+			{
+				spawnflags "1"
+				edt_maxs "200 200 200"
+				edt_mins "-200 -200 -200"
+				OnTrigger "syn_hudtimer,Start,20,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "8232 4772 62"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+		create {classname "info_player_coop" origin "8125 4772 2" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "525 -45 -763" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "810 -1035 -380" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "1110 -850 -205" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "60 1230 -185" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-1080 625 -185" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-2245 1430 -185" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 90 0"} }
+		delete {targetname "introstart"}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "sound_combineshieldwall_idle1,PlaySound,,0,-1"
+				OnTimer "sound_staticcombineshieldwall_idle1,PlaySound,,0,-1"
+				OnTimer "sound_combineshieldwall_idle2,PlaySound,,0,-1"
+				OnTimer "relay_combineshieldwall2_on,Trigger,,3,-1"
+				OnTimer "sound_combineshieldwall_idle3,PlaySound,,0,-1"
+				OnTimer "sound_staticcombineshieldwall_idle2,PlaySound,,0,-1"
+				OnTimer "tonemapper,SetAutoExposureMax,0.5,0,-1"
+				OnTimer "tonemapper,SetAutoExposureMin,0.2,0,-1"
+				OnTimer "tonemapper,SetBloomScale,3,0,-1"
+				OnTimer "introtrigger1,Enable,,9,-1"
+				OnTimer "intro_relay,Trigger,,9,-1"
+				OnTimer "logic1,Trigger,,9,-1"
+				OnTimer "starfield,TurnOn,,17,-1"
+				OnTimer "starfield,TurnOff,,43,-1"
+				OnTimer "starfield,SetDensity,0.15,9,-1"
+				OnTimer "vis,StopOverlays,,1.5,-1"
+				OnTimer "telesound3,PlaySound,,0,-1"
+				OnTimer "vis,StartOverlays,,0,-1"
+				OnTimer "telesound2,PlaySound,,0,-1"
+				OnTimer "gmanintroscene,Start,,11,1"
+				OnTimer "introcamera2,Enable,,0.1,-1"
+				OnTimer "intromusic,PlaySound,,0,-1"
+				OnTimer "introtext,ShowLogo,,0,-1"
+				OnTimer "valojasaatana,Disable,,42,-1"
+				OnTimer "valojasaatana,Enable,,0,-1"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+			}
+		}
+		delete {classname "logic_auto" origin "832 -1160 -256"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "1688 776 -256"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "88 136 -64"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "80 1232 -64"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-736 208 -64"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-45.5647 -0.879154 -735"}//Replaced in hud_timer
+		delete {classname "item_suit"}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cropickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cropickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_frag,AddOutput,OnPlayerPickup frapickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_frag,AddOutput,OnPlayerPickup frapickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_pistol,AddOutput,OnPlayerPickup pispickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_pistol,AddOutput,OnPlayerPickup pispickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "Physbox_RO,AddOutput,OnPlayerUse Relay_RO:Enable::0:1,0,-1"
+				OnMapSpawn "Physbox_RO,AddOutput,OnPlayerUse Relay_RO:Trigger::0.1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_autosave:Save::0.1:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_05:0:1,0,-1"
+				OnMapSpawn "updoor1,AddOutput,OnOpen syn_spawn_manager:SetCheckPoint:syn_spawnpoint_06:0:1,0,-1"
+			}
+		}
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip" values {targetname "suipickup" startdisabled "1" item_suit "1"} }
+		create {classname "info_player_equip" values {targetname "cropickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_equip" values {targetname "frapickup" startdisabled "1" weapon_frag "1"} }
+		create {classname "info_player_equip" values {targetname "pispickup" startdisabled "1" weapon_pistol "1" ammo_pistol "22"} }
+		delete {targetname "floortele"}
+		create {classname "trigger_teleport" origin "-4736 704 696"
+			values
+			{
+				spawnflags "1"
+				StartDisabled "1"
+				target "tele3"
+				targetname "floortele"
+				edt_getbspmodelfor_targetname "floortele"
+				OnStartTouch "telesound,PlaySound,,0,1"
+				OnStartTouch "vis,StartOverlays,,0,1"
+				OnStartTouch "vis,StopOverlays,,2,-1"
+				OnStartTouch "camera1,Enable,,0,1"
+				OnStartTouch "fade1,Fade,,0,1"
+				OnStartTouch "camera1,Disable,,7,1"
+				OnStartTouch "suipickup,Enable,,6.5,1"
+				OnStartTouch "suipickup,EquipAllPlayers,,7,1"
+			}
+		}
+		edit {classname "trigger_once" origin "872 -1184 -272" values {targetname "syn_trig1"} }
+		edit {classname "trigger_once" origin "832 -438 -168" values {targetname "syn_trig2"} }
+		edit {classname "trigger_once" origin "-1148 624 -168" values {targetname "syn_trig3"} }
+		edit {classname "trigger_once" origin "-296 640 -144" values {classname "logic_relay" targetname "syn_rel1"} }
+		edit {classname "prop_physics" origin "1587.72 -2086.05 -395.773" values {origin "1587 -2112 -396" spawnflags "10" minhealthdmg "999"} }
+		create {classname "func_brush" origin "-24 1030 -128 -128" values {targetname "syn_wall1" edt_getbspmodelfor_targetname "clip_combineshieldwall1" solid "6" angles "0 90 0" disableshadows "1" Solidity "2" excludednpc "npc_combine_s"} }
+		create {classname "func_brush" origin "-118 1102 -128" values {targetname "syn_wall1" edt_getbspmodelfor_targetname "clip_combineshieldwall1" solid "6" angles "0 0 0" disableshadows "1" Solidity "2" excludednpc "npc_combine_s"} }
+		create {classname "func_brush" origin "-118 1244 -128" values {targetname "syn_wall1" edt_getbspmodelfor_targetname "clip_combineshieldwall1" solid "6" angles "0 0 0" disableshadows "1" Solidity "2" excludednpc "npc_combine_s"} }
+		create {classname "func_brush" origin "-118 1102 64" values {targetname "syn_wall1" edt_getbspmodelfor_targetname "clip_combineshieldwall1" solid "6" angles "0 0 0" disableshadows "1" Solidity "2" excludednpc "npc_combine_s"} }
+		create {classname "func_brush" origin "-118 1244 64" values {targetname "syn_wall1" edt_getbspmodelfor_targetname "clip_combineshieldwall1" solid "6" angles "0 0 0" disableshadows "1" Solidity "2" excludednpc "npc_combine_s"} }
+		create {classname "trigger_coop" origin "-11 662 -156"
+			values
+			{
+				edt_mins "-130 -800 -100"
+				edt_maxs "100 500 100"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				CountType "1"
+				target "syn_cooptarg_02"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "!self,kill,,1.2,1"
+				OnPlayersIn "syn_rel1,Trigger,,1,1"
+				OnPlayersIn "syn_wall1,kill,,1,1"
+			}
+		}
+		create {classname "info_target" origin "60 1230 -185" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 180 0"} }
+		edit {classname "prop_door_rotating" origin "-1879 1025 -169.75" values {targetname "syn_door1"} }
+		create {classname "prop_physics" origin "-1836 1030 -184"
+			values
+			{
+				solid "6"
+				model "models/props_wasteland/prison_padlock001a.mdl"
+				angles "-20 90 0"
+				spawnflags "8"
+				OnBreak "syn_door1,Unlock,,0,-1"
+			}
+		}
+		edit {targetname "spooky" values {origin "-3172 1745 -474" angles "0 -90 0"} }
+		create {classname "syn_transition_wall" origin "-2134 1164 -600" values {solid "6" disableshadows "1" targetname "syn_antirush_wall" angles "0 180 0"} }
+		create {classname "trigger_coop" origin "-2152 1156 -448"
+			values
+			{
+				edt_mins "-100 -120 -100"
+				edt_maxs "120 120 60"
+				targetname "syn_antirush_coop"
+				spawnflags "1"
+				UseHud "1"
+				PlayerValue "66"
+				CountType "1"
+				OnPlayersIn "!self,kill,,0,1"
+				OnPlayersIn "syn_antirush_wall,kill,,0,1"
+			}
+		}
+		create {classname "ambient_generic" values {message "npclines\gman\introgman1.wav"} }
+		create {classname "ambient_generic" values {message "npclines\gman\introgman2.wav"} }
+		create {classname "ambient_generic" values {message "npclines\gman\introgman3.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\rebelintro1.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\rebelintro2.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\rebelintro3.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\shieldwall1.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\shieldwall2.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\shieldwall3.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\shieldwall4.wav"} }
+		create {classname "ambient_generic" values {message "Sectornotclear.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\introtunnel1.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\introtunnel2.wav"} }
+		create {classname "ambient_generic" values {message "npclines\rebel1\introtunnel3.wav"} }
+	}
+}

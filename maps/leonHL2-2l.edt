@@ -1,0 +1,158 @@
+"leonHL2-2l"
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "tr33,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint1:0:1,0,-1"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {classname "trigger_remove"}
+		delete {classname "info_player_start"}
+		delete {targetname "resupply_start_master"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg1"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "global_newgame_spawner_357"}
+		delete {targetname "global_newgame_spawner_physcannon"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_entmaker"}
+		delete {targetname "global_newgame_spawner_jeep"}
+		delete {targetname "global_newgame_template_ammo"}
+		delete {targetname "global_newgame_template_base_items"}
+		delete {targetname "global_newgame_template_local_items"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		delete {targetname "hurt15"}
+		delete {targetname "HingeDoor1"}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "1"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "90"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_357 "1"
+					ammo_357 "18"
+				weapon_crowbar "1"
+				weapon_physcannon "1"
+				weapon_rpg "1"
+					ammo_rpg_round "3"
+			}
+		}
+		create {classname "trigger_once" origin "-6000 -1920 1150"
+			values
+			{
+				model "*1"
+				spawnflags "1"
+				OnTrigger "tr3,Disable,,0,-1"
+				OnTrigger "tr5,Disable,,0,-1"
+				OnTrigger "tr6,Disable,,0,-1"
+				OnTrigger "spawn2axx,kill,,0,-1"
+				OnTrigger "spawn2axx2,kill,,0,-1"
+			}
+		}
+		edit {targetname "HingeExplosionfloor" values {spawnflags "1"} }
+		create {classname "info_player_coop" origin "-6130 -15 1260" values {targetname "syn_spawnpoint0" startdisabled "0" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-5460 -1850 1250" values {targetname "syn_spawnpoint1" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-530 1315 -380" values {targetname "syn_spawnpoint2" startdisabled "1" angles "0 -90 0"} }
+		delete {classname "trigger_once" origin "-4252 -2456 588"}
+		create {classname "trigger_coop" origin "-4255 -2545 548"
+			values
+			{
+				model "*1"
+				targetname "syn_cooptele1"
+				parentname "drss10"
+				spawnflags "1"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "66"
+				target "syn_cooptarg1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0,1"
+				OnPlayersIn "!self,Disable,,0.1,1"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint2,0,1"
+				OnPlayersIn "sparks11,StartSpark,,0,1"
+				OnPlayersIn "drss11,Close,,0,1"
+				OnPlayersIn "effect8,Enable,,0,1"
+				OnPlayersIn "sn75,PlaySound,,0.6,1"
+				OnPlayersIn "pointlight2,LightOn,,0.7,1"
+				OnPlayersIn "sn76,PlaySound,,0.8,1"
+				OnPlayersIn "drss9,Open,,1,1"
+				OnPlayersIn "sna9,PlaySound,,1.1,1"
+				OnPlayersIn "sparks12,StartSpark,,1.2,1"
+				OnPlayersIn "timer7,Enable,,2.2,1"
+				OnPlayersIn "drss10,Open,,4,1"
+				OnPlayersIn "sna11,PlaySound,,4,1"
+				OnPlayersIn "sna13,PlaySound,,7,1"
+				OnPlayersIn "sparks11,StopSpark,,10,1"
+				OnPlayersIn "pointlight1,LightOff,,10,1"
+				OnPlayersIn "smok12,TurnOff,,10,1"
+			}
+		}
+		create {classname "info_target" origin "-4250 -2455 565" values {targetname "syn_cooptarg1" angles "0 -90 0" parentname "drss10"} }
+		delete {classname "trigger_once" origin "-6138 -26 1270"}
+		create {classname "trigger_once" origin "-6138 -26 1270"
+			values
+			{
+				targetname "trss4"
+				model "*1"
+				spawnflags "1"
+				angles "90 0 0"
+				OnTrigger "syn_hudtimer,Start,20,1,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "STARTING IN..."
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "syn_equipment_base,Enable,,0,-1"
+				OnTimer "syn_equipment_base,EquipAllPlayers,,0,-1"
+				OnTimer "beam13,TurnOn,,0,-1"
+				OnTimer "endrotate1,StartForward,,0,-1"
+				OnTimer "smoke1,TurnOn,,0,-1"
+				OnTimer "rotate5,StartForward,,0,-1"
+				OnTimer "steam1,TurnOn,,0,-1"
+				OnTimer "light1,TurnOn,,0,-1"
+				OnTimer "snss4,PlaySound,,0,-1"
+				OnTimer "endrotate2,StartBackward,,0,-1"
+				OnTimer "shake3,StartShake,,0,-1"
+				OnTimer "sn3,PlaySound,,0,-1"
+				OnTimer "3,PlaySound,,0.3,-1"
+				OnTimer "timer2,Enable,,2,-1"
+				OnTimer "1,PlaySound,,2,-1"
+				OnTimer "sn1xx,PlaySound,,2.5,-1"
+				OnTimer "shake2,StartShake,,4,-1"
+				OnTimer "2,PlaySound,,4,-1"
+				OnTimer "sn5,PlaySound,,6,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "-6105 25 1320"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 -129 0"
+			}
+		}
+	}
+}

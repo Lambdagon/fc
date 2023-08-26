@@ -1,0 +1,93 @@
+tunnel_1
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_servercommand"}
+		delete {classname "point_clientcommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "env_message" values {edt_addedspawnflags "2"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_vehicle_spawn" origin "-9360 -304 0"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				VehicleLocked "0"
+				targetname "syn_vehicle_spawn_01"
+				solid "6"
+				skin "0"
+				model "models/vehicles/buggy_p2.mdl"
+				angles "0 0 0"
+				VehicleSize "192"
+				StartEnabled "1"
+				VehicleType "4"
+			}
+		}
+		delete {classname "trigger_once" origin "-3232 7872 -928"}
+		delete {targetname "failed"}
+		create {classname "info_player_coop" origin "-4992.78 -2017.65 -127.983" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-9565 -310 -100" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				weapon_ar2 "1"
+					ammo_ar2 "45"
+				weapon_crossbow "1"
+					ammo_xbowbolt "2"
+				weapon_crowbar "1"
+				weapon_frag "1"
+					ammo_grenade "1"
+				weapon_physcannon "1"
+				weapon_pistol "1"
+					ammo_pistol "22"
+				weapon_rpg "1"
+					ammo_rpg_round "1"
+				weapon_shotgun "1"
+					ammo_buckshot "6"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+			}
+		}
+		delete {classname "item_suit"}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup 357pickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup 357pickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syndoor:Unlock::0:-1,0,-1"
+				OnMapSpawn "buggy1,AddOutput,PlayerOn syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "syncomb,AddOutput,OnDeath syn_mc:Add:1:0:-1,0,-1"
+			}
+		}
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_global_settings" values {IsVehicleMap "0" targetname "syn_global_settings"} }
+		create {classname "info_player_equip" values {targetname "357pickup" startdisabled "1" weapon_357 "1" ammo_357 "6"} }
+		edit {classname "prop_vehicle_jeep" values {classname "prop_vehicle_jeep_episodic" enablegun "0"} }
+		edit {classname "trigger_changelevel" values {edt_map "coast_1" edt_landmark "LM_3" spawnflags "6" startdisabled "1"} }
+		create {classname "syn_transition_wall" origin "-4570 -1955 -130" values {solid "6" disableshadows "1" angles "0 180 0"} }
+		edit {classname "trigger_once" origin "-8336 -672 -28" values {targetname "syn_trig1"} }
+		edit {classname "prop_door_rotating" origin "-8176 -593 -65.75" values {targetname "syndoor" OnOpen "syndoor,Open,,0,-1" OnClose "syndoor,Close,,0,-1"} }
+		edit {classname "prop_door_rotating" origin "-8176 -687 -65.75" values {targetname "syndoor" OnOpen "syndoor,Open,,0,-1" OnClose "syndoor,Close,,0,-1"} }
+		edit {classname "trigger_hurt" origin "-3232 7872 -736" values {spawnflags "1"} }
+		edit {classname "npc_combine_s" origin "-9446.75 -411.636 -127" values {targetname "syncomb"} }
+		edit {classname "npc_combine_s" origin "-9434 -476 -127" values {targetname "syncomb"} }
+		create {classname "math_counter"
+			values
+			{
+				targetname "syn_mc"
+				startvalue "0"
+				min "0"
+				max "2"
+				OnHitMax "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnHitMax "syn_autosave,Save,,1,1"
+				OnHitMax "syn_global_settings,AddOutput,IsVehicleMap 1:0:-1,0,-1"
+			}
+		}
+	}
+}

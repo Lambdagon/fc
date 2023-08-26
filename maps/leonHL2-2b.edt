@@ -1,0 +1,174 @@
+"leonHL2-2b"
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {targetname "resupply_start_master"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_entmaker"}
+		delete {targetname "camMAP2"}
+		delete {classname "trigger_remove"}
+		delete {classname "trigger_multiple" origin "-6216 -3848 262"}
+		delete {classname "trigger_multiple" origin "-4172 -6696 264"}
+		delete {classname "trigger_multiple" origin "-4650 -6746 264"}
+		delete {classname "trigger_multiple" origin "-3440 -6924 300"}
+		delete {classname "trigger_multiple" origin "-3566 -7520 264"}
+		delete {classname "trigger_multiple" origin "-5069 -6146 276"}
+		delete {classname "trigger_multiple" origin "-5888 -6424 262"}
+		delete {classname "trigger_multiple" origin "-6240 -6664 234"}
+		delete {classname "logic_auto" origin "-8466.03 -9814 343.373"}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickUp physpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickUp physpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickUp syn_spawnpoint_06:kill::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickUp syn_spawnpoint_07:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickUp crowpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickUp crowpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickUp rpgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickUp rpgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "spawn4,AddOutput,OnAllSpawnedDead syn_count1:Add:1:0:1,0,-1"
+				OnMapSpawn "o2_trigger,AddOutput,OnTrigger syn_spawnpoint_00:kill::4:1,0,-1"
+				OnMapSpawn "o2_trigger,AddOutput,OnTrigger syn_spawnpoint_01:Enable::4:1,0,-1"
+				OnMapSpawn "o2_trigger,AddOutput,OnTrigger syn_autosave:Save::4.5:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawnpoint_01:kill::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_autosave:Save::1:1,0,-1"
+				OnMapSpawn "trig12,AddOutput,OnTrigger syn_spawnpoint_02:Disable::0:1,0,-1"
+				OnMapSpawn "trig12,AddOutput,OnTrigger syn_spawnpoint_03:Enable::0:1,0,-1"
+				OnMapSpawn "trig12,AddOutput,OnTrigger syn_autosave:Save::1:1,0,-1"
+				OnMapSpawn "trig14,AddOutput,OnTrigger syn_spawnpoint_03:kill::0:1,0,-1"
+				OnMapSpawn "trig14,AddOutput,OnTrigger syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "trig9,AddOutput,OnTrigger syn_spawnpoint_02:kill::0:1,0,-1"
+				OnMapSpawn "trig9,AddOutput,OnTrigger syn_spawnpoint_04:Enable::0:1,0,-1"
+				OnMapSpawn "buttonedt,AddOutput,OnClose !self:Lock::0:-1,0,-1"
+				OnMapSpawn "buttonedt,AddOutput,OnOpen !self:Lock::0:-1,0,-1"
+				OnMapSpawn "trig19,AddOutput,OnTrigger syn_spawnpoint_04:kill::0:1,0,-1"
+				OnMapSpawn "trig19,AddOutput,OnTrigger syn_spawnpoint_05:Enable::0:1,0,-1"
+				OnMapSpawn "trig7,AddOutput,OnTrigger syn_spawnpoint_05:kill::0:1,0,-1"
+				OnMapSpawn "trig7,AddOutput,OnTrigger syn_spawnpoint_06:Enable::0:1,0,-1"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "90"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_crossbow "1"
+					ammo_crossbow "5"
+				weapon_pistol "1"
+					ammo_pistol "54"
+			}
+		}
+		create {classname "info_player_coop" origin "-8505 -9830 370" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 187 0"} }
+		create {classname "info_player_coop" origin "-5970 -9005 325" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-6100 -6505 238" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-8195 -6675 350" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 -90 0"} }
+		create {classname "info_player_coop" origin "-2600 -5980 302" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-5455 -4315 390" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-3555 -5230 295" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-2550 -6810 302" values {targetname "syn_spawnpoint_07" startdisabled "1" angles "0 120 0"} }
+		create {classname "info_player_equip" values {targetname "crowpickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_equip" values {targetname "rpgpickup" startdisabled "1" weapon_rpg "1" ammo_rpg_round "3"} }
+		create {classname "info_player_equip" values {targetname "physpickup" startdisabled "1" weapon_physcannon "1"} }
+		edit {classname "trigger_multiple" origin "-6168 -6587 248" values {targetname "syn_trig1"} }
+		edit {targetname "button" values {targetname "buttonedt" wait "-1"} }
+		create {classname "info_vehicle_spawn" origin "-2639 -6692 265"
+			values
+			{
+				targetname "syn_spawn_vehicle_1"
+				angles "0 90 0"
+				StartEnabled "1"
+				StartGunEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "1"
+				VehicleSize "192"
+				model "models\vehicles\buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6788 -2106 160"
+			values
+			{
+				targetname "synwall"
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 180 0"
+				startdisabled "0"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6788 -2106 480"
+			values
+			{
+				targetname "synwall"
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 180 0"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6788 -2874 160"
+			values
+			{
+				targetname "synwall"
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 180 0"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "syn_count1"
+				max "3"
+				min "0"
+				startvalue "0"
+				OnHitMax "trig20,Enable,,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-6788 -2874 480"
+			values
+			{
+				targetname "synwall"
+				model "models\synergy\tools\syn_transition.mdl"
+				angles "0 180 0"
+				startdisabled "1"
+				solid "6"
+			}
+		}
+		create {classname "trigger_coop" origin "-6950 -1556 195"
+			values
+			{
+				model "*32"
+				spawnflags "32"
+				angles "0 0 0"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "synwall,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,1,1"
+			}
+		}
+		edit {targetname "cl1" values {targetname "cl1noch" spawnflags "0"} }
+	}
+}

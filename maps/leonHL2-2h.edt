@@ -1,0 +1,249 @@
+"leonHL2-2h"
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "atrig31,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:-1,0,-1"
+				OnMapSpawn "atrig31,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_05:26:-1,0,-1"
+				OnMapSpawn "t3,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_06:0:-1,0,-1"
+				OnMapSpawn "atrig10,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_021:0:-1,0,-1"
+				OnMapSpawn "atrig10,AddOutput,OnTrigger syn_teleport_021:Teleport::0:1,0,-1"
+				OnMapSpawn "atrig25,AddOutput,OnTrigger adoor31noclose:Open::0:-1,0,-1"
+				OnMapSpawn "atrig32,AddOutput,OnTrigger adoor41noclose:Open::8:-1,0,-1"
+				OnMapSpawn "atrig41,AddOutput,OnTrigger syn_cooptele1:Enable::0:-1,0,-1"
+				OnMapSpawn "atrig41,AddOutput,OnTrigger syn_cooptele1:Trigger::0:-1,0,-1"
+				OnMapSpawn "t1,AddOutput,OnTrigger syn_cooptele1:kill::0:-1,0,-1"
+				OnMapSpawn "t1,AddOutput,OnTrigger invulnerableset:TurnOff::0:-1,0,-1"
+				OnMapSpawn "t1,AddOutput,OnTrigger syn_cooptele4:Enable::0:-1,0,-1"
+				OnMapSpawn "t1,AddOutput,OnTrigger syn_cooptele4:TeleportPlayersNotTouching::0.1:-1,0,-1"
+				OnMapSpawn "t1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_07:0:-1,0,-1"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "env_global" values {targetname "invulnerableset" globalstate "gordon_invulnerable" initialstate "0"} }
+		delete {classname "trigger_remove"}
+		delete {classname "info_player_start"}
+		delete {targetname "resupply_start_master"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "global_newgame_spawner_357"}
+		delete {targetname "global_newgame_spawner_physcannon"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_entmaker"}
+		delete {targetname "global_newgame_spawner_jeep"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "point_viewcontrol" origin "550 -1005 -600"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 -90 0"
+			}
+		}
+		delete {classname "trigger_once" targetname "t5" origin "512 -1072 -648"}
+		create {classname "trigger_once" origin "512 -1072 -648"
+			values
+			{
+				model "*6"
+				targetname "t5"
+				spawnflags "1"
+				OnTrigger "syn_viewcontrol,enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,1,-1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "STARTING IN..."
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "s1,PlaySound,,1,-1"
+				OnTimer "s2,PlaySound,,3,-1"
+				OnTimer "s3,PlaySound,,5,-1"
+			}
+		}
+		create {classname "weapon_mg1" origin "985 -1920 -310"
+			values
+			{
+				angles "0 15 0"
+				OnPlayerPickUp "mgpickup,Enable,,0,-1"
+				OnPlayerPickUp "mgpickup,EquipAllPlayers,,0.1,-1"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "mgpickup"
+				startdisabled "1"
+				weapon_mg1 "1"
+					ammo_ar2 "120"
+			}
+		}
+		create {classname "trigger_multiple" origin "2170 -1980 -115"
+			values
+			{
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				OnTrigger "strip_weapons,strip,,0,-1"
+				OnTrigger "mgpickup,disable,,0,-1"
+				OnTrigger "weapon_mg1,kill,,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "6885 -3370 380"
+			values
+			{
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				OnTrigger "syn_teleport_02,Teleport,,0,-1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+			}
+		}
+		create {classname "point_teleport" origin "6885 -3410 360"
+			values
+			{
+				targetname "syn_teleport_02"
+				target "player"
+				angles "0 90 0"
+			}
+		}
+		create {classname "point_teleport" origin "735 -905 -310"
+			values
+			{
+				targetname "syn_teleport_021"
+				target "player"
+				angles "0 -90 0"
+			}
+		}
+		create {classname "info_player_coop" origin "515 -1075 -630" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "6885 -3410 360" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "735 -905 -310" values {targetname "syn_spawnpoint_021" startdisabled "1" angles "0 -90 0"} }
+		create {classname "info_player_coop" origin "3110 -3035 -155" values {targetname "syn_spawnpoint_022" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "2680 -3035 -180" values {targetname "syn_spawnpoint_023" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "7170 -570 370" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "4670 -198 -368" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "1105 435 -560" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "8330 -130 520" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "6900 -2945 -205" values {targetname "syn_spawnpoint_07" startdisabled "1" angles "0 180 0"} }
+		create {classname "trigger_coop" origin "7180 -560 360"
+			values
+			{
+				targetname "syn_cooptele3"
+				startdisabled "0"
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				target "syn_cooptarg3"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnTrigger "adoor32,Close,,0,1"
+				OnTrigger "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnTrigger "!self,Disable,,1,-1"
+			}
+		}
+		create {classname "info_target" origin "7170 -560 342" values {targetname "syn_cooptarg3" angles "0 0 0"} }
+		edit {targetname "path5a" values {origin "3804 940 -430"} }
+		edit {targetname "path17x" values {origin "3592 1880 -259"} }
+		edit {targetname "path20" values {origin "3230 1400 -235"} }
+		create {classname "trigger_coop" origin "4670 -198 -368"
+			values
+			{
+				targetname "syn_cooptele1"
+				startdisabled "1"
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				target "syn_cooptarg1"
+				parentname "train1"
+				OnTrigger "syn_teleport_04,Teleport,,0,1"
+				OnTrigger "syn_cooptarg1,SetParent,train1,0,1"
+				OnTrigger "syn_spawnpoint_04,SetParent,train1,0,1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnTrigger "strip_weapons,strip,,0,-1"
+				OnTrigger "invulnerableset,TurnOn,,0,1"
+				OnEndTouch "!self,TeleportPlayersNotTouching,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "4670 -198 -368" values {targetname "syn_cooptarg1" angles "0 90 0"} }
+		create {classname "point_teleport" origin "4670 -198 -368"
+			values
+			{
+				targetname "syn_teleport_04"
+				target "player"
+				angles "0 90 0"
+			}
+		}
+		edit {targetname "atrig19" values {classname "logic_relay" targetname "atrig19"} }
+		create {classname "trigger_coop" origin "2678 -3036 -136"
+			values
+			{
+				targetname "syn_cooptele2"
+				startdisabled "0"
+				model "*10"
+				spawnflags "1"
+				angles "0 0 0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				target "syn_cooptarg2"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_023,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,4,1"
+				OnPlayersIn "atrig19,Trigger,,4,1"
+				OnPlayersIn "!self,Disable,,5,1"
+			}
+		}
+		create {classname "info_target" origin "2680 -3035 -180" values {targetname "syn_cooptarg2" angles "0 180 0"} }
+		create {classname "trigger_coop" origin "6904 -2952 -212"
+			values
+			{
+				targetname "syn_cooptele4"
+				startdisabled "1"
+				model "*10"
+				spawnflags "1"
+				angles "0 0 0"
+				target "syn_cooptarg4"
+			}
+		}
+		create {classname "info_target" origin "6900 -2945 -205" values {targetname "syn_cooptarg4" angles "0 180 0"} }
+		create {classname "info_player_equip" values {targetname "smgpickup" startdisabled "1" weapon_smg1 "1" ammo_smg1 "135" item_suit "1"} }
+		create {classname "trigger_once" origin "3110 -3040 -170"
+			values
+			{
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				OnTrigger "syn_teleport_01,Teleport,,0,-1"
+			}
+		}
+		create {classname "trigger_multiple" origin "3110 -3040 -170"
+			values
+			{
+				model "*6"
+				spawnflags "1"
+				angles "0 90 0"
+				OnTrigger "strip_weapons,strip,,0,-1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_022,0,1"
+			}
+		}
+		create {classname "point_teleport" origin "3110 -3040 -170"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 180 0"
+			}
+		}
+		edit {targetname "adoor31" values {targetname "adoor31noclose"} }
+		edit {targetname "adoor41" values {targetname "adoor41noclose"} }
+	}
+}

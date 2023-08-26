@@ -1,0 +1,191 @@
+"leonHL2-2da"
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "syn_button1,Lock,,0,-1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "button1,AddOutput,OnPressed syn_spawn_manager:SetCheckPoint:syn_spawnpoint1:0:1,0,-1"
+				OnMapSpawn "button1,AddOutput,OnPressed syn_teleport_01:Teleport::0:-1,0,-1"
+				OnMapSpawn "button1,AddOutput,OnPressed syn_spawn_vehicle_2:Enable::1:-1,0,-1"
+				OnMapSpawn "button1,AddOutput,OnPressed dr4noclose:Open::16:-1,0,-1"
+				OnMapSpawn "tr21,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint2:0:1,0,-1"
+				OnMapSpawn "tr21,AddOutput,OnTrigger syn_spawn_vehicle_3:Enable::1:-1,0,-1"
+				OnMapSpawn "tr21,AddOutput,OnTrigger strider_1:SetCannonTarget:!rndplayer:130:-1,0,-1"
+				OnMapSpawn "tr21,AddOutput,OnTrigger strider_1a:SetCannonTarget:!rndplayer:140:-1,0,-1"
+				OnMapSpawn "trs13,AddOutput,OnStartTouch dr13noclose:Open::0:-1,0,-1"
+				OnMapSpawn "tr13,AddOutput,OnTrigger dr9noclose:Open::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger dr4bnoclose:Open::0:-1,0,-1"
+				OnMapSpawn "tr9,AddOutput,OnStartTouch hurt1:kill::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickup rpgpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "dr6,AddOutput,OnOpen button3edt:Lock::0:-1,0,-1"
+				OnMapSpawn "dr6,AddOutput,OnFullyOpen button3edt:Unlock::0:-1,0,-1"
+				OnMapSpawn "dr6,AddOutput,OnClose button3edt:Lock::0:-1,0,-1"
+				OnMapSpawn "dr6,AddOutput,OnFullyClosed button3edt:Unlock::0:-1,0,-1"
+				OnMapSpawn "combine4,AddOutput,OnDeath syn_count1:Add:1:0:-1,0,-1"
+				OnMapSpawn "button4,AddOutput,OnIn dr12noclose:Open::0.7:1,0,-1"
+				OnMapSpawn "button4,AddOutput,OnIn syn_spawn_manager:SetCheckPoint:syn_spawnpoint3:0:1,0,-1"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {classname "info_player_start"}
+		delete {classname "trigger_remove"}
+		delete {targetname "resupply_start_master"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "global_newgame_spawner_357"}
+		delete {targetname "global_newgame_spawner_physcannon"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_entmaker"}
+		delete {targetname "global_newgame_spawner_jeep"}
+		delete {targetname "view_exit2"}
+		delete {targetname "view_exit3"}
+		delete {classname "weapon_357" origin "-1810 1076.66 151.608"}
+		delete {targetname "tr16"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "90"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_crossbow "1"
+					ammo_xbowbolt "5"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_357 "1"
+					ammo_357 "18"
+				weapon_crowbar "1"
+				weapon_physcannon "1"
+				weapon_rpg "1"
+					ammo_rpg_round "3"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "rpgpickup"
+				startdisabled "1"
+				weapon_rpg "1"
+					ammo_rpg_round "3"
+			}
+		}
+		create {classname "info_vehicle_spawn" origin "-1836 890 140"
+			values
+			{
+				targetname "syn_spawn_vehicle_1"
+				angles "0 180 0"
+				StartEnabled "1"
+				StartGunEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "1"
+				VehicleSize "192"
+				model "models\vehicles\buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+			}
+		}
+		create {classname "info_vehicle_spawn" origin "2460 -2250 160"
+			values
+			{
+				targetname "syn_spawn_vehicle_2"
+				angles "0 -90 0"
+				StartDisabled "1"
+				StartGunEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "1"
+				VehicleSize "192"
+				model "models\vehicles\buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+			}
+		}
+		create {classname "info_vehicle_spawn" origin "1100 -11945 5"
+			values
+			{
+				targetname "syn_spawn_vehicle_3"
+				angles "0 180 0"
+				StartDisabled "1"
+				StartGunEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "1"
+				VehicleSize "192"
+				model "models\vehicles\buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+			}
+		}
+		create {classname "info_player_coop" origin "-1760 960 160" values {targetname "syn_spawnpoint0" startdisabled "0" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "2610 -430 391" values {targetname "syn_spawnpoint1" startdisabled "1" angles "0 180 0"} }
+		create {classname "point_teleport" origin "2640 -395 400"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 0 0"
+			}
+		}
+		edit {targetname "dr4b" values {targetname "dr4bnoclose"} }
+		edit {classname "trigger_once" origin "3598.5 -2591.5 224" values {targetname "syn_trig1" spawnflags "32"} }
+		edit {targetname "dr4" values {targetname "dr4noclose"} }
+		edit {targetname "dr9" values {targetname "dr9noclose"} }
+		edit {targetname "tr20" values {spawnflags "32" startdisabled "1"} }
+		edit {targetname "tr21" values {spawnflags "32"} }
+		edit {classname "func_button" origin "4037 -3724 243" values {targetname "syn_button1"} }
+		delete {targetname "button3"}
+		create {classname "func_button" origin "4151 -3772 245"
+			values
+			{
+				targetname "button3edt"
+				model "*5"
+				parentname "dr6"
+				wait "3"
+				spawnflags "1025"
+				sounds "3"
+				OnPressed "syn_button1,Unlock,,0,1"
+				OnPressed "dr6,Toggle,,0,-1"
+			}
+		}
+		edit {targetname "tr15" values {classname "logic_relay" targetname "tr15"} }
+		create {classname "math_counter"
+			values
+			{
+				targetname "syn_count1"
+				max "6"
+				min "0"
+				startvalue "0"
+				OnHitMax "tr15,Trigger,,0,1"
+			}
+		}
+		create {classname "info_player_coop" origin "1180 -11920 8" values {targetname "syn_spawnpoint2" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "245 -7760 158" values {targetname "syn_spawnpoint3" startdisabled "1" angles "0 180 0"} }
+		edit {targetname "dr12" values {targetname "dr12noclose"} }
+		edit {targetname "dr13" values {targetname "dr13noclose"} }
+		delete {targetname "to_map_e"}
+		edit
+		{
+			targetname "t2"
+			values
+			{
+				classname "trigger_changelevel"
+				origin "-1452 -12718 96"
+				map "leonHL2-2e"
+				landmark "level4a"
+				startdisabled "0"
+			}
+		}
+	}
+}
