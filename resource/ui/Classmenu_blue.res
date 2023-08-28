@@ -675,7 +675,7 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"Spectatebutton"
-		"xpos"			"r1020"
+		"xpos"			"r620"
 		"ypos"			"r40"
 		"ypos_lodef"			"r64"
 		"zpos"			"8"
@@ -691,7 +691,7 @@
 		"Command"		"spectate"
 		"font"			"HudFontSmallBold"
 	}
-	
+
 	"ClassMenuSelect"
 	{
 		"ControlName"	"CExLabel"
