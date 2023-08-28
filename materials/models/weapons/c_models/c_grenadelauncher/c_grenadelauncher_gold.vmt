@@ -1,34 +1,29 @@
 "VertexLitGeneric"
 {
-	"$baseTexture" "models/weapons/c_models/c_grenadelauncher/c_grenadelauncher"
-	"$basemapalphaphongmask" 1
+	"$baseTexture" "models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_gold"
 
 	"$phong" "1"
-	"$phongexponent" "15"
-	"$phongboost" "3"	
-	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongexponent" "85"
+	"$phongboost" "4"	
+	"$lightwarptexture" "models/lightwarps/weapon_lightwarp"
 	"$phongfresnelranges"	"[.25 .5 1]"
+	"$rimlight" "1"						
+	"$rimlightexponent" "20"				
+	"$rimlightboost" ".5"
+	// Begin GOLD look
 
-	"$tempvar" "0"
-
-	"$basephongexponent" "15"
-	"$basephongboost" "3"
-
-	"$commadd_phongexponent" "30"
-	"$commadd_phongboost" 	"22.5"
-	"$commweapon"		"0"
-
-	"$rimlight" "1"
-	"$rimlightexponent" "4"	
-	"$rimlightboost" "1.5"
-
-//	"$color2" "[ 0.6 0.6 0.6 ]"
-
+	"$envmap" "cubemaps/cubemap_gold001"	
+	"$envmaptint" "[2.5 2.5 1.15]"
+	
+	// End GOLD look
+	
+	$basealphaenvmapmask 1
 
 	"$glowcolor" "1"
 
 	// Cloaking
 	"$cloakPassEnabled" "1"
+
 	"$sheenPassEnabled" "1"
 
 	"$sheenmap" 		"cubemaps\cubemap_sheen001"

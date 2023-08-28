@@ -1,0 +1,188 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/weapons/c_models/c_pistol/c_pistol"
+	"$phongexponenttexture" "models/weapons/c_models/c_pistol/c_pistol_exp"
+
+	"$phong" "1"
+	//commented out to use the exponent mask
+	//"$phongexponent" "255"
+	"$phongboost" "2.5"	
+	
+	//scales up the exponent texture which usually only has about 120 levels of exponent
+	"$phongexponentfactor"  "255"
+	
+	"$lightwarptexture" "models/lightwarps/softened_weapon_lightwarp"
+			
+	"$phongfresnelranges"	"[.3 .5 3]"
+	"$halflambert" "1"
+	"$glowcolor" "1"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.1 .1 .1]"
+
+	"$tempvar" "0"
+
+	//commented out to use the exponent mask
+	//"$basephongexponent" "15"
+	//"$basephongboost" "3"
+
+	"$basemapalphaphongmask" "1"
+	
+	"$rimlight" "1"						
+	"$rimlightexponent" "2"				
+	"$rimlightboost" "5"
+	"$rimmask" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 		"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 		"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	
+	
+	"WeaponSkin" {
+	
+			"combine" {
+				"operation" "multiply"
+				
+					"texture_lookup" {
+						"texture" "models/weapons/c_models/c_pistol/c_pistol_ao"
+					}
+					
+					"texture_lookup" {
+						"texture" "patterns/paint_dirt"
+						"rotation"		"0 0"	
+						"adjust_black"	"0.0"
+						"adjust_offset"	"1.0"
+						"adjust_gamma"	"0.1"
+					}
+					
+					"combine" {
+						"operation" "lerp"					
+
+						"texture_lookup" {
+							"texture" "models/weapons/c_models/c_rocketlauncher/p_rocketlauncher_albedo"
+						}
+						
+						"combine" {
+						"operation" "lerp"
+						
+							"combine" {
+							"operation" "lerp"
+
+								"texture_lookup" {
+									//"texture" "models/weapons/c_models/c_pistol/p_pistol_albedo"
+									"texture" "patterns/solid_rust"
+								}
+								
+								"texture_lookup" {
+									"texture" "patterns/solid_medium_grey"
+								}
+								
+								"select" {
+									"groups" "models/weapons/c_models/c_pistol/p_pistol_groups"
+									"select" "32"
+									"select" "48"
+									"select" "64"
+									"select" "80"
+									"select" "112"
+								}
+							}
+
+								"texture_lookup" {
+									"texture" "patterns/solid_dark_brown"
+								}							
+
+								"select" {
+									"groups" "models/weapons/c_models/c_pistol/p_pistol_groups"
+									"select" "96"
+									"select" "160"
+									"select" "176"
+									"select" "208"
+								}							
+						}
+						
+						
+						"combine" {
+							"operation" "multiply"
+							
+							"texture_lookup" {
+								"texture" "patterns/paint_scratches"
+								"rotation" 		"0 0"	
+								"adjust_black"	"0.2"
+								"adjust_offset"	"0.1"
+								"adjust_gamma"	"1.0"
+							}
+
+							//scratches
+							"texture_lookup" {
+								"texture" "patterns/paint_scratches"
+								"rotation"		"0 0"	
+								"adjust_black"	"0.0"
+								"adjust_offset"	"0.05"
+								"adjust_gamma"	"10.0"							
+							}
+							
+							"texture_lookup" {
+								"texture" "patterns/paint_strokes"
+								"rotation" "0 0"	
+								"adjust_black"	"0.0"
+								"adjust_offset"	"1.0"
+								"adjust_gamma"	"0.0"							
+							}
+
+							//Wearblend
+							"texture_lookup" {
+								"texture" "models/weapons/c_models/c_pistol/p_pistol_wearblend"
+								"adjust_black" 	"0.0"
+								"adjust_offset" "1.0"
+								"adjust_gamma" 	"0.0"
+							}
+						}
+					}
+			}
+		}
+	}
+}
