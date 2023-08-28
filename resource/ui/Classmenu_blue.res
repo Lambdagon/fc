@@ -671,6 +671,27 @@
 		"font"			"HudFontSmallBold"
 	}
 
+	"Spectatebutton"
+	{
+		"ControlName"	"CExButton"
+		"fieldName"		"Spectatebutton"
+		"xpos"			"r1020"
+		"ypos"			"r40"
+		"ypos_lodef"			"r64"
+		"zpos"			"8"
+		"wide"			"150"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"Spectate"
+		"textAlignment"	"center"
+		"Command"		"spectate"
+		"font"			"HudFontSmallBold"
+	}
+	
 	"ClassMenuSelect"
 	{
 		"ControlName"	"CExLabel"
