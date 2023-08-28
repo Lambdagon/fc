@@ -18530,6 +18530,7 @@
 				"scout"		"1"
 				"soldier"	"1"
 				"demoman"	"1"
+				"civilian"	"1"
 			}
 			"visuals"
 			{
@@ -18687,8 +18688,8 @@
 			"propername" "1" 
 			"baseitem"	"1"
 			"show_in_armory"	"1"
-			"item_type_name"	"base item"
-			"item_name"	"Base melee item"
+			"item_type_name"	"Umbrella"
+			"item_name"	"Umbrella"
 			"item_description"	""
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/c_models/c_umbrella"
@@ -18891,8 +18892,10 @@
 			"model_world"	"models/weapons/w_crowbar.mdl"
 			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
-			"item_quality"	"normal"
+			"item_quality"	"unique"
 			"baseitem"	"1"
+			"item_logname"	"crowbar"
+			"item_iconname"	"crowbar"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -18911,7 +18914,7 @@
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.6"
+					"value" "0.45"
 				}
 				"damage penalty HIDDEN"
 				{
@@ -18922,6 +18925,11 @@
 				{
 					"attribute_class" 	"mod_cannot_backstab"
 					"value" "1"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.8"
 				}
 			}
 			
@@ -19639,6 +19647,11 @@
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.8"
+				}
 			}
 		}
 		"9100"
@@ -19737,6 +19750,19 @@
 				"scout"	"1"
 				"engineer"	"1"
 			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.75"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2.00"
+				}
+			}	
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"xifier_class_remap"	"TTG Max Pistol"
@@ -23006,7 +23032,6 @@ Fires....... something"
         	}
 		"9727"
 		{
-//REQUIRES SEVERAL FIXES BEFORE BEING ADDED, FOR NOW ITS NOT IN THE ARMORY, UNLIKE HEAVY'S.
 			"name"	"Merc Lead Pipe"
 			"item_class"	"saxxy"
 			"prefab"	"weapon_melee_allclass"
@@ -23020,7 +23045,7 @@ Fires....... something"
 				"can_deal_critical_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"Average Lead Pipe"
 			"item_name"	"Lead Pipe"
 			"item_slot"	"melee"
@@ -23068,7 +23093,17 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.45"
+					"value" "1.4"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.5"
+				}
+				"cannot backstab HIDDEN"
+				{
+					"attribute_class" 	"mod_cannot_backstab"
+					"value" "1"
 				}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -23099,7 +23134,7 @@ Fires....... something"
 			"model_player"	"models/weapons/v_models/v_lead_pipe.mdl"
 			"model_world"	"models/weapons/w_models/w_leadpipe_merc.mdl"
 			"attach_to_hands"	"2"
-			"item_logname"	"crowbar"
+			"item_logname"	"lead pipe"
 			"item_iconname"	"crowbar"
 			"anim_slot" "MELEE_ALLCLASS"
 			"inspect_panel_dist" "40"
@@ -23149,7 +23184,12 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.45"
+					"value" "1.4"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.5"
 				}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -24334,6 +24374,8 @@ Fires....... something"
 			"item_description"	""
 			"item_slot"	"primary"
 			"item_quality"	"unique"
+			"item_logname"	"rpg"
+			"item_iconname"	"rpg"
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
 			"attach_to_hands"	"2"
@@ -24396,7 +24438,7 @@ Fires....... something"
 				"blast dmg to self increased"
 				{
 					"attribute_class"	"blast_dmg_to_self"
-					"value"	"1.50"
+					"value"	"2.50"
 				}
 				"crit mod disabled"
 				{
@@ -25981,6 +26023,11 @@ Fires....... something"
 				{
 					"attribute_class"	"set_elevated_quality"
 					"value"	"1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "20"
 				}
 			}
 			"visuals"
@@ -27796,6 +27843,16 @@ Fires....... something"
 				"attribute_class"	"mult_dmg"
 				"value"	"1.2"
 				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"	"1.50"
+				}
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"				"1"
+				}	
 				"crit mod disabled"
 				{
 				"attribute_class"	"mult_crit_chance"
@@ -30295,6 +30352,11 @@ Fires....... something"
 				"attribute_class"	"mult_dmg"
 				"value"	"1.2"
 				}
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"				"1"
+				}	
 				"fire rate penalty"
 				{
 				"attribute_class"	"mult_postfiredelay"
