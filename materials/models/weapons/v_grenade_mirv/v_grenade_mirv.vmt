@@ -1,9 +1,5 @@
-"Patch"
+"VertexLitGeneric"
 {
-	include "materials/models/weapons/base.vmt"
-
-	insert
-	{
 	"$baseTexture" "models\weapons\v_grenade_mirv/v_grenade_mirv"
 	"$bumpmap" "models/weapons\v_grenade_mirv\v_grenade_mirv_normal"
 
@@ -14,5 +10,13 @@
 	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
 	"$phongfresnelranges" "[0.25 0.5 1]"
 	"$halflambert" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"vm_invis"
+		{
+		}
 	}
 }
