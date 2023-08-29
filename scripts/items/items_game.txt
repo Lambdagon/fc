@@ -4286,7 +4286,6 @@
 			{
 				"engineer"	"1"
 				"scout" "1"
-				"civilian" "1"
 			}
 			"static_attrs"
 			{
@@ -4857,8 +4856,8 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"99"
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
-			"model_player"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
-			"attach_to_hands"	"1"
+			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
+			"attach_to_hands"	"2"
 			"inspect_panel_dist" "31"
 			"used_by_classes"
 			{
@@ -18700,7 +18699,7 @@
 			"model_world"	"models/weapons/w_models/w_umbrella.mdl"
 			"attach_to_hands"	"2"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -19698,7 +19697,6 @@
 			{
 				"scout"	"1"
 				"engineer"	"1"
-				"civilian"	"1"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -21382,7 +21380,7 @@ Fires....... something"
 			"item_description"	""
 			"item_slot"	"secondary"
 			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
@@ -21722,12 +21720,12 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.25"
+					"value" "1.16"
 				}
                                 "bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.75"
+					"value" "1.40"
                                 }
                                 "spread penalty"
 				{
@@ -22314,7 +22312,7 @@ Fires....... something"
 		{
 			"enabled"	"1"
 			"item_class"	"tf_weapon_revolver"
-			"prefab"		"weapon_revolver"
+			"item_class"	"tf_weapon_revolver"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -25125,7 +25123,7 @@ Fires....... something"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"2"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -26344,44 +26342,6 @@ Fires....... something"
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
-			}
-		}
-		"9775"
-		{
-			"name"	"Base Primary Item Civ"
-			"first_sale_date"	"2012/12/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1" 
-			"baseitem"	"1"
-			"show_in_armory"	"1"
-			"item_type_name"	"base item"
-			"item_name"	"Base primary item"
-			"item_description"	""
-			"item_slot"	"primary"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"used_by_classes"
-			{
-				"civilian"	"1"
-			}
-			"attributes"
-			{
 			}
 		}
 		"9776"
@@ -27765,7 +27725,7 @@ Fires....... something"
 			"model_player"	"models/empty.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -30610,7 +30570,6 @@ Fires....... something"
             "used_by_classes"
             {
                 "engineer"    "1"
-                "civilian"    "1"
 				"mercenary"	  "1"
 				"demoman"	  "1"
             }
@@ -32732,6 +32691,81 @@ Fires....... something"
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+
+		"9933"
+		{
+			"enabled"	"1"
+			"baseitem"		"1"
+			"item_class"	"tf_weapon_revolver"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Second Amendment"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"Second Amendment"
+			"item_description"		"
+			Civilian is very inexperienced in using weapons due to him being usually being protected by his proud bodyguards that he greatly underpays."
+			"item_slot"	"secondary"
+			"item_quality"	"normal"
+			"min_ilevel"	"1"
+			"max_ilevel"	"99"
+			"image_inventory"	"backpack/weapons/w_models/dm_revolver"
+			"model_world"	"models/weapons/w_models/w_revolver_dm.mdl"
+			"model_player"	"models/weapons/v_models/v_revolver_dm.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "31"
+			"used_by_classes"
+			{
+				"civilian"	"primary"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
+				"crit_dmg_falloff"
+				{
+					"attribute_class" 	"crit_dmg_falloff"
+					"value" "1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "1.60"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.30"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
+				}
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.497"
+				"min_viewmodel_offset"					"10 0 -6"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"weapon_revolver"
+			"particle_suffix"		"revolver"
 		}
 		"30143"
 		{
