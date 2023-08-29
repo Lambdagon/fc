@@ -12651,15 +12651,25 @@
 			}
 			"attributes"
 			{
-				"hit self on miss"
+				"crit from behind"
 				{
-					"attribute_class"	"hit_self_on_miss"
+					"attribute_class"	"crit_from_behind"
 					"value" "1.0"
 				}
-				"bleeding duration"
+				"crits_become_minicrits"
 				{
-					"attribute_class"	"bleeding_duration"
-					"value" "5.0"
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1.0"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
 				}
 			}
 			"visuals"
@@ -12720,15 +12730,25 @@
 			}
 			"attributes"
 			{
-				"fire rate bonus"
+				"crit from behind"
+				{
+					"attribute_class"	"crit_from_behind"
+					"value" "1.0"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1.0"
+				}
+				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.6"
+					"value" "1.25"
 				}
-				"bleeding duration"
+				"crit mod disabled"
 				{
-					"attribute_class"	"bleeding_duration"
-					"value" "5.0"
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
 				}
 			}
 			"visuals"
@@ -12788,15 +12808,25 @@
 			}
 			"attributes"
 			{
-				"bleeding duration"
+				"crit from behind"
 				{
-					"attribute_class"	"bleeding_duration"
-					"value" "5.0"
+					"attribute_class"	"crit_from_behind"
+					"value" "1.0"
 				}
-				"damage bonus"
+				"crits_become_minicrits"
 				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.3"
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1.0"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
 				}
 			}
 			"visuals"
@@ -12811,458 +12841,27 @@
 		}
 		"1127"
 		{
-			"name"	"The Crossing Guard"
-			"first_sale_date"	"2014/12/08"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"			"" 
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Sign"
-			"item_name"	"#TF_CrossingGuard"
-			"item_description"	"#TF_CrossingGuard_Desc"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"min_ilevel"	"25"
-			"max_ilevel"	"25"
-			"propername"	"1"
-			"attach_to_hands"	"1"
-			"item_logname"	"crossing_guard"
-			"item_iconname"	"crossing_guard"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_crossing_guard/c_crossing_guard"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"80"			
-			"model_player"	"models/workshop/weapons/c_models/c_crossing_guard/c_crossing_guard.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"				"10 0 -5"	
-				"inspect_viewmodel_offset"			"5 0 -18"				
-			}
-			"attributes"
-			{
-				"hit self on miss"
-				{
-					"attribute_class"	"hit_self_on_miss"
-					"value" "1.0"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.3"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
+			//was crossing guard
 		}
 		"1123"
 		{
-			"name"	"Necro Smasher"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"			"" 
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"necro_smasher"
-			"item_iconname"	"necro_smasher"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Hammer"
-			"item_name"	"#TF_Weapon_Necro_Smasher"
-			"item_description"	"#TF_Weapon_Necro_Smasher_Desc"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_carnival_mallet/c_carnival_mallet"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"46"			
-			"model_player"	"models/weapons/c_models/c_carnival_mallet/c_carnival_mallet.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"50"
-			"max_ilevel"	"50"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"			"20 4 -20"
-				"inspect_viewmodel_offset" 		"5 0 -3"
-			}
-			"attributes"
-			{
-				"crit from behind"
-				{
-					"attribute_class"	"crit_from_behind"
-					"value" "1.0"
-				}
-				"crits_become_minicrits"
-				{
-					"attribute_class"	"crits_become_minicrits"
-					"value" "1.0"
-				}
-				"mark for death"
-				{
-					"attribute_class"	"mark_for_death"
-					"value" "1.0"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.5"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.2"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			//was necro smasher
 		}
 		"1013"
 		{
-			"name"	"The Ham Shank"
-			"first_sale_date"	"2013/05/10"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_material_type"	"weapon"
-			"craft_class"		"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"item_logname"	"ham_shank"
-			"item_iconname"	"ham_shank"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Pork_Product"
-			"item_name"	"#TF_HamShank"
-			"item_description"	"#TF_HamShank_Desc"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_ham/c_ham"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"40"
-			"model_player"	"models/workshop/weapons/c_models/c_ham/c_ham.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -6"
-			}
-			"attributes"
-			{
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.8"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit"	"Weapon_HolyMackerel.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_HolyMackerel.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_gooey_pickup.wav"
-			"drop_sound"		"ui/item_gooey_pickup.wav"
+			//was ham
 		}
 		"954"
 		{
-			"name"	"Memory Maker"
-			"first_sale_date"	"2012/11/28"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"			"" 
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"item_logname"	"memory_maker"
-			"item_iconname"	"memory_maker"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Camera"
-			"item_name"	"#TF_Memory_Maker"
-			"item_description"	"#TF_Memory_Maker_Desc"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/weapons/c_models/c_8mm_camera/c_8mm_camera"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_8mm_camera/c_8mm_camera.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"min_ilevel"	"50"
-			"max_ilevel"	"50"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-			}
-			"attributes"
-			{
-				"crit from behind"
-				{
-					"attribute_class"	"crit_from_behind"
-					"value" "1.0"
-				}
-				"reveal cloaked victim on hit"
-				{
-					"attribute_class"	"reveal_cloaked_victim_on_hit"
-					"value" "1.0"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			//was memory maker
 		}
 		"880"
 		{
-			"name"	"The Freedom Staff"
-			"first_sale_date"	"2012/10/09"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"craft_class"		"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Staff"
-			"item_name"	"#TF_TW_Staff"
-			"item_description"	"#TF_TW_Staff_Desc"
-			"propername"	"1"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"min_ilevel"	"25"
-			"max_ilevel"	"25"
-			"attach_to_hands"	"1"
-			"item_logname"	"freedom_staff"
-			"item_iconname"	"freedom_staff"
-			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"80"			
-			"model_player"	"models/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"pyro" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"20 0 -10"
-				"inspect_viewmodel_offset"				"5 0 -18"				
-			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.3"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.2"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
+			//was freedom staff
 		}
 		"423"
 		{
-			"name"	"Saxxy"
-			"item_class"	"saxxy"
-			"prefab"	"weapon_melee_allclass"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_taunt_damage"		"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Award"
-			"item_name"	"#TF_Saxxy"
-			"item_slot"	"melee"
-			"item_quality"	"unique"
-			"min_ilevel"	"25"
-			"max_ilevel"	"25"
-			"propername"	"1"
-			"attach_to_hands"	"1"
-			"item_logname"	"saxxy"
-			"item_iconname"	"saxxy"
-			"image_inventory"	"backpack/weapons/c_models/c_saxxy/c_saxxy"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 		  	"40"
-			"model_player"	"models/weapons/c_models/c_saxxy/c_saxxy.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -7"
-			}
-			"attributes"
-			{
-				"turn to gold"
-				{
-					"attribute_class"	"set_turn_to_gold"
-					"value" "1"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.8"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.2"
-				}
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value"				"1"
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"sound_melee_hit_world"	"Saxxy.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_medal_pickup.wav"
-			"drop_sound"		"ui/item_medal_pickup.wav"
+			//was saxxy
 		}
 		"477"
 		{
