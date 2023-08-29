@@ -32715,7 +32715,8 @@ Fires....... something"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"Second Amendment"
 			"item_description"		"
-			Civilian is very inexperienced in using weapons due to him being usually being protected by his proud bodyguards that he greatly underpays."
+			Civilian is very inexperienced in using weapons due to him usually being protected by his
+			proud bodyguards that he greatly underpays."
 			"item_slot"	"secondary"
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
@@ -32731,27 +32732,22 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"damage bonus hidden"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"1.40"
 				}
-				"crit_dmg_falloff"
-				{
-					"attribute_class" 	"crit_dmg_falloff"
-					"value" "1"
-				}
-				"fire rate penalty"
+				"fire rate penalty HIDDEN"
 				{
 					"attribute_class" 	"mult_postfiredelay"
 					"value" "1.60"
 				}
-				"Reload time increased"
+				"Reload time increased hidden"
 				{
 					"attribute_class"	"mult_reload_time"
 					"value"	"1.60"
 				}
-				"single wep deploy time increased"
+				"single wep deploy time increased HIDDEN"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"1.40"
@@ -32771,6 +32767,106 @@ Fires....... something"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"xifier_class_remap"	"weapon_revolver"
 			"particle_suffix"		"revolver"
+		}
+        "9934"
+		{
+ 			"enabled"	"1"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"base_item_name"	"The Ambassador"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"#TF_Unique_Achievement_Revolver"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"ambassador"
+			"item_iconname"	"ambassador"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_models/w_ambassador.mdl"
+			"model_player"	"models/weapons/v_ambassador_spy.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"civilian"	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"crit_dmg_falloff"
+				{
+					"attribute_class" 	"crit_dmg_falloff"
+					"value" "1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.85"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.5"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"Reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.70"
+				}
+				"single wep deploy time increased HIDDEN"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.60"
+				}
+				"civ weapon display"
+				{
+					"attribute_class"	"force_level_display"
+					"value"	"1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Ambassador.Single"
+				"sound_burst" "Weapon_Ambassador.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"30143"
 		{
@@ -36844,6 +36940,16 @@ Fires....... something"
 			"description_string"	"#Attrib_RocketGuide"
 			"hidden"	"0"
 			"effect_type"	"neutral"
+			"stored_as_integer"	"0"
+		}
+		"77800"
+		{
+			"name"	"civ weapon display"
+			"attribute_class"	"force_level_display"
+			"description_format"	"value_is_additive"
+			"description_string"	"#Attrib_CivWeapon"
+			"hidden"	"0"
+			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
 		"214"
@@ -41745,6 +41851,16 @@ Fires....... something"
 			"description_string"	"#Attrib_Dmg_Crit_Falloff"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"98871"
+		{
+			"name"	"crit_dmg_falloff hidden"
+			"attribute_class"	"crit_dmg_falloff"
+			"description_string"	"#Attrib_Dmg_Crit_Falloff"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
