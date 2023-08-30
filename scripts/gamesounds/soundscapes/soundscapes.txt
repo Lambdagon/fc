@@ -58,31 +58,38 @@
 //	SNDLVL_140dB	= 140,	// 0.2
 //	SNDLVL_150dB	= 150,	// 0.2
 
+
 "tf2.respawn_room"
 {
 	"dsp"	"1"
 
 	"playlooping"
-	{  
-		"volume"	".6"
+	{
+		"volume"	"0.15"
+		"wave"		"ambient/atmosphere/city_rumble_loop1.wav"
 		"pitch"		"100"
-		"wave"		"ambient/underground.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"wave"		"ambient/atmosphere/indoor1.wav"
+		"pitch"		"100"
 	}
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".30"
-		"pitch"		"100"
-		"wave"		"ambient/machine_hum2.wav"
-	}
-	
-	"playlooping"
-	{
-		"volume"	".75"
-		"pitch"		"100"
-		"position"	"0"
-		"attenuation"	"0.7"	
-		"wave"		"ambient/machine_hum.wav"
+		"time"		"3, 10"
+		"volume"	"0.05,0.15"
+		"pitch"		"95,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal_rattle2.wav"
+			"wave"	"ambient/materials/metal_rattle3.wav"
+		}
+		
 	}
 }
 
@@ -98,6 +105,7 @@
 		"wave"		"ambient/outdoors_well.wav"
 	}
 }
+
 
 // General soundscapes
 
@@ -194,7 +202,7 @@
 // No DSP, no ambients
 "Nothing"
 {
-
+	"dsp"	"0"
 }
 
 "GenericIndoor"

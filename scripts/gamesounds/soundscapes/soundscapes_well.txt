@@ -77,6 +77,25 @@
 {
 	"dsp"	"1"
 
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"wave"		"ambient/atmosphere/drone4lp.wav"
+		"pitch"		"100"
+	}
+
+	"playrandom"
+	{
+		"time"		"4, 4"
+		"volume"	"0.5"
+		"rndwave"
+		{
+			"wave"		"ambient/atmosphere/metallic1.wav"
+			"wave"		"ambient/atmosphere/metallic2.wav"
+		}
+
+		"pitch"		"100"
+	}
 
 	"playlooping"
 	{
@@ -86,11 +105,47 @@
 		"soundlevel"	"0"
 	}
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"	".1"
-		"pitch"		"100"
-		"wave"		"ambient/lighthum.wav"
+		"time"		"1,15"
+		"volume"	"0.25,0.5"
+		"pitch"		"90,105"	
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140dB"		
+		"rndwave"
+		{
+			"wave"	"ambient/levels/prison/inside_battle1.wav"
+			"wave"	"ambient/levels/prison/inside_battle2.wav"
+			"wave"	"ambient/levels/prison/inside_battle3.wav"
+			"wave"	"ambient/levels/prison/inside_battle4.wav"
+			"wave"	"ambient/levels/prison/inside_battle5.wav"
+			"wave"	"ambient/levels/prison/inside_battle6.wav"
+			"wave"	"ambient/levels/prison/inside_battle7.wav"
+			"wave"	"ambient/levels/prison/inside_battle8.wav"
+			"wave"	"ambient/levels/prison/inside_battle9.wav"
+		}
+		
+	}
+	"playrandom"
+	{
+		"time"		"3,15"
+		"volume"	"0.25,0.5"
+		"pitch"		"90,105"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140dB"		
+		"rndwave"
+		{
+			"wave"	"ambient/levels/streetwar/city_battle11.wav"
+			"wave"	"ambient/levels/streetwar/city_battle12.wav"
+			//"wave"	"ambient/levels/streetwar/city_battle13.wav"
+			"wave"	"ambient/levels/streetwar/city_battle14.wav"
+			"wave"	"ambient/levels/streetwar/city_battle15.wav"
+			"wave"	"ambient/levels/streetwar/city_battle16.wav"
+			"wave"	"ambient/levels/streetwar/city_battle17.wav"
+			"wave"	"ambient/levels/streetwar/city_battle18.wav"
+			"wave"	"ambient/levels/streetwar/city_battle19.wav"
+		}
+		
 	}
 }
 
@@ -104,7 +159,7 @@
 
 	"playlooping"
 	{
-		"volume"	"0.1"
+		"volume"	"0.5"
 		"wave"		"ambient/alarms/city_siren_loop2.wav"
 		"pitch"		"100"
 	}
