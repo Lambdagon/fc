@@ -33343,6 +33343,109 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+		"9935"
+		{
+			"name"	"L'Etranger"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"#TF_LEtranger"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"0"
+			"item_logname"	"letranger"
+			"item_iconname"	"letranger"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_letranger/c_letranger"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"32"
+			"model_world"	"models/weapons/w_models/w_letranger.mdl"
+			"model_player"	"models/weapons/v_models/v_letranger_spy.mdl"
+			"attach_to_hands" "2"
+			"used_by_classes"
+			{
+				"civilian"	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"				
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"attributes"
+			{
+				"mod see enemy health hidden"
+				{
+					"attribute_class"	"see_enemy_health"
+					"value"	"1"
+				}
+				"minicritboost on kill"
+				{
+					"attribute_class"	"add_onkill_minicritboost_time"
+					"value" "5"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.50"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.6"
+				}
+				"crit_dmg_falloff"
+				{
+					"attribute_class" 	"crit_dmg_falloff"
+					"value" "1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.6"
+				}
+				"Reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.40"
+				}
+				"single wep deploy time increased HIDDEN"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"2"
+				}
+				"civ weapon display"
+				{
+					"attribute_class"	"force_level_display"
+					"value"	"1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "3"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Letranger.Single"
+				"sound_burst"	"Weapon_Letranger.SingleCrit"
+			}
+		}
 		"30143"
 		{
 			"name"		"tw_demobot_armor"
