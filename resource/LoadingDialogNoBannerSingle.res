@@ -1,4 +1,4 @@
-"Resource/LoadingDialog.res"
+"Resource/LoadingDialogNoBannerSingle.res"
 {
 	"LoadingDialog"
 	{
@@ -29,7 +29,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"#GameUI_ParseBaseline"
+		"labelText"				""
 		"textAlignment"			"west"
 		"dulltext"				"0"
 		"brighttext"			"0"
