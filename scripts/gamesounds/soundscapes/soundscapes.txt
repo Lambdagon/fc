@@ -105,3 +105,285 @@
 		"wave"		"ambient/outdoors_well.wav"
 	}
 }
+
+
+// General soundscapes
+
+// This soundscape enables automatic dsp
+
+"automatic"
+{
+	"dsp"	"1"
+	"dsp_volume" "1.0"
+}
+// This soundscape enables automatic dsp at 50% mix - good if you have 
+// a lot of dialog that must be understood at any distance
+
+"automatic_dialog"
+{
+	"dsp"	"1"
+	"dsp_volume" "0.5"
+}
+
+
+// *******************************************************************************
+// ***************** E3_Techdemo_01 - 06 *****************
+
+// e3_techdemo_01
+
+"e3_techdemo_gmanspeaking"
+{
+	"dsp"	"10"
+}
+
+"e3_Techdemo_02"
+{
+	"dsp"	"20"	
+
+	// physics room
+
+	"playlooping"
+	{
+		"volume"	"0.1"
+		"pitch"		"100"
+		"attenuation"	"0"
+		"wave"		"ambient/machines/courtyard_mach_loop.wav"
+	}
+}
+
+"e3_Techdemo_03"
+{
+	"dsp"	"1"	
+
+}
+
+"e3_Techdemo_05"
+{
+	"dsp"	"10"
+
+	// dripping cave ambient
+
+	"playlooping"
+	{
+		"volume"	"0.23"
+		"pitch"		"100"
+		"attenuation"	"0"
+		"wave"		"ambient/water/corridor_water.wav"
+	}
+}
+
+"e3_Techdemo_06"
+{
+	"dsp"	"20"	
+
+	// lake
+
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"attenuation"	"0"
+		"wave"		"ambient/water/lake_water.wav"
+	}
+}
+
+"e3_end"
+{
+	"dsp" "0"
+}
+
+// ***************** E3_Techdemo_01 - 06 *****************
+// *******************************************************************************
+
+
+// ******************   SOUNDSCAPE TEST  ***************************************
+
+
+// No DSP, no ambients
+"Nothing"
+{
+	"dsp"	"0"
+}
+
+"GenericIndoor"
+{
+	"dsp"	"1"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/indoor2.wav"
+	}
+}
+
+"GenericOutdoor"
+{
+	"dsp"	"19"
+	"playlooping"
+	{
+		"volume"	"0.25"
+		"wave"		"ambient/atmosphere/indoor2.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"wave"		"ambient/atmosphere/outdoor2.wav"
+		"pitch"		"100"
+		"position"	"0"
+	}
+	"playsoundscape"
+	{
+		"name"		"d2_depot_cellblock_medium"
+		"volume"	"0.75"
+		"position"	"2"
+	}
+	"playsoundscape"
+	{
+		"name"		"d2_depot_cellblock_medium"
+		"volume"	"0.75"
+		"position"	"2"
+	}
+}
+
+
+
+
+"cabin"
+{
+	"dsp"	"17"
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"test/temp/soundscape_test/cabin_ambience.wav"
+	}
+
+	// *** TEST TV ********
+	"playsoundscape"
+	{
+		"name"		"test_tvset"
+		"volume"	"1"
+		"position"	"0"
+	
+	}
+	
+	// ** Tower sticking out of wall
+	"playlooping"
+	{
+		"volume"	"0.6"
+		"wave"		"test/temp/soundscape_test/cabin_wall.wav"
+		"pitch"		"100"
+		"attenuation"	"2"
+		"position"	"1"
+	}
+
+
+	// Random Sounds for Wall
+	"playrandom"
+	{
+		// time, volume, pitch, attenuation are all random intervals ( i.e. minval, maxval )
+		// every 0.5 to 2 seconds
+		"time"		"1,4"
+
+		// at a volume of 0.25 to 0.25
+		"volume"	"0.5,0.8"
+
+		// at a pitch of 90 to 100
+		"pitch"		"80,120"
+
+		// play one of these .wav files randomly each time
+		"rndwave"
+		{
+			"wave"	"test/temp/soundscape_test/wall1.wav"
+			"wave"	"test/temp/soundscape_test/wall2.wav"
+			"wave"	"test/temp/soundscape_test/wall3.wav"
+			"wave"	"test/temp/soundscape_test/wall4.wav"
+		}
+		
+		// omit position for ambient sounds
+		"position"	"1"
+		// only required if "position" is present
+		"attenuation"	"2"
+	}
+
+
+
+}
+
+
+"cabin_outdoor"
+{
+	"dsp"	"20"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"test/temp/soundscape_test/outdoor.wav"
+	}
+
+	"playrandom"
+	{
+		// time, volume, pitch, attenuation are all random intervals ( i.e. minval, maxval )
+		// every 0.5 to 2 seconds
+		"time"		"0.1, 0.1"
+
+		// at a volume of 0.25 to 0.25
+		"volume"	"0.5,1"
+
+		// at a pitch of 90 to 100
+		"pitch"		"50,120"
+
+		// play one of these .wav files randomly each time
+		"rndwave"
+		{
+			"wave"	"test/temp/soundscape_test/music_snippet1.wav"
+			"wave"	"test/temp/soundscape_test/music_snippet2.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet3.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet4.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet5.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet6.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet7.wav"
+			//"wave"	"test/temp/soundscape_test/music_snippet8.wav"
+		}
+		
+
+	}
+
+}
+
+"test_tvset"
+{
+	"dsp"	"1"
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"pitch"		"100"
+
+		"wave"		"test/temp/soundscape_test/tv_music.wav"
+		"position"	"0"
+		"attenuation"	"2"
+
+	}
+
+
+	"playrandom"
+	{
+		"time"		"0.1, 0.3"
+		"volume"	"0.1,0.15"
+		"pitch"		"95,105"
+		"attenuation"	"2"
+		"position"	"0"
+
+		"rndwave"
+		{
+			"wave"	"test/temp/soundscape_test/music_snippet1.wav"
+			"wave"	"test/temp/soundscape_test/music_snippet2.wav"
+			"wave"	"test/temp/soundscape_test/music_snippet3.wav"
+
+		}
+		
+	}
+
+
+}
