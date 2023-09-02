@@ -17,6 +17,8 @@
 		"scaleImage"		"1"
 		"teambg_2"		"../hud/death_panel_red_bg"
 		"teambg_3"		"../hud/death_panel_blue_bg"
+		"teambg_4"		"../hud/death_panel_green_bg"
+		"teambg_5"		"../hud/death_panel_yellow_bg"
 	}
 	"SwitchLabel"
 	{	

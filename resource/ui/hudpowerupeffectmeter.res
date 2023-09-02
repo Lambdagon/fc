@@ -30,6 +30,8 @@
 		"teambg_1"		"replay/thumbnails/hud_left_tertiary_brown"
 		"teambg_2"		"replay/thumbnails/hud_left_tertiary_red"
 		"teambg_3"		"replay/thumbnails/hud_left_tertiary_blue"
+		"teambg_4"		"replay/thumbnails/hud_left_tertiary_green"
+		"teambg_5"		"replay/thumbnails/hud_left_tertiary_yellow"
 	}
 
 	"ItemEffectMeterLabel"

@@ -16,6 +16,8 @@
 		"teambg_1"		"replay\thumbnails/hud_right_primary_brown"
 		"teambg_2"		"replay\thumbnails/hud_right_primary_red"
 		"teambg_3"		"replay\thumbnails/hud_right_primary_blue"		
+		"teambg_4"		"replay\thumbnails/hud_right_primary_green"
+		"teambg_5"		"replay\thumbnails/hud_right_primary_yellow"		
 	}
 	"HudWeaponLowAmmoImage"
 	{
@@ -33,6 +35,8 @@
 		"teambg_1"		"replay/thumbnails/hud_right_primary_inset_brown"
 		"teambg_2"		"replay/thumbnails/hud_right_primary_inset_red"
 		"teambg_3"		"replay/thumbnails/hud_right_primary_inset_blue"	
+		"teambg_4"		"replay/thumbnails/hud_right_primary_inset_green"
+		"teambg_5"		"replay/thumbnails/hud_right_primary_inset_yellow"	
 	}
 	"AmmoInClip"
 	{

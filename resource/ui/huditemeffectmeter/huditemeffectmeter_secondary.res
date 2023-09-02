@@ -29,6 +29,8 @@
 		"teambg_1"		"replay\thumbnails/hud_right_misc_secondary_brown"
 		"teambg_2"		"replay\thumbnails/hud_right_misc_secondary_red"
 		"teambg_3"		"replay\thumbnails/hud_right_misc_secondary_blue"
+		"teambg_4"		"replay\thumbnails/hud_right_misc_secondary_green"
+		"teambg_5"		"replay\thumbnails/hud_right_misc_secondary_yellow"
 	}
 	
 	"ItemEffectMeterLabel"

@@ -46,6 +46,8 @@
 		"teambg_1"		"replay\thumbnails/hud_left_primary_inset_brown"
 		"teambg_2"		"replay\thumbnails/hud_left_primary_inset_red"
 		"teambg_3"		"replay\thumbnails/hud_left_primary_inset_blue"
+		"teambg_4"		"replay\thumbnails/hud_left_primary_inset_green"
+		"teambg_5"		"replay\thumbnails/hud_left_primary_inset_yellow"
 	}
 
 	"DisguiseNameLabel"
