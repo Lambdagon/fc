@@ -32,7 +32,7 @@
 
 
 // Half-Life Server Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Sat Sep 02 12:01:11 AM
+// File generated:  Thu Aug 10 20:53:02 AM
 //
 //
 // Cvar	-	Setting
@@ -51,7 +51,7 @@ DESCRIPTION SERVER_OPTIONS
 	{
 		"#Valve_Hostname"
 		{ STRING }
-		{ "Lambda Fortress: Community Edition" }
+		{ "Fortress Connected" }
 	}
 
 	"maxplayers"
@@ -68,7 +68,7 @@ DESCRIPTION SERVER_OPTIONS
 			"#lfce_Maxplayer_ThirtyTwo" "32"
 			"#lfce_Maxplayer_SixyFour" "64"
 		}
-		{ "1" }
+		{ "64" }
 	}
 
 	"sv_password"
@@ -170,7 +170,7 @@ DESCRIPTION SERVER_OPTIONS
 			"#lfe_DifficultyHard" "3"
 			"#lfe_DifficultyUnusual" "4"
 		}
-		{ "3" }
+		{ "2" }
 	}
 
 	"lfce_player_bots"
@@ -270,14 +270,6 @@ DESCRIPTION SERVER_OPTIONS
 		"#Tooltip_lfce_AllowThirdperson"
 		{ BOOL }
 		{ "1" }
-	}
-
-	"lfce_allow_special_classes"
-	{
-		"#lfce_SpecialClasses"
-		"#Tooltip_lfce_SpecialClasses"
-		{ BOOL }
-		{ "0" }
 	}
 
 	"lfce_autojump"
@@ -410,5 +402,53 @@ DESCRIPTION SERVER_OPTIONS
 		{ NUMBER -1 32 }
 		{ "-1" }
 	}
-
+	
+	"lfce_classlimit_civilian"
+	{
+		"#TF_Class_Name_Civilian"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_john"
+	{
+		"#TF_Class_Name_John"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_mercenary"
+	{
+		"#TF_Class_Name_Mercenary"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_combine"
+	{
+		"#TF_Class_Name_Combine"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_enforcer"
+	{
+		"#TF_Class_Name_ZombieFast"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_antlion"
+	{
+		"#TF_Class_Name_Antlion"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
+	
+	"lfce_classlimit_saxton"
+	{
+		"#TF_Class_Name_Saxton"
+		{ NUMBER -1 32 }
+		{ "-1" }
+	}
 }
