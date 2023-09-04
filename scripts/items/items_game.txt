@@ -7420,7 +7420,7 @@
 			"item_name"			"#TF_Spellbook_Basic"
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"item_quality"		"normal"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
@@ -18006,73 +18006,6 @@
 			}
 			"item_description"	"#TF_Item_ZombieSniper_Desc"
 			"image_inventory"	"backpack/player/items/sniper/sniper_zombie"
-		}
-		"5869"
-		{
-			"name"	"Activated Campaign 3 Pass"
-			"item_class"	"tf_wearable"	
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Tracker"
-			"item_name"			"#TF_ActivatedCampaign3Pass"
-			"item_description"	"#TF_ActivatedCampaign3Pass_desc"						
-			"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda"
-			"image_inventory_size_w"	"128"
-			"image_inventory_size_h"	"82"
-			"item_quality"		"unique"
-			"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-			"item_slot"			"action"
-			"inspect_panel_dist" "20"
-			"collection_reference"		"campaign3_master_collection"			
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-			}
-			"visuals"
-			{
-				"styles"
-				{
-					"0"
-					{
-						"skin_red" "1"
-						"skin_blu" "1"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda"
-						"selectable"	"0"
-					}
-					"1"
-					{
-						"skin_red" "5"
-						"skin_blu" "5"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_bronze"
-						"selectable"	"0"
-					}
-					"2"
-					{
-						"skin_red" "9"
-						"skin_blu" "9"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_silver"
-						"selectable"	"0"
-					}
-					"3"
-					{
-						"skin_red" "13"
-						"skin_blu" "13"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_gold"
-						"selectable"	"0"
-					}
-				}
-			}
 		}
 		"9000"
 		{
@@ -33600,6 +33533,172 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+		}
+		"9936"
+		{
+			"name"	"Pyromancer's Mask"
+			"prefab"		"base_hat"
+			"first_sale_date"	"2010/12/20"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Mask"
+			"item_name"	"#TF_PyromancersMask"
+			"item_slot"	"misc"
+			"equip_region"	"beard"			
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/pyro/pyro_pyromancers_mask"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/pyro/pyro_pyromancers_mask.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"9937"
+		{
+			"name"		"The Burning Question"
+			"prefab"		"base_hat"
+			"show_in_armory"	"1"
+			"item_name"		"#TF_spr18_burning_question"
+			"item_description"		""
+			"item_slot"	"head"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9938"
+		{
+			"name"	"Rail Spikes"
+			"first_sale_date"	"2012/12/13"
+			"prefab"	"misc"
+			"capabilities"
+			{
+				"paintable"			"1"
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Spikes"
+			"item_name"	"#TF_RailSpikes"
+			"item_description"	"#TF_RailSpikes_Desc"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"item_slot"	"misc2"
+			"image_inventory"	"backpack/workshop_partner/player/items/pyro/pyro_rocks/pyro_rocks_spikes"
+			"equip_region"	"pyro_spikes"
+			"model_player"	"models/workshop_partner/player/items/pyro/pyro_rocks/pyro_rocks_spikes.mdl"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+		}
+		"9939"
+		{
+			"name"		"Firebrand"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_dec22_firebrand"
+			"item_description"		""
+			"item_type_name"		"#TF_Wearable_Coat"
+			"show_in_armory"	"1"
+			"equip_region"		"shirt"
+			"item_slot"	"misc2"
+			"item_class"	"tf_wearable"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/dec22_firebrand/dec22_firebrand"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/dec22_firebrand/dec22_firebrand.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9940"
+		{
+			"name"	"The Combat Medic's Crusher Cap"
+			"prefab"	"hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_class"	"tf_wearable"
+			"item_name"	"#TF_COH2_Medic"
+			"item_description"	"#TF_COH2_Medic_Desc"
+			"image_inventory"	"backpack/player/items/medic/coh_medichat"
+			"model_player"	"models/player/items/medic/coh_medichat.mdl"
+			"item_slot"	"head"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"drop_type"	"drop"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9941"
+		{
+			"name"		"Scourge of the Sky"
+			"prefab"		"no_craft misc marketable"
+			"item_class"	"tf_wearable"
+			"item_name"		"#TF_spr18_scourge_of_the_sky"
+			"item_description"		"#TF_spr18_scourge_of_the_sky_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"show_in_armory"	"1"
+			"item_slot"	"misc2"
+			"image_inventory"		"backpack/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
 			}
 		}
  		"9944"
