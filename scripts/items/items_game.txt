@@ -14271,7 +14271,6 @@
 			"mouse_pressed_sound" 	"xmas.jingle_noisemaker"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
 		}
-
 		"727"
 		{
 			"name"			"The Black Rose"
@@ -15377,6 +15376,30 @@
 				"limited quantity item"		"1"
 				"min_viewmodel_offset"		"10 0 -6"				
 			}
+		}
+		"1087"
+		{
+			"name"	"Der Maschinensoldaten-Helm"
+			"prefab"	"valve misc"
+			"item_name"		"Der Maschinensoldaten-Helm"
+			"item_description"		"sic sempter tyrannis"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"item_slot"	"head"
+			"image_inventory"	"backpack/player/items/heavy/heavy_wolf_helm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/player/items/heavy/heavy_wolf_helm.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+				"mercenary"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
 		}
 		"1092"
 		{
@@ -28890,6 +28913,7 @@ Fires....... something"
 			{
 				"soldier"	"1"
 				"mercenary"	"1"
+				"heavy"	"1"
 			}
 			"attributes"
 			{
@@ -29007,6 +29031,7 @@ Fires....... something"
 			{
 				"soldier"	"1"
 				"mercenary"	"1"
+				"civilian"	"1"
 			}
 			"visuals"
 			{
@@ -29113,6 +29138,7 @@ Fires....... something"
 			{
 				"demoman"		"1"
 				"mercenary"		"1"
+				"heavy"		"1"
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
@@ -29931,6 +29957,8 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"engineer"		"1"
+				"civilian"		"1"
+				"mercenary"		"1"
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
@@ -33761,6 +33789,31 @@ Fires....... something"
 					"value"	"1"
 				}
 			}
+		}
+		"30051"
+		{
+			"name"		"The Data Mining Light"
+			"prefab"		"no_craft hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"item_name"		"#TF_robo_engineer_mining_light"
+			"item_description"		"#TF_robo_engineer_mining_light_Desc"
+			"equip_region"		"hat"
+			"item_type_name"		"#TF_Wearable_Helmet"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/robo_engineer_mining_light/robo_engineer_mining_light"
+			"model_player"		"models/workshop/player/items/engineer/robo_engineer_mining_light/robo_engineer_mining_light.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+				"civilian"		"1"
+				"mercenary"		"1"
+				"heavy"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_default_pickup.wav"
+			"drop_sound"		"ui/item_default_drop.wav"
 		}
 		"30143"
 		{
