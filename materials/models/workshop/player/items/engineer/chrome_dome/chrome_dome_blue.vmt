@@ -1,0 +1,67 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"models/workshop/player/items/engineer/chrome_dome/chrome_dome_color"
+	"$bumpmap"		"models/workshop/player/items/engineer/chrome_dome/chrome_dome_normal"
+	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
+	"$phongexponenttexture"		"models/workshop/player/items/engineer/chrome_dome/chrome_dome_phongexponent"
+	"$phong"		"1"
+	"$phongexponent"		"15.000000"
+	"$phongboost"		"4.000000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"4"
+	"$rimlightboost"		"1.000000"
+	"$rimmask"		"1"
+	"$blendtintbybasealpha"		"1"
+	"$blendtintcoloroverbase"		"0"
+	"$colortint_base"		"{ 50 72 99 }"
+	"$color2"		"{ 50 72 99 }"
+	"$colortint_tmp"		"[0 0 0]"
+	"$bumpmapalphaphongmask"		"1"
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+	">=DX90"
+	{
+		"$selfillum"		"0"
+	}
+	"proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"ItemTintColor"
+		{
+			"resultVar"		"$colortint_tmp"
+		}
+		"SelectFirstIfNonZero"
+		{
+			"srcVar1"		"$colortint_tmp"
+			"srcVar2"		"$colortint_base"
+			"resultVar"		"$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1"		"$color2"
+			"srcVar2"		"$yellow"
+			"resultVar"		"$color2"
+		}
+	}
+}
