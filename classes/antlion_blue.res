@@ -28,7 +28,7 @@ Use your speed and jump height to your advantage!"
 			"skin"	"1"		
 			"animation"
 			{
-				"sequence"	"attack_pounce1"
+				"sequence"	"attack_pounce1_stand"
 			}
 								
 			"attached_model"

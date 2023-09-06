@@ -28,6 +28,8 @@
 		"teambg_1"		"replay\thumbnails/hud_right_secondary_brown"
 		"teambg_2"		"replay\thumbnails/hud_right_secondary_red"
 		"teambg_3"		"replay\thumbnails/hud_right_secondary_blue"
+		"teambg_4"		"replay\thumbnails/hud_right_secondary_green"
+		"teambg_5"		"replay\thumbnails/hud_right_secondary_yellow"
 	}
 	
 	"MetalIcon"	

@@ -6214,6 +6214,11 @@
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.8"
 				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.8"
+				}
 			}
 		}
 
@@ -7415,7 +7420,7 @@
 			"item_name"			"#TF_Spellbook_Basic"
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"item_quality"		"normal"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
@@ -12597,7 +12602,7 @@
 			}
 		}
 
-		"30758"
+		"9943"
 		{
 			"name"		"Prinny Machete"
 			"first_sale_date"		"2016/07/07"
@@ -12682,7 +12687,7 @@
 			"mouse_pressed_sound"		"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"430758"
+		"9942"
 		{
 			"name"		"Prinny Machete Scout"
 			"first_sale_date"		"2016/07/07"
@@ -14266,7 +14271,6 @@
 			"mouse_pressed_sound" 	"xmas.jingle_noisemaker"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
 		}
-
 		"727"
 		{
 			"name"			"The Black Rose"
@@ -15372,6 +15376,30 @@
 				"limited quantity item"		"1"
 				"min_viewmodel_offset"		"10 0 -6"				
 			}
+		}
+		"1087"
+		{
+			"name"	"Der Maschinensoldaten-Helm"
+			"prefab"	"valve misc"
+			"item_name"		"Der Maschinensoldaten-Helm"
+			"item_description"		"sic sempter tyrannis"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"item_slot"	"head"
+			"image_inventory"	"backpack/player/items/heavy/heavy_wolf_helm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/player/items/heavy/heavy_wolf_helm.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+				"mercenary"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
 		}
 		"1092"
 		{
@@ -16806,7 +16834,7 @@
 				"sticky arm time bonus"
 				{
 					"attribute_class"	"sticky_arm_time"
-					"value"	"-0.6"
+					"value"	"-0.3"
 				}
 				"stickybomb charge rate"
 				{
@@ -17871,7 +17899,7 @@
 			"name"		"Zombie Scout"
 			"prefab"	"zombie"
 			"item_name"	"#TF_Item_ZombieScout"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"model_player"	"models/player/items/scout/scout_zombie.mdl"
 			"equip_regions"
 			{
@@ -17889,7 +17917,7 @@
 		{
 			"name"		"Zombie Soldier"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieSoldier"
 			"model_player"	"models/player/items/soldier/soldier_zombie.mdl"
 			"used_by_classes"
@@ -17903,7 +17931,7 @@
 		{
 			"name"		"Zombie Heavy"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieHeavy"
 			"model_player"	"models/player/items/heavy/heavy_zombie.mdl"
 			"used_by_classes"
@@ -17917,7 +17945,7 @@
 		{
 			"name"		"Zombie Demo"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieDemoman"
 			"model_player"	"models/player/items/demo/demo_zombie.mdl"
 			"used_by_classes"
@@ -17931,7 +17959,7 @@
 		{
 			"name"		"Zombie Engineer"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieEngineer"
 			"model_player"	"models/player/items/engineer/engineer_zombie.mdl"
 			"used_by_classes"
@@ -17945,7 +17973,7 @@
 		{
 			"name"		"Zombie Medic"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieMedic"
 			"model_player"	"models/player/items/medic/medic_zombie.mdl"
 			"used_by_classes"
@@ -17959,7 +17987,7 @@
 		{
 			"name"		"Zombie Spy"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieSpy"
 			"model_player"	"models/player/items/spy/spy_zombie.mdl"
 			"used_by_classes"
@@ -17973,7 +18001,7 @@
 		{
 			"name"		"Zombie Pyro"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombiePyro"
 			"model_player"	"models/player/items/pyro/pyro_zombie.mdl"
 			"equip_regions"
@@ -17992,7 +18020,7 @@
 		{
 			"name"		"Zombie Sniper"
 			"prefab"	"zombie"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_name"	"#TF_Item_ZombieSniper"
 			"model_player"	"models/player/items/sniper/sniper_zombie.mdl"
 			"used_by_classes"
@@ -18001,73 +18029,6 @@
 			}
 			"item_description"	"#TF_Item_ZombieSniper_Desc"
 			"image_inventory"	"backpack/player/items/sniper/sniper_zombie"
-		}
-		"5869"
-		{
-			"name"	"Activated Campaign 3 Pass"
-			"item_class"	"tf_wearable"	
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Tracker"
-			"item_name"			"#TF_ActivatedCampaign3Pass"
-			"item_description"	"#TF_ActivatedCampaign3Pass_desc"						
-			"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda"
-			"image_inventory_size_w"	"128"
-			"image_inventory_size_h"	"82"
-			"item_quality"		"unique"
-			"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-			"item_slot"			"action"
-			"inspect_panel_dist" "20"
-			"collection_reference"		"campaign3_master_collection"			
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-			}
-			"visuals"
-			{
-				"styles"
-				{
-					"0"
-					{
-						"skin_red" "1"
-						"skin_blu" "1"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda"
-						"selectable"	"0"
-					}
-					"1"
-					{
-						"skin_red" "5"
-						"skin_blu" "5"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_bronze"
-						"selectable"	"0"
-					}
-					"2"
-					{
-						"skin_red" "9"
-						"skin_blu" "9"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_silver"
-						"selectable"	"0"
-					}
-					"3"
-					{
-						"skin_red" "13"
-						"skin_blu" "13"
-						"model_player"		"models/player/items/cyoa_pda/cyoa_pda.mdl"
-						"image_inventory"	"backpack/player/items/cyoa_pda/cyoa_pda_gold"
-						"selectable"	"0"
-					}
-				}
-			}
 		}
 		"9000"
 		{
@@ -19289,15 +19250,16 @@
 			}
 			"item_type_name"	"Claws"
 			"item_name"	"Antlion Claws"
+			"item_description"	"(Viewmodel animated by Unnamed)"
 			"item_slot"	"melee"
-                        "anim_slot"     "melee"
+            "anim_slot"     "melee"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/jerry/v_models/v_jerry.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -21058,7 +21020,7 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.20"
+					"value"	"1.15"
 				}
 				"spread penalty"
 				{
@@ -21074,6 +21036,11 @@
 				{
 					"attribute_class" "mod_no_cloak_when_active"
 					"value" "1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "15"
 				}
 			}
 			"visuals"
@@ -21623,8 +21590,6 @@ Fires....... something"
 				"sound_burst"		"Weapon_AWP.SingleCrit"
 			}
 		}
-		
-	
 		"9150"
 		{
 			"name"	"Base Secondary Item Civ"
@@ -21643,7 +21608,7 @@ Fires....... something"
 			"loadondemand" "1"
 			"propername" "1" 
 			"baseitem"	"1"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"base item"
 			"item_name"	"Base secondary item"
 			"item_description"	""
@@ -21932,6 +21897,11 @@ Fires....... something"
 				{
 					"attribute_class" 	"fixed_shot_pattern"
 					"value" "1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "20"
 				}
 			}
 			"visuals"
@@ -22890,32 +22860,22 @@ Fires....... something"
 				"maxammo secondary increased"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value" "3.00"
-				}
-				"bullets per shot bonus"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value"	"2.00"
+					"value" "1.50"
 				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "3.00"
 				}
-				"bullets per shot bonus"
+				"damage penalty"
 				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value"	"3.00"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
 				}
-				"mod ammo per shot"
+				"Reload time increased"
 				{
-					"attribute_class"	"mod_ammo_per_shot"
-					"value"	"3"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.40"
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.90"
 				}
 				"mult_spread_scales_consecutive"
 				{
@@ -23291,6 +23251,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "1.30"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "1.50"
 				}
 			}
 			"visuals"
@@ -24038,7 +24003,7 @@ Fires....... something"
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"0.60"
+					"value"	"1.60"
 				}
             }
 			"static_attrs"
@@ -25155,6 +25120,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
+			"item_quality"	"unique"
 			"inspect_panel_dist" "40"
 			"image_inventory"	"backpack/weapons/c_models/c_double_barrel"
 			"image_inventory_size_w"		"128"
@@ -25175,8 +25141,9 @@ Fires....... something"
 				{
 					"scout"		  "1"
 				}
+				
 				"attributes"
-				{
+			{
 				"scattergun has knockback"
 				{
 					"attribute_class"	"set_scattergun_has_knockback"
@@ -25185,22 +25152,37 @@ Fires....... something"
 				"bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.1"
+					"value" "2.00"
 				}
-				"weapon spread bonus"
+				"damage causes airblast"
 				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0"
+					"attribute_class"	"damage_causes_airblast"
+					"value" "20.0"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.25"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.20"
+					"value" "0.10"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "2.00"
 				}
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.75"
+					"value" "0.50"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"1.70"
 				}
 				"scattergun no reload single"
 				{
@@ -26828,7 +26810,7 @@ Fires....... something"
 			"model_player"	"models/empty.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -26847,7 +26829,7 @@ Fires....... something"
 				"increased air control"
 				{
 					"attribute_class"	"mod_air_control"
-					"value" "4.00"
+					"value" "7.00"
 				}
 				"cancel falling damage"
 				{
@@ -26872,7 +26854,6 @@ Fires....... something"
 			}
 			"item_type_name"	"Shell"
 			"item_name"	"Antlion Shell"
-			"item_description"	"(Viewmodel animated by Unnamed)"
 			"item_slot"	"secondary"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"image_inventory_size_w"		"128"
@@ -26880,7 +26861,7 @@ Fires....... something"
 			"model_player"	"models/empty.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"normal"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -28932,6 +28913,7 @@ Fires....... something"
 			{
 				"soldier"	"1"
 				"mercenary"	"1"
+				"heavy"	"1"
 			}
 			"attributes"
 			{
@@ -29049,6 +29031,7 @@ Fires....... something"
 			{
 				"soldier"	"1"
 				"mercenary"	"1"
+				"civilian"	"1"
 			}
 			"visuals"
 			{
@@ -29155,6 +29138,7 @@ Fires....... something"
 			{
 				"demoman"		"1"
 				"mercenary"		"1"
+				"heavy"		"1"
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
@@ -29973,6 +29957,8 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"engineer"		"1"
+				"civilian"		"1"
+				"mercenary"		"1"
 			}
 			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
@@ -33174,9 +33160,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"Second Amendment"
-			"item_description"		"
-			Civilian is very inexperienced in using weapons due to him usually being protected by his
-			proud bodyguards that he greatly underpays."
+			"item_description"		"Civilian is very inexperienced in using weapons due to him usually being protected by his proud bodyguards that he greatly underpays."
 			"item_slot"	"secondary"
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
@@ -33270,7 +33254,7 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_models/w_ambassador.mdl"
+			"model_world"	"models/weapons/w_models/w_ambassador_civ.mdl"
 			"model_player"	"models/weapons/v_ambassador_spy.mdl"
 			"attach_to_hands" "2"
 			"inspect_panel_dist" "32"
@@ -33374,7 +33358,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"32"
-			"model_world"	"models/weapons/w_models/w_letranger.mdl"
+			"model_world"	"models/weapons/w_models/w_letranger_civ.mdl"
 			"model_player"	"models/weapons/v_models/v_letranger_spy.mdl"
 			"attach_to_hands" "2"
 			"used_by_classes"
@@ -33445,6 +33429,391 @@ Fires....... something"
 				"sound_single_shot"	"Weapon_Letranger.Single"
 				"sound_burst"	"Weapon_Letranger.SingleCrit"
 			}
+		}
+		"17000"
+		{
+			"name"	"Specialist"
+			"prefab"	"valve misc"
+			"item_name"		"Specialist"
+			"item_description"		"My God, what are you doing?"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"item_slot"	"head"
+			"image_inventory"		"backpack/workshop/player/items/medic/dec2014_medic_unknown_mann/dec2014_medic_unknown_mann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/workshop/player/items/medic/dec2014_medic_unknown_mann/dec2014_medic_unknown_mann.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"mouse_pressed_sound"	"scientist/c1a0_sci_bigday.wav"
+			"drop_sound"			"scientist/dontconcur.wav"
+		}
+		"17001"
+		{
+			"name"	"Ridiculous Tie"
+			"prefab"	"valve misc"
+			"item_name"		"Ridiculous Tie"
+			"item_description"		"Why do we have to wear them?"
+			"item_slot"	"misc"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"mouse_pressed_sound"	"scientist/c1a0_sci_bigday.wav"
+			"drop_sound"			"scientist/dontconcur.wav"
+		}
+		"17002"
+		{
+			"name"	"Family Doctor"
+			"prefab"	"valve misc"
+			"item_name"		"Family Doctor"
+			"item_description"		"Fancy pants and a pair of shiny boots! Fascinating!"
+			"item_slot"         "misc2"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/workshop/player/items/medic/hw2013_moon_boots/hw2013_moon_boots.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"mouse_pressed_sound"	"scientist/c1a0_sci_bigday.wav"
+			"drop_sound"			"scientist/dontconcur.wav"
+		}
+		"17003"
+		{
+			"name"	"Colossal Covers"
+			"prefab"	"valve misc"
+			"item_name"		"Colossal Covers"
+			"item_description"		"Don't try to ice-skate uphill."
+			"item_slot"	"misc"
+			"propername"		"1"
+			"image_inventory"		"backpack/player/items/mvm_loot/demo/battery_grenade"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/player/items/mvm_loot/demo/battery_grenade.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"17004"
+		{
+			"name"	"Attorney Doe"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"Attorney Doe"
+			"item_description"		"I am, the law!"
+			"drop_type"		"drop"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/player/items/soldier/soldier_zipperhead"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/player/items/soldier/soldier_zipperhead.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary"		"1"
+			}
+			"mouse_pressed_sound"	"items/iamthelaw.wav"
+		}
+		"17005"
+		{
+			"name"	"Attorney's Pauldrons"
+			"prefab"	"valve misc"
+			"item_name"		"Attorney's Pauldrons"
+			"item_description"		"How do you plead?"
+			"item_slot"	"misc"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/robo_soldier_sparkplug/robo_soldier_sparkplug"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player" "models/workshop/player/items/soldier/robo_soldier_sparkplug/robo_soldier_sparkplug.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"mercenary"		"1"
+			}
+			"mouse_pressed_sound"	"items/iamthelaw.wav"
+		}
+		"9936"
+		{
+			"name"	"Pyromancer's Mask"
+			"prefab"		"base_hat"
+			"first_sale_date"	"2010/12/20"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Mask"
+			"item_name"	"#TF_PyromancersMask"
+			"item_slot"	"misc"
+			"equip_region"	"beard"			
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/pyro/pyro_pyromancers_mask"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/pyro/pyro_pyromancers_mask.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"9937"
+		{
+			"name"		"The Burning Question"
+			"prefab"		"base_hat"
+			"show_in_armory"	"1"
+			"item_name"		"#TF_spr18_burning_question"
+			"item_description"		""
+			"item_slot"	"head"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9938"
+		{
+			"name"	"Rail Spikes"
+			"first_sale_date"	"2012/12/13"
+			"prefab"	"misc"
+			"capabilities"
+			{
+				"paintable"			"1"
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Spikes"
+			"item_name"	"#TF_RailSpikes"
+			"item_description"	"#TF_RailSpikes_Desc"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"item_slot"	"misc2"
+			"image_inventory"	"backpack/workshop_partner/player/items/pyro/pyro_rocks/pyro_rocks_spikes"
+			"equip_region"	"pyro_spikes"
+			"model_player"	"models/workshop_partner/player/items/pyro/pyro_rocks/pyro_rocks_spikes.mdl"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+		}
+		"9939"
+		{
+			"name"		"Firebrand"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_dec22_firebrand"
+			"item_description"		""
+			"item_type_name"		"#TF_Wearable_Coat"
+			"show_in_armory"	"1"
+			"equip_region"		"shirt"
+			"item_slot"	"misc2"
+			"item_class"	"tf_wearable"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/dec22_firebrand/dec22_firebrand"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/dec22_firebrand/dec22_firebrand.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9940"
+		{
+			"name"	"The Combat Medic's Crusher Cap"
+			"prefab"	"hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_class"	"tf_wearable"
+			"item_name"	"#TF_COH2_Medic"
+			"item_description"	"#TF_COH2_Medic_Desc"
+			"image_inventory"	"backpack/player/items/medic/coh_medichat"
+			"model_player"	"models/player/items/medic/coh_medichat.mdl"
+			"item_slot"	"head"
+			"item_class"	"tf_wearable"
+			"item_quality"	"unique"
+			"drop_type"	"drop"
+			"propername"	"1"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+		}
+		"9941"
+		{
+			"name"		"Scourge of the Sky"
+			"prefab"		"no_craft misc marketable"
+			"item_class"	"tf_wearable"
+			"item_name"		"#TF_spr18_scourge_of_the_sky"
+			"item_description"		"#TF_spr18_scourge_of_the_sky_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"show_in_armory"	"1"
+			"item_slot"	"misc2"
+			"image_inventory"		"backpack/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+ 		"9944"
+		{
+			"enabled"	"1"
+			"baseitem"	"1"
+			"item_class"	"tf_weapon_buff_item"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_apply_soldier_buff"	"1"
+			}
+			"show_in_armory"	"1"
+			"base_item_name"	"Rich Buff"
+			"item_type_name"	"Mini-crits Buff"
+			"item_name"	"Rich Buff"
+			"item_description"	"Temporary secondary for Civilian"
+			"item_slot"	"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"melee"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_umbrella"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"35"
+			"model_player"	"models/weapons/v_models/v_umbrella_civilian.mdl"
+			"model_world"	"models/weapons/w_models/w_umbrella.mdl"
+			"attach_to_hands" "2"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"51" 
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value"	"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+		}
+		"30051"
+		{
+			"name"		"The Data Mining Light"
+			"prefab"		"no_craft hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"item_name"		"#TF_robo_engineer_mining_light"
+			"item_description"		"#TF_robo_engineer_mining_light_Desc"
+			"equip_region"		"hat"
+			"item_type_name"		"#TF_Wearable_Helmet"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/robo_engineer_mining_light/robo_engineer_mining_light"
+			"model_player"		"models/workshop/player/items/engineer/robo_engineer_mining_light/robo_engineer_mining_light.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+				"civilian"		"1"
+				"mercenary"		"1"
+				"heavy"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_default_pickup.wav"
+			"drop_sound"		"ui/item_default_drop.wav"
 		}
 		"30143"
 		{
@@ -33976,6 +34345,102 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
         }
+		"30494"
+		{
+			"name"		"Head Hunter"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_scout_hunter_head"
+			"item_description"		"#TF_sf14_scout_hunter_head_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_regions"
+			{
+				"hat"		"1"
+				"necklace"		"1"
+			}
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_gooey_pickup.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
+		}
+		"30495"
+		{
+			"name"		"Claws And Infect"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_scout_hunter_arm"
+			"item_description"		"#TF_sf14_scout_hunter_arm_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_region"		"scout_hands"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_gooey_pickup.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
+		}
+		"30496"
+		{
+			"name"		"Crazy Legs"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_scout_hunter_legs"
+			"item_description"		"#TF_sf14_scout_hunter_legs_Desc"
+			"item_type_name"		"#TF_Wearable_Costume"
+			"equip_regions"
+			{
+				"scout_pants"		"1"
+				"feet"		"1"
+			}
+			"item_quality"		"unique"
+			"item_slot"		"misc2"
+			"item_class"	"tf_wearable"
+			"propername"		"1"
+			"show_in_armory"	"1"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_gooey_pickup.wav"
+			"drop_sound"		"ui/item_gooey_pickup.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -34595,6 +35060,28 @@ Fires....... something"
 				"stop_taunt_if_moved"		"1"
 				"particle_attachment"		"taunt_effect"
 			}
+		}
+		"30779"
+		{
+			"name"		"The Dayjogger"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_may16_dayjogger"
+			"item_description"		"#TF_may16_dayjogger_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/vampire_shades/vampire_shades"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/vampire_shades/vampire_shades.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+			"mouse_pressed_sound"		"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
 		}
 		"30816"
 		{
@@ -35295,6 +35782,63 @@ Fires....... something"
 				"custom_taunt_prop_per_class"
 				{
 					"spy"		"models/workshop/player/items/spy/taunt_luxury_lounge/taunt_luxury_lounge.mdl"
+				}
+			}
+		}
+		"31104"
+		{
+			"name"		"Breadcrab"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_sum20_breadcrab"
+			"item_description"		"#TF_sum20_breadcrab_Desc"
+			"item_type_name"		"#TF_Wearable_Bread"
+			"drop_type"		"drop"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_scout.mdl"
+				"sniper"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_sniper.mdl"
+				"soldier"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_soldier.mdl"
+				"demoman"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_spy.mdl"
+				"engineer"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_engineer.mdl"
+				"mercenary"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_heavy.mdl"
+				"civilian"	"models/workshop/player/items/all_class/sum20_breadcrab/sum20_breadcrab_heavy.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+				"mercenary"		"1"
+				"civilian"	"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"2"
 				}
 			}
 		}
@@ -36030,6 +36574,17 @@ Fires....... something"
 			"description_string"	"#Attrib_CaptureValue_Increased"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}
+		"99987"
+		{
+			"name"	"increase player capture value hidden"
+			"attribute_class"	"add_player_capturevalue"
+			"description_string"	"#Attrib_CaptureValue_Increased"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
 			"effect_type"	"positive"
 			"armory_desc"	"on_wearer"
 			"stored_as_integer"	"0"

@@ -73,6 +73,8 @@
 		"teambg_1"		"replay\thumbnails/hud_left_primary_brown"	
 		"teambg_2"		"replay\thumbnails/hud_left_primary_red"
 		"teambg_3"		"replay\thumbnails/hud_left_primary_blue"
+		"teambg_4"		"replay\thumbnails/hud_left_primary_green"
+		"teambg_5"		"replay\thumbnails/hud_left_primary_yellow"
 	}
 
 	"classmodelpanelBG"
@@ -93,6 +95,8 @@
 		"teambg_1"		"replay\thumbnails/hud_left_primary_brown"
 		"teambg_2"		"replay\thumbnails/hud_left_primary_red"
 		"teambg_3"		"replay\thumbnails/hud_left_primary_blue"
+		"teambg_4"		"replay\thumbnails/hud_left_primary_green"
+		"teambg_5"		"replay\thumbnails/hud_left_primary_yellow"
 	}
 
 	"classmodelpanel"
@@ -260,6 +264,8 @@
 			"teambg_1"				"../hud/color_panel_brown"
 			"teambg_2"				"../hud/color_panel_red"
 			"teambg_3"				"../hud/color_panel_blu"
+			"teambg_4"				"../hud/color_panel_grn"
+			"teambg_5"				"../hud/color_panel_ylw"
 			"proportionaltoparent"	"1"
 		
 			"src_corner_height"		"23"				// pixels inside the image
