@@ -2956,6 +2956,11 @@
 					"attribute_class"	"mult_dmg"
 					"value"	"1.20"
 				}
+				"spunup_damage_resistance"
+				{
+					"attribute_class"		"spunup_damage_resistance"
+					"value"					"0.80"
+				}
 				"minigun spinup time increased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
@@ -2965,11 +2970,6 @@
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
 					"value" "0.4"
-				}
-				"spunup_damage_resistance"
-				{
-					"attribute_class"		"spunup_damage_resistance"
-					"value"					"0.80"
 				}
 			}
 		}
@@ -7729,11 +7729,17 @@
 					"attribute_class"	"mult_onhit_enemyspeed"
 					"value"	"1.0"
 				}
+				"spunup_damage_resistance"
+				{
+					"attribute_class"		"spunup_damage_resistance"
+					"value"					"0.80"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.75"
 				}
+				
 				"minigun spinup time increased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
@@ -7743,11 +7749,6 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
-				}
-				"spunup_damage_resistance"
-				{
-					"attribute_class"		"spunup_damage_resistance"
-					"value"					"0.80"
 				}
 			}
 			"visuals"
@@ -8735,20 +8736,20 @@
 			}
 			"attributes"
 			{
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
-					"value" "5"
+					"value" "6"
 				}
 				"dmg taken from fire increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
 					"value"			"1.20"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 				"kill eater score type"
 				{
@@ -10914,7 +10915,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
+					"value"	"0.85"
 				}
 			}
 		}
@@ -11853,15 +11854,15 @@
 			}
 			"attributes"
 			{
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
-				}
 				"mod crit while airborne"
 				{
 					"attribute_class"	"crit_while_airborne"
 					"value"	"1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
 				}
 				"crit mod disabled"
 				{
@@ -13875,6 +13876,21 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
+				"mod crit while airborne"
+				{
+					"attribute_class"	"crit_while_airborne"
+					"value"	"1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -15429,7 +15445,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.95"
+					"value"	"0.85"
 				}
 			}
 		}
@@ -15490,15 +15506,20 @@
 					"attribute_class"	"crit_on_hard_hit"
 					"value"	"1"
 				}
-				"damage penalty on bodyshot"
-				{
-					"attribute_class"	"bodyshot_damage_modify"
-					"value"	"0.90"
-				}
 				"sniper crit no scope"
 				{
 					"attribute_class"	"sniper_crit_no_scope"
 					"value" "1"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "50"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value"	"0.90"
 				}
 				"sniper fires tracer HIDDEN"
  				{
@@ -15697,6 +15718,11 @@
 				{
 					"attribute_class"	"mult_sapper_damage"
 					"value"				"1.25"								
+				}
+				"sapper damage leaches health"
+				{
+					"attribute_class"	"sapper_damage_leaches_health"
+					"value"				"1"								
 				}
 				"sapper health penalty"
 				{
@@ -21480,7 +21506,8 @@ Fires....... something"
 			"baseitem"		"0"
 			"show_in_armory"	"1"
 			"item_name"		"#TF_Minigun_Deflector"
-			"item_quality"	"developer"
+//"item_quality"	"developer" valve type weapons bleed over any other rarity type upon switch, so its now unusual for the time being
+			"item_quality"	"rarity4"
 			"model_player"	"models/weapons/c_models/c_minigun/c_minigun.mdl"
 			"attach_to_hands" "1"
 			"propername"	"1"
@@ -21495,6 +21522,16 @@ Fires....... something"
 				{
 					"attribute_class" 	"attack_projectiles"
 					"value" "1"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value" "1.5"
+				}
+				"aiming movespeed decreased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value" "0.4"
 				}
 				"dmg taken increased"
 				{
@@ -21956,17 +21993,12 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "1.16"
-				}
-                                "bullets per shot bonus"
+                "bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.40"
-                                }
-                                "spread penalty"
+                }
+                "spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "1.60"
@@ -22140,7 +22172,7 @@ Fires....... something"
 			"anim_slot" "MELEE_ALLCLASS"
 			"used_by_classes"
 			{
-                                "spy"       "1"
+				"spy"       "1"
 			}
 			"static_attrs"
 			{
@@ -22150,6 +22182,11 @@ Fires....... something"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 			"attributes"
 			{
+				"crit from behind"
+				{
+					"attribute_class"	"crit_from_behind"
+					"value" "1.0"
+				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -22777,8 +22814,23 @@ Fires....... something"
 				"SRifle Charge rate increased"
 				{
 					"attribute_class"	"mult_sniper_charge_per_sec"
-					"value"				"1.60"
+					"value"				"1.70"
  				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"				"1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.50"
+ 				}
+				"sniper fires tracer"
+ 				{
+					"attribute_class"	"sniper_fires_tracer"
+					"value"	"1"
+				}
 				"provide on active"
 				{
 					"attribute_class"	"provide_on_active"
@@ -22788,11 +22840,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"				"0.20"
- 				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.80"
  				}
 				"lunchbox adds minicrits"
 				{
@@ -26114,13 +26161,18 @@ Fires....... something"
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.88"
+					"value"	"0.93"
 				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_MP44.Single"
+				"sound_burst"			"Weapon_MP44.SingleCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -26169,30 +26221,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"damage causes airblast"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.65"
-				}
-				"bullets per shot bonus"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.7"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0"
+					"attribute_class"	"damage_causes_airblast"
+					"value" "200"
 				}
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.5"
+					"value"				"0.6"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
+					"value"	"1.15"
 				}
 				"crit mod disabled"
 				{
@@ -31898,6 +31940,7 @@ Fires....... something"
 			"prefab"		"base_hat"
 			"item_name"		"#TF_spr18_frag_proof_fragger"
 			"item_type_name"		"#TF_Wearable_Helmet"
+			"item_description" "It helps?"
 			"item_class"	"tf_wearable"
 			"equip_region"		"whole_head"
 			"item_slot"	"head"
@@ -31916,7 +31959,12 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.80"
+					"value"	"0.99"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.99"
 				}
 			}
 			"used_by_classes"
@@ -34386,29 +34434,30 @@ Fires....... something"
 				"mercenary"	"1"
 				"sniper"	"1"
 				"engineer"	"1"
+				"soldier"	"1"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.80"
 				}
-				"clip size bonus"
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.40"
+				}
+				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.70"
+					"value"	"0.80"
 				}
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "1.65"
-                }
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Thompson.Single"
+				"sound_burst"			"Weapon_Thompson.SingleCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
