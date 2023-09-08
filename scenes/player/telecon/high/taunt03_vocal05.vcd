@@ -1,0 +1,80 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "audio"
+  {
+    event sequence "taunt03"
+    {
+      time 0.000000 3.900000
+      param "taunt03"
+      fixedlength
+    }
+    event speak "Scout.Taunts07"
+    {
+      time 0.142857 1.181950
+      param "Scout.Taunts07"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "Scout.SpecialCompleted03"
+    {
+      time 2.333334 2.778867
+      param "Scout.SpecialCompleted03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event expression "scared"
+    {
+      time 2.392857 2.785714
+      param "player\scout\emotion\emotion"
+      param2 "scared"
+      event_ramp
+      {
+        0.0515 0.8148
+        0.1848 0.8210
+      }
+    }
+  }
+  channel "emotion"
+  {
+    event expression "scaredUpper"
+    {
+      time 0.040178 1.940476
+      param "player\scout\emotion\emotion"
+      param2 "scaredUpper"
+      event_ramp
+      {
+        0.0788 0.5371
+        0.2121 0.6829 "curve_easein_to_curve_easeout"
+        1.7949 0.6829 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "madUpper"
+    {
+      time 1.669643 3.863095
+      param "player\scout\emotion\emotion"
+      param2 "madUpper"
+      event_ramp
+      {
+        0.1394 0.3680
+        0.3848 0.8375 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+        1.0939 0.7022
+        2.0931 0.7943 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "SceneRampTool" "100"
+  "GestureTool" "100"
+  "RampTool" "66"
+  "ExpressionTool" "100"
+  "CChoreoView" "56"
+}
+fps 60
+snap off
+ignorePhonemes off

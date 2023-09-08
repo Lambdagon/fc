@@ -1,0 +1,30 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "emotion"
+  {
+    event expression "mad"
+    {
+      time 0.010416 1.875000
+      param "player\scout\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.2632 1.0000 "curve_easein_to_curve_easeout"
+        1.3772 1.0000 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "64"
+  "ExpressionTool" "100"
+  "RampTool" "66"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

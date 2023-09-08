@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "audio"
+  {
+    event sequence "taunt02"
+    {
+      time 0.000000 4.333333
+      param "taunt02"
+      fixedlength
+    }
+    event speak "Scout.AutoCappedIntelligence02"
+    {
+      time 1.557971 2.489672
+      param "Scout.AutoCappedIntelligence02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event expression "madUpper"
+    {
+      time 0.021739 4.289855
+      param "player\scout\emotion\emotion"
+      param2 "madUpper"
+      event_ramp
+      {
+        0.0647 0.7403
+        4.1003 0.7202
+      }
+    }
+  }
+  channel "emotion"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "92"
+  "ExpressionTool" "100"
+  "RampTool" "28"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,81 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "audio"
+  {
+  }
+  channel "emotion"
+  {
+    event expression "painBigUpper"
+    {
+      time 0.013334 16.626665
+      param "player\scout\emotion\emotion"
+      param2 "painBigUpper"
+      event_ramp
+      {
+        0.6200 1.0000
+        1.3875 0.9109
+        1.8625 0.8812
+        2.2750 1.0000
+        2.6125 0.8416
+        3.0500 0.8812
+        4.8000 0.8713
+        5.9375 0.8911
+        6.8125 0.9703
+        7.4250 0.8515
+        8.0500 0.8713
+        8.2875 0.7327
+        8.5750 0.9703
+        8.9250 0.8614
+        10.9625 0.8614
+        11.4250 0.9901
+        11.8000 0.7921
+        12.5625 0.8218
+        14.3375 0.9010
+        15.8825 1.0000
+      }
+    }
+    event expression "painBig"
+    {
+      time 0.013334 16.626665
+      param "player\scout\emotion\emotion"
+      param2 "painBig"
+      event_ramp
+      {
+        0.5450 0.3267
+        0.9625 0.1188
+        1.9150 0.0594
+        2.4500 0.2277 "curve_easein_to_curve_easeout"
+        3.4300 0.1881 "curve_easein_to_curve_easeout"
+        3.9150 0.3960
+        4.3000 0.2178
+        4.8400 0.2277
+        6.5625 0.1485
+        7.1500 0.1782 "curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x"
+        7.6025 0.4456
+        8.2375 0.1485
+        8.9500 0.1683
+        10.6800 0.1683
+        11.2100 0.3564
+        11.7300 0.1683
+        13.0800 0.0693
+        13.7200 0.0693
+        14.0600 0.3466
+        14.5500 0.2079
+        15.6200 0.1782
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "50"
+  "ExpressionTool" "100"
+  "RampTool" "16"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

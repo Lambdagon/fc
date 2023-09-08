@@ -1,0 +1,59 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "audio"
+  {
+    event speak "Scout.Cheers03"
+    {
+      time 0.250441 1.179239
+      param "Scout.Cheers03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event expression "happyBig"
+    {
+      time 0.024826 2.988594
+      param "player\scout\emotion\emotion"
+      param2 "happyBig"
+      event_ramp
+      {
+        0.1364 0.8083
+        0.9750 0.7944
+        2.7400 0.8068
+      }
+    }
+    event expression "happyBigUpper"
+    {
+      time 0.376984 1.239303
+      param "player\scout\emotion\emotion"
+      param2 "happyBigUpper"
+      event_ramp
+      {
+        0.0650 0.7434
+        0.7850 0.7372
+      }
+    }
+    event sequence "taun01"
+    {
+      time 0.000000 3.000000
+      param "taunt01"
+      fixedlength
+    }
+  }
+  channel "emotion"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "168"
+  "ExpressionTool" "100"
+  "RampTool" "40"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

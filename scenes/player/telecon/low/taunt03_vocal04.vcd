@@ -1,0 +1,68 @@
+// Choreo version 1
+actor "scout"
+{
+  channel "audio"
+  {
+    event speak "Scout.Taunts12"
+    {
+      time 0.213235 2.198541
+      param "Scout.Taunts12"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event sequence "taunt03"
+    {
+      time 0.000000 3.900000
+      param "taunt03"
+      fixedlength
+    }
+    event expression "mad"
+    {
+      time 0.062500 3.885417
+      param "player\scout\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.1381 0.9511 "curve_kochanek_to_curve_kochanek"
+        0.4000 0.3210 "curve_kochanek_to_curve_kochanek"
+        2.1190 0.2828 "curve_kochanek_to_curve_kochanek"
+        2.5048 0.8532 "curve_kochanek_to_curve_kochanek"
+        3.7143 0.8532 "curve_kochanek_to_curve_kochanek"
+      }
+    }
+    event speak "Scout.SpecialCompleted03"
+    {
+      time 2.362744 2.808277
+      param "Scout.SpecialCompleted03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event expression "scared"
+    {
+      time 2.431372 2.774510
+      param "player\scout\emotion\emotion"
+      param2 "scared"
+      event_ramp
+      {
+        0.0762 0.9321
+      }
+    }
+  }
+  channel "emotion"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "68"
+  "ExpressionTool" "100"
+  "RampTool" "42"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

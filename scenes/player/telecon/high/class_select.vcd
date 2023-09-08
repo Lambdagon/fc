@@ -1,0 +1,88 @@
+// Choreo version 1
+event loop "loop"
+{
+  time 5.000000 -1.000000
+  param "4.000000"
+  loopcount "-1"
+}
+actor "scout"
+{
+  channel "sequence"
+  {
+    event sequence "intro"
+    {
+      time -0.764706 -0.764706
+      param "selectionMenu_StartPose"
+      fixedlength
+    }
+    event sequence "anim"
+    {
+      time 0.000000 2.966667
+      param "selectionMenu_Anim01"
+      fixedlength
+    }
+    event sequence "idle"
+    {
+      time -0.754902 -0.254902
+      param "selectionMenu_Idle"
+    }
+    event sequence "selectionMenu_Idle"
+    {
+      time 3.060606 5.929293
+      param "selectionMenu_Idle"
+    }
+  }
+  channel "facial"
+  {
+    event expression "mad"
+    {
+      time 0.004386 3.557549
+      param "player\scout\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.3118 0.2000
+        0.6529 0.2771 "curve_easein_to_curve_easeout"
+        0.9882 0.0000 "curve_easein_to_curve_easeout"
+        1.8765 0.0000 "curve_easein_to_curve_easeout"
+        2.5059 0.4457 "curve_easein_to_curve_easeout"
+        3.5532 0.4429 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "painBigUpper"
+    {
+      time 0.934211 1.934211
+      param "player\scout\emotion\emotion"
+      param2 "painBigUpper"
+      event_ramp
+      {
+        0.1118 0.1429
+        0.1882 0.4057 "curve_easein_to_curve_easeout"
+        0.7941 0.4086 "curve_easein_to_curve_easeout"
+      }
+    }
+    event expression "mad"
+    {
+      time 3.557600 6.178762
+      param "player\scout\emotion\emotion"
+      param2 "mad"
+      event_ramp
+      {
+        0.0000 0.4457 "curve_easein_to_curve_easeout"
+        2.4552 0.4429 "curve_easein_to_curve_easeout"
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "132"
+  "RampTool" "34"
+  "ExpressionTool" "74"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
