@@ -1,0 +1,731 @@
+//--------------------------------------------------------------------------------------------------------------
+// Telecon Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Criterion "TeleconIsKillSpeechObject" "TeleconKillSpeechObject" "1" "required" weight 0
+Criterion "TeleconIsNotStillonFire" "TeleconOnFire" "!=1" "required" weight 0
+Criterion "TeleconIsStillonFire" "TeleconOnFire" "1" "required" weight 0
+Criterion "TeleconNotKillSpeech" "TeleconKillSpeech" "!=1" "required" weight 0
+Criterion "TeleconNotKillSpeechMelee" "TeleconKillSpeechMelee" "!=1" "required" weight 0
+Criterion "TeleconNotKillSpeechMeleeFat" "TeleconKillSpeechMeleeFat" "!=1" "required" weight 0
+Criterion "TeleconNotSaidHealThanks" "TeleconSaidHealThanks" "!=1" "required"
+Criterion "IsHelpCapTelecon" "TeleconHelpCap" "1" "required" weight 0
+Criterion "NotTeleconGrabbedIntelligence" "TeleconGrabbedIntelligence" "!=1" "required"
+
+
+Response PlayerCloakedSpyDemomanTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify05.vcd" 
+}
+Rule PlayerCloakedSpyDemomanTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnDemoman
+	Response PlayerCloakedSpyDemomanTelecon
+}
+
+Response PlayerCloakedSpyEngineerTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify08.vcd" 
+}
+Rule PlayerCloakedSpyEngineerTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnEngineer
+	Response PlayerCloakedSpyEngineerTelecon
+}
+
+Response PlayerCloakedSpyHeavyTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify03.vcd" 
+}
+Rule PlayerCloakedSpyHeavyTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnHeavy
+	Response PlayerCloakedSpyHeavyTelecon
+}
+
+Response PlayerCloakedSpyMedicTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify07.vcd" 
+}
+Rule PlayerCloakedSpyMedicTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnMedic
+	Response PlayerCloakedSpyMedicTelecon
+}
+
+Response PlayerCloakedSpyPyroTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify04.vcd" 
+}
+Rule PlayerCloakedSpyPyroTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnPyro
+	Response PlayerCloakedSpyPyroTelecon
+}
+
+Response PlayerCloakedSpySniperTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify09.vcd" 
+}
+Rule PlayerCloakedSpySniperTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnSniper
+	Response PlayerCloakedSpySniperTelecon
+}
+
+Response PlayerCloakedSpySoldierTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify02.vcd" 
+}
+Rule PlayerCloakedSpySoldierTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnSoldier
+	Response PlayerCloakedSpySoldierTelecon
+}
+
+Response PlayerCloakedSpySpyTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpyIdentify06.vcd" 
+}
+Rule PlayerCloakedSpySpyTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon IsOnSpy
+	Response PlayerCloakedSpySpyTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech
+//--------------------------------------------------------------------------------------------------------------
+Response HealThanksTelecon
+{
+	scene "scenes/Player/Telecon/low/ThanksForTheHeal01.vcd" 
+	scene "scenes/Player/Telecon/low/ThanksForTheHeal02.vcd" 
+	scene "scenes/Player/Telecon/low/ThanksForTheHeal03.vcd" 
+}
+Rule HealThanksTelecon
+{
+	criteria ConceptMedicChargeStopped IsTelecon SuperHighHealthContext TeleconNotSaidHealThanks 50PercentChance
+	ApplyContext "TeleconSaidHealThanks:1:20"
+	Response HealThanksTelecon
+}
+
+Response PlayerRoundStartTelecon
+{
+	scene "scenes/Player/Telecon/low/BattleCry01.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Telecon/low/BattleCry02.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Telecon/low/BattleCry03.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Telecon/low/BattleCry04.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Telecon/low/BattleCry05.vcd" predelay "1.0, 5.0"
+}
+Rule PlayerRoundStartTelecon
+{
+	criteria ConceptPlayerRoundStart IsTelecon
+	Response PlayerRoundStartTelecon
+}
+
+Response PlayerCappedIntelligenceTelecon
+{
+	scene "scenes/Player/Telecon/low/AutoCappedIntelligence01.vcd" 
+	scene "scenes/Player/Telecon/low/AutoCappedIntelligence02.vcd" 
+	scene "scenes/Player/Telecon/low/AutoCappedIntelligence03.vcd" 
+	scene "scenes/Player/Telecon/low/Generic01.vcd" 
+}
+Rule PlayerCappedIntelligenceTelecon
+{
+	criteria ConceptPlayerCapturedIntelligence IsTelecon
+	Response PlayerCappedIntelligenceTelecon
+}
+
+Response PlayerCapturedPointTelecon
+{
+	scene "scenes/Player/Telecon/low/AutoCappedControlPoint01.vcd" 
+	scene "scenes/Player/Telecon/low/AutoCappedControlPoint02.vcd" 
+	scene "scenes/Player/Telecon/low/AutoCappedControlPoint03.vcd" 
+	scene "scenes/Player/Telecon/low/AutoCappedControlPoint04.vcd" 
+}
+Rule PlayerCapturedPointTelecon
+{
+	criteria ConceptPlayerCapturedPoint IsTelecon
+	Response PlayerCapturedPointTelecon
+}
+
+Response PlayerGrabbedIntelligenceTelecon
+{
+	scene "scenes/Player/Telecon/low/SpecialCompleted05.vcd" 
+}
+Rule PlayerGrabbedIntelligenceTelecon
+{
+	criteria ConceptPlayerGrabbedIntelligence IsTelecon NotTeleconGrabbedIntelligence 10PercentChance
+	ApplyContext "TeleconGrabbedIntelligence:1:30"
+	Response PlayerGrabbedIntelligenceTelecon
+}
+
+Response PlayerSuddenDeathTelecon
+{
+	scene "scenes/Player/Telecon/low/Jeers02.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers03.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers04.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers05.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers06.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers07.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers08.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers09.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers10.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers11.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers12.vcd" 
+}
+Rule PlayerSuddenDeathTelecon
+{
+	criteria ConceptPlayerSuddenDeathStart IsTelecon
+	Response PlayerSuddenDeathTelecon
+}
+
+Response PlayerStalemateTelecon
+{
+	scene "scenes/Player/Telecon/low/AutoDejectedTie01.vcd" 
+	scene "scenes/Player/Telecon/low/AutoDejectedTie02.vcd" 
+	scene "scenes/Player/Telecon/low/AutoDejectedTie03.vcd" 
+	scene "scenes/Player/Telecon/low/AutoDejectedTie04.vcd" 
+}
+Rule PlayerStalemateTelecon
+{
+	criteria ConceptPlayerStalemate IsTelecon
+	Response PlayerStalemateTelecon
+}
+
+Response PlayerTeleporterThanksTelecon
+{
+	scene "scenes/Player/Telecon/low/ThanksForTheTeleporter01.vcd" 
+	scene "scenes/Player/Telecon/low/ThanksForTheTeleporter02.vcd" 
+	scene "scenes/Player/Telecon/low/ThanksForTheTeleporter03.vcd" 
+}
+Rule PlayerTeleporterThanksTelecon
+{
+	criteria ConceptTeleported IsNotEngineer IsTelecon 30PercentChance
+	Response PlayerTeleporterThanksTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Combat
+//--------------------------------------------------------------------------------------------------------------
+Response KilledPlayerManyTelecon
+{
+	//scene "scenes/Player/Telecon/low/Taunts04.vcd" 
+}
+Rule KilledPlayerManyTelecon
+{
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay TeleconNotKillSpeech IsTelecon
+	ApplyContext "TeleconKillSpeech:1:10"
+	applycontexttoworld
+	Response KilledPlayerManyTelecon
+}
+
+Response KilledPlayerMeleeTelecon
+{
+	//scene "scenes/Player/Telecon/low/SpecialCompleted02.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted03.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted04.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted06.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted07.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted09.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted11.vcd" 
+	//scene "scenes/Player/Telecon/low/Taunts08.vcd" 
+	//scene "scenes/Player/Telecon/low/Taunts11.vcd" 
+}
+Rule KilledPlayerMeleeTelecon
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee TeleconNotKillSpeechMelee IsTelecon
+	ApplyContext "TeleconKillSpeechMelee:1:10"
+	applycontexttoworld
+	Response KilledPlayerMeleeTelecon
+}
+
+Response KilledPlayerMeleeTeleconFatTelecon
+{
+	//scene "scenes/Player/Telecon/low/SpecialCompleted01.vcd" 
+}
+Rule KilledPlayerMeleeTeleconFatTelecon
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 75PercentChance  IsWeaponMelee TeleconNotKillSpeechMeleeFat IsTelecon IsVictimHeavy
+	ApplyContext "TeleconKillSpeechMeleeFat:1:10"
+	applycontexttoworld
+	Response KilledPlayerMeleeTeleconFatTelecon
+}
+
+Response PlayerKilledCapperTelecon
+{
+	//scene "scenes/Player/Telecon/low/AutoCappedIntelligence01.vcd" 
+	//scene "scenes/Player/Telecon/low/Cheers01.vcd" 
+	//scene "scenes/Player/Telecon/low/Cheers06.vcd" 
+	//scene "scenes/Player/Telecon/low/NiceShot03.vcd" 
+	//scene "scenes/Player/Telecon/low/SpecialCompleted-AssistedKill02.vcd" 
+	//scene "scenes/Player/Telecon/low/Taunts02.vcd" 
+	//scene "scenes/Player/Telecon/low/Taunts09.vcd" 
+	//scene "scenes/Player/Telecon/low/Taunts18.vcd" 
+}
+Rule PlayerKilledCapperTelecon
+{
+	criteria ConceptCapBlocked IsTelecon
+	ApplyContext "TeleconKillSpeech:1:10"
+	Response PlayerKilledCapperTelecon
+}
+
+Response PlayerKilledDominatingTelecon
+{
+	scene "scenes/Player/Telecon/low/GoodJob02.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughEvil02.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughHappy01.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughHappy02.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughHappy03.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughHappy04.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughLong01.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/LaughLong02.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/Taunts16.vcd" predelay "2.5"
+}
+Rule PlayerKilledDominatingTelecon
+{
+	criteria ConceptKilledPlayer IsTelecon IsDominated
+	ApplyContext "TeleconKillSpeech:1:10"
+	Response PlayerKilledDominatingTelecon
+}
+
+Response PlayerKilledForRevengeTelecon
+{
+	scene "scenes/Player/Telecon/low/Cheers02.vcd" predelay "2.5"
+	scene "scenes/Player/Telecon/low/NiceShot02.vcd" predelay "2.5"
+	//scene "scenes/Player/Telecon/low/SpecialCompleted12.vcd" predelay "2.5"
+}
+Rule PlayerKilledForRevengeTelecon
+{
+	criteria ConceptKilledPlayer IsTelecon IsRevenge
+	ApplyContext "TeleconKillSpeech:1:10"
+	Response PlayerKilledForRevengeTelecon
+}
+
+Response PlayerKilledObjectTelecon
+{
+	//scene "scenes/Player/Telecon/low/SpecialCompleted10.vcd" 
+}
+Rule PlayerKilledObjectTelecon
+{
+	criteria ConceptKilledObject IsTelecon 30PercentChance IsARecentKill
+	ApplyContext "TeleconKillSpeechObject:1:30"
+	applycontexttoworld
+	Response PlayerKilledObjectTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Auto Speech Pain
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerAttackerPainTelecon
+{
+	scene "scenes/Player/Telecon/low/PainSevere01.vcd" 
+	scene "scenes/Player/Telecon/low/PainSevere02.vcd" 
+	scene "scenes/Player/Telecon/low/PainSevere03.vcd" 
+	scene "scenes/Player/Telecon/low/PainSevere04.vcd" 
+	scene "scenes/Player/Telecon/low/PainSevere05.vcd" 
+	scene "scenes/Player/Telecon/low/PainSevere06.vcd" 
+}
+Rule PlayerAttackerPainTelecon
+{
+	criteria ConceptAttackerPain IsTelecon
+	Response PlayerAttackerPainTelecon
+}
+
+Response PlayerOnFireTelecon
+{
+	scene "scenes/Player/Telecon/low/AutoOnFire01.vcd" 
+}
+Rule PlayerOnFireTelecon
+{
+	criteria ConceptFire IsTelecon TeleconIsNotStillonFire
+	ApplyContext "TeleconOnFire:1:7"
+	Response PlayerOnFireTelecon
+}
+
+Response PlayerOnFireRareTelecon
+{
+	scene "scenes/Player/Telecon/low/AutoOnFire02.vcd" 
+}
+Rule PlayerOnFireRareTelecon
+{
+	criteria ConceptFire IsTelecon 10PercentChance TeleconIsNotStillonFire
+	ApplyContext "TeleconOnFire:1:7"
+	Response PlayerOnFireRareTelecon
+}
+
+Response PlayerPainTelecon
+{
+	scene "scenes/Player/Telecon/low/PainSharp01.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp02.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp03.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp04.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp05.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp06.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp07.vcd" 
+	scene "scenes/Player/Telecon/low/PainSharp08.vcd" 
+}
+Rule PlayerPainTelecon
+{
+	criteria ConceptPain IsTelecon
+	Response PlayerPainTelecon
+}
+
+Response PlayerStillOnFireTelecon
+{
+	scene "scenes/Player/Telecon/low/autoonfiresecondary01.vcd" 
+}
+Rule PlayerStillOnFireTelecon
+{
+	criteria ConceptFire IsTelecon  TeleconIsStillonFire
+	ApplyContext "TeleconOnFire:1:7"
+	Response PlayerStillOnFireTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 1
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerGoTelecon
+{
+	scene "scenes/Player/Telecon/low/Go01.vcd" 
+	scene "scenes/Player/Telecon/low/Go02.vcd" 
+}
+Rule PlayerGoTelecon
+{
+	criteria ConceptPlayerGo IsTelecon
+	Response PlayerGoTelecon
+}
+
+Response PlayerHeadLeftTelecon
+{
+	scene "scenes/Player/Telecon/low/HeadLeft01.vcd" 
+}
+Rule PlayerHeadLeftTelecon
+{
+	criteria ConceptPlayerLeft  IsTelecon
+	Response PlayerHeadLeftTelecon
+}
+
+Response PlayerHeadRightTelecon
+{
+	scene "scenes/Player/Telecon/low/HeadRight01.vcd" 
+}
+Rule PlayerHeadRightTelecon
+{
+	criteria ConceptPlayerRight  IsTelecon
+	Response PlayerHeadRightTelecon
+}
+
+Response PlayerHelpTelecon
+{
+	scene "scenes/Player/Telecon/low/HelpMe01.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMe02.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMe03.vcd" 
+}
+Rule PlayerHelpTelecon
+{
+	criteria ConceptPlayerHelp IsTelecon
+	Response PlayerHelpTelecon
+}
+
+Response PlayerHelpCaptureTelecon
+{
+	scene "scenes/Player/Telecon/low/HelpMeCapture01.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMeCapture02.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMeCapture03.vcd" 
+}
+Rule PlayerHelpCaptureTelecon
+{
+	criteria ConceptPlayerHelp IsTelecon IsOnCappableControlPoint
+	ApplyContext "TeleconHelpCap:1:10"
+	Response PlayerHelpCaptureTelecon
+}
+
+Response PlayerHelpCapture2Telecon
+{
+	scene "scenes/Player/Telecon/low/StandOnThePoint01.vcd" 
+	scene "scenes/Player/Telecon/low/StandOnThePoint02.vcd" 
+	scene "scenes/Player/Telecon/low/StandOnThePoint03.vcd" 
+	scene "scenes/Player/Telecon/low/StandOnThePoint04.vcd" 
+	scene "scenes/Player/Telecon/low/StandOnThePoint05.vcd" 
+}
+Rule PlayerHelpCapture2Telecon
+{
+	criteria ConceptPlayerHelp IsTelecon IsOnCappableControlPoint IsHelpCapTelecon
+	Response PlayerHelpCapture2Telecon
+}
+
+Response PlayerHelpDefendTelecon
+{
+	scene "scenes/Player/Telecon/low/HelpMeDefend01.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMeDefend02.vcd" 
+	scene "scenes/Player/Telecon/low/HelpMeDefend03.vcd" 
+}
+Rule PlayerHelpDefendTelecon
+{
+	criteria ConceptPlayerHelp IsTelecon IsOnFriendlyControlPoint
+	Response PlayerHelpDefendTelecon
+}
+
+Response PlayerMedicTelecon
+{
+	scene "scenes/Player/Telecon/low/Medic01.vcd" 
+	scene "scenes/Player/Telecon/low/Medic02.vcd" 
+	scene "scenes/Player/Telecon/low/Medic03.vcd" 
+}
+Rule PlayerMedicTelecon
+{
+	criteria ConceptPlayerMedic IsTelecon
+	Response PlayerMedicTelecon
+}
+
+Response PlayerMoveUpTelecon
+{
+	scene "scenes/Player/Telecon/low/MoveUp01.vcd" 
+	scene "scenes/Player/Telecon/low/MoveUp02.vcd" 
+	scene "scenes/Player/Telecon/low/MoveUp03.vcd" 
+	scene "scenes/Player/Telecon/low/MoveUp04.vcd" 
+}
+Rule PlayerMoveUpTelecon
+{
+	criteria ConceptPlayerMoveUp  IsTelecon
+	Response PlayerMoveUpTelecon
+}
+
+Response PlayerNoTelecon
+{
+	scene "scenes/Player/Telecon/low/No01.vcd" 
+	scene "scenes/Player/Telecon/low/No02.vcd" 
+}
+Rule PlayerNoTelecon
+{
+	criteria ConceptPlayerNo  IsTelecon
+	Response PlayerNoTelecon
+}
+
+Response PlayerThanksTelecon
+{
+	scene "scenes/Player/Telecon/low/Thanks01.vcd" 
+	scene "scenes/Player/Telecon/low/Thanks02.vcd" 
+	scene "scenes/Player/Telecon/low/Thanks03.vcd" 
+}
+Rule PlayerThanksTelecon
+{
+	criteria ConceptPlayerThanks IsTelecon
+	Response PlayerThanksTelecon
+}
+
+Response PlayerYesTelecon
+{
+	scene "scenes/Player/Telecon/low/Yes01.vcd" 
+	scene "scenes/Player/Telecon/low/Yes02.vcd" 
+}
+Rule PlayerYesTelecon
+{
+	criteria ConceptPlayerYes  IsTelecon
+	Response PlayerYesTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 2
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerActivateChargeTelecon
+{
+	scene "scenes/Player/Telecon/low/ActivateCharge01.vcd" 
+	scene "scenes/Player/Telecon/low/ActivateCharge02.vcd" 
+	scene "scenes/Player/Telecon/low/ActivateCharge03.vcd" 
+}
+Rule PlayerActivateChargeTelecon
+{
+	criteria ConceptPlayerActivateCharge IsTelecon
+	Response PlayerActivateChargeTelecon
+}
+
+Response PlayerCloakedSpyTelecon
+{
+	scene "scenes/Player/Telecon/low/CloakedSpy01.vcd" 
+	scene "scenes/Player/Telecon/low/CloakedSpy02.vcd" 
+	scene "scenes/Player/Telecon/low/CloakedSpy03.vcd" 
+}
+Rule PlayerCloakedSpyTelecon
+{
+	criteria ConceptPlayerCloakedSpy IsTelecon
+	Response PlayerCloakedSpyTelecon
+}
+
+Response PlayerDispenserHereTelecon
+{
+	scene "scenes/Player/Telecon/low/NeedDispenser01.vcd" 
+}
+Rule PlayerDispenserHereTelecon
+{
+	criteria ConceptPlayerDispenserHere IsTelecon
+	Response PlayerDispenserHereTelecon
+}
+
+Response PlayerIncomingTelecon
+{
+	scene "scenes/Player/Telecon/low/Incoming01.vcd" 
+	scene "scenes/Player/Telecon/low/Incoming02.vcd" 
+	scene "scenes/Player/Telecon/low/Incoming03.vcd" 
+	scene "scenes/Player/Telecon/low/Incoming04.vcd" 
+}
+Rule PlayerIncomingTelecon
+{
+	criteria ConceptPlayerIncoming IsTelecon
+	Response PlayerIncomingTelecon
+}
+
+Response PlayerSentryAheadTelecon
+{
+	scene "scenes/Player/Telecon/low/SentryAhead01.vcd" 
+}
+Rule PlayerSentryAheadTelecon
+{
+	criteria ConceptPlayerSentryAhead IsTelecon
+	Response PlayerSentryAheadTelecon
+}
+
+Response PlayerSentryHereTelecon
+{
+	scene "scenes/Player/Telecon/low/NeedSentry01.vcd" 
+}
+Rule PlayerSentryHereTelecon
+{
+	criteria ConceptPlayerSentryHere IsTelecon
+	Response PlayerSentryHereTelecon
+}
+
+Response PlayerTeleporterHereTelecon
+{
+	scene "scenes/Player/Telecon/low/NeedTeleporter01.vcd" 
+}
+Rule PlayerTeleporterHereTelecon
+{
+	criteria ConceptPlayerTeleporterHere IsTelecon
+	Response PlayerTeleporterHereTelecon
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Speech Menu 3
+//--------------------------------------------------------------------------------------------------------------
+Response PlayerBattleCryTelecon
+{
+	scene "scenes/Player/Telecon/low/BattleCry01.vcd" 
+	scene "scenes/Player/Telecon/low/BattleCry02.vcd" 
+	scene "scenes/Player/Telecon/low/BattleCry03.vcd" 
+	scene "scenes/Player/Telecon/low/BattleCry04.vcd" 
+}
+Rule PlayerBattleCryTelecon
+{
+	criteria ConceptPlayerBattleCry IsTelecon
+	Response PlayerBattleCryTelecon
+}
+
+Response PlayerCheersTelecon
+{
+	scene "scenes/Player/Telecon/low/Cheers01.vcd" 
+	scene "scenes/Player/Telecon/low/Cheers02.vcd" 
+	scene "scenes/Player/Telecon/low/Cheers03.vcd" 
+}
+Rule PlayerCheersTelecon
+{
+	criteria ConceptPlayerCheers IsTelecon
+	Response PlayerCheersTelecon
+}
+
+Response PlayerGoodJobTelecon
+{
+	scene "scenes/Player/Telecon/low/GoodJob01.vcd" 
+	scene "scenes/Player/Telecon/low/GoodJob02.vcd" 
+	scene "scenes/Player/Telecon/low/GoodJob03.vcd" 
+	scene "scenes/Player/Telecon/low/GoodJob04.vcd" 
+}
+Rule PlayerGoodJobTelecon
+{
+	criteria ConceptPlayerGoodJob IsTelecon
+	Response PlayerGoodJobTelecon
+}
+
+Response PlayerJeersTelecon
+{
+	scene "scenes/Player/Telecon/low/Jeers01.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers02.vcd" 
+	scene "scenes/Player/Telecon/low/Jeers03.vcd" 
+}
+Rule PlayerJeersTelecon
+{
+	criteria ConceptPlayerJeers IsTelecon
+	Response PlayerJeersTelecon
+}
+
+Response PlayerLostPointTelecon
+{
+	scene "scenes/Player/Telecon/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Telecon/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Telecon/low/NegativeVocalization03.vcd" 
+}
+Rule PlayerLostPointTelecon
+{
+	criteria ConceptPlayerLostPoint IsTelecon
+	Response PlayerLostPointTelecon
+}
+
+Response PlayerNegativeTelecon
+{
+	scene "scenes/Player/Telecon/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Telecon/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Telecon/low/NegativeVocalization03.vcd" 
+}
+Rule PlayerNegativeTelecon
+{
+	criteria ConceptPlayerNegative IsTelecon
+	Response PlayerNegativeTelecon
+}
+
+Response PlayerNiceShotTelecon
+{
+	scene "scenes/Player/Telecon/low/NiceShot01.vcd" 
+	scene "scenes/Player/Telecon/low/NiceShot02.vcd" 
+	scene "scenes/Player/Telecon/low/NiceShot03.vcd" 
+}
+Rule PlayerNiceShotTelecon
+{
+	criteria ConceptPlayerNiceShot IsTelecon
+	Response PlayerNiceShotTelecon
+}
+
+Response PlayerPositiveTelecon
+{
+	scene "scenes/Player/Telecon/low/PositiveVocalization01.vcd" 
+	scene "scenes/Player/Telecon/low/PositiveVocalization02.vcd" 
+	scene "scenes/Player/Telecon/low/PositiveVocalization03.vcd" 
+	scene "scenes/Player/Telecon/low/PositiveVocalization04.vcd" 
+}
+Rule PlayerPositiveTelecon
+{
+	criteria ConceptPlayerPositive IsTelecon
+	Response PlayerPositiveTelecon
+}
+
+Response PlayerTauntsTelecon
+{
+	scene "scenes/Player/Telecon/low/LaughEvil03.vcd" 
+	scene "scenes/Player/Telecon/low/LaughShort01.vcd" 
+	scene "scenes/Player/Telecon/low/LaughShort02.vcd" 
+	scene "scenes/Player/Telecon/low/LaughShort03.vcd" 
+	scene "scenes/Player/Telecon/low/LaughShort04.vcd" 
+	scene "scenes/Player/Telecon/low/LaughShort05.vcd" 
+}
+Rule PlayerTauntsTelecon
+{
+	criteria ConceptPlayerTaunts IsTelecon
+	Response PlayerTauntsTelecon
+}
+
