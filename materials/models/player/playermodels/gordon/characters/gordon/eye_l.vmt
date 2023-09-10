@@ -1,0 +1,30 @@
+"EyeRefract"
+{
+	$iris			"models\player\playermodels\gordon\characters\eye-iris-green"
+	$ambientoccltexture		"models\player\playermodels\gordon\characters\eye_ao_l"
+	$corneatexture		"models\player\playermodels\gordon\characters\eye-cornea"
+
+	$eyeballradius		0.5
+	$ambientocclcolor		"[.3 .15 .1]"
+	$dilation			0.5
+	$parallaxstrength		0
+	$corneabumpstrength	1
+	$raytracesphere		1
+	$spheretexkillcombo	0
+	$glossiness	0.4
+
+	$envmap			"env_cubemap"
+
+	$halflambert	1
+	$nodecal		1
+
+	$cmpower	20
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar	$glossiness
+		}
+	}
+}

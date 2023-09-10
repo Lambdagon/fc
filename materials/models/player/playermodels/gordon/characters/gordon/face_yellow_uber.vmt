@@ -1,0 +1,98 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models\player\playermodels\gordon\characters\gordon\gordon_d_yellow_uber"
+	$bumpmap	"models\player\playermodels\gordon\characters\gordon\gordon_n"
+	<dx90
+	{
+		 	"$bumpmap" "water/dx80_tfwater001_normal"
+	}
+	"$bumpmap" "water/tfwater001_normal"
+	"$envmap" "effects/cubemapper"
+	"$surfaceprop" "metal"
+	"$halflambert" "1"
+
+	$phong	1
+	$phongboost	1
+	$phongexponenttexture	"models\player\playermodels\gordon\characters\gordon\gordon_e"
+	$phongfresnelranges	"[ .1 .05 .12 ]"
+	$phongalbedotint	1
+	$phongalbedoboost	10
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$bumpmap"
+			"animatedtextureframenumvar" "$bumpframe"
+			"animatedtextureframerate" 70
+		}
+		"InvulnLevel"
+		{
+			"resultVar" "$invulnlevel"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"	"$invulnlevel"
+			"srcVar2"	"$half"
+			"lessEqualVar"	"$invulnphongfading"
+			"greaterVar"	"$invulnphongfull"
+			"resultVar"	"$invulnphongoutput"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"	"$invulnlevel"
+			"srcVar2"	"$half"
+			"lessEqualVar"	"$invulnfmaxfading"
+			"greaterVar"	"$invulnfmaxfull"
+			"resultVar"	"$invulnfmaxoutput"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"	"$invulnlevel"
+			"srcVar2"	"$half"
+			"lessEqualVar"	"$invulnexponentfading"
+			"greaterVar"	"$invulnexponentfull"
+			"resultVar"	"$invulnexponentoutput"
+		}
+		"Sine"
+		{
+			"resultVar" "$invulnfmax"
+			"sineperiod" ".3"
+			"sinemin" "$invulnfmaxoutput"
+			"sinemax" "18"
+		}
+		"Sine"
+		{
+			"resultVar" "$invulnphong"
+			"sineperiod" ".3"
+			"sinemin" "$invulnphongoutput"
+			"sinemax" "1"
+		}
+		"Sine"
+		{
+			"resultVar" "$invulnexponent"
+			"sineperiod" ".3"
+			"sinemin" "$invulnexponentoutput"
+			"sinemax" "13"
+		}
+
+		"Equals"
+		{
+			"srcVar1" "$invulnexponent"
+			"resultVar" "$selfillumfresnelminmaxexp[2]"
+		}
+		"Equals"
+		{
+			"srcVar1" "$invulnfmax"
+			"resultVar" "$selfillumfresnelminmaxexp[1]"
+		}
+		"Equals"
+		{
+			"srcVar1" "$invulnphong"
+			"resultVar" "$phongboost" 
+		}
+
+
+
+	}
+}
