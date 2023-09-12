@@ -19354,6 +19354,8 @@
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
+			"item_logname"	"shotgun"
+			"item_iconname"	"shotgun"
 			"used_by_classes"
 			{
 				"john"				"1"
@@ -19781,6 +19783,8 @@
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
 			"show_in_armory"			"1"
+			"item_logname"	"SMG1"
+			"item_iconname"	"SMG1"
 			"item_slot"					"secondary" 
 			"attach_to_hands"			"2"
 			"model_world"				"models/weapons/w_smg1.mdl"
@@ -19850,7 +19854,7 @@
 			"item_name"	"USP Match"
 			"item_description"	"Part of Lambda's Weapon pack"
 			"item_slot"	"secondary"
-			"item_logname"	"maxgun"
+			"item_logname"	"usp"
 			"item_iconname"	"pistol"
 			"image_inventory"	"backpack/weapons/c_models/c_usp"
 			"image_inventory_size_w"		"128"
@@ -20714,6 +20718,8 @@
 			"model_world"	"models/weapons/w_irifle.mdl"
 			"model_player"	"models/weapons/c_irifle.mdl"
 			"attach_to_hands" "2"
+			"item_logname"	"AR2"
+			"item_iconname"	"AR2"
 			"inspect_panel_dist" "40"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -27423,8 +27429,8 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			//someone make functional viewmodels, by god
-			"model_player"	"models/weapons/v_models/v_shotgun_engineer_spas.mdl"
-			"model_world"	"models/workshop/weapons/c_models/c_kanopykiller/c_kanopykiller.mdl"
+			"model_player"	"models/workshop/weapons/v_models/kanopykiller/v_kanopy_engineer.mdl"
+			"model_world"	"models/workshop/weapons/w_models/kanopykiller/w_shotgun.mdl"
 			"attach_to_hands" "2"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
@@ -27433,7 +27439,6 @@ Fires....... something"
 			}
 			"static_attrs"
 			{
-				"viewmodel_offset"			"0 0 -4"
 				"min_viewmodel_offset"		"10 0 -6"
 				"weapon_stattrak_module_scale"				"0.608"				
 			}
@@ -27475,6 +27480,9 @@ Fires....... something"
 			{
 				"sound_single_shot"		"Weapon_ShotgunHL1.Single"
 				"sound_burst"			"Weapon_Shotgun.Double"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
+				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
 			}
 			"mouse_pressed_sound"	"weapons/scock1.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -34678,20 +34686,30 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.20"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.80"
 				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.40"
-				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"0.80"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2.00"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"1.50"
 				}
 			}
 			"visuals"
