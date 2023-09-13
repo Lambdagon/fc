@@ -60,13 +60,21 @@
 
 "DoubleCross.Inside"
 {
-	"dsp"	"4"
+	"dsp"	"1"
+
 
 	"playlooping"
 	{
-		"volume"	"0.57"
+		"volume"	".4"
 		"pitch"		"100"
-		"wave"		"ambient/levels/canals/tunnel_wind_loop1.wav" 
+		"wave"		"ambient/indoors.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	".05"
+		"pitch"		"100"
+		"wave"		"ambient/lighthum.wav"
 	}
 
 
@@ -75,20 +83,44 @@
 
 "DoubleCross.Outside"
 {
-	"dsp"	"22"
+	"dsp"	"1"
 
 	"playlooping"
 	{
-		"volume"	"0.06"
+		"volume"	".9"
 		"pitch"		"100"
-		"wave"		"ambient/wind/wind1.wav"
+		"wave"		"ambient/alpine_night.wav"
 	}
 
 	"playlooping"
 	{
-		"volume"	"0.06"
-		"wave"		"ambient/levels/canals/swamp_stereo_frogs_loop1.wav"
+		"volume"	".4"
 		"pitch"		"100"
+		"wave"		"ambient/lightwindcreaks.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	".2"
+		"pitch"		"100"
+		"wave"		"ambient/machine_hum.wav"
+	}
+
+
+	"playrandom"
+	{
+		"time"		"10,20"
+		"volume"	"1"
+		"pitch"		"100"
+		"rndwave"
+		{
+			"wave"		"ambient_mp3/dog1.mp3"
+			"wave"		"ambient_mp3/dog2.mp3"
+			"wave"		"ambient_mp3/dog3.mp3"
+			"wave"		"ambient_mp3/dog4.mp3"
+			"wave"		"ambient_mp3/owl3.mp3"
+			"wave"		"ambient_mp3/owl4.mp3"
+		}
 	}
 
 }

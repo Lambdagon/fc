@@ -63,25 +63,72 @@
 {
 	"dsp"	"1"
 
-	"playlooping"
+	"playrandom"
 	{
-		"volume"		".5"
+		"time"		"5,15"
+		"volume"		"0.3"
 		"pitch"		"100"
-		"wave"		"test/temp/soundscape_test/outdoor.wav"
+		"position"		"0"
+		"attenuation"	"1"	
+		"rndwave"
+		{
+			"wave"		"ambient_mp3/cow1.mp3"
+			"wave"		"ambient_mp3/cow2.mp3"
+			"wave"		"ambient_mp3/cow3.mp3"
+			"wave"		"ambient_mp3/bird1.mp3"
+			"wave"		"ambient_mp3/bird2.mp3"
+			"wave"		"ambient_mp3/bird3.mp3"
+		}
 	}
 
 	"playrandom"
 	{
-		"volume"	"0.25,0.35"
-		"pitch"		"85, 125"
-		"time"		"3.0, 7.0"
-		"position"	"random"
-		"soundlevel"	"SNDLVL_55dB"
+		"time"		"10,25"
+		"volume"		".8"
+		"pitch"		"100"
+		"position"		"2"
+		"attenuation"	"1"	
 		"rndwave"
 		{
-			"wave"	"ambient/alarms/manhack_alert_pass1.wav"
-			"wave"	"ambient/alarms/scanner_alert_pass1.wav"
+			"wave"		"ambient_mp3/cp_harbor/car_1shot_01.mp3"
+			"wave"		"ambient_mp3/cp_harbor/car_1shot_02.mp3"
+			"wave"		"ambient_mp3/cp_harbor/car_1shot_03.mp3"
+			"wave"		"ambient_mp3/cp_harbor/train_1shot_02.mp3"
+			"wave"		"ambient_mp3/cp_harbor/car_1shot_06.mp3"
+			"wave"		"ambient_mp3/cp_harbor/car_1shot_05.mp3"
 		}
+	}
+
+	"playlooping"
+	{
+		"volume"	".4"
+		"pitch"		"100"
+		"position"	"1"
+		"attenuation"	"1"	
+		"wave"		"ambient/factory_outdoor.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	".3"
+		"pitch"		"100"
+		"position"	"3"
+		"attenuation"	"1"	
+		"wave"		"ambient/factory_outdoor.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"		".1"
+		"pitch"		"100"
+		"wave"		"ambient/outdoors_quiet_birds.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"		".8"
+		"pitch"		"100"
+		"wave"		"ambient/mainstreet.wav"
 	}
 }
 
@@ -92,20 +139,8 @@
 
 	"playlooping"
 	{
-		"volume"	"0.5"
-		"wave"		"ambient/atmosphere/drone4lp.wav"
+		"volume"	"0.3"
 		"pitch"		"100"
-	}
-	"playrandom"
-	{
-		"time"		"4, 4"
-		"volume"	"0.5"
-		"rndwave"
-		{
-			"wave"		"ambient/atmosphere/metallic1.wav"
-			"wave"		"ambient/atmosphere/metallic2.wav"
-		}
-
-		"pitch"		"100"
+		"wave"		"ambient/mainstreet.wav"
 	}
 }
