@@ -1070,7 +1070,58 @@
 			"used_by_classes"
 			{
 				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		
+		"weapon_paddle"
+		{
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_BAT"
+			"enabled"	"0"
+			"item_class"	"tf_weapon_bat"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Bat"
+			"item_name"	"#TF_Weapon_Bat"
+			"inspect_panel_dist" "35"
+			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
+			"item_quality"	"normal"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_bat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist"        "45"
+			"attach_to_hands"	"0"
+			"model_player"	"models/weapons/v_models/v_paddle_scout.mdl"
+			"model_world"	"models/weapons/w_models/w_paddle.mdl"
+			"used_by_classes"
+			{
 				"robo"	"1"
+			}
+			"attributes"
+			{
+				"attack projectiles"
+				{
+					"attribute_class" 	"attack_projectiles"
+					"value" "1"
+				}
 			}
 			"static_attrs"
 			{
@@ -7403,6 +7454,14 @@
 			"name"	"TF_WEAPON_INVIS"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_invis"
+			"baseitem" "1"
+		}
+		
+		"31"
+		{
+			"name"	"FO_WEAPON_PADDLE"
+			"first_sale_date"	"2010/09/29"
+			"prefab"	"weapon_paddle"
 			"baseitem" "1"
 		}
 
