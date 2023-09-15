@@ -1,0 +1,58 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\player/scientist\hwm/scientist_head"
+	"$basemapalphaphongmask" "1"
+	// wrinkle maps need to have $bumpmap enabled to show up
+	"$compress"    "models\player/scientist\hwm/scientist_head_compress"
+	"$stretch"     "models\player/scientist\hwm/scientist_head_stretch"
+	// $bumpmap is a shared 16x16 flat normal map, and is needed or lightwarp won't shade correctly.
+	"$bumpmap"     "models/player/shared/shared_normal"
+
+	"$ambientocclusion" "0.75"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "1"
+	"$detailblendfactor" .0
+	"$detailblendmode" 6
+// "$bbqamount" "1"	
+// 	"$two" "2.35"
+// 	"$one" "1"
+// 	"$absburnminusone" "1"
+// 	"$burnminusone" "1"
+// 	"$finalburnlevel" "1"
+// 	"$burnlevel" "0"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models\player/scientist\hwm/scientist_head_exp"
+	"$phongboost" "0.2"	
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.3 1 8]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "2"										// Boost for ambient cube component of rim lighting
+	"$rimmask" "1"                  // Use the alpha channel of the $phongexponenttexture as a rim mask.
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$cloakColorTint" "[1 0.5 0.4]"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+	}
+}
+
