@@ -1,0 +1,79 @@
+"sp_postsquare"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start" origin "-396 834 140"}
+		delete {classname "info_player_start" origin "-959 2145 130"}
+		delete {targetname "allaccountedfor"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "trigger_coop" origin "-190 6440 670"
+			values
+			{
+				model "*67"
+				spawnflags "1"
+				angles "90 90 0"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "brush_cantgobackedt,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,0.5,1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		edit {targetname "changelevel" values {targetname "changelevelnouse" startdisabled "1"} }
+		create {classname "trigger_changelevel" origin "-425 6430 730"
+			values
+			{
+				model "*67"
+				spawnflags "0"
+				map "sp_canal1"
+				landmark "postsquare_canal1"
+				startdisabled "0"
+			}
+		}
+		edit {targetname "brush_cantgoback" values {targetname "brush_cantgobackedt" startdisabled "0"} }
+	}
+}

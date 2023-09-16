@@ -1,0 +1,57 @@
+"sp_casino2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start" origin "1511 5478 1200"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "garagebutton,AddOutput,OnIn music2edt:volume:2:0:1,0,-1"
+				OnMapSpawn "garagebutton,AddOutput,OnIn music2edt:volume:0:2:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "syn_transition_wall" origin "1200 4050 765"
+			values
+			{
+				targetname "syn_backtrack_wall"
+				angles "0 90 0"
+			}
+		}
+		edit {classname "trigger_changelevel" values {edt_map "sp_casino2" edt_landmark "casino_casino2" spawnflags "6" startdisabled "1"} }
+		create {classname "point_teleport" origin "3355 6510 1030"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 0 0"
+			}
+		}
+		edit {classname "trigger_multiple" origin "3353 6509.5 1069.5" values {targetname "syn_trig1"} }
+		edit {targetname "music2" values {targetname "music2edt"} }
+	}
+}

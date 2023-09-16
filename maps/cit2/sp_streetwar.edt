@@ -1,0 +1,116 @@
+"sp_streetwar"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "trigger_multiple" origin "4655 -3470 -256"}
+		delete {classname "logic_auto" origin "2272.28 -569 167.316"}
+		delete {targetname "triggerlook_squadleaves"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch spickup:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch spickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch bpickup:Enable::0.5:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch bpickup:EquipAllPlayers::0.6:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch ppickup:Enable::1.75:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch ppickup:EquipAllPlayers::1.76:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch smgpickup:Enable::2:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch smgpickup:EquipAllPlayers::2.1:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch cpickup:Enable::3.5:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch cpickup:EquipAllPlayers::3.6:1,0,-1"
+				OnMapSpawn "trigger_player_getstuff,AddOutput,OnStartTouch syn_autosave:Save::5:1,0,-1"
+				OnMapSpawn "button5,AddOutput,OnPressed forcefield4:Enable::0:-1,0,-1"
+				OnMapSpawn "button5,AddOutput,OnPressed syn_cooptele1:Enable::0:-1,0,-1"
+				OnMapSpawn "button5,AddOutput,OnPressed syn_cooptele1:TeleportPlayersNotTouching::0.1:-1,0,-1"
+				OnMapSpawn "button5,AddOutput,OnPressed syn_cooptele1:kill::0.2:-1,0,-1"
+				OnMapSpawn "button5,AddOutput,OnPressed syn_autosave:Save::5:-1,0,-1"
+				OnMapSpawn "trigger_closetoexit,AddOutput,OnPlayersIn exitdoor1edt:Open::0:1,0,-1"
+				OnMapSpawn "trigger_closetoexit,AddOutput,OnPlayersIn triggerlook_squadleaves:Disable::0:1,0,-1"
+				OnMapSpawn "trigger_closetoexit,AddOutput,OnPlayersIn !self:Disable::1:1,0,-1"} }
+		create {classname "info_player_equip" values {targetname "bpickup" weapon_shotgun "1" ammo_buckshot "24" startdisabled "1"} }
+		create {classname "info_player_equip" values {targetname "smgpickup" weapon_smg1 "1" ammo_smg1 "45" startdisabled "1"} }
+		create {classname "info_player_equip" values {targetname "ppickup" weapon_pistol "1" ammo_pistol "36" startdisabled "1"} }
+		create {classname "info_player_equip" values {targetname "cpickup" weapon_crowbar "1" startdisabled "1"} }
+		create {classname "info_player_equip" values {targetname "spickup" item_suit "1" weapon_frag "1" startdisabled "1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "point_teleport" origin "2450 -790 65"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 180 0"
+			}
+		}
+		create {classname "trigger_coop" origin "1425 -4120 -150"
+			values
+			{
+				targetname "syn_cooptele1"
+				startdisabled "1"
+				model "*79"
+				spawnflags "1"
+				angles "0 45 0"
+				target "syn_cooptarg1"
+			}
+		}
+		create {classname "info_target" origin "1465 -4120 -200" values {targetname "syn_cooptarg1" angles "0 180 0"} }
+		edit {targetname "trigger_closetoexit" values {classname "trigger_coop" spawnflags "1" counttype "1" usehud "1" playervalue "50"} }
+		edit {targetname "exitdoor1" values {targetname "exitdoor1edt"} }
+		edit {targetname "blackout_viewcontroller" values {targetname "syn_blackout_viewcontroller"} }
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,1"
+				OnTimer "syn_blackout_viewcontroller,Enable,,0,1"
+				OnTimer "rebel_medic,SetMedicOff,,0,-1"
+				OnTimer "fadein,Fade,,0,-1"
+				OnTimer "sound_wake_ambience,PlaySound,,0,-1"
+				//OnTimer "syn_blackout_viewcontroller,AddOutput,vehicle_driver_eyes,0.1,-1"
+				OnTimer "sound_crying_wakeup,PlaySound,,0.3,-1"
+				OnTimer "syn_teleport_01,Teleport,,0.5,-1"
+				OnTimer "scene_sarah_speech,Cancel,,2,1"
+				OnTimer "seq_rebel_leavegarage_sarah*,CancelSequence,,3,-1"
+				OnTimer "seq_rebel_leavegarage_sarah*,CancelSequence,,6,-1"
+				OnTimer "sound_getout_wakeup,PlaySound,,10,-1"
+				OnTimer "scene_sarah_speech,Start,,27,1"
+				OnTimer "syn_blackout_viewcontroller,Disable,,27,-1"
+				OnTimer "syn_trig1,kill,,27,-1"
+			}
+		}
+		edit {targetname "trigger_start_teleport" values {startdisabled "0"} }
+		create {classname "trigger_multiple" origin "2450 -790 80"
+			values
+			{
+				model "*114"
+				spawnflags "1"
+				angles "90 0 0"
+				targetname "syn_trig1"
+				OnTrigger "weaponstrip,StripWeaponsAndSuit,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,1"
+				OnTrigger "syn_hudtimer,Start,15,1,1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "3300 -690 -5"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 180 0"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "apickup" weapon_ar2 "1" ammo_ar2 "60" startdisabled "1"} }
+		create {classname "weapon_ar2" origin "960 -3070 -180"
+			values
+			{
+				OnPlayerPickUp "apickup,Enable,,0,-1"
+				OnPlayerPickUp "apickup,EquipAllPlayers,,0.1,-1"
+			}
+		}
+	}
+}

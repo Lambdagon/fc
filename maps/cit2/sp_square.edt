@@ -1,0 +1,94 @@
+"sp_square"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "syn_x,AddOutput,OnPlayerPickUp xpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "syn_x,AddOutput,OnPlayerPickUp xpickup:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "syn_x,AddOutput,OnPlayerPickup syn_global_crossbow:TurnOn::0:1,0,-1"
+				OnMapSpawn "larry,AddOutput,OnDeath syn_loadsaved:Reload::4:-1,0,-1"
+				OnMapSpawn "event_larry_executed,AddOutput,OnTrigger syn_loadsaved:Reload::15:-1,0,-1"
+				OnMapSpawn "trigger_leavebuilding,AddOutput,OnTrigger syn_autosave:Save::3:-1,0,-1"
+				OnMapSpawn "button_elite,AddOutput,OnIn syn_teleport_01:Teleport::0:-1,0,-1"
+				OnMapSpawn "seq_executed_gouptodeath,AddOutput,OnBeginSequence syn_autosave:Save::20:-1,0,-1"
+				OnMapSpawn "trigger_larry_go_on_2,AddOutput,OnPlayersIn brush_noreturnantirush:Disable::0:-1,0,-1"
+				OnMapSpawn "trigger_larry_go_on_2,AddOutput,OnPlayersIn exitdoornoclose:Unlock::0:-1,0,-1"
+				OnMapSpawn "trigger_larry_go_on_2,AddOutput,OnPlayersIn exitdoornoclose:Open::0:-1,0,-1"
+				OnMapSpawn "trigger_larry_go_on_2,AddOutput,OnPlayersIn !self:Disable::1:-1,0,-1"
+				OnMapSpawn "trigger_bothinside,AddOutput,OnTrigger trigger_levelchangeedt:Enable::0:1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "player_loadsaved" values {targetname "syn_loadsaved"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "syn_transition_wall" origin "580 -2845 10"
+			values
+			{
+				targetname "syn_backtrack_wall"
+				edt_mins "-8 -80 -40"
+				edt_maxs "8 80 80"
+			}
+		}
+		edit {classname "trigger_changelevel" values {edt_map "sp_presquare" edt_landmark "presquare_square" spawnflags "2" startdisabled "1"} }
+		create {classname "point_teleport" origin "2050 -710 310"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "20 0 0"
+			}
+		}
+		edit
+		{
+			targetname "trigger_larry_go_on_2"
+			values
+			{
+				classname "trigger_coop"
+				spawnflags "1"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		edit {targetname "door_presquare" values {targetname "door_presquarenoclose"} }
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		edit {classname "weapon_crossbow" origin "1701 -617 477" values {origin "1701 -617 482" targetname "syn_x"} }
+		edit {targetname "brush_noreturn" values {targetname "brush_noreturnantirush" startdisabled "0"} }
+		edit {targetname "exitdoor" values {targetname "exitdoornoclose"} }
+		edit {classname "prop_dynamic" origin "-2396 2019.5 96.1392" values {parentname "exitdoornoclose"} }
+		edit {targetname "trigger_levelchange" values {targetname "trigger_levelchangeedt"} }
+		create {classname "ambient_generic" values {message "larry_nooo.wav"} }
+	}
+}

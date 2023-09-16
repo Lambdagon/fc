@@ -1,0 +1,123 @@
+"ptsd_festive_2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "dawalll,AddOutput,OnBreak syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "portadoor,AddOutput,OnFullyOpen syn_coop_end:TeleportPlayersNotTouching::0:-1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_crowbar "1"
+				weapon_stunstick "1"
+				weapon_frag "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "smgpickup" startdisabled "1" weapon_smg1 "1"} }
+		create {classname "info_player_equip" values {targetname "rpickup" startdisabled "1" weapon_357 "1"} }
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1" ammo_357 "12"} }
+		create {classname "info_player_coop" origin "2740 -3785 405" values {targetname "syn_spawnpoint_00" angles "0 -90 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "2115 -5535 600" values {targetname "syn_spawnpoint_01" angles "0 -90 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1620 -7265 600" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "trigger_coop" origin "2125 -5560 620"
+			values
+			{
+				model "*42"
+				startdisabled "0"
+				spawnflags "1"
+				angles "0 0 90"
+				counttype "1"
+				usehud "1"
+				playervalue "100"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "trick_1door,Open,,0,-1"
+				OnPlayersIn "trick_1,Enable,,0,-1"
+				OnPlayersIn "light_trick,TurnOn,,0,-1"
+				OnPlayersIn "trick_props,Alpha,255,0,-1"
+				OnPlayersIn "glow_trick,ShowSprite,,0,-1"
+				OnPlayersIn "whom,Disable,,0,-1"
+				OnPlayersIn "whom,DisableCollision,,0,-1"
+				OnPlayersIn "trick_props,EnableCollision,,0,-1"
+				OnPlayersIn "secret_invert,Disable,,0,-1"
+				OnPlayersIn "!self,Disable,,0,-1"
+				OnPlayersIn "syn_block,Close,,0,-1"
+			}
+		}
+		edit {targetname "trick_first" values {targetname "trick_firstedt" startdisabled "1"} }
+		delete {classname "trigger_multiple" origin "2120 -5204 632"}
+		delete {classname "trigger_multiple" origin "2122 -5176 632"}
+		create {classname "func_door" origin "2123 -5711 624"
+			values
+			{
+				edt_getbspmodelfor_targetname "trick_first"
+				targetname "trick_1door"
+				solid "6"
+				DisableShadows "1"
+				speed "100"
+				wait "-1"
+				forceclosed "1"
+				spawnpos "0"
+				spawnflags "32"
+				movedir "90 0 0"
+				OnFullyOpen "!self,kill,,0,-1"
+			}
+		}
+		create {classname "func_door" origin "2125 -5169.5 623.5"
+			values
+			{
+				edt_getbspmodelfor_targetname "trick_first"
+				targetname "syn_block"
+				solid "6"
+				noise1 "custom/sci_pain10.wav"
+				DisableShadows "1"
+				speed "100"
+				wait "-1"
+				forceclosed "1"
+				spawnpos "1"
+				spawnflags "32"
+				movedir "90 0 0"
+				angles "0 180 0"
+			}
+		}
+		delete {classname "trigger_once" origin "-1653 -13063 613.2"}
+		create {classname "trigger_coop" origin "-1653 -13040 590"
+			values
+			{
+				targetname "syn_coop_end"
+				model "*66"
+				spawnflags "1"
+				counttype "1"
+				usehud "1"
+				playervalue "80"
+				startdisabled "0"
+				angles "90 90 0"
+				target "syn_endtp"
+				OnPlayersIn "portadoor,Open,,0.5,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0,-1"
+				OnPlayersIn "!self,Disable,,0.5,-1"
+			}
+		}
+		create {classname "info_target" origin "-1652 -13062 580" values {targetname "syn_endtp" angles "0 90 0" startdisabled "0"} }
+		create {classname "func_brush" origin "-1655 -13025 562" values {model "*1" angles "90 0 0" spawnflags "2" Solidity "2" solidbsp "1" rendermode "10"} }
+		edit {targetname "portadoor" values {forceclosed "1"} }
+	}
+}

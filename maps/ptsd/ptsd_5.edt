@@ -1,0 +1,55 @@
+"ptsd_5"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		edit {classname "weapon_annabelle" values {classname "weapon_shotgun"} }
+		edit {classname "weapon_alyxgun" values {classname "weapon_pistol"} }
+		edit {classname "weapon_brickbat" values {classname "weapon_pipe"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup syn_equipment_base:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_*,AddOutput,RespawnCount -1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				ammo_pistol "54"
+				ammo_357 "18"
+				ammo_buckshot "24"
+				ammo_smg1 "90"
+				ammo_ar2 "90"
+				ammo_xbowbolt "9"
+				weapon_frag "1"
+				ammo_grenade "3"
+				weapon_physcannon "1"
+			}
+		}
+		create {classname "info_player_coop" origin "-4305 -225 -27" values {targetname "syn_spawnpoint_00" angles "0 -90 0" startdisabled "0"} }
+		delete {targetname "apc_knockout_trigger"}
+		delete {targetname "cupcop_policegoal"}
+		delete {targetname "knockout_trigger"}
+		delete {targetname "knockout_trigger_2"}
+		delete {targetname "shop_knockout_trigger"}
+		delete {targetname "knockout_fade"}
+		edit {classname "trigger_once" origin "-5688 -3824 64"
+			values
+			{
+				classname "trigger_changelevel"
+				targetname "syn_toptsd6"
+				map "ptsd_6"
+				landmark "topsd6"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_landmark" origin "-5688 -3824 0" values {targetname "topsd6"} }
+	}
+}

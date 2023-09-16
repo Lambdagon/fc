@@ -1,0 +1,55 @@
+ending_loop
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		create {classname "point_servercommand" values {targetname "syn_ps"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "trigger_once" origin "32.6839 -1.13485 -47"
+			values
+			{
+				spawnflags "1"
+				edt_maxs "20 20 20"
+				edt_mins "-20 -20 -20"
+				OnTrigger "syn_hudtimer,Start,10,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "32.6839 -1.13485 13"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+		create {classname "info_player_coop" origin "32.6839 -1.13485 -47" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "text_wake1,Display,,0,-1"
+				OnTimer "text_wake2,Display,,3,-1"
+			}
+		}
+		delete {classname "logic_auto" origin "-14.7892 39 21.4396"}//Replaced in hud_timer
+		delete {targetname "view"}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "compotor,AddOutput,OnPlayerUse syn_ps:Command:changelevel ptsd2 ptsd_2_p1_fake:4:-1,0,-1"
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+"the_end"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "telepor,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "ptsd_tele_2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "fadein,AddOutput,OnBeginFade syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"
+				OnMapSpawn "fadein,AddOutput,OnBeginFade syn_endroomtp:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_trigend,AddOutput,OnStartTouch endgame:EndGame::10:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_player_coop" origin "-1070 -473 33" values {targetname "syn_spawnpoint_00" angles "0 0 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "768 640 30" values {targetname "syn_spawnpoint_01" angles "0 0 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "2065 5215 -550" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "180 2735 50" values {targetname "syn_spawnpoint_03" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1985 3280 110" values {targetname "syn_spawnpoint_04" angles "0 0 0" startdisabled "1"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		edit {classname "trigger_teleport" origin "-124 972 36.73" values {targetname "syn_trig1"} }
+		edit {classname "trigger_once" origin "-15904 15936 320" values {targetname "syn_trigend"} }
+		create {classname "point_teleport" origin "-1985 3280 110" values {targetname "syn_endroomtp" angles "0 0 0" target "!player"} }
+	}
+}

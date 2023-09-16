@@ -1,0 +1,34 @@
+"sp_ending"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "credits,AddOutput,OnCreditsDone syn_viewcontrol:Disable::2:-1,0,-1"
+				OnMapSpawn "credits,AddOutput,OnCreditsDone endgame:EndGame::3:-1,0,-1"
+				OnMapSpawn "teleport_ending,AddOutput,OnStartTouch syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "teleport_ending,AddOutput,OnStartTouch syn_viewcontrol:Enable::0:1,0,-1"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		create {classname "point_teleport" origin "4136 5056 -230"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 0 0"
+			}
+		}
+		create {classname "point_viewcontrol" origin "4200 5056 -230"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+	}
+}

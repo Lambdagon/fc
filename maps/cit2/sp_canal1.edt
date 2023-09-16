@@ -1,0 +1,139 @@
+"sp_canal1"
+{
+	console
+	{
+		sk_gunship_health_increments "12"
+	}
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "trigger_multiple" origin "10991 7886 82.5"}
+		delete {targetname "relay_changelevel"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "lever_real,AddOutput,OnPressed syn_vehiclespawn_1:Enable::0:1,0,-1"
+				OnMapSpawn "lever_real,AddOutput,OnPressed syn_spawnpoint_00:Disable::0:1,0,-1"
+				OnMapSpawn "lever_real,AddOutput,OnPressed syn_spawnpoint_01:Enable::0:1,0,-1"
+				OnMapSpawn "lever_real,AddOutput,OnPressed syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "lever_real,AddOutput,OnPressed syn_autosave:Save::0:1,0,-1"
+				OnMapSpawn "gunship,AddOutput,OnDeath syn_vehiclespawn_2:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_scene_imglad,AddOutput,OnTrigger syn_spawnpoint_01:Disable::0:1,0,-1"
+				OnMapSpawn "trigger_scene_imglad,AddOutput,OnTrigger syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_scene_imglad,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "trigger_scene_imglad,AddOutput,OnTrigger syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickUp rpgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_rpg,AddOutput,OnPlayerPickUp rpgpickup:EquipAllPlayers::0.1:-1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		create {classname "info_vehicle_spawn" origin "-1342 -10906 529.49"
+			values
+			{
+				targetname "syn_vehiclespawn_1"
+				angles "0 0 0"
+				startdisabled "1"
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"
+			}
+		}
+		create {classname "info_vehicle_spawn" origin "-1179.61 3736.3 322"
+			values
+			{
+				targetname "syn_vehiclespawn_2"
+				angles "0 180 0"
+				startdisabled "1"
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"
+			}
+		}
+		create {classname "point_teleport" origin "-1055 3560 348"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 -30 0"
+			}
+		}
+		create { classname "syn_transition_wall" origin "10960 8000 0"
+			values
+			{
+				targetname "syn_wall"
+				angles "0 0 0"
+			}
+		}
+		create { classname "syn_transition_wall" origin "10960 8000 320"
+			values
+			{
+				targetname "syn_wall"
+				startdisabled "1"
+				angles "0 0 0"
+			}
+		}
+		create {classname "trigger_coop" origin "11300 7930 60"
+			values
+			{
+				model "*131"
+				spawnflags "32"
+				angles "0 0 0"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "syn_wall,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,0.5,1"
+			}
+		}
+		edit {classname "info_player_start" origin "-955 -10965 552" values {classname "info_player_coop" targetname "syn_spawnpoint_00"} }
+		create {classname "info_player_coop" origin "-1445 -10900 560" values {targetname "syn_spawnpoint_01" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1076.74 3713.19 348" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_equip" values {targetname "rpgpickup" startdisabled "1" weapon_rpg "1" ammo_rpg_round "2"} }
+		edit {classname "weapon_rpg" origin "-882 3953 391" values {origin "-842 3953 400"} }
+		edit {targetname "changelevel" values {startdisabled "0"} }
+	}
+}

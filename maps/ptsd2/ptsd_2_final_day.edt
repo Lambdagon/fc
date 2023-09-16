@@ -1,0 +1,234 @@
+ptsd_2_final_day
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		delete {classname "weapon_crowbar"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		create {classname "point_servercommand" values {targetname "syn_ps"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {targetname "noneedto" values {spawnflags "0"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "trigger_changelevel" values {targetname "syn_changelevelback" map "ptsd_2_finale_2" landmark "nomark" model "*1" spawnflags "6"} }
+		create {classname "info_landmark" values {targetname "nomark"} }
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		delete {classname "logic_auto" origin "-1788.36 10519.2 -823"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-13814 2786.88 274.586"}//Replaced in hud_timer
+		create {classname "info_player_coop" origin "-13856 2727.77 320" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-9905 2460 -450" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-6595 5670 -1645" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-4870 7710 -1760" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-6270 10210 -700" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-3025 10410 -720" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_givemore"
+				startdisabled "1"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_crossbow "1"
+				weapon_crowbar "1"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_rpg "1"
+				weapon_shotgun "1"
+					ammo_shotgun "6"
+				weapon_smg1 "1"
+					ammo_smg1 "90"
+				weapon_stunstick "1"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "yesdoor,AddOutput,OnFullyOpen !self:Close::0:-1,0,-1"
+				OnMapSpawn "yesdoor,AddOutput,OnFullyClosed !self:Open::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch music:Volume:10:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "notwahoo,AddOutput,OnStartTouch syn_ps:Command:changelevel ptsd2 ending_loop:6:1,0,-1"
+				OnMapSpawn "wahoo,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"
+				OnMapSpawn "wahoo,AddOutput,OnStartTouch backdoor:Open::195:1,0,-1"
+				OnMapSpawn "wahoo,AddOutput,OnStartTouch syn_equipment_givemore:Enable::0:1,0,-1"
+				OnMapSpawn "wahoo,AddOutput,OnStartTouch syn_equipment_givemore:EquipPlayer::0:-1,0,-1"
+				OnMapSpawn "syn_endbutton,AddOutput,OnPressed CMD:Command:playvideo_nointerrupt ptsending:0:-1,0,-1"
+				OnMapSpawn "syn_endbutton,AddOutput,OnPressed endgame:EndGame::90:-1,0,-1"
+			}
+		}
+		create {classname "point_clientcommand" values {targetname "CMD" allplayers "1"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		edit {classname "trigger_teleport" origin "-7688 8896 -608" values {targetname "wahoo"} }
+		edit {classname "trigger_once" origin "-7688 9344 -608" values {targetname "notwahoo"} }
+		edit {classname "trigger_once" origin "-9807.56 2445.49 -324.37" values {targetname "syn_trig1"} }
+		create {classname "trigger_multiple" origin "-13856 2727.77 320"
+			values
+			{
+				edt_mins "-50 -50 -300"
+				edt_maxs "50 50 50"
+				spawnflags "1"
+				OnTrigger "stripweaponsandsuit,Strip,,0,-1"
+				OnStartTouch "music,PlaySound,,0,1"
+				OnStartTouch "music,Volume,10,0,1"
+			}
+		}
+		create {classname "player_weaponstrip" values {targetname "stripweaponsandsuit"} }
+		edit {targetname "yes" values {damagetype "1"} }
+		delete {classname "trigger_once" origin "-6472 5432 -1408"}
+		edit {classname "trigger_once" origin "-6596.01 5711.65 -1504" values {targetname "syn_trig2"} }
+		delete {classname "trigger_once" origin "-5236 7712 -1722"}
+		create {classname "trigger_once" origin "-5236 7712 -1722"
+			values
+			{
+				edt_mins "-8 -200 -100"
+				edt_maxs "8 200 200"
+				spawnflags "1"
+				OnStartTouch "music,FadeOut,3,0,-1"
+				OnStartTouch "shake,StopShake,,0,-1"
+			}
+		}
+		delete {classname "trigger_once" origin "-4920 7712 -1728.29"}
+		create {classname "trigger_coop" origin "-4920 7712 -1728.29"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-4920 7712 -1728.29"
+				spawnflags "1"
+				usehud "1"
+				playervalue "80"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,0.7,1"
+				OnPlayersIn "camera_toilet,Enable,,0.5,-1"
+				OnPlayersIn "Flush,PlaySound,,0.5,-1"
+				OnPlayersIn "fade_teleport,Fade,,0.5,-1"
+				OnPlayersIn "Teleport_toilet,Enable,,3.5,-1"
+				OnPlayersIn "camera_toilet,Disable,,3.5,-1"
+			}
+		}
+		create {classname "info_target" origin "-4870 7710 -1760" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 180 0"} }
+		delete {classname "trigger_multiple" origin "-9160 9120 -656.15"}
+		create {classname "trigger_multiple" origin "-9160 9120 -656.15"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-9160 9120 -656.15"
+				spawnflags "1"
+				OnEndTouchAll "hwabon,Close,,0,-1"
+				OnStartTouch "hwabon,Open,,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "-8678 9081.03 -656"}
+		create {classname "trigger_multiple" origin "-8678 9081.03 -656"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-8678 9081.03 -656"
+				spawnflags "1"
+				wait "10"
+				OnStartTouch "hita,PlaySound,,0,1"
+				OnStartTouch "beforeyou,Display,,0,-1"
+				OnStartTouch "beforeyou2,Display,,2.5,-1"
+			}
+		}
+		delete {classname "trigger_once" origin "-7896 9344 -608"}
+		delete {classname "trigger_once" origin "-7896 8896 -608"}
+		create {classname "trigger_coop" origin "-7870 9350 -650"
+			values
+			{
+				edt_mins "-150 -100 -100"
+				edt_maxs "200 100 100"
+				spawnflags "1"
+				usehud "1"
+				playervalue "80"
+				CountType "1"
+				target "syn_cooptarg_02"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_notwahoo,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,0.7,1"
+				OnPlayersIn "not wahoo,Close,,0,-1"
+				OnPlayersIn "not wahoo,Lock,,0,-1"
+				OnPlayersIn "syn_transitionwall_notwahoo,kill,,0,-1"
+			}
+		}
+		create {classname "info_player_coop" origin "-8025 9345 -665" values {targetname "syn_spawnpoint_notwahoo" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_target" origin "-8025 9345 -665" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 0 0"} }
+		create {classname "syn_transition_wall" origin "-7710 9405 -700" values {targetname "syn_transitionwall_notwahoo" disableshadows "1" angles "0 0 0"} }
+		create {classname "trigger_coop" origin "-7870 8895 -650"
+			values
+			{
+				edt_mins "-150 -100 -100"
+				edt_maxs "200 100 100"
+				spawnflags "1"
+				usehud "1"
+				playervalue "80"
+				CountType "1"
+				target "syn_cooptarg_03"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_wahoo,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,0.7,1"
+				OnPlayersIn "wahoo,Close,,0,-1"
+				OnPlayersIn "wahoo,Lock,,0,-1"
+				OnPlayersIn "syn_transitionwall_wahoo,kill,,0,-1"
+			}
+		}
+		create {classname "info_player_coop" origin "-8025 8895 -665" values {targetname "syn_spawnpoint_wahoo" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_target" origin "-8025 8895 -665" values {targetname "syn_cooptarg_03" startdisabled "0" angles "0 0 0"} }
+		create {classname "syn_transition_wall" origin "-7710 8700 -700" values {targetname "syn_transitionwall_wahoo" disableshadows "1" angles "0 0 0"} }
+		delete {targetname "return"}
+		delete {classname "trigger_once" origin "-3907 10149.5 -672"}
+		delete {targetname "trig"}
+		create {classname "trigger_coop" origin "-2950 10405 -680"
+			values
+			{
+				edt_mins "-100 -50 -100"
+				edt_maxs "100 50 100"
+				spawnflags "1"
+				usehud "1"
+				playervalue "75"
+				CountType "1"
+				target "syn_cooptarg_04"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_05,0,1"
+				OnPlayersIn "strremover,Enable,,0,-1"
+				OnPlayersIn "syn_equipment_givemore,kill,,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,1,1"
+				OnPlayersIn "fade_ending,Fade,,1,1"
+				OnPlayersIn "returnno,Enable,,0,1"
+				OnPlayersIn "syrs,PlaySound,,3,1"
+				OnPlayersIn "trig_tele,Enable,,4,1"
+			}
+		}
+		create {classname "info_target" origin "-3025 10410 -720" values {targetname "syn_cooptarg_04" startdisabled "0" angles "0 0 0"} }
+		edit {classname "func_button" origin "-2422 13448.5 -690.52" values {targetname "syn_endbutton"} }
+		create {classname "trigger_multiple" origin "-2950 10405 -680"
+			values
+			{
+				edt_mins "-150 -100 -150"
+				edt_maxs "150 100 150"
+				targetname "strremover"
+				startdisabled "1"
+				spawnflags "1"
+				OnStartTouch "stripweaponsandsuit,StripWeaponsAndSuit,,0,-1"
+			}
+		}
+	}
+}

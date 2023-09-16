@@ -1,0 +1,91 @@
+ptsd_2_hell
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_player_coop" origin "-237 -400 2" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-275 3855 260" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "1445 6720 95" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "5765 6000 300" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "8435 3865 1065" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_crossbow "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_frag "1"
+				weapon_rpg "1"
+				ResponseContext "weapon_goop weapon_gauss"
+			}
+		}
+		edit {targetname "screen_overlay" values {spawnflags "1"} }
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+			}
+		}
+		edit {classname "func_button" origin "-408 3656 265.5" values {targetname "syn_button1"} }
+		create {classname "trigger_once" origin "1445 6720 95"
+			values
+			{
+				edt_mins "-100 -100 -100"
+				edt_maxs "100 100 100"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+			}
+		}
+		create {classname "trigger_gravity" origin "1445 6720 200" values {spawnflags "1" edt_mins "-10000 -10000 -10000" edt_maxs "10000 10000 10000" gravity "0.75"} }
+		edit {classname "trigger_once" origin "6004.28 6112.5 466" values {targetname "syn_trig1"} }
+		delete {classname "trigger_once" origin "8436 3868 1052.04"}
+		create {classname "trigger_coop" origin "8436 3868 1052.04"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "8436 3868 1052.04"
+				spawnflags "1"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,1,-1"
+				OnPlayersIn "player_holder,Enable,,0,-1"
+				OnPlayersIn "yeg,Enable,,0,-1"
+				OnPlayersIn "teleport,PlaySound,,0,-1"
+				OnPlayersIn "levelchjange,ChangeLevel,,7,-1"
+				OnPlayersIn "info_player_coop,kill,,6.5,-1"
+				OnPlayersIn "syn_cooptarg_01,kill,,6.5,-1"
+				OnPlayersIn "fade,Fade,,0,-1"
+				OnPlayersIn "ganggang,BecomeRagdoll,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "8435 3865 1065" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 0 0"} }
+	}
+}

@@ -1,0 +1,177 @@
+ptsd_2_pxx
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "info_player_coop" origin "-416 128 1" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-560 3055 -25" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "460 5825 -25" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 10 0"} }
+		create {classname "info_player_coop" origin "795 10090 -100" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-1495 1415 -25" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 -90 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_crossbow "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_frag "1"
+				weapon_rpg "1"
+				ResponseContext "weapon_goop weapon_gauss weapon_bhg"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch global:TurnOn::0:-1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "big_shiny_red_button,AddOutput,OnPressed syn_cooptele_01:TeleportPlayersNotTouching::0:1,0,-1"
+				OnMapSpawn "return_light2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "return_trigger_final,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"
+			}
+		}
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		create {classname "trigger_once" origin "-603.69 3060.89 72"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-603.69 3060.89 72"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "-886.97 1152 0"}
+		create {classname "trigger_multiple" origin "-886.97 1152 0"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-886.97 1152 0"
+				spawnflags "3"
+				OnStartTouch "door1_right8,Open,,0,-1"
+				OnStartTouch "door1_left8,Open,,0,-1"
+				OnEndTouchAll "door1_left8,Close,,0,-1"
+				OnEndTouchAll "door1_right8,Close,,0,-1"
+				//OnStartTouch "vacuum_coldness,Disable,,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "-1504 1510.97 0"}
+		create {classname "trigger_multiple" origin "-1504 1510.97 0"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-1504 1510.97 0"
+				spawnflags "3"
+				OnStartTouch "door1_right9,Open,,0,-1"
+				OnStartTouch "door1_left9,Open,,0,-1"
+				OnEndTouchAll "door1_left9,Close,,0,-1"
+				OnEndTouchAll "door1_right9,Close,,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "816 7726.97 0"}
+		create {classname "trigger_multiple" origin "816 7726.97 0"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "816 7726.97 0"
+				spawnflags "3"
+				OnStartTouch "door1_right11,Open,,0,-1"
+				OnStartTouch "door1_left11,Open,,0,-1"
+				OnEndTouchAll "door1_left11,Close,,0,-1"
+				OnEndTouchAll "door1_right11,Close,,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "800 8744.97 0"}
+		create {classname "trigger_multiple" origin "800 8744.97 0"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "800 8744.97 0"
+				spawnflags "3"
+				OnStartTouch "door1_right_a,Open,,0,-1"
+				OnStartTouch "door1_left_b,Open,,0,-1"
+				OnEndTouchAll "door1_left_b,Close,,0,-1"
+				OnEndTouchAll "door1_right_a,Close,,0,-1"
+			}
+		}
+		edit {classname "trigger_once" origin "-1163 1148 102" values {targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "816 5934.97 0" values {targetname "syn_trig2"} }
+		edit {targetname "big_shiny_red_button" values {spawnflags "3073"} }
+		create {classname "trigger_coop" origin "800 10065 -65"
+			values
+			{
+				targetname "syn_cooptrig_01"
+				spawnflags "1"
+				edt_mins "-150 -100 -100"
+				edt_maxs "150 120 100"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "big_shiny_red_button,Unlock,,0,-1"
+			}
+		}
+		create {classname "trigger_coop" origin "805 9840 -15"
+			values
+			{
+				targetname "syn_cooptele_01"
+				spawnflags "1"
+				edt_mins "-360 -300 -150"
+				edt_maxs "360 380 100"
+				target "syn_cooptarg_01"
+			}
+		}
+		create {classname "info_target" origin "795 10090 -100" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 90 0"} }
+		delete {targetname "return_ship"}
+		delete {targetname "ye"}
+		create {classname "trigger_coop" origin "-400 208 83"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-400 208 83"
+				targetname "return_ship"
+				startdisabled "1"
+				spawnflags "1"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				OnPlayersIn "!self,kill,,0,1"
+				OnPlayersIn "syn_endchangelevel,Enable,,0.1,-1"
+			}
+		}
+		create {classname "trigger_changelevel" origin "-355 260 64"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-886.97 1152 0"
+				targetname "syn_endchangelevel"
+				startdisabled "1"
+				map "ptsd_2_finale"
+				landmark "ptsdpxxtofinale"
+				OnChangeLevel "global,TurnOff,,0,-1"
+			}
+		}
+		create {classname "info_landmark" origin "-352 256 15" values {targetname "ptsdpxxtofinale"} }
+	}
+}

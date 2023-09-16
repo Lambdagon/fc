@@ -1,0 +1,50 @@
+"sp_precasino"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "trigger_multiple" origin "-3696 -796 -364"}
+		delete {classname "info_player_start" origin "-3175 -907 -450"}
+		delete {targetname "fadefrom"}
+		delete {targetname "block_letter_player"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "button_letter01,AddOutput,OnIn overlay_letter05:StopOverlays::20:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_teleport_01:Teleport::0:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "point_teleport" origin "-3510 -970 -430"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 180 0"
+			}
+		}
+		edit {targetname "changelevel" values {startdisabled "0"} }
+		edit {classname "trigger_multiple" origin "-3510 -980.5 -396" values {targetname "syn_trig1"} }
+	}
+}

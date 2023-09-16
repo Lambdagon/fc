@@ -1,0 +1,158 @@
+"sp_waterplant2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {targetname "block_letter_player"}
+		delete {targetname "fadefrom"}
+		//Allow for this portal to close as there is no way for players go past it anyways
+		edit {targetname "areaportal_elevator2" values {targetname "areaportal_elevator2"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		edit {targetname "overlay_letter16" values {spawnflags "1"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "button_letter01,AddOutput,OnIn overlay_letter16:StopOverlays::20:-1,0,-1"
+				OnMapSpawn "trigger_elevator_start,AddOutput,OnTrigger syn_cooptele1:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_elevator_start,AddOutput,OnTrigger syn_cooptele1:TeleportPlayersNotTouching::0.1:1,0,-1"
+				OnMapSpawn "trigger_elevator_start,AddOutput,OnTrigger syn_spawnpoint_00:kill::0:1,0,-1"
+				OnMapSpawn "trigger_elevator_start,AddOutput,OnTrigger syn_spawnpoint_01:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_elevator_start,AddOutput,OnTrigger brush_bridgeedt:Enable::0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_cooptele1:kill::0:-1,0,-1"
+				OnMapSpawn "relay_explosiongotyou,AddOutput,OnTrigger syn_loadsaved:Reload::0:-1,0,-1"
+				OnMapSpawn "first_core_sequence,AddOutput,OnIn syn_hudtimer:Start:140:0:-1,0,-1"
+				OnMapSpawn "credits,AddOutput,OnCreditsDone endgame:EndGame::3:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_teleport_02:Teleport::0:1,0,-1"
+				OnMapSpawn "ascensor_button,AddOutput,OnPressed syn_cooptele2:TeleportPlayersNotTouching::0:1,0,-1"
+				OnMapSpawn "ascensor_button,AddOutput,OnPressed syn_spawnpoint_01:kill::0:1,0,-1"
+				OnMapSpawn "ascensor_button,AddOutput,OnPressed syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "ascensor_button,AddOutput,OnPressed syn_teleelev2:Enable::5:1,0,-1"
+				OnMapSpawn "ascensor,AddOutput,OnFullyOpen syn_clipwall2:kill::1:-1,0,-1"
+				OnMapSpawn "trigger_outofelevator,AddOutput,OnStartTouch syn_clipwall1:kill::0:-1,0,-1"
+				OnMapSpawn "teleport_tocart,AddOutput,OnStartTouch syn_cooptele3:Enable::0:1,0,-1"
+				OnMapSpawn "teleport_tocart,AddOutput,OnStartTouch syn_cooptele3:TeleportPlayersNotTouching::0.1:1,0,-1"
+				OnMapSpawn "event_actualexplosion,AddOutput,OnTrigger syn_cooptele3:kill::11.5:1,0,-1"
+				OnMapSpawn "trigger_teleport_ending,AddOutput,OnStartTouch syn_teleport_05:Teleport::0.1:1,0,-1"
+				OnMapSpawn "trigger_teleport_ending,AddOutput,OnStartTouch syn_hudtimer:Stop::0:1,0,-1"
+				OnMapSpawn "scene_larry_okwemadeit,AddOutput,OnCompletion triggerlook_intocontrolroom:Trigger::0.1:1,0,-1"} }
+		create {classname "player_loadsaved" values {targetname "syn_loadsaved"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_rpg "1"
+					ammo_rpg_round "2"
+			}
+		}
+		create {classname "info_player_coop" origin "-910 2770 -365" values {targetname "syn_spawnpoint_00" startdisabled "0"} }
+		create {classname "info_player_coop" origin "-110 3345 -90" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 180 0" parentname "elevator"} }
+		create {classname "info_player_coop" origin "-885 1710 2080" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 -90 0"} }
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "REACTOR EXPLOSION IN"
+				TimerType "1"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		create {classname "trigger_coop" origin "-30 3380 -55"
+			values
+			{
+				targetname "syn_cooptele1"
+				model "*70"
+				spawnflags "1"
+				angles "0 0 0"
+				startdisabled "1"
+				parentname "elevator"
+				target "syn_cooptarg1"
+				OnEndTouch "!self,TeleportPlayersNotTouching,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-110 3345 -90" values {targetname "syn_cooptarg1" angles "0 0 0" parentname "elevator"} }
+		create {classname "point_teleport" origin "2757 4115 2610"
+			values
+			{
+				targetname "syn_teleport_02"
+				target "player"
+				angles "0 270 0"
+			}
+		}
+		create {classname "trigger_coop" origin "-890 1810 1515"
+			values
+			{
+				targetname "syn_cooptele2"
+				model "*70"
+				spawnflags "1"
+				angles "0 0 0"
+				startdisabled "0"
+				parentname "ascensor"
+				target "syn_cooptarg2"
+			}
+		}
+		create {classname "info_target" origin "-890 1835 1540" values {targetname "syn_cooptarg2" angles "0 180 0" parentname "ascensor"} }
+		create {classname "trigger_coop" origin "-728 1569 2095"
+			values
+			{
+				targetname "syn_cooptele3"
+				model "*70"
+				spawnflags "1"
+				angles "0 0 0"
+				startdisabled "1"
+				parentname "cart1"
+				target "syn_cooptarg3"
+				OnEndTouch "!self,TeleportPlayersNotTouching,,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-728 1569 2085" values {targetname "syn_cooptarg3" angles "0 0 0" parentname "cart1"} }
+		create {classname "point_teleport" origin "480 2672 1872"
+			values
+			{
+				targetname "syn_teleport_05"
+				target "player"
+				angles "0 150 0"
+			}
+		}
+		edit {classname "trigger_multiple" origin "2781 4109.5 2606" values {targetname "syn_trig1"} }
+		edit {classname "trigger_once" origin "-96.5 3336 938.5" values {targetname "syn_trig2"} }
+		edit {targetname "brush_bridge" values {targetname "brush_bridgeedt"} }
+		edit {targetname "triggerlook_intocontrolroom" values {classname "logic_relay"} }
+		create {classname "trigger_teleport" origin "-890 1810 1515" values {targetname "syn_teleelev2" startdisabled "1" model "*70" spawnflags "1" target "syn_teletarg2"} }
+		create {classname "info_teleport_destination" origin "-890 1835 1540" values {targetname "syn_teletarg2" angles "0 -90 0" parentname "ascensor"} }
+		create {classname "ambient_generic" values {message "/sarah_youmadeit.wav"} }
+		create {classname "ambient_generic" values {message "/larry_3_okwemadeit.wav"} }
+	}
+}

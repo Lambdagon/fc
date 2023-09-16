@@ -1,0 +1,116 @@
+"sp_casino"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start" origin "-182 1849 861"}
+		delete {targetname "scene_monkey_attackdoor"}
+		delete {targetname "scene_monky_gotodoor"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "goup_buttonedt,AddOutput,OnPressed syn_cooptele1:Enable::0:1,0,-1"
+				OnMapSpawn "goup_buttonedt,AddOutput,OnPressed syn_cooptele1:TeleportPlayersNotTouching::0.1:1,0,-1"
+				OnMapSpawn "goup_buttonedt,AddOutput,OnPressed syn_cooptele1:Disable::0.2:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_teleport_02:Teleport::0:-1,0,-1"
+				OnMapSpawn "elevator,AddOutput,OnOpen goup_buttonedt:Lock::0.2:-1,0,-1"
+				OnMapSpawn "elevator,AddOutput,OnFullyClosed goup_buttonedt:Unlock::0.3:-1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		edit {classname "trigger_once" origin "297.5 2447 926" values {targetname "syn_trig1"} }
+		edit {classname "func_button" origin "1058 1290 548" values {targetname "goup_buttonedt"} }
+		edit {targetname "theatredoor2" values {wait "-1"} }
+		edit {targetname "theatredoor1" values {wait "-1"} }
+		create {classname "point_teleport" origin "1020 1260 500"
+			values
+			{
+				targetname "syn_teleport_01a"
+				target "player"
+				angles "10 35 0"
+			}
+		}
+		create {classname "point_teleport" origin "170 2450 865"
+			values
+			{
+				targetname "syn_teleport_02"
+				target "player"
+				angles "0 90 0"
+			}
+		}
+		create {classname "syn_transition_wall" origin "1205 4070 765"
+			values
+			{
+				targetname "syn_wall"
+				angles "0 -90 0"
+			}
+		}
+		edit {classname "trigger_changelevel" values {edt_map "sp_casino" edt_landmark "casino_casino2" spawnflags "6" startdisabled "1"} }
+		create {classname "trigger_coop" origin "1225 4020 850"
+			values
+			{
+				targetname "syn_coop1"
+				model "*221"
+				spawnflags "1"
+				angles "90 90 0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "syn_wall,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,1,-1"
+			}
+		}
+		create {classname "logic_timer"
+			values
+			{
+				targetname "nulldmg"
+				RefireTime "5"
+				OnTimer "monky,SetDamageFilter,nodamage,0,-1"
+				OnTimer "monky2,SetDamageFilter,nodamage,0,-1"
+				OnTimer "monkyx,SetDamageFilter,nodamage,0,-1"
+			}
+		}
+		create {classname "filter_activator_class"
+			values
+			{
+				targetname "nodamage"
+				filterclass "null"
+			}
+		}
+		create {classname "trigger_coop" origin "1005 1235 520"
+			values
+			{
+				targetname "syn_cooptele1"
+				startdisabled "1"
+				model "*302"
+				spawnflags "1"
+				angles "0 0 0"
+				target "syn_cooptarg1"
+				parentname "elevator"
+			}
+		}
+		create {classname "info_target" origin "1020 1260 500" values {targetname "syn_cooptarg1" angles "10 35 0" parentname "elevator"} }
+	}
+}

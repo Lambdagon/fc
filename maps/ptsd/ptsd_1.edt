@@ -1,0 +1,156 @@
+"ptsd_1"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		delete {classname "info_player_start"}
+		delete {classname "logic_auto" origin "-4711 -593.033 57.2554"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "path_5,AddOutput,OnPass syn_equipment_base:Enable::0:-1,0,-1"
+				OnMapSpawn "path_5,AddOutput,OnPass syn_equipment_base:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup spickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup spickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "switch_2_btn,AddOutput,OnOpen bedroomedt:Unlock::0:-1,0,-1"
+				OnMapSpawn "switch_2_btn,AddOutput,OnOpen bedroomedt:Open::0.1:-1,0,-1"
+				OnMapSpawn "pcedt,AddOutput,OnPlayerUse syn_toptsd2tp:Enable::0:-1,0,-1"
+				OnMapSpawn "pcedt,AddOutput,OnPlayerUse syn_toptsd2tp:TeleportPlayersNotTouching::0.5:-1,0,-1"
+				OnMapSpawn "pcedt,AddOutput,OnPlayerUse syn_toptsd2:Enable::0:-1,0,-1"
+				OnMapSpawn "pcedt,AddOutput,OnPlayerUse sit_chair:Disable::4.9:-1,0,-1"
+				OnMapSpawn "pcedt,AddOutput,OnPlayerUse syn_toptsd2:ChangeLevel::5:1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup syn_cooptele_shotgun:Enable::0:-1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup syn_cooptele_shotgun:TeleportPlayersNotTouching::0.5:1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup syn_cooptele_shotgun:Disable::1:-1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup bpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "shotgun,AddOutput,OnPlayerPickup bpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "telepor,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "fadein,AddOutput,OnBeginFade syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"
+				OnMapSpawn "fadein,AddOutput,OnBeginFade syn_endroomtp:Teleport::0:1,0,-1"
+				OnMapSpawn "fadein,AddOutput,OnBeginFade remover:Enable::0:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "cpickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_equip" values {targetname "rpickup" startdisabled "1" weapon_357 "1" ammo_357 "6"} }
+		create {classname "info_player_equip" values {targetname "spickup" startdisabled "1" weapon_smg1 "1" ammo_smg1 "90"} }
+		create {classname "info_player_equip" values {targetname "bpickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "12"} }
+		create {classname "info_player_coop" origin "-1075 -475 35" values {targetname "syn_spawnpoint_00" angles "0 0 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "768 640 30" values {targetname "syn_spawnpoint_01" angles "0 0 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "2065 5215 -550" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "180 2735 50" values {targetname "syn_spawnpoint_03" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1985 3280 110" values {targetname "syn_spawnpoint_04" angles "0 0 0" startdisabled "1"} }
+		create {classname "trigger_once" origin "-1075 -475 25"
+			values
+			{
+				startdisabled "0"
+				spawnflags "1"
+				model "*1"
+				OnTrigger "syn_hudtimer,Start,45,0,-1"
+				OnTrigger "camera_1,Enable,,0,-1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "STARTING IN..."
+				TimerType "1"
+				OnTimer "camera_1,Enable,,0,-1"
+				OnTimer "startupmusio,PlaySound,,0,-1"
+				OnTimer "cameratrain,StartForward,,0,-1"
+				OnTimer "effect,StartEffect,1,0,-1"
+				OnTimer "speedmod2,ModifySpeed,0.5,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "608 2580 100"}
+		create {classname "trigger_coop" origin "608 2580 100"
+			values
+			{
+				targetname "syn_trignamed1rem"
+				startdisabled "0"
+				spawnflags "1"
+				model "*31"
+				wait "1"
+				counttype "1"
+				usehud "0"
+				playervalue "100"
+				OnEndTouch "spook_wall_MELOON,Disable,,0,-1"
+				OnEndTouch "spook_gman,Disable,,0,-1"
+				OnEndTouch "spook_wall_promos,Disable,,0,-1"
+				OnEndTouch "gmon,Alpha,0,0,-1"
+				OnEndTouch "exit,Volume,0,0,-1"
+				OnPlayersIn "spook_wall_MELOON,Enable,,0,-1"
+				OnPlayersIn "spook_gman,Enable,,0,-1"
+				OnPlayersIn "spook_wall_promos,Enable,,0,-1"
+				OnPlayersIn "gmon,Alpha,255,0,-1"
+				OnPlayersIn "exit,Volume,1,0,-1"
+			}
+		}
+		create {classname "trigger_coop" origin "220 2770 96"
+			values
+			{
+				targetname "syn_cooptele_shotgun"
+				startdisabled "1"
+				spawnflags "1"
+				edt_getbspmodelfor_targetname "ptsd_tele_2"
+				target "syn_cooptarg_shotgun"
+			}
+		}
+		create {classname "info_target" origin "180 2735 50" values {targetname "syn_cooptarg_shotgun" startdisabled "0" angles "0 180 0"} }
+		create {classname "trigger_coop" origin "-1685 3015 130"
+			values
+			{
+				targetname "syn_toptsd2tp"
+				startdisabled "1"
+				spawnflags "1"
+				angles "90 0 0"
+				edt_getbspmodelfor_targetname "stench_return"
+				target "syn_cooptarg_end"
+			}
+		}
+		create {classname "info_target" origin "-1720 2985 130" values {targetname "syn_cooptarg_end" startdisabled "0" angles "0 45 0"} }
+		create {classname "player_weaponstrip" values {targetname "stripweaponsandsuit"} }
+		create {classname "trigger_multiple" origin "2105 5225 -540" values {targetname "remover" spawnflags "1" startdisabled "1" model "*31" OnTrigger "stripweaponsandsuit,StripWeaponsAndSuit,,0,-1"} }
+		edit {classname "weapon_annabelle" values {classname "weapon_shotgun"} }
+		edit {targetname "bedroom" values {targetname "bedroomedt"} }
+		edit {classname "trigger_teleport" origin "-124 972 36.73" values {targetname "syn_trig1"} }
+		edit {classname "prop_physics" origin "-1686.16 3043.35 132.444" values {targetname "pcedt"} }
+		
+		delete {targetname "sit_chair"}
+		create {classname "point_viewcontrol" origin "-1685 2994 156"
+			values
+			{
+				targetname "sit_chair"
+				spawnflags "140"
+				angles "0 90 0"
+				target "pcedt"
+			}
+		}
+		edit {classname "prop_ragdoll" origin "2124 5048 -557.565" values {spawnflags "16388"} }
+		edit {classname "prop_ragdoll" origin "2084 5048 -557.565" values {spawnflags "16388"} }
+		edit {classname "prop_ragdoll" origin "-2029 3284 114" values {spawnflags "16388"} }
+		edit {classname "prop_ragdoll" origin "-2068 3284 114" values {spawnflags "16388"} }
+		edit {classname "prop_ragdoll" origin "408 2784 50" values {spawnflags "4"} }
+		edit {classname "prop_ragdoll" origin "447 2784 50" values {spawnflags "4"} }
+		create {classname "trigger_multiple" origin "-1985 3280 110" values {targetname "remover" spawnflags "1" startdisabled "1" model "*31" OnTrigger "stripweaponsandsuit,StripWeaponsAndSuit,,0,-1"} }
+		create {classname "point_teleport" origin "-1985 3280 110" values {targetname "syn_endroomtp" angles "0 0 0" target "!player"} }
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd2" model "*1" spawnflags "0" map "ptsd_2" landmark "topsd2" startdisabled "1"} }
+		create {classname "info_landmark" origin "2105 5225 -540" values {targetname "topsd2"} }
+	}
+}

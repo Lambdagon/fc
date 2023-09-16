@@ -1,0 +1,111 @@
+ptsd_2_p4
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_global_settings" values {IsVehicleMap "1" targetname "syn_global_settings"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_vehicle_spawn" origin "-679.21 -2752.87 -50.05"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "syn_vehicle_spawn_01"
+				spawnflags "0"
+				solid "6"
+				skin "0"
+				model "models/vehicles/buggy_p2.mdl"
+				disableshadows "1"
+				angles "0 347 0"
+				actionScale "1"
+				VehicleSize "192"
+				StartDisabled "1"
+				VehicleType "1"
+			}
+		}
+		create {classname "info_player_coop" origin "-857.58 -2493 -60" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "-630 8065 400" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_physcannon "1"
+				item_suit "1"
+			}
+		}
+		delete {classname "item_suit"}
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		delete {targetname "fake_return_faker"}
+		edit {targetname "boat_test2" values {origin "-693 -2732 -50" enablegun "0" model "models/vehicles/buggy_p2.mdl"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "boat_test2,AddOutput,PlayerOn !self:HandBrakeOn::0.1:1,0,-1"
+				OnMapSpawn "boat_test2,AddOutput,PlayerOn !self:HandBrakeOff::0.2:1,0,-1"
+				OnMapSpawn "boat_test2,AddOutput,PlayerOn syn_ptburgercar:ForceSpawn::3:1,0,-1"
+				OnMapSpawn "boat_test2,AddOutput,PlayerOn syn_vehicle_spawn_01:Enable::45:1,0,-1"
+				OnMapSpawn "trigger_changelevel,AddOutput,OnChangeLevel meboi:Close::0:-1,0,-1"
+			}
+		}
+		create {classname "prop_vehicle_jeep" origin "-693 -2732 10"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test2pt"
+				solid "6"
+				model "models/vehicles/buggy_p2.mdl"
+				disableshadows "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				angles "0 347 0"
+				enablegun "0"
+				PlayerOn "syn_ptburgercar,ForceSpawn,,3,1"
+				PlayerOn "syn_mc,Add,1,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-693.828 -2737.87 8.0466"
+			values
+			{
+				spawnflags "320"
+				solid "0"
+				targetname "boat_testptparts"
+				parentname "boat_test2pt"
+				model "models/tools/burger.mdl"
+				DisableBoneFollowers "1"
+				angles "0 350 0"
+			}
+		}
+		create {classname "point_template" values {targetname "syn_ptburgercar" Template01 "boat_test2pt" Template02 "boat_testptparts"} }
+		create {classname "math_counter" values {targetname "syn_mc" max "4" startvalue "0" OnHitMax "syn_ptburgercar,kill,,0,-1" OnHitMax "syn_vehicle_spawn_01,Enable,,0,-1"} }
+		delete {classname "trigger_multiple" origin "-432 8112 456"}
+		create {classname "syn_transition_wall" origin "-365 8115 460" values {targetname "syn_antirush_wall" edt_mins "-10 -180 -40" edt_maxs "10 180 220"} }
+		create {classname "trigger_coop" origin "-400 8110 395"
+			values
+			{
+				targetname "syn_antirush_coop"
+				spawnflags "1"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				edt_mins "-90 -180 -100"
+				edt_maxs "80 170 100"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_antirush_wall,kill,,0,-1"
+			}
+		}
+	}
+}

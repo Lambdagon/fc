@@ -1,0 +1,201 @@
+ptsd_2_p10
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		edit {targetname "grey_1" values {spawnflags "1"} }
+		create {classname "info_player_coop" origin "-15035 2585 60" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-14265 7690 70" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 15 0"} }
+		create {classname "info_player_coop" origin "-8064 -772 110" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-6187 6506 -460" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "-2905 8410 -495" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 -10 0"} }
+		create {classname "info_player_coop" origin "-310 7895 -475" values {targetname "syn_spawnpoint_05" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "4655 7045 -2790" values {targetname "syn_spawnpoint_06" startdisabled "1" angles "0 -90 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_crossbow "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_frag "1"
+				weapon_rpg "1"
+				ResponseContext "weapon_goop weapon_gauss weapon_molotov"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "weapon_bhg,AddOutput,OnPlayerPickup bhgpickup:Enable::0:-1,1,-1"
+				OnMapSpawn "weapon_bhg,AddOutput,OnPlayerPickup bhgpickup:EquipAllPlayers::0.1:1,1,-1"
+				OnMapSpawn "dream_seq_tpnodisable,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_05:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_cooptele_02:TeleportPlayersNotTouching::1:1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_06:0:1,0,-1"
+			}
+		}
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		create {classname "info_player_equip" values {targetname "bhgpickup" startdisabled "1" ResponseContext "weapon_bhg"} }
+		delete {classname "trigger_multiple" origin "-13072 4720 128"}
+		delete {classname "trigger_multiple" origin "-13072 4240 48"}
+		create {classname "trigger_multiple" origin "-13072 4240 48"
+			values
+			{
+				spawnflags "3"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-13072 4240 48"
+				OnStartTouch "door1_left3,Open,,0,-1"
+				OnStartTouch "door1_right3,Open,,0,-1"
+				OnEndTouchAll "door1_left3,Close,,0,-1"
+				OnEndTouchAll "door1_right3,Close,,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "-13456 5744 80"}
+		create {classname "trigger_multiple" origin "-13456 5744 80"
+			values
+			{
+				spawnflags "3"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-13456 5744 80"
+				OnStartTouch "door1_left2,Open,,0,-1"
+				OnStartTouch "door1_right2,Open,,0,-1"
+				OnEndTouchAll "door1_left2,Close,,0,-1"
+				OnEndTouchAll "door1_right2,Close,,0,-1"
+			}
+		}
+		delete {classname "trigger_once" origin "-14348 7634.29 160.24"}
+		create {classname "syn_transition_wall" origin "-14085 7970 -10" values {solid "6" DisableShadows "1" angles "0 0 0" targetname "syn_wall1"} }
+		create {classname "trigger_coop" origin "-14235 7970 130"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-390 -340 -100"
+				edt_maxs "200 350 100"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "syn_wall1,kill,,0,-1"
+				OnPlayersIn "!self,kill,,1,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "doofus_door_u_idiot,Open,,1,-1"
+				OnPlayersIn "door1_right_1,Close,,0,-1"
+				OnPlayersIn "door1_left_1,Close,,0,-1"
+				OnPlayersIn "noreturn,Enable,,1,-1"
+				OnPlayersIn "ohmy,PlaySound,,1,-1"
+				OnPlayersIn "save,Save,,1,1"
+			}
+		}
+		create {classname "info_target" origin "-14265 7690 70" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 15 0"} }
+		//No backtrack
+		create {classname "syn_transition_wall" origin "-6415 6495 -500" values {solid "6" DisableShadows "1" startdisabled "1" angles "0 0 0"} }
+		create {classname "syn_transition_wall" origin "-6415 6495 -180" values {solid "6" DisableShadows "1" startdisabled "1" angles "0 0 0"} }
+		edit {targetname "dream_seq_tp" values {targetname "dream_seq_tpnodisable"} }
+		edit {classname "trigger_teleport" origin "-7487 -1579 704.26" values {targetname "syn_trig1"} }
+		//!activator only
+		edit {targetname "fade_teleport" values {spawnflags "16"} }
+		create {classname "trigger_once" origin "-2753 8512 -448"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-100 -200 -100"
+				edt_maxs "100 200 200"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+			}
+		}
+		delete {targetname "zoom_effect_full"}
+		delete {classname "trigger_multiple" origin "-368.03 7904 -448"}
+		create {classname "trigger_multiple" origin "-368.03 7904 -448"
+			values
+			{
+				targetname "syn_enterdoorstop"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-368.03 7904 -448"
+				startdisabled "1"
+				spawnflags "1"
+				OnStartTouch "doors_scaryhall_1,Open,,0,-1"
+				OnStartTouch "doors_scaryhall,Open,,0,-1"
+				OnEndTouchAll "doors_scaryhall_1,Close,,0,-1"
+				OnEndTouchAll "doors_scaryhall,Close,,0,-1"
+			}
+		}
+		create {classname "trigger_coop" origin "-480 7905 -390"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-200 -200 -100"
+				edt_maxs "200 200 150"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnPlayersIn "!self,kill,,1,1"
+				OnPlayersIn "syn_enterdoorstop,Enable,,0,-1"
+			}
+		}
+		edit {classname "trigger_once" origin "-208 7904 -255.5" values {targetname "syn_trig2"} }
+		create {classname "trigger_coop" origin "-40 7905 -450"
+			values
+			{
+				targetname "syn_cooptele_02"
+				spawnflags "1"
+				edt_mins "-260 -150 -100"
+				edt_maxs "300 150 100"
+				target "syn_cooptarg_02"
+			}
+		}
+		create {classname "info_target" origin "-310 7895 -475" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 0 0"} }
+		delete {targetname "zoom_hall2"}
+		delete {targetname "fade"}
+		delete {classname "trigger_once" origin "1664 7904 -255.5"}
+		create {classname "trigger_once" origin "1664 7904 -255.5"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "1664 7904 -255.5"
+				spawnflags "1"
+				OnStartTouch "light4,TurnOn,,0,1"
+				OnStartTouch "save,Save,,0,1"
+			}
+		}
+		edit {classname "trigger_once" origin "4640 7584 -2064" values {targetname "syn_trig3"} }
+		edit {classname "trigger_changelevel" values {edt_map "ptsd_2_pxx" edt_landmark "landmark_ship" startdisabled "1" targetname "syn_endmapchange"} }
+		create {classname "trigger_coop" origin "4345 5090 -2655"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-200 -200 -100"
+				edt_maxs "300 200 150"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptarg_01"
+				OnPlayersIn "!self,kill,,0,1"
+				OnPlayersIn "syn_endmapchange,Enable,,0.1,-1"
+			}
+		}
+	}
+}

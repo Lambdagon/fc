@@ -1,0 +1,32 @@
+"ptsd_2_p1"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup syn_autosave:Save::1:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "return_weird_stuff,AddOutput,OnTrigger cpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "return_weird_stuff,AddOutput,OnTrigger cpickup:EquipAllPlayers::0.1:1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "cpickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_coop" origin "-1622 2977 132" values {targetname "syn_spawnpoint_00" angles "0 0 0" startdisabled "0"} }
+	}
+}

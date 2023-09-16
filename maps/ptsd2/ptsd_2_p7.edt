@@ -1,0 +1,85 @@
+ptsd_2_p7
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "-5849.18 -737.18 119.983" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-3825 760 40" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-770 655 35" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "-152 2336 -86" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 90 0" parentname "tram_model"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_crossbow "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_frag "1"
+				ResponseContext "weapon_goop"
+			}
+		}
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {targetname "ooof" values {spawnflags "117"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "suit_counter_full,AddOutput,OnHitMax syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+			}
+		}
+		delete {classname "trigger_multiple" origin "-3798 1166 148"}
+		delete {classname "trigger_multiple" origin "-4640 2896 32"}
+		edit {classname "trigger_multiple" origin "-4366 2000 368" values {targetname "syn_trig1"} }
+		edit {classname "ai_relationship" values {Reciprocal "1"} }
+		delete {classname "trigger_once" origin "-144 2336 -78.38"}
+		create {classname "trigger_coop" origin "-141 2331 -72"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-30 -60 -40"
+				edt_maxs "60 50 40"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptele_end"
+				parentname "tram_model"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "!self,kill,,1.1,-1"
+				OnPlayersIn "fake_door_1,Close,,0,-1"
+				OnPlayersIn "fake_door_2,Close,,0,-1"
+				OnPlayersIn "tram_train,Resume,,0,-1"
+				OnPlayersIn "tram_train,StartForward,,3,-1"
+				OnPlayersIn "ptsd_trip_music,PlaySound,,0,-1"
+				OnPlayersIn "fake_door_1,Close,,0,-1"
+				OnPlayersIn "ptsd_levels_1,StartEffect,1,2,-1"
+				OnPlayersIn "ooof,ModifySpeed,0.9,1,-1"
+				OnPlayersIn "teleport_ptsd_trip_trigger,Enable,,36,-1"
+				OnPlayersIn "teleport_ptsd_trip_trigger,Disable,,37,-1"
+				OnPlayersIn "zoom_in,Zoom,,2,-1"
+				OnPlayersIn "music,StopSound,,0,-1"
+				OnPlayersIn "music,Volume,0,0,-1"
+			}
+		}
+		create {classname "info_target" origin "-152 2336 -76" values {targetname "syn_cooptele_end" startdisabled "0" angles "0 90 0" parentname "tram_model"} }
+	}
+}

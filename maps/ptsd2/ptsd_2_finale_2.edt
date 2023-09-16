@@ -1,0 +1,176 @@
+ptsd_2_finale_2
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "trigger_once" origin "3305 4545 -90"
+			values
+			{
+				edt_mins "-100 -100 -100"
+				edt_maxs "100 100 100"
+				spawnflags "1"
+				OnTrigger "music,PlaySound,,0,-1"
+			}
+		}
+		delete {classname "logic_auto" origin "4280.6 4853.7 -118.709"}
+		delete {classname "logic_auto" origin "8011.29 1589.29 -695"}
+		create {classname "info_player_coop" origin "3305 4545 -90" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 20 0"} }
+		create {classname "info_player_coop" origin "11385 1380 -2345" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 -40 0"} }
+		create {classname "info_player_coop" origin "9770 -2805 -4445" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 120 0"} }
+		modifycase {"OnStartTouchAll" "" "OnStartTouch" ""}
+		delete {targetname "screen_sick"}
+		delete {targetname "screen_sick1"}
+		create {classname "syn_transition_wall" origin "2990 6550 -130" values {solid "6" disableshadows "1" angles "0 -90 0"} }
+		create {classname "syn_transition_wall" origin "2990 6550 190" values {solid "6" disableshadows "1" angles "0 -90 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_crowbar "1"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_shotgun "1"
+					ammo_buckshot "6"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_crossbow "1"
+				ResponseContext "weapon_goop weapon_gauss weapon_bhg"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "change,AddOutput,OnStartTouch syn_enddisable:kill::0:-1,0,-1"
+				OnMapSpawn "change,AddOutput,OnStartTouch syn_changelevel:ChangeLevel::0.5:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+			}
+		}
+		delete {classname "trigger_once" origin "9046.5 -2624 -4271.99"}
+		create {classname "trigger_coop" origin "9046.5 -2624 -4271.99"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "9046.5 -2624 -4271.99"
+				spawnflags "1"
+				usehud "1"
+				playervalue "80"
+				CountType "1"
+				target "syn_endtarg_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,1,1"
+				OnPlayersIn "!self,kill,,1.1,1"
+				OnPlayersIn "cold,Enable,,0,1"
+				OnPlayersIn "advisor,PlaySound,,0,1"
+				OnPlayersIn "stun,StartEffect,1,0,1"
+				OnPlayersIn "stun,StopEffect,1,2,1"
+				OnPlayersIn "sequence,MoveToPosition,,0,1"
+				OnPlayersIn "sequence,BeginSequence,,0,1"
+				OnPlayersIn "follow_guys,Wake,,0,1"
+				OnPlayersIn "Breen2,Wake,,0,1"
+				OnPlayersIn "follow_guys,Wake,,0,1"
+				OnPlayersIn "camera_change,Enable,,0,1"
+				OnPlayersIn "beug_music,PlaySound,,0,1"
+				OnPlayersIn "speedmod,ModifySpeed,0.9,0,1"
+				OnPlayersIn "GEGTELE,Enable,,0,1"
+				OnPlayersIn "GEGTELE,Disable,,0.1,1"
+				OnPlayersIn "doit,Trigger,,0,1"
+				OnPlayersIn "music,StopSound,,0,1"
+				OnPlayersIn "music,Volume,0,0,1"
+			}
+		}
+		edit {targetname "GEGTELE" values {startdisabled "1"} }
+		edit {classname "trigger_hurt" origin "9632 -984 -5074.25" values {targetname "syn_enddisable"} }
+		create {classname "info_target" origin "9770 -2805 -4445" values {targetname "syn_endtarg_01" startdisabled "0" angles "0 120 0"} }
+		create {classname "trigger_changelevel" values {targetname "syn_changelevel" map "ptsd_2_final_day" landmark "nomark" model "*1" spawnflags "2"} }
+		create {classname "info_landmark" values {targetname "nomark"} }
+		edit {classname "trigger_once" origin "11569.8 1272.78 -2517.66" values {targetname "syn_trig1"} }
+		create {classname "prop_vehicle_jeep" origin "3337 4662 -126"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test2"
+				solid "6"
+				model "models/vehicles/buggy_p2.mdl"
+				disableshadows "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				angles "0 -90 0"
+				enablegun "0"
+				PlayerOn "syn_ptburgercar,ForceSpawn,,3,1"
+				PlayerOn "syn_mc,Add,1,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "3327.5 4659.3 -126.5"
+			values
+			{
+				spawnflags "320"
+				solid "0"
+				targetname "boat_testparts"
+				parentname "boat_test2"
+				model "models/tools/burger_2.mdl"
+				DisableBoneFollowers "1"
+				angles "0 -87 0"
+			}
+		}
+		create {classname "prop_vehicle_jeep" origin "3337 4662 -96"//+0.5 +6.7 -0.5
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test2pt"
+				solid "6"
+				model "models/vehicles/buggy_p2.mdl"
+				disableshadows "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				angles "0 -90 0"
+				enablegun "0"
+				PlayerOn "syn_ptburgercar,ForceSpawn,,3,1"
+				PlayerOn "syn_mc,Add,1,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "3327.5 4659.3 -96.5"
+			values
+			{
+				spawnflags "320"
+				solid "0"
+				targetname "boat_testptparts"
+				parentname "boat_test2pt"
+				model "models/tools/burger_2.mdl"
+				DisableBoneFollowers "1"
+				angles "0 -87 0"
+			}
+		}
+		create {classname "point_template" values {targetname "syn_ptburgercar" Template01 "boat_test2pt" Template02 "boat_testptparts"} }
+		create {classname "math_counter" values {targetname "syn_mc" max "4" startvalue "0" OnHitMax "syn_ptburgercar,kill,,0,-1" OnHitMax "syn_vehicle_spawn_01,Enable,,0,-1"} }
+		create {classname "info_vehicle_spawn" origin "3328 4666 -127"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "syn_vehicle_spawn_01"
+				spawnflags "0"
+				solid "6"
+				skin "0"
+				model "models/vehicles/buggy_p2.mdl"
+				disableshadows "1"
+				angles "0 -90 0"
+				VehicleSize "192"
+				StartDisabled "1"
+				VehicleType "4"
+			}
+		}
+	}
+}

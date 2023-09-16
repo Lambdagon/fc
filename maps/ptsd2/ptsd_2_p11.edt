@@ -1,0 +1,45 @@
+ptsd_2_p11
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "832 4864 -63"
+			values
+			{
+				angles "0 90 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_ar2 "1"
+					ammo_ar2 "45"
+				weapon_crossbow "1"
+					ammo_xbowbolt "2"
+				weapon_crowbar "1"
+				weapon_frag "1"
+					ammo_grenade "1"
+				weapon_physcannon "1"
+				weapon_pistol "1"
+					ammo_pistol "22"
+				weapon_rpg "1"
+					ammo_rpg_round "1"
+				weapon_shotgun "1"
+					ammo_buckshot "6"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_stunstick "1"
+					ammo_stunstick "1"
+				ResponseContext "weapon_molotov weapon_goop weapon_gauss weapon_bhg"
+			}
+		}
+	}
+}

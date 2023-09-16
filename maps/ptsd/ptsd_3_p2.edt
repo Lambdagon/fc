@@ -1,0 +1,104 @@
+"ptsd_3_p2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {targetname "b"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch syn_equipment_base:Enable::0:-1,0,-1"
+				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch syn_equipment_base:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_357,AddOutput,OnPlayerPickup rpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_smg1,AddOutput,OnPlayerPickup smgpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_end:0:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "rpickup" startdisabled "1" weapon_357 "1" ammo_357 "12"} }
+		create {classname "info_player_equip" values {targetname "smgpickup" startdisabled "1" weapon_smg1 "1" ammo_smg1 "90"} }
+		create {classname "info_player_coop" origin "-255 255 1190" values {targetname "syn_spawnpoint_00" angles "0 90 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "-8670 5390 70" values {targetname "syn_spawnpoint_end" angles "0 180 0" startdisabled "1"} }
+		edit {classname "trigger_teleport" origin "-4192 2400 356.38" values {targetname "syn_trig1"} }
+		create {classname "point_teleport" origin "-8670 5390 70" values {targetname "syn_teleport_01" target "!player" angles "0 180 0"} }
+		edit {classname "trigger_multiple" origin "-1903.99 109.5 44.5" values {spawnflags "8"} }
+		edit {classname "trigger_multiple" origin "-2523.68 2549.58 44.5" values {spawnflags "8"} }
+		edit {targetname "button_down" values {spawnflags "0"} }
+		edit {targetname "button_down2" values {spawnflags "0"} }
+		edit {targetname "button_down_b" values {spawnflags "0"} }
+		edit {targetname "tribber" values {spawnflags "8"} }
+		edit {targetname "speedmod" values {spawnflags "1"} }
+		create {classname "player_weaponstrip" values {targetname "stripweaponsandsuit"} }
+		create {classname "trigger_multiple" origin "-8670 5390 70"
+			values
+			{
+				targetname "remover"
+				startdisabled "0"
+				model "*5"
+				spawnflags "1"
+				OnTrigger "syn_equipment_base,Disable,,0,1"
+				OnTrigger "gpickup,Disable,,0,1"
+				OnTrigger "rpickup,Disable,,0,1"
+				OnTrigger "smgpickup,Disable,,0,1"
+				OnTrigger "stripweaponsandsuit,StripWeaponsAndSuit,,0,-1"
+			}
+		}
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd32" model "*1" map "ptsd_3_p1" landmark "topsd32" startdisabled "1" spawnflags "6"} }
+		create {classname "info_landmark" origin "-255 255 1185" values {targetname "topsd32"} }
+		edit {classname "trigger_once" origin "-14027 7600 68.13"
+			values
+			{
+				classname "trigger_changelevel"
+				targetname "syn_toptsd4"
+				map "ptsd_4"
+				landmark "topsd4"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_landmark" origin "-14027 7600 30" values {targetname "topsd4"} }
+		create {classname "trigger_gravity" origin "-8770 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-8770 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-9270 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-9270 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-9770 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-9770 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10270 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10270 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10270 5915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10270 5915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10770 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10770 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10770 5915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-10770 5915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11270 5415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11270 5415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11270 5915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11270 5915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 5915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 5915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 6415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 6415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 6915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-11770 6915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-12270 6415 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-12270 6415 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-12270 6915 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-12270 6915 520" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "0.165"} }
+		create {classname "trigger_gravity" origin "-14200 7600 180" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-2368 3724 204.09" spawnflags "1" gravity "1.0"} }
+	}
+}

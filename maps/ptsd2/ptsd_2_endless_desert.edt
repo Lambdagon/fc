@@ -1,0 +1,26 @@
+ptsd_2_endless_desert
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "-2.33439 1035.18 74"
+			values
+			{
+				angles "0 90 0"
+				targetname "syn_spawnpoint_00"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+			}
+		}
+		delete {classname "item_suit"}
+	}
+}

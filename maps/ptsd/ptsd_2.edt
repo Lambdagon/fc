@@ -1,0 +1,71 @@
+"ptsd_2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		delete {classname "info_player_start"}
+		delete {targetname "newgame_1"}
+		delete {classname "item_suit"}
+		delete {classname "weapon_physcannon"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "soda_stuff,AddOutput,OnPlayerUse syn_spawn_manager:SetCheckPoint:syn_spawnpoint_end:0:1,0,-1"
+				OnMapSpawn "soda_stuff,AddOutput,OnPlayerUse syn_cooptele_end:TeleportPlayersNotTouching::0:1,0,-1"
+				OnMapSpawn "soda_stuff,AddOutput,OnPlayerUse syn_cooptele_end:kill::1:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				weapon_physcannon "1"
+			}
+		}
+		create {classname "trigger_multiple" origin "-2175 255 35" values {targetname "syn_back_equipper" startdisabled "0" model "*33" spawnflags "1" filtername "syn_plyonce" OnTrigger "syn_equipment_base,EquipPlayer,,0,-1" OnTrigger "!activator,AddOutput,targetname gotequip,0,-1"} }
+		create {classname "filter_activator_name" values {targetname "syn_plyonce" filtername "gotequip" filtertype "0" Negated "1"} }
+		create {classname "info_player_coop" origin "-2175 255 35" values {targetname "syn_spawnpoint_00" angles "0 0 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "2530 1080 35" values {targetname "syn_spawnpoint_end" angles "0 90 0" startdisabled "1"} }
+		create {classname "trigger_coop" origin "2528 2576 -16"
+			values
+			{
+				targetname "syn_cooptele_end"
+				startdisabled "0"
+				spawnflags "1"
+				edt_getbspmodelfor_targetname "vphys_2"
+				target "syn_cooptarg_end"
+			}
+		}
+		create {classname "info_target" origin "2530 1080 35" values {targetname "syn_cooptarg_end" startdisabled "0" angles "0 90 0"} }
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd1" model "*1" spawnflags "6" map "ptsd_1" landmark "topsd2" startdisabled "1"} }
+		create {classname "info_landmark" origin "1725 2485 -635" values {targetname "topsd2"} }
+		edit {classname "trigger_multiple" origin "-255.99 255.5 13.5" values {spawnflags "8"} }
+		edit {targetname "button_down" values {spawnflags "0"} }
+		edit {classname "trigger_once" origin "2528 4560 -944"
+			values
+			{
+				classname "trigger_teleport"
+				spawnflags "1"
+				target "syn_endtp"
+			}
+		}
+		create {classname "info_teleport_destination" origin "5340 155 200" values {targetname "syn_endtp" angles "0 0 0"} }
+		create {classname "trigger_gravity" origin "5340 155 200" values {gravity "1.0" spawnflags "1" startdisabled "0" model "*33"} }
+		create {classname "trigger_changelevel" origin "5340 155 200"
+			values
+			{
+				targetname "syn_toptsd22"
+				model "*33"
+				map "ptsd_2_p1"
+				landmark "topsd22"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_landmark" origin "5700 380 130" values {targetname "topsd22"} }
+		edit {targetname "vphys_2" values {gravity "0.08"} }
+	}
+}

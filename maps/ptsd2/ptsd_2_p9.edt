@@ -1,0 +1,125 @@
+ptsd_2_p9
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_coop" origin "9376 1880 -26" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 90 0"} }
+		create {classname "info_player_coop" origin "9385 3290 -25" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 90 0" parentname "dog_elevator"} }
+		create {classname "info_player_coop" origin "9185 9285 -2405" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 75 0"} }
+		create {classname "info_player_coop" origin "6790 13800 -2235" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 170 0"} }
+		create {classname "info_player_coop" origin "575 15525 -2200" values {targetname "syn_spawnpoint_04" startdisabled "1" angles "0 90 0"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				weapon_ar2 "1"
+					ammo_ar2 "30"
+				weapon_pistol "1"
+					ammo_pistol "50"
+				weapon_physcannon "1"
+				item_suit "1"
+				weapon_crossbow "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_frag "1"
+				weapon_rpg "1"
+				ResponseContext "weapon_goop"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gausspickup" startdisabled "1" ResponseContext "weapon_gauss"} }
+		delete {targetname "spawn_stuff"}
+		delete {targetname "spawnme"}
+		edit {classname "player_speedmod" values {edt_removespawnflags "2"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed syn_cooptele_01:TeleportPlayersNotTouching::0.5:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed syn_cooptele_01:kill::1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_teleport_end:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_teleport_end:kill::0.5:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch info_player_coop:kill::0:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_endviewcontrol:Enable::0:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_endviewcontrol:Disable::4.85:1,0,-1"
+				OnMapSpawn "syn_trig4,AddOutput,OnStartTouch syn_endviewcontrol:kill::4.9:1,0,-1"
+				OnMapSpawn "weapon_gauss,AddOutput,OnPlayerPickup gausspickup:Enable::0:-1,1,-1"
+				OnMapSpawn "weapon_gauss,AddOutput,OnPlayerPickup gausspickup:EquipAllPlayers::0.1:1,1,-1"
+			}
+		}
+		create {classname "syn_transition_wall" origin "9380 1505 -30" values {angles "0 90 0"} }
+		edit {classname "trigger_changelevel" values {edt_map "ptsd_2_p8" edt_landmark "ptsd_landmark_1" spawnflags "6"} }
+		edit {classname "func_button" origin "9504 3549.5 52.98" values {targetname "syn_button1" spawnflags "3073"} }
+		create {classname "trigger_coop" origin "9376 3392 32"
+			values
+			{
+				spawnflags "1"
+				targetname "syn_antirush_coop"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "9376 3392 32"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_button1,Unlock,,0,-1"
+			}
+		}
+		create {classname "trigger_coop" origin "9376 3392 32"
+			values
+			{
+				spawnflags "1"
+				targetname "syn_cooptele_01"
+				target "syn_cooptarg_01"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "9376 3392 32"
+			}
+		}
+		create {classname "info_target" origin "9385 3290 -25" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 90 0" parentname "dog_elevator"} }
+		edit {classname "trigger_once" origin "8695.96 9576.01 -2328" values {targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "5776 13984 -2224" values {targetname "syn_trig2"} }
+		edit {classname "trigger_once" origin "576 15612 -2211.5" values {targetname "syn_trig3" startdisabled "1"} }
+		create {classname "trigger_coop" origin "580 15591 -2129.5"
+			values
+			{
+				edt_getbspmodelfor_targetname "teleporthell"
+				spawnflags "1"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnPlayersIn "!self,kill,,0,-1"
+				OnPlayersIn "syn_trig3,Enable,,0,-1"
+			}
+		}
+		edit {classname "trigger_teleport" origin "-4032 6876 -2474.08" values {targetname "syn_trig4"} }
+		create {classname "point_teleport" origin "-8065 12032 -2332"
+			values
+			{
+				targetname "syn_teleport_end"
+				target "player"
+				angles "0 0 0"
+			}
+		}
+		create {classname "point_viewcontrol" origin "-7952 12032 -2310"
+			values
+			{
+				targetname "syn_endviewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+"boneless_ptsd"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		delete {targetname "vent"}
+		edit {classname "env_zoom" values {AllPlayers "1"} }
+		edit {targetname "getpizza" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapTransition "syn_back_equipper,Enable,,0,-1"
+				OnMapTransition "syn_inviswall,kill,,0,-1"
+				OnMapSpawn "helmetFaceplate_head_2,SetParent,stonie,0,-1"
+				OnMapSpawn "helmetFaceplate_head,SetParent,barney,0,-1"
+				OnMapSpawn "helmetFaceplate_head,SetParentAttachment,eyes,0.1,-1"
+				OnMapSpawn "lightbones,TurnOn,,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "angery_guy_6,AddOutput,OnDeath ppickup:Enable::0:-1,0,-1"
+				OnMapSpawn "angery_guy_6,AddOutput,OnDeath ppickup:EquipAllPlayers::2:1,0,-1"
+				OnMapSpawn "icedoor,AddOutput,OnOpen syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "ohno,AddOutput,OnStartTouch stripweap:StripWeaponsAndSuit::0:-1,0,-1"
+				OnMapSpawn "ohno,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_04:0:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				weapon_crowbar "1"
+			}
+		}
+		create {classname "trigger_multiple" origin "-1280 850 35" values {targetname "syn_back_equipper" startdisabled "1" edt_getbspmodelfor_targetname "ohno" spawnflags "1" filtername "syn_plyonce" OnTrigger "stripweap,Strip,,0,-1" OnTrigger "syn_equipment_base,EquipPlayer,,0.1,-1" OnTrigger "!activator,AddOutput,targetname gotequip,0,-1"} }
+		create {classname "filter_activator_name" values {targetname "syn_plyonce" filtername "gotequip" filtertype "0" Negated "1"} }
+		create {classname "info_player_equip" values {targetname "bpickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "18"} }
+		create {classname "info_player_equip" values {targetname "ppickup" startdisabled "1" weapon_pistol "1" ammo_pistol "36"} }
+		create {classname "info_player_coop" origin "-1280 850 35" values {targetname "syn_spawnpoint_00" angles "0 180 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "-3480 380 35" values {targetname "syn_spawnpoint_01" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-6830 380 35" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-13110 -1600 -3867" values {targetname "syn_spawnpoint_03" angles "0 0 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "2927 -7674 -1424" values {targetname "syn_spawnpoint_04" angles "0 0 0" startdisabled "1"} }
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd7" model "*1" map "ptsd_6" landmark "topsd7" startdisabled "1" spawnflags "6"} }
+		create {classname "info_landmark" origin "-1280 850 30" values {targetname "topsd7"} }
+		delete {classname "logic_auto" origin "-2266.7 72 71.468"}
+		delete {targetname "pizza_stuff_4"}
+		edit {classname "trigger_teleport" origin "4570 -1602.5 -3744" values {targetname "syn_trig1"} }
+		delete {classname "trigger_once" origin "-6824 280 51.5"}
+		create {classname "trigger_coop" origin "-8875 465 -645"
+			values
+			{
+				edt_getbspmodelfor_targetname "ohno"
+				targetname "syn_cooptele_01"
+				spawnflags "1"
+				startdisabled "0"
+				target "syn_cooptarg_01"
+				usehud "1"
+				counttype "1"
+				playervalue "66"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "door_mdl_3_a2,Skin,0,0,-1"
+				OnPlayersIn "door_mdl_4_a2,Skin,0,0,-1"
+				OnPlayersIn "door_frame_7,Skin,0,0,-1"
+				OnPlayersIn "gate_4_a2,Close,,0,-1"
+				OnPlayersIn "gate_3_a2,Close,,0,-1"
+				OnPlayersIn "save,Save,,1,1"
+				OnPlayersIn "light3,TurnOff,,0,-1"
+				OnPlayersIn "!self,Disable,,1,-1"
+			}
+		}
+		create {classname "info_target" origin "-6830 380 35" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 180 0"} }
+		create {classname "player_weaponstrip" values {targetname "stripweap"} }
+		create {classname "trigger_teleport" origin "-8875 465 -645" values {targetname "ohno" startdisabled "1" edt_getbspmodelfor_targetname "ohno" spawnflags "1" target "onno"} }
+		edit {targetname "yea333" values {spawnflags "76"} }
+		create {classname "player_speedmod" values {targetname "syn_restore"} }
+		delete {classname "trigger_once" origin "-7270 281 51.5"}
+		create {classname "trigger_teleport" origin "3008 -7744 -10990"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "3008 -7744 -10592"
+				targetname "syn_toptsdfinal"
+				target "syn_endtp"
+				startdisabled "0"
+				spawnflags "1"
+				OnStartTouch "syn_restore,ModifySpeed,1.0,0,-1"
+				OnStartTouch "env_zoom,UnZoom,,0,-1"
+			}
+		}
+		create {classname "info_teleport_destination" origin "-4495 -4975 -10845" values {targetname "syn_endtp" angles "0 -90 0"} }
+		create {classname "trigger_changelevel" origin "-4495 -4975 -10845"
+			values
+			{
+				edt_getbspmodelfor_targetname "da_door_1"
+				targetname "syn_toptsdfinal"
+				map "ptsd_final"
+				landmark "topsdfinal"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_landmark" origin "-4495 -4955 -10905" values {targetname "topsdfinal"} }
+		create {classname "trigger_gravity" origin "3008 -7744 -8890"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "3008 -7744 -10592"
+				targetname "syn_gravset"
+				angles "90 0 0"
+				spawnflags "1"
+				gravity "0.1"
+			}
+		}
+		create {classname "trigger_gravity" origin "3008 -7744 -4590"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "3008 -7744 -10592"
+				targetname "syn_gravset"
+				angles "90 0 0"
+				spawnflags "1"
+				gravity "0.1"
+			}
+		}
+		create {classname "trigger_gravity" origin "3008 -7744 -290"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "3008 -7744 -10592"
+				targetname "syn_gravset"
+				angles "90 0 0"
+				spawnflags "1"
+				gravity "0.1"
+			}
+		}
+	}
+}

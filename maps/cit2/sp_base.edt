@@ -1,0 +1,58 @@
+"sp_streetwar3"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {targetname "trigger_playerpresence"}
+		delete {targetname "block_letter_player"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "track9,AddOutput,OnPass trigger_changelevel:Enable::0:1,0,-1"
+				OnMapSpawn "button_letter01,AddOutput,OnIn overlay_letter13:StopOverlays::20:-1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_rpg "1"
+					ammo_rpg_round "2"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		create {classname "prop_physics" origin "14225 10630 -280" values {model "models/items/car_battery01.mdl" targetname "battery" angles "0 45 0"} }
+	}
+}

@@ -1,0 +1,87 @@
+"sp_streetwar3"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "trigger_place_board,AddOutput,OnTrigger combine_stridey:kill::0:-1,0,-1"
+				OnMapSpawn "trigger_place_board,AddOutput,OnTrigger relcount:Add:1:0:-1,0,-1"
+				OnMapSpawn "trigger_place_board,AddOutput,OnTrigger relsetcount:Trigger::1:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger changelevelnodoor:Enable::0:-1,0,-1"
+				OnMapSpawn "path_stridah_7,AddOutput,OnPass !activator:kill::0:-1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "relcount"
+				max "7"
+				min "0"
+				startvalue "0"
+				OnHitMax "relay_its_safe,Enable,,0,-1"
+				OnHitMax "relay_its_safe,Trigger,,0.1,-1"
+				OnHitMax "relay_its_safe,Trigger,,20,-1"
+				OnHitMax "relay_stridergone,Trigger,,20,-1"
+				OnHitMax "relay_its_safe,Trigger,,40,-1"
+			}
+		}
+		create {classname "logic_relay"
+			values
+			{
+				targetname "relsetcount"
+				startdisabled "0"
+				OnTrigger "fodder1,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+				OnTrigger "fodder2,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+				OnTrigger "fodder3,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+				OnTrigger "fodder4,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+				OnTrigger "fodder5,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+				OnTrigger "fodder6,AddOutput,OnDeath relcount:Add:1:0:-1,0,-1"
+			}
+		}
+		create {classname "trigger_push" origin "-650 355 300"
+			values
+			{
+				model "*73"
+				spawnflags "1"
+				angles "90 -90 0"
+				pushdir "0 0 0"
+				startdisabled "0"
+				speed "1000"
+			}
+		}
+		edit {classname "trigger_changelevel" values {edt_map "sp_streetwar2" edt_landmark "thelandmark" spawnflags "6" startdisabled "1"} }
+		edit {classname "trigger_changelevel" values {edt_map "sp_streetwar3" edt_landmark "thelandmark" spawnflags "6" startdisabled "1"} }
+		delete {classname "trigger_multiple" origin "42 -224 220"}
+		delete {classname "trigger_multiple" origin "220.29 -143 -232"}
+		delete {classname "trigger_multiple" origin "695 -62 -232"}
+		edit {classname "trigger_multiple" origin "484.77 -1531 104" values {origin "384.77 -1531 104"} }
+		edit {classname "trigger_once" origin "840 -2404.5 -100" values {targetname "syn_trig1"} }
+		edit {targetname "changelevel" values {targetname "changelevelnodoor"} }
+		edit {targetname "lastdoor" values {wait "-1"} }
+	}
+}

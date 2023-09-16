@@ -1,0 +1,116 @@
+"sp_waterplant"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "trigger_multiple" origin "1978 8132 1754"}
+		delete {classname "info_player_start" origin "2068 3723 777"}
+		delete {classname "info_player_start" origin "2044 6652 1540"}
+		delete {classname "info_player_start" origin "1647 7807 1707"}
+		delete {targetname "invisible_brush"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_teleport_01a:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn gate1anoclose:Open::2:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn gate1bnoclose:Open::2:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn syn_spawnpoint_01:Disable::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn syn_teleport_02a:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnIn syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0.1:1,0,-1"
+				OnMapSpawn "syn_button2,Lock,,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_rpg "1"
+					ammo_rpg_round "2"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		create {classname "point_teleport" origin "2550 3800 790"
+			values
+			{
+				targetname "syn_teleport_01a"
+				target "player"
+				angles "0 -40 0"
+			}
+		}
+		create {classname "point_teleport" origin "1840 6190 1425"
+			values
+			{
+				targetname "syn_teleport_02a"
+				target "player"
+				angles "20 -90 0"
+			}
+		}
+		edit {classname "trigger_multiple" origin "2548.5 3849 836" values {targetname "syn_trig1"} }
+		delete {classname "info_player_start" origin "2552 3933 1201"}
+		create {classname "info_player_coop" origin "2520 3805 790" values {targetname "syn_spawnpoint_01" angles "0 -40 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "1840 6210 1415" values {targetname "syn_spawnpoint_02" angles "0 0 0" startdisabled "1"} }
+		edit {classname "func_button" origin "1839.5 6142.5 1452.5" values {targetname "syn_button1"} }
+		edit {classname "func_button" origin "1846.5 8204 1762" values {targetname "syn_button2"} }
+		edit {targetname "gate1a" values {targetname "gate1anoclose"} }
+		edit {targetname "gate1b" values {targetname "gate1bnoclose"} }
+		edit {classname "prop_physics" origin "1790 8218 1731" values {origin "1360 6570 1415" angles "0 0 0"} }
+		edit {classname "prop_physics" origin "1781 8246 1742.46" values {origin "1405 6570 1370" angles "0 45 0"} }
+		edit {targetname "change_level" values {targetname "change_levelnouse" startdisabled "1"} }
+		create {classname "trigger_changelevel" origin "1975 8125 1745"
+			values
+			{
+				model "*63"
+				spawnflags "0"
+				map "sp_waterplant2"
+				landmark "waterplant2waterplant2"
+				startdisabled "0"
+			}
+		}
+		create {classname "trigger_coop" origin "1805 8115 1740"
+			values
+			{
+				model "*69"
+				spawnflags "1"
+				angles "0 0 0"
+				startdisabled "0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "gate3b,Open,,0,-1"
+				OnPlayersIn "gate3a,Open,,0,-1"
+				OnPlayersIn "!self,Disable,,1,1"
+			}
+		}
+	}
+}

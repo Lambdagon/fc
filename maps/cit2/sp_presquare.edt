@@ -1,0 +1,144 @@
+"sp_presquare"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "logic_auto" origin "1728 -4640 122.333"}
+		delete {classname "logic_auto" origin "1797 -4628 130.442"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "rebel01_knock,AddOutput,OnBeginSequence entrydoornoclose:Unlock::12.4:-1,0,-1"
+				OnMapSpawn "rebel01_knock,AddOutput,OnBeginSequence entrydoornoclose:Open::12.5:-1,0,-1"
+				OnMapSpawn "relay_lockdoor,AddOutput,OnTrigger entrydoornoclose:Lock::0:1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+					ammo_smg1_grenade "1"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+			}
+		}
+		create {classname "point_viewcontrol" origin "1800 -4590 65"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+		create {classname "func_button" origin "1756 -4560 45"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				targetname "syn_trig1"
+				OnTrigger "syn_trig1,kill,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "1736 -4600 45"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				targetname "syn_trig1"
+				OnTrigger "syn_trig1,kill,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "1516 -4560 45"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				targetname "syn_trig1"
+				OnTrigger "syn_trig1,kill,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "1736 -4560 45"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				targetname "syn_trig1"
+				OnTrigger "syn_trig1,kill,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "1516 -4600 45"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				targetname "syn_trig1"
+				OnTrigger "syn_trig1,kill,,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+				OnTrigger "syn_hudtimer,Start,15,0,-1"
+			}
+		}
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "tonemap_controller,SetAutoExposureMax,1.5,0,-1"
+				OnTimer "tonemap_controller,SetAutoExposureMin,0.5,0,-1"
+				OnTimer "tonemap_controller,SetBloomScale,0.4,0,-1"
+				OnTimer "combine_suit*,SetAnimation,LH_attachment_Init,0,-1"
+				OnTimer "combine_suit*,TurnOff,,0,-1"
+				OnTimer "initial_fade,Fade,,0,-1"
+				OnTimer "stranded,kill,,0,-1"
+				OnTimer "huntey1,Start,,4,-1"
+				OnTimer "syn_autosave,Save,,10,-1"
+			}
+		}
+		edit {targetname "entrydoor" values {targetname "entrydoornoclose"} }
+		create {classname "syn_transition_wall" origin "525 -2850 -82"
+			values
+			{
+				targetname "syn_wall"
+				angles "0 0 0"
+			}
+		}
+		create {classname "trigger_coop" origin "605 -2870 0"
+			values
+			{
+				spawnflags "1"
+				model "*27"
+				spawnflags "1"
+				angles "0 0 0"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				OnPlayersIn "syn_wall,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,1,-1"
+			}
+		}
+	}
+}

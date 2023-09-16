@@ -1,0 +1,112 @@
+"ptsd_6"
+{
+	console
+	{
+		sk_zombie_soldier_health "80"
+	}
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		edit {classname "env_zoom" values {AllPlayers "1"} }
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup remover:kill::0:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crowbar,AddOutput,OnPlayerPickup cpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_shotgun,AddOutput,OnPlayerPickup bpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_door1,AddOutput,OnOpen syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_toptsd7,AddOutput,OnChangeLevel syn_inviswall:kill::0:-1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "bpickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "18"} }
+		create {classname "info_player_equip" values {targetname "cpickup" startdisabled "1" weapon_crowbar "1"} }
+		create {classname "info_player_coop" origin "-255 160 35" values {targetname "syn_spawnpoint_00" angles "0 -90 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "800 2850 -190" values {targetname "syn_spawnpoint_01" angles "0 0 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "3635 1920 -180" values {targetname "syn_spawnpoint_02" angles "30 180 0" startdisabled "1"} }
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd5" model "*1" map "ptsd_5" landmark "topsd6" startdisabled "1" spawnflags "6"} }
+		create {classname "info_landmark" origin "-255 160 35" values {targetname "topsd6"} }
+		edit {classname "trigger_once" origin "-88 -1766 13" values {classname "trigger_multiple"} }
+		edit {classname "trigger_once" origin "-95 -1892 13" values {classname "trigger_multiple"} }
+		edit {classname "trigger_once" origin "-114 -1988 13" values {classname "trigger_multiple"} }
+		edit {classname "trigger_once" origin "-144 -2085 13" values {classname "trigger_multiple"} }
+		edit {classname "prop_door_rotating" origin "3961 1880 -145" values {targetname "syn_door1"} }
+		create {classname "player_weaponstrip" values {targetname "stripweap"} }
+		create {classname "trigger_multiple" origin "-255 160 35"
+			values
+			{
+				targetname "remover"
+				startdisabled "0"
+				edt_getbspmodelfor_classname "trigger_teleport"
+				edt_getbspmodelfor_origin "-32 80 -468"
+				spawnflags "1"
+				wait "1"
+				OnTrigger "stripweap,Strip,,0,-1"
+			}
+		}
+		create {classname "func_brush" origin "-368 -6288 715"
+			values
+			{
+				targetname "syn_antirush_wall"
+				spawnflags "2"
+				rendermode "10"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-368 -6288 700"
+			}
+		}
+		create {classname "trigger_coop" origin "-368 -6288 745"
+			values
+			{
+				targetname "syn_antirush_coop"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-368 -6288 700"
+				spawnflags "1"
+				target "syn_cooptarg_01"
+				usehud "1"
+				counttype "1"
+				playervalue "66"
+				OnPlayersIn "syn_antirush_wall,kill,,0,-1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.1,1"
+				OnPlayersIn "!self,Disable,,0.5,1"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_01,0,1"
+			}
+		}
+		create {classname "info_target" origin "-370 -6295 775" values {targetname "syn_cooptarg_01" startdisabled "0" angles "90 -90 0"} }
+		delete {targetname "lastzoom"}
+		edit {classname "trigger_once" origin "4160 976 -425.79"
+			values
+			{
+				classname "trigger_changelevel"
+				targetname "syn_toptsd7"
+				map "boneless_ptsd"
+				landmark "topsd7"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_landmark" origin "4160 976 -450" values {targetname "topsd7"} }
+		create {classname "trigger_multiple" origin "4160 976 -425.79" values {startdisabled "0" edt_getbspmodelfor_classname "trigger_once" edt_getbspmodelfor_origin "4160 976 -425.79" spawnflags "1" wait "1" OnTrigger "stripweap,Strip,,0,-1"} }
+		
+		edit {classname "prop_physics" origin "4145 954 -433.446" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4165.12 956.55 -428.832" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4164.38 948.21 -428.832" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4145 932 -433.446" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4145 948 -451.446" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4170.84 944 -459.89" values {targetname "syn_inviswall"} }
+		edit {classname "prop_physics" origin "4144 986 -467.446" values {targetname "syn_inviswall"} }
+	}
+}

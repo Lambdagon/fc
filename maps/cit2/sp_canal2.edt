@@ -1,0 +1,91 @@
+"sp_canal2"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start" origin "12698 8055 192"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		edit {targetname "overlay_letter12" values {spawnflags "1"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "button_letter01,AddOutput,OnIn overlay_letter12:StopOverlays::20:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger slidingdoor:Close::0:1,0,-1"
+				OnMapSpawn "slidingdoor,AddOutput,OnOpen seq_larry_intrudeedt:BeginSequence::1:1,0,-1"
+				OnMapSpawn "slidingdoor,AddOutput,OnOpen scene_larry_followme:Start::1:1,0,-1"
+				OnMapSpawn "slidingdoor,AddOutput,OnOpen isolator_brushedt:Disable::3.8:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger syn_coop1:Enable::2:1,0,-1"
+				OnMapSpawn "syn_coop1,AddOutput,OnPlayersIn seq_vorty_open:BeginSequence::0:-1,0,-1"
+				OnMapSpawn "syn_coop1,AddOutput,OnPlayersIn seq_vorty_open:BeginSequence::3:-1,0,-1"
+				OnMapSpawn "syn_coop1,AddOutput,OnPlayersIn !self:Disable::0.5:1,0,-1"} }
+		create {classname "logic_autosave" values {targetname "syn_autosave"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_rpg "1"
+					ammo_rpg_round "2"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		create {classname "point_teleport" origin "12570 7220 200"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "0 90 0"
+			}
+		}
+		edit {targetname "isolator_brush" values {targetname "isolator_brushedt"} }
+		edit {targetname "seq_larry_intrude" values {targetname "seq_larry_intrudeedt"} }
+		edit {classname "trigger_multiple" origin "13030 7798.5 197" values {origin "13030 7820 197" targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "13800 8458 71.5" values {targetname "syn_trig2"} }
+		edit
+		{
+			targetname "triggerlook_end_door"
+			values
+			{
+				classname "trigger_coop"
+				spawnflags "1"
+				angles "0 0 0"
+				startdisabled "1"
+				counttype "1"
+				usehud "1"
+				playervalue "50"
+				targetname "syn_coop1"
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+"sp_canyon"
+{
+	console
+	{
+		sk_antlionguard_health "2000"
+	}
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start" origin "-2244 2860 238"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		edit {targetname "overlay_letter14" values {spawnflags "1"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"
+				OnMapSpawn "button_letter01,AddOutput,OnIn overlay_letter14:StopOverlays::20:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawnpoint_00:Disable::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawnpoint_01:Enable::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_vehiclespawn_1:Enable::0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0.1:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger syn_spawnpoint_01:Disable::0:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger syn_spawnpoint_02:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger syn_teleport_01:Teleport::0:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger syn_vehiclespawn_1:Disable::0:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0.1:1,0,-1"
+				OnMapSpawn "trigger_dockevent,AddOutput,OnTrigger prop_vehicle_airboat:kill::0:1,0,-1"
+				OnMapSpawn "trigger_allinside,AddOutput,OnTrigger syn_spawnpoint_02:Disable::0:1,0,-1"
+				OnMapSpawn "trigger_allinside,AddOutput,OnTrigger syn_spawnpoint_03:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_allinside,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0.1:1,0,-1"
+				OnMapSpawn "trigger_intrapdoor,AddOutput,OnTrigger syn_teleport_02:Teleport::0:1,0,-1"
+				OnMapSpawn "relay_boathit,AddOutput,OnTrigger syn_loadsaved:Reload::6:1,0,-1"} }
+		create {classname "player_loadsaved" values {targetname "syn_loadsaved"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "0"
+				weapon_smg1 "1"
+					ammo_smg1 "135"
+				weapon_ar2 "1"
+					ammo_ar2 "60"
+				weapon_frag "1"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_pistol "1"
+					ammo_pistol "54"
+				weapon_crowbar "1"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_rpg "1"
+					ammo_rpg_round "2"
+			}
+		}
+		create {classname "env_global"
+			values
+			{
+				targetname "syn_global_crossbow"
+				globalstate "syn_crossbow"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				globalstate "syn_crossbow"
+				OnMapSpawn "xpickup,Enable,,0,-1"
+				OnMapSpawn "syn_crossbow,TurnOn,,1,-1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "xpickup" startdisabled "1" weapon_crossbow "1" ammo_crossbow "2"} }
+		edit {classname "info_player_start" origin "-3880 -11179 56" values {classname "info_player_coop" targetname "syn_spawnpoint_00"} }
+		create {classname "info_player_coop" origin "-4130 -10280 10" values {targetname "syn_spawnpoint_01" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-2110 2725 100" values {targetname "syn_spawnpoint_02" angles "0 -160 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1545 2850 90" values {targetname "syn_spawnpoint_03" angles "0 110 0" startdisabled "1"} }
+		create {classname "info_vehicle_spawn" origin "-4055 -10235 30"
+			values
+			{
+				targetname "syn_vehiclespawn_1"
+				angles "0 0 0"
+				startdisabled "1"
+				RespawnVehicle "1"
+				StartGunEnabled "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"
+			}
+		}
+		create {classname "point_teleport" origin "-2110 2725 100"
+			values
+			{
+				targetname "syn_teleport_01"
+				target "player"
+				angles "10 -160 0"
+			}
+		}
+		create {classname "point_teleport" origin "-1290 3490 100"
+			values
+			{
+				targetname "syn_teleport_02"
+				target "player"
+				angles "0 -90 0"
+			}
+		}
+		edit {classname "trigger_multiple" origin "-3866 -10178 48" values {targetname "syn_trig1" spawnflags "1"} }
+		create {classname "item_ammo_ar2" origin "-1465 2870 100"}
+		create {classname "item_ammo_ar2" origin "-1465 2880 100"}
+		create {classname "item_ammo_smg1" origin "-1475 2870 100" values {angles "0 90 0"} }
+		create {classname "item_ammo_smg1" origin "-1485 2870 100" values {angles "0 90 0"} }
+		create {classname "item_ammo_smg1_grenade" origin "-1485 2870 120" values {angles "0 90 0"} }
+		create {classname "item_ammo_smg1" origin "-1495 2870 100" values {angles "0 90 0"} }
+	}
+}

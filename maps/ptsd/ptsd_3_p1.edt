@@ -1,0 +1,128 @@
+"ptsd_3_p1"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "info_player_start"}
+		delete {classname "item_suit"}
+		delete {classname "weapon_crowbar"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup lcs_tv_breencast:Start::0:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup save:Save::0.5:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_box1,AddOutput,OnBreak bpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "syn_box1,AddOutput,OnBreak bpickup:EquipAllPlayers::0.5:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed syn_cooptele_01:TeleportPlayersNotTouching::0:1,0,-1"
+				OnMapSpawn "syn_button1,AddOutput,OnPressed syn_spawn_manager:SetCheckPoint:syn_spawnpoint_02:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_cooptele_02:TeleportPlayersNotTouching::1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch remover:Enable::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch syn_toptsd32:Enable::0:-1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnStartTouch global:TurnOff::0:-1,0,-1"
+				OnMapSpawn "syn_toptsd32tele,AddOutput,OnStartTouch syn_toptsd32:Enable::0:1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				weapon_crowbar "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "info_player_equip" values {targetname "bpickup" startdisabled "1" weapon_shotgun "1" ammo_buckshot "18"} }
+		create {classname "info_player_coop" origin "-3125 4705 180" values {targetname "syn_spawnpoint_00" angles "0 0 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "-1740 6905 275" values {targetname "syn_spawnpoint_01" angles "0 80 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-1585 10030 275" values {targetname "syn_spawnpoint_02" angles "0 -90 0" startdisabled "1" parentname "dog_elevator"} }
+		create {classname "info_player_coop" origin "-3685 8900 1170" values {targetname "syn_spawnpoint_03" angles "0 180 0" startdisabled "1"} }
+		create {classname "trigger_changelevel" values {targetname "syn_toptsd3" model "*1" map "ptsd_3" landmark "topsd31" startdisabled "1" spawnflags "6"} }
+		create {classname "info_landmark" origin "-3035 4715 210" values {targetname "topsd31"} }
+		delete {classname "trigger_once" origin "-1660 7192 304"}
+		edit {classname "item_item_crate" origin "-1775.84 9097.04 1203.28" values {targetname "syn_box1" ItemCount "3"} }
+		edit {classname "item_item_crate" values {ItemCount "6"} }
+		create {classname "item_suitcharger" origin "-1705 9696 294" values {angles "0 -90 0" spawnflags "8192"} }
+		edit {classname "func_button" origin "-1600 10060 324.97" values {targetname "syn_button1"} }
+		edit {classname "trigger_once" origin "-3668 8900 1295.76" values {targetname "syn_trig1"} }
+		edit {targetname "cockface" values {spawnflags "1180292"} }
+		create {classname "trigger_coop" origin "-1600 9904 304"
+			values
+			{
+				targetname "syn_cooptele_01"
+				startdisabled "0"
+				model "*44"
+				spawnflags "1"
+				target "syn_cooptarg_01"
+				parentname "dog_elevator"
+			}
+		}
+		create {classname "info_target" origin "-1585 10030 275" values {targetname "syn_cooptarg_01" startdisabled "0" angles "0 -90 0" parentname "dog_elevator"} }
+		create {classname "trigger_teleport" origin "-1600 9904 130"
+			values
+			{
+				targetname "syn_falloutele"
+				startdisabled "0"
+				model "*44"
+				spawnflags "1"
+				target "syn_telefallout"
+				parentname "dog_elevator"
+			}
+		}
+		create {classname "info_teleport_destination" origin "-1585 10030 275" values {targetname "syn_telefallout" startdisabled "0" angles "0 -90 0" parentname "dog_elevator"} }
+		create {classname "trigger_coop" origin "-3705 8900 1220"
+			values
+			{
+				targetname "syn_cooptele_02"
+				startdisabled "0"
+				model "*72"
+				angles "0 0 90"
+				spawnflags "1"
+				target "syn_cooptarg_02"
+			}
+		}
+		create {classname "info_target" origin "-3685 8900 1170" values {targetname "syn_cooptarg_02" startdisabled "0" angles "0 180 0"} }
+		create {classname "player_weaponstrip" values {targetname "stripweaponsandsuit"} }
+		create {classname "trigger_multiple" origin "-3705 8900 1220"
+			values
+			{
+				targetname "remover"
+				startdisabled "1"
+				model "*72"
+				angles "0 0 90"
+				spawnflags "1"
+				OnTrigger "syn_equipment_base,Disable,,0,1"
+				OnTrigger "gpickup,Disable,,0,1"
+				OnTrigger "bpickup,Disable,,0,1"
+				OnTrigger "stripweaponsandsuit,StripWeaponsAndSuit,,0,-1"
+			}
+		}
+		edit {classname "trigger_once" origin "-3724 8900 756"
+			values
+			{
+				classname "trigger_teleport"
+				targetname "syn_toptsd32tele"
+				target "syn_endtp"
+				spawnflags "1"
+				startdisabled "0"
+			}
+		}
+		create {classname "info_teleport_destination" origin "-3724 8900 756" values {targetname "syn_endtp" startdisabled "0" angles "0 0 0"} }
+		create {classname "trigger_changelevel" origin "-3724 8900 656"
+			values
+			{
+				targetname "syn_toptsd32"
+				map "ptsd_3_p2"
+				landmark "topsd32"
+				model "*72"
+				startdisabled "1"
+			}
+		}
+		create {classname "info_landmark" origin "-3724 8900 756" values {targetname "topsd32"} }
+	}
+}

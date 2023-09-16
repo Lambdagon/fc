@@ -1,0 +1,76 @@
+ptsd_2_p2
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		delete {targetname "unlockme"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				weapon_357 "1"
+					ammo_357 "6"
+				weapon_crowbar "1"
+				weapon_smg1 "1"
+					ammo_smg1 "45"
+				item_suit "1"
+			}
+		}
+		create {classname "info_player_equip" values {targetname "gpickup" startdisabled "1" weapon_physcannon "1"} }
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_physcannon,AddOutput,OnPlayerPickup gpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_buttontrig,AddOutput,OnStartTouch button_down:Open::0:-1,0,-1"
+				OnMapSpawn "syn_buttontrig,AddOutput,OnEndTouchAll button_down:Close::0:-1,0,-1"
+			}
+		}
+		delete {targetname "spawn_stuff"}
+		edit {targetname "spawnme" values {Template02 ""} }
+		create {classname "info_player_coop" origin "-1648 -223 10" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 180 0"} }
+		create {classname "info_player_coop" origin "4190 985 -1200" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "6085 1000 -1380" values {targetname "syn_spawnpoint_02" startdisabled "1" angles "0 0 0"} }
+		create {classname "info_player_coop" origin "8800 1020 -1370" values {targetname "syn_spawnpoint_03" startdisabled "1" angles "0 0 0"} }
+		edit {classname "trigger_multiple" origin "7190.5 1023 -1311.07" values {targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "5534.01 305.01 -1340.7" values {targetname "syn_buttontrig" spawnflags "8"} }
+		edit {targetname "button_down" values {spawnflags "0"} }
+		create {classname "trigger_once" origin "6345 992 -1262"
+			values
+			{
+				spawnflags "1"
+				edt_mins "-100 -400 -100"
+				edt_maxs "100 400 200"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"
+			}
+		}
+		edit {classname "trigger_hurt" origin "7303.5 1007.5 -2012" values {damage "100"} }
+		delete {classname "trigger_once" origin "8904 1024 -1104"}
+		create {classname "trigger_coop" origin "8904 1024 -1104"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "8904 1024 -1104"
+				spawnflags "1"
+				usehud "1"
+				playervalue "66"
+				CountType "1"
+				target "syn_cooptele_01"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_03,0,1"
+				OnPlayersIn "!self,TeleportPlayersNotTouching,,0.5,1"
+				OnPlayersIn "!self,kill,,0.6,-1"
+				OnPlayersIn "floor,Break,,0,1"
+				OnPlayersIn "fall_scream,PlaySound,,0,1"
+			}
+		}
+		create {classname "info_target" origin "8800 1020 -1370" values {targetname "syn_cooptele_01" startdisabled "0" angles "0 0 0"} }
+	}
+}

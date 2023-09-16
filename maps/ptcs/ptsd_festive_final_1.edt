@@ -1,0 +1,228 @@
+"ptsd_festive_final_1"
+{
+	entity
+	{
+		delete {classname "point_clientcommand"}
+		delete {classname "item_suit"}
+		delete {classname "info_player_start"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {spawnflags "140"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xpickup:Enable::0:-1,0,-1"
+				OnMapSpawn "weapon_crossbow,AddOutput,OnPlayerPickup xpickup:EquipAllPlayers::0.1:1,0,-1"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_01:0:1,0,-1"
+				OnMapSpawn "angery_guy_18,AddOutput,OnDeath syn_mc:Add:1:0:-1,0,-1"
+				OnMapSpawn "angery_guy_19,AddOutput,OnDeath syn_mc:Add:1:0:-1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawnpoint_03:0:1,0,-1"
+				OnMapSpawn "syn_trig2,AddOutput,OnTrigger save:Save::0.5:1,0,-1"
+				OnMapSpawn "elevator_1,AddOutput,OnOpen syn_button1:Lock::0:-1,0,-1"
+				OnMapSpawn "elevator_1,AddOutput,OnFullyOpen syn_button1:UnLock::0:-1,0,-1"
+				OnMapSpawn "elevator_2,AddOutput,OnOpen syn_button2:Lock::0:-1,0,-1"
+				OnMapSpawn "elevator_2,AddOutput,OnFullyClosed syn_button2:UnLock::0:-1,0,-1"
+				OnMapSpawn "syn_trig3,AddOutput,OnTrigger syn_coop_teleend:TeleportPlayersNotTouching::0:-1,0,-1"
+				OnMapSpawn "wahoo,AddOutput,OnBeginSequence syn_endvid:Enable::0:-1,0,-1"} }
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+				item_suit "1"
+				startdisabled "0"
+				weapon_smg1 "1"
+					ammo_smg1 "90"
+				weapon_357 "1"
+					ammo_357 "12"
+				weapon_shotgun "1"
+					ammo_buckshot "12"
+				weapon_crowbar "1"
+				weapon_stunstick "1"
+				weapon_frag "1"
+				weapon_physcannon "1"
+			}
+		}
+		create {classname "info_player_coop" origin "-1655 -12990 580" values {targetname "syn_spawnpoint_00" angles "0 90 0" startdisabled "0"} }
+		create {classname "info_player_coop" origin "-5310 -10000 355" values {targetname "syn_spawnpoint_01" angles "0 115 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-5480 -5380 460" values {targetname "syn_spawnpoint_02" angles "0 180 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-5465 9420 460" values {targetname "syn_spawnpoint_03" angles "0 110 0" startdisabled "1"} }
+		create {classname "info_player_coop" origin "-6480 10285 5140" values {targetname "syn_spawnpoint_04" angles "0 0 0" startdisabled "1"} }
+		edit {classname "trigger_once" origin "-5377.93 -9360.27 376" values {targetname "syn_trig1"} }
+		edit {classname "trigger_multiple" origin "-5288 10736 792" values {targetname "syn_trig2"} }
+		edit {classname "trigger_once" origin "-6406 10260 5220" values {targetname "syn_trig3"} }
+		edit {classname "item_item_crate" values {ItemCount "3"} }
+		delete {targetname "boat_test2"}
+		delete {classname "prop_dynamic" origin "-5703 -5391 478"}
+		delete {classname "trigger_once" origin "-7882.38 -162.57 504"}
+		create {classname "info_vehicle_spawn" origin "-5549 -5361 449.95"
+			values
+			{
+				targetname	"syn_spawn_vehicle_1"
+				angles "0 0 0"
+				StartEnabled "1"
+				RespawnVehicle "1"
+				StartGunEnabled "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models\vehicles\buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+			}
+		}
+		create {classname "prop_vehicle_jeep" origin "-5549 -5361 449.95"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test3"
+				solid "6"
+				model "models\vehicles\buggy_p2.mdl"
+				ignorenormals "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				disablevertexlighting "1"
+				disableshadows "1"
+				disableselfshadowing "1"
+				angles "0 0 0"
+				actionScale "1"
+				PlayerOn "sad,StopSound,,0,1"
+				PlayerOn "sad,Volume,0,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-5553 -5391 478"
+			values
+			{
+				StartDisabled "0"
+				spawnflags "320"
+				solid "0"
+				pressuredelay "0"
+				parentname "boat_test3"
+				model "models/ptsd_festive/burger_car.mdl"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fadescale "1"
+				fademindist "-1"
+				disableshadows "1"
+				disablereceiveshadows "1"
+				DisableBoneFollowers "0"
+				angles "0 90 0"
+			}
+		}
+		create {classname "prop_vehicle_jeep" origin "-5699 -5361 449.95"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test2"
+				solid "6"
+				model "models\vehicles\buggy_p2.mdl"
+				ignorenormals "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				disablevertexlighting "1"
+				disableshadows "1"
+				disableselfshadowing "1"
+				angles "0 0 0"
+				actionScale "1"
+				PlayerOn "drive_1,PlaySound,,0,1"
+				PlayerOn "sad,StopSound,,0,1"
+				PlayerOn "sad,Volume,0,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-5703 -5391 478"
+			values
+			{
+				StartDisabled "0"
+				spawnflags "320"
+				solid "0"
+				pressuredelay "0"
+				parentname "boat_test2"
+				model "models/ptsd_festive/burger_car.mdl"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fadescale "1"
+				fademindist "-1"
+				disableshadows "1"
+				disablereceiveshadows "1"
+				DisableBoneFollowers "0"
+				angles "0 90 0"
+			}
+		}
+		create {classname "prop_vehicle_jeep" origin "-5849 -5361 449.95"
+			values
+			{
+				vehiclescript "scripts/vehicles/jeep_test.txt"
+				targetname "boat_test1"
+				solid "6"
+				model "models\vehicles\buggy_p2.mdl"
+				ignorenormals "1"
+				fadescale "0"
+				fademindist "0.1"
+				fademaxdist "0.1"
+				disablevertexlighting "1"
+				disableshadows "1"
+				disableselfshadowing "1"
+				angles "0 0 0"
+				actionScale "1"
+				PlayerOn "sad,StopSound,,0,1"
+				PlayerOn "sad,Volume,0,0,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "-5853 -5391 478"
+			values
+			{
+				StartDisabled "0"
+				spawnflags "320"
+				solid "0"
+				pressuredelay "0"
+				parentname "boat_test1"
+				model "models/ptsd_festive/burger_car.mdl"
+				MinAnimTime "5"
+				MaxAnimTime "10"
+				fadescale "1"
+				fademindist "-1"
+				disableshadows "1"
+				disablereceiveshadows "1"
+				DisableBoneFollowers "0"
+				angles "0 90 0"
+			}
+		}
+		create {classname "math_counter" values {targetname "syn_mc" max "2" min "0" startvalue "0" OnHitMax "save,Save,,0.5,1" OnHitMax "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_02,0,1"} }
+		edit {classname "func_button" origin "-5036.47 11363 3255.6" values {targetname "syn_button1"} }
+		edit {classname "func_button" origin "-5685.5 10602.3 3911" values {targetname "syn_button2"} }
+		edit {targetname "Breen2" values {classname "generic_actor" model "models/breen.mdl"} }
+		create {classname "trigger_coop" origin "-6315 10285 5150" values {targetname "syn_endvid" startdisabled "1" spawnflags "1" edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-5733.49 10514 5232.5" OnTrigger "endvidshow,Display,,0,1" OnTrigger "syn_ps,Command,changelevel ptcs the_end,10,1" OnTrigger "syn_pc,Command,playvideo fls1,0,1"} }
+		create {classname "point_clientcommand" values {targetname "syn_pc"} }
+		create {classname "point_servercommand" values {targetname "syn_ps"} }
+		create {classname "game_end" values {targetname "endgame"} }
+		create {classname "game_text" values {targetname "endvidshow" message "Press ESC if the video doesn't start" x "-1" y "-1" channel "1" color "0 255 0" fadein "3" fadeout "3" holdtime "10.0" spawnflags "1"} }
+		create {classname "trigger_coop" origin "-5017 8878 5250"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-5733.49 10514 5232.5"
+				targetname "syn_coop_teleend"
+				startdisabled "0"
+				spawnflags "1"
+				target "syn_cooptarg_end"
+			}
+		}
+		create {classname "info_target" origin "-6480 10285 5140" values {targetname "syn_cooptarg_end" startdisabled "0" angles "0 0 0"} }
+		create {classname "trigger_coop" origin "-5017 8878 5250"
+			values
+			{
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-5733.49 10514 5232.5"
+				targetname "syn_coop_end"
+				startdisabled "0"
+				spawnflags "1"
+				counttype "1"
+				usehud "1"
+				playervalue "80"
+				OnStartTouch "syn_spawn_manager,SetCheckPoint,syn_spawnpoint_04,0,1"
+				OnPlayersIn "syn_antirush_wall,kill,,0,-1"
+				OnPlayersIn "!self,Disable,,0,-1"
+			}
+		}
+		create {classname "syn_transition_wall" origin "-6440 10290 5140" values {targetname "syn_antirush_wall" solid "6" angles "0 180 0" rendermode "10"} }
+	}
+}

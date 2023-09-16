@@ -1,0 +1,108 @@
+ptsd_2_p1_fake
+{
+	entity
+	{
+		delete {classname "info_player_start"}
+		delete {classname "point_clientcommand"}
+		delete {classname "point_servercommand"}
+		edit {classname "game_text" values {spawnflags "1"} }
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		create {classname "info_spawn_manager" values {targetname "syn_spawn_manager"} }
+		delete {classname "logic_relay" origin "-2045.19 3047 165.58"}//Entity contains Lock Input
+		create {classname "logic_relay" origin "-2045.19 3047 165.58"
+			values
+			{
+				targetname "return_weird_stuff"
+				spawnflags "0"
+				OnTrigger "return_glass,Break,,0,-1"
+				OnTrigger "return_door,Close,,0,-1"
+				OnTrigger "leave,Lock,,0.1,-1"//May need to edit this Lock
+				OnTrigger "return_door,Lock,,0.1,-1"
+				OnTrigger "leave,Close,,0,-1"
+				OnTrigger "whoae,Kill,,0,-1"
+				OnTrigger "return_concrete,Break,,0,-1"
+				OnTrigger "return_spook_light,TurnOn,,0,-1"
+				OnTrigger "return_glass,Break,,0,-1"
+			}
+		}
+		create {classname "trigger_once" origin "-1652.68 2985.92 97"
+			values
+			{
+				spawnflags "1"
+				edt_maxs "20 20 20"
+				edt_mins "-20 -20 -20"
+				OnTrigger "syn_hudtimer,Start,20,0,-1"
+				OnTrigger "syn_viewcontrol,Enable,,0,-1"
+			}
+		}
+		create {classname "point_viewcontrol" origin "-1652.68 2985.92 157"
+			values
+			{
+				targetname "syn_viewcontrol"
+				spawnflags "140"
+				angles "0 0 0"
+			}
+		}
+		create {classname "info_player_coop" origin "-1652.68 2985.92 97" values {targetname "syn_spawnpoint_00" startdisabled "0" angles "0 0 0"} }
+		create {classname "info_teleport_destination" origin "-1652.68 2985.92 97" values {targetname "syn_backtostart" startdisabled "0" angles "0 0 0"} }
+		create {classname "hud_timer"
+			values
+			{
+				targetname "syn_hudtimer"
+				TimerText "WAITING FOR PLAYERS"
+				TimerType "1"
+				OnTimer "syn_viewcontrol,Disable,,0,-1"
+				OnTimer "text_1_start,Display,,0,-1"
+				OnTimer "text_2,Display,,6.75,-1"
+				OnTimer "text_3,Display,,10,-1"
+				OnTimer "text_4,Display,,15,-1"
+				OnTimer "text_5,Display,,20,-1"
+				OnTimer "text_6,Display,,25,-1"
+				OnTimer "effect,StartEffect,1,0,-1"
+				OnTimer "tracktrainnodel,StartForward,,0,-1"
+				OnTimer "tracktrainnodel,Resume,,0,-1"
+				OnTimer "viewcontrolnodel,Enable,,0,-1"
+			}
+		}
+		create {classname "info_player_equip"
+			values
+			{
+				targetname "syn_equipment_base"
+			}
+		}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "path7,AddOutput,OnPass viewcontrolnodel:Disable::0:-1,0,-1"
+				OnMapSpawn "portadoor,AddOutput,OnFullyOpen syn_tptostart:Enable::0:-1,0,-1"
+				OnMapSpawn "portadoor,AddOutput,OnClose syn_tptostart:Disable::0:-1,0,-1"
+				OnMapSpawn "portadoor,AddOutput,OnClose syn_mc:Add:1:0:-1,0,-1"
+				OnMapSpawn "syn_trig_end,AddOutput,OnStartTouch portadoor:Unlock::1:-1,0,-1"
+			}
+		}
+		delete {classname "logic_auto" origin "-2201 2822.15 207.529"}//Replaced in hud_timer
+		delete {classname "logic_auto" origin "-3493.35 2675.1 599"}//Replaced in hud_timer
+		edit {classname "trigger_once" origin "5517.5 5594 194" values {classname "trigger_multiple" targetname "syn_trig_end"} }
+		create {classname "trigger_teleport" origin "5518 5592 184"
+			values
+			{
+				edt_mins "-25 -32 -36"
+				edt_maxs "20 32 36"
+				targetname "syn_tptostart"
+				startdisabled "1"
+				spawnflags "1"
+				target "syn_backtostart"
+				OnStartTouch "tracktrainnodel,TeleportToPathTrack,path_start,0,-1"
+				OnStartTouch "tracktrainnodel,StartForward,,0.1,-1"
+				OnStartTouch "viewcontrolnodel,Enable,,0,-1"
+				OnStartTouch "fade_wakeup,kill,,0,-1"
+			}
+		}
+		edit {targetname "tracktrain" values {targetname "tracktrainnodel"} }
+		edit {targetname "viewcontrol" values {targetname "viewcontrolnodel" parentname "tracktrainnodel"} }
+		create {classname "point_servercommand" values {targetname "syn_ps"} }
+		create {classname "math_counter" values {targetname "syn_mc" max "4" startvalue "0" OnHitMax "syn_ps,Command,changelevel ptsd2 ptsd_2_p1,3,1"} }
+	}
+}
