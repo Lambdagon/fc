@@ -276,7 +276,7 @@
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"ResumeButton"
-		"xpos"					"200"
+		"xpos"					"35"
 		"ypos"					"170"
 		"zpos"					"11"
 		"wide"					"254"
