@@ -69,28 +69,16 @@
 		"enabled"		"1"
 		"scaleImage"	"1"
 	}
-	
-	"LogoBG"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"LogoBG"
-		"xpos"			"0"
-		"ypos"			"25"
-		"wide"			"f0"
-		"tall"			"256"
-		"image"			"../logo/lfe_logo"
-		"visible_lodef"	"0"
-		"enabled_lodef"	"0"
-	}
+
 	"Logo"
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"Logo"
 		"xpos"			"30"
-		"ypos"			"-1"
+		"ypos"			"30"
 		"zpos"			"1"
-		"wide"			"256"
-		"tall"			"128"
+		"wide"			"265"
+		"tall"			"70"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../logo/fc_logo"
@@ -121,7 +109,7 @@
 		"zpos"			"-1"
 		"wide"			"265"
 		"tall"			"195"
-		"visible"		"0"
+		"visible"		"1"
 		"pinCorner"		"0"
 		"autoResize"	"0"
 		"PaintBackgroundType"	"2"
@@ -143,7 +131,7 @@
 		"border"			"MainMenuAdvButtonDepressed"	
 	}
 
-	"BackgroundFooter" //botom line lols at bottom of screen
+	"BackgroundFooter"
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"BackgroundFooter"
@@ -152,12 +140,12 @@
 		"zpos"			"-50"
 		"wide"			"f0"
 		"tall"			"60"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"1"
+		"enabled"		"1"
 		"image"			"loadout_bottom_gradient"
 		"tileImage"		"1"
 	}				
-	"FooterLine" // other part of bottom of screen line lols
+	"FooterLine"
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"FooterLine"
@@ -166,8 +154,8 @@
 		"zpos"			"-5-"
 		"wide"			"f0"
 		"tall"			"10"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"1"
+		"enabled"		"1"
 		"image"			"loadout_solid_line"
 		"scaleImage"	"1"
 	}
@@ -175,11 +163,11 @@
 	{
 		"ControlName"		"EditablePanel"
 		"fieldName"			"AvatarBG"
-		"xpos"				"5"
-		"ypos"				"5"
+		"xpos"				"35"
+		"ypos"				"105"
 		"zpos"				"5"
-		"wide"				"45"
-		"tall"				"45"
+		"wide"				"50"
+		"tall"				"50"
 		"visible"			"1"
 		"enabled"			"1"
 		"border"			"MainMenuBGBorderAlpha"
@@ -191,11 +179,11 @@
 	{
 		"ControlName"	"CAvatarImagePanel"
 		"fieldName"		"AvatarImage"
-		"xpos"			"10"
-		"ypos"			"10"
+		"xpos"			"40"
+		"ypos"			"110"
 		"zpos"			"6"
-		"wide"			"35"
-		"tall"			"35"
+		"wide"			"40"
+		"tall"			"40"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			""
@@ -212,13 +200,13 @@
 		"zpos"				"4"
 		"wide"				"255"
 		"tall"				"50"
-		"visible"			"0"
-		"enabled"			"0"
+		"visible"			"1"
+		"enabled"			"1"
 		"border"			"MainMenuBGBorder"
 		"font"				"MenuMainTitle"
 	}
 
-	"MenuBG" //Tall BG that sits behind the buttons 
+	"MenuBG"
 	{
 		"ControlName"		"EditablePanel"
 		"fieldName"			"MenuBG"
@@ -227,8 +215,8 @@
 		"zpos"				"-100"
 		"wide"				"275"
 		"tall"				"f0"
-		"visible"			"0"
-		"enabled"			"0"
+		"visible"			"1"
+		"enabled"			"1"
 		"border"			"AdvRoundedButtonDefault"
 		"font"				"MenuMainTitle"
 	}
@@ -237,10 +225,10 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"			"WelcomeLabel"
-		"xpos"				"60"
-		"ypos"				"3.5"
+		"xpos"				"90"
+		"ypos"				"108"
 		"zpos"				"6"
-		"wide"				"250"
+		"wide"				"190"
 		"tall"				"20"
 		"autoResize"		"0"
 		"pinCorner"			"0"
@@ -257,8 +245,8 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"			"NicknameLabel"
-		"xpos"				"195"
-		"ypos"				"3.5"
+		"xpos"				"90"
+		"ypos"				"125"
 		"zpos"				"5"
 		"wide"				"190"
 		"tall"				"20"
@@ -576,7 +564,7 @@
 		"xpos"					"35"
 		"ypos"					"430"
 		"zpos"					"1"
-		"wide"					"100"
+		"wide"					"124"
 		"tall"					"25"
 		"visible"				"1"
 		"enabled"				"1"
@@ -604,8 +592,8 @@
 	{
 		"ControlName"		"CTFCvarToggleCheckButton"
 		"fieldName"			"MusicToggleCheck"
-		"xpos"				"c10"		//+19
-		"ypos"				"-2"
+		"xpos"				"c240"		//+19
+		"ypos"				"30"
 		"zpos"				"6"
 		"wide"				"32"
 		"tall"				"32"
@@ -623,12 +611,15 @@
 		"tooltip" 			"#MMenu_Tooltip_ToggleRandomMusic"
 		"textAlignment"		"center"
 		"font"				"MenuSmallFont"
+		"border_default"	"AdvLeftButtonDefault"
+		"border_armed"		"AdvLeftButtonArmed"
+		"border_depressed"	"AdvLeftButtonDepressed"
 
 		"SubImage"
 		{
 			"image"			"main_menu/glyph_speaker"
 			"scaleImage"	"1"
-			"imagewidth"	"20"
+			"imagewidth"	"24"
 		}
 		"SubCheckImage"
 		{
@@ -641,8 +632,8 @@
 	{
 		"ControlName"		"CTFButton"
 		"fieldName"			"RandomMusicButton"
-		"xpos"				"c30"		//+19
-		"ypos"				"-2"
+		"xpos"				"c271"
+		"ypos"				"30"
 		"zpos"				"5"
 		"wide"				"32"
 		"tall"				"32"
@@ -658,12 +649,15 @@
 		"tooltip" 			"#MMenu_Tooltip_RandomMusic"
 		"textAlignment"		"center"
 		"font"				"MenuSmallFont"
+		"border_default"	"AdvRightButtonDefault"
+		"border_armed"		"AdvRightButtonArmed"
+		"border_depressed"	"AdvRightButtonDepressed"
 		"paintbackground"   "0"
 
 		"SubImage"
 		{
 			"image" 			"main_menu/glyph_random"
-			"imagewidth"		"20"
+			"imagewidth"		"24"
 		}
 	}
 
@@ -671,8 +665,8 @@
 	{
 		"ControlName"		"CTFCvarToggleCheckButton"
 		"fieldName"			"BlogToggleCheck"
-		"xpos"				"c50"		//+19
-		"ypos"				"-2"
+		"xpos"				"c200"
+		"ypos"				"30"
 		"zpos"				"10"
 		"wide"				"32"
 		"tall"				"32"
@@ -690,12 +684,15 @@
 		"tooltip" 			"#MMenu_Tooltip_ToggleBlog"
 		"textAlignment"		"center"
 		"font"				"MenuSmallFont"
+		"border_default"	"AdvRoundedButtonDefault"
+		"border_armed"		"AdvRoundedButtonArmed"
+		"border_depressed"	"AdvRoundedButtonDepressed"
 
 		"SubImage"
 		{
 			"image" 			"glyph_tv"
 			"scaleImage"		"1"
-			"imagewidth"		"20"
+			"imagewidth"		"24"
 		}
 		"SubCheckImage"
 		{
@@ -709,7 +706,7 @@
 		"ControlName"		"CExLabel"
 		"fieldName"			"VersionLabelVerText"
 		"xpos"				"r540"
-		"ypos"				"-7"
+		"ypos"				"425"
 		"zpos"				"5"
 		"wide"				"520"
 		"tall"				"40"
@@ -721,34 +718,5 @@
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"
-	}
-	"BGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"BGPanel"
-		"xpos"			"cs-0.5"
-		"ypos"			"-10"
-		"zpos"			"-1"
-		"wide"			"p1.1"
-		"tall"			"37"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-		"border"		"ReplayDefaultBorder"
-		"proportionaltoparent"	"1"
-	}
-	
-	"OuterShadow"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"OuterShadow"
-		"xpos"			"cs-0.5"
-		"ypos"			"cs-0.5"
-		"zpos"			"-2"
-		"wide"			"p1.1"
-		"tall"			"p1"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-		"border"		"OuterShadowBorder"
-		"proportionaltoparent"	"1"
 	}
 }
