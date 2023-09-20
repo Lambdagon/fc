@@ -1,0 +1,1284 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency	3000
+	RespawnWaveTime 		3
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+// WAVE 1//
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 4
+			TotalCurrency 0		
+			
+                                                             
+		TFBot	
+		{
+			Class Scout	
+			Name "Giant Scout"
+			ClassIcon scout_giant_fast
+			Skill Normal
+			Item "Bonk Boy"
+			
+			Health 3000
+                                            Attributes MiniBoss
+			
+			WeaponRestrictions MeleeOnly	
+			CharacterAttributes				
+			{
+				"move speed bonus"	2
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"override footstep sound set" 5
+                                                                                     "effect bar recharge rate increased" 0.1
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_6
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                         MaxVisionRange  10000
+                          Health 1
+                        WeaponRestrictions PrimaryOnly
+                        Name "Force of Nature"
+                        Item "The Face Plante"
+                        Item "The Force-a-Nature"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                         "bullets per shot bonus"       2.0
+			}
+		                     }
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_4
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6_5
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_4
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_5
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_6
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Pyro
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot	
+		
+		{
+			Class Heavyweapons
+			Name "Giant Heavy"
+			Attributes MiniBoss
+			Skill Normal
+                                                             
+                                                              
+			Health 6000
+			WeaponRestrictions PrimaryOnly
+			MaxVisionRange 1200
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage bonus"	1.5
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_7
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_7_8
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		 TFBot
+			{
+				Class Pyro
+				Skill Hard
+                                Name "Giant Pyro Super Pusher"
+                                WeaponRestrictions PrimaryOnly
+                                 Item "The Degreaser" 
+                                Item "The Attendant"
+                                 Health  5000
+                                Attributes MiniBoss
+                                 
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                "damage bonus"          1.0
+                                "airblast pushback scale"     2.0
+                               "mult airblast refire time"    0.5
+                             "deflection size multiplier"    3.0
+                             "override footstep sound set" 2
+				
+			}
+ 
+                        }
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_4
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                            Health    500
+                        WeaponRestrictions PrimaryOnly
+                        Name "Rocket Shotguner"
+
+                        MaxVisionRange  10000
+                         Item "The Direct Hit"
+                          Item "The Valley Forge"
+                       Attributes HoldFireUntilFullReload
+                        
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    
+				"move speed bonus"	1.0
+                                                                                   
+                                                                                      "damage bonus"  1.0
+                                                                                    
+                                                                                    "fire rate bonus"   0.0001
+                                                                                     "Reload time increased"    0.3
+                                                                                     "no self blast dmg"  2
+                                                                                     "projectile spread angle penalty"   7.0
+			}
+
+                                                           ItemAttributes
+                                       {
+                                                  ItemName "The Direct Hit"
+                                                   "clip size penalty"     3.0
+
+                                      }
+
+                                                         
+                                                         
+                  }
+
+
+}
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_5
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                        }
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_6
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			Randomchoice
+                                                             {
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                             }
+
+
+                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                      TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                       TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                      TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                   
+                  }
+
+ }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_7
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			Randomchoice
+                                                             {
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                             }
+
+
+                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                      TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                       TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                      TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                   
+                  }
+
+ }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_8
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			Randomchoice
+                                                             {
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                             }
+
+
+                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                      TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                       TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                      TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                   
+                  }
+
+ }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_9
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			Randomchoice
+                                                             {
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                             }
+
+
+                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                      TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                       TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                      TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                   
+                  }
+
+ }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_8_10
+			TotalCount 100
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			Randomchoice
+                                                             {
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                             }
+
+
+                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                      TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                       TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                      TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                   
+                  }
+
+ }
+
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			
+		
+                                                         
+
+                                                               TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 10000
+					WeaponRestrictions PrimaryOnly
+					CharacterAttributes
+			                                          {
+                                                                                    "damage bonus"                   0.1
+				"move speed bonus"	1.0
+                                                                                    "cannot be backstabbed" 1
+			                                            }				
+				}
+
+                               
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

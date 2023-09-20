@@ -1,0 +1,770 @@
+WaveSchedule
+{
+	Templates
+	{
+		// Special
+		
+		T_TFBot_Boss_Ignus
+		{
+			Name "Ignus the Trailblazer"
+			Health 45000
+			Class Heavy
+			ClassIcon boss_ignus
+			Skill Expert
+			Scale 1.6
+			MaxVisionRange 2250
+			WeaponRestrictions PrimaryOnly
+			BehaviorModifiers push
+			Item "The Huo Long Heatmaker"
+			Item "The Warsworn Helmet"
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+
+			CharacterAttributes
+			{
+				"damage bonus" 0.65
+				"projectile penetration" 1
+				"damage force reduction" 0.35
+				"clip size bonus" 5
+				"health regen" 175
+				"fire rate bonus" 0.75
+				"move speed bonus" 0.25
+				"Set DamageType Ignite" 1
+				"override footstep sound set" 2
+				"airblast vulnerability multiplier" 0.3
+				"airblast vertical vulnerability multiplier" 0.1
+				"rage giving scale" 0.5
+			}
+		}
+		
+		T_TFBot_Boss_MedicBrother_1
+		{
+			Name "Dr. Kritisch"
+			Health 30000
+			Class Medic
+			ClassIcon boss_medicbro_1
+			Skill Expert
+			Scale 1.5
+			MaxVisionRange 1
+			WeaponRestrictions SecondaryOnly
+			BehaviorModifiers Push
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			Attributes Aggressive
+			Attributes SpawnWithFullCharge
+			Item "Otolaryngologist's Mirror"
+			Item "The Quadwrangler"
+			Item "The Kritzkrieg"
+
+			CharacterAttributes
+			{
+				"health regen" 175
+				"ubercharge rate bonus" 0.5
+				"heal rate bonus" 250
+				"damage force reduction" 0.5
+				"move speed bonus" 0.35
+				"airblast vulnerability multiplier" 0.4
+				"airblast vertical vulnerability multiplier" 0.4
+			}
+		}
+		
+		T_TFBot_Boss_MedicBrother_2
+		{
+			Name "Dr. Schnell"
+			Health 30000
+			Class Medic
+			ClassIcon boss_medicbro_2
+			Skill Expert
+			Scale 1.5
+			MaxVisionRange 1
+			WeaponRestrictions SecondaryOnly
+			BehaviorModifiers Push
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			Attributes Aggressive
+			Attributes SpawnWithFullCharge
+			Item "The Surgeon's Stahlhelm"
+			Item "The Quadwrangler"
+			Item "The Quick-Fix"
+
+			CharacterAttributes
+			{
+				"uber duration bonus" -5
+				"health regen" 175
+				"ubercharge rate bonus" 0.75
+				"heal rate bonus" 7
+				"damage force reduction" 0.5
+				"move speed bonus" 0.35
+				"airblast vulnerability multiplier" 0.4
+				"airblast vertical vulnerability multiplier" 0.4
+			}
+		}
+		
+		T_TFBot_Boss_MedicBrother_3
+		{
+			Name "Dr. Unverwundbar"
+			Health 30000
+			Class Medic
+			ClassIcon boss_medicbro_3
+			Skill Expert
+			Scale 1.5
+			MaxVisionRange 1
+			WeaponRestrictions SecondaryOnly
+			BehaviorModifiers Push
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			Attributes Aggressive
+			Attributes SpawnWithFullCharge
+			Item "Medic Goggles"
+			Item "The Quadwrangler"
+			Item "Physician's Procedure Mask"
+
+			CharacterAttributes
+			{
+				"uber duration bonus" 5
+				"health regen" 175
+				"ubercharge rate bonus" 0.5
+				"heal rate bonus" 100
+				"damage force reduction" 0.5
+				"move speed bonus" 0.35
+				"airblast vulnerability multiplier" 0.4
+				"airblast vertical vulnerability multiplier" 0.4
+			}
+		}
+		
+		T_TFBot_Boss_Gust
+		{
+			Class Pyro
+			Classicon boss_gust
+			Name "Gust"
+			Scale 1.6
+			Skill Expert
+			Item "The Degreaser"
+			Item "Traffic Cone"
+			Item "The Last Breath"
+			Health 25000
+			BehaviorModifiers Push
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			CharacterAttributes
+			{
+				"rage giving scale" 0.5
+				"apply look velocity on damage" 250
+				"apply z velocity on damage" 150
+				"charged airblast" 1
+				"move speed bonus" 0.15
+				"damage bonus"	0.001
+				"fire rate bonus" 0.25
+				"airblast pushback scale" 5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.15
+				"override footstep sound set" 6
+				"airblast vertical vulnerability multiplier" 0.15
+			}
+		}
+		
+		T_TFBot_SentryBuster_Mini
+		{
+			Class Demoman
+			Name "Sentry Buster"
+			Skill Expert
+			Scale 1.5
+			Health 2500
+			Item "The Ullapool Caber"
+			Attributes MiniBoss
+			WeaponRestrictions MeleeOnly
+			ClassIcon sentry_buster
+
+			CharacterAttributes
+			{
+				"move speed bonus" 2
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 7
+				"cannot be backstabbed" 1
+			}
+		}
+		
+		// Scout
+		
+		T_TFBot_Scout_SpecialDelivery
+		{
+			Class Scout
+			Classicon scout_specialdelivery
+			Health 125
+			Name "Special Delivery Scout"
+			Item "The Milkman"
+			Item "The Shortstop"
+			WeaponRestrictions PrimaryOnly
+			
+			CharacterAttributes
+			{
+				"mod max primary clip override" 8
+				"damage bonus" 0.4
+			}
+		}
+		
+		T_TFBot_Giant_Scout_Tagger
+		{
+			Class Scout
+			Classicon scout_tagger_giant
+			Health 1500
+			Name "Giant Tagger Scout"
+			Scale 1.6
+			Skill Expert
+			MaxVisionRange 1800
+			Item "The Sandman"
+			Item "Batter's Helmet"
+			Attributes MiniBoss
+			WeaponRestrictions MeleeOnly
+			
+			CharacterAttributes
+			{
+				"weapon burn dmg increased" 1.25
+				"weapon burn time increased" 1.5
+				"melee attack rate bonus" 0.0001
+				"damage bonus" 1.25
+				"Set DamageType Ignite" 1
+				"projectile speed increased" 5
+				"crit vs burning players" 1
+				"mark for death" 1
+				"move speed bonus" 0.85
+				"effect bar recharge rate increased" 0.085
+				"fire rate bonus" 0.0001
+			}
+		}
+		
+		T_TFBot_Scout_Tagger
+		{
+			Class Scout
+			Classicon scout_tagger
+			Health 250
+			Name "Tagger Scout"
+			MaxVisionRange 2500
+			Skill Expert
+			Item "The Sandman"
+			Item "Batter's Helmet"
+			WeaponRestrictions MeleeOnly
+
+			CharacterAttributes
+			{
+				"melee attack rate bonus" 0.0001
+				"damage bonus" 1.5
+				"projectile speed increased" 5
+				"mark for death" 1
+				"move speed bonus" 0.9
+				"effect bar recharge rate increased" 0.085
+				"fire rate bonus" 0.0001
+			}
+		}
+		
+		T_TFBot_Giant_Scout_SuperBonk
+		{
+			Class Scout
+			Classicon scout_superbonk
+			Scale 1.6
+			Health 1200
+			Name "Super Bonk Scout"
+			Skill Expert
+			Item "Bonk Boy"
+			Item "The Backwards Ballcap"
+			Item "The Atomizer"
+			Item "Bonk! Atomic Punch"
+			WeaponRestrictions MeleeOnly
+			Attributes MiniBoss
+			
+			CharacterAttributes
+			{
+				"move speed bonus" 1.4
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"override footstep sound set" 5
+			}	
+		}
+		
+		T_TFBot_Scout_Executioner
+		{
+			Class Scout
+			Classicon scout_executioner
+			Name "Executioner Scout"
+			Skill Expert
+			Health 250
+			WeaponRestrictions MeleeOnly
+			Item "The Executioner"
+			Item "Sun-on-a-Stick"
+			
+			CharacterAttributes
+			{
+				"damage bonus" 0.75
+				"damage force reduction" 0.75
+				"airblast vulnerability multiplier" 0.4
+				"dmg penalty vs nonburning" 0.25
+			}
+		}
+		
+		// Soldier
+		
+		T_TFBot_Soldier
+		{
+			Class Soldier
+			Classicon soldier
+			Name "Soldier"
+			Skill Hard
+			Health 200
+			WeaponRestrictions PrimaryOnly
+		}
+		
+		T_TFBot_Soldier_Samurai
+		{
+			Class Soldier
+			Classicon soldier_samurai
+			Name "Samurai Soldier"
+			Health 200
+			WeaponRestrictions MeleeOnly
+			Item "Soldier Samurai Hat"
+			Item "The Half-Zatoichi"
+		}
+
+		T_TFBot_Giant_Soldier_Samurai
+		{
+			Class Soldier
+			Classicon soldier_samurai_giant
+			Name "Giant Samurai Soldier"
+			Scale 1.6
+			Health 4500
+			Attributes MiniBoss
+			WeaponRestrictions MeleeOnly
+			Item "Soldier Samurai Hat"
+			Item "The Half-Zatoichi"
+
+			CharacterAttributes
+			{
+				"damage bonus" 2
+				"move speed bonus" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"damage force reduction" 0.5
+			}
+		}
+		
+		T_TFBot_Giant_Soldier_Nuker
+		{
+			Class Soldier
+			Classicon soldier_nuker
+			Name "Giant Nuker Soldier"
+			Skill Expert
+			Scale 1.6
+			Health 4000
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			Item "The Original"
+			
+			CharacterAttributes
+			{
+				"move speed bonus" 0.35
+				"projectile speed increased" 0.5
+				"blast radius increased" 3
+				"fire rate bonus" 5
+				"mod max primary clip override" 10
+				"damage force reduction" 0.25
+				"airblast vulnerability multiplier" 0.5
+			}
+		}
+		
+		// Heavy
+		
+		T_TFBot_Heavyweapons
+		{
+			Class Heavyweapons
+			Classicon heavy
+			Name "Heavy"
+			Skill Hard
+			Health 300
+			WeaponRestrictions PrimaryOnly
+		}
+		
+		T_TFBot_Heavyweapons_Grapple
+		{
+			Class Heavyweapons
+			Classicon heavy_grapple
+			Name "Grapple Heavy"
+			Skill Hard
+			Health 225
+			WeaponRestrictions PrimaryOnly
+			Item "Natascha"
+			Item "Football Helmet"
+			
+			CharacterAttributes
+			{
+				"damage bonus" 0.15
+				"apply look velocity on damage" -125
+				"apply z velocity on damage" -125
+			}
+		}
+		
+		T_TFBot_Heavyweapons_Gnome_Mini
+		{
+			Class Heavyweapons
+			Name "Heavy Gnome"
+			Skill Easy
+			ClassIcon heavy_mittens
+			Scale 0.85
+			WeaponRestrictions MeleeOnly
+			Health 125
+			Attributes AlwaysCrit
+
+			Item "The All-Father"
+			Item "Point and Shoot"
+			Item "The Holiday Punch"
+
+			CharacterAttributes 
+			{
+				"move speed bonus"	1.5
+				"damage bonus" 0.2	
+			}
+		}
+		
+		T_TFBot_Giant_Heavyweapons_Grapple
+		{
+			Class Heavyweapons
+			Classicon heavy_grapple_giant
+			Name "Giant Grapple Heavy"
+			Scale 1.6
+			Skill Expert
+			Health 5000
+			Attributes MiniBoss
+			WeaponRestrictions PrimaryOnly
+			Item "Natascha"
+			Item "Football Helmet"
+
+			CharacterAttributes
+			{
+				"damage bonus" 0.4
+				"move speed bonus" 0.35
+				"apply look velocity on damage" -125
+				"apply z velocity on damage" -125
+				"damage force reduction" 0.50
+				"airblast vulnerability multiplier" 0.35
+				"fire rate bonus" 0.75
+			}		
+		}
+		
+		// Medic
+		
+		T_TFBot_Medic_QuickFix
+		{
+			Class Medic
+			Name "Quick-Fix Medic"
+			ClassIcon medic_quickfix
+			Skill Expert
+			Health 200
+			Item "The Quick-Fix"
+			WeaponRestrictions SecondaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.85
+				"ubercharge rate bonus" 3
+				"heal rate bonus" 3
+			}
+		}
+		
+		T_TFBot_Giant_Medic_QuickFix
+		{
+			Class Medic
+			Name "Giant Quick-Fix Medic"
+			ClassIcon medic_quickfix_giant
+			Skill Expert
+			Scale 1.6
+			Health 4500
+			Attributes SpawnWithFullCharge
+			Item "The Quick-Fix"
+			WeaponRestrictions SecondaryOnly
+			Attributes MiniBoss
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+				"heal rate bonus" 200
+			}
+		}
+		
+		T_TFBot_Medic_Kritz
+		{
+			Class Medic
+			Classicon medic_kritz
+			Name "Kritz Medic"
+			Skill Hard
+			Health 250
+			WeaponRestrictions SecondaryOnly
+			Attributes SpawnWithFullCharge
+			Item "The Kritzkrieg"
+			
+			CharacterAttributes
+			{
+				"ubercharge rate bonus" 10
+				"heal rate bonus" 5
+				"uber duration bonus" 5
+			}
+		}
+		
+		T_TFBot_Giant_Medic_Kritz
+		{
+			Class Medic
+			Classicon medic_kritz_giant
+			Name "Giant Kritz Medic"
+			Skill Hard
+			Scale 1.6
+			Health 6500
+			WeaponRestrictions SecondaryOnly
+			Attributes MiniBoss
+			Item "The Kritzkrieg"
+
+			CharacterAttributes
+			{
+				"move speed bonus" 0.5
+				"ubercharge rate bonus" 10
+				"heal rate bonus" 5
+				"uber duration bonus" 5
+				"airblast vulnerability multiplier" 0.5
+			}
+		}
+		
+		// Pyro
+		
+		T_TFBot_Pyro
+		{
+			Class Pyro
+			Classicon pyro
+			Name "Pyro"
+			Skill Normal
+			Health 175
+		}
+		
+		T_TFBot_Pyro_Igniter
+		{
+			Class Pyro
+			Classicon igniterpyro
+			Name "Igniter Pyro"
+			Skill Expert
+			Health 250
+			WeaponRestrictions PrimaryOnly
+			BehaviorModifiers push
+			Item "The Degreaser"
+			Item "Connoisseur's Cap"
+			
+			CharacterAttributes
+			{
+				"airblast disabled" 1
+				"weapon burn time increased" 1.25
+				"move speed bonus" 1.75
+				"fire rate bonus" 2
+				"health regen" 0.05
+				"damage force reduction" 0.35
+				"airblast vulnerability multiplier" 0.4
+				"damage bonus" 0.001
+			}
+		}
+
+		T_TFBot_Giant_Pyro_Igniter
+		{
+			Class Pyro
+			Classicon igniterpyro_giant
+			Name "Giant Igniter Pyro"
+			Skill Expert
+			Scale 1.6
+			Health 5000
+			WeaponRestrictions PrimaryOnly
+			BehaviorModifiers Push
+			Item "The Degreaser"
+			Item "Connoisseur's Cap"
+			Attributes MiniBoss
+			
+			CharacterAttributes
+			{
+				"airblast disabled" 1
+				"weapon burn time increased" 1.25
+				"move speed bonus" "0.25"
+				"damage force reduction" 0.35
+				"airblast vulnerability multiplier" 0.25
+				"damage bonus" 0.001
+				"override footstep sound set" 2
+			}
+		}
+		
+		// Demoman
+		
+		T_TFBot_Demoman_Samurai
+		{
+			Class Demoman
+			Classicon demoman_samurai
+			Name "Samurai Demo"
+			Health 150
+			WeaponRestrictions MeleeOnly
+			Item "Demo Kabuto"
+			Item "A Whiff of the Old Brimstone"
+			Item "The Half-Zatoichi"
+		}
+		
+		T_TFBot_Giant_Demoman_Samurai
+		{
+			Class Demoman
+			Classicon demoman_samurai_giant
+			Name "Giant Samurai Demo"
+			Scale 1.6
+			Health 3000
+			Attributes MiniBoss
+			WeaponRestrictions MeleeOnly
+			Item "Demo Kabuto"
+			Item "A Whiff of the Old Brimstone"
+			Item "The Half-Zatoichi"
+			
+			CharacterAttributes
+			{
+				"damage bonus" 2
+				"move speed bonus" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"damage force reduction" 0.5
+			}
+		}
+		
+		T_TFBot_Giant_Demoman_Charger
+		{
+			Class Demoman
+			Classicon demoman_charger_giant
+			Name "Giant Demoman Charger"
+			Skill Expert
+			Scale 1.5
+			Health 1500
+			MaxVisionRange 1
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+			BehaviorModifiers Push
+			WeaponRestrictions MeleeOnly
+			Item "The Scottish Handshake"
+			Item "The Buccaneer's Bicorne"
+			Item "The Chargin' Targe"
+			
+			CharacterAttributes
+			{
+				"charge impact damage increased" 3
+				"no charge impact range" 1
+				"mult charge turn control" -0.25
+				"move speed bonus" 1.30
+				"damage force reduction" 0.25
+				"airblast vulnerability multiplier" 0.25
+				"override footstep sound set" 2
+				"melee attack rate bonus" 0.0001
+				"charge recharge rate increased" 3
+				"charge time increased" 10
+			}
+		}
+		
+		T_TFBot_Demoman_Loch
+		{
+			Class Demoman
+			Classicon lochdemo
+			Name "Loch-n-Load Demo"
+			Skill Expert
+			Health 200
+			WeaponRestrictions PrimaryOnly
+			Item "The Loch-n-Load"
+			Item "Scotch Bonnet"
+			
+			CharacterAttributes
+			{
+				"damage bonus" 1.25
+				"move speed bonus" 1.25
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"fire rate bonus" 0.75
+			}
+		}
+		
+		T_TFBot_Giant_Demoman_Loch
+		{
+			Class Demoman
+			Classicon lochdemo_giant
+			Name "Giant Loch-n-Load Demo"
+			Skill Expert
+			Scale 1.6
+			Health 5500
+			WeaponRestrictions PrimaryOnly
+			Item "The Loch-n-Load"
+			Item "Scotch Bonnet"
+			Attributes MiniBoss
+
+			CharacterAttributes
+			{
+				"damage bonus" 1.25
+				"move speed bonus" 0.50
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"fire rate bonus" 0.5
+				"clip size bonus" 8
+			}
+		}
+		
+		T_TFBot_Demoman_Pan
+		{
+			Class Demoman
+			Classicon demopan
+			Name "Demopan"
+			Skill Expert
+			Health 175
+			WeaponRestrictions MeleeOnly
+			Item "Treasure Hat 1"
+			Item "TTG Glasses"
+			Item "Ali Baba's Wee Booties"
+			Item "The Chargin' Targe"
+			Item "The Frying Pan"
+			BehaviorModifiers push
+			
+			CharacterAttributes 
+			{
+				"move speed bonus" 0.8
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.25
+			}
+		}
+		
+		T_TFBot_Giant_Demoman_Pan
+		{
+			Class Demoman
+			Classicon demopan_giant
+			Name "Giant Demopan"
+			Skill Expert
+			Scale 1.6
+			Health 6000
+			WeaponRestrictions MeleeOnly
+			Item "Treasure Hat 1"
+			Item "TTG Glasses"
+			Item "Ali Baba's Wee Booties"
+			Item "The Chargin' Targe"
+			Item "The Frying Pan"
+			Attributes MiniBoss
+
+			CharacterAttributes 
+			{
+				"damage bonus" 2
+				"move speed penalty" 0.5
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.25
+				"override footstep sound set" 2
+				"fire rate bonus" 2
+			}
+		}
+		
+		// Scout
+		
+		T_TFBot_Scout
+		{
+			Class Scout
+			Classicon scout
+			Name "Scout"
+			Skill Hard
+			Health 200
+			WeaponRestrictions PrimaryOnly
+		}
+	}
+}

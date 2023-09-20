@@ -1,0 +1,97 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency	3000
+	RespawnWaveTime 		3
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+// WAVE 1//
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			
+		
+                                                         
+
+                                                               TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 10000
+					WeaponRestrictions PrimaryOnly
+					CharacterAttributes
+			                                          {
+                                                                                    "damage bonus"                   0.1
+				"move speed bonus"	1.0
+                                                                                    "cannot be backstabbed" 1
+			                                            }				
+				}
+
+                               
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,1054 @@
+#base robot_giant.pop
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		30000
+	RespawnWaveTime 5
+	CanBotsAttackWhileInSpawnRoom no
+	
+	Mission // sentry buster
+	{
+		Objective DestroySentries
+
+		InitialCooldown 5
+		Where spawnbot
+		BeginAtWave 1
+		RunForThisManyWaves 6
+
+		CooldownTime 25           
+
+            TFBot
+			{
+				Template T_TFBot_SentryBuster
+            }
+	}
+	Mission // Sniper - wave 3
+	{
+		Objective Sniper
+
+		InitialCooldown 15
+		Where spawnbot_mission_sniper
+		BeginAtWave 4
+		RunForThisManyWaves 2
+		CooldownTime 35
+		DesiredCount 2
+
+		TFBot
+		{
+			Class Sniper
+			Skill Expert
+			Name Sniper
+		}
+	}	
+	Mission // Spy - wave 3
+	{
+		Objective Spy  
+
+		InitialCooldown 20
+		Where spawnbot_mission_spy
+		BeginAtWave 3
+		RunForThisManyWaves 3
+		CooldownTime 15
+		DesiredCount 2
+
+		TFBot
+		{
+			Class Spy
+			Skill Expert
+			Name Spy
+		}
+	}	
+	//WAVE 1 // Intoduction //Demomen spawning at the bottom to show player that high sentries might not be too safe. 
+	//With melee Scouts coming through the centre 
+	//Total currency 500 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	Wave
+	{
+		WaitWhenDone 60
+		Sound "Announcer.IncomingMob"
+		//Checkpoint Yes
+
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		
+		WaveSpawn // Demoman Right
+		{
+			TotalCurrency 50
+			
+			Name "wave1DemoRight"
+			
+			Where spawnbot_right
+			TotalCount 6
+			SpawnCount 2
+			MaxActive 2
+			WaitBetweenSpawns 20
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		
+		WaveSpawn // Demoman Left
+		{
+			TotalCurrency 50
+			
+			Name "wave1DemoLeft"
+			
+			Where spawnbot_left
+			TotalCount 6
+			SpawnCount 2
+			MaxActive 2
+			WaitBetweenSpawns 20
+			WaitBeforeStarting 10
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			Where spawnbot_centre
+			TotalCount 8
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_left
+			}
+		}
+				WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			Name "wave1Scout1"
+			
+			Where spawnbot_centre
+			TotalCount 8
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 8
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_right
+			}
+		}
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 100
+			
+			Name "wave1Scout1"
+			WaitForAllSpawned "wave1DemoLeft"
+			
+			Where spawnbot_centre
+			TotalCount 12
+			SpawnCount 4
+			MaxActive 8
+			WaitBetweenSpawns 8
+			WaitBeforeStarting 10
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+			}
+		}
+		
+		WaveSpawn // Demoman
+		{
+			TotalCurrency 50
+			Name "wave1Demo2"
+			WaitForAllSpawned "wave1Scout1"
+			
+			Where spawnbot_left
+			TotalCount 9
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		
+		WaveSpawn // Demoman
+		{
+			TotalCurrency 50
+			Name "wave1Demo2"
+			WaitForAllSpawned "wave1Scout1"
+			
+			Where spawnbot_right
+			TotalCount 9
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			WaitForAllSpawned "wave1Scout1"
+			
+			Where spawnbot_centre
+			TotalCount 8
+			SpawnCount 4
+			MaxActive 4
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 30
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_left
+			}
+		}
+		
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			WaitForAllSpawned "wave1Scout1"
+			
+			Where spawnbot_centre
+			TotalCount 8
+			SpawnCount 4
+			MaxActive 4
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 15
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_right
+			}
+		}
+	}
+	//WAVE 2 // Tank spawn//Early tank spawn to again communicate that the top route is a risk vs reward affair. And to allow some breating space between wave 1 and 3
+	//As well as collecting up on money 
+	//Scouts flank to add some pressure
+	//Total currency 400 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	Wave
+	{
+		WaitWhenDone 60
+		Sound "Announcer.IncomingMob"
+		Checkpoint Yes
+
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		
+		WaveSpawn
+		{
+			TotalCurrency 300
+			TotalCount 1
+			
+			Name "Tank1wave2"
+			
+			Tank
+			{
+				Health 20000
+				Speed 75
+				Name "tankboss_left"
+				StartingPathTrackNode "tank_path_a_1"
+				
+				OnBombDroppedOutput
+				{
+					Target boss_deploy_relay
+					Action Trigger
+				}
+			}
+		}
+		
+			WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			WaitForAllSpawned "wave1Scout1"
+			
+			Where spawnbot
+			TotalCount 20
+			SpawnCount 4
+			MaxActive 8
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 25
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_left
+			}
+		}
+		
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			Where spawnbot
+			TotalCount 20
+			SpawnCount 4
+			MaxActive 8
+			WaitBetweenSpawns 20
+			WaitBeforeStarting 30
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+				Tag nav_prefer_flank_right
+			}
+		}
+	}
+	//WAVE 3 //Demomen flanking with pyros attacking the main bridge
+	//Scouts to add a bit more speed to the enemy
+	//Spy mission starts
+	//Currency 900 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+Wave
+	{
+		WaitWhenDone 60
+		Sound "Announcer.IncomingMob"
+		Checkpoint Yes
+
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		
+		WaveSpawn // Demoman Right
+		{
+			TotalCurrency 50
+			
+			Name "wave3DemoRight"
+			
+			Where spawnbot_right
+			TotalCount 8
+			SpawnCount 4
+			MaxActive 4
+			WaitBetweenSpawns 20
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		
+		WaveSpawn // Demoman Left
+		{
+			TotalCurrency 50
+			
+			Name "wave3DemoLeft"
+			
+			Where spawnbot_left
+			TotalCount 8
+			SpawnCount 4
+			MaxActive 4
+			WaitBetweenSpawns 20
+			WaitBeforeStarting 10
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "wave3pyro1"
+			
+			Where spawnbot_centre
+			TotalCount 25
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 100
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+
+					Class Pyro
+					Name "Scorch Pyro"
+					Skill Hard
+					WeaponRestrictions SecondaryOnly
+					Item "The Scorch Shot"
+				}
+			}
+		}
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			WaitForAllSpawned "wave3Demoright"	
+			
+			Where spawnbot
+			TotalCount 8
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 8
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_right
+			}
+		}
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			WaitForAllSpawned "wave3Demoleft"	
+			
+			Where spawnbot
+			TotalCount 8
+			SpawnCount 3
+			MaxActive 3
+			WaitBetweenSpawns 8
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_right
+			}
+		}
+
+		
+		WaveSpawn // Demomen left
+		{
+			TotalCurrency 50
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_left
+			TotalCount 12
+			SpawnCount 6
+			MaxActive 6
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		WaveSpawn // Giant demo left
+		{
+			
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_left
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 5
+			TotalCurrency 160		
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Demoman
+			}
+		}
+		
+		
+		WaveSpawn // Demomen right
+		{
+			TotalCurrency 50
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_right
+			TotalCount 12
+			SpawnCount 6
+			MaxActive 6
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 5
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+				WeaponRestrictions PrimaryOnly
+			}
+		}
+		WaveSpawn // Giant demoman right
+		{
+			
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_left
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 5
+			TotalCurrency 160		
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Demoman
+			}
+		}
+		WaveSpawn
+		{
+			Name "wave3pyro2"
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_centre
+			TotalCount 25
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 30
+			WaitBetweenSpawns 4
+			TotalCurrency 100
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy
+				}
+				TFBot
+				{
+					Class Pyro
+					Name "Scorch Pyro"
+					Skill Hard
+					WeaponRestrictions SecondaryOnly
+					Item "The Scorch Shot"
+				}
+			}
+		}
+		
+		WaveSpawn // Scout
+		{
+			TotalCurrency 50
+			
+			WaitForAllSpawned "wave3pyro1"
+			
+			Where spawnbot_centre
+			TotalCount 8
+			SpawnCount 4
+			MaxActive 8
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 30
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Tag nav_prefer_flank_right
+			}
+		}
+	}
+	//WAVE 4 //Demos, Scout melees, Soldiers, Giant Demos, Sniper Mission MB //Currency 500 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		// Sniper mission - 2 active		
+
+		
+		WaveSpawn 
+		{
+			
+			Name "wave4primarywave"
+			
+			Where spawnbot
+			TotalCount 24
+			MaxActive 8
+			SpawnCount 2
+			WaitBetweenSpawns 3
+			WaitBeforeStarting 0
+			TotalCurrency 100		
+			
+			TFBot
+			{
+				Class Demoman
+				Skill Easy
+			}
+		}
+		WaveSpawn 
+		{
+			
+			Where spawnbot
+			TotalCount 12
+			MaxActive 6
+			SpawnCount 2
+			WaitBetweenSpawns 6
+			WaitBeforeStarting 0
+			TotalCurrency 100		
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+			}
+		}
+		WaveSpawn 
+		{
+			
+			Where spawnbot
+			TotalCount 12
+			MaxActive 4
+			SpawnCount 3
+			WaitBetweenSpawns 2
+			WaitBeforeStarting 0
+			TotalCurrency 100		
+			
+			TFBot
+			{
+				Class Soldier
+				Skill Easy
+			}
+		}
+		
+		WaveSpawn 
+		{
+			
+			WaitForAllSpawned "wave4primarywave"
+			
+			Where spawnbot_right
+			TotalCount 2
+			MaxActive 2
+			SpawnCount 2
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 0
+			TotalCurrency 160		
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Demoman
+			}
+		}
+		WaveSpawn 
+		{
+			
+			WaitForAllSpawned "wave4primarywave"
+			
+			Where spawnbot_left
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 20
+			TotalCurrency 40		
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Demoman
+			}
+		}
+	}
+	//WAVE 5 //Tank Boss 30k, Giant Demo with pyro escort//Currency 1200 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes	
+			
+		WaveSpawn 
+		{
+			TotalCount 1
+			WaitBeforeStarting 20
+			TotalCurrency 700
+			
+			FirstSpawnOutput                                                                                                                                                            
+			
+			{
+				Target boss_spawn_relay                                            
+				Action Trigger                         
+			}
+
+			Tank
+			{
+				Health 30000
+				Speed 75
+				Name "tankboss"
+				StartingPathTrackNode "tank_path_b_01"
+
+				OnKilledOutput                                  
+				{
+					Target boss_dead_relay
+					Action Trigger                         
+				}
+				
+				OnBombDroppedOutput                             
+				{
+					Target boss_deploy_relay 
+					Action Trigger                         
+				}
+
+			}			
+		}
+
+		WaveSpawn //WAVE
+		{
+			Where spawnbot_right
+			TotalCount 15
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 2
+			TotalCurrency 500
+			
+			Squad // Tavish + pyros
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_Demoman
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy                                         
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Easy 
+					//WeaponRestrictions MeleeOnly				
+				}
+				TFBot
+				{
+					Class Pyro
+					Skill Normal                                        
+				}
+				TFBot
+				{
+					Template T_TFBot_Pyro_Flaregun
+				}
+			}
+		}
+	}
+	//WAVE 6 //Giant Demos, Giant geavy with Quick fix medics, Giant Pyros, Tank Boss 33K, Giant Baseball, scout support.//Currency 1200 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target humans_win
+			Action RoundWin
+		}
+		WaitWhenDone 65
+		Checkpoint Yes	
+		
+
+		WaveSpawn //WAVE 
+		{
+			Where spawnbot_right
+			TotalCount 4
+			MaxActive 2
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 2
+			TotalCurrency 400
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_Demoman
+				}
+				TFBot
+				{
+					Template T_TFBot_Giant_Demoman
+				}
+			}
+		}
+		WaveSpawn //WAVE 
+		{
+			Name "heavywave"
+			
+			Where spawnbot_left
+			TotalCount 12
+			MaxActive 6
+			SpawnCount 6
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 1
+			TotalCurrency 100
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_Heavyweapons
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_QuickFix
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_QuickFix
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_QuickFix
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_QuickFix
+				}
+				TFBot
+				{
+					Template T_TFBot_Medic_QuickFix
+				}
+			}
+		}
+		
+		WaveSpawn 
+		{
+			WaitForAllSpawned "heavywave"
+			
+			TotalCount 1
+			WaitBeforeStarting 25
+			TotalCurrency 400
+			
+			FirstSpawnOutput                                                                                                                                                            
+			
+			{
+				Target boss_spawn_relay                                            
+				Action Trigger                         
+			}
+
+			Tank
+			{
+				Health 33000
+				Speed 75
+				Name "tankboss"
+				Skin 1
+				StartingPathTrackNode "tank_path_b_01"
+
+				OnKilledOutput                                  
+				{
+					Target boss_dead_relay
+					Action Trigger                         
+				}
+				
+				OnBombDroppedOutput                             
+				{
+					Target boss_deploy_relay 
+					Action Trigger                         
+				}
+
+			}			
+		}
+		
+		WaveSpawn 
+		{
+			WaitForAllSpawned "heavywave"
+		
+			Where spawnbot_right
+			TotalCount 2
+			MaxActive 2
+			SpawnCount 2
+			WaitBeforeStarting 35
+			WaitBetweenSpawns 2
+			TotalCurrency 100
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_Pyro
+				}
+				TFBot
+				{
+					Template T_TFBot_Giant_Pyro
+				}
+			}
+		}
+		// WaveSpawn 
+		// {
+			// WaitForAllSpawned "heavywave"
+		
+			// Where spawnbot
+			// TotalCount 2
+			// MaxActive 2
+			// SpawnCount 2
+			// WaitBeforeStarting 27
+			// WaitBetweenSpawns 2
+			// TotalCurrency 100
+			
+			// Squad
+			// {
+				// TFBot
+				// {
+					// Template T_TFBot_Giant_Scout_Baseball
+				// }
+				// TFBot
+				// {
+					// Template T_TFBot_Giant_Scout_Baseball
+				// }
+			// }
+		// }
+		
+		WaveSpawn
+		{	
+			Where spawnbot
+			TotalCount 18
+			MaxActive 12
+			SpawnCount 2
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 10
+			TotalCurrency 100
+			
+			TFBot
+			{
+				Class Scout
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				
+			}
+		}
+	}
+}
