@@ -1,0 +1,448 @@
+// raid_teststage
+
+#base robot_giant.pop 
+#base robot_standard.pop
+#base bots_raid.pop
+
+WaveSchedule
+{
+	// The Mob!
+	PeriodicSpawn
+	{
+		Where Anywhere
+Where spawnbot
+		
+		When
+		{
+			MinInterval	60
+			MaxInterval 90
+		}
+		
+		// Random Choice first, then Mobs inside of it.
+		// This way we can have the Mob spawning multiple classes collectively instead of just one.
+	
+		Mob
+		{
+			Count 15
+				
+			TFBot
+			{
+				Template T_TFBot_Scout_Melee
+				BehaviorModifiers Mobber
+			}
+				
+			TFBot
+			{
+				Template T_TFBot_Pyro
+				BehaviorModifiers Mobber
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Fist
+				BehaviorModifiers Mobber
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Spy
+				BehaviorModifiers Mobber
+			}
+
+		}
+	}
+	
+	// Bot Squad - Random Placement
+	RandomPlacement
+	{
+		
+		Squad
+		{
+			FormationSize	4
+			//ShouldPreserveSquad 1
+			
+			
+			// Demo...
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Demoman
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Demo_Burst
+				}
+			}
+			
+			// Heavy...
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Heavyweapons_Shotgun
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Heavy_IronFist_Airblast
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Heavyweapons_Heavyweight_Champ
+				}
+			}
+			
+			// Soldier...
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Soldier_Buff_Banner
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Soldier_RocketPush
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Soldier_RocketShotgun
+				}
+			}
+			
+			
+			// ...Pyro!
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Pyro
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_Pyro_Flaregun
+				}
+				
+				TFBot
+				{
+					Template T_TFBot_ScorchShot
+				}
+			}
+			
+		}
+	}
+	
+	// Sniper
+	RandomPlacement
+	{
+		NavAreaFilter SNIPER_SPOT
+		Count 5
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Sniper_Razorback
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Sydney_Sleeper
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Huntsman
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Huntsman_Spammer
+			}
+		}
+		
+	}
+	
+	// Sentry
+	RandomPlacement
+	{
+		NavAreaFilter SENTRY_SPOT
+		MinimumSeparation 750
+		Count 3
+		
+		
+		RandomChoice
+		{
+			SentryGun
+			{
+				Level 1
+			}
+			
+			SentryGun
+			{
+				Level 2
+			}
+			
+			SentryGun
+			{
+				Level 3
+			}
+		}
+		
+	}
+	
+	// Spies
+	RandomPlacement
+	{
+		Count 1
+		
+		TFBot
+			{
+				Template T_TFBot_Spy
+			}
+		
+	}
+	
+	// Pyros
+	RandomPlacement
+	{
+		Count 1
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Pyro
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_ScorchShot
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Pyro_Flaregun
+			}
+		}
+		
+	}
+	
+	// Engineers
+	RandomPlacement
+	{
+		Count 6
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Engineer_Sentry_Battle
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Engineer_Sentry_Battle_TeleIn
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Engineer_Sentry_Tele_Battle
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Engineer_Sentry_Teleporter
+			}
+		}
+		
+	}
+	
+	// Snipers
+	RandomPlacement
+	{
+		Count 3
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Sniper_Razorback
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Sydney_Sleeper
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Huntsman
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper
+			}
+		}
+		
+	}
+	
+	// Demomen
+	RandomPlacement
+	{
+		Count 1
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Demo_Burst
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Demoman_Samurai
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Demoman_Knight
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Demoman
+			}
+		}
+		
+	}
+	
+	// Soldier
+	RandomPlacement
+	{
+		Count 1
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Soldier_RocketShotgun
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Soldier_RocketPush
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Soldier_Buff_Banner
+			}
+		}
+		
+	}
+	
+	//Heavies
+	RandomPlacement
+	{
+		Count 1
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Shotgun
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Heavy_IronFist_Airblast
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Fist
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+	}
+	
+	//SPECIALS - Periodically spawning classes throughout the mission.
+	// TODO: New spawn condition?
+	
+	PeriodicSpawn
+	{
+		Where Anywhere
+Where spawnbot
+		
+		When
+		{
+			MinInterval	20
+			MaxInterval 30
+		}
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Demoman_Samurai
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Heavy_IronFist_Airblast
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Huntsman_Spammer
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Soldier_Buff_Banner
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Pyro_Phlog
+			}
+			
+			TFBot
+			{
+				Template T_TFBot_Spy_DeadRinger
+			}
+		}
+	}
+	
+	//Wanderers - Common Bots
+	RandomPlacement
+	{
+		Count 18
+		MinimumSeparation 128
+		
+		RandomChoice
+		{
+			TFBot
+			{
+				Template T_TFBot_Scout_Melee
+			}
+		}
+	}
+}

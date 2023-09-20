@@ -1,0 +1,310 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		0
+	RespawnWaveTime 		0
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+                     Advanced	     1
+                    EventPopfile Halloween
+
+
+//WAVE 1 //Currency 600 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn  
+	{
+			Where rb_1  Where rb_2   Where rb_3  Where rb_4  Where rb_5
+			TotalCount 4000
+			MaxActive 20
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 3
+			TotalCurrency 8000		
+			Randomchoice
+                                                             {
+	
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Normal
+                                                             Attributes AlwaysCrit
+                                                              Health 100
+                                                              Name "Zombie"
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                   
+                                                                                   "damage bonus"         0.3
+                                                                                    "heal on kill"               300
+			}
+		}
+
+
+                           TFBot
+		{
+			Class Scout
+			Skill Normal
+                                                              Health 100
+                                                              Name "Zombie"
+                        WeaponRestrictions MeleeOnly
+                             Attributes AlwaysCrit
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                     
+                                                                                    "damage bonus"          0.3
+                                                                                  
+                                                                                    "heal on kill"               300
+			}
+		}
+
+
+
+                           TFBot
+		{
+			Class Pyro
+			Skill Normal
+                                                              Health 100
+                                                              Name "Zombie"
+                             Attributes AlwaysCrit
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                    
+                                                                                     "damage bonus"           0.3
+                                                                            
+                                                                                    "heal on kill"               300
+			}
+		}
+
+
+
+                                        TFBot
+		{
+			Class Demoman
+			Skill Normal
+                                                              Health 100
+                                                              Name "Zombie"
+                              Attributes AlwaysCrit
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                   
+                                                                                     "damage bonus"           0.3
+                                                                                    "heal on kill"               300
+			}
+		}
+
+
+                                        TFBot
+		{
+			Class Sniper
+			Skill Normal
+                                                              Health 100
+                                                              Name "Zombie"
+                                  Attributes AlwaysCrit
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                  
+                                                                                    "damage bonus"           0.3
+                                                                                   
+                                                                                    "heal on kill"               300
+			}
+		}
+                                 
+                                        TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                                                              Health 100
+                                                              Name "Zombie"
+                                  Attributes AlwaysCrit
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                      "damage bonus"           0.3
+                                                                                    
+                                                                                    "heal on kill"               300
+			}
+		}
+
+
+
+
+                                        TFBot
+		{
+			Class Medic
+			Skill Normal
+                                                              Health 100
+                           Attributes AlwaysCrit
+                                                              Name "Zombie"
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.6
+                                                                                   
+                                                                                    "heal on kill"               300
+                                                                                  
+                                                                                  "damage bonus"           0.3
+			}
+		}
+
+
+
+
+                                                           }
+
+                       }
+
+
+
+                   WaveSpawn  
+	{
+			Where rb_7
+			TotalCount 1000
+			MaxActive 14
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 0
+			TotalCurrency 4000		
+			Randomchoice
+                                                             {
+
+                                                  TFBot
+		{
+			Class Demoman
+			Skill Normal
+                                                              Health 200
+                                                           Item "Conjurer's Cowl"
+                                                            Item "The Splendid Screen"
+                                                             Item         "The Persian Persuader"
+                                                              Name "Infernal Guardian"
+                              Attributes AlwaysCrit
+                              Attributes AutoJump
+				AutoJumpMin 1
+				AutoJumpMax 5
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                    "Set DamageType Ignite"    1
+                                                                                    "weapon burn dmg increased"    1.5
+                                                                                    "increased jump height"    1.5
+                                                                                     "damage bonus"           0.6
+                                                                                   
+                                                                                   
+			}
+		}
+                                    
+
+                                                           }
+
+
+                      }
+
+ WaveSpawn  
+	{
+			Where rb_6
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 3
+			TotalCurrency 2000		
+			
+
+                                TFBot
+		{
+			Class Pyro
+			Skill Expert
+                                                              Health 60000
+                                                              Name "Keeper"
+                              Attributes MiniBoss
+                             Scale 2.5
+                              Item "Sharpened Volcano Fragment"
+                             Item  "Blazing Bull"
+                               Item  "Fallen Angel"
+                                Item  "Tail From the Crypt"
+			Attributes UseBossHealthBar
+                            
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                                                                    "Set DamageType Ignite"    1
+                                                                                     "damage bonus"           1.0
+                                                                                  "weapon burn dmg increased"    2.0
+                                                                                    "weapon burn time increased"    2.0
+                                                                                   "melee range multiplier"      1.5
+                                                                                   "melee bounds multiplier"    1.5
+                                                                                    
+                                                                                     "critboost on kill"      2
+                                                                                    "damage bonus vs burning" 1.25
+			}
+		}
+
+
+
+                    }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			
+		
+                                                         
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+
+
+
+                                
+                                                  
+                       }
+
+
+
+
+
+}

@@ -1,0 +1,2354 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		5000
+	RespawnWaveTime 		10
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+// MISSION: Sentry Buster
+	Mission
+	{
+		Objective DestroySentries
+		Where rb_1
+		CooldownTime 30
+                                            RandomChoice
+                                          {
+
+                                             TFBot
+		{
+			Template T_TFBot_SentryBuster
+		}
+
+                                            TFBot
+                                         {
+			Class Demoman
+			Name "Error Buster"
+			Skill Expert
+			Health 2500
+                                                                Scale 0.5
+			Item "The Ullapool Caber"
+                                                                
+			WeaponRestrictions PrimaryOnly
+			ClassIcon sentry_buster
+			Attributes MiniBoss	
+                                                                Attributes AlwaysFireWeapon		
+			CharacterAttributes
+			{
+				"move speed bonus"  0.3
+                                                                                    "damage bonus"       0.5
+                                                                                      "fire rate bonus"      0.1
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 7
+				"cannot be backstabbed" 1
+                                                                                     "Reload time decreased"      0.01
+                                                                                    "drop health pack on kill"   1
+                                                                                    
+                                                                                    "mult charge turn control"   10.0
+                                                                                     "charge time increased"   5
+			}
+		}
+
+
+
+                                          TFBot
+                                         {
+			Class Spy
+			Name "Spy Buster"
+			Skill Expert
+			Health 2500
+			Scale 1.0
+                                                               Attributes AlwaysFireWeapon
+			WeaponRestrictions SecondaryOnly
+			ClassIcon sentry_buster
+			Attributes MiniBoss	
+                                                                		
+			CharacterAttributes
+			{
+				"move speed bonus" 2
+                                                                                    "damage bonus"       0.1
+                                                                                      "fire rate bonus"      0.8
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 7
+				
+                                                                                     "Reload time decreased"      0.01
+                                                                                    
+                                                                                    
+                                                                                    
+			}
+		}
+
+
+                                           TFBot
+                                         {
+			Class Demoman
+			Name "Charger Buster"
+			Skill Expert
+			Health 2500
+			Item "The Ullapool Caber"
+                                                                Item "The Splendid Screen"
+			WeaponRestrictions PrimaryOnly
+			ClassIcon sentry_buster
+			Attributes MiniBoss	
+                                                                		
+			CharacterAttributes
+			{
+				"move speed bonus" 4
+                                                                                    "damage bonus"       0.5
+                                                                                      "fire rate bonus"      0.1
+				"damage force reduction" 0.5
+				"airblast vulnerability multiplier" 0.5
+				"override footstep sound set" 7
+				"cannot be backstabbed" 1
+                                                                                     "Reload time decreased"      0.01
+                                                                                    "drop health pack on kill"   1
+                                                                                   "charge recharge rate increased"    10.0
+                                                                                    "mult charge turn control"   10.0
+                                                                                     "charge time increased"   5
+                                                                                    "no charge impact range"   1
+			}
+		}
+                                           
+
+                                      
+
+
+                                            }
+
+                       }
+
+
+
+
+
+
+
+
+
+
+
+	// MISSION: Sniper
+        Mission
+	{
+		Objective Sniper  
+
+		InitialCooldown 1
+		Where rb_1
+		
+                                            BeginAtWave 1
+		CooldownTime 30
+		DesiredCount 2
+                                           RandomChoice
+                                              {
+		
+
+                       TFBot
+		{
+			Class Sniper
+                        Name "Accurately Sniper"
+                        Health 130
+			Skill Expert 
+                        
+                        WeaponRestrictions PrimaryOnly
+
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"         1.5
+                                "sniper charge per sec"     5.0
+			} 
+		}
+
+
+
+
+                   TFBot
+		{
+			Class Sniper
+                        Name "Piss Shooter Sniper"
+			Skill Expert
+                        Health 200
+                        WeaponRestrictions PrimaryOnly
+                        Item "The Sydney Sleeper"
+                        Item "Darwin's Danger Shield"
+                        Item "Ol' Snaggletooth"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                 "damage bonus"         1.1
+                                
+                                "sniper charge per sec"     5.0
+			} 
+		}
+
+                 TFBot
+		{
+			Class Sniper
+                        Name "Machine Sniper"
+			Skill Expert
+                        Health 130
+                        WeaponRestrictions PrimaryOnly
+                        Item "The Bazaar Bargain"
+                        
+                        Item "Your Worst Nightmare"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1
+                                "damage bonus"         0.4
+                                "fire rate bonus"       0.07
+                                "sniper charge per sec"     5.0
+			} 
+		}
+
+
+TFBot
+		{
+			Class Sniper
+                        Name "Chaos Sniper"
+			Skill Expert
+                        Health 500
+                        WeaponRestrictions PrimaryOnly
+                        Item "The Hitman's Heatmaker"
+                        
+                        Item "Liquidator's Lid"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1
+                                "damage bonus"         0.5
+                                "mark for death"         1
+                                "silent killer"      1
+                                "bleeding duration"     100
+                                "slow enemy on hit major"    19
+                                                                                    "subtract victim medigun charge on hit"  1
+                                                                                   "subtract victim cloak on hit"   5
+                                "sniper charge per sec"     5.0
+                                "Set DamageType Ignite"    1
+                                 "damage all connected"  1
+                                 "turn to gold" 1
+			} 
+		}
+
+
+
+
+                                      }
+                            }
+
+
+
+// MISSION: Spy Sapper
+        Mission
+	{
+		Objective Spy  
+
+		InitialCooldown 30
+		Where rb_1
+                                           BeginAtWave 1
+		RunForThisManyWaves 30
+		CooldownTime 15
+		DesiredCount 2
+
+		TFBot
+		{
+			Class Spy
+			Skill Expert
+                        
+		}
+	}
+
+
+
+
+                   
+
+
+// WAVE 1
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_ms1 Where rb_1 Where rb_mis5 Where rb_mis6
+			TotalCount 5000
+			MaxActive 10
+			SpawnCount 1
+			WaitBetweenSpawns 2
+			WaitBeforeStarting 0
+			TotalCurrency  20000		
+			Randomchoice
+                                                             {
+		
+                                                        
+
+                                             TFBot
+		{
+			Class Medic
+			Skill Easy
+                                  Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                       "uber duration bonus"      2
+			}
+		}
+
+                                   TFBot
+		{
+			Class Demoman
+			Skill Easy
+                         
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+                                  TFBot
+		{
+			Class Sniper
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                   
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                 TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                               TFBot
+		{
+			Class Pyro
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                              TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Shotgunner Pyro"
+                                WeaponRestrictions SecondaryOnly
+                                
+                                Item "Respectless Rubber Glove"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+	
+			}
+ 
+                                                               }
+
+                           TFBot
+			{
+				Class Heavyweapons
+				Skill Normal
+                                Name "Heavy Shotguner"
+                                WeaponRestrictions SecondaryOnly
+                                Item "Capone's Capper"
+                                Item "The Family Business"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+                                  
+                                 TFBot
+		{
+			Class Heavyweapons
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+
+                            }                                         
+              }
+                       
+
+WaveSpawn //Tiny robots
+	{
+			Where rb_2 Where rb_mis5 Where rb_mis6
+			TotalCount 250
+			MaxActive 4
+			SpawnCount 1
+			WaitBetweenSpawns 5
+			WaitBeforeStarting 0
+			TotalCurrency 2000		
+			Randomchoice
+                                                             {
+
+                                                     TFBot
+                {
+                                Class Scout
+				Skill Normal
+                                Name "Tiny Scout"
+                                WeaponRestrictions MeleeOnly
+                                Scale 0.5
+                                Health 50
+                                Attributes AutoJump
+				AutoJumpMin 0.3
+				AutoJumpMax 2
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+
+                                "increased jump height"          2.0
+                                    "melee bounds multiplier"    5.0
+                                                                                      "melee range multiplier"      2.0
+				"move speed bonus"	1.0
+                                                                "mod stun waist high airborne" 1
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Soldier
+				Skill Normal
+                                Name "Tiny Soldier"
+                                WeaponRestrictions PrimaryOnly
+                                Scale 0.5
+                                Health 100
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                                "damage causes airblast"  1
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Pyro
+				Skill Normal
+                                Name "Tiny Pyro"
+                                WeaponRestrictions PrimaryOnly
+                                Scale 0.5
+                                Health 100
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                               "weapon burn dmg increased"    2.0
+                                                                                    "weapon burn time increased"  3.0    
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Demoman
+				Skill Normal
+                                Name "Tiny Demoman"
+                                WeaponRestrictions PrimaryOnly
+                                Scale 0.5
+                                Health 100
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                                "bleeding duration"   5
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Heavyweapons
+				Skill Normal
+                                Name "Tiny Heavy"
+                                WeaponRestrictions PrimaryOnly
+                                Scale 0.5
+                                Health 150
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                               "slow enemy on hit major"  5
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Medic
+				Skill Normal
+                                Name "Tiny Medic"
+                               
+                                Scale 0.5
+                                Health 50
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                                 "ubercharge rate bonus"     6.0
+                                                                 "uber duration bonus"     -4
+			}
+                   
+                }
+
+
+TFBot
+                {
+                                Class Sniper
+				Skill Normal
+                                Name "Tiny Sniper"
+                                WeaponRestrictions SecondaryOnly
+                                Scale 0.5
+                                Health 50
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                               "mark for death" 1
+			}
+                   
+                }
+
+
+
+TFBot
+                {
+                                Class Spy
+				Skill Normal
+                                Name "Tiny Spy"
+                                
+                                Scale 0.5
+                                Health 50
+                               
+                                CharacterAttributes
+			{
+                                "damage bonus"	0.3
+				"move speed bonus"	1.0
+                                                               "subtract victim medigun charge on hit"  20
+                                                                                   "subtract victim cloak on hit"   20
+			}
+                   
+                }
+
+
+
+                                                             }
+                }
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2 Where rb_mis5 Where rb_mis6
+			TotalCount 500
+			MaxActive 3
+			SpawnCount 1
+			WaitBetweenSpawns 15
+			WaitBeforeStarting 0
+			TotalCurrency 6000		
+			Randomchoice
+                                                             {
+
+
+                                            TFBot
+			{
+				Class Soldier
+				Skill Expert
+                                Name "Samurai Soldier"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Half-Zatoichi"
+                                Item "The Concheror"
+                                Item "Furious Fukaamigasa"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+                              
+			}
+
+                        }
+
+
+
+
+TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pusher"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Scorch Shot"
+                                Item "The DethKapp"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"          0.5
+                                "fire rate bonus"       0.4
+                                "reload time increased hidden"    0.3
+                             
+				
+			}
+ 
+                        }
+
+
+
+
+
+TFBot
+			{
+				Class Heavyweapons
+				Skill Normal
+                                Name "Bullet Absorber"
+                                WeaponRestrictions PrimaryOnly
+                                Item "The Brass Beast"
+                                Item "War Head"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "fire rate bonus"       0.5
+                                "turn to gold"          1
+                                "dmg taken from bullets increased"     -1
+                                "attack projectiles" 1
+			}
+			}
+
+
+ TFBot
+			{
+				Class Pyro
+				Skill Hard
+                                Name "Fire Absorber"
+                                WeaponRestrictions PrimaryOnly
+                                Item "The Degreaser" 
+                                Item "The Attendant"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.5
+                                "damage bonus"          0.75
+                                "weapon burn time increased"       100.0
+                                "dmg taken from fire reduced"     -1
+				
+			}
+ 
+                        }
+
+
+TFBot
+			{
+				Class Demoman
+				Skill Easy
+                                Name "Crit Absorber"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Scottish Handshake"
+                                Item "The Bootlegger"
+                                Item "The Buccaneer's Bicorne"
+                                Item "The Bird-Man of Aberdeen"
+                                Item "A Whiff of the Old Brimstone"
+                                Health 400
+                                CharacterAttributes
+			{
+				"move speed bonus"	2.0
+                                "dmg taken from crit reduced"   -1
+                                "charge time increased" 20.0
+                                "charge recharge rate increased"    2.0
+			}
+                        }
+
+
+
+
+ TFBot
+			{
+				Class Soldier
+				Skill Normal
+                                Health 300
+                                Name "Blast Absorber"
+                                WeaponRestrictions PrimaryOnly
+                                Item "The Black Box"
+                                Item "The Hat With No Name"
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.5
+                                "damage bonus"          1.2
+                                
+                                "dmg taken from blast reduced"  -1
+			}
+
+                        }
+
+
+
+
+
+
+
+                                                  TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Minicrit Soldier"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Equalizer"
+                                Item "The Buff Banner"
+                                Item "Soldier's Stash"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                   "increase buff duration"      5.0
+			}
+
+                        }
+
+
+                                             TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Resistant Soldier"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Escape Plan"
+                                Item "The Battalion's Backup"
+                                Item "The Grenadier's Softcap"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+			}
+
+                        }
+                                                   
+
+
+                          TFBot
+			{
+				Class Demoman
+				Skill Easy
+                                Health 300
+                                Name "Demoknight"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Eyelander"
+                                Item "The Chargin' Targe"
+                                Item "The Bolgan"
+                                CharacterAttributes
+			{
+				
+                                "charge recharge rate increased"    3.0
+			}
+                        }
+
+
+
+
+                      TFBot
+			{
+				Class Heavyweapons
+				Skill Easy
+                                Name "Iron Heavy"
+                                Health 800
+                                Scale 1.5
+                                WeaponRestrictions MeleeOnly
+                                Item "Fists of Steel"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+
+                   TFBot
+			{
+				Class Medic
+				Skill Easy
+                                Name "Critical Medic"
+                                Attributes SpawnWithFullCharge
+                                Item "The Kritzkrieg"
+                                WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "overheal bonus"        10.0
+                                
+
+			}
+			}
+
+
+                                TFBot
+			{
+				Class Heavyweapons
+				Skill Easy
+                                Name "Boxer"
+                                WeaponRestrictions MeleeOnly
+                                Attributes AlwaysCrit
+                                Item "The Killing Gloves of Boxing"
+                                Item "Pugilist's Protector"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+
+
+
+
+
+                              TFBot
+			{
+				Class Medic
+				Skill Expert
+                                Name "Healer Medic"
+                                Item "The Quick-Fix"
+                                WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "heal rate bonus"       10.0
+			}
+			}
+
+
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                        Name "Force of Nature"
+                        Item "The Face Plante"
+                        Item "The Force-a-Nature"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                         "bullets per shot bonus"       2.0
+			}
+		                     }
+
+                           TFBot
+			{
+				Class Sniper
+				Skill Normal
+                                Name "Hunter"
+                                WeaponRestrictions PrimaryOnly
+                                Item "Larrikin Robin"
+                                Item "The Huntsman"
+                              
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+
+                             TFBot
+		{
+			Class Scout
+			Skill Easy
+                        Name "Milkman"
+                        WeaponRestrictions SecondaryOnly
+                        Item "Mad Milk"
+                        Item "The Milkman"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "effect bar recharge rate increased" 0.05
+			}
+                        
+		}
+
+
+                       TFBot
+			{
+				Class Sniper
+				Skill Easy
+                                Name "Piss Thrower"
+                                WeaponRestrictions SecondaryOnly
+                                Item "Jarate"
+                                Item "Trophy belt"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "effect bar recharge rate increased" 0.01
+			}
+			}
+                        
+
+
+
+
+}
+
+}
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3 Where rb_mis5 Where rb_mis6
+			TotalCount 100
+			MaxActive 5
+			SpawnCount 1
+			WaitBetweenSpawns 30
+			WaitBeforeStarting 0
+			TotalCurrency 6000		
+			Randomchoice
+                                                             {
+
+
+                                                            TFBot	
+		{
+			Class Soldier
+			Name "Giant Crit Soldier"
+			
+			Skill Normal
+			Health 5000
+			Item "The Original"
+                        Attributes MiniBoss
+                    
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"faster reload rate" 0.5
+				"Projectile speed increased" 0.3
+				"fire rate bonus" 1.0
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+                                                                "dmg taken from crit reduced"     0.5
+			}
+		}
+
+
+
+                                            TFBot
+			{
+				Class Pyro
+				Skill Hard
+                                Name "Giant Pyro Super Pusher"
+                                WeaponRestrictions PrimaryOnly
+                                 Item "The Degreaser" 
+                                Item "The Attendant"
+                                 Health  5000
+                                Attributes MiniBoss
+                                 
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                "damage bonus"          1.0
+                                "airblast pushback scale"     2.0
+                               "mult airblast refire time"    0.5
+                             "deflection size multiplier"    3.0
+                             "override footstep sound set" 2
+		"dmg taken from fire reduced"     0.5		
+			}
+ 
+                        }
+
+
+
+
+                           TFBot
+		{
+			Class Demoman
+			Skill Hard
+                          Name "Giant Guardian Demoman"
+                         Attributes MiniBoss
+                        Health 5000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                                                                       "reload time increased hidden"    0.01
+                                                                                      "fire rate bonus"        0.4
+                                                                                       "override footstep sound set" 2
+                                                                                    "dmg taken from blast reduced"    0.5
+			}
+		}
+
+
+
+                                  TFBot
+                {
+
+                   Class Heavyweapons
+			Name "Giant Indiadan Heavy"
+			
+			Skill Hard
+			Health 6000
+                        Item "Warrior's Spirit"
+                        Item "Big Chief"
+                        Item "The All-Father"
+                        Attributes MiniBoss
+			
+			WeaponRestrictions MeleeOnly
+			MaxVisionRange 1200
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage bonus"	2.0
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+			}
+
+                }
+
+
+
+                                TFBot	
+		{
+			Class Scout	
+			Name "Giant Stuner Scout"
+			ClassIcon scout_giant_fast
+			Skill Normal
+			Item "Bonk Boy"
+			Item "The Sandman"
+			Health 3000
+                                            Attributes MiniBoss
+			
+			WeaponRestrictions MeleeOnly	
+			CharacterAttributes				
+			{
+				"move speed bonus"	2
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"override footstep sound set" 5
+                                                                                     "effect bar recharge rate increased" 0.1
+			}
+		}
+
+
+
+
+                                   TFBot	
+		
+		{
+			Class Heavyweapons
+			Name "Giant Heavy"
+			Attributes MiniBoss
+			Skill Normal
+                                                             Item "Heavy Hair"
+                                                              
+			Health 6000
+			WeaponRestrictions PrimaryOnly
+			MaxVisionRange 1200
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage bonus"	1.5
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+                                                                "dmg taken from bullets reduced"    0.5
+			}
+		}
+
+
+
+                                            TFBot
+			{
+				Class Medic
+				Skill Hard
+                                Name "Giant Medic"
+                                Health 3000
+                                Attributes MiniBoss
+                              
+                                
+                                Scale 2.0
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                
+				"damage bonus"	1.5
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+                                "ubercharge rate bonus"        2.0
+                                "overheal bonus"          3.0
+                                "heal rate bonus"       3.0
+                                    "health drain"             150
+                               
+			}
+			}
+
+
+
+                                         TFBot
+			{
+				Class Sniper
+				Skill Hard
+                                Name "Giant Unzoom Shooter Sniper"
+                                Health 3000
+                                Attributes MiniBoss
+                                Item "The Bazaar Bargain"
+                        
+                        Item "Your Worst Nightmare"
+                                Attributes AlwaysFireWeapon
+                                WeaponRestrictions PrimaryOnly
+                                Scale 2.0
+                                CharacterAttributes
+			{
+                                                                                      
+				"move speed bonus"	0.5
+                                                                                     "fire rate bonus"           1.0
+				"damage bonus"	2.0
+				
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+                                                                 "heal on kill"               3000                  
+                                                                                
+                                                                                     
+			}
+			}
+
+
+                                             TFBot
+		{
+			Class Demoman
+			Skill Normal
+                          Name "Giant Demoknight"
+                         Attributes MiniBoss
+                        Health 5000
+                         Item "The Eyelander"
+                                Item "The Chargin' Targe"
+                          Item "Prince Tavish's Crown"
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                                                                        "damage bonus"          1.5
+                                                                                      "fire rate bonus"        0.8
+                                                                                          "melee range multiplier"      2.0
+                                                                                       "override footstep sound set" 2
+			}
+		}
+
+
+
+                                TFBot	
+		{
+			Class Pyro
+			Name "Giant Flare Pyro"
+			
+			Skill Expert
+			Health 5000
+			Item "The detonator"
+			Item "Old Guadalajara"
+                        Attributes MiniBoss
+			WeaponRestrictions SecondaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+				"override footstep sound set" 6
+				"Projectile speed increased" 1.0
+				"fire rate bonus" 0.3
+                                                                 "weapon burn dmg increased"    4.0
+                                                                                    "weapon burn time increased"    4.0
+			}
+		}
+
+
+
+
+
+
+}
+}
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_5 Where rb_mis5 Where rb_mis6
+			TotalCount 250
+			MaxActive 3
+			SpawnCount 1
+			WaitBetweenSpawns 60
+			WaitBeforeStarting 0
+			TotalCurrency 8000		
+			Randomchoice
+                                                             {
+
+TFBot
+		{
+			Class Scout
+			Skill Expert
+                            Health    500
+                        WeaponRestrictions PrimaryOnly
+                        Name "Elite Scout"
+                        Attributes MiniBoss	
+                        Item "The Bone Dome"
+                       ClassIcon soldier_backup
+                        Scale 1.0
+                        Item "The Soda Popper"
+                        CharacterAttributes
+			{
+				"move speed bonus"	4.0
+                                                                                    "bullets per shot bonus"     3.0
+                                                                                    "weapon spread bonus"      0.5
+                                                                                        "cannot pick up intelligence"    1
+                                                                                       "fire rate penalty"    1.3
+                                                                                    "reload time increased hidden"   0.1
+			}
+		                     }
+
+
+
+
+
+
+
+	
+
+
+
+TFBot
+		{
+			Class Pyro
+			Skill Expert
+                            Health    500
+                        WeaponRestrictions PrimaryOnly
+                        Name "Elite Pyro"
+                        Item "The Bone Dome"
+                        Attributes MiniBoss
+                       ClassIcon soldier_backup
+                        Scale 1.0	
+                        Item "The Rainblower" 
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    
+				"move speed bonus"	2.0
+                                                                                 "weapon burn dmg increased"   10.0
+                                                                                        "cannot pick up intelligence"    1
+                                                                                      
+                                                                                    "reload time increased hidden"   0.1
+			}
+		                     }
+
+
+
+
+
+
+
+
+
+TFBot
+		{
+			Class Soldier
+			Skill Expert
+                            Health    500
+                        WeaponRestrictions PrimaryOnly
+                        Name "Elite Soldier"
+                        Attributes MiniBoss
+                         ClassIcon soldier_backup
+                         Scale 1.0	
+                        Item "The Bone Dome"
+                        Item "The Liberty Launcher"
+                        CharacterAttributes
+			{
+                                                                                     "use large smoke explosion"   1
+                                                                                     "damage bonus"      7.0
+				"move speed bonus"	2.0
+                                                                                   "Blast radius decreased"     3.0
+                                                                                        "cannot pick up intelligence"    1
+                                                                                       "fire rate penalty"    5.0
+                                                                                    "reload time increased hidden"   0.1
+			}
+		                     }
+
+
+
+
+TFBot
+		{
+			Class Demoman
+			Skill Expert
+                            Health    1500
+                        WeaponRestrictions MeleeOnly
+                        Name "Elite Demoman"
+                        Item "The Bone Dome"
+                        Attributes MiniBoss
+                        ClassIcon soldier_backup	
+                          Scale 1.0
+                        Item "The Chargin' Targe"
+                        Item "The Pain Train"
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    "damage bonus"   2.0
+				"move speed bonus"	2.0
+                                                                                   "damage force reduction"   0.0
+                                                                                        "cannot pick up intelligence"    1
+                                                                                      
+                                                                                    "reload time increased hidden"   0.1
+			}
+		                     }
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+TFBot
+		{
+			Class Sniper
+			Skill Expert
+                            Health    500
+                        WeaponRestrictions SecondaryOnly
+                        Name "Elite Sniper"
+                        Item "The Bone Dome"
+                       ClassIcon soldier_backup
+                       Attributes MiniBoss
+                       Scale 1.0	
+                        Item "The Cleaner's Carbine"
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    
+				"move speed bonus"	4.0
+                                                                                       "damage bonus"     5.0
+                                                                                        "cannot pick up intelligence"    1
+                                                                                      "fire rate bonus"      0.6
+                                                                                    "reload time increased hidden"   0.9
+			}
+		                     }
+
+
+
+
+
+                                                             
+
+
+
+
+
+
+
+TFBot
+		{
+			Class Heavyweapons
+			Skill Expert
+                            Health    1300
+                        WeaponRestrictions PrimaryOnly
+                        Name "Elite Heavy"
+                        Item "The Bone Dome"
+                       Attributes MiniBoss	
+                    ClassIcon soldier_backup
+                         Scale 1.0
+                        Item "Tomislav"
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    "damage bonus"       2.0
+				"move speed bonus"	1.0
+                                                                                     "bullets per shot bonus"     0.3
+                                                                                        "cannot pick up intelligence"    1
+                                                                                      "fire rate bonus"      0.08
+                                                                                    "reload time increased hidden"   0.9
+			}
+		                     }
+
+
+
+
+}
+}
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4 Where rb_mis5 Where rb_mis6
+			TotalCount 400
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 30
+			WaitBeforeStarting 0
+			TotalCurrency 8000		
+			Randomchoice
+                                                             {
+
+                                            TFBot
+		{
+			Class Scout
+			Skill Expert
+                            Health    600
+                        WeaponRestrictions MeleeOnly
+                        Name "Annoying Scout"
+                        Item "Mann Co. Online Cap"
+                       Attributes AutoJump
+				AutoJumpMin 0.5
+				AutoJumpMax 0.5
+                        Item "The Candy Cane"
+                        CharacterAttributes
+			{
+                                                                                     "fire rate bonus"         0.4
+                                                                                    "cannot pick up intelligence"    1
+				"move speed bonus"	4.0
+                                                                                      "damage force reduction"      10.0
+                                                                                       "critboost on kill"      15
+                                                                                  "crit does no damage"  1
+                                                                                  "crit forces victim to laugh"  1
+                                                                                 "head scale" 10.0
+                                                                                  "melee range multiplier"   3.0
+                                                                                    "turn to gold"  1
+                                                                                    "mod bat launches balls"  1
+                                                                                       "effect bar recharge rate increased" 0.15
+			}
+
+                                                          
+
+		                     }
+
+
+
+                             TFBot
+			{
+				Class Pyro
+				Skill Easy
+                                Name "Sentry Hitter"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Homewrecker"
+                                Health 600
+                                Item "Respectless rubber glove"
+                                CharacterAttributes
+			{
+				"move speed bonus"	3.0
+                                "dmg bonus vs buildings"     100.0
+                                "dmg from sentry reduced" 0.0
+				
+			}
+ 
+                        }
+
+
+
+TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Heller"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                Item "Pyromancer's Mask"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"          5.0
+
+                             
+				
+			}
+ 
+                        }
+
+
+
+
+
+                            TFBot
+		{
+			Class Scout
+			Skill Normal
+                        Name "Butcher"
+                        WeaponRestrictions SecondaryOnly
+                        Health 350
+                        Item "The Flying Guillotine"
+                        Item "Horrific Headsplitter"
+
+                       
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "fire rate bonus"       0.3
+                                "effect bar recharge rate increased" 0.01
+			}
+		}
+
+
+
+                         TFBot
+		{
+			Class Pyro
+			Skill Expert
+                            Health    300
+                        WeaponRestrictions SecondaryOnly
+                        Name "Chaos"
+                        Item "Pop-eyes"
+                       
+                        Item "The Reserve Shooter"
+                        CharacterAttributes
+			{
+                                                                                     
+                                                                                    
+				"move speed bonus"	1.0
+                                                                                       "damage bonus"     0.5
+                                                                                      "bleeding duration"   90 
+                                                                                      
+                                                                                      "Set DamageType Ignite"    1
+                                                                                    "weapon burn dmg increased"    1.5
+                                                                                    "weapon burn time increased"    1.5
+                                                                                    "reload time increased hidden"   0.1
+                                                                                     
+                                                                                   "slow enemy on hit major"    19
+                                                                                    "subtract victim medigun charge on hit"  10
+                                                                                   "subtract victim cloak on hit"   30
+                                                                                       "damage all connected"  1
+                                                                                    
+                                                                                     "turn to gold" 1
+                                                                                      "mark for death" 1
+
+                                                                                     "ragdolls become ash" 1
+			}
+                                                           }
+
+
+
+                               TFBot
+			{
+				Class Demoman
+				Skill Easy
+                                Name "Boomer"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Ullapool Caber"
+                                Item "Ghastly Gibus"
+                                Health 75
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"	10.0
+                                "bombinomicon effect on death"    1
+			}
+                        }
+                                                           
+
+		                 
+                              TFBot
+			{
+				Class Soldier
+				Skill Expert
+                                Name "Advanced Samurai Soldier"
+                                Health 500
+                                 Attributes AutoJump
+				AutoJumpMin 0.2
+				AutoJumpMax 0.5
+                                Item "The Half-Zatoichi"
+                                Item "Demo Kabuto"
+                                WeaponRestrictions MeleeOnly
+                                Scale 1.0
+                                CharacterAttributes
+			{ 
+                                                                                   
+				"move speed bonus"	5.0
+                                                                                   "airblast vulnerability multiplier"    -3.0
+                                                                                    "damage bonus"     2.1
+                                                                                    "fire rate bonus"   1.5
+				"melee range multiplier"     5.0
+                                                                                      "cannot pick up intelligence"    1
+                                                                                     "damage force increase"     -5000.0
+                                                                                    "damage causes airblast"  1
+                                                                                    "airblast pushback scale"   1.5
+                                                                                      "increased jump height"    0.4
+                                                                                     
+			} 
+			}
+
+
+  TFBot
+		{
+			Class Scout
+			Skill Easy
+                        Name "Luck or Bad"
+                        WeaponRestrictions MeleeOnly
+                        Item "The Fan O'War"
+                        Item "Hero's Tail"
+                        CharacterAttributes
+			{
+				"move speed bonus"	4.0
+                                                                                     "dmg penalty while half alive"   10000.0
+                                                                                      "dmg bonus while half dead"      -10000.0
+			}
+		}
+
+
+
+
+
+
+
+TFBot
+			{
+				Class Demoman
+                                Name "Shadow Demoman"
+				Skill Hard
+                                Health 400
+                                WeaponRestrictions SecondaryOnly
+                                Attributes HoldFireUntilFullReload
+                                Item "Conjurer's Cowl"
+                                Item "The Chargin' Targe"
+                                Item "The Loose Cannon"
+                                CharacterAttributes
+			{
+				"move speed bonus"	10.0
+                                "damage bonus"          3.0
+                               "no charge impact range" 1
+                                "charge recharge rate increased"      1000
+                                "grenade not explode on impact"      0
+                                "charge time increased"     5
+                                "blast dmg to self increased"         0.0
+                                "mult charge turn control"        10.0
+				"airblast vulnerability multiplier" 0.0
+                                "cannot pick up intelligence"    1
+			}
+			}
+
+
+
+
+
+
+
+
+
+}
+
+}
+
+
+WaveSpawn //Upgraded
+	{
+			Where rb_6 Where rb_mis6
+			TotalCount 15
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 120
+			WaitBeforeStarting 0
+			TotalCurrency 8000		
+			Randomchoice
+                                                             {
+                                                           
+
+
+                                          TFBot
+			{
+				Class Heavyweapons
+				Skill Normal
+                                Name "Upgraded Heavy"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                               ClassIcon upgraded
+                                 Health  3000
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"             25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"              250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                "damage force reduction" 0.5
+
+                                 "fire rate bonus"          0.4
+                                 "attack projectiles"       1
+                                 "projectile penetration"     1
+                                "generate rage on damage"       10
+
+
+
+			}
+			}
+
+
+
+
+
+
+                        TFBot
+			{
+				Class Demoman
+				Skill Expert
+                                Name "Upgraded Demoman"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+                                Health  1750
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"            25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"               250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                "damage force reduction" 0.5
+
+                                 "fire rate bonus"          0.5
+                                 "Projectile speed increased"     1.0
+                                 "clip size upgrade atomic"    10
+                                "faster reload rate"        0.4
+
+
+
+			}
+			}
+
+
+
+
+                        TFBot
+			{
+				Class Soldier
+				Skill Expert
+                                Name "Upgraded Soldier"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+
+                                  Health  2000
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"              25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"              250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                 "damage force reduction" 0.5
+
+                                 "fire rate bonus"          0.5
+                                 "Projectile speed increased"     1.0
+                                 "clip size upgrade atomic"    10
+                                "faster reload rate"        0.4
+                                 "Projectile speed increased"     2.0
+
+
+			}
+			}
+
+
+
+
+
+                        TFBot
+			{
+				Class Pyro
+				Skill Expert
+                                Name "Upgraded Pyro"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+                                Health  1750
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"             25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"              250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                 "damage force reduction" 0.5
+
+                                 
+                                "weapon burn dmg increased" 5.0
+                                 "weapon burn time increased"   5.0
+                                "airblast pushback scale"    3.0
+			}
+			}
+
+
+
+
+                        TFBot
+			{
+				Class Scout
+				Skill Expert
+                                Name "Upgraded Scout"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+                                Health 1250
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"            25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"               250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                "damage force reduction" 0.5
+
+                                 
+                                "fire rate bonus"     0.4
+                                "Reload time increased"     0.4
+                                "projectile penetration"    1
+                                "clip size penalty"       3.0
+			}
+			}
+
+                        TFBot
+			{
+				Class Spy
+				Skill Expert
+                                Name "Upgraded Spy"
+                                
+                                Attributes UseBossHealthBar
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+                                Health 1250
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          5.0
+                                "health drain"              25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"           250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                              "damage force reduction" 0.5
+
+                                 "critboost on kill"     4
+                                 "fire rate bonus"       0.4
+                                
+			}
+			}
+
+
+
+                         TFBot
+			{
+				Class Sniper
+				Skill Expert
+                                Name "Upgraded Hunter Sniper"
+                                WeaponRestrictions PrimaryOnly
+                                Attributes UseBossHealthBar
+                                Item "The Huntsman"
+                                Item "Loyalty Reward"
+                                ClassIcon upgraded
+                                  Health  1250
+
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          15.0
+                                "health drain"          25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"             250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                 "damage force reduction" 0.5
+
+                                 "bleeding duration"     15
+                                
+                                 "Reload time increased"   0.4 
+                                 "revolver use hit locations"      1
+                                 "crit from behind"      1
+                                 
+                                
+			}
+			}
+
+
+
+                        TFBot
+			{
+				Class Medic
+				Skill Expert
+                                Name "Upgraded Medic"
+                                WeaponRestrictions SecondaryOnly
+                                Attributes UseBossHealthBar
+                                ClassIcon upgraded
+                                Item "Loyalty Reward"
+                                  Health  1500
+                                
+
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	1.3
+                                "damage bonus"          2.0
+                                "health drain"             25
+                                "dmg taken from blast reduced"    0.25
+                                "dmg taken from bullets reduced"    0.25
+                                "dmg taken from crit reduced"     0.1
+                                "cannot pick up intelligence"    1
+                                "heal on kill"             250
+                                "increased jump height"          2.0
+                                "dmg taken from fire reduced"     0.25
+                                 "damage force reduction" 0.5
+
+                                 "overheal bonus"       3.0
+                                 "heal rate bonus"        3.0
+                                 "ubercharge rate bonus"     3.0
+                                 "uber duration bonus"     15
+                                "overheal decay bonus"    3.0
+			}
+			}
+
+
+
+                                                           }
+              }
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_6 Where rb_mis6
+			TotalCount 50
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 100
+			WaitBeforeStarting 0
+			TotalCurrency 10000		
+			Randomchoice
+                                                             {
+
+
+                             TFBot
+		{
+			Class Soldier
+			Skill Normal
+                           Name "Titan Soldier"
+                            Health 50000
+                           Scale 5.0
+                            Attributes HoldFireUntilFullReload                              
+                                            Attributes MiniBoss
+			Attributes AlwaysCrit
+                                        WeaponRestrictions PrimaryOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	0.5
+				"faster reload rate" 0.4
+				"Projectile speed increased" 0.5
+				"fire rate bonus" 0.001
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+                                                                                       "damage bonus"         2.5
+                                                                                     "projectile spread angle penalty"    20
+			}
+
+                           ItemAttributes
+			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+                                                                                      "clip size penalty"       3.0
+		                      }
+
+                                                 }
+
+
+
+
+
+
+
+                                              TFBot
+		{
+			Class Demoman
+			Skill Expert
+                           Name "Titan Demoman"
+                            Health 50000
+                           Scale 5.0
+                                                  
+                                            Attributes MiniBoss
+                                       
+			
+                                        WeaponRestrictions PrimaryOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	0.5
+				"faster reload rate" 0.01
+				"Projectile speed increased" 3.0
+				"fire rate bonus" 4.0
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+                                                                                       "damage bonus"         8.0 
+                                                                                       "use large smoke explosion" 1
+                                                                                       "Blast radius increased"    4.0
+                                                                                     "projectile spread angle penalty"    20
+			}
+
+                                   }
+
+
+
+
+
+                                  TFBot
+		{
+			Class Scout
+			Skill Normal
+                           Name "Titan Scout"
+                            Health 30000
+                           Scale 5.0
+                                                  
+                                            Attributes MiniBoss
+                                     
+			
+                                        WeaponRestrictions MeleeOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	4.0
+				"mod stun waist high airborne"  1
+                                                                                     "damage causes airblast"  1
+                                                                                     "bleeding duration"    4
+                                                                                       "damage bonus"         1.5
+                                                                                      "airblast vulnerability multiplier" 0.4
+                                                                                      "melee range multiplier"     5.0
+                                                                                   "melee bounds multiplier"    5.0
+                                                                                   
+			}
+
+                                   }
+
+
+
+
+
+
+                               TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                           Name "Titan Heavy"
+                            Health 50000
+                           Scale 5.0
+                                                  
+                                            Attributes MiniBoss
+                                      
+			
+                                        WeaponRestrictions PrimaryOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"  0.5
+				"fire rate bonus" 2.0
+                                                                                       "damage bonus"         14.0
+                                                                                      "airblast vulnerability multiplier" 0.4
+                                                                                       "sniper fires tracer"  1
+                                                                                      "projectile penetration"    1
+                                                                                   
+			}
+
+                                   }
+
+
+
+
+
+                                TFBot
+		{
+			Class Pyro
+			Skill Easy
+                           Name "Titan Pyro"
+                            Health 50000
+                           Scale 5.0
+                                                   Attributes AlwaysFireWeapon
+                                            Attributes MiniBoss
+                                   
+			
+                                        WeaponRestrictions PrimaryOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	0.5
+				"flame life bonus"        3.0
+                                                                                      "deflection size multiplier"    4.0
+                                                                                       "damage bonus"         4.0
+                                                                                      "airblast vulnerability multiplier" 0.4
+                                                                                        "weapon burn dmg increased"     10.0
+                                                                                       
+                                                                                   
+			}
+
+                                   }
+
+
+
+                              TFBot
+		{
+			Class Sniper
+			Skill Normal
+                           Name "Titan Sniper"
+                            Health 30000
+                           Scale 5.0
+                                                  
+                                            Attributes MiniBoss
+                                   Item "The Huntsman"
+			
+                                        WeaponRestrictions PrimaryOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	0.5
+			
+                                                                                       "damage bonus"         100.0
+                                                                                      
+                                                                                       
+                                                                                   
+			}
+
+                                   }
+
+
+
+
+                            TFBot
+		{
+			Class Medic
+			Skill Normal
+                           Name "Titan Medic"
+                            Health 30000
+                           Scale 5.0
+
+                            Item "The Quick-Fix"
+                                                   
+                                            Attributes MiniBoss
+                                   Item "The Huntsman"
+			
+                                       
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	0.5
+			                   "damage bonus"         2.0
+                                                                                     "heal rate bonus"       10.0   
+                                                                                      "overheal bonus"        50.0
+                                                                                     "ubercharge rate bonus"        0.5
+                                                                                   
+			}
+
+                                   }
+
+
+
+}
+}
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			Support 1
+		
+                                                         
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+                               
+                       }
+
+
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

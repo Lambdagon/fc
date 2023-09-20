@@ -7,8 +7,6 @@ WaveSchedule
 	StartingCurrency		30000
 	RespawnWaveTime 		7
 	CanBotsAttackWhileInSpawnRoom no
-	FixedRespawnWaveTime Yes
-	EventPopfile Halloween
 
 	Mission // sentry buster
 	{
@@ -31,7 +29,7 @@ WaveSchedule
 		Objective Spy  
 
 		InitialCooldown 40
-		Where spawnbot_mission_spy
+		Where spawnbot
 		BeginAtWave 2
 		RunForThisManyWaves 1
 		CooldownTime 30
@@ -49,7 +47,7 @@ WaveSchedule
 		Objective Spy  
 
 		InitialCooldown 20
-		Where spawnbot_mission_spy
+		Where spawnbot
 		BeginAtWave 4
 		RunForThisManyWaves 1
 		CooldownTime 30
@@ -67,7 +65,7 @@ WaveSchedule
 		Objective Spy  
 
 		InitialCooldown 30
-		Where spawnbot_mission_spy
+		Where spawnbot
 		BeginAtWave 5
 		RunForThisManyWaves 1
 		CooldownTime 15
@@ -85,7 +83,7 @@ WaveSchedule
 		Objective Sniper
 
 		InitialCooldown 45
-		Where spawnbot_mission_sniper
+		Where spawnbot
 		BeginAtWave 3
 		RunForThisManyWaves 1
 		CooldownTime 20
@@ -101,7 +99,7 @@ WaveSchedule
 		Objective Sniper
 
 		InitialCooldown 25
-		Where spawnbot_mission_sniper
+		Where spawnbot
 		BeginAtWave 6
 		RunForThisManyWaves 1
 		CooldownTime 20
@@ -120,7 +118,7 @@ WaveSchedule
 		Objective Sniper
 
 		InitialCooldown 70
-		Where spawnbot_mission_sniper
+		Where spawnbot
 		BeginAtWave 7
 		RunForThisManyWaves 1
 		CooldownTime 40
@@ -416,8 +414,8 @@ WaveSchedule
 		}
 		WaveSpawn //WAVE 03c: 20 total, 8 active, Pyro
 		{
-			Name "wave03c"
-			Where spawnbot_invasion
+			Name "wave03c" 
+			Where spawnbot
 			TotalCount 30
 			MaxActive 4
 			SpawnCount 4
@@ -482,42 +480,6 @@ WaveSchedule
 				Action trigger
 			}
 		Checkpoint Yes
-
-		WaveSpawn //WAVE 04a: [2 TANKS]  
-		{
-			Name "wave04a"
-			TotalCount 2
-			WaitBeforeStarting 0
-			WaitBetweenSpawns 45
-			TotalCurrency 400
-			
-			FirstSpawnOutput                                                                                                                                                            
-			
-			{
-				 Target boss_spawn_relay                                            
-				 Action Trigger                         
-			}
-
-			Tank
-			{
-				Health 22000
-				Speed 75
-				Name "tankboss"
-				StartingPathTrackNode "boss_path_a1"
-
-				OnKilledOutput                                  
-				{
-					Target boss_dead_relay
-					Action Trigger                         
-				}
-				
-				OnBombDroppedOutput                             
-				{
-					Target boss_deploy_relay 
-					Action Trigger                         
-				}
-			}			
-		}
 		WaveSpawn //WAVE 04b: 24 total, 10 active, Sniper (Huntsman)
 		{
 			Name "wave04b"
@@ -770,41 +732,6 @@ WaveSchedule
 
 		// Sniper mission - 4 active		
 
-		WaveSpawn //WAVE 07a: [TANK]  
-		{
-			Name "wave07a"
-			TotalCount 1
-			WaitBeforeStarting 0
-			WaitBetweenSpawns 45
-			TotalCurrency 100
-			
-			FirstSpawnOutput                                                                                                                                                            
-			
-			{
-				 Target boss_spawn_relay                                            
-				 Action Trigger                         
-			}
-
-			Tank
-			{
-				Health 35000
-				Speed 75
-				Name "tankboss"
-				StartingPathTrackNode "boss_path_a1"
-
-				OnKilledOutput                                  
-				{
-					Target boss_dead_relay
-					Action Trigger                         
-				}
-				
-				OnBombDroppedOutput                             
-				{
-					Target boss_deploy_relay 
-					Action Trigger                         
-				}
-			}			
-		}
 		WaveSpawn //WAVE 07b: 12 total, 6 active, Pyro
 		{
 			Name "wave07b"
@@ -932,42 +859,6 @@ WaveSchedule
 			{
 				Template T_TFBot_Giant_Scout_Fast
 			}
-		}
-		WaveSpawn //WAVE 07h: [FINAL TANK]  
-		{
-			TotalCount 1
-			WaitBeforeStarting 50
-			WaitForAllSpawned "wave07e"
-			TotalCurrency 0
-			
-			FirstSpawnOutput                                                                                                                                                            
-			
-			{
-				 Target boss_spawn_relay                                            
-				 Action Trigger                         
-			}
-
-			Tank
-			{
-				Health 45000
-				Speed 75
-				Name "tankboss"
-				Skin 1
-				StartingPathTrackNode "boss_path_a1"
-
-				OnKilledOutput                                  
-				{
-					Target boss_dead_relay
-					Action Trigger                         
-				}
-				
-				OnBombDroppedOutput                             
-				{
-					Target boss_deploy_relay 
-					Action Trigger                         
-				}
-
-			}			
 		}
 	}	
 }

@@ -1,0 +1,488 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		5000
+	RespawnWaveTime 		10
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+     
+
+
+// WAVE 1
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn //WAVE 01a
+	{
+			 Where rb_1
+                                                 Where rb_2
+                                                 Where rb_3
+                                                 Where rb_4
+			TotalCount 5000
+			MaxActive 3
+			SpawnCount 1
+			WaitBetweenSpawns 5
+			WaitBeforeStarting 0
+			TotalCurrency  20000		
+			Randomchoice
+                                                             {
+		
+                                                        
+
+                                             TFBot
+		{
+			Class Medic
+			Skill Easy
+                                    
+                                  Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+                                                                                       "uber duration bonus"      2
+			}
+		}
+
+                                   TFBot
+		{
+			Class Demoman
+			Skill Easy
+                         
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+			}
+		}
+
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+			}
+		}
+
+
+
+                                  TFBot
+		{
+			Class Sniper
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                               "increase player capture value" 10
+			}
+		}
+
+                                   
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                       
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                       
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                               "increase player capture value" 10
+			}
+		}
+
+                                 TFBot
+		{
+			Class Scout
+			Skill Normal
+                          	
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                               TFBot
+		{
+			Class Pyro
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                              TFBot
+			{
+				Class Pyro
+				Skill Easy
+                                Name "Shotgunner Pyro"
+                                WeaponRestrictions SecondaryOnly
+                                
+                                Item "Respectless Rubber Glove"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+	
+			}
+ 
+                                                               }
+
+                           TFBot
+			{
+				Class Heavyweapons
+				Skill Easy
+                                Name "Heavy Shotguner"
+                                WeaponRestrictions SecondaryOnly
+                                Item "Capone's Capper"
+                                Item "The Family Business"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+			}
+
+                                  
+                                 TFBot
+		{
+			Class Heavyweapons
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+
+
+
+                            }                                         
+              }
+                       
+
+
+WaveSpawn //WAVE 01a
+	{
+			 Where rb_0_b
+			TotalCount 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency  1000		
+			Randomchoice
+                                                             {
+
+TFBot
+		{
+			Class Medic
+			Skill Easy
+                                    
+                                  Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+                                                                                       "uber duration bonus"      2
+			}
+		}
+
+                                   TFBot
+		{
+			Class Demoman
+			Skill Easy
+                         
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+			}
+		}
+
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+			}
+		}
+
+
+
+                                  TFBot
+		{
+			Class Sniper
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                               "increase player capture value" 10
+			}
+		}
+
+                                   
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                       
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                       
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                               "increase player capture value" 10
+			}
+		}
+
+                                 TFBot
+		{
+			Class Scout
+			Skill Normal
+                          	
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                               TFBot
+		{
+			Class Pyro
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+                              TFBot
+			{
+				Class Pyro
+				Skill Easy
+                                Name "Shotgunner Pyro"
+                                WeaponRestrictions SecondaryOnly
+                                
+                                Item "Respectless Rubber Glove"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                 "increase player capture value" 10
+	
+			}
+ 
+                                                               }
+
+                           TFBot
+			{
+				Class Heavyweapons
+				Skill Easy
+                                Name "Heavy Shotguner"
+                                WeaponRestrictions SecondaryOnly
+                                Item "Capone's Capper"
+                                Item "The Family Business"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+			}
+
+                                  
+                                 TFBot
+		{
+			Class Heavyweapons
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                "increase player capture value" 10
+			}
+		}
+
+
+
+                                                     }
+}
+
+
+WaveSpawn //Titan
+	{
+			 Where rb_0_a
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency  400		
+			Randomchoice
+                                                     {
+                                                       TFBot
+		{
+			Class Scout
+			Skill Normal
+                           Name "Titan Scout"
+                            Health 30000
+                           Scale 5.0    
+                                            Attributes MiniBoss
+                                        WeaponRestrictions MeleeOnly
+
+                                CharacterAttributes
+			{
+                                                                                  "move speed bonus"	4.0
+				"mod stun waist high airborne"  1
+                                                                                     "damage causes airblast"  1
+                                                                                     "bleeding duration"    4
+                                                                                       "damage bonus"         1.5
+                                                                                      "airblast vulnerability multiplier" 0.4
+                                                                                      "melee range multiplier"     5.0
+                                                                                   "melee bounds multiplier"    5.0
+                                                                                   
+			}
+
+                                   }
+                                                    }
+}
+
+
+
+WaveSpawn 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			Support 1
+		
+                                                         
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                               Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+                               
+                       }
+
+
+
+}
+
+
+
+}
+
+
+
+
+

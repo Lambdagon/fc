@@ -1,0 +1,333 @@
+//Generated with http://www.mvmwaves.com by @rickstain
+
+#base robot_giant.pop
+#base robot_standard.pop
+
+WaveSchedule
+{
+	StartingCurrency 1000
+	RespawnWaveTime 0
+	FixedRespawnWaveTime no
+	CanBotsAttackWhileInSpawnRoom no
+	AddSentryBusterWhenDamageDealtExceeds 10000
+	AddSentryBusterWhenKillCountExceeds 30
+	Advanced	1
+	
+	Mission
+	{
+		Objective Spy
+		Where spawnbot_mission_spy
+		BeginAtWave 1
+		RunForThisManyWaves 4
+		CooldownTime 170
+		DesiredCount 2
+		
+		TFBot
+		{
+			Template T_TFBot_Spy
+		}
+	}
+	Mission
+	{
+		Objective Sniper
+		Where spawnbot_mission_sniper
+		BeginAtWave 1
+		RunForThisManyWaves 4
+		CooldownTime 170
+		DesiredCount 2
+		
+		TFBot
+		{
+			Template T_TFBot_Sniper
+		}
+	}
+	Mission
+	{
+		Objective DestroySentries
+		Where spawnbot
+		BeginAtWave 1
+		RunForThisManyWaves 4
+		CooldownTime 90
+		DesiredCount 3
+		
+		TFBot
+		{
+			Template T_TFBot_SentryBuster
+		}
+	}
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 5
+			WaitBeforeStarting 80
+			WaitBetweenSpawns 30
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Fist
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 1
+			WaitBeforeStarting 99999999999999999999999
+			WaitBetweenSpawns 5
+			TotalCurrency 400
+			Support 0
+			
+			FirstSpawnOutput     
+			{
+				Target boss_spawn_relay                                            
+				Action Trigger                         
+			}
+			Tank
+			{	
+				Name "Tank"
+				Health 9999999
+				Speed 0
+				Skin 0
+				StartingPathTrackNode "boss_path_a1"
+
+				OnKilledOutput                                  
+				{
+					Target boss_dead_relay
+					Action Trigger                         
+				}
+				
+				OnBombDroppedOutput                             
+				{
+					Target boss_deploy_relay 
+					Action Trigger                         
+				}
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 30
+			SpawnCount 5
+			WaitBeforeStarting 20
+			WaitBetweenSpawns 20
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{	
+				Name "Soldier"
+				Health 200
+				Class Soldier
+				Skill Expert
+				MaxVisionRange 400
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 5
+			WaitBeforeStarting 60
+			WaitBetweenSpawns 40
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{	
+				Name "Heavy"
+				Health 300
+				Class Heavy
+				Skill Hard
+				MaxVisionRange 400
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 5
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 20
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{	
+				Name "Demoman"
+				Health 175
+				Class Demoman
+				Skill Hard
+				MaxVisionRange 400
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 1
+			WaitBeforeStarting 1340
+			WaitBetweenSpawns 270
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Heavyweapons_Deflector
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 2
+			WaitBeforeStarting 1340
+			WaitBetweenSpawns 1340
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Medic
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 1
+			WaitBeforeStarting 30
+			WaitBetweenSpawns 20
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Soldier_Buff_Banner
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 30
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{	
+				Name "Pyro"
+				Health 175
+				Class Pyro
+				Skill Expert
+				MaxVisionRange 400
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 20
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{	
+				Name "Scout"
+				Health 125
+				Class Scout
+				Skill Easy
+				MaxVisionRange 400
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 10
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 30
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 1
+			WaitBeforeStarting 890
+			WaitBetweenSpawns 890
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Soldier_Crit
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 15
+			MaxActive 15
+			SpawnCount 1
+			WaitBeforeStarting 890
+			WaitBetweenSpawns 890
+			TotalCurrency 400
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Medic
+			}
+		}
+	}
+}

@@ -1,0 +1,772 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency	3000
+	RespawnWaveTime 		3
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+
+
+
+	// MISSION: Sniper
+        Mission
+	{
+		Objective Sniper  
+
+		InitialCooldown 1
+		Where rb_5_1
+		
+                                            BeginAtWave 1
+		CooldownTime 20
+		DesiredCount 1
+                                           RandomChoice
+                                              {
+		
+
+                       TFBot
+		{
+			Class Sniper
+                        Name "Accurately Sniper"
+                        Health 130
+			Skill Expert 
+                        MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"         1.5
+                                "sniper charge per sec"     5.0
+			} 
+		}
+
+
+
+
+                   
+                            }
+
+}
+
+
+
+
+
+
+
+// WAVE 1//
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                     MaxVisionRange  10000
+                       Health 1
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                                                         
+                  }
+                       
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                           MaxVisionRange  10000
+                       Health 1
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                        MaxVisionRange  10000
+                       Health 1
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                                                         
+                  }
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+			{
+				Class Pyro
+				Skill Normal
+                                Name "Pyro Flare"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Flare Gun"
+                                MaxVisionRange  10000
+                                Item "Connoisseur's Cap"
+                                Health 1
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+          	
+			}
+ 
+                                                         }
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                        MaxVisionRange  10000
+                       Health 1
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                        MaxVisionRange  10000
+                       Health 1
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                          Name "Giant Guardian Demoman"
+                         Attributes MiniBoss
+                          MaxVisionRange  10000
+                        Health 5000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                                                                       "reload time increased hidden"    0.01
+                                                                                      "fire rate bonus"        0.4
+                                                                                       "override footstep sound set" 2
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+			{
+				Class Sniper
+				Skill Normal
+                                Name "Hunter"
+                                WeaponRestrictions PrimaryOnly
+                                Item "Larrikin Robin"
+                                Item "The Huntsman"
+                               MaxVisionRange  10000
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_5_4
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_5_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Soldier
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_5_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_2
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Scout
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_3
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_4
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Demoman
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_5
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Sniper
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_6
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Pyro
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_7
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot	
+		{
+			Class Soldier
+			Name "Giant Crit Soldier"
+			
+			Skill Normal
+			Health 5000
+			Item "The Original"
+                        Attributes MiniBoss
+                    
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"faster reload rate" 0.5
+				"Projectile speed increased" 0.3
+				"fire rate bonus" 1.0
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_add_1_8
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 2
+			TotalCurrency 0		
+			
+                                                             
+		TFBot
+		{
+			Class Heavyweapons
+			Skill Normal
+                       Health 1
+                       MaxVisionRange  10000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                         
+                                                         
+                  }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			
+		
+                                                         
+
+                                                               TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 10000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+                               
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

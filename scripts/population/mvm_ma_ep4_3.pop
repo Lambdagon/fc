@@ -1,0 +1,945 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		2500
+	RespawnWaveTime 		10
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+	
+
+                                           
+	
+		
+//WAVE 1 //Currency 600 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			TotalCurrency 200		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Demoman
+			Skill Normal
+                          Name "Giant Demoman"
+                         Attributes MiniBoss
+                        Health 5000
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                       "reload time increased hidden"    0.01
+                                                                                      "fire rate bonus"        0.4
+                                                                       "dmg taken from blast reduced"    0.5
+			}
+		}
+
+
+
+                                                }
+
+
+}
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			TotalCurrency 200		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                          TFBot	
+		{
+			Class Soldier
+			Name "Giant Crit Soldier"
+			
+			Skill Normal
+			Health 5000
+			Item "The Original"
+                        Attributes MiniBoss
+                    
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"faster reload rate" 0.5
+				"Projectile speed increased" 0.3
+				"fire rate bonus" 1.0
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+                                                                "dmg taken from crit reduced"     0.5
+			}
+		}
+
+
+
+                                                }
+}
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_2
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			TotalCurrency 200		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                            TFBot
+			{
+				Class Pyro
+				Skill Hard
+                                Name "Giant Pyro Super Pusher"
+                                WeaponRestrictions PrimaryOnly
+                                 Item "The Degreaser" 
+                                Item "The Attendant"
+                                 Health  5000
+                                Attributes MiniBoss
+                                 
+                                CharacterAttributes
+			{
+				"move speed bonus"	0.5
+                                "damage bonus"          1.0
+                                "airblast pushback scale"     2.0
+                               "mult airblast refire time"    0.5
+                             "deflection size multiplier"    3.0
+                             "override footstep sound set" 2
+				"dmg taken from fire reduced"     0.5
+			}
+ 
+                        }
+
+
+
+                                                }
+
+
+}
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1_3
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			TotalCurrency 200		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                            TFBot	
+		
+		{
+			Class Heavyweapons
+			Name "Giant Heavy"
+			Attributes MiniBoss
+			Skill Normal
+                                                             Item "Heavy Hair"
+                                                              
+			Health 6000
+			WeaponRestrictions PrimaryOnly
+			MaxVisionRange 1200
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage bonus"	1.5
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+                                                               "dmg taken from bullets reduced"    0.5
+			}
+		}
+
+
+                                                }
+
+
+}
+
+
+
+
+
+
+	
+	WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2
+			TotalCount 1
+			MaxActive 1
+                                                               Name "wave01"
+			SpawnCount 1
+			WaitBetweenSpawns 10
+			WaitBeforeStarting 0
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Expert
+                          Name "Cymanic"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                       ClassIcon newbe_reaper
+                        Item "The Deus Specs"
+                         Item   "The Hat With No Name"
+                        
+                         Item "The Equalizer"
+                       Scale 1.0
+                        WeaponRestrictions MeleeOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                       "reload time increased hidden"    0.01
+                                                                                      "fire rate bonus"        0.7
+                                                                                     "airblast pushback scale"    3.0
+                                                                                    "damage causes airblast"   1
+                                                                                        "critboost on kill"      10
+                                                                                          "heal on hit for rapidfire"   300
+                                                                                        "damage bonus"	1.7
+                                                                                          "restore health on kill" 1
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+
+                         WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2_1
+			TotalCount 1
+			MaxActive 1
+                                                                 Name "wave02"
+                                                               WaitForAllDead "wave01"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 2
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Expert
+                          Name "Cymanic"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item "The Deus Specs"
+                         Item   "The Hat With No Name"
+                          ClassIcon newbe_reaper
+                       Attributes HoldFireUntilFullReload
+                       Scale 1.0
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.5
+                                                                                        
+                                                                                        
+			}
+                                  ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_SOLDIER"
+				
+				
+                                                                                       "reload time increased hidden"    0.7
+                                                                                      "fire rate bonus"        0.4
+				 "clip size penalty"       3.0
+				"damage bonus"	1.5
+                                                                   "restore health on kill" 1
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+                            WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2_1
+			TotalCount 1
+			MaxActive 1
+                                                                Name "wave03"
+                                                               WaitForAllDead "wave02"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 1
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Expert
+                          Name "Cymanic"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item "The Deus Specs"
+                         Item   "The Hat With No Name"
+                            Attributes AutoJump
+				AutoJumpMin 10
+				AutoJumpMax 5
+                       Attributes HoldFireUntilFullReload
+                       Scale 1.0
+                        ClassIcon newbe_reaper
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                        "increased jump height"    10.0
+                                                                                         "cancel falling damage"   1
+			}
+                                  ItemAttributes
+			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+				
+				
+                                                                                       "reload time increased hidden"    0.1
+                                                                                      "fire rate bonus"        0.05
+                                                                                       "projectile spread angle penalty"    5
+				 "clip size penalty"       10.0
+				"damage bonus"	0.75
+                                                                   "restore health on kill" 1
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+
+                   WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+                                                                Name "wave04"
+                                                               WaitForAllDead "wave03"
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 1
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Expert
+                          Name "Cymanic"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item "The Deus Specs"
+                         Item   "The Hat With No Name"
+                          Attributes AutoJump
+				AutoJumpMin 10
+				AutoJumpMax 5
+                           Attributes AlwaysCrit
+                       Scale 1.0
+
+                        ClassIcon newbe_reaper
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.1
+                                                                                         "cancel falling damage"   1
+                                                                                        
+			}
+                                  ItemAttributes
+			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+				"dmg taken from crit increased"  0.5
+				"use large smoke explosion" 1
+                                                                                       "reload time increased hidden"    0.1
+                                                                                      "fire rate bonus"        4.0
+                                                                                    "increased jump height"    10.0
+                                                                                    "Projectile speed increased"      0.5
+                                                                                       "projectile spread angle penalty"    2
+				 "clip size penalty"       100.0
+                                                                                     "Blast radius increased"    4.0
+				"damage bonus"      3.0
+                                                                    "restore health on kill" 1
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+                WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3
+			TotalCount 2000
+			MaxActive 5
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 20000		
+			Randomchoice
+                                                             {
+
+
+                           TFBot
+				{
+					Class Pyro
+					Skill Easy
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+
+
+                             TFBot
+				{
+					Class Soldier
+					Skill Easy
+					WeaponRestrictions PrimaryOnly
+									
+				}
+    
+
+                                                       TFBot
+				{
+					Class Demoman
+					Skill Easy
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+
+                                                       TFBot
+				{
+					Class Heavyweapons
+					Skill Easy
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+
+                                                  TFBot
+			{
+				Class Heavyweapons
+				Skill Normal
+                                Name "Heavy Shotguner"
+                                WeaponRestrictions SecondaryOnly
+                                Item "Capone's Capper"
+                                Item "The Family Business"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+
+                                            
+
+                                          TFBot
+		{
+			Class Scout
+			Skill Normal
+                        WeaponRestrictions MeleeOnly
+                        Name "Sandman"
+                        Item "Batter's Helmet"
+                        Item "The Sandman"
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "effect bar recharge rate increased" 0.1
+			}
+		                     }
+
+
+
+
+}
+ }
+
+
+                       WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3
+			TotalCount 200
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 6000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+
+                                        TFBot
+			{
+				Class Heavyweapons
+				Skill Easy
+                                Name "Boxer"
+                                WeaponRestrictions MeleeOnly
+                                Attributes AlwaysCrit
+                                Item "The Killing Gloves of Boxing"
+                                Item "Pugilist's Protector"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.4
+			}
+			}
+
+
+                                      TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Resistant Solider"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Escape Plan"
+                                Item "The Battalion's Backup"
+                                Item "The Grenadier's Softcap"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+			}
+
+                        }
+
+
+
+                                 TFBot
+			{
+				Class Sniper
+				Skill Easy
+                                Name "Bleeder"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Tribalman's Shiv"
+                                Item "Towering pillar of hats"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.5
+                                "bleeding duration"      20
+			}
+			}
+
+
+                                
+
+                                                       TFBot
+			{
+				Class Sniper
+				Skill Hard
+                                Name "Hunter"
+                                WeaponRestrictions PrimaryOnly
+                                Item "Larrikin Robin"
+                                Item "The Huntsman"
+                              
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+			}
+      
+                                                        TFBot
+			{
+				Class Demoman
+				Skill Easy
+                                Health 300
+                                Name "Demoknight"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Eyelander"
+                                Item "The Chargin' Targe"
+                                Item "The Bolgan"
+                                CharacterAttributes
+			{
+				
+                                "charge recharge rate increased"    3.0
+			}
+                        }
+
+
+                                  TFBot
+			{
+				Class Medic
+				Skill Normal
+                                Name "Critical Medic"
+                                Attributes SpawnWithFullCharge
+                                Item "The Kritzkrieg"
+                                WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "overheal bonus"        3.0
+                                
+
+			}
+			}
+
+
+                             TFBot
+			{
+				Class Sniper
+				Skill Normal
+                                Health 800
+                                Name "Terrorist"
+                                
+                                WeaponRestrictions SecondaryOnly
+                                
+                                Item "Liquidator's Lid"
+                                
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                      
+			} 
+			}
+
+
+                            
+
+
+                                
+                                                  }
+                       }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+                                                               Name "wave05"
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        TFBot
+		{
+			Class Scout
+			Skill Expert
+                          Name "Jakete"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item  "Bonk Boy"
+                         Item   "Milkman"
+                            Item  "Dillinger's Duffel"
+                        ClassIcon newbe_reaper
+                          Attributes AlwaysCrit                                     
+                         
+                       Scale 1.0
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	2.0
+                                                                                       "reload time increased hidden"    0.5
+                                                                                      "fire rate bonus"        0.5
+                                                                                       "crit forces victim to laugh"  1
+                                                                                        
+                                                                                           "restore health on kill" 1
+                                                                                        "damage bonus"	1.0
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+                                                               Name "wave06"
+                                                               WaitForAllDead "wave05"
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        TFBot
+		{
+			Class Scout
+			Skill Expert
+                          Name "Jakete"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item  "Bonk Boy"
+                         Item   "Milkman"
+                            Item  "Dillinger's Duffel"
+                         Item "The Flying Guillotine"
+                       ClassIcon newbe_reaper                             
+                        
+                       Scale 1.0
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	2.0
+                                                                                       "reload time increased hidden"    0.6
+                                                                                      "fire rate bonus"        0.75
+                                                                                       "effect bar recharge rate increased" 0.01
+                                                                                        
+                                                                                           "restore health on kill" 1
+                                                                                        "damage bonus"	1.5
+			}
+		}
+
+
+
+
+                                
+                                                  }
+                       }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+                                                               Name "wave07"
+                                                               WaitForAllDead "wave06"
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 500		
+			
+		
+                                                         
+
+                                        TFBot
+		{
+			Class Scout
+			Skill Expert
+                          Name "Jakete"
+                         Attributes MiniBoss
+	         Attributes UseBossHealthBar
+                        Health 10000
+                        Item  "Bonk Boy"
+                         Item   "Milkman"
+                            Item  "Dillinger's Duffel"
+                        Item "The Sandman"
+                             
+                         Attributes AutoJump
+				AutoJumpMin 0.5
+				AutoJumpMax 1
+                       Scale 1.0
+                        WeaponRestrictions MeleeOnly
+                        ClassIcon newbe_reaper
+
+                                CharacterAttributes
+			{
+				        "move speed bonus"	     3.0
+                                                                                      "melee range multiplier"   3.0
+                                                                                      "fire rate bonus"        0.4
+                                                                                       "effect bar recharge rate increased" 0.01
+                                                                                        
+                                                                                           "restore health on kill" 1
+                                                                                        "damage bonus"	2.0
+			}
+		}
+
+
+
+
+
+                                
+                                                  
+                       }
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4_1
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+                                                               Name "wave08"
+                                                               WaitForAllDead "wave07"
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 500		
+			
+		
+                                                         
+
+                                        TFBot
+		{
+			Class Scout
+			Skill Expert
+                          Name "Jakete"
+                         Attributes MiniBoss
+	 Attributes UseBossHealthBar
+                        Health 10000
+                        Item  "Bonk Boy"
+                         Item   "Milkman"
+                            Item  "Dillinger's Duffel"
+                         Item "Bonk! Atomic Punch"
+                          ClassIcon newbe_reaper                          
+                        
+                       Scale 1.0
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	2.0
+                                                                                       "reload time increased hidden"    0.1
+                                                                                      "fire rate bonus"        0.1
+                                                                                       "effect bar recharge rate increased" 0.6
+                                                                                        
+                                                                                         "bullets per shot bonus"       6.0
+                                                                                        "damage bonus"	0.6
+			}
+
+                              ItemAttributes
+			{
+				ItemName "TF_WEAPON_SCATTERGUN"
+                                                                                      "clip size penalty"    6.0
+                                                                                       "restore health on kill" 1
+                                                                 }
+
+
+                                                  }
+                       
+
+     }
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+                         
+                       }
+
+
+
+
+
+
+}
+
+
+}

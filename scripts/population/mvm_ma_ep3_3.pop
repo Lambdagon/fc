@@ -1,0 +1,753 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency		2500
+	RespawnWaveTime 		3
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+	// MISSION: Sniper
+        Mission
+	{
+		Objective Sniper  
+
+		InitialCooldown 30
+		Where rb_2
+		
+                                            BeginAtWave 1
+		CooldownTime 10
+		DesiredCount 1
+                                           RandomChoice
+                {
+		
+
+               TFBot
+		{
+			Class Sniper
+                        Name "Accurately Sniper"
+                        Health 130
+			Skill Expert 
+                        
+                        WeaponRestrictions PrimaryOnly
+                        Attributes AlwaysCrit
+                        CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "damage bonus"         1.0
+                                "sniper charge per sec"     5.0
+			} 
+		}
+
+
+  }
+}
+
+Mission // Engineer 
+	{
+		Objective Engineer  
+
+		InitialCooldown 15
+		Where rb_3
+		BeginAtWave 1
+		RunForThisManyWaves 23
+		CooldownTime 40
+		DesiredCount 1
+                                           RandomChoice
+                                          {
+                
+                TFBot
+		{
+			Class Engineer
+			Name "Engineer"
+                                                                 
+			Skill Expert
+			
+			Health 400
+                                                                 CharacterAttributes
+			{
+				
+                                                               "fire rate bonus"  3
+			} 
+                        
+		}
+
+
+
+                     
+
+
+                  }
+}
+
+                                           
+	
+		
+//WAVE 1 //Currency 600 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+                                                 
+			TotalCount 600
+			MaxActive 3
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 3000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+
+                                  TFBot
+		{
+			Class Sniper
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                   
+
+                              TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+                                          
+
+                                         TFBot
+		{
+			Class Demoman
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                        Attributes HoldFireUntilFullReload
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                   
+                                     
+
+                                                           }
+
+
+
+
+
+
+                       }
+
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_2
+                                                 
+			TotalCount 600
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 3000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+                                         TFBot
+		{
+			Class Heavyweapons
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                          
+
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+
+                                            TFBot
+		{
+			Class Sniper
+			Skill Normal
+                        WeaponRestrictions SecondaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                        TFBot
+		{
+			Class Sniper
+			Skill Easy
+                      Item "The Huntsman"
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                   
+                                     
+
+                                                           }
+
+
+
+
+
+
+                       }
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_3
+                                                 
+			TotalCount 600
+			MaxActive 2
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 3000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+                                        TFBot
+		{
+			Class Heavyweapons
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                          
+
+                                         TFBot
+		{
+			Class Medic
+			Skill Easy
+                                  Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                       "uber duration bonus"      2
+			}
+		}
+
+
+
+
+                                           TFBot
+			{
+				Class Pyro
+				Skill Easy
+                                Name "Detonator Pyro"
+                                WeaponRestrictions SecondaryOnly
+                                Item "The Detonator"
+                                Item "Brigade Helm"
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "weapon burn dmg increased"      1.15
+
+                             
+				
+			}
+ 
+                        }
+
+                                                   
+
+
+TFBot
+			{
+				Class Pyro
+				Skill Expert
+                                Name "Deflector Pyro"
+                                WeaponRestrictions PrimaryOnly
+                                Item "The Detonator"
+                               
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                     "deflection size multiplier"    1.0
+                                                                                    "mult airblast refire time"    0.7
+                             
+				
+			}
+ 
+                        }
+                                     
+
+                                                           }
+
+
+
+
+
+
+                       }
+
+
+                                              
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_4
+                                                
+			TotalCount 600
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 3000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+                                        TFBot
+			{
+				Class Pyro
+				Skill Expert
+                                Name "Deflector Pyro"
+                                WeaponRestrictions PrimaryOnly
+                                Item "The Detonator"
+                               
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                     "deflection size multiplier"    1.0
+                                                                                       "mult airblast refire time"    0.7
+                             
+				
+			}
+ 
+                        }
+
+                                  TFBot
+		{
+			Class Demoman
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                        Attributes HoldFireUntilFullReload
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                          
+
+                                         
+
+                                            TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Minicrit Soldier"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Equalizer"
+                                Item "The Buff Banner"
+                                Item "Soldier's Stash"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+			}
+
+                        }
+
+
+                                  TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+
+                                           TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Resistant Solider"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Escape Plan"
+                                Item "The Battalion's Backup"
+                                Item "The Grenadier's Softcap"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+			}
+
+                        }
+
+                                                   
+                                     
+
+                                                           }
+
+
+
+
+
+
+                       }
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_5
+                                                 
+			TotalCount 600
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 1
+			TotalCurrency 4500		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+                                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                          
+
+                                      TFBot
+		{
+			Class Scout
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                              Attributes AutoJump
+				AutoJumpMin 0.5
+				AutoJumpMax 0.5
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+
+
+
+                                        TFBot
+			{
+				Class Soldier
+				Skill Easy
+                                Name "Resistant Solider"
+                                WeaponRestrictions MeleeOnly
+                                Item "The Escape Plan"
+                                Item "The Battalion's Backup"
+                                Item "The Grenadier's Softcap"
+                                Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                "increase buff duration"      5.0
+			}
+
+                        }
+
+
+                         TFBot
+		{
+			Class Soldier
+			Skill Easy
+                        WeaponRestrictions PrimaryOnly
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+			}
+		}
+
+                                                   
+                                     
+
+                        TFBot
+		{
+			Class Medic
+			Skill Easy
+                                  Attributes SpawnWithFullCharge
+                                CharacterAttributes
+			{
+				"move speed bonus"	1.0
+                                                                                       "uber duration bonus"      2
+			}
+		}
+
+
+
+                                                           }
+
+
+
+
+
+
+                       }
+
+
+
+
+WaveSpawn //Boss
+	{
+			Where rb_3_1
+			TotalCount 100
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 120
+			TotalCurrency 10000		
+			Randomchoice
+                                                             {
+		
+                                                         
+
+                                        
+                                         TFBot	
+		{
+			Class Soldier
+			Name "Giant Soldier"
+			ClassIcon soldier_crit
+			Skill Normal
+			Health 5000
+			Item "The Original"
+                        Attributes MiniBoss
+                      Attributes UseBossHealthBar
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"faster reload rate" 0.2
+				"Projectile speed increased" 0.5
+				"fire rate bonus" 2
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}
+		}
+
+                                          
+
+                                      TFBot	
+		{
+			Class Pyro
+			Name "Giant Pyro"
+			ClassIcon pyro_giant
+			Skill Normal
+			Health 5000
+			Item "The Scorch Shot"
+			Item "Old Guadalajara"
+                        Attributes MiniBoss
+                         Attributes UseBossHealthBar
+			WeaponRestrictions SecondaryOnly
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.6
+				"airblast vulnerability multiplier" 0.6
+				"override footstep sound set" 6
+				"Projectile speed increased" 1.0
+				
+			}
+		}
+
+
+
+
+                                    TFBot	
+		{
+			Class Scout	
+			Name "Super Stuner Scout"
+			ClassIcon scout_giant_fast
+			Skill Normal
+			Item "Bonk Boy"
+			Item "The Sandman"
+			Health 3000
+                                            Attributes MiniBoss
+			Attributes UseBossHealthBar
+			WeaponRestrictions MeleeOnly	
+			CharacterAttributes				
+			{
+				"move speed bonus"	2
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"override footstep sound set" 5
+                                                                                     "effect bar recharge rate increased" 0.15
+			}
+		}
+
+                                                   
+                                     
+
+                        TFBot	
+		
+		{
+			Class Heavyweapons
+			Name "Giant Heavy"
+			Attributes MiniBoss
+			Skill Normal
+                                                              Attributes UseBossHealthBar
+			Health 6000
+			WeaponRestrictions PrimaryOnly
+			MaxVisionRange 1200
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage bonus"	1.5
+				"damage force reduction" 0.3
+				"airblast vulnerability multiplier" 0.3
+				"override footstep sound set" 2
+			}
+		}
+
+
+
+                                                           }
+
+}
+
+
+
+
+WaveSpawn 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			Support 1
+		
+                                                         
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                               Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+                               
+                       }
+
+
+
+
+
+
+
+
+
+                       }
+
+
+}

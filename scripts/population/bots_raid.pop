@@ -1,0 +1,63 @@
+// -- These attributes must attached to a weapon using ItemAttributes and then ItemName --
+
+// "Blast radius decreased"
+// "Reload time decreased"
+// "airblast pushback scale"
+// "arrow mastery"
+// "attack projectiles"
+// "bullets per shot bonus"
+// "clip size bonus"
+// "clip size penalty"
+// "clip size upgrade atomic"
+// "cloak consume rate increased"
+// "critboost on kill"
+// "damage bonus"
+// "damage causes airblast"
+// "damage penalty"
+// "effect bar recharge rate increased"
+// "faster reload rate"
+// "fire rate bonus"
+// "fire rate penalty"
+// "flame life bonus"
+// (not sure about this one -- can't even find where it gets used at a glance) "multiple sentries"
+// "projectile penetration"
+// "projectile spread angle penalty"
+// "scattergun knockback mult"
+// "uber duration bonus"
+// "ubercharge rate bonus"
+// "use large smoke explosion"
+// ----------------------------------------------------
+WaveSchedule
+{
+	Templates
+	{
+		// Dead Ringer Spy
+		T_TFBot_Spy_DeadRinger
+		{
+			Class Spy
+			Skill Hard
+			//Attributes Aggressive - this seems to mess things up
+			
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_INVIS"
+				"set cloak is feign death" 1
+			}
+		}
+		
+		T_TFBot_Pyro_Phlog
+		{
+			Class    Pyro
+			Skill    Normal
+			WeaponRestrictions    PrimaryOnly
+			Attributes    SpawnWithFullCharge
+			Item    "The Phlogistinator"
+			
+			ItemAttributes
+			{
+				ItemName    "The Phlogistinator"
+				"airblast disabled"    0
+			}
+		}
+	}
+}

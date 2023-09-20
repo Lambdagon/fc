@@ -1,0 +1,330 @@
+// tank health starts at 35000 due to longer tank path
+
+#base robot_giant.pop 
+#base robot_standard.pop
+
+WaveSchedule
+{
+
+	StartingCurrency	8000
+	RespawnWaveTime 		10
+	CanBotsAttackWhileInSpawnRoom no
+                     FixedRespawnWaveTime Yes
+
+
+
+
+
+
+
+// WAVE 1//
+
+
+Wave
+{
+	StartWaveOutput
+		{
+			Target rl_start
+			Action trigger
+		}
+	DoneOutput					
+		{
+			Target rl_finsih_1
+			Action trigger
+		}
+	WaitWhenDone 65
+	Checkpoint Yes
+	
+	
+
+
+                        
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+			TotalCount 1
+			MaxActive 1
+                                                                Name "wave01"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 0
+			TotalCurrency 500		
+			
+                            TFBot
+			{
+				Class Spy
+				Skill Easy
+                                Name "Metalgen"
+                                 ClassIcon newbe_reaper
+                                Attributes UseBossHealthBar
+                                Item "Cosa Nostra Cap"
+                              Item "The Dead Ringer"
+                        
+                                           Item "The Familiar Fez"
+                                Attributes MiniBoss
+                                Attributes AlwaysFireWeapon
+                                  Attributes AlwaysCrit
+                                   WeaponRestrictions MeleeOnly
+                                Scale 1.0
+                                Health  30000
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	4.0
+                                                                                      "fire rate bonus"                        0.9
+                                                                                     "melee range multiplier"          10.0
+                                                                                    "melee bounds multiplier"       2.0
+                                                                                    "mult decloak rate"      0.1
+                                                                                    "crit forces victim to laugh"    1
+                                                                                    "freeze backstab victim"         1
+                                                                                   "disguise on backstab"        1
+                                                                                     
+			}
+			}
+                                  
+
+
+}
+
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+			TotalCount 1
+			MaxActive 1
+                                                                Name "wave02"
+                                                                 WaitForAllDead "wave01"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 3
+			TotalCurrency 500		
+			
+                            TFBot
+			{
+				Class Spy
+				Skill Easy
+                                Name "Metalgen"
+                                 ClassIcon newbe_reaper
+                                Attributes UseBossHealthBar
+                                Item "Cosa Nostra Cap"
+                        
+                                Item "The Familiar Fez"
+                                Item "The Dead Ringer"
+                                Attributes MiniBoss
+                                Attributes AlwaysFireWeapon
+                                  
+                                   WeaponRestrictions PrimaryOnly
+                                Scale 1.0
+                                Health  30000
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	4.0
+                                                                                     "mult decloak rate"      0.1
+                                                                                      "damage bonus"                        3.0
+                                                                                     "Reload time decreased"        0.01
+                                                                                      "fire rate bonus"                    0.5
+                                                                                      "fire rate bonus with reduced health"     0.01
+                                                                                      
+			}
+                                            
+ 
+
+
+
+			}
+                                  
+
+
+}
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+			TotalCount 1
+			MaxActive 1
+                                                                Name "wave03"
+                                                                 WaitForAllDead "wave02"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 3
+			TotalCurrency 500		
+			
+                            TFBot
+			{
+				Class Spy
+				Skill Easy
+                                Name "Metalgen"
+                                 ClassIcon newbe_reaper
+                                Attributes UseBossHealthBar
+                                Item "Cosa Nostra Cap"
+                                   Item         "The Big Earner"
+                                 Item "The Dead Ringer"
+                                 Item "The Familiar Fez"
+                        
+                                Attributes MiniBoss
+                                Attributes AlwaysFireWeapon
+                                 
+                                   WeaponRestrictions MeleeOnly
+                                Scale 1.0
+                                Health  30000
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	4.0
+                                                                                      "fire rate bonus"                             0.1
+                                                                                       "damage bonus"                           0.4
+                                                                                       "melee range multiplier"         10.0
+                                                                                        "melee bounds multiplier"      2.0
+                                                                                        "slow enemy on hit major"  20
+                                                                                         "mult decloak rate"      0.1
+                                                                                       "bleeding duration"   5
+                                                                                        "gesture speed increase"   4.0
+                                                                                       "mod stun waist high airborne" 1
+                                                                                      "damage all connected"          1
+                                                                                          "damage causes airblast"  1
+                                                                                     "slow enemy on hit major"  20
+                                                                                     
+			}
+                                            
+ 
+
+
+
+			}
+                                  
+
+
+}
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_1
+			TotalCount 1
+			MaxActive 1
+                                                                Name "wave04"
+                                                                 WaitForAllDead "wave03"
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			WaitBeforeStarting 3
+			TotalCurrency 500		
+			
+                            TFBot
+			{
+				Class Spy
+				Skill Easy
+                                Name "Metalgen"
+                                 ClassIcon newbe_reaper
+                                Attributes UseBossHealthBar
+                                Item "Cosa Nostra Cap"
+                               
+                                  Item             "The Diamondback"
+                                Item "The Dead Ringer"
+                                Item "The Familiar Fez"
+                                Attributes MiniBoss
+                                Attributes AlwaysFireWeapon
+                                 
+                                   WeaponRestrictions PrimaryOnly
+                                Scale 1.0
+                                Health  30000
+
+
+                                CharacterAttributes
+
+			{
+				"move speed bonus"	4.0
+                                                                                     "fire rate bonus"                             0.5
+                                                                                   "Reload time decreased"        0.01
+                                                                                    "bleeding duration"   90 
+                                                                                      
+                                                                                      "Set DamageType Ignite"    1
+                                                                                    "weapon burn dmg increased"    1.5
+                                                                                    "weapon burn time increased"    1.5
+                                                                                    "reload time increased hidden"   0.1
+                                                                                     "mult decloak rate"      0.1
+                                                                                   "slow enemy on hit major"    19
+                                                                                    "subtract victim medigun charge on hit"  10
+                                                                                   "subtract victim cloak on hit"   30
+                                                                                       "damage all connected"  1
+                                                                                
+                                                                                     "turn to gold" 1
+                                                                                      "mark for death" 1
+
+                                                                                     "ragdolls become ash" 1
+			}
+                                            
+ 
+
+
+
+			}
+                                  
+
+
+}
+
+
+
+
+
+
+
+WaveSpawn //WAVE 01a: 48 total, 6 active, scout 
+	{
+			Where rb_0
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			TotalCurrency 0		
+			
+		
+                                                         
+
+                                         TFBot
+				{
+					Class Scout
+					Skill Easy
+                                                                                                           Health 1000000
+					WeaponRestrictions PrimaryOnly
+									
+				}
+
+                               
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

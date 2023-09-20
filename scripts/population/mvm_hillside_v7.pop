@@ -1,0 +1,742 @@
+#base robot_giant.pop
+#base robot_standard.pop
+#base robot_medieval.pop
+
+WaveSchedule
+{
+		
+	//Start with 600
+	StartingCurrency 600
+	RespawnWaveTime 0
+	CanBotsAttackWhileInSpawnRoom no
+	
+	Mission //Wave 3 spies
+	{
+		InitialCooldown 60
+		Objective Spy
+		Where spawnbot
+		BeginAtWave 3
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 1
+		
+		TFBot
+		{
+			Class Spy
+			Skill Expert
+			Name Spy
+		}
+	}
+	
+	Mission //Wave 5 spies
+	{
+		InitialCooldown 160
+		Objective Spy
+		Where spawnbot
+		BeginAtWave 5
+		RunForThisManyWaves 1
+		CooldownTime 30
+		DesiredCount 3
+		
+		TFBot
+		{
+			Class Spy
+			Skill Expert
+			Name Spy
+		}
+	}
+	Wave //WAVE 1 Money : 350 Total : 950
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w1_sniper"
+			TotalCount 20
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Desert
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w1_sniper"
+			TotalCount 10
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w1_sniper"
+			TotalCount 20
+			MaxActive 12
+			SpawnCount 6
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Desert
+			}
+
+		}
+	}
+	
+	Wave //WAVE 2 Money : 350 Total : 1300
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w2_demoknights"
+			TotalCount 25
+			MaxActive 20
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 15
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_Demo_Samurai
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w2_demoknights"
+			TotalCount 20
+			MaxActive 8
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 100
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Brute_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+			}
+				
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w2_demoknights"
+			TotalCount 10
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 50
+
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+	}
+	
+	Wave //WAVE 3 Money : 750 Total : 2050
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w3_demos_first"
+			TotalCount 25
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_DemoKnight
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w3_demos_and_heavies"
+			WaitForAllDead "w3_demos_first"
+			TotalCount 24
+			MaxActive 6
+			SpawnCount 6
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 10
+			TotalCurrency 200
+			
+			Squad 
+			{
+				TFBot
+				{
+					Template T_TFBot_Brute_Heavy
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w3_demos_and_heavies"
+			WaitForAllDead "w3_demos_first"
+			TotalCount 10
+			MaxActive 2
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_DemoKnight
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w3_demos_and_heavies"
+			WaitForAllDead "w3_demos_first"
+			TotalCount 15
+			MaxActive 3
+			SpawnCount 3
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_Demo_Samurai
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w3_demos_and_heavies"
+			TotalCount 900
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 5
+			TotalCurrency 0
+			
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Desert
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w3_demos_and_heavies"
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 50
+			TotalCurrency 100
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_DemoMan_PrinceTavish
+			}
+		}	
+	}
+	Wave //WAVE 4 Money : 950 Total : 3000
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 100
+			MaxActive 8
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 5
+			TotalCurrency 0
+			
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Desert
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w4_first_squad"
+			TotalCount 40
+			MaxActive 8
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 160
+				
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w4_first_squad"
+			TotalCount 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 40
+			
+			TFBot
+			{
+				Template T_TFBot_Scout_Sandman
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w4_first_squad"
+			TotalCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 5
+			TotalCurrency 200
+			
+			FirstSpawnOutput     
+			{
+				Target boss_spawn_relay                                            
+				Action Trigger                         
+			}
+			Tank
+			{
+				Name "Tank"
+				Health 10000
+				Speed 75
+				Skin 0
+				StartingPathTrackNode "boss_path_a1"
+
+				OnKilledOutput                                  
+				{
+					Target boss_dead_relay
+					Action Trigger                         
+				}
+				
+				OnBombDroppedOutput                             
+				{
+					Target boss_deploy_relay 
+					Action Trigger                         
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w4_heavies"
+			WaitForAllDead "w4_first_squad"
+			TotalCount 20
+			MaxActive 8
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 15
+			TotalCurrency 200
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Heavy_Wrestler
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+				TFBot
+				{
+					Template T_TFBot_Crusuader_Medic
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w4_heavies"
+			WaitForAllDead "w4_first_squad"
+			TotalCount 10
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_Brute_Heavy
+			}
+		}
+
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 2
+			MaxActive 2
+			SpawnCount 2
+			WaitForAllDead "w4_heavies"
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 20
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_Giant_Boxing_Heavy
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 100
+			MaxActive 4
+			SpawnCount 2
+			WaitForAllDead "w4_heavies"
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 5
+			TotalCurrency 0
+			
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Scout_Melee
+			}
+		}
+	}
+	Wave //WAVE 5 Money : 950 Total : 3950
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w5_first"
+			TotalCount 20
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w5_first"
+			TotalCount 20
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_DemoKnight
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w5_first"
+			TotalCount 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 10
+			TotalCurrency 150
+			
+			TFBot
+			{
+				Template T_TFBot_Brute_Heavy
+			}
+		}
+
+		WaveSpawn
+		{
+			Where spawnbot
+			Name "w5_second"
+			WaitForAllDead "w5_first"
+			TotalCount 10
+			MaxActive 4
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 15
+			TotalCurrency 200
+			
+			TFBot
+			{
+				Template T_TFBot_Demo_Slayer
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w5_first"
+			TotalCount 100
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 5
+			TotalCurrency 0
+			
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Sniper_Desert
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w5_first"
+			TotalCount 100
+			MaxActive 6
+			SpawnCount 3
+			WaitBeforeStarting 15
+			WaitBetweenSpawns 15
+			TotalCurrency 0
+			
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Demo_Samurai
+			}
+		}
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			WaitForAllDead "w5_second"
+			TotalCount 12
+			MaxActive 4
+			SpawnCount 4
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 20
+			TotalCurrency 300
+			
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_DemoMan_PrinceTavish
+				}
+				TFBot
+				{
+					Template T_TFBot_Soldier_Samurai
+				}
+				TFBot
+				{
+					Template T_TFBot_Heavyweapons_Heavyweight_Champ
+				}
+				TFBot
+				{
+					Template T_TFBot_Heavyweapons_Heavyweight_Champ
+				}
+			}
+		}		
+	}
+	Wave //WAVE 6 LAST WAVE
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		WaitWhenDone 65
+		Checkpoint Yes
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 20
+			WaitBetweenSpawns 5
+			TotalCurrency 500
+			
+			TFBot
+			{
+				Template T_TFBot_Dragonborn
+			}
+		}
+			
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 100
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 2
+			TotalCurrency 0
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Scout_Melee
+			}
+		}
+		
+		
+		WaveSpawn
+		{
+			Where spawnbot
+			TotalCount 100
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 5
+			TotalCurrency 0
+			Support 1
+			
+			TFBot
+			{
+				Template T_TFBot_Scout_Sandman
+			}
+		}
+	}
+}
