@@ -1386,122 +1386,7 @@
 			"xifier_class_remap"	"blackbox"
 			"particle_suffix"		"blackbox"
 		}
-
-		"weapon_lfe_blackbox"
-		{
-			"enabled"	"1"
-			"item_class"	"tf_weapon_rocketlauncher"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"		"1"
-				"can_deal_gib_damage"	"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"The Black Box"
-			"item_logname"	"blackbox"
-			"item_iconname"	"blackbox"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_RocketLauncher"
-			"item_name"	"#TF_TheBlackBox"
-			"item_slot"	"primary"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_blackbox/c_blackbox"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/workshop/weapons/c_models/c_blackbox/c_blackbox.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "55"
-			"used_by_classes"
-			{
-				"soldier"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"12 -4 -8"
-			}
-			"attributes"
-			{
-				"heal on hit for slowfire"
-				{
-					"attribute_class"	"add_onhit_addhealth"
-					"value"	"10.0"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.75"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
-				}
-				"disable fancy class select anim"
-				{
-					"attribute_class"	"disable_fancy_class_select_anim"
-					"value"	"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_RPG_BlackBox.Single"
-				"sound_burst"		"Weapon_RPG_BlackBox.SingleCrit"
-				"sound_special1"	"Weapon_RPG_BlackBox.Explode"
-				"animation_replacement"
-				{
-					"ACT_VM_RELOAD"	"ACT_PRIMARY_VM_RELOAD_2"
-					"ACT_RELOAD_START"	"ACT_PRIMARY_RELOAD_START_2"
-					"ACT_RELOAD_FINISH"	"ACT_PRIMARY_RELOAD_FINISH_2"
-					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_PRIMARY_2"
-					"ACT_MP_RELOAD_STAND_LOOP"	"ACT_MP_RELOAD_STAND_PRIMARY_2"
-					"ACT_MP_RELOAD_STAND_END"	"ACT_MP_RELOAD_STAND_PRIMARY_END_2"
-					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_PRIMARY_2"
-					"ACT_MP_RELOAD_CROUCH_END"	"ACT_MP_RELOAD_CROUCH_PRIMARY_END_2"
-					"ACT_MP_RELOAD_CROUCH_LOOP"	"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP_2"
-					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_2"
-					"ACT_MP_RELOAD_AIRWALK_END"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_END_2"
-					"ACT_MP_RELOAD_AIRWALK_LOOP"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP_2"
-				}
-				"styles"
-				{
-					"0"
-					{
-						"skin_red"	"0"
-						"skin_blu"	"1"
-						"selectable"	"0"
-					}
-					"1"
-					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
-						"selectable"	"0"
-						"image_inventory"	"backpack/workshop/weapons/c_models/c_blackbox/c_blackbox_gold"
-					}
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-			"xifier_class_remap"	"blackbox"
-			"particle_suffix"		"blackbox"
-		}
-
+//was lfe_blackbox
 		"weapon_bonesaw"
 		{
 			"enabled"	"1"
@@ -3945,10 +3830,10 @@
 					"attribute_class"	"uses_ammo_while_aiming"
 					"value" "4"
 				}
-				"damage penalty"
+				"dmg penalty vs nonburning"
 				{
-					"attribute_class" 	"mult_dmg"
-					"value" "0.9"
+					"attribute_class"	"mult_dmg_vs_nonburning"
+					"value"	"0.90"
 				}
 				"damage bonus vs burning"
 				{
@@ -4860,20 +4745,20 @@
 			}
 			"attributes"
 			{
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.66"
-				}
 				"mod mini-crit airborne"
 				{
 					"attribute_class"	"mini_crit_airborne"
 					"value" "1"
 				}
 				"single wep deploy time decreased"
-				{
+				{	
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.80"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.66"
 				}
 				"special taunt"
 				{
@@ -6495,16 +6380,16 @@
 					"attribute_class"	"mult_dmg"
 					"value" "1.15"
 				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.4"
-				}
 				"increased jump height from weapon"
 				{
 					"attribute_class"	"mod_jump_height_from_weapon"
 					"value" "1.25"
 				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.4"
+				}	
 			}
 			"visuals"
 			{
@@ -9184,70 +9069,7 @@
 		}
 		"173"
 		{
-			"name"	"The Vita-Saw"
-			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_bonesaw"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-			}
-			"item_logname"	"battleneedle"
-			"item_iconname"	"battleneedle"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Bonesaw"
-			"item_name"	"#TF_Unique_BattleSaw"
-			"item_description" "#TF_Unique_BattleSaw_Desc"
-			"item_slot"	"melee"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_uberneedle/c_uberneedle"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"50"
-			"model_player"	"models/workshop/weapons/c_models/c_uberneedle/c_uberneedle.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"medic"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -12"
-			}
-			"attributes"
-			{
-				"ubercharge_preserved_on_spawn_max"
-				{
-					"attribute_class"	"ubercharge_preserved_on_spawn_max"
-					"value" "0.6"
-				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "-10"
-				}
-				"lunchbox adds minicrits"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"2"
-				}
-			}
-			"visuals"
-			{
-				"sound_taunt"	"Taunt.MedicViolinUber"
-				"sound_melee_hit"	"Weapon_UberSaw.HitFlesh"
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+//was vitasaw
 		}
 		"214"
 		{
@@ -9431,15 +9253,15 @@
 					"attribute_class"	"add_cloak_on_hit"
 					"value" "15"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
-				}
 				"cloak consume rate decreased"
 				{
 					"attribute_class"	"mult_cloak_meter_consume_rate"
 					"value" "0.6"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.8"
 				}
 			}
 			"visuals"
@@ -9556,7 +9378,7 @@
 		"228"
 		{
 			"name"	"The Black Box"
-			"prefab" "weapon_lfe_blackbox"
+			"prefab" "weapon_blackbox"
 			"first_sale_date"	"2010/09/29"
 			"particle_suffix"	"black_box"
 			"tags"
@@ -11819,15 +11641,15 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"Projectile speed increased"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"	"1.4"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "1.25"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.4"
 				}
 				"rocket jump damage reduction"
 				{
@@ -11837,12 +11659,12 @@
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
-					"value" "1.0"
+					"value" "20.0"
 				}
-				"rocket specialist"
+				"damage penalty"
 				{
-					"attribute_class"	"rocket_specialist"
-					"value"	"2"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
 				}
 			}
 			"visuals"
@@ -20486,16 +20308,11 @@
 			}
 			"attributes"
 			{
-                                "max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"	"175"
-				}
 				"health regen"
 				{
 					"attribute_class"	"add_health_regen"
 					"value"	"3"
-                                }
+                }
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
@@ -20547,12 +20364,13 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Improvised Rocket Launcher"
 			"propername"	"1"
-			"item_name"	"The Pro-Pain"
+			"item_name"	"The Rocket-Fire Explosion"
                         "item_description"	"Model By goober of the goof"
 			"item_logname"	"propain"
 			"item_iconname"	"propain"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
+			"anim_slot"	"ITEM1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
 			"image_inventory"	"backpack/weapons/c_models/c_pain"
@@ -20563,7 +20381,7 @@
 			"inspect_panel_dist" "60"
 			"used_by_classes"
 			{
-				"soldier"	"1"
+				"pyro"	"primary"
 			}
 			"static_attrs"
 			{
@@ -20576,35 +20394,40 @@
 					"attribute_class"	"set_dmgtype_ignite"
 					"value"	"1"
 				}
-                                "Blast radius increased"
+                "damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.20"
+				}
+				"dmg penalty vs nonburning"
+				{
+					"attribute_class"	"mult_dmg_vs_nonburning"
+					"value"	"0.30"
+				}
+				"dmg penalty vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"	"0.60"
+				}
+				"Blast radius decreased"
 				{
 					"attribute_class"	"mult_explosion_radius"
-					"value"	"1.80"
+					"value"	"0.80"
 				}
-                                "fire rate bonus"
+				"maxammo primary reduced"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.45"
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.04"
 				}
-                                "clip size bonus"
+				"reload time increased hidden"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"1.50"
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"	"0.70"
 				}
-                                "damage penalty"
+				"no reload single"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.25"
-				}
-                                "blast dmg to self increased"
-				{
-					"attribute_class"	"blast_dmg_to_self"
-					"value"	"1.65"
-				}
-                                "projectile spread angle penalty"
-				{
-					"attribute_class"	"projectile_spread_angle"
-					"value"	"3"
+					"attribute_class"	"set_no_reload_single"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -21085,7 +20908,75 @@
 		}		
 		"9409"
 		{
-//was warcrime
+			"name"	"Engi Reserve Shooter"
+			"first_sale_date"	"2011/03/23"
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"show_in_armory"	"1"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_peusermessageration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"	"#TF_ReserveShooter"
+			"item_slot"	"primary"
+			"item_logname"	"reserve_shooter"
+			"item_iconname"	"reserve_shooter"
+			"show_in_armory"	"1"
+			"anim_slot" "primary"	
+			"item_quality"	"unique"
+			"propername"	"0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"attach_to_hands"	"1"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Reserve_Shooter.Single"
+				"sound_burst"		"Weapon_Reserve_Shooter.SingleCrit"
+				"muzzle_flash"	"muzzle_shotgun"
+				"tracer_effect"	"bullet_shotgun_tracer01"
+			}
+			"attributes"
+			{
+				"mod mini-crit airborne"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.80"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.66"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}	
 		"9410"
 		{
@@ -21381,74 +21272,7 @@ Fires....... something"
 		}
 		"9415"
         {
-            "name"    "John Uzi"
-            "item_class"    "tf_weapon_pistol"
-            "baseitem" "0"
-            "tags"
-            {
-                "can_deal_damage"            "1"
-                "can_deal_mvm_penetration_damage"    "1"
-                "can_deal_long_distance_damage"    "1"
-            }
-            "item_type_name"    "#TF_Weapon_SMG"
-            "item_name"    "UZI"
-			"item_description"	"Model from GMod addon by Mac Tonight"
-            "item_slot"    "secondary"
-            "show_in_armory"    "0"
-            "image_inventory"    "backpack/weapons/oozi"
-            "image_inventory_size_w"        "128"
-            "image_inventory_size_h"        "82"
-            "model_world"    "models/weapons/w_mw2_uzi_new.mdl"
-            "model_player"    "models/weapons/c_mw2_miniuzi.mdl"
-            "attach_to_hands" "2"
-            "inspect_panel_dist" "40"
-            "item_quality"    "unique"
-            "propername"    "1"
-            "min_ilevel"    "5"
-            "max_ilevel"    "5"
-            "used_by_classes"
-            {
-                "john"                "1"
-            }
-            "particle_suffix"        "ar2"
-            "mouse_pressed_sound"    "weapons/uzi/deploy.wav"
-            "drop_sound"        "ui/item_heavy_gun_drop.wav"
-            "attributes"
-            {
-                "damage bonus HIDDEN"
-                {
-                    "attribute_class"     "mult_dmg"
-                    "value" "0.7"
-                }
-                "spread penalty"
-                {
-                    "attribute_class"    "mult_spread_scale"
-                    "value" "1.5"
-                }
-                "fire rate bonus"
-                {
-                    "attribute_class"    "mult_postfiredelay"
-                    "value"    "0.45"
-                }
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "1.8"
-				}
-
-            }
-            "static_attrs"
-            {
-                "min_viewmodel_offset"        "10 0 -9"
-            }
-            "visuals"
-            {
-				"sound_single_shot" "robotnik_mw2_miniuzi.Single"
-				"sound_burst" "robotnik_mw2_miniuzi.Single"
-				"animation_replacement"
-				{
-				}
-            }
+            //was john uzi
         }		
 		"9416"
 		{
@@ -22354,114 +22178,11 @@ Fires....... something"
 
 		"9153"
 		{
-			"name"	"Spy's Panic Attack"
-			"item_class"	"tf_weapon_shotgun_primary"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"		"1"
-				"can_headshot"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"Shotgun"
-			"item_name"	"Spy's Panic Attack"
-			"item_description"	"Spy is not the best with larger guns."
-			"item_slot"	"secondary"
-			"anim_slot"	"primary"
-			"item_quality"	"normal"
-			"show_in_armory"	"1"
-			"propername"	"0"
-			"item_logname"	"shotgun"
-			"item_iconname"	"shotgun"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_trenchgun/c_trenchgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_models/v_shotgun_soldier.mdl"
-			"model_world"	"models/workshop/weapons/c_models/c_trenchgun/c_trenchgun.mdl"
-			"attach_to_hands" "2"
-			"inspect_panel_dist" "32"
-			"used_by_classes"
-			{
-				"spy"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -11"
-				"weapon_stattrak_module_scale"				"0.608"				
-			}
-			"attributes"
-			{
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.1"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.7"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.93"
-				}
-				"mod_no_cloak_when_active"
-				{
-					"attribute_class" "mod_no_cloak_when_active"
-					"value" "1"
-				}				
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.8"
-				}
-				"single wep deploy time decreased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"0.5"
-				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "1"
-				}
-				"bullets per shot bonus"
-				{
-					"attribute_class" 	"mult_bullets_per_shot"
-					"value" "1.5"
-				}
-				"fixed_shot_pattern"
-				{
-					"attribute_class" 	"fixed_shot_pattern"
-					"value" "1"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "20"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_BackShot_Shotty.Single"
-				"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
-			}
-			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			//was spy's panic attack
 		}	
                 "9123"
 		{
-			"item_class"	"tf_weapon_shotgun"
+			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -22479,6 +22200,7 @@ Fires....... something"
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
+			"anim_slot" "secondary"
 			"item_name"			"The Stampede Destroyer"
 			"item_description"	"Model by Toad"
 			"show_in_armory"	"1"
@@ -22495,7 +22217,7 @@ Fires....... something"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
 			{
-                                "engineer" "1"
+             "heavy" "primary"
 			}
 			"static_attrs"
 			{
@@ -22503,6 +22225,11 @@ Fires....... something"
 			}
 			"attributes"
 			{
+			    "move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "1.10"
+                }
                 "bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
@@ -22511,18 +22238,18 @@ Fires....... something"
                 "spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "1.60"
+					"value" "1.50"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.25"
+					"value" "1.15"
                 }
-                "move speed penalty"
+				"maxammo primary reduced"
 				{
-					"attribute_class"	"mult_player_movespeed"
-					"value" "0.70"
-                }
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.15"
+				}
 			}
 			"visuals"
 			{
@@ -22796,82 +22523,7 @@ Fires....... something"
 		}
 		"9706"
 		{
-			"name"	"The C96"
-			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_revolver"
-			"craft_class"	""
-			"craft_material_type"		""
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name"	"Mauser C96"
-			"item_name"	"The C96"
-			"item_description"	"Model by BadTitanTF2"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"item_logname"	"c96"
-			"item_iconname"	"c96"
-			"image_inventory"	"backpack/weapons/c_models/c_c96"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_c96/c_revolver.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"spy" 		"1"
-			}
-                        "visuals"
-			{
-				"sound_single_shot"		"Weapon_PickPocket_Pistol.Single"
-				"sound_burst"			"Weapon_PickPocket_Pistol.SingleCrit"
-			}
-			"attributes"
-			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "3.00"
-				}
-				"clip size bonus"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "1.70"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.70"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.50"
-				}
-				"mult cloak meter consume rate"
-				{
-					"attribute_class"	"mult_cloak_meter_consume_rate"
-					"value"	"1.28"
-				}
-				"cloak consume rate increased"
-				{
-					"attribute_class"	"mult_cloak_meter_consume_rate"
-					"value"	"1.60"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			//was spy mauser
 		}
 		"9707"
 		{
@@ -23007,6 +22659,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.6"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.85"
 				}
 				"clip size penalty"
 				{
@@ -23429,7 +23086,7 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.75"
+					"value"	"0.70"
 				}
 				"Reload time increased"
 				{
@@ -24019,8 +23676,9 @@ Fires....... something"
 			"item_name"	"#TF_ReserveShooter"
 			"item_slot"	"secondary"
 			"item_logname"	"reserve_shooter"
-			"item_iconname"	"reserve_kill"
+			"item_iconname"	"reserve_shooter"
 			"show_in_armory"	"1"
+			"anim_slot" "secondary"	
 			"item_quality"	"unique"
 			"propername"	"0"
 			"min_ilevel"	"10"
@@ -24034,7 +23692,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"heavy"	"secondary"
-				"spy"	"primary"
 			}
 			"visuals"
 			{
@@ -24045,20 +23702,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"mod mini-crit airborne"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.80"
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
-				}
-				"mod mini-crit airborne deploy"
-				{
-					"attribute_class"	"mini_crit_airborne_deploy"
-					"value" "3"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.85"
+					"value" "0.66"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -24284,83 +23941,7 @@ Fires....... something"
 		}
 		"9736"
 		{
-			"craft_class"	""
-			"baseitem"		"0"
-			"enabled"	"0"
-			"item_class"	"tf_weapon_pistol"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"1"
-			"item_type_name"	"Pistol"
-			"item_name"	"The Ruger"
-			"item_description"	"Model by DanielAwesomo"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"anim_slot"	"secondary"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_ruger"
-			"model_player"	"models/weapons/lambda/ruger/v_pistol_scout.mdl"
-			"model_world"	"models/weapons/lambda/ruger/w_pistol.mdl"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"attributes"
-			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"3.50"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.50"
-				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.70"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.75"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.85"
-				}
-                        }
-			"static_attrs"
-			{
-				"weapon_stattrak_module_scale"			"0.723"
-				"min_viewmodel_offset"				"10 0 -10"
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_PistolDM.Single"
-				"sound_burst"		"Weapon_PistolDM.SingleCrit"
-				"sound_reload"		"Weapon_PistolDM.WorldReload"
-			}	
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
+		//was scout ruger
 		}
 		"9737"
 		{
@@ -24429,78 +24010,7 @@ Fires....... something"
 		}
 		"9738"
 		{
-			"craft_class"	""
-			"baseitem"		"0"
-			"enabled"	"0"
-			"item_class"	"tf_weapon_pistol"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"1"
-			"item_type_name"	"Mauser C96"
-			"item_name"	"The Mauser"
-			"item_description"	"Model by Lambdagon"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"anim_slot"	"secondary"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_mauser"
-			"model_player"	"models/weapons/lambda/c96/c_pistol.mdl"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"weapon_stattrak_module_scale"			"0.723"
-				"min_viewmodel_offset"				"10 0 -10"
-			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.25"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0.20"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.50"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.85"
-				}
-                        }
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_PistolDM.Single"
-				"sound_burst"		"Weapon_PistolDM.SingleCrit"
-				"sound_reload"		"Weapon_PistolDM.WorldReload"
-			}	
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
+			//was engi & scout mauser
 		}
 		"9739"
 		{
@@ -26585,7 +26095,7 @@ Fires....... something"
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"3.6"
+					"value"				"3.0"
 				}
 				"damage penalty"
 				{
@@ -26612,85 +26122,7 @@ Fires....... something"
 		}
 		"9569"
 		{
-			"name"	"STG 44"
-			"prefab"	"valve"
-			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_syringegun_medic"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_logname"	"blutsauger"
-			"item_iconname"	"blutsauger"
-			"show_in_armory"	"1"
-			"item_type_name"	"Assault Rifle"
-			"item_name"	"Storm-Goer"
-			"item_description"	"An illegal wonder made by German Engineering"
-			"item_slot"	"primary"
-			"image_inventory"	"backpack/weapons/lambda/stg44/c_leechgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/stg44/v_stg.mdl"
-			"model_world"	"models/weapons/lambda/stg44/c_leechgun.mdl"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" "50"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"medic"	"1"
-			}
-			"attributes"
-			{
-				"hidden primary max ammo bonus"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.5"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.45"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.75"
-				}
-				"reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"1.25"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.93"
-				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_MP44.Single"
-				"sound_burst"			"Weapon_MP44.SingleCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+//WAS STG 44
 		}
 		"9570"
 		{
@@ -27971,7 +27403,7 @@ Fires....... something"
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.13"
+					"value"	"1.15"
 				}
 			}
 			"visuals"
