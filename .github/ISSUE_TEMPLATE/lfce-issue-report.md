@@ -1,6 +1,6 @@
 ---
-name: LFCE Issue Report
-about: Create a report to help us improve LF:CE. Your business is appreciated :)
+name: FC Issue Report
+about: Create a report to help us improve FC. Your business is appreciated :)
 title: "[BUG]"
 labels: ''
 assignees: ''
@@ -23,7 +23,7 @@ If applicable, add screenshots or a video (YT videos are allowed) to help explai
 ```
  OS: [e.g. Ubuntu]
  OS version / codename: [e.g. 22.04 Jammy Jellyfish] (this might be important)
- Installer Utility: [e.g. LFCEDownloader (leave it blank if you installed the archive / .zip instead.)]
+ Installer Utility: [e.g. FCDownloader (leave it blank if you installed the archive / .zip instead.)]
  Game Version: 06/23 (June 2023)
 ```
 
