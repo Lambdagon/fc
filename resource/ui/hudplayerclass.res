@@ -97,6 +97,10 @@
 		"teambg_2_lodef"	"../hud/character_red_bg_lodef"
 		"teambg_3"		"../hud/character_blue_bg"
 		"teambg_3_lodef"	"../hud/character_blue_bg_lodef"
+		"teambg_4"		"../hud/character_green_bg"
+		"teambg_4_lodef"	"../hud/character_green_bg_lodef"
+		"teambg_5"		"../hud/character_yellow_bg"
+		"teambg_5_lodef"	"../hud/character_yellow_bg_lodef"
 	}
 
 	"classmodelpanelBG"
@@ -120,6 +124,10 @@
 		"teambg_2_lodef"	"../hud/character_red_bg_lodef_clipped"
 		"teambg_3"			"../hud/character_blue_bg_clipped"
 		"teambg_3_lodef"	"../hud/character_blue_bg_lodef_clipped"
+		"teambg_4"			"../hud/character_green_bg_clipped"
+		"teambg_4_lodef"	"../hud/character_green_bg_lodef_clipped"
+		"teambg_5"			"../hud/character_yellow_bg_clipped"
+		"teambg_5_lodef"	"../hud/character_yellow_bg_lodef_clipped"
 	}
 
 	"classmodelpanel"
@@ -324,6 +332,10 @@
 			"teambg_2_lodef"		"../hud/color_panel_red"
 			"teambg_3"				"../hud/color_panel_blu"
 			"teambg_3_lodef"		"../hud/color_panel_blu"
+			"teambg_4"				"../hud/color_panel_grn"
+			"teambg_4_lodef"		"../hud/color_panel_grn"
+			"teambg_5"				"../hud/color_panel_ylw"
+			"teambg_5_lodef"		"../hud/color_panel_ylw"
 			"proportionaltoparent"	"1"
 		
 			"src_corner_height"		"23"				// pixels inside the image

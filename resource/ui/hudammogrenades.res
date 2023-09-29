@@ -16,7 +16,7 @@
 		"image"			"../hud/grenade_blue_left_bg"
 		"scaleImage"	"1"	
 		"teambg_2"		"../hud/grenade_red_left_bg"
-		"teambg_3"		"../hud/grenade_blue_left_bg"		
+		"teambg_3"		"../hud/grenade_blue_left_bg"	
 		"teambg_4"		"../hud/grenade_green_left_bg"		
 		"teambg_5"		"../hud/grenade_yellow_left_bg"		
 		"alpha"			"255"
@@ -40,7 +40,7 @@
 		"teambg_2"		"../hud/grenade_red_right_bg"
 		"teambg_3"		"../hud/grenade_blue_right_bg"	
 		"teambg_4"		"../hud/grenade_green_right_bg"		
-		"teambg_5"		"../hud/grenade_yellow_right_bg"		
+		"teambg_5"		"../hud/grenade_yellow_right_bg"
 		"alpha"			"255"
 	}
 
