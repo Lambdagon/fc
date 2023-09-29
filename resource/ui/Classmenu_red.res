@@ -142,7 +142,7 @@
 		"font"				"MenuKeys"
 		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		"activeimage"		"class_sel_sm_jerry"
+		"activeimage"		"class_sel_sm_jerry_red"
 		"inactiveimage"		"class_sel_sm_jerry_inactive"
 	}
 	

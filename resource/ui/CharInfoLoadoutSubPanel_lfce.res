@@ -390,7 +390,7 @@
 		"Default"			"0"
 		"font"				"MenuKeys"
 		"scaleImage"		"1"
-		"activeimage"		"class_sel_sm_jerry"
+		"activeimage"		"class_sel_sm_jerry_red"
 		"inactiveimage"		"class_sel_sm_jerry_inactive"
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
