@@ -2003,6 +2003,36 @@
 		response EngineerTauntLaugh
 	}
 	
+	response "TeleconTauntLaugh"
+	{
+		scene "scenes/player/Engineer/low/taunt_laugh.vcd"
+	}
+	rule TeleconTauntLaugh
+	{
+		criteria ConceptTauntLaugh IsTelecon
+		response TeleconTauntLaugh
+	}
+	
+	response "SaxtonTauntLaugh"
+	{
+		scene "scenes/player/saxton/low/taunt_laugh.vcd"
+	}
+	rule SaxtonTauntLaugh
+	{
+		criteria ConceptTauntLaugh IsSaxton
+		response SaxtonTauntLaugh
+	}
+	
+	response "MercenaryTauntLaugh"
+	{
+		scene "scenes/player/soldier/low/taunt_laugh.vcd"
+	}
+	rule MercenaryTauntLaugh
+	{
+		criteria ConceptTauntLaugh IsMercenary
+		response MercenaryTauntLaugh
+	}
+	
 	response "PyroTauntLaugh"
 	{
 		scene "scenes/player/pyro/low/taunt_laugh.vcd"

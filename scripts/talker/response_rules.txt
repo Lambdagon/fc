@@ -300,6 +300,7 @@ criterion "IsOnZombie" "crosshair_on" "Zombie" "required"
 criterion "IsOnEnforcer" "crosshair_on" "zombiefast" "required"
 criterion "IsOnAntlion" "crosshair_on" "Antlion" "required"
 criterion "IsOnMercenary" "crosshair_on" "Mercenary" "required"
+criterion "IsOnSaxton" "crosshair_on" "Saxton" "required"
 
 // Custom not on Heavy
 criterion "IsNotOnHeavy" "crosshair_on" "!=Heavy" "required"
@@ -322,6 +323,7 @@ criterion "IsHeavy" "playerclass" "Heavy" "required"
 criterion "IsPyro" "playerclass" "Pyro" "required"
 criterion "IsSpy" "playerclass" "Spy" "required"
 criterion "IsTelecon" "playerclass" "Robo" "required"
+criterion "IsSaxton" "playerclass" "Saxton" "required"
 criterion "IsEngineer" "playerclass" "Engineer" "required"
 criterion "IsMetropolice" "playerclass" "Metropolice" "required"
 criterion "IsMercenary" "playerclass" "Mercenary" "required"
@@ -336,6 +338,7 @@ criterion "IsAntlionWorker" "playerclass" "AntlionWorker" "required"
 
 criterion "IsNotScout" "playerclass" "!=Scout" "required" 
 criterion "IsNotTelecon" "playerclass" "!=Robo" "required" 
+criterion "IsNotSaxton" "playerclass" "!=Saxton" "required" 
 criterion "IsNotSniper" "playerclass" "!=Sniper" "required"
 criterion "IsNotSoldier" "playerclass" "!=Soldier" "required"
 criterion "IsNotDemoman" "playerclass" "!=Demoman" "required"
@@ -372,6 +375,7 @@ criterion "IsVictimEnforcer" "victimclass" "zombiefast" "required"  weight 0
 criterion "IsVictimAntlion" "victimclass" "Antlion" "required"  weight 0
 criterion "IsVictimJohn" "victimclass" "John" "required"
 criterion "IsNotMercenary" "playerclass" "!=Mercenary" "required"
+criterion "IsVictimSaxton" "victimclass" "Saxton" "required"
 
 criterion "IsNotVictimScout" "victimclass" "!=Scout" "required" weight 0
 criterion "IsNotVictimTelecon" "victimclass" "!=Robo" "required" weight 0
@@ -390,7 +394,7 @@ criterion "IsNotVictimEnforcer" "victimclass" "!=zombiefast" "required" weight 0
 criterion "IsNotVictimAntlion" "victimclass" "!=Antlion" "required" weight 0
 criterion "IsNotVictimJohn" "victimclass" "!=John" "required"
 criterion "IsNotVictimMercenary" "victimclass" "!=Mercenary" "required"
-
+criterion "IsNotVictimSaxton" "victimclass" "!=Saxton" "required"
 
 
 criterion "2PercentChance"   "randomnum"               "=>98"   required
@@ -779,3 +783,4 @@ criterion "ConceptPlayerMatchOverComp" "Concept" "TLK_MATCH_OVER_COMP" required
 #include "talker/enforcer.txt"
 #include "talker/repressor.txt"
 #include "talker/telecon.txt"
+#include "talker/saxton.txt"
