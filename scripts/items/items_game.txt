@@ -2519,14 +2519,25 @@
 			"item_iconname"	"fists"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"model_player"		"models/weapons/c_models/c_saxton_arms.mdl"
-			"model_world"		""
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	""
 			"attach_to_hands" "0"
 			"used_by_classes"
 			{
 				"saxton"	"1"
+			}
+			"attributes"
+			{
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.60"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
 			}
 			"visuals"
 			{
@@ -25075,7 +25086,7 @@ Fires....... something"
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"item_type_name"	"#TF_Weapon_Crossbow"
 			"item_name"	"Crossbow"
 			"item_description"	""
@@ -27930,7 +27941,7 @@ Fires....... something"
 				"damage penalty"
 				{
 				"attribute_class"	"mult_dmg"
-				"value"	"0.4"
+				"value"	"0.6"
 				}
 				"spread penalty"
 				{
@@ -28119,7 +28130,7 @@ Fires....... something"
 		"9807"
 		{
 			"name"	"John CSS Knife"
-			"item_class"	"tf_weapon_knife"
+			"item_class"	"saxxy"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -28133,7 +28144,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name"	"Knife"
 			"item_name"	"La Menthe"
-			"item_description"	"This weapon can backstab"
+			"item_description"	"I feel like surfing."
 			"item_slot"	"melee"
 			"image_inventory"	"backpack/weapons/c_models/c_cssknife"
 			"image_inventory_size_w"		"128"
@@ -28191,10 +28202,15 @@ Fires....... something"
 					"attribute_class"	"mod_air_control"
 					"value" "10.00"
 				}
+				"crit from behind"
+				{
+					"attribute_class"	"crit_from_behind"
+					"value" "1.0"
+				}
 				"fire rate bonus"
 				{
 				"attribute_class"	"mult_postfiredelay"
-				"value"	"0.5"
+				"value"	"0.7"
 				}
 				"damage penalty"
 				{
