@@ -1,0 +1,40 @@
+//Choreo version 1
+actor "scout"
+{
+	channel "scout"
+	{
+		event sequence "taunt_yeti"
+		{
+			time 0 7.416667
+			param "taunt_yeti"
+			fixedlength
+			
+		}
+	}
+	channel "face"
+	{
+		event expression "mad"
+		{
+			time 4.489899 7.388889
+			param "player\saxton\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0 1.00011
+				1.232 0.870684
+				1.918 0.164724
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

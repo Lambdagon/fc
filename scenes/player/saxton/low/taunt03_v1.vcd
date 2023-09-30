@@ -1,0 +1,110 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "audio"
+	{
+		event speak "saxton.NiceShot02"
+		{
+			time 1.635556 2.988118
+			param "saxton.NiceShot02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt03_v1"
+		{
+			time 0 3.966667
+			param "taunt03"
+			fixedlength
+			
+		}
+		event expression "ow"
+		{
+			time 2.716667 3.455556
+			param "player\saxton\phonemes\phonemes_strong"
+			param2 "ow"
+			event_ramp
+			{
+				0.2171 0.329448
+				0.3976 0.976578
+			}
+			
+		}
+		event speak "Player.Puff"
+		{
+			time 3.066666 3.330975
+			param "Player.Puff"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperAngry3"
+		{
+			time 1.508888 1.818888
+			param "player\saxton\emotion\emotion"
+			param2 "upperAngry3"
+			event_ramp
+			{
+				0.1226 0.929514
+				0.2042 0.976578
+			}
+			
+		}
+		event expression "upperSuprise1"
+		{
+			time 1.728889 2.378889
+			param "player\saxton\emotion\emotion"
+			param2 "upperSuprise1"
+			event_ramp
+			{
+				0.0659 0.74518
+				0.1976 0.92167
+				0.3459 0.423576
+				0.5459 0
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 2.096667 3.136667
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2512 0.72557
+				0.4293 0.662818
+				0.5892 0.596144
+				0.7286 0.18433401
+			}
+			
+		}
+		event expression "happysmall02"
+		{
+			time 3.143333 3.974445
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.2537 0.760868
+				0.5207 0.796166
+				0.5756 0.878528
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

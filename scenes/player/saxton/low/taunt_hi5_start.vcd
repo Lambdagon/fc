@@ -1,0 +1,67 @@
+//Choreo version 1
+event loop "idle"
+{
+	time 2.535 -1
+	param "1.000000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_highFiveStart"
+		{
+			time 0 2.866667
+			param "taunt_highFiveStart"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event expression "happysmall02"
+		{
+			time 0.658436 2.726338
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.148 0.603988
+				1.9465 0.600066
+			}
+			
+		}
+		event speak "saxton.Go02"
+		{
+			time 0 0.650159
+			param "saxton.Go02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "actionfire01"
+		{
+			time 0.004115 0.814815
+			param "player\saxton\emotion\emotion"
+			param2 "actionfire01"
+			event_ramp
+			{
+				0 0.73733604
+				0.5921 0.753024
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

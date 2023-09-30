@@ -1,0 +1,222 @@
+//Choreo version 1
+event loop "loop"
+{
+	time 7.827 -1
+	param "7.039000"
+	loopcount 255
+	
+}
+actor "demo"
+{
+	channel "Anim"
+	{
+		event speak "spy_taunt_flip_landings"
+		{
+			time 0.32526 1.124534
+			param "spy_taunt_flip_landings"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepLeft"
+		{
+			time 6.624212 7.343305
+			param "Default.StepLeft"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepRight"
+		{
+			time 6.996761 7.477758
+			param "Default.StepRight"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepLeft"
+		{
+			time 5.792213 6.323778
+			param "Default.StepLeft"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepRight"
+		{
+			time 6.202366 6.683363
+			param "Default.StepRight"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_flip_random_chesthits"
+		{
+			time 1.023863 1.31672
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Selection.saxtonFootStomp"
+		{
+			time 2.11412 2.339789
+			param "Selection.saxtonFootStomp"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Selection.saxtonFootStomp"
+		{
+			time 2.572776 2.798445
+			param "Selection.saxtonFootStomp"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Selection.saxtonFootStomp"
+		{
+			time 1.788363 2.014031
+			param "Selection.saxtonFootStomp"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Selection.saxtonFootStomp"
+		{
+			time 2.924001 3.149669
+			param "Selection.saxtonFootStomp"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_saxton_aerobic_flex"
+		{
+			time 3.365248 5.10094
+			param "taunt_saxton_aerobic_flex"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepLeft"
+		{
+			time 7.344181 7.875746
+			param "Default.StepLeft"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Default.StepRight"
+		{
+			time 7.771486 8.252483
+			param "Default.StepRight"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_saxton_aerobic_intro"
+		{
+			time 0.088652 2.574003
+			param "taunt_saxton_aerobic_intro"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_saxton_aerobic_end"
+		{
+			time 5.921986 7.607882
+			param "taunt_saxton_aerobic_end"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happysmall02"
+		{
+			time 0.028369 3.386525
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.146 0.13727
+				3.0994 0.49809402
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 7.039 7.83688
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			
+		}
+		event expression "happy1"
+		{
+			time 5.333326 7.039
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.142 0.486328
+				1.226 0.584378
+				1.7057 1.00011
+			}
+			
+		}
+		event sequence "taunt_aerobic_B"
+		{
+			time 0 7.833333
+			param "taunt_aerobic_B"
+			fixedlength
+			
+		}
+		event expression "upperAngry2"
+		{
+			time 3.343971 5.411347
+			param "player\saxton\emotion\emotion"
+			param2 "upperAngry2"
+			event_ramp
+			{
+				0.074 0.149036
+				0.168 0.847152
+				1.852 0.007844
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 3.340426 5.421986
+			param "player\saxton\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				1.748 0.905982
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

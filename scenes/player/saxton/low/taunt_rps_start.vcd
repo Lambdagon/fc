@@ -1,0 +1,106 @@
+//Choreo version 1
+event loop "idle"
+{
+	time 4.000019 -1
+	param "1.400000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_rps_start"
+		{
+			time 0 4
+			param "taunt_rps_start"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event flexanimation "facial"
+		{
+			time 0.002058 1.395063
+			param ""
+			flexanimations samples_use_time
+			{
+				"CloseLid" combo0.1437 0.54908 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.2149 1.00011 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.2875 0.517704 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.4187 0.478484 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.6563 0.45887402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				0.2149 0.49809402 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"multi_CloseLid"0.2149 0.537314 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"blink}
+				"happyBig"0.2149 0.003922 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.8158 0.003922 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"upperHappy1"0.2149 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.6806 0.007844 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.8158 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.3355 0.007844 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"AIY"0.2149 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.7129 0.027454 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.8158 0.05883 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.929 0.047064 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+			}
+			
+		}
+		event speak "saxton_taunt_rps_start_rand"
+		{
+			time 0.040286 0.917338
+			param "saxton_taunt_rps_start_rand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_rps_intro_wait_rand"
+		{
+			time 2.54386 3.571842
+			param "saxton_taunt_rps_intro_wait_rand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "fx"
+	{
+		event speak "Weapon_Fist.HitHand"
+		{
+			time 0.80117 0.957179
+			param "Weapon_Fist.HitHand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitHand"
+		{
+			time 1.038012 1.191844
+			param "Weapon_Fist.HitHand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

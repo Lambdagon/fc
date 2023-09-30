@@ -1,0 +1,73 @@
+//Choreo version 1
+event loop "idle"
+{
+	time 3.128695 -1
+	param "1.300000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "animation"
+	{
+		event expression "mad"
+		{
+			time 0 3.135153
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.184 1.00011
+				3.1352 1.00011
+			}
+			
+		}
+		event sequence "taunt_vehicle_allclass_start"
+		{
+			time 0 3.133333
+			param "taunt_vehicle_allclass_start"
+			fixedlength
+			
+		}
+		event speak "Taunt.BumperCarSpawn"
+		{
+			time 0 2.286304
+			param "Taunt.BumperCarSpawn"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "BumperCar.JumpLand"
+		{
+			time 0.86478 2.120404
+			param "BumperCar.JumpLand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_conga_random_fun2"
+		{
+			time 0 1.040862
+			param "saxton_taunt_conga_random_fun2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "sound"
+	{
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

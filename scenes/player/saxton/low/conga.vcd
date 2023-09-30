@@ -1,0 +1,142 @@
+//Choreo version 1
+event loop "congaLoop"
+{
+	time 11.487517 -1
+	param "0.000000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "iiii"
+		{
+			time 0 11.488511
+			param "taunt_conga"
+			fixedlength
+			
+		}
+		event expression "happy1"
+		{
+			time 0.059524 2.315476
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.164 0.670662
+				1.958 0.83538604
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 7.821429 9.119046
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.244 0.698116
+				1.0566 0.776556
+			}
+			
+		}
+		event expression "happysmall02"
+		{
+			time 4.642858 6.827381
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.116 0.64713
+				2.0165 0.92167
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 5.428572 7.869047
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.244 0.698116
+				2.1995 0.776556
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 2.089286 4.720238
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.164 0.670662
+				2.333 0.83538604
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 9.047619 11.285713
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.244 0.698116
+				1.9971 0.776556
+			}
+			
+		}
+	}
+	channel "voice"
+	{
+		event speak "saxton_taunt_conga_random_fun"
+		{
+			time 0.047619 1.833401
+			param "saxton_taunt_conga_random_fun"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_conga_random_fun1"
+		{
+			time 2.845459 4.276457
+			param "saxton_taunt_conga_random_fun1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_conga_random_fun2"
+		{
+			time 8.75 9.790862
+			param "saxton_taunt_conga_random_fun2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_conga_random_fun"
+		{
+			time 5.565476 6.655068
+			param "saxton_taunt_conga_random_fun3"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

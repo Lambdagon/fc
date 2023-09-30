@@ -1,0 +1,147 @@
+//Choreo version 1
+event loop "flip_cycle"
+{
+	time 0 -1
+	param "0.000000"
+	loopcount 0
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "flip_give_flip"
+		{
+			time 0 4.633334
+			param "layer_taunt_flip_success_initiator"
+			fixedlength
+			
+		}
+		event expression "upperAngry2"
+		{
+			time 1.105556 2.105556
+			param "player\saxton\emotion\emotion"
+			param2 "upperAngry2"
+			event_ramp
+			{
+				0.144 0.486328
+				0.584 0.741258
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 1.794444 4.163889
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.024 0.73733604
+				1.948 0.760868
+			}
+			
+		}
+		event expression "ax"
+		{
+			time 1.216667 1.711111
+			param "player\saxton\phonemes\phonemes_strong"
+			param2 "ax"
+			event_ramp
+			{
+				0.082 0.702038
+				0.324 0.768712
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "chestHit"
+		{
+			time 2.349445 2.644343
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "chestHit"
+		{
+			time 2.571667 2.866565
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "chestHit"
+		{
+			time 2.738334 3.023617
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "chestHit"
+		{
+			time 2.927223 3.221735
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "chestHit"
+		{
+			time 3.01889 3.302541
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "chestHit"
+		{
+			time 3.246667 3.541565
+			param "saxton_taunt_flip_random_chesthits"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_flip_random_exerts"
+		{
+			time 1.244445 2.306236
+			param "saxton_taunt_flip_random_exerts"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyBig"
+		{
+			time 0.013889 1.191667
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.17 0.537314
+				0.61 0.800088
+				0.696 0.749102
+				0.97 0.682428
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

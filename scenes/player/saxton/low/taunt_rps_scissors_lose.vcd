@@ -1,0 +1,150 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_rps_r_lose"
+		{
+			time 0.005376 7.305376
+			param "taunt_rps_rock_lose"
+			fixedlength
+			
+		}
+	}
+	channel "rps"
+	{
+	}
+	channel "facial"
+	{
+		event expression "happyBig02Upper"
+		{
+			time 3.887097 4.887097
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig02Upper"
+			event_ramp
+			{
+				0.2576 0.325526
+				0.7515 0.34513602
+			}
+			
+		}
+		event expression "happyBig02Upper"
+		{
+			time 5.494624 6.494624
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig02Upper"
+			event_ramp
+			{
+				0.2576 0.309838
+				0.7515 0.329448
+			}
+			
+		}
+		event expression "upperUpset1"
+		{
+			time 3.139785 4.139785
+			param "player\saxton\emotion\emotion"
+			param2 "upperUpset1"
+			event_ramp
+			{
+				0.2242 0.56869
+				0.797 0.564768
+			}
+			
+		}
+		event expression "upperSuprise1"
+		{
+			time 2.715054 3.715054
+			param "player\saxton\emotion\emotion"
+			param2 "upperSuprise1"
+			event_ramp
+			{
+				0.2394 0.305916
+				0.7667 0.321604
+			}
+			
+		}
+		event expression "upperSuprise1"
+		{
+			time 4.752688 5.752688
+			param "player\saxton\emotion\emotion"
+			param2 "upperSuprise1"
+			event_ramp
+			{
+				0.2394 0.325526
+				0.7667 0.34513602
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "ahhh saxton hate losing"
+		{
+			time 3.849462 6.943612
+			param "saxton_taunt_rps_lose_13"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_rps_setting_up"
+		{
+			time 0.641666 1.710827
+			param "saxton_taunt_rps_setting_up"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "fx"
+	{
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 1.845 2.33407
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 2.275365 2.657043
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 2.704118 3.152553
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 4.177419 4.625854
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

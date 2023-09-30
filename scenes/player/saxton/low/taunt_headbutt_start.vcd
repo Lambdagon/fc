@@ -1,0 +1,129 @@
+//Choreo version 1
+event loop "loop"
+{
+	time 7.193335 -1
+	param "2.900000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_headbutt_start"
+		{
+			time 0 7.2
+			param "taunt_headbutt_start"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_headbutt_start_1"
+		{
+			time 0.696667 1.201905
+			param "saxton_taunt_headbutt_start_1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_headbutt_start_2"
+		{
+			time 1.483333 2.766213
+			param "saxton_taunt_headbutt_start_2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_headbutt_start_3"
+		{
+			time 4.5 6.776122
+			param "saxton_taunt_headbutt_start_3"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "SFX"
+	{
+	}
+	channel "expression"
+	{
+		event expression "happyBigUpper"
+		{
+			time 1.983189 2.593044
+			param "player\saxton\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.2 0.7844
+				0.4524 0.658896
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 0.693333 1.013334
+			param "player\saxton\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.0709 0.7844
+				0.1625 0.78832203
+			}
+			
+		}
+		event expression "happysmall02"
+		{
+			time 1e-06 7.188406
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0 0.564768
+				0.2236 0.56084603
+				7.01 0.5883
+				7.1916 0.600066
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 4.54116 5.151015
+			param "player\saxton\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.2 0.7844
+				0.4524 0.658896
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 6.04116 6.651015
+			param "player\saxton\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.2 0.7844
+				0.4524 0.658896
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,119 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_rps_win"
+		{
+			time 0 6.933333
+			param "taunt_rps_scissors_win"
+			fixedlength
+			
+		}
+	}
+	channel "rps"
+	{
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_rps_win_38"
+		{
+			time 5.008333 6.569558
+			param "saxton_taunt_rps_win_38"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_rps_win_02"
+		{
+			time 3.8875 4.68877
+			param "saxton_taunt_rps_win_02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_rps_setting_up"
+		{
+			time 0.641666 1.710827
+			param "saxton_taunt_rps_setting_up"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "facial"
+	{
+		event flexanimation "facial"
+		{
+			time 2.4125 6.908334
+			param ""
+			flexanimations samples_use_time
+			{
+				"happy1"1.0818 0.09805 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.2777 0.94912404 curve_easein_to_curve_easein
+					1.6545 0.427498 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.9455 0.407888 curve_easein_to_curve_easein
+					2.9792 0.1961 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"upperHappy2"2.5455 0.129426 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.9792 0.756946 curve_easein_to_curve_easeout
+					4.0364 0.749102 curve_easein_to_curve_easeout
+					4.3864 0.086284004 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+				"UH"0.3227 0.047064 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.5875 0.298072 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.7773 0.309838 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					0.85 0.309838 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.1227 0.286306 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.2777 0.047064 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					1.2818 0.03922 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					2.9792 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+			}
+			
+		}
+	}
+	channel "sound effects"
+	{
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 1.845833 2.227511
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 2.2375 2.72657
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_Fist.HitFlesh"
+		{
+			time 2.608333 3.056768
+			param "Weapon_Fist.HitFlesh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

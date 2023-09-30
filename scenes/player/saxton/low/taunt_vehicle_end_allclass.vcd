@@ -1,0 +1,36 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "animation"
+	{
+		event expression "mad"
+		{
+			time 0 0.630391
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0 1.00011
+				0.3884 0.85107404
+			}
+			
+		}
+		event sequence "taunt_vehicle_allclass_end"
+		{
+			time 0 0.633333
+			param "taunt_vehicle_allclass_end"
+			fixedlength
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

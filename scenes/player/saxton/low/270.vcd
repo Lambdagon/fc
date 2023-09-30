@@ -1,0 +1,91 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "audio"
+	{
+		event speak "saxton.LaughLong01"
+		{
+			time 0 6.501587
+			param "saxton.LaughLong01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperHappy2"
+		{
+			time 0.013333 3.800431
+			param "player\saxton\emotion\emotion"
+			param2 "upperHappy2"
+			event_ramp
+			{
+				0.2121 0.968734
+				3.278 0.992266
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 6.435484 9.638495
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.3758 1.00011
+				2.3046 1.00011
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 5.026882 6.704302
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2394 0.580456
+				0.6515 0.564768
+				1.3357 0.572612
+			}
+			
+		}
+		event expression "upperHappy2"
+		{
+			time 4.344087 5.258065
+			param "player\saxton\emotion\emotion"
+			param2 "upperHappy2"
+			event_ramp
+			{
+				0.3 1.00011
+				0.5756 1.00011
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 3.516129 4.774194
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2394 0.513782
+				0.6515 0.69027203
+				0.9163 0.486328
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

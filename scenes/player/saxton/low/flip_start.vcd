@@ -1,0 +1,115 @@
+//Choreo version 1
+event loop "flip_cycle"
+{
+	time 6.166666 -1
+	param "1.400000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "flip_start"
+		{
+			time 0 7.1
+			param "taunt_flip_start"
+			fixedlength
+			
+		}
+		event expression "upperHappy2"
+		{
+			time 3.743333 5.936667
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.112 0.541236
+				1.8427 0.486328
+			}
+			
+		}
+		event expression "upperAngry2"
+		{
+			time 2.243333 3.53
+			param "player\saxton\emotion\emotion"
+			param2 "upperAngry2"
+			event_ramp
+			{
+				0.098 0.35298002
+				0.98 0.21571
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_flip_random_intro"
+		{
+			time 0.106667 2.120635
+			param "saxton_taunt_flip_random_intro"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Taunt.EngineerSwoosh"
+		{
+			time 0.066666 0.638798
+			param "Taunt.EngineerSwoosh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton"
+		{
+			time 0.17 1.290363
+			param "Selection.saxtonEquipment2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_flip_random_waiting"
+		{
+			time 2.33 3.528141
+			param "saxton_taunt_flip_random_waiting"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_flip_random_waiting1"
+		{
+			time 3.963334 4.805443
+			param "saxton_taunt_flip_random_waiting1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyBig02Upper"
+		{
+			time -0.01 1.376667
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig02Upper"
+			event_ramp
+			{
+				0.008 0.78832203
+				1.116 0.643208
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

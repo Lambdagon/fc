@@ -1,0 +1,109 @@
+//Choreo version 1
+event loop "russian loop"
+{
+	time 16.52292 -1
+	param "3.730000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_russian"
+		{
+			time 0.008773 16.542109
+			param "taunt_russian"
+			fixedlength
+			
+		}
+	}
+	channel "voice"
+	{
+		event speak "saxton_taunt_russian_rand_01"
+		{
+			time 2.27808 4.097717
+			param "saxton_taunt_russian_rand_01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_russian_rand_02"
+		{
+			time 9.646133 10.101235
+			param "saxton_taunt_russian_rand_02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Taunt.MedicHardClap6"
+		{
+			time 0.615942 0.915942
+			param "Taunt.MedicHardClap2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Taunt.MedicHardClap6"
+		{
+			time 10.166667 10.466667
+			param "Taunt.MedicHardClap2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Taunt.MedicHardClap6"
+		{
+			time 1.391304 1.691304
+			param "Taunt.MedicHardClap2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Taunt.MedicHardClap6"
+		{
+			time 10.956523 11.256523
+			param "Taunt.MedicHardClap2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "facial"
+	{
+		event expression "happy1"
+		{
+			time 0.033333 16.525002
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0 0.78832203
+				2.7 0.305916
+				5.1 0.760868
+				6.9333 0.792244
+				9.4 0.741258
+				10.3333 0.309838
+				11.6333 0.780478
+				16.4917 0.733414
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

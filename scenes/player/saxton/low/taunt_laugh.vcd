@@ -1,0 +1,106 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 5.048442 -1
+	param "noaction"
+	
+}
+actor "Saxton"
+{
+	channel "animation"
+	{
+		event sequence "taunt_laugh"
+		{
+			time 0.002415 4.835749
+			param "taunt_laugh"
+			fixedlength
+			
+		}
+		event expression "happybig02"
+		{
+			time -0.004831 5.048309
+			param "player\saxton\emotion\emotion"
+			param2 "happybig02"
+			event_ramp
+			{
+				0.24 0.99618804
+				0.6867 0.99618804
+				0.92 0
+				1.18 1.00011
+				1.4133 0.494172
+				1.5533 0.494172
+				1.66 1.00011
+				1.8233 0.603988
+				1.9933 0.662818
+				2.15 1.00011
+				3.225 0.37259
+				3.6367 0.301994
+				4.0033 0.74518
+				4.1967 0.36866802
+				4.4067 0.631442
+				4.7917 0.301994
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 0.73913 1.73913
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.02 0.003922
+				0.1633 0.992266
+				0.3733 0.003922
+			}
+			
+		}
+		event speak "saxton.LaugherBigSnort01"
+		{
+			time 0 5.04669
+			param "saxton.LaugherBigSnort01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "aa2"
+		{
+			time 1.454106 2.400966
+			param "player\saxton\phonemes\phonemes_strong"
+			param2 "aa2"
+			event_ramp
+			{
+				0.22 0.384356
+				0.4267 0.003922
+				0.65 0.403966
+			}
+			
+		}
+		event expression "painBig"
+		{
+			time 2.574879 3.574879
+			param "player\saxton\emotion\emotion"
+			param2 "painBig"
+			event_ramp
+			{
+				0.3967 0
+				0.55 1.00011
+				0.5733 0.984422
+				0.64 0.192178
+				0.8 0.007844
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

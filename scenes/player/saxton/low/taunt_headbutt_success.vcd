@@ -1,0 +1,150 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_headbutt_success"
+		{
+			time 0 5.766667
+			param "taunt_headbutt_success"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_headbutt_success_windup"
+		{
+			time 0.9 2.170884
+			param "saxton_taunt_headbutt_success_windup"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_headbutt_success_recover_1"
+		{
+			time 2.73 2.805465
+			param "saxton_taunt_headbutt_success_recover_1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_headbutt_success_recover_2"
+		{
+			time 3.7 6.091292
+			param "saxton_taunt_headbutt_success_recover_2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "SFX"
+	{
+		event speak "taunt_headbutt_sfx_hand_swoosh"
+		{
+			time 0 0.572132
+			param "Taunt.EngineerSwoosh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Weapon_BaseballBat.HitFlesh"
+		{
+			time 1.7 2.51415
+			param "taunt_headbutt_sfx_head_impact"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "MedicGloveSnap"
+		{
+			time 0.377778 1.036644
+			param "Taunt.MedicGloveSnap"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "expression"
+	{
+		event expression "mad"
+		{
+			time 1.116632 1.92151
+			param "player\saxton\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.248 0.874606
+				0.624 0.925592
+			}
+			
+		}
+		event expression "actionfire02"
+		{
+			time 1.673542 2.628827
+			param "player\saxton\emotion\emotion"
+			param2 "actionfire02"
+			event_ramp
+			{
+				0.252 0.96089
+				0.4 0.968734
+				0.696 0.227476
+			}
+			
+		}
+		event expression "happysmall02"
+		{
+			time 3.866178 6.071306
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.012 0.035298
+				0.202 0.478484
+				1.6273 0.553002
+				2.198 0.502016
+			}
+			
+		}
+		event expression "upperHappy2"
+		{
+			time 2.435897 4.070514
+			param "player\saxton\emotion\emotion"
+			param2 "upperHappy2"
+			event_ramp
+			{
+				0.204 0.937358
+				1.3313 1.00011
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 0.014068 1.395869
+			param "player\saxton\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.248 0.439264
+				1.2009 0.49025002
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

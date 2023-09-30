@@ -1,0 +1,58 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "Anim"
+	{
+		event sequence "yetiPunch"
+		{
+			time 0.011015 5.177682
+			param "taunt_yetipunch"
+			fixedlength
+			
+		}
+	}
+	channel "sound"
+	{
+		event speak "saxton.Yes02"
+		{
+			time 0.019354 0.698538
+			param "saxton.Yes02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton.Cheers02"
+		{
+			time 1.95045 3.593262
+			param "saxton.Cheers02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Breakable.Crate"
+		{
+			time 3.630631 4.779452
+			param "Breakable.Crate"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "sound3"
+	{
+		active "0"
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

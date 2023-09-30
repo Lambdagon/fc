@@ -1,0 +1,148 @@
+//Choreo version 1
+event loop "flip_cycle"
+{
+	time 0 -1
+	param "0.000000"
+	loopcount 0
+	
+}
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "flip_do_flip"
+		{
+			time 0 6.5
+			param "taunt_flip_success_receiver"
+			fixedlength
+			
+		}
+		event expression "upperSuprise1"
+		{
+			time 1.13 2.830001
+			param "player\saxton\emotion\emotion"
+			param2 "upperSuprise1"
+			event_ramp
+			{
+				0.066 0.953046
+				1.608 0.93343604
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 0.006667 0.703333
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.206 0.45887402
+				0.504 0.792244
+			}
+			
+		}
+		event expression "upperAngry2"
+		{
+			time 3.59 6.366667
+			param "player\saxton\emotion\emotion"
+			param2 "upperAngry2"
+			event_ramp
+			{
+				0.128 0.83538604
+				2.5747 0.827542
+			}
+			
+		}
+		event expression "dead02"
+		{
+			time 2.776667 3.63
+			param "player\saxton\emotion\emotion"
+			param2 "dead02"
+			event_ramp
+			{
+				0.118 0.86284
+				0.704 0.78832203
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_flip_random_exerts"
+		{
+			time 0.780555 1.762369
+			param "saxton_taunt_flip_random_flipFlipping"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Concrete.BulletImpact"
+		{
+			time 1.710555 3.343185
+			param "Concrete.BulletImpact"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Metal_Box.ImpactHard"
+		{
+			time 1.717222 2.376111
+			param "Metal_Box.ImpactHard"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Flesh.BulletImpact"
+		{
+			time 2.357222 2.659558
+			param "Flesh.BulletImpact"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Carpet.BulletImpact"
+		{
+			time 2.620556 3.901191
+			param "Carpet.BulletImpact"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "Selection.DemoEquipment2"
+		{
+			time 4.993888 6.114251
+			param "Selection.DemoEquipment2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyBig"
+		{
+			time 0.533333 1.136667
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.068 0.800088
+				0.558 0.90206003
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

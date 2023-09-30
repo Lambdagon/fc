@@ -1,0 +1,122 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "taunt"
+	{
+		event speak "taunt_table_flip_exert"
+		{
+			time 0 1.007166
+			param "taunt_table_flip_exert"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happy1"
+		{
+			time 0.008772 2.100877
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0 1.00011
+				1.352 1.00011
+				1.838 0.905982
+			}
+			
+		}
+		event sequence "taunt_table_flip_outro"
+		{
+			time 0 4.875
+			param "taunt_table_flip_outro"
+			fixedlength
+			
+		}
+		event expression "ey"
+		{
+			time 0.881579 2.203549
+			param "player\saxton\phonemes\phonemes_strong"
+			param2 "ey"
+			event_ramp
+			{
+				0.024 0.05883
+				0.108 0.50986
+				0.278 0.800088
+				0.38 0.878528
+				0.452 0.92167
+				0.83 0.99618804
+				0.874 0.16864601
+				0.996 0.074518
+				1.164 0.047064
+			}
+			
+		}
+		event expression "b"
+		{
+			time 2.218182 2.943939
+			param "player\saxton\phonemes\phonemes_weak"
+			param2 "b"
+			event_ramp
+			{
+				0.024 0.007844
+				0.126 0.72557
+				0.376 0.91774803
+				0.618 0.631442
+			}
+			
+		}
+		event expression "ao"
+		{
+			time 4.168561 5.168561
+			param "player\saxton\phonemes\phonemes"
+			param2 "ao"
+			event_ramp
+			{
+				0.032 0
+				0.17 0.580456
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 1.668561 1.897727
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.052 0.619676
+				0.116 0.741258
+				0.2292 0.125504
+			}
+			
+		}
+		event expression "happysmall02"
+		{
+			time 1.86553 4.428031
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.016 0
+				0.138 0.733414
+				0.352 0.953046
+				1.824 0.992266
+				1.9666 0.96089
+				2.1824 0.800088
+				2.4224 0.200022
+				2.528 0.035298
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

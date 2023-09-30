@@ -1,0 +1,83 @@
+//Choreo version 1
+actor "Saxton"
+{
+	channel "body"
+	{
+		event sequence "taunt_hifiveSuccess"
+		{
+			time 0 8.9
+			param "taunt_dosido_dance"
+			fixedlength
+			
+		}
+		event expression "happy1"
+		{
+			time 0.005208 6.40486
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.0231 0.31376
+				6.1009 0.31376
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 7.227779 8.894445
+			param "player\saxton\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2364 0.047064
+				0.4516 0.219632
+				1.1515 0.227476
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 6.155173 7.586207
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0 0.278462
+				1.1212 0.27454
+				1.431 0.18041201
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "saxton_taunt_dosi_end_05"
+		{
+			time 7.92908 8.866426
+			param "saxton_taunt_dosi_end_05"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "saxton_taunt_dosido_start_rand"
+		{
+			time 1.522988 3.866593
+			param "saxton_taunt_dosido_start_rand"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,58 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 2.828768 -1
+	param "noaction"
+	
+}
+actor "Saxton"
+{
+	channel "animation"
+	{
+		event sequence "saxton_taunt_replay"
+		{
+			time 0 2.833333
+			param "saxton_taunt_replay"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event expression "happysmall02"
+		{
+			time 0.004566 0.776256
+			param "player\saxton\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.2933 0.854996
+				0.6385 0.88245
+			}
+			
+		}
+		event expression "happybig02"
+		{
+			time 0.618721 2.819635
+			param "player\saxton\emotion\emotion"
+			param2 "happybig02"
+			event_ramp
+			{
+				0.1433 0.976578
+				1.6564 0.992266
+				1.9233 0.07844
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

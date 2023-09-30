@@ -1,0 +1,61 @@
+//Choreo version 1
+event loop "loop"
+{
+	time 5.157 -1
+	param "1.150000"
+	loopcount 255
+	
+}
+actor "Saxton"
+{
+	channel "taunt"
+	{
+		event expression "happy1"
+		{
+			time 0 5.157043
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.072 0.68635
+				1.0854 1.00011
+				5.078 1.00011
+				5.157 1.00011
+			}
+			
+		}
+		event speak "taunt_table_flip_intro"
+		{
+			time 0.02 1.123878
+			param "taunt_table_flip_intro"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happy1"
+		{
+			time 1.15 5.157
+			param "player\saxton\emotion\emotion"
+			param2 "happy1"
+			
+		}
+		event sequence "taunt_table_flip_intro"
+		{
+			time 0 5.166667
+			param "taunt_table_flip_intro"
+			fixedlength
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off
