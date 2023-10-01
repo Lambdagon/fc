@@ -11724,7 +11724,7 @@
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
-					"value" "30.0"
+					"value" "20.0"
 				}
 				"damage penalty"
 				{
@@ -15485,6 +15485,11 @@
 				{
 					"attribute_class"	"damage_causes_airblast"
 					"value" "50"
+				}
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
 				}
 				"damage penalty on bodyshot"
 				{
@@ -22142,9 +22147,9 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"	"1.15"
 				}
-				"airblast disabled"
+				"mod flamethrower push"
 				{
-					"attribute_class"	"airblast_disabled"
+					"attribute_class"	"set_flamethrower_push_disabled"
 					"value" "1"
 				}
 			}	
@@ -23212,11 +23217,12 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"Rocket Launcher"
-			"item_logname"	"blackbox"
-			"item_iconname"	"blackbox"
+			"item_logname"	"quake_rl"
+			"item_iconname"	"quake_rl"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
-			"item_name"	"Rocket Launcher"
+			"item_name"	"Deathmatch Launcher"
+			//we need localized names guys
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -23322,7 +23328,8 @@ Fires....... something"
 			"base_item_name"	"TF_WEAPON_PISTOL"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"#TF_Weapon_Pistol"
+			//we need localized names guys
+			"item_name"	"Deathmatch Pistol"
 			"item_slot"	"secondary"
 			"item_quality"		"unique"
 			"min_ilevel"	"1"
@@ -23348,6 +23355,19 @@ Fires....... something"
 				"sound_burst"		"Weapon_PistolDM.SingleCrit"
 				"sound_reload"		"Weapon_PistolDM.WorldReload"
 			}	
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.10"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.25"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
@@ -23472,7 +23492,7 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
+					"value"	"1.20"
 				}
 				"fire rate bonus"
 				{
@@ -23484,20 +23504,15 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"	"2.00"
 				}
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "1.65"
-                                }
-				"spread penalty"
+				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "1.25"
+					"value" "0.50"
 				}
-				"move speed penalty"
+				"mult_spread_scales_consecutive"
 				{
-					"attribute_class"	"mult_player_movespeed"
-					"value" "0.90"
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -23926,20 +23941,25 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.10"
+				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"2"
+					"value"	"2.50"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.85"
+					"value"	"0.70"
 				}
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.20"
+					"value"	"1.15"
 				}
 			}
 			"static_attrs"
@@ -24573,6 +24593,8 @@ Fires....... something"
 			"item_type_name"	"Frying Pan"
 			"item_name"	"The Skillet"
 			"item_slot"	"melee"
+			"item_logname"	"fryingpan"
+			"item_iconname"	"fryingpan"
 			"image_inventory"	"backpack/weapons/w_models/w_fryingpan"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -25606,12 +25628,12 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.5"
 				}
-				"fire rate penalty HIDDEN"
+				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"3.5"
 				}
-				"damage bonus HIDDEN"
+				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"3"
@@ -30859,20 +30881,15 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"hidden primary max ammo bonus"
+				"centerfire projectile"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"5.1"
+					"attribute_class"	"centerfire_projectile"
+					"value"	"1"
 				}
 				"custom projectile model"
 				{
 					"attribute_class"	"custom_projectile_model"
 					"value"				"models\w_nail.mdl"
-				}
-				"clip size bonus"
-				{
-				"attribute_class"	"mult_clipsize"
-					"value"	"3.2"
 				}
 			}
 			"static_attrs"
