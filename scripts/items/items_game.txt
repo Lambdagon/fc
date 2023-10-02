@@ -18439,7 +18439,7 @@
 				}
 				"Projectile speed increased"
 				{
-					"atribute_class"	"mult_projectile_speed"
+					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.5"
 				}
 				"move speed bonus"
@@ -18449,7 +18449,7 @@
 				}
 				"attach particle effect name"
 				{
-					"atribute_class"	"set_attached_particle_name"
+					"attribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
 				"use robo voice"
@@ -18494,7 +18494,7 @@
 				}
 				"Projectile speed increased"
 				{
-					"atribute_class"	"mult_projectile_speed"
+					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.5"
 				}
 				"move speed bonus"
@@ -18504,7 +18504,7 @@
 				}
 				"attach particle effect name"
 				{
-					"atribute_class"	"set_attached_particle_name"
+					"attribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
 				"use robo voice"
@@ -20094,7 +20094,7 @@
 				}
 				"attach particle effect name"
 				{
-					"atribute_class"	"set_attached_particle_name"
+					"attribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
 				"clip size bonus"
@@ -20173,7 +20173,7 @@
 				}
 				"attach particle effect name"
 				{
-					"atribute_class"	"set_attached_particle_name"
+					"attribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
 			}
@@ -21281,7 +21281,7 @@
 				}
 				"crit mod disabled"
 				{
-					"atribute_class"	"mult_crit_chance"
+					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
 				"Reload time decreased"
@@ -28451,7 +28451,7 @@ Fires....... something"
 			{
 				"attach particle effect"
 				{
-					"atribute_class"	"set_attached_particle"
+					"attribute_class"	"set_attached_particle"
 					"value"	"4"
 				}
 				"revolver use hit locations"
@@ -29931,6 +29931,37 @@ Fires....... something"
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
+			}
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
+		}
+		"19846"	
+		{
+//this was a test to see if I could keep an item equipped if show_in_armory was set to 0. the answer is no. but I don't want to get rid of it yet
+			"name"	"Saint Software's Special Soldier's Stash"
+			"prefab"	"valve misc"
+			"show_in_armory"	"0"
+			"item_name"	"Saint Software's Special Soldier's Stash"
+			"item_description"	"A special hat for a special boy"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"item_slot"	"head"
+			"image_inventory"	"backpack/player/items/soldier/soldier_hat"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/soldier/soldier_hat.mdl"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+				"mercenary"	"1"
+			}
+			"attributes"
+			{
+				"attach particle effect name"
+				{
+					"attribute_class"	"set_attached_particle_name"
+					"value"	"burningplayer_flyingbits"
+				}
 			}
 			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
 			"drop_sound" 		"ui/item_helmet_drop.wav"
@@ -35371,7 +35402,7 @@ Fires....... something"
 			{
 				"attach particle effect name"
 				{
-					"atribute_class"	"set_attached_particle_name"
+					"attribute_class"	"set_attached_particle_name"
 					"value"	"burningplayer_flyingbits"
 				}
 				"is_a_sword"
