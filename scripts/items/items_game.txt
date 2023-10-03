@@ -19343,17 +19343,17 @@
 			}
 			"attributes"
 			{
-				"damage bonus hidden"
+				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.5"
+					"value"	"1.4"
 				}
-				"fire rate penalty HIDDEN"
+				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.6"
 				}
-				"spread penalty HIDDEN"
+				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value"	"1.60"
@@ -19362,6 +19362,11 @@
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "10"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.30"
 				}
 			}
 			"particle_suffix"		"shotgun"
@@ -19786,7 +19791,12 @@
 				"spread penalty HIDDEN"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.80"
+					"value"	"1.80"	
+				}
+				"maxammo secondary increased HIDDEN"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"2"
 				}
 			}
 			"used_by_classes"
@@ -19885,13 +19895,13 @@
 			{
 				"clip size bonus"
 				{
-				"attribute_class"	"mult_clipsize"
-				"value"	"1.5"
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.5"
 				}
 				"weapon spread bonus"
 				{
-				"attribute_class"	"mult_spread_scale"
-				"value"	"0.2"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.2"
 				}
 				"override projectile type"
 				{
@@ -19902,6 +19912,11 @@
 				{
 					"attribute_class"	"mult_deploy_time"
 					"value"	"0.8"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"2"
 				}
 			}
 		}
@@ -20741,7 +20756,7 @@
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
-				    "weapon spread bonus"
+				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "0.4"
@@ -20750,6 +20765,11 @@
 				{
 					"attribute_class"	"mult_spread_scales_consecutive"
 					"value"				"0.8"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.90"
 				}
 			}
 			"static_attrs"
@@ -20833,7 +20853,7 @@
                 "damage bonus HIDDEN"
                 {
                     "attribute_class"     "mult_dmg"
-                    "value" "2"
+                    "value" "3"
                 }
                 "weapon spread bonus"
                 {
@@ -20860,6 +20880,7 @@
 					"attribute_class"	"mod_recoil_angle"
 					"value" "20"
 				}
+				
             }
             "static_attrs"
             {
@@ -24969,15 +24990,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.25"
 				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.08"
-				}
 				"blast dmg to self increased"
 				{
 					"attribute_class"	"blast_dmg_to_self"
-					"value"	"2.50"
+					"value"	"10.99"
 				}
 				"crit mod disabled"
 				{
@@ -24998,6 +25014,11 @@ Fires....... something"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"36"
+				}
+				"maxammo primary reduced HIDDEN"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.03"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -25283,12 +25304,13 @@ Fires....... something"
 				}
 				"projectile penetration"
 				{
-				"attribute_class"	"projectile_penetration"
-				"value"		"1"
+					"attribute_class"	"projectile_penetration"
+					"value"		"1"
 				}
-				"maxammo metal reduced"{
-				"attribute_class"	"mult_maxammo_metal"
-				"value"	"0.18"
+				"maxammo metal reduced"
+				{
+					"attribute_class"	"mult_maxammo_metal"
+					"value"	"0.18"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_bottle_drop.wav"
@@ -26519,6 +26541,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "20"
+				}
+				 "dmg falloff reduced"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"				"1"
 				}
 			}
 			"visuals"
@@ -27892,7 +27919,7 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.50"
+					"value"				"0.90"
 				}
 			}
 			"static_attrs"
@@ -27967,30 +27994,50 @@ Fires....... something"
             "drop_sound"        "ui/item_heavy_gun_drop.wav"
             "attributes"
             {
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
 				"weapon spread bonus"
 				{
-				"attribute_class"	"mult_spread_scale"
-				"value"	"0.10"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.20"
 				}
 				"clip size bonus"
 				{
-				"attribute_class"	"mult_clipsize"
-				"value"	"1.50"
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.50"
 				}
 				"fire rate bonus"
 				{
-				"attribute_class"	"mult_postfiredelay"
-				"value"	"0.70"
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.70"
 				}
 				"damage penalty"
 				{
-				"attribute_class"	"mult_dmg"
-				"value"	"0.5"
+					"attribute_class"	"mult_dmg"
+					"value" "0.5"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"				"1"
 				}
 				"crit mod disabled"
 				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"maxammo secondary increased HIDDEN"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"2.00"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "2"
 				}
             }
             "static_attrs"
@@ -28060,7 +28107,7 @@ Fires....... something"
 				"maxammo primary increased"
 				{
 				"attribute_class"	"mult_maxammo_primary"
-				"value"	"4"
+				"value"	"3"
 				}
 				"clip size bonus"
 				{
@@ -28082,16 +28129,12 @@ Fires....... something"
 				"attribute_class"	"mult_player_movespeed"
 				"value"	"0.7"
 				}
-				"move speed penalty"
-				{
-				"attribute_class"	"mult_player_movespeed"
-				"value"	"0.7"
-				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "1"
 				}
+
             }
             "static_attrs"
             {
@@ -28275,6 +28318,8 @@ Fires....... something"
 			"item_name"	"La Menthe"
 			"item_description"	"I feel like surfing."
 			"item_slot"	"melee"
+			"item_logname"	"knife"
+			"item_iconname"	"knife"
 			"image_inventory"	"backpack/weapons/c_models/c_cssknife"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -28331,6 +28376,11 @@ Fires....... something"
 					"attribute_class"	"mod_air_control"
 					"value" "10.00"
 				}
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" "1.50"
+				}
 				"crit from behind"
 				{
 					"attribute_class"	"crit_from_behind"
@@ -28338,23 +28388,18 @@ Fires....... something"
 				}
 				"fire rate bonus"
 				{
-				"attribute_class"	"mult_postfiredelay"
-				"value"	"0.7"
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.7"
 				}
 				"damage penalty"
 				{
-				"attribute_class"	"mult_dmg"
-				"value"	"0.3"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.3"
 				}
 				"crit mod disabled"
 				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
-				}
-				"crits_become_minicrits"
-				{
-				"attribute_class"	"crits_become_minicrits"
-				"value"	"1"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 				"self mark for death"
 				{
@@ -28416,12 +28461,7 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"2.66666666667"
-				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class"	"mod_pierce_resists_absorbs"
-					"value"	"1"
+					"value"	"2.5"
 				}
 				"weapon spread bonus"
 				{
@@ -28438,20 +28478,25 @@ Fires....... something"
 					"attribute_class" 	"crit_dmg_falloff"
 					"value" "1"
 				}
-				"maxammo secondary reduced"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.175"
-				}
 				"fire rate penalty"
 				{
 					"attribute_class" 	"mult_postfiredelay"
 					"value" "2"
 				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"				"0.8"
+				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "5"
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"0.32"
 				}
 			}
 			"static_attrs"
@@ -33549,7 +33594,7 @@ Fires....... something"
 		}
 		"9935"
 		{
-			"name"	"L'Etranger"
+			"name"	"Civ L'etranger"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_revolver"
 			"craft_class"	"weapon"
@@ -33566,7 +33611,7 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Revolver"
-			"item_name"	"#TF_LEtranger"
+			"item_name"	"The Stranger"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"0"
