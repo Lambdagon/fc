@@ -8,33 +8,76 @@
 		"ypos"				"c-200"
 		"wide"				"500"
 		"tall"				"400"
+		"autoResize"			"0"
+		"pinCorner"				"0"
+		"visible"				"1"
+		"enabled"				"1"
+		"border"				""
+	}
+	
+	"ColorLabel"
+	{
+		"ControlName"		"CExLabel"
+		"fieldName"			"ColorLabel"
+		"xpos"				"10"
+		"ypos"				"20"
+		"zpos"				"-1"
+		"wide"				"600"
+		"tall"				"50"
 		"autoResize"		"0"
 		"pinCorner"			"0"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
-		"border"			""
-	}
+		"labelText"			"#GameUI_Keyboard"
+		"textAlignment"		"west"
+		"font"				"HudFontBiggerBold"
+		"fgcolor"			"Button.ArmedTextColor"
+	}	
 
 	"listpanel_keybindlist"
 	{
 		"ControlName"	"vcontrolslistpanel"
 		"fieldName"		"listpanel_keybindlist"
-		"xpos"			"c-300"
-		"ypos"			"60"
+		"xpos"			"20"
+		"ypos"			"50"
 		"zpos"			"1"
-		"wide"			"600"
-		"tall"			"350"
+		"wide"			"360"
+		"tall"			"310"
 		"autoResize"	"0"
 		"pinCorner"		"0"
-		"font"			"HudFontSmall"
+		"font"			"FontStorePromotion"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 	}
 
+	"Defaults"
+	{
+		"ControlName"		"CTFAdvButton"
+		"fieldName"		"Defaults"
+		"xpos"		"28"
+		"ypos"		"730"
+		"wide"		"180"
+		"tall"		"50"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"2"
+		"bgvisible"		"0"
+		"bordervisible"		"0"
+		"labelText"		"#GameUI_UseDefaults"
+		"textAlignment"		"center"
+		"dulltext"		"0"
+		"brighttext"		"0"
+		"wrap"		"0"
+		"Command"		"DefaultsOK"
+		"Default"		"0"
+	}
+	
 	"ClearKeyButton"
 	{
-		"ControlName"		"CTFButton"
+		"ControlName"		"CTFAdvButton"
 		"fieldName"		"ClearKeyButton"
 		"xpos"		"168"
 		"ypos"		"730"
@@ -54,12 +97,11 @@
 		"wrap"		"0"
 		"Command"		"ClearKey"
 		"Default"		"0"
-		"paintbackground"    "0"
 	}
-
+	
 	"KeyAdvancedButton"
 	{
-		"ControlName"		"CTFButton"
+		"ControlName"		"CTFAdvButton"
 		"fieldName"		"KeyAdvancedButton"
 		"xpos"		"404"
 		"ypos"		"730"
@@ -79,11 +121,11 @@
 		"wrap"		"0"
 		"Command"		"Advanced"
 		"Default"		"1"
-		"paintbackground"    "0"
 	}
+	
 	"ChangeKeyButton"
 	{
-		"ControlName"		"CTFButton"
+		"ControlName"		"CTFAdvButton"
 		"fieldName"		"ChangeKeyButton"
 		"xpos"		"292"
 		"ypos"		"730"
@@ -103,6 +145,5 @@
 		"wrap"		"0"
 		"Command"		"ChangeKey"
 		"Default"		"0"
-		"paintbackground"    "0"
 	}
 }
