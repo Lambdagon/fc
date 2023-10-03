@@ -6297,25 +6297,10 @@
 			}
 			"attributes"
 			{
-				"add uber charge on hit red"
+				"add uber charge on hit"
 				{
-					"attribute_class"	"add_onhit_ubercharge_red"
+					"attribute_class"	"add_onhit_ubercharge"
 					"value"	"0.25"
-				}
-				"add uber charge on hit blu"
-				{
-					"attribute_class"	"add_onhit_ubercharge_blu"
-					"value"	"0.20"
-				}
-				"add uber charge on hit grn"
-				{
-					"attribute_class"	"add_onhit_ubercharge_grn"
-					"value"	"0.15"
-				}
-				"add uber charge on hit ylw"
-				{
-					"attribute_class"	"add_onhit_ubercharge_ylw"
-					"value"	"0.15"
 				}
 				"fire rate penalty"
 				{
@@ -13836,6 +13821,11 @@
 					"attribute_class"	"crit_while_airborne"
 					"value"	"1"
 				}
+				"mod mini-crit airborne"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
+				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -18894,15 +18884,26 @@
 			}
 			"attributes"
 			{
-				"crit mod disabled"
+				
+				"fire rate penalty HIDDEN"
 				{
-					"attribute_class"	"mult_crit_chance"
-					"value" 	"0" 
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.50"
 				}
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
 					"value"	"30"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" 	"0" 
 				}
 			}
 			"mouse_pressed_sound" 	"items/smallmedkit1.wav"
@@ -20237,13 +20238,12 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"The Pennyshot"
+			"base_item_name"	"The Pumpshot"
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
-			"item_name"			"The Pennyshot"
-			"item_description"	"Medalman's First Weapon 
-			Model by GoldInk9734"
+			"item_name"			"The Pumpshot"
+			"item_description"	"Medalman's First Weapon"
 			"show_in_armory"	"1"
 			"propername"	"1"
 			"item_logname"	"pennyshot"
@@ -20269,30 +20269,30 @@
 			}
 			"attributes"
 			{
-				"dmg pierces resists absorbs"
+				"single wep deploy time decreased"
 				{
-					"attribute_class"	"mod_pierce_resists_absorbs"
-					"value"	"1"
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.5"
 				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.50"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.30"
-				}
-				"Reload time increased"
+				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.30"
+					"value"	"0.50"
+				}
+				"fire rate bonus with reduced health"
+				{
+					"attribute_class"	"mult_postfiredelay_with_reduced_health"
+					"value"	"0.50"
+				}
+				"panic_attack"
+				{
+					"attribute_class"	"panic_attack"
+					"value"	"1"
+				}
+				"panic_attack_negative"
+				{
+					"attribute_class"	"panic_attack_negative"
+					"value"	"0.80"
 				}
 			}
 			"visuals"
@@ -23388,6 +23388,11 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"	"1.10"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.8"
+				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -23703,6 +23708,21 @@ Fires....... something"
 			}
 			"attributes"
 		{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"				"1.8"
+				}
+				"melee bounds multiplier"
+				{
+					"attribute_class"	"melee_bounds_multiplier"
+					"value"				"1.25"
+				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -23716,7 +23736,7 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.4"
+					"value" "1.5"
 				}
 				"single wep deploy time increased"
 				{
@@ -23794,6 +23814,21 @@ Fires....... something"
 			}
 			"attributes"
 		{
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"				"1.8"
+				}
+				"melee bounds multiplier"
+				{
+					"attribute_class"	"melee_bounds_multiplier"
+					"value"				"1.25"
+				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -24049,7 +24084,7 @@ Fires....... something"
 		"9734"
 		{
 			"name"	"The Assault Rifle"
-			"item_class"	"tf_weapon_smg"
+			"item_class"	"tf_weapon_smg_primary"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -24061,16 +24096,17 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_smg"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"show_in_armory"	"1"
 			"item_type_name"	"Rifle"
 			"item_name"	"The Assault Rifle"
 			"item_description"	"Model from Open Fortress"
-			"item_slot"	"secondary"
+			"item_slot"	"primary"
 			"item_quality"		"unique"
 			"anim_slot"			"primary"
+			"item_logname"	"Assault Rifle"
+			"item_iconname"	"AR2"
 			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -24115,7 +24151,7 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.40"
+					"value"	"1.20"
 				}
 				"fire rate bonus"
 				{
@@ -24125,12 +24161,12 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.75"
+					"value"	"0.80"
 				}
-				"maxammo secondary reduced"
+				"maxammo primary reduced"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.90"
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.60"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -24141,6 +24177,7 @@ Fires....... something"
 		"name"    "TF_WEAPON_SHOTGUN_MERC_SECONDARY"
             "first_sale_date"    "2010/09/29"
             "prefab"    "weapon_shotgun"
+			"item_class"	"tf_weapon_shotgun_hwg"
             "baseitem"    "0"
 			"item_name"		"Shotgun"
             "item_slot"    "secondary"
@@ -24819,15 +24856,15 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.30"
 				}
-				"no reload single"
-				{
-					"attribute_class"	"set_no_reload_single"
-					"value" "1"
-				}
 				"maxammo secondary reduced"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"	"0.32"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -35479,6 +35516,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"0.93"
+				}
+				"medic regen penalty"
+				{
+					"attribute_class"	"medic_regen"
+					"value"	"0.50"
 				}
 				"health drain"
 				{
