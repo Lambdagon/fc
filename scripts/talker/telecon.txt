@@ -730,3 +730,109 @@ Rule PlayerTauntsTelecon
 	Response PlayerTauntsTelecon
 }
 
+Response PlayerCombineTelecon
+{
+	speak "Telecon.WarnCombine1"
+	speak "Telecon.WarnCombine2"
+	speak "Telecon.WarnCombine3"
+}
+Rule PlayerCombineTelecon
+{
+	criteria ConceptPlayerCombine IsTelecon
+	Response PlayerCombineTelecon
+}
+
+Response PlayerStriderTelecon
+{
+	speak "Telecon.WarnStrider1"
+	speak "Telecon.WarnStrider2"
+	speak "Telecon.WarnStrider3"
+}
+Rule PlayerStriderTelecon
+{
+	criteria ConceptPlayerStrider IsTelecon
+	Response PlayerStriderTelecon
+}
+
+Response PlayerZombieTelecon
+{
+	speak "Telecon.WarnZombie1"
+	speak "Telecon.WarnZombie2"
+}
+Rule PlayerZombieTelecon
+{
+	criteria ConceptPlayerZombie IsTelecon
+	Response PlayerZombieTelecon
+}
+
+Response PlayerHeadcrabTelecon
+{
+	speak "Telecon.WarnHeadcrabs1"
+	speak "Telecon.WarnHeadcrabs2"
+}
+Rule PlayerHeadcrabTelecon
+{
+	criteria ConceptPlayerHeadcrab IsTelecon
+	Response PlayerHeadcrabTelecon
+}
+
+Response PlayerTrapTelecon
+{
+	speak "Telecon.WarnTrap1"
+	speak "Telecon.WarnTrap2"
+}
+Rule PlayerTrapTelecon
+{
+	criteria ConceptPlayerTrap IsTelecon
+	Response PlayerTrapTelecon
+}
+
+Response PlayerAmmoTelecon
+{
+	speak "Telecon.WarnAmmo1"
+	speak "Telecon.WarnAmmo2"
+	speak "Telecon.WarnAmmo3"
+	speak "Telecon.WarnAmmo4"
+}
+Rule PlayerAmmoTelecon
+{
+	criteria ConceptPlayerAmmo IsTelecon
+	Response PlayerAmmoTelecon
+}
+
+Response PlayerHealthTelecon
+{
+	speak "Telecon.WarnHealth1"
+	speak "Telecon.WarnHealth2"
+	speak "Telecon.WarnHealth3"
+}
+Rule PlayerHealthTelecon
+{
+	criteria ConceptPlayerHealth IsTelecon
+	Response PlayerHealthTelecon
+}
+
+Response PlayerRebelTelecon
+{
+	speak "Telecon.WarnRebels1"
+	speak "Telecon.WarnRebels2"
+	speak "Telecon.WarnRebels3"
+}
+Rule PlayerRebelTelecon
+{
+	criteria ConceptPlayerRebel IsTelecon
+	Response PlayerRebelTelecon
+}
+
+Response PlayerAntlionTelecon
+{
+	speak "Telecon.WarnAntlion1"
+	speak "Telecon.WarnAntlion1"
+	speak "Telecon.WarnAntlion3"
+	speak "Telecon.WarnAntlion4"
+}
+Rule PlayerAntlionTelecon
+{
+	criteria ConceptPlayerAntlion IsTelecon
+	Response PlayerAntlionTelecon
+}
