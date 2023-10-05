@@ -5671,6 +5671,71 @@
 			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
 			"drop_sound"		"ui/item_shovel_drop.wav"
 		}
+		
+		"weapon_smg_telecon"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_smg"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_SMG"
+			"inspect_panel_dist" "39"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Weapon_SMG"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_models/bitch/w_nailgun.mdl"
+			"model_player"	"models/weapons/v_models/bitch/v_nailgun_scout.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"robo"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_smg/c_smg_gold"
+					}
+				}
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.505"
+				"min_viewmodel_offset"					"10 0 -7"
+			}
+			"xifier_class_remap"	"weapon_smg"
+			"particle_suffix"		"smg"
+		}
 
 		"weapon_smg"
 		{
@@ -7344,6 +7409,44 @@
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_paddle"
 			"baseitem" "1"
+		}
+		
+		"32"
+		{
+			"name"	"TF_WEAPON_SMG_TELECON"
+			"prefab"	"weapon_smg_telecon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Weapon_SMG"
+			"item_slot"	"secondary"
+			"item_quality"	"normal"
+			"baseitem" "1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
+			"attach_to_hands"	"1"
+			"used_by_classes"
+			{
+				"robo"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 
 		
@@ -14529,6 +14632,11 @@
 			{
 				"min_viewmodel_offset"					"10 0 -12"
 			}
+			"used_by_classes"
+			{
+				"scout" "1"
+				"robo"	"0"
+			}
 			"attributes"
 			{
 				"move speed penalty"
@@ -15731,6 +15839,11 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"used_by_classes"
+			{
+				"scout" "1"
+				"robo"	"0"
 			}
 			"attributes"
 			{
@@ -22913,7 +23026,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"scout"	"1"
-				"robo"	"1"
 			}
 			"attributes"
 			{
