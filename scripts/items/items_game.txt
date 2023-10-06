@@ -5707,6 +5707,24 @@
 			{
 				"robo"	"1"
 			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.50"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2.30"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"2.00"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"static_attrs"
@@ -7411,7 +7429,7 @@
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_SMG"
-			"item_name"	"#TF_Weapon_SMG"
+			"item_name"	"The Mac Donald"
 			"item_slot"	"secondary"
 			"item_quality"	"normal"
 			"baseitem" "1"
@@ -24252,6 +24270,11 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.75"
 				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
@@ -24391,9 +24414,7 @@ Fires....... something"
 			"item_class"					"tf_weapon_minigun"
 			"show_in_armory"			"1"	
 			"item_slot"					"primary"
-			//needs an anim override
 			"propername"				"1"
-			"anim_prefix"		"ac"
 			"item_name"					"Chaingun"
 			"item_type_name"			"#TF_Weapon_Minigun"
 			"item_quality"				"unique"
@@ -24406,7 +24427,7 @@ Fires....... something"
 			"model_player"				"models/weapons/v_models/v_minigun_dm.mdl"	
 			//vmodel does not work
 			"model_world"				"models/weapons/w_models/w_minigun_dm.mdl"	
-			"attach_to_hands"			"1"
+			"attach_to_hands"			"2"
 			"static_attrs"
 			{
 							"min_viewmodel_offset"		"10 0 -9"		
@@ -24442,6 +24463,11 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"0.80"
 				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
@@ -24450,12 +24476,33 @@ Fires....... something"
 			}
 			"visuals"																		
 			{
-				"sound_empty"			"Weapon_MachineGun.ClipEmpty"
-				"sound_double_shot"		"Weapon_MachineGun.Fire"
-				"sound_burst"			"Weapon_MachineGun.FireCrit"
-				"sound_special1"		"Weapon_MachineGun.WindUp"
-				"sound_special2"		"Weapon_MachineGun.WindDown"
-				"sound_special3"		"Weapon_MachineGun.Spin"
+					"animation_replacement"
+				{
+				    "ACT_MP_STAND_PRIMARY"	"ACT_MERC_STAND_CHAINGUN"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_MERC_CROUCH_CHAINGUN"
+					"ACT_MP_RUN_PRIMARY"	"ACT_MERC_RUN_CHAINGUN"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_MERC_AIRWALK_CHAINGUN"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_MERC_CROUCHWALK_CHAINGUN"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_MERC_JUMP_CHAINGUN"
+					"ACT_MP_JUMP_START_PRIMARY"	"ACT_MERC_JUMP_START_CHAINGUN"
+					"ACT_MP_JUMP_FLOAT_PRIMARY"	"ACT_MERC_JUMP_FLOAT_CHAINGUN"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_MERC_SWIM_CHAINGUN"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MERC_RELOAD_STAND_CHAINGUN"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MERC_RELOAD_CROUCH_CHAINGUN"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MERC_RELOAD_SWIM_CHAINGUN"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MERC_RELOAD_AIRWALK_CHAINGUN"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MERC_ATTACK_STAND_CHAINGUN"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MERC_ATTACK_CROUCH_CHAINGUN"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MERC_ATTACK_SWIM_CHAINGUN"
+					"ACT_MP_ATTACK_AIRWALK_PRIMARY"	"ACT_MERC_ATTACK_AIRWALK_CHAINGUN	"
+				}
+					"reload"		"Weapon_Gatling.Reload"
+					"empty"			"Weapon_Gatling.ClipEmpty"	
+					"double_shot"	"Weapon_Gatling.Fire"
+					"special1"		"Weapon_Gatling.WindUp"
+					"special2"		"Weapon_Gatling.WindDown"
+					"special3"		"Weapon_Gatling.Spin"
+					"burst"			"Weapon_Gatling.FireCrit"
 			}
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
