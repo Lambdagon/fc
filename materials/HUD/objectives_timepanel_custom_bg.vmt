@@ -1,0 +1,65 @@
+"UnlitGeneric"
+{
+	"$translucent" 1
+	"$baseTexture" "hud\gradient_dm_bright"
+	"$detail" "hud\clock_area_mask"
+	$detailscale 1
+	$detailblendmode 8
+	$distancealphafromdetail 1
+
+	// give it a slight outer soft edge
+	$softedges 1
+	$edgesoftnessstart 0.5
+    $edgesoftnessend 0.4
+	$scaleedgesoftnessbasedonscreenres 1
+
+	// give it a white outline
+	$outline 1
+	$outlinecolor "[0.9 0.9 0.5]"
+	$outlinealpha ".68"
+	$outlinestart0 1.5
+	$outlinestart1 1
+	$outlineend0 0.65
+	$outlineend1 0.55
+	$scaleoutlinesoftnessbasedonscreenres 1
+	// and a drop shadow
+	$glow 1
+	$glowcolor "[0 0 0]"
+	$glowalpha 0.5
+	$glowstart 0
+	$glowend 0.5
+	$glowx -0.005
+	$glowy -0.01
+
+	"$colortint_base"		"[1 0 1]"
+	"$colortint_tmp"		"[0 0 0]"
+	"$colortint_mul"		"[.7 .7 .7]"
+
+//	"$vertexcolor" 1
+	$distancealpha 1
+	"$no_fullbright" 1
+	"$ignorez" 1
+	"%keywords" "tf"
+
+	"Proxies"
+	{
+		"LocalPlayerTintColor"
+		{
+			"resultVar"		"$colortint_tmp"
+		}
+		"SelectFirstIfNonZero"
+		{
+			"srcVar1"		"$colortint_tmp"
+			"srcVar2"		"$colortint_base"
+			"resultVar"		"$outlinecolor"
+		}
+		"Multiply"
+		{
+			"srcVar1"		"$outlinecolor"
+			"srcVar2"		"$colortint_mul"
+			"resultVar"		"$outlinecolor"
+		}
+	}
+}
+
+
