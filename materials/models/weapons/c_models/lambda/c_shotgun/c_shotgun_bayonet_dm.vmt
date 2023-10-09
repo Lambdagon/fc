@@ -1,0 +1,51 @@
+"VertexLitGeneric"
+{
+	"$basetexture"				"models/weapons/c_models/lambda/c_shotgun/c_shotgun_bayonet"
+	"$bumpmap"					"models/weapons/c_models/lambda/c_shotgun/c_shotgun_bayonet_nm"
+	"$lightwarptexture"		"models/lightwarps/weapon_lightwarp"
+	"$phong"		"1"
+	"$phongexponent"		"50.000000"
+	"$phongboost"		"10.000000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$basemapalphaphongmask"		"1"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"5.000000"
+	"$rimlightboost"		"2.000000"
+	"$color2"		"{ 255 255 255 }"
+	"$bumpmapalphaphongmask"		"1"
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+	">=DX90"
+	{
+		"$selfillum"		"0"
+	}
+	"proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1"		"$yellow"
+			"resultVar"		"$color2"
+		}
+	}
+}

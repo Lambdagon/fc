@@ -5709,15 +5709,15 @@
 			}
 			"attributes"
 			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.5"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.50"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.5"
 				}
 				"spread penalty"
 				{
@@ -19936,7 +19936,7 @@
 					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
 					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
 					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_AIRWALK_SMG1"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
 					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
 				}
 			}
@@ -20787,8 +20787,8 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
-			"model_player" "models/player/playermodels/male07_rebel.mdl"
-			"model_world" "models/player/playermodels/male07_rebel.mdl"
+			"model_player" "models/player/playermodels/john_freeman_rebel.mdl"
+			"model_world" "models/player/playermodels/john_freeman_rebel.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
 			{
@@ -24451,17 +24451,12 @@ Fires....... something"
 				"minigun spindown time decreased"
 				{
 					"attribute_class"	"mult_minigun_spindown_time"
-					"value"				"0.5"
+					"value"				"0.4"
 				}
-				"speed_boost_on_kill"
+				"no_movespeed_penalty_while_aiming"
 				{
-					"attribute_class"	"speed_boost_on_kill"
-					"value"				"8"
-				}
-				"aiming movespeed increased"
-				{
-					"attribute_class"	"mult_player_aiming_movespeed"
-					"value"				"2"
+					"attribute_class"	"no_movespeed_penalty_while_aiming"
+					"value"				"1"
 				}
 				"fire rate bonus"
 				{
@@ -33700,15 +33695,15 @@ Fires....... something"
 					"attribute_class"	"see_enemy_health"
 					"value"	"1"
 				}
-				"damage bonus hidden"
+				"damage penalty HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
+					"value"	"1.10"
 				}
 				"fire rate penalty HIDDEN"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" "1.60"
+					"value" "1.50"
 				}
 				"spread penalty hidden"
 				{
@@ -33718,12 +33713,12 @@ Fires....... something"
 				"Reload time increased hidden"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.60"
+					"value"	"1.50"
 				}
 				"single wep deploy time increased HIDDEN"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.40"
+					"value"	"2"
 				}
 				"mod_recoil_angle"
 				{
@@ -33807,30 +33802,35 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value" "0.85"
 				}
-				"fire rate penalty"
+				"fire rate penalty HIDDEN"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.3"
+					"attribute_class" 	"mult_postfiredelay"
+					"value" "1.10"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.20"
+				}
+				"Reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.40"
+				}
+				"single wep deploy time increased HIDDEN"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"2"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"	"1"
 				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.60"
-				}
-				"Reload time increased hidden"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"1.80"
-				}
-				"single wep deploy time increased HIDDEN"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.70"
 				}
 				"civ weapon display"
 				{
@@ -33840,7 +33840,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "10"
+					"value" "20"
 				}
 			}
 			"visuals"
@@ -33910,27 +33910,17 @@ Fires....... something"
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"0.50"
+					"value"	"0.70"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.6"
 				}
-				"crit_dmg_falloff"
-				{
-					"attribute_class" 	"crit_dmg_falloff"
-					"value" "1"
-				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.6"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"1.20"
 				}
 				"Reload time increased hidden"
 				{
@@ -35385,7 +35375,7 @@ Fires....... something"
             "image_inventory_size_w"        "128"
             "image_inventory_size_h"        "82"
             "model_world"    "models/player/playermodels/gordon.mdl"
-            "model_player"    "models/empty.mdl"
+            "model_player"    "models/player/playermodels/gordon.mdl"
             "used_by_classes"
             {
                 "john" "1"
@@ -46089,6 +46079,15 @@ Fires....... something"
 			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
+		}
+		"10041"
+		{
+			"name"	"no_movespeed_penalty_while_aiming"
+			"attribute_class"	"no_movespeed_penalty_while_aiming"
+			"description_string"	"No movement penalty when deployed"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
 		}
 	}
 	"attribute_controlled_attached_particles"
