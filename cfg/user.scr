@@ -32,7 +32,7 @@
 
 
 // Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Sat May 06 22:22:48 AM
+// File generated:  Mon Oct 09 21:16:57 AM
 //
 //
 // Cvar	-	Setting
@@ -58,7 +58,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#LFE_EnhancedStereo"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"category1"
@@ -67,14 +67,14 @@ DESCRIPTION INFO_OPTIONS
 		{ CATEGORY }
 	}
 
-	"lfce_ammobucket"
+	"fc_ammobucket"
 	{
 		"#TFOption_ammobucket"
 		{ BOOL }
 		{ "1" }
 	}
 
-	"lfce_muzzlelight"
+	"fc_muzzlelight"
 	{
 		"#TFOption_muzzlelight"
 		{ BOOL }
@@ -89,7 +89,7 @@ DESCRIPTION INFO_OPTIONS
 		{ "0" }
 	}
 
-	"lfce_dof"
+	"fc_dof"
 	{
 		"#LFEOption_DOF"
 		"#LFEOption_DOF"
@@ -101,14 +101,21 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"Weapon sway interp"
 		{ SLIDER 0 0.1 }
-		{ "0.1" }
+		{ "0.01" }
 	}
 
 	"cl_wpn_sway_scale"
 	{
 		"Weapon sway scale"
 		{ SLIDER 0 5 }
-		{ "1" }
+		{ "5" }
+	}
+
+	"viewmodel_fov"
+	{
+		"Viewmodel Field of View"
+		{ SLIDER 0 100 }
+		{ "75" }
 	}
 
 	"category2"
@@ -121,7 +128,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#GameUI_PortalDepthLabel"
 		{ SLIDER 0 9 }
-		{ "9" }
+		{ "3" }
 	}
 
 	"category3"
@@ -135,7 +142,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_autoreload"
 		"#Tooltip_autoreload"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"hud_fastswitch"
@@ -151,7 +158,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_Hitbeeps"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"tf_dingaling_volume"
@@ -202,7 +209,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_LastHitbeeps"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"tf_dingaling_lasthit_volume"
@@ -275,7 +282,7 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#TF_CombatText_Green"
 		{ SLIDER 0 255 }
-		{ "255" }
+		{ "0" }
 	}
 
 	"hud_combattext_blue"
@@ -337,20 +344,12 @@ DESCRIPTION INFO_OPTIONS
 		{ "1" }
 	}
 
-	"viewmodel_fov"
-	{
-		"#TF_viewmodelfov_option"
-		"#Tooltip_viewmodelfov_option"
-		{ SLIDER 54 70 }
-		{ "90" }
-	}
-
 	"hud_freezecamhide"
 	{
 		"#TF_FreezeCamHide"
 		"#Tooltip_FreezeCamHide"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"tf_hud_target_id_alpha"
@@ -386,7 +385,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_DisableWeatherParticles"
 		"#Tooltip_DisableWeatherParticles"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"cl_disablehtmlmotd"
@@ -439,6 +438,28 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#GameUI_DisableSprays"
 		"#Tooltip_DisableSprays"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"lfce_ammobucket"
+	{
+		"#TFOption_ammobucket"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfce_muzzlelight"
+	{
+		"#TFOption_muzzlelight"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"lfce_dof"
+	{
+		"#LFEOption_DOF"
+		"#LFEOption_DOF"
 		{ BOOL }
 		{ "0" }
 	}
