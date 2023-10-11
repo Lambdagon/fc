@@ -15141,7 +15141,7 @@
 			"item_slot"	"action"
 			"equip_region"		"shirt"
 			"item_quality"	"unique"
-			"baseitem" "0"
+			"baseitem" "1"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"image_inventory"	"backpack/c_nothing"
@@ -27760,7 +27760,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/zombine/v_models/v_zombine.mdl"
-			"attach_to_hands" "2"
+			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
 			"item_quality"	"normal"
 			"propername"	"1"
@@ -28529,8 +28529,8 @@ Fires....... something"
 			}
 			"item_type_name"	"Absolutely nothing"
 			"item_name"	"Placeholder"
-			"item_description"	"Soon to be a grenade."
-			"item_slot"	"primary"
+			"item_description"	""
+			"item_slot"	"building"
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -35660,6 +35660,144 @@ Fires....... something"
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
 		}
+		"9947"
+		{
+			"baseitem" "1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"0"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+            "show_in_armory"    "0"
+			"base_item_name"	"The Executioner"
+			"item_type_name"	"Sawed-off Shotgun"
+			"item_name"	"The Executioner"
+			"item_description"	"Things never change, even in... 'death'."
+			"item_logname"	"sawedoff"
+			"item_iconname"	"sawedoff"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/weapons/c_models/c_double_barrel"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_sawed_shotgun.mdl"
+            "model_world"    "models/weapons/w_sawed_shotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"zombiefast"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"scattergun has knockback hidden"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
+				}
+				"bullets per shot bonus hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "1.30"
+				}
+				"mod mini-crit airborne hidden"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
+				}
+				"closerange backattack minicrits hidden"
+				{
+					"attribute_class"	"closerange_backattack_minicrits"
+					"value" "1"
+				}
+				"damage penalty hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.8"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.34"
+				}
+				"crit mod disabled hidden"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"spread penalty hidden"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"4"
+				}
+				"dmg falloff increased hidden"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"5"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value"	"1"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "20"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Sawedoff.Single"
+				"sound_burst"	"Weapon_Sawedoff.Single"
+				"sound_empty"			"Weapon_Sawnoff.DryFire"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+
+				"animation_replacement"
+				{
+				    //"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_357"
+					//"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_357"
+					//"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_357"
+					//"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_357"
+					//"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_357"
+					//"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_357"
+					//"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_357"
+					//"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_357"
+					//"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_AIRWALK_357"
+					//"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_357"
+					//"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					//"ACT_MP_ATTACK_CROUCH_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					//"ACT_MP_ATTACK_SWIM_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					//"ACT_MP_ATTACK_AIRWALK_SECONDARY"	"ACT_HL2MP_ATTACK_357"
+					//"ACT_MP_RELOAD_STAND_SECONDARY"	"ACT_HL2MP_RELOAD_357"
+					//"ACT_MP_RELOAD_CROUCH_SECONDARY"	"ACT_HL2MP_RELOAD_357"
+					//"ACT_MP_RELOAD_SWIM_SECONDARY"	"ACT_HL2MP_RELOAD_357"
+					/"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_HL2MP_RELOAD_357"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"force_a_nature"
+		}
 		"30143"
 		{
 			"name"		"tw_demobot_armor"
@@ -38463,6 +38601,16 @@ Fires....... something"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
+		"99894"
+		{
+			"name"	"scattergun has knockback hidden"
+			"attribute_class"	"set_scattergun_has_knockback"
+			"description_string"	"#Attrib_Scattergun_HasKnockback"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		"45"
 		{
 			"name"	"bullets per shot bonus"
@@ -38470,6 +38618,16 @@ Fires....... something"
 			"description_string"	"#Attrib_BulletsPerShot_Bonus"
 			"description_format"	"value_is_percentage"
 			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"99893"
+		{
+			"name"	"bullets per shot bonus hidden"
+			"attribute_class"	"mult_bullets_per_shot"
+			"description_string"	"#Attrib_BulletsPerShot_Bonus"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
@@ -39216,6 +39374,16 @@ Fires....... something"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
+		"99892"
+		{
+			"name"	"mod mini-crit airborne hidden"
+			"attribute_class"	"mini_crit_airborne"
+			"description_string"	"#Attrib_MiniCritAirborneEnemies"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		"115"
 		{
 			"name"	"mod shovel damage boost"
@@ -39243,6 +39411,16 @@ Fires....... something"
 			"description_string"	"#Attrib_Dmg_Falloff_Increased"
 			"description_format"	"value_is_inverted_percentage"
 			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"99889"
+		{
+			"name"	"dmg falloff increased hidden"
+			"attribute_class"	"mult_dmg_falloff"
+			"description_string"	"#Attrib_Dmg_Falloff_Increased"
+			"description_format"	"value_is_inverted_percentage"
+			"hidden"	"1"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
@@ -43554,6 +43732,15 @@ Fires....... something"
 			"description_string"	"#Attrib_BackAttackMinicrits"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
+			"effect_type"	"positive"
+		}
+		"99891"
+		{
+			"name"	"closerange backattack minicrits hidden"
+			"attribute_class"	"closerange_backattack_minicrits"
+			"description_string"	"#Attrib_BackAttackMinicrits"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
 			"effect_type"	"positive"
 		}
 		"620"

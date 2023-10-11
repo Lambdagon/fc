@@ -1,0 +1,28 @@
+"VertexLitGeneric"
+{
+	$basetexture models/weapons/w_sawnoff_col
+	$bumpmap models/weapons/w_sawnoff_nor
+
+	"$phong"     "1"
+	"$phongexponent"  "8"
+
+	"$phongboost"   1
+	"$phongfresnelranges"   "[.75 .5 1]"
+	"$phongalbedotint" "1"
+
+	"$halflambert" "1"
+	
+	"$detail" "models/weapons/sawnoff_detail"	
+	"$detailscale" "1"
+	"$detailblendfactor" 0
+	"$detailblendmode" 1
+	
+	"Proxies"
+	{		
+		"Booster"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+	}
+	
+}
