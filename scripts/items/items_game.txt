@@ -2510,7 +2510,7 @@
 			"item_type_name"	"#TF_Weapon_Fists"
 			"item_name"	"#TF_Weapon_Fists"
 			"item_slot"	"melee"
-			"item_quality"	"normal"
+			"item_quality"	"rarity4"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"item_logname"	"fists"
@@ -2525,16 +2525,46 @@
 				"saxton"	"1"
 			}
 			"attributes"
-			{
+			{	
+				"damage bonus HIDDEN"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "1.8"
+				}
 				"melee range multiplier"
 				{
 					"attribute_class"	"melee_range_multiplier"
 					"value"	"1.60"
 				}
+				"melee bounds multiplier"
+				{
+					"attribute_class"	"melee_bounds_multiplier"
+					"value"				"1.25"
+				}
+				"mod shovel speed boost"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"2"
+				}
+				"gunslinger punch combo"
+				{
+					"attribute_class"	"gunslinger_punch_combo"
+					"value"				"1"
+				}
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
+				}
+				"dmg from melee increased"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"2.0"
 				}
 			}
 			"visuals"
@@ -30902,7 +30932,7 @@ Fires....... something"
 			"equip_region"	"arms"
 			"anim_slot"		"FORCE_NOT_USED"
 			"baseitem"		"1"
-			"item_quality"		"unique"
+			"item_quality"	"rarity4"
 			"propername"	"1"
 			"min_ilevel"		"10"
 			"max_ilevel"		"10"
@@ -30929,22 +30959,27 @@ Fires....... something"
 				"charge impact damage increased"
 				{
 					"attribute_class"	"charge_impact_damage"
-					"value"			"1.7"
-				}
-				"dmg taken from fire reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"			"0.8"
+					"value"			"2.0"
 				}
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value"			"0.8"
 				}
+				"dmg taken from bullets reduced"
+				{
+					"attribute_class"	"mult_dmgtaken"
+					"value"	"0.50"
+				}
 				"allowed in medieval mode"
 				{
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
+				}
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "2.00"
 				}
 				"maxammo primary reduced"
 				{
@@ -30955,31 +30990,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"	"0"
-				}
-				"maxammo grenades1 increased"
-				{
-					"attribute_class"	"mult_maxammo_grenades1"
-					"value"	"7"
-				}
-				"increased jump height"
-				{
-					"attribute_class"	"mod_jump_height"
-					"value" "2.30"
-				}
-                "move speed bonus"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"1.50"
-				}
-                "max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"	"120"
-				}
-				"dmg taken from bullets reduced"
-				{
-					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.55"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
@@ -31044,7 +31054,7 @@ Fires....... something"
 				"scattergun knockback mult"
 				{
 					"attribute_class"	"scattergun_knockback_mult"
-					"value"	"0.30"
+					"value"	"0.20"
 				}
 				"subtract victim medigun charge on hit"
 				{
@@ -31070,11 +31080,6 @@ Fires....... something"
 				{
 				"attribute_class"	"mult_clipsize"
 				"value"	"4.80"
-				}
-				"damage causes airblast"
-				{
-					"attribute_class"	"damage_causes_airblast"
-					"value" "20"
 				}
 				"fire rate bonus"
 				{
