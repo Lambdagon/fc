@@ -2494,6 +2494,12 @@
 		
 		"weapon_fists_hale"
 		{
+			
+			"prefab"	"valve"
+			"first_sale_date"	"2012/06/29"
+			"item_class"	"tf_weapon_shovel"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -2501,31 +2507,41 @@
 			"tags"
 			{
 				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_taunt_damage"		"1"
 			}
-			"first_sale_date"	"2010/09/29"
-			"enabled"	"0"
-			"item_class"	"tf_weapon_shovel"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Fists"
-			"item_name"	"#TF_Weapon_Fists"
-			"item_slot"	"melee"
-			"item_quality"	"rarity4"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
+			"item_name"	"Hale's Own Fists"
 			"item_logname"	"fists"
 			"item_iconname"	"fists"
+			"item_slot"	"melee"
+			"item_quality"	"rarity4"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"model_player"		"models/weapons/c_models/c_saxton_arms.mdl"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			  "50"			
 			"attach_to_hands" "0"
 			"used_by_classes"
 			{
 				"saxton"	"1"
 			}
+			"static_attrs"
+			{
+					"min_viewmodel_offset"		"10 0 -7"
+			}
 			"attributes"
-			{	
+			{
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.60"
+				}
 				"melee range multiplier"
 				{
 					"attribute_class"	"melee_range_multiplier"
@@ -2536,15 +2552,10 @@
 					"attribute_class"	"melee_bounds_multiplier"
 					"value"				"1.3"
 				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value" "1"
-				}
 				"mod shovel damage boost"
 				{
 					"attribute_class"	"set_weapon_mode"
-					"value"	"2"
+					"value"	"1"
 				}
 				"mod shovel speed boost"
 				{
@@ -2571,6 +2582,11 @@
 					"attribute_class"	"dmg_from_melee"
 					"value"	"2.0"
 				}
+				"reduced_healing_from_medics"
+				{
+					"attribute_class"	"mult_healing_from_medics"
+					"value" "0.4"
+				}
 			}
 			"visuals"
 			{
@@ -2587,10 +2603,6 @@
 				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
 				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
-			}
-			"static_attrs"
-			{
-			"min_viewmodel_offset"		"10 0 -7"
 			}
 		}
 
@@ -30959,7 +30971,7 @@ Fires....... something"
 				"charge impact damage increased"
 				{
 					"attribute_class"	"charge_impact_damage"
-					"value"			"2.0"
+					"value"			"3.0"
 				}
 				"dmg taken from blast reduced"
 				{
