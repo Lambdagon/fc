@@ -2550,12 +2550,12 @@
 				"melee bounds multiplier"
 				{
 					"attribute_class"	"melee_bounds_multiplier"
-					"value"				"1.3"
+					"value"				"1.2"
 				}
-				"mod shovel speed boost and damage boost"
+				"mod shovel speed boost"
 				{
 					"attribute_class"	"set_weapon_mode"
-					"value"	"3"
+					"value"	"2"	
 				}
 				"gunslinger punch combo"
 				{
@@ -24565,27 +24565,27 @@ Fires....... something"
 				"minigun spinup time decreased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
-					"value"				"0.7"
+					"value"				"0.8"
 				}
 				"minigun spindown time decreased"
 				{
 					"attribute_class"	"mult_minigun_spindown_time"
-					"value"				"0.4"
+					"value"				"0.3"
 				}
 				"no_movespeed_penalty_while_aiming"
 				{
 					"attribute_class"	"no_movespeed_penalty_while_aiming"
 					"value"				"1"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.7"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"0.80"
-				}
-				"no damage falloff over distance"
-				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
+					"value"				"0.70"
 				}
 				"damage penalty"
 				{
@@ -30937,7 +30937,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name" 	"#TF_Wearable_Shield"
+			"item_type_name" 	"Australian Given Gift"
 			"item_logname" "splendid_screen"
 			"item_iconname" "splendid_screen"
 			"item_name"		"Saxton Charge"
@@ -30964,10 +30964,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.75"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
 				"charge impact damage increased"
 				{
 					"attribute_class"	"charge_impact_damage"
-					"value"			"3.0"
+					"value"			"4.0"
 				}
 				"dmg taken from blast reduced"
 				{
@@ -30977,7 +30987,7 @@ Fires....... something"
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.50"
+					"value"	"0.7"
 				}
 				"allowed in medieval mode"
 				{
@@ -30988,6 +30998,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_jump_height"
 					"value" "2.00"
+				}
+				"mod_air_control_blast_jump"
+				{
+					"attribute_class"	"mod_air_control_blast_jump"
+					"value" "3.0"
 				}
 				"maxammo primary reduced"
 				{
