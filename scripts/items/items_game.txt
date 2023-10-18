@@ -37245,6 +37245,78 @@ Fires....... something"
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_drop.wav"
 		}
+		"30506"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Shotgun"
+			"item_type_name"	"#TF_Weapon_shotgun"
+			"item_name"	"Model 37 DEV"
+			"item_description"	"Model Edit by Lambdagon"
+			"item_slot"	"primary"
+			"item_quality"	"developer"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"model37"
+			"item_iconname"	"shotgun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_m37/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/weapons/lambda/model37/dev/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"dev_only"			"1"
+			"anim_slot"	"primary"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"engineer"	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.55"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.6"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.85"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "lambda.executioner"
+				"sound_burst" "lambda.executioner"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
