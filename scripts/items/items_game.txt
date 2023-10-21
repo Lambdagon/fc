@@ -12214,7 +12214,7 @@
 				"airblast vulnerability multiplier"
 				{
 					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value"	"0.25"
+					"value"	"1.75"
 				}
 				"boots falling stomp"
 				{
@@ -27885,11 +27885,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"backstab shield"
-				{
-					"attribute_class"	"set_blockbackstab_once"
-					"value"	"1"
-				}
 				"SET BONUS: dmg from sentry reduced"
 				{
 					"attribute_class"	"dmg_from_sentry_reduced"
@@ -27920,7 +27915,7 @@ Fires....... something"
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value"	"1.30"
 				}
-                        }
+            }
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
@@ -28587,7 +28582,6 @@ Fires....... something"
 			{
 				"zombiefast"			"1"
 				"robo"			"1"
-				"agent"			"1"
 			}
 			"static_attrs"
 			{
@@ -36324,6 +36318,188 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"xifier_class_remap"	"force_a_nature"
+		}
+		"9948"
+		{
+		// SILENCED LUGER
+		}
+		"9949"
+		{
+		// RAW LUGER
+		}
+		"9950"
+		{
+		// Combat Knife
+		}
+		"9951"
+		{
+		"name"	"Deep Cover"
+			"item_class"	"tf_wearable"
+			"baseitem" "1"
+			"enabled" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Disguise apparatus"
+			"item_name"	"Deep Cover"
+			"item_slot"	"building"
+			"item_description"	"I'm in."
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/empty.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"model_player"	"models/empty.mdl"
+			"attach_to_hands" "0"
+			"show_in_armory"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"agent"  "1"
+			}
+			"attributes"
+			{
+				"disguise damage reduction"
+				{
+					"attribute_class"	"disguise_damage_reduction"
+					"value"	"1.30"
+				}
+				"disguise no burn"
+				{
+					"attribute_class"	"disguise_no_burn"
+					"value"	"1"
+				}
+				//the stats we need dont exist, these will do
+            }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+		}
+		"9952"
+		{
+			"name"	"Bulletproof Vest"
+			"item_class"	"tf_wearable"
+			"baseitem" "0"
+			"enabled" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Bulletproof Vest"
+			"item_name"	"Bulletproof Vest"
+			"item_slot"	"building"
+			"item_description"	"Try again."
+			"image_inventory"	"backpack/player/items/c_enforcervest"
+			//we're gonna need a model for that too
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/empty.mdl"
+			//we're gonna need a model
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"attach_to_hands" "0"
+			"show_in_armory"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"agent"  "1"
+			}
+			"attributes"
+			{
+				"dmg taken from bullets reduced"
+				{
+					"attribute_class"	"disguise_damage_reduction"
+					"value"	"0.50"
+				}
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.80"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.80"
+				}
+				"disguise speed penalty"
+				{
+					"attribute_class"	"disguise_speed_penalty"
+					"value"	"3"
+				}
+            }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+		}
+		"9953"
+		{
+			"name"	"Tippety Boots"
+			"item_class"	"tf_wearable"
+			"baseitem" "0"
+			"enabled" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Boots"
+			"item_name"	"Tippety Boots"
+			"item_slot"	"building"
+			"item_description"	"Dress Sharp."
+			"image_inventory"	"backpack/workshop/player/items/soldier/mantreads/mantreads"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/workshop/player/items/soldier/mantreads/mantreads.mdl"
+			//we're gonna need a model of sharper boots
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"attach_to_hands" "0"
+			"show_in_armory"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"agent"  "1"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.10"
+				}
+				"cancel falling damage"
+				{
+					"attribute_class"	"cancel_falling_damage"
+					"value" "1"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+            }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
 		}
 		"30143"
 		{
