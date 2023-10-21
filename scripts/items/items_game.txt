@@ -36321,7 +36321,97 @@ Fires....... something"
 		}
 		"9948"
 		{
-		// SILENCED LUGER
+			"name" "Suppressed_Luger"
+			"baseitem" "1"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_revolver"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_name"	"Suppressed Luger"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"ambassador"
+			"item_iconname"	"ambassador"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_ambassador/c_ambassador.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"agent"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"damage bonus while disguised"
+				{
+					"attribute_class" 	"mult_dmg_disguised"
+					"value" "1.30"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.2"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.90"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.4"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "0.3"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Ambassador.Single"
+				"sound_burst" "Weapon_Ambassador.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"9949"
 		{
@@ -36329,7 +36419,75 @@ Fires....... something"
 		}
 		"9950"
 		{
-		// Combat Knife
+			"name"	"Pocket Knife"
+			"inspect_panel_dist" "25"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_class" "weapon_spy_knife_item2"
+			"enabled"	"0"
+			"item_class"	"tf_weapon_knife"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Knife"
+			"item_name"	"Pocket Knife"
+			"item_description"	"#TF_Weapon_Knife_desc"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"baseitem" "1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_knife"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_knife/c_knife.mdl"
+			"attach_to_hands"	"1"
+			"used_by_classes"
+			{
+				"agent"	"1"
+			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.455"
+				"min_viewmodel_offset"					"5 0 -4"
+			}
+			"attributes"
+			{
+				"damage bonus while disguised"
+				{
+					"attribute_class" 	"mult_dmg_disguised"
+					"value" "1.50"
+				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.5"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.5"
+				}
+				"damage penalty"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" "0.9"
+				}
+				"cannot backstab"
+				{
+					"attribute_class" 	"mod_cannot_backstab"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"particle_suffix"		"knife"
 		}
 		"9951"
 		{
@@ -36344,7 +36502,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Disguise apparatus"
 			"item_name"	"Deep Cover"
-			"item_slot"	"building"
+			"item_slot"	"primary"
 			"item_description"	"I'm in."
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
@@ -36396,7 +36554,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Bulletproof Vest"
 			"item_name"	"Bulletproof Vest"
-			"item_slot"	"building"
+			"item_slot"	"primary"
 			"item_description"	"Try again."
 			"image_inventory"	"backpack/player/items/c_enforcervest"
 			//we're gonna need a model for that too
@@ -36458,7 +36616,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Boots"
 			"item_name"	"Tippety Boots"
-			"item_slot"	"building"
+			"item_slot"	"primary"
 			"item_description"	"Dress Sharp."
 			"image_inventory"	"backpack/workshop/player/items/soldier/mantreads/mantreads"
 			"image_inventory_size_w"		"128"
