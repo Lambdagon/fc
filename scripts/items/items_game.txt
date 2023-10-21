@@ -2550,12 +2550,12 @@
 				"melee bounds multiplier"
 				{
 					"attribute_class"	"melee_bounds_multiplier"
-					"value"				"1.3"
+					"value"				"1.2"
 				}
-				"mod shovel speed boost and damage boost"
+				"mod shovel speed boost"
 				{
 					"attribute_class"	"set_weapon_mode"
-					"value"	"3"
+					"value"	"2"	
 				}
 				"gunslinger punch combo"
 				{
@@ -24565,27 +24565,27 @@ Fires....... something"
 				"minigun spinup time decreased"
 				{
 					"attribute_class"	"mult_minigun_spinup_time"
-					"value"				"0.7"
+					"value"				"0.8"
 				}
 				"minigun spindown time decreased"
 				{
 					"attribute_class"	"mult_minigun_spindown_time"
-					"value"				"0.4"
+					"value"				"0.3"
 				}
 				"no_movespeed_penalty_while_aiming"
 				{
 					"attribute_class"	"no_movespeed_penalty_while_aiming"
 					"value"				"1"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.7"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"0.80"
-				}
-				"no damage falloff over distance"
-				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
+					"value"				"0.70"
 				}
 				"damage penalty"
 				{
@@ -30937,7 +30937,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name" 	"#TF_Wearable_Shield"
+			"item_type_name" 	"Australian Given Gift"
 			"item_logname" "splendid_screen"
 			"item_iconname" "splendid_screen"
 			"item_name"		"Saxton Charge"
@@ -30964,10 +30964,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"0.75"
+				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
 				"charge impact damage increased"
 				{
 					"attribute_class"	"charge_impact_damage"
-					"value"			"3.0"
+					"value"			"4.0"
 				}
 				"dmg taken from blast reduced"
 				{
@@ -30977,7 +30987,7 @@ Fires....... something"
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.50"
+					"value"	"0.7"
 				}
 				"allowed in medieval mode"
 				{
@@ -30988,6 +30998,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_jump_height"
 					"value" "2.00"
+				}
+				"mod_air_control_blast_jump"
+				{
+					"attribute_class"	"mod_air_control_blast_jump"
+					"value" "3.0"
 				}
 				"maxammo primary reduced"
 				{
@@ -34214,8 +34229,6 @@ Fires....... something"
 				"pyro"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_pyro.mdl"
 				"spy"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_spy.mdl"
 				"engineer"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_engineer.mdl"
-//				"civilian"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_heavy.mdl"
-//				"saxton"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_heavy.mdl"
 				"mercenary"	"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_heavy.mdl"
 			}
 			"used_by_classes"
@@ -34229,8 +34242,6 @@ Fires....... something"
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
-//				"civilian"	"0"
-//				"saxton"	"0"
 				"mercenary"	"1"
 			}
 		}
@@ -34496,24 +34507,20 @@ Fires....... something"
 				"pyro"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_pyro.mdl"
 				"spy"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_spy.mdl"
 				"engineer"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_engineer.mdl"
-//				"civilian"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_heavy.mdl"
-//				"saxton"		"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_heavy.mdl"
 				"mercenary"	"models/workshop/player/items/all_class/hwn2023_demonic_dome/hwn2023_demonic_dome_soldier.mdl"
 //Merc was given the soldier MDL for the second slot since it sits a bit closer to the face than the Heavy version does, which fits hats nicer
 			}
 			"used_by_classes"
 			{
 				"scout"		"1"
-				"sniper"		"1"
-				"soldier"		"1"
-				"demoman"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
 				"medic"		"1"
 				"heavy"		"1"
 				"pyro"		"1"
 				"spy"		"1"
-				"engineer"		"1"
-//				"civilian"	"0"
-//				"saxton"	"0"
+				"engineer"	"1"
 				"mercenary"	"1"
 			}
 		}
@@ -34559,8 +34566,6 @@ Fires....... something"
 				"medic"		"models/workshop/player/items/all_class/dec20_particulate_protector/dec20_particulate_protector_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/dec20_particulate_protector/dec20_particulate_protector_heavy.mdl"
 				"engineer"	"models/workshop/player/items/all_class/dec20_particulate_protector/dec20_particulate_protector_engineer.mdl"
-//stupid thing is disabled but it was showing up in the inventory anyways
-//				"civilian"	"models/workshop/player/items/all_class/dec20_particulate_protector/dec20_particulate_protector_soldier.mdl"
 				"mercenary"	"models/workshop/player/items/all_class/dec20_particulate_protector/dec20_particulate_protector_heavy.mdl"
 			}
 			"used_by_classes"
@@ -34571,7 +34576,6 @@ Fires....... something"
 				"medic"		"1"
 				"heavy"		"1"
 				"engineer"	"1"
-//				"civilian"	"0"
 				"mercenary"	"1"
 			}
 		}
@@ -34783,16 +34787,16 @@ Fires....... something"
 			}
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
 				"sniper"	"1"
 				"soldier"	"1"
 				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-				"mercenary" "1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+				"mercenary" 	"1"
 			}
 			"visuals"
 			{
@@ -37297,6 +37301,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.6"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.85"
 				}
 				"clip size penalty"
 				{
