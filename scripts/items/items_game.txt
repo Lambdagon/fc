@@ -19265,7 +19265,7 @@
 		"9039"
 		{
 			"name"	"HL2 Crowbar"
-			"item_class"	"tf_weapon_knife"
+			"item_class"	"tf_weapon_bat"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -19296,9 +19296,7 @@
 			"max_ilevel"	"5"
 			"used_by_classes"
 			{
-				"zombie"	"1"
-				"john"	"1"
-				
+				"john"		"1"
 			}
 			"static_attrs"
 			{
@@ -19309,22 +19307,12 @@
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.45"
+					"value" "0.7"
 				}
-				"damage penalty HIDDEN"
+				"crit mod disabled"
 				{
-					"attribute_class" 	"mult_dmg"
-					"value" "0.8"
-				}
-				"cannot backstab HIDDEN"
-				{
-					"attribute_class" 	"mod_cannot_backstab"
-					"value" "1"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.8"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 			}
 			
@@ -24264,7 +24252,7 @@ Fires....... something"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.70"
+					"value"	"0.50"
 				}
 				"maxammo secondary increased"
 				{
@@ -28591,7 +28579,7 @@ Fires....... something"
 		"9806"
 		{
 			"name"	"John Stunstick"
-			"item_class"	"tf_weapon_knife"
+			"item_class"	"tf_weapon_wrench"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -28775,10 +28763,15 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.7"
 				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.8"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.3"
+					"value"	"0.4"
 				}
 				"crit mod disabled"
 				{
