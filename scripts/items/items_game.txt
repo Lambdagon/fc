@@ -2220,6 +2220,7 @@
 			"used_by_classes"
 			{
 				"spy"	"1"
+				"agent"	"1"
 			}
 			"visuals"
 			{
@@ -36314,12 +36315,10 @@ Fires....... something"
 		}
 		"9948"
 		{
-			"name" "Suppressed_Luger"
+			"name" "SMG-S"
 			"baseitem" "1"
 			"enabled"	"1"
-			"item_class"	"tf_weapon_revolver"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
+			"item_class"	"tf_weapon_smg"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -36332,13 +36331,116 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"#TF_Weapon_Revolver"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"SMG-S"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"item_logname"	"pro_smg"
+			"item_iconname"	"pro_smg"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pro_smg/c_pro_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_pro_smg/c_pro_smg.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"agent"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"mod see enemy health hidden"
+				{
+					"attribute_class"	"see_enemy_health"
+					"value"	"1"
+				}
+				"damage bonus while disguised"
+				{
+					"attribute_class" 	"mult_dmg_disguised"
+					"value" "1.50"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.2"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.2"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"3"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.5"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "0.3"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "8"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_UrbanProfessional.Single"
+				"sound_burst"		"Weapon_UrbanProfessional.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"9949"
+		{
+			"name"	"Suppressed_Luger"
+			"baseitem" "0"
+			"enabled"	"1"
+			"item_class"	"tf_weapon_revolver"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"Suppressed Luger"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"propername"	"1"
-			"item_logname"	"ambassador"
-			"item_iconname"	"ambassador"
+			"show_in_armory"		"1"
+			"item_logname"	"maxgun"
+			"item_iconname"	"maxgun"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
@@ -36400,15 +36502,11 @@ Fires....... something"
 			}
 			"visuals"
 			{
-				"sound_single_shot" "Weapon_Ambassador.Single"
-				"sound_burst" "Weapon_Ambassador.SingleCrit"
+				"sound_single_shot"	"Weapon_UrbanProfessional.Single"
+				"sound_burst"		"Weapon_UrbanProfessional.SingleCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
-		"9949"
-		{
-		// RAW LUGER
 		}
 		"9950"
 		{
@@ -36423,9 +36521,8 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"item_class" "weapon_spy_knife_item2"
+			"item_class" "tf_weapon_knife"
 			"enabled"	"0"
-			"item_class"	"tf_weapon_knife"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Knife"
@@ -36529,12 +36626,16 @@ Fires....... something"
 					"attribute_class"	"disguise_no_burn"
 					"value"	"1"
 				}
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
 				"SET BONUS: mystery solving time decrease"
 				{
 					"attribute_class"	"mystery_solving_time_decrease"
-					"value"	"1.75"
+					"value"	"1.66"
 				}
-				
 				//the stats we need dont exist, these will do
             }
 			"static_attrs"
@@ -36558,7 +36659,7 @@ Fires....... something"
 			"item_type_name"	"Bulletproof Vest"
 			"item_name"	"Bulletproof Vest"
 			"item_slot"	"primary"
-			"item_description"	"Try again."
+			"item_description"	"A bulletproof vest, also known as a ballistic vest or a bullet-resistant vest, is an item of body armour that helps absorb the..."
 			"image_inventory"		"backpack/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher"
 			//we're gonna need a model for that too
 			"image_inventory_size_w"		"128"
@@ -36588,7 +36689,7 @@ Fires....... something"
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"1.80"
+					"value"	"2"
 				}
 				"move speed penalty"
 				{
@@ -36598,7 +36699,7 @@ Fires....... something"
 				"disguise speed penalty"
 				{
 					"attribute_class"	"disguise_speed_penalty"
-					"value"	"3"
+					"value"	"2"
 				}
             }
 			"static_attrs"
@@ -36653,11 +36754,6 @@ Fires....... something"
 					"attribute_class"	"cancel_falling_damage"
 					"value" "1"
 				}
-				"boots falling stomp"
-				{
-					"attribute_class"	"boots_falling_stomp"
-					"value" "1"
-				}
             }
 			"static_attrs"
 			{
@@ -36665,6 +36761,97 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"    "ui/item_metal_weapon_pickup.wav"
             "drop_sound"        "ui/item_metal_weapon_drop.wav"
+		}
+		"9954"
+		{
+			"name"	"Unsilenced Luger"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_pistol"
+			"prefab"	"weapon_pistol"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"Unsilenced Luger"
+			"item_description"	"#TF_TTG_MaxGun_Desc"
+			"item_slot"	"secondary"
+			"item_logname"	"maxgun"
+			"item_iconname"	"maxgun"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_ttg_max_gun/c_ttg_max_gun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_ttg_max_gun/c_ttg_max_gun.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"agent"	"1"
+			}
+			"attributes"
+			{
+				"damage bonus while disguised"
+				{
+					"attribute_class" 	"mult_dmg_disguised"
+					"value" "1.30"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.8"
+				}
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "1.20"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "0.3"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Lugermorph.Single"
+				"sound_burst"			"Weapon_Lugermorph.SingleCrit"
+			}			
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"TTG Max Pistol"
 		}
 		"30143"
 		{
