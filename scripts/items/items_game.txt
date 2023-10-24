@@ -36529,6 +36529,12 @@ Fires....... something"
 					"attribute_class"	"disguise_no_burn"
 					"value"	"1"
 				}
+				"SET BONUS: mystery solving time decrease"
+				{
+					"attribute_class"	"mystery_solving_time_decrease"
+					"value"	"1.75"
+				}
+				
 				//the stats we need dont exist, these will do
             }
 			"static_attrs"
@@ -36553,11 +36559,11 @@ Fires....... something"
 			"item_name"	"Bulletproof Vest"
 			"item_slot"	"primary"
 			"item_description"	"Try again."
-			"image_inventory"	"backpack/player/items/c_enforcervest"
+			"image_inventory"		"backpack/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher"
 			//we're gonna need a model for that too
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/empty.mdl"
+			"model_player"		"models/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher.mdl"
 			//we're gonna need a model
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
@@ -36599,8 +36605,8 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
-			"mouse_pressed_sound" 	"ui/item_light_gun_pickup.wav"
-			"drop_sound" 		"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound" 	"ui/item_helmet_pickup.wav"
+			"drop_sound" 		"ui/item_helmet_drop.wav"
 		}
 		"9953"
 		{
@@ -36657,6 +36663,8 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+			"mouse_pressed_sound"    "ui/item_metal_weapon_pickup.wav"
+            "drop_sound"        "ui/item_metal_weapon_drop.wav"
 		}
 		"30143"
 		{
