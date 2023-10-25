@@ -10010,6 +10010,8 @@
 
 @PointClass base(Targetname, Parentname, BaseNPC, Angles, EnableDisable, TeamNum) studio("models/bots/skeleton_sniper/skeleton_sniper.mdl") = tf_zombie : "Skeleton" []
 
+@PointClass base(Targetname, Parentname, BaseNPC, Angles, EnableDisable, TeamNum) studio("models/zombie/merczombie.mdl") = npc_zombie_fc : "Zombie Merc" []
+
 @PointClass base(Targetname) studio("models/items/ammopack_medium.mdl") = tf_ammo_pack : "Dropped AmmoPack"
 [
 	model(studio) : "Model" : "" : "Change the model to something other than the default model." 
@@ -10029,6 +10031,28 @@
 	[
 		0 : "NORMAL"
 		1 : "SKELETON KING"
+	]
+
+	// Inputs
+	input Enable(void) : "Enable zombie spawn point."
+	input Disable(void) : "Disable zombie spawn point."
+	input SetMaxActiveZombies(integer) : "Max number of zombies"
+]
+
+@PointClass base(Targetname, Angles) studio("models/zombie/merczombie.mdl") = fc_zombie_spawner : "Entity that spawns the merc zombie whooo scary."
+[
+	zombie_scale(float) : "Merc Scale" : 1 : "Scale the merc"
+	zombie_lifetime(float) : "Merc Life Time" : 0 : "Merc life time in seconds. 0 means zombies will stay alive until they're dead."
+	max_zombies(integer) : "Merc Count" : 1 : "Number of underpaid undead men this point can have active in the world."
+	infinite_zombies(choices)		: "Infinite Spawn"		: 0	: "If Yes, keep spawning the silly man." =
+	[
+		0 : "NO"
+		1 : "Yes"
+	]
+	zombie_type(choices)		: "Zombie Type"		: 0	: "Type of Merc." =
+	[
+		0 : "NORMAL"
+		1 : "TEST"
 	]
 
 	// Inputs

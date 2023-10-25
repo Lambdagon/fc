@@ -1,0 +1,606 @@
+		"30507"
+		{
+			"name"	"The raygun!!"
+			"first_sale_date"	"2011/07/13"
+			"item_class"	"tf_weapon_raygun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_Weapon_IndivisibleParticleSmasher"
+			"item_description"	"#TF_RighteousBison_Desc"
+			"item_name"	"raygun"
+			"item_slot"	"secondary"
+			"anim_slot" "secondary2"
+			"item_quality"	"unique"
+			"item_logname"	"righteous_bison"
+			"item_iconname"	"righteous_bison"
+			"propername"	"1"
+			"min_ilevel"	"30"
+			"max_ilevel"	"30"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"45"
+			"model_player"	"models/workshop/weapons/c_models/c_drg_righteousbison/c_drg_righteousbison.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"
+			}
+			"attributes"
+			{
+				"energy weapon penetration"
+				{
+					"attribute_class"	"energy_weapon_penetration"
+					"value"	"1"
+				}
+				"energy weapon no hurt building"
+				{
+					"attribute_class"	"energy_weapon_no_hurt_building"
+					"value" "1"
+				}
+				"energy weapon no deflect"
+				{
+					"attribute_class"	"energy_weapon_no_deflect"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Bison.Single"
+				"sound_burst"		"Weapon_Bison.SingleCrit"
+				"sound_reload"		"Weapon_Bison.Reload"
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_SECONDARY_ALT1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_SECONDARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_SECONDARY_ALT1_VM_INSPECT_END"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30508"
+		{
+			"name"						"The Shotgun Revolver"
+			"prefab"					"weapon_sniperrifle"
+			"show_in_armory"	"0"
+			"item_class"				"tf_weapon_scattergun"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_type_name"			"#TF_Weapon_SniperRifle"
+			"item_name"					"Revolving Shotgun"
+			"propername"				"1"
+			"min_ilevel"				"8"
+			"max_ilevel"				"8"
+			"image_inventory"			"backpack/weapons/w_models/w_revshotgun"
+			"model_world"				"models/weapons/w_models/w_revshotgun_sniper.mdl"
+			"model_player"				"models/weapons/v_models/v_revshotgun_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.5"
+				}
+				"scattergun no reload single"
+				{
+					"attribute_class"	"set_scattergun_no_reload_single"
+					"value"	"1"
+				}
+			}
+		}
+		"30509"
+		{
+			"name"	"The Classic"
+			"prefab"	"valve weapon_sniperrifle_alt1"
+			"first_sale_date"		"2014/06/18"
+			"item_class"	"tf_weapon_sniperrifle_classic"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_deal_gib_damage"	"1"
+			}
+			"item_logname"	"the_classic"
+			"item_iconname"	"the_classic"
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_name"	"#TF_ClassicSniperRifle"
+			"item_description"	"#TF_ClassicSniperRifle_Desc"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"image_inventory"	"backpack/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_tfc_sniperrifle.mdl"
+			"attach_to_hands"	"2"
+			"visuals"
+			{
+				"show_player_bodygroup_name"	"bullets"
+				"sound_single_shot"	"Weapon_ClassicSniperRifle.Single"
+				"sound_burst"	"Weapon_ClassicSniperRifle.SingleCrit"
+			}
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"5 0 -8"				
+			}
+			"attributes"
+			{
+				"crit on hard hit"
+				{
+					"attribute_class"	"crit_on_hard_hit"
+					"value"	"1"
+				}
+				"sniper crit no scope"
+				{
+					"attribute_class"	"sniper_crit_no_scope"
+					"value" "1"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "50"
+				}
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value"	"0.90"
+				}
+				"sniper fires tracer HIDDEN"
+ 				{
+					"attribute_class"	"sniper_fires_tracer_HIDDEN"
+					"value"	"1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"3"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"30510"
+		{
+			"name"	"TF_WEAPON_SMG"
+			"prefab"	"weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Weapon_SMG"
+			"item_slot"	"secondary"
+			"item_quality"	"normal"
+			"baseitem" "1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30511"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_collect" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"The Super Shotgun"
+			"item_type_name"	"Double Barreled Shotgun"
+			"item_name"	"The Super Shotgun"
+			"item_description"	"Model from Open Fortress"
+			"item_logname"	"supershot"
+			"item_iconname"	"supershot"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"0"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"anim_slot"		"primary"
+			"image_inventory"	"backpack/weapons/w_models/supershotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_supershotgun_mercenary.mdl"
+			"model_world"	"models/weapons/w_models/w_supershotgun.mdl"
+			"attach_to_hands" "2"
+			"inspect_panel_dist" "38"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "2.00"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.20"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "3.00"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.16"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"4.00"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SuperShotgun.Single"
+				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+        	}
+		"30512"
+		{
+			"name"	"The tommy Gun"
+			"item_class"	"tf_weapon_smg"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"show_in_armory"	"0"
+			"item_type_name"	"Submachine Gun"
+			"item_name"	"The Chicago Typewriter"
+			"item_description"	"Model from Open Fortress"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"anim_slot"			"secondary"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/tommygun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_tommygun_merc.mdl"
+			"model_world"	"models/weapons/w_models/w_tommygun.mdl"
+			"attach_to_hands"	"2"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+			}
+		    "visuals"
+			{
+				"sound_single_shot"		"Weapon_Tommygun.Single"
+				"sound_burst"			"Weapon_Tommygun.SingleCrit"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.20"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"2.00"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.50"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+        }
+		"30513"
+		{
+			"name"	"TF_WEAPON_GRENADELAUNCHER_ZOMBIES"
+			"first_sale_date"	"2010/09/29"
+			"prefab"	"weapon_grenade_launcher"
+			"show_in_armory"	"0"
+		}
+		"30514"
+		{
+			"enabled"	"1"
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"Shotgun"
+			"item_type_name"	"#TF_Weapon_shotgun"
+			"item_name"	"Model 37"
+			"item_description"	"Model by Svdl"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_logname"	"model37"
+			"item_iconname"	"shotgun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_m37/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"		"models/weapons/v_models/v_model37_merc.mdl"
+			"attach_to_hands" "2"
+			"anim_slot"	"primary"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"mercenary"	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.55"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.6"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.85"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.85"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "lambda.executioner"
+				"sound_burst" "lambda.executioner"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30515"
+		{
+			"name"	"TF_WEAPON_SNIPERRIFLE_ZOMBIES"
+			"first_sale_date"	"2010/09/29"
+			"prefab"	"weapon_sniperrifle"
+			"show_in_armory"	"0"
+			"attach_to_hands"	"2"
+			"model_player"	"models/weapons/v_models/v_sniperrifle_sniper.mdl"
+			"model_world"	"models/weapons/c_models/c_sniperrifle/c_sniperrifle.mdl"
+		}
+		"30516"
+		{
+			"name"	"Drake ZOMBIES"
+			"prefab"	"weapon_melee_allclass"
+			"item_class"	"tf_weapon_katana"
+			"anim_slot" 	"melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"fryingpan"
+			"item_iconname"	"fryingpan"
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_Weapon_FryingPan"
+			"item_description"	"+10 INCHES TO PENIS"
+			"item_name"	"Drake"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_pan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/drake.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"RARITY4"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"xifier_class_remap"	"Frying Pan"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer" "1"
+				"spy" "1"
+				"civilian"	"1"
+			}
+			"attributes"
+			{
+				"attach particle effect name"
+				{
+					"attribute_class"	"set_attached_particle_name"
+					"value"	"burningplayer_flyingbits"
+				}
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"42"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"100"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"honorbound"
+				{
+					"attribute_class"	"honorbound"
+					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"drake"
+				"sound_melee_hit_world"	"drake"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}	
+		"30517"
+		{
+			"name"	"TF_WEAPON_ROCKETLAUNCHER_ZOMBIES"
+			"first_sale_date"	"2010/09/29"
+			"prefab"	"weapon_rocketlauncher"
+			"xifier_class_remap"	"rocket_launcher"
+			"show_in_armory"	"0"
+		}
