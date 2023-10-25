@@ -25298,7 +25298,7 @@ Fires....... something"
 		}
 		"9751"
 		{
-			"name"	"John RPG"
+			"name"	"RPG"
 			"item_class"	"tf_weapon_rocketlauncher_mortar"
 			"craft_class"	"" 
 			"craft_material_type"	"weapon"
@@ -25358,7 +25358,7 @@ Fires....... something"
 			}
 			"attributes"
 			{
-			    "Blast radius increased"
+			        "Blast radius increased"
 				{
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"1.5"
@@ -25381,7 +25381,7 @@ Fires....... something"
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"3"
+					"value"	"2.5"
 				}
 				"rocket guide display"
 				{
@@ -25398,7 +25398,7 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_primary"
 					"value" "0.03"
 				}
-				"damage penalty hidden"
+								"damage penalty hidden"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.63"
@@ -37906,7 +37906,7 @@ Fires....... something"
 		{
 			"name"	"The raygun!!"
 			"first_sale_date"	"2011/07/13"
-			"item_class"	"fc_weapon_raygun"
+			"item_class"	"tf_weapon_pistol"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"capabilities"
@@ -37952,6 +37952,16 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.9"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"13"
+				}
 				"energy weapon penetration"
 				{
 					"attribute_class"	"energy_weapon_penetration"
@@ -37962,15 +37972,15 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"	"1.30"
 				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.80"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"2.50"
+					"value"	"1.72"
+				}
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value" "1"
 				}
 			}
 			"visuals"
