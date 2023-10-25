@@ -19922,25 +19922,30 @@
 			"baseitem"	"1"
 			"attributes"
 			{
-				"clip size bonus HIDDEN"
+				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.8"
 				}
-				"fire rate bonus HIDDEN"
+				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.75"
 				}
-				"spread penalty HIDDEN"
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"2"
+				}
+				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value"	"1.80"	
 				}
-				"maxammo secondary increased HIDDEN"
+				"mod_recoil_angle"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"2"
+					"attribute_class"	"mod_recoil_angle"
+					"value" "1"
 				}
 			}
 			"used_by_classes"
@@ -20061,6 +20066,11 @@
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"				"2"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "1"
 				}
 			}
 		}
@@ -20889,25 +20899,20 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.75"
 				}
-				"damage bonus HIDDEN"
+				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
 					"value" "2"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.8"
 				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0.4"
-				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class"	"mult_spread_scales_consecutive"
-					"value"				"0.8"
 				}
 				"maxammo primary reduced"
 				{
@@ -28236,7 +28241,7 @@ Fires....... something"
 		"9802"  
 		{
 			"name"	"John CSS AK47"
-			"item_class"	"tf_weapon_syringegun_medic"
+			"item_class"	"tf_weapon_smg_primary"
 			"baseitem" "0"
 			"tags"
 			{
@@ -28269,20 +28274,25 @@ Fires....... something"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"clip size penalty HIDDEN"
+				"revolver use hit locations"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.75"
-				}
-				"restore health on kill"
-				{
-					"attribute_class" 	"restore_health_on_kill"
-					"value" "5"
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
 				}
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "2.00"
+					"value" "1.50"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.2"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class"	"mult_spread_scales_consecutive"
+					"value"				"1"
 				}
 				"override projectile type"
 				{
@@ -28293,6 +28303,16 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.90"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
 				}
 			}
 			"static_attrs"
@@ -28410,7 +28430,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "2"
+					"value" "3"
 				}
             }
             "static_attrs"
@@ -28477,35 +28497,45 @@ Fires....... something"
             "drop_sound"        "ui/item_heavy_gun_drop.wav"
             "attributes"
             {
+				"scattergun has knockback"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
+				}
 				"maxammo primary increased"
 				{
-				"attribute_class"	"mult_maxammo_primary"
-				"value"	"3"
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"3"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "2"
 				}
 				"clip size bonus"
 				{
-				"attribute_class"	"mult_clipsize"
-				"value"	"4"
+					"attribute_class"	"mult_clipsize"
+					"value"	"4"
 				}
 				"damage penalty"
 				{
-				"attribute_class"	"mult_dmg"
-				"value"	"0.6"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.7"
 				}
 				"spread penalty"
 				{
-				"attribute_class"	"mult_spread_scale"
-				"value"	"1.4"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.5"
 				}
 				"move speed penalty"
 				{
-				"attribute_class"	"mult_player_movespeed"
-				"value"	"0.7"
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.7"
 				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "1"
+					"value" "10"
 				}
 
             }
@@ -28870,7 +28900,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "5"
+					"value" "10"
 				}
 				"maxammo secondary reduced"
 				{
