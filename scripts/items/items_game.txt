@@ -19490,18 +19490,23 @@
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.4"
+					"value"	"1.50"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.6"
+					"value"	"1.5"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.60"
+					"value"	"1.3"
 				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_mult_bullets_per_shot"
+					"value" "0.75"
+                }
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
@@ -20050,7 +20055,7 @@
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"1.5"
+					"value"	"1.5	"
 				}
 				"weapon spread bonus"
 				{
@@ -20085,7 +20090,7 @@
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "1"
+					"value" "0.3"
 				}
 			}
 		}
@@ -24284,7 +24289,7 @@ Fires....... something"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.50"
+					"value"	"0.75"
 				}
 				"maxammo secondary increased"
 				{
@@ -24299,7 +24304,12 @@ Fires....... something"
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.18"
+					"value"	"1.10"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.10"
 				}
 			}
 			"static_attrs"
@@ -25195,12 +25205,12 @@ Fires....... something"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.50"
+					"value" "0.80"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "2"
+					"value" "3"
 				}
 				"clip size penalty"
 				{
@@ -25216,6 +25226,11 @@ Fires....... something"
 				{
 					"attribute_class"	"set_no_reload_single"
 					"value" "1"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"3.00"
 				}
 			}
 			"visuals"
@@ -25378,6 +25393,11 @@ Fires....... something"
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"1.5"
 				}
+				"self dmg push force increased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value"	"1.8"
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -25396,7 +25416,7 @@ Fires....... something"
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"2.5"
+					"value"	"3"
 				}
 				"rocket guide display"
 				{
@@ -25411,7 +25431,7 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.03"
+					"value" "0.04"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -25550,37 +25570,37 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.70"
-                                }
+                }
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "0.40"
-                                }
+                }
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.70"
-                                }
+                }
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
 					"value" "0.65"
-                                }
+                }
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "1.40"
-                                }
+                }
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value" "0.80"
-                                }
+                }
 				"bullets per shot hidden"
 				{
 					"attribute_class"	"mult_mult_bullets_per_shot"
 					"value" "0.50"
-                                }
+                }
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
@@ -36452,11 +36472,6 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.5"
 				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "0.3"
-				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
@@ -36641,6 +36656,11 @@ Fires....... something"
 					"attribute_class" 	"mod_cannot_backstab"
 					"value" "1"
 				}
+				"crit mod disabled hidden"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
 			}
 			"visuals"
 			{
@@ -36816,10 +36836,20 @@ Fires....... something"
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"1.10"
 				}
+				"self dmg push force increased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value"	"1.8"
+				}
 				"cancel falling damage"
 				{
 					"attribute_class"	"cancel_falling_damage"
 					"value" "1"
+				}
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.50"
 				}
             }
 			"static_attrs"
@@ -36956,7 +36986,7 @@ Fires....... something"
 				"damage bonus hidden"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "8.70"
+					"value" "6.50"
 				}
 				"mult_spread_scales_consecutive"
 				{
@@ -36966,12 +36996,17 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"4.5"
+					"value"				"5.5"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"	"0.20"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.20"
 				}
 				"crit mod disabled"
 				{
@@ -36987,8 +37022,8 @@ Fires....... something"
 			"visuals"
 			{
 				"sound_reload"		"Weapon_Revolver.WorldReload"
-				"sound_single_shot"	"Weapon_Enforcer.Single"
-				"sound_burst"		"Weapon_Enforcer.SingleCrit"
+				"sound_single_shot"	"Weapon_Revolver.Single"
+				"sound_burst"		"Weapon_Revolver.SingleCrit"
 			}
 		}
 		"30143"
