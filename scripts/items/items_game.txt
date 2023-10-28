@@ -4924,21 +4924,6 @@
 				"weapon_stattrak_module_scale"			"1"
 				"min_viewmodel_offset"					"10 -3 -10"
 			}
-			"attributes"
-			{
-			
-				"damage bonus vs burning"
-				{
-					"attribute_class"	"mult_dmg_vs_burning"
-					"value"	"1.5"
-				}
-				"rocket specialist"
-				{
-					"attribute_class"	"rocket_specialist"
-					"value"	"2"
-				}
-				
-			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"rocketlauncher"
@@ -19495,12 +19480,12 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.5"
+					"value"	"1.55"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.3"
+					"value"	"1.35"
 				}
 				"bullets per shot hidden"
 				{
@@ -27378,12 +27363,12 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
+					"value"	"1.20"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.3"
+					"value"	"1.4"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -27475,12 +27460,12 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
+					"value"	"1.20"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.3"
+					"value"	"1.4"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -28788,7 +28773,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"john"	"1"
-				
 			}
 			"static_attrs"
 			{
@@ -28825,11 +28809,6 @@ Fires....... something"
 					"attribute_class"	"provide_on_active"
 					"value" "1"
 				}
-				"increased air control"
-				{
-					"attribute_class"	"mod_air_control"
-					"value" "10.00"
-				}
 				"move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
@@ -28843,19 +28822,9 @@ Fires....... something"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.7"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
 					"value"	"0.8"
 				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.4"
-				}
-				"crit mod disabled"
+				"crit mod disabled hidden"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
@@ -28864,11 +28833,6 @@ Fires....... something"
 				{
 					"attribute_class"	"self_mark_for_death"
 					"value"	"1"
-				}
-				"cannot pick up intelligence"
-				{
-					"attribute_class"	"cannot_pick_up_intelligence"
-					"value"				"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -28951,6 +28915,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "13"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.2"
 				}
 				"maxammo secondary reduced"
 				{
@@ -36811,10 +36780,10 @@ Fires....... something"
 			"item_name"	"Tippety Boots"
 			"item_slot"	"primary"
 			"item_description"	"Dress Sharp."
-			"image_inventory"	"backpack/workshop/player/items/soldier/mantreads/mantreads"
+			"image_inventory"	"backpack/workshop/player/items/demo/demo_booties/demo_booties"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"		"models/workshop/player/items/soldier/mantreads/mantreads.mdl"
+			"model_player"		"models/workshop/player/items/demo/demo_booties/demo_booties.mdl"
 			//we're gonna need a model of sharper boots
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
@@ -37067,7 +37036,7 @@ Fires....... something"
 				"health regen"
 				{
 					"attribute_class"	"add_health_regen"
-					"value"	"25"
+					"value"	"15"
 				}
 				"dmg taken from blast reduced"
 				{
@@ -37083,11 +37052,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_health_frompacks"
 					"value"				"0.2"
-				}
-				"dmg from melee increased"
-				{
-					"attribute_class"	"dmg_from_melee"
-					"value"	"2"
 				}
 			}
 		}
@@ -37168,6 +37132,64 @@ Fires....... something"
 					"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
 				}
 			}
+		}
+		"9958"
+		{
+			"name"	"Long Fall Boots"
+			"item_class"	"tf_wearable"
+			"baseitem" "0"
+			"enabled" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Boots"
+			"item_name"	"Long Fall Boots"
+			"item_slot"	"secondary"
+			"item_description"	"#TF_LongFallLoafers_Desc"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"image_inventory"			"backpack/player/items/scout/pn2_longfall"
+			"model_player"				"models/player/items/scout/pn2_longfall.mdl"
+			//someone get a model hack of the P2 Boots for John
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"attach_to_hands" "0"
+			"show_in_armory"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"john"  "1"
+			}
+			"attributes"
+			{
+				"increased air control"
+				{
+					"attribute_class"	"mod_air_control"
+					"value" "4.00"
+				}
+				"cancel falling damage"
+				{
+					"attribute_class"	"cancel_falling_damage"
+					"value" "1"
+				}
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.50"
+				}
+            }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound"    "ui/item_metal_weapon_pickup.wav"
+            "drop_sound"        "ui/item_metal_weapon_drop.wav"
 		}
 		"30143"
 		{
