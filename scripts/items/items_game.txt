@@ -20057,9 +20057,9 @@
 					"attribute_class"	"override_projectile_type"
 					"value"				"1"
 				}
-				"deploy time decreased"
+				"single wep deploy time decreased"
 				{
-					"attribute_class"	"mult_deploy_time"
+					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.8"
 				}
 				"maxammo secondary increased"
@@ -20873,18 +20873,18 @@
 			{
 				"dmg taken from bullets reduced"
 				{
-					"attribute_class"	"mult_dmgtaken_from_bullets
-					"value"	"0.70"
+					"attribute_class"	"mult_dmgtaken_from_bullets"
+					"value"	"0.80"
 				}
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.90"
+					"value"	"0.80"
 				}
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.62"
+					"value"	"0.80"
 				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
@@ -21141,11 +21141,6 @@
 			}
 			"attributes"
 			{
-				"self dmg push force increased"
-				{
-					"attribute_class"	"mult_dmgself_push_force"
-					"value"	"1.5"
-				}
 				"damage force increase"
 				{
 					"attribute_class"	"damage_force_reduction"
@@ -21154,7 +21149,7 @@
 				"airblast vulnerability multiplier"
 				{
 					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value" "1.2"
+					"value" "1.3"
 				}
             }
 			"mouse_pressed_sound"	"items/kleiner_select.wav"
@@ -25429,11 +25424,6 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.25"
 				}
-				"blast dmg to self increased"
-				{
-					"attribute_class"	"blast_dmg_to_self"
-					"value"	"10.99"
-				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -28728,7 +28718,7 @@ Fires....... something"
 				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
 				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
 				"sound_melee_miss"		"Weapon_StunStick.Melee_Miss"
-				"sound_burst"		"Weapon_StunStick.Swing"
+				"sound_burst"			"Weapon_StunStick.Swing"
 			"animation_replacement"
 			{
 					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
@@ -28747,33 +28737,18 @@ Fires....... something"
             {
 				"slow enemy on hit major"
 				{
-				"attribute_class"	"mult_onhit_enemyspeed_major"
-				"value"	"3"
-				}
-				"damage bonus"
-				{
-				"attribute_class"	"mult_dmg"
-				"value"	"1.2"
+					"attribute_class"	"mult_onhit_enemyspeed_major"
+					"value"	"2"
 				}
 				"dmg bonus vs buildings"
 				{
 					"attribute_class"	"mult_dmg_vs_buildings"
 					"value"	"1.50"
 				}
-				"dmg pierces resists absorbs"
-				{
-					"attribute_class"	"mod_pierce_resists_absorbs"
-					"value"				"1"
-				}	
 				"crit mod disabled"
 				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
-				}
-				"cannot backstab HIDDEN"
-				{
-					"attribute_class" 	"mod_cannot_backstab"
-					"value" "1"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -28865,7 +28840,12 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.8"
 				}
-				"crit mod disabled hidden"
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.4"
+				}
+				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
@@ -31259,7 +31239,7 @@ Fires....... something"
 				"sound_melee_hit"		"Weapon_StunStick.Melee_Hit"
 				"sound_melee_hit_world"	"Weapon_StunStick.Melee_HitWorld"
 				"sound_melee_miss"		"Weapon_StunStick.Melee_Miss"
-				"sound_burst"		"Weapon_StunStick.Swing"
+				"sound_burst"			"Weapon_StunStick.Swing"
 			"animation_replacement"
 			{
 					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
@@ -31278,8 +31258,8 @@ Fires....... something"
             {
 				"slow enemy on hit major"
 				{
-				"attribute_class"	"mult_onhit_enemyspeed_major"
-				"value"	"2"
+					"attribute_class"	"mult_onhit_enemyspeed_major"
+					"value"	"2"
 				}
 				"dmg bonus vs buildings"
 				{
@@ -31288,23 +31268,23 @@ Fires....... something"
 				}
 				"damage bonus"
 				{
-				"attribute_class"	"mult_dmg"
-				"value"	"1.2"
+					"attribute_class"	"mult_dmg"
+					"value"	"1.2"
 				}
 				"dmg pierces resists absorbs"
 				{
 					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"				"1"
-				}	
+				}					
 				"fire rate penalty"
 				{
-				"attribute_class"	"mult_postfiredelay"
-				"value"	"1.8"
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.8"
 				}
 				"crit mod disabled"
 				{
-				"attribute_class"	"mult_crit_chance"
-				"value"	"0"
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -36263,6 +36243,31 @@ Fires....... something"
                     "attribute_class"    "voice_pitch_scale"
                     "value"        "0"
                 }
+				"dmg taken from blast reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"	"0.90"
+				}
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"	"0.80"
+				}	
+				"dmg taken from crit reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_crit"
+					"value"	"0.70"
+				}
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"2"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.30"
+				}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
 		}
@@ -36749,7 +36754,7 @@ Fires....... something"
 		}
 		"9952"
 		{
-			"name"	"Kevlar Vest"
+			"name"	"Bulletproof Vest"
 			"item_class"	"tf_wearable"
 			"baseitem" "0"
 			"enabled" "1"
@@ -36758,10 +36763,10 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
 			}
-			"item_type_name"	"#TF_Wearable_Armor"
-			"item_name"	"Kevlar Vest"
+			"item_type_name"	"Kevlar Armor"
+			"item_name"	"Bulletproof Vest"
 			"item_slot"	"primary"
-			"item_description"	"Kevlar has many applications, ranging from bicycle tires and racing sails to bulletproof vests, all due to its high tensile strength-to-weight ratio; by this measure it is five times stronger than steel."
+			"item_description"		"Not actually bulletproof."
 			"image_inventory"		"backpack/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher"
 			//we're gonna need a model for that too
 			"image_inventory_size_w"		"128"
@@ -36785,7 +36790,7 @@ Fires....... something"
 			{
 				"dmg taken from bullets reduced"
 				{
-					"attribute_class"	"mult_dmgtaken_from_bullets
+					"attribute_class"	"mult_dmgtaken_from_bullets"
 					"value"	"0.50"
 				}
 				"damage force reduction"
