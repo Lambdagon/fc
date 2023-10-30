@@ -1899,6 +1899,43 @@
 	input SetSpawnFrequency(float) : "Sets how often (in seconds) a new NPC will be spawned."
 ]
 
+@PointClass base(BaseNPCMaker) iconsprite("editor/npc_maker.vmt") = npc_template_maker : 
+	"An entity that creates NPCs. The NPCs it creates are clones of a template NPC. NPCs are spawned around this maker's origin, or at specified destination points."
+[
+	spawnflags(Flags) = 
+	[
+		256 : "Always use radius spawn" : 0
+		512 : "Don't preload template models" : 0
+	]
+
+	TemplateName(target_destination) : "Name of template NPC" : "" : "Template NPC that this maker should be creating clones of."
+
+	Radius(float) : "Radius" : 256 : "Radius around this maker within which NPCs are to be placed. Spawned NPCs will try and find empty space within this radius to spawn."
+
+	DestinationGroup(target_destination) : "Name of Destination Group" : : "If you'd like spawned NPCs to be created at an info_npc_spawn_destination entity, enter the name of that entity here. If you have more than one destination entity by that name, the Destination Criteria will be used to select one from the group."
+	CriterionVisibility(Choices) : "Dest. Criterion: Visible to player?" : 2 : "Should the NPC try to spawn at a destination that the player can see? Only applicable if a Destination Group is being used." =
+	[
+		0 : "Yes"
+		1 : "No"
+		2 : "Don't Care"
+	]
+	CriterionDistance(Choices) : "Dest. Criterion: Distance to player?" : 2 : "Should the NPC try to spawn nearest to or farthest from the player's current location? Only applicable if a Destination Group is being used." =
+	[
+		0 : "Nearest"
+		1 : "Farthest"
+		2 : "Don't Care"
+	]
+
+	MinSpawnDistance(integer) : "Minimum spawn distance from player" : 0 : "The spawn destination node distance to the player will have to be further or equal than this value."
+
+	//Inputs
+	input SpawnNPCInRadius(void) : "Spawn an NPC somewhere within the maker's radius."
+	input SpawnNPCInLine(void) : "Spawn an NPC somewhere within a line behind the maker."
+	input SpawnMultiple(integer) : "Spawn multiple NPCs (uses destination group, else radius)."
+	input ChangeDestinationGroup(string) : "Switch to a different set of Destination entities."
+	input SetMinimumSpawnDistance(integer) : "Set the minimum spawn distance from player to destination node."
+]
+
 @BaseClass base(BaseNPC) = TalkNPC
 [
 	UseSentence(string) : "Use Sentence"
