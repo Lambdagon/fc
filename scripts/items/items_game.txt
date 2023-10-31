@@ -21001,9 +21001,11 @@
             "baseitem" "0"
             "tags"
             {
-                "can_deal_damage"            "1"
-                "can_deal_mvm_penetration_damage"    "1"
-                "can_deal_long_distance_damage"    "1"
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
             }
             "item_type_name"    "#TF_Weapon_Revolver"
             "item_name"    "The Colt Python"
@@ -37239,6 +37241,91 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"    "ui/item_metal_weapon_pickup.wav"
             "drop_sound"        "ui/item_metal_weapon_drop.wav"
+		}
+		"9959"
+		{
+			"name"	"The Annabelle"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"baseitem" "0"
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	"Hunting Rifle"
+			"item_name"	"The Annabelle"
+			"item_slot"	"primary"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_spas"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_annabelle.mdl"
+			"model_player"	"models/weapons/v_annabelle.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"item_slot"	"primary"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"item_logname"	"annabelle"
+			"item_iconname"	"annabelle"
+			"used_by_classes"
+			{
+				"john"				"1"
+			}
+			"attributes"
+			{
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"8.40"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.20"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.20"
+				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_mult_bullets_per_shot"
+					"value" "0.10"
+                }
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.34"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.24"
+				}
+			}
+			"particle_suffix"		"shotgun"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
+				"sound_double_shot"		"HL2_Weapon_Shotgun.Double"
+				"sound_burst"			"HL2_Weapon_Shotgun.Single"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
+				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
+			}
 		}
 		"30143"
 		{
