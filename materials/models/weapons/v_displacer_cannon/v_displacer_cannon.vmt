@@ -1,0 +1,48 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\v_displacer_cannon\v_displacer_cannon"
+	//"$bumpmap" "models\weapons\v_displacer_cannon\v_displacer_cannon_normal"
+	"$basemapalphaphongmask" "1"
+	
+	//"$selfillum" "1"
+	//"$selfillummask" "models\weapons\v_displacer_cannon\v_displacer_cannon_selfillum"
+	//"$selfillumtint" "{474 400 62}"
+ 
+	"$phong" "1"
+	"$phongexponent" "18"
+	//"$phongboost" "4.5"	
+	"$phongboost" ".5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 .5 1]"
+	//"$basemapalphaphongmask" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "4"	
+	"$rimlightboost" ".5"
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"Proxies"
+	{
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
+}
