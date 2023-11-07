@@ -1,0 +1,47 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\c_mk18\c_mk18"
+
+	"$phong" "1"
+	"$phongexponent" "25"
+	"$phongboost" "0.7"	
+
+//	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+
+//	"$phongfresnelranges"	"[.05 .5 1]"
+//	"$phongfresnelranges"	"[.3 .5 1]"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$basemapalphaphongmask" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "6"	
+	"$rimlightboost" "0.45"
+
+
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
+}
