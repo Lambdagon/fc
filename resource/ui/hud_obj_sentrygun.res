@@ -126,7 +126,7 @@
 			"zpos"			"1"
 			"wide"			"8"
 			"tall"			"8"
-			"visible"		"1"
+			"visible"		"0"
 			"enabled"		"1"
 			"scaleImage"	"1"	
 			"icon"			"obj_status_upgrade_1"

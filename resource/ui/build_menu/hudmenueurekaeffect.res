@@ -2,73 +2,62 @@
 {
 	"MainBackground"	
 	{
-		"ControlName"	"ImagePanel"
+		"ControlName"	"CIconPanel"
 		"fieldName"		"MainBackground"
 		"xpos"			"0"
-		"ypos"			"20"
+		"ypos"			"10"
 		"zpos"			"0"
-		"wide"			"300"
+		"wide"			"250"
 		"tall"			"170"
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"	
-		"border"		"TFThinLineBorder"
-	}
-	
-	"Divider"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"Divider"
-		"xpos"			"8"
-		"ypos"			"57"
-		"zpos"			"1"
-		"wide"			"284"
-		"tall"			"2"
-		"fillcolor"		"255 222 208 255"
+		"icon"			"hud_menu_bg"
+		"iconColor"		"255 255 255 255"
 	}
 	
 	"BuildIcon"	
 	{
-		"ControlName"	"ImagePanel"
+		"ControlName"	"CIconPanel"
 		"fieldName"		"BuildIcon"
-		"xpos"			"16"
-		"ypos"			"6"
+		"xpos"			"15"
+		"ypos"			"-8"
 		"zpos"			"1"
 		"wide"			"48"
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"	
-		"image"			"../hud/ico_build"
-		"drawColor"		"255 255 255 255"
+		"icon"			"ico_build"
+		"iconColor"		"255 255 255 255"
 	}
 	
 	"BuildIconShadow"	
 	{
-		"ControlName"	"ImagePanel"
+		"ControlName"	"CIconPanel"
 		"fieldName"		"BuildIconShadow"
-		"xpos"			"18"
-		"ypos"			"8"
+		"xpos"			"16"
+		"ypos"			"-7"
 		"zpos"			"0"
 		"wide"			"48"
 		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"	
-		"image"			"../hud/ico_build"
-		"drawColor"		"0 0 0 255"
+		"icon"			"ico_build"
+		"iconColor"		"0 0 0 255"
 	}
 	
 	"TitleLabel"
 	{	
 		"ControlName"	"CExLabel"
 		"fieldName"		"TitleLabel"
-		"font"			"HudFontGiantBold"
-		"xpos"			"70"			// align me to the left edge of the first selection
-		"ypos"			"10"
+		"font"			"HudFontGiant"
+		"xpos"			"68"			// align me to the left edge of the first selection
+		"ypos"			"8"
 		"zpos"			"2"
 		"wide"			"300"
-		"tall"			"48"
+		"tall"			"38"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -79,17 +68,17 @@
 		"brighttext"	"0"
 	}
 	
-	"TitleLabelShadow"
+	"TitleLabelDropshadow"
 	{	
 		"ControlName"	"CExLabel"
-		"fieldName"		"TitleLabelShadow"
-		"font"			"HudFontGiantBold"
+		"fieldName"		"TitleLabelDropshadow"
+		"font"			"HudFontGiant"
 		"fgcolor"		"Black"
-		"xpos"			"72"			// align me to the left edge of the first selection
-		"ypos"			"12"
+		"xpos"			"70"			// align me to the left edge of the first selection
+		"ypos"			"10"
 		"zpos"			"1"
 		"wide"			"300"
-		"tall"			"48"
+		"tall"			"38"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -99,13 +88,33 @@
 		"dulltext"		"1"
 		"brighttext"	"0"
 	}
-
+	
+	"CancelLabel"
+	{	
+		"ControlName"	"CExLabel"
+		"fieldName"		"CancelLabel"
+		"font"			"SpectatorKeyHints"
+		"xpos"			"35"
+		"ypos"			"35"
+		"zpos"			"1"
+		"wide"			"200"
+		"tall"			"13"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"#Hud_Menu_Build_Cancel"
+		"textAlignment"	"East"
+		"dulltext"		"0"
+		"brighttext"	"0"
+	}
+	
 	"available_target_1"
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"available_target_1"
-		"xpos"			"35"
-		"ypos"			"61"
+		"xpos"			"25"
+		"ypos"			"47"
 		"zpos"			"10"
 		"wide"			"100"
 		"tall"			"124"
@@ -116,8 +125,8 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"available_target_2"
-		"xpos"			"165"
-		"ypos"			"61"
+		"xpos"			"125"
+		"ypos"			"47"
 		"zpos"			"1"
 		"wide"			"100"
 		"tall"			"124"
@@ -128,8 +137,8 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"unavailable_target_1"
-		"xpos"			"35"
-		"ypos"			"61"
+		"xpos"			"25"
+		"ypos"			"47"
 		"zpos"			"1"
 		"wide"			"100"
 		"tall"			"124"
@@ -140,8 +149,8 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"unavailable_target_2"
-		"xpos"			"165"
-		"ypos"			"61"
+		"xpos"			"125"
+		"ypos"			"47"
 		"zpos"			"1"
 		"wide"			"100"
 		"tall"			"124"

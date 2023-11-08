@@ -7497,7 +7497,7 @@
 			"item_name"			"#TF_Spellbook_Basic"
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"item_quality"		"normal"
-			"baseitem"			"1"
+			"baseitem"			"0"
 			"show_in_armory"	"1"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
@@ -30934,11 +30934,11 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name" "#TF_Wearable_Hat"
-			"item_name"	"#TF_TTG_MaxsHat"
-			"item_description"	"#TF_TTG_MaxsHat_Desc"
+			"item_name"	"Max's Severed Ears"
+			"item_description"	"model from:https://gamebanana.com/mods/457757"
 			"item_slot"	"misc"
 			"item_quality"	"unique"
-			"image_inventory"	"backpack/player/items/medic/medic_ttg_max"
+			"image_inventory"	"backpack/player/items/medic/medic_ttg_max_ears"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player_per_class"
@@ -39425,6 +39425,124 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30522"
+		{
+			"name"	"TTG Max Hat"
+			"first_sale_date"	"2010/09/29"
+			"prefab"		"base_hat"
+			"loadondemand"	"1"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_TTG_MaxsHat"
+			"item_description"	"#TF_TTG_MaxsHat_Desc"
+			"item_slot"	"head"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/medic/medic_ttg_max"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"soldier"	"models/player/items/soldier/soldier_ttg_max.mdl"
+				"mercenary"	"models/player/items/soldier/soldier_ttg_max.mdl"
+				"scout"	"models/player/items/scout/scout_ttg_max.mdl"
+				"sniper"	"models/player/items/sniper/sniper_ttg_max.mdl"
+				"demoman"	"models/player/items/demo/demo_ttg_max.mdl"
+				"medic"	"models/player/items/medic/medic_ttg_max.mdl"
+				"heavy"	"models/player/items/heavy/heavy_ttg_max.mdl"
+				"spy"	"models/player/items/spy/spy_ttg_max.mdl"
+				"engineer" "models/player/items/engineer/engineer_ttg_max.mdl"
+				"pyro"	"models/player/items/pyro/pyro_ttg_max.mdl"
+			}
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"mercenary"	"1"
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+		}
+		"30523"
+		{
+			"name"	"Pip-Boy"
+			"prefab"		"base_misc"
+			"first_sale_date"	"2011/08/09"
+			"item_class"	"tf_wearable"
+			"loadondemand" "1"
+			"craft_material_type"	"hat"
+			"craft_class"	"hat"
+			"capabilities"
+			{
+				"nameable"			"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"item_type_name"	"#TF_Wearable_Armband"
+			"item_name"	"#TF_Pipboy"
+			"item_description"	"#TF_Pipboy_Desc"
+			"item_slot"	"misc2"
+			"equip_region"	"engineer_left_arm"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/workshop_partner/player/items/engineer/bet_pb/bet_pb"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"none"
+			"model_player"	"models/workshop_partner/player/items/engineer/bet_pb/bet_pb.mdl"
+			"used_by_classes"
+			{
+				"engineer" 		"1"
+			}
+			"attributes"
+			{
+				"has pipboy build interface"
+				{
+					"attribute_class"	"set_custom_buildmenu"
+					"value"				"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"3"									
+				}
+				"kill eater score type 2"
+				{
+					"attribute_class"	"kill_eater_score_type_2"
+					"value" 	"0"									
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
+			"drop_sound"		"ui/item_hat_drop.wav"
 		}
 		"30570"
 		{
