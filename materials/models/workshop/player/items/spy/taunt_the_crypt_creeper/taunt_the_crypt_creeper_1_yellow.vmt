@@ -1,0 +1,54 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"models/workshop/player/items/spy/taunt_the_crypt_creeper/taunt_the_crypt_creeper_1_yellow"
+	"$bumpmap"		"models/workshop/player/items/spy/taunt_the_crypt_creeper/taunt_the_crypt_creeper_1_normal"
+	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
+	"$phongexponenttexture"		"models/workshop/player/items/spy/taunt_the_crypt_creeper/taunt_the_crypt_creeper_1_phongexponent"
+	"$phong"		"1"
+	"$phongexponent"		"3.000000"
+	"$phongboost"		"90.000000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"0.100000"
+	"$rimlightboost"		"3.000000"
+	"$rimmask"		"0"
+	"$halflambert"		"1"
+	"$color2"		"{ 255 255 255 }"
+	"$bumpmapalphaphongmask"		"1"
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+	"$phongalbedotint"		"1"
+	">=DX90"
+	{
+		"$selfillum"		"0"
+	}
+	"proxies"
+	{
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1"		"$yellow"
+			"resultVar"		"$color2"
+		}
+	}
+}
