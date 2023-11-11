@@ -1,25 +1,42 @@
 "VertexLitGeneric"
 {
 	$baseTexture "models/weapons/lambda/c_items/c_ambassador_opt.vtf"
-	$bumpmap "models\weapons\lambda\c_items/c_ambassador_opt_normal"
-	"$normalmapalphaenvmapmask" 1
-	"$envmap" "env_cubemap"
-	"$envmaptint" "[.02 .02 .02]"
+	//$bumpmap "models\weapons\lambda\c_items/c_ambassador_opt_normal"
+	//"$normalmapalphaenvmapmask" 1
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[.02 .02 .02]"
 
 	"$phong" "1"
-	"$phongexponent" "1"
+	"$ambientocclusion" "1"
+	//commented out to use the exponent mask
+	//"$phongexponent" "2"
 	"$phongboost" "2.5"	
-	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
-	"$phongwarptexture"  "models\weapons\v_bat\v_bat_phongwarp"
-	"$phongfresnelranges"	"[.15 .2 1]"
-
-	"$lightwarptexture" "models/lightwarps/weapon_lightwarp"	
-
-	"$tempvar" "0"
 	
-	"$rimlight" "1"						
-	"$rimlightexponent" "7"				
-	"$rimlightboost" "1.5"
+	//scales up the exponent texture which usually only has about 120 levels of exponent
+	"$phongexponentfactor"  "150"
+	"$phongalbedotint" "1"
+	
+	"$lightwarptexture" "models/lightwarps/softened_weapon_lightwarp"
+			
+	"$phongfresnelranges"	"[.3 .5 3]"
+	"$halflambert" "1"
+	"$glowcolor" "1"
+	
+	"$envmap" "cubemaps/cubemap_gold001"
+	"$envmaptint" "[2.5 2.5 1.15]"
+	
+	"$tempvar" "0"
+
+	//commented out to use the exponent mask
+	//"$basephongexponent" "15"
+	//"$basephongboost" "3"
+
+	"$basemapalphaphongmask" "1"
+	
+	"$rimlight" "0"						
+	"$rimlightexponent" "1"				
+	"$rimlightboost" "2.25"
+	"$rimmask" "1"
 	
 
 	// Cloaking
@@ -73,5 +90,5 @@
 	
 		"WeaponSkin" {
 		}
-}
+	}
 }
