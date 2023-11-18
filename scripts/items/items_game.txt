@@ -2220,7 +2220,6 @@
 			"used_by_classes"
 			{
 				"spy"	"1"
-				"agent"	"1"
 			}
 			"visuals"
 			{
@@ -36427,11 +36426,6 @@ Fires....... something"
 					"attribute_class"	"see_enemy_health"
 					"value"	"1"
 				}
-				"damage bonus while disguised"
-				{
-					"attribute_class" 	"mult_dmg_disguised"
-					"value" "1.50"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -36507,7 +36501,7 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_ambassador/parts/c_ambassador_opt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_ambassador/c_ambassador.mdl"
+			"model_player"	"models/workshop/weapons/c_models/c_ttg_max_gun/c_ttg_max_gun.mdl"
 			"attach_to_hands" "1"
 			"inspect_panel_dist" "32"
 			"used_by_classes"
@@ -36528,7 +36522,7 @@ Fires....... something"
 				"damage bonus while disguised"
 				{
 					"attribute_class" 	"mult_dmg_disguised"
-					"value" "1.30"
+					"value" "1.40"
 				}
 				"revolver use hit locations"
 				{
@@ -36540,20 +36534,15 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.2"
 				}
+				"clip size bonus HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.35"
+				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value" "0.90"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.4"
-				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "0.3"
 				}
 				"crit mod disabled"
 				{
@@ -36563,7 +36552,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "10"
+					"value" "8"
 				}
 			}
 			"visuals"
@@ -36660,7 +36649,7 @@ Fires....... something"
 		}
 		"9951"
 		{
-		"name"	"Deep Cover"
+			"name"	"Deep Cover"
 			"item_class"	"tf_wearable"
 			"baseitem" "1"
 			"enabled" "1"
@@ -36884,11 +36873,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus while disguised"
-				{
-					"attribute_class" 	"mult_dmg_disguised"
-					"value" "1.30"
-				}
 				"revolver use hit locations"
 				{
 					"attribute_class"	"set_weapon_mode"
@@ -36897,17 +36881,22 @@ Fires....... something"
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"0.8"
+					"value"	"0.4"
 				}
 				"damage bonus hidden"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "1.20"
+					"value" "1.30"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.65"
 				}
 				"mult_spread_scales_consecutive"
 				{
 					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "0.3"
+					"value" "1"
 				}
 				"crits_become_minicrits"
 				{
@@ -36922,7 +36911,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "10"
+					"value" "5"
 				}
 				
 			}
@@ -36939,8 +36928,7 @@ Fires....... something"
 		{
 			"name"						"Agent Revolver"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_smg"
-			//this sucks??? someone fix agent revolvers
+			"item_class"				"tf_weapon_revolver"
 			"item_logname"				"enforcer"
 			"item_iconname"				"enforcer"
 			"item_type_name"			"#TF_Weapon_Revolver"
@@ -36968,11 +36956,6 @@ Fires....... something"
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"damage bonus hidden"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "6.50"
-				}
 				"mult_spread_scales_consecutive"
 				{
 					"attribute_class" 	"mult_spread_scales_consecutive"
@@ -36981,12 +36964,12 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"5.5"
+					"value"				"1.5"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"0.20"
+					"value"	"0.80"
 				}
 				"Reload time increased"
 				{
@@ -37071,6 +37054,11 @@ Fires....... something"
 					"attribute_class"	"mult_health_frompacks"
 					"value"				"0.2"
 				}
+				"voice pitch scale"
+                {
+                    "attribute_class"    "voice_pitch_scale"
+                    "value"        "0.5"
+                }
 			}
 		}
 		"9957"
@@ -37212,7 +37200,7 @@ Fires....... something"
 		"9959"
 		{
 			"name"	"The Annabelle"
-			"item_class"	"tf_weapon_shotgun_primary"
+			"item_class"	"tf_weapon_scattergun"
 			"baseitem" "0"
 			"tags"
 			{
@@ -37259,7 +37247,7 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.20"
+					"value"	"1.30"
 				}
 				"bullets per shot hidden"
 				{
