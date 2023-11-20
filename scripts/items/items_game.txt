@@ -18908,6 +18908,7 @@
 				"soldier"	"1"
 				"demoman"	"1"
 				"civilian"	"1"
+				"agent"		"1"
 			}
 			"visuals"
 			{
@@ -36524,7 +36525,7 @@ Fires....... something"
 				"damage bonus while disguised"
 				{
 					"attribute_class" 	"mult_dmg_disguised"
-					"value" "1.40"
+					"value" "1.30"
 				}
 				"revolver use hit locations"
 				{
@@ -36840,7 +36841,6 @@ Fires....... something"
 			"name"	"Unsilenced Luger"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_pistol"
-			"prefab"	"weapon_pistol"
 			"craft_class"	""
 			"craft_material_type"		""
 			"capabilities"
@@ -36934,7 +36934,7 @@ Fires....... something"
 			"item_logname"				"enforcer"
 			"item_iconname"				"enforcer"
 			"item_type_name"			"#TF_Weapon_Revolver"
-			"item_name"					"The SNB-NS"
+			"item_name"					"Mr. Snub"
 			"item_quality"				"unique"
 			"item_slot"					"secondary"
 			"anim_slot"					"secondary"
@@ -36953,40 +36953,30 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"revolver use hit locations"
+				"damage bonus"
 				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "1"
+					"attribute_class"	"mult_dmg"
+					"value"				"1.30"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"1.5"
 				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.80"
-				}
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
 					"value"	"1.20"
 				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "25"
+					"value" "30"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"1.50"
 				}
 			}
 			"visuals"
@@ -36995,6 +36985,8 @@ Fires....... something"
 				"sound_single_shot"	"Weapon_Revolver.Single"
 				"sound_burst"		"Weapon_Revolver.SingleCrit"
 			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"9956"
 		{
@@ -37044,7 +37036,7 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.75"
+					"value"	"0.70"
 				}
 				"max health additive penalty"
 				{
