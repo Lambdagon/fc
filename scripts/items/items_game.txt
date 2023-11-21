@@ -36222,12 +36222,7 @@ Fires....... something"
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.70"
-				}	
-				"dmg taken from crit reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"0.70"
+					"value"	"0.50"
 				}
 				"damage force reduction"
 				{
@@ -36521,6 +36516,11 @@ Fires....... something"
 				{
 					"attribute_class"	"see_enemy_health"
 					"value"	"1"
+				}
+				"has silencer"
+				{
+					"attribute_class"	"has_silencer"
+					"value" "1"
 				}
 				"damage bonus while disguised"
 				{
@@ -36956,7 +36956,12 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"1.30"
+					"value"				"1.35"
+				}
+				"damage causes airblast"
+				{
+					"attribute_class"	"damage_causes_airblast"
+					"value" "20"
 				}
 				"fire rate penalty"
 				{
@@ -36966,7 +36971,7 @@ Fires....... something"
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"1.20"
+					"value"	"1.30"
 				}
 				"mod_recoil_angle"
 				{
@@ -36976,14 +36981,34 @@ Fires....... something"
 				"dmg falloff increased"
 				{
 					"attribute_class"	"mult_dmg_falloff"
-					"value"	"1.50"
+					"value"	"1.60"
 				}
 			}
 			"visuals"
 			{
-				"sound_reload"		"Weapon_Revolver.WorldReload"
-				"sound_single_shot"	"Weapon_Revolver.Single"
-				"sound_burst"		"Weapon_Revolver.SingleCrit"
+				"sound_reload"			"Weapon_Revolver.WorldReload"
+				"sound_single_shot"		"Weapon_Revolver.Single"
+				"sound_burst"			"Weapon_Revolver.SingleCrit"
+                "sound_empty"           "HL2_Weapon_Shotgun.Empty"
+                "sound_reload"          "Weapon_357.Reload"
+                "sound_special1"        "Weapon_357.Single"
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
+					"ACT_VM_DRAW"	"ACT_SECONDARY_VM_DRAW_2"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK_2"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE" "ACT_MP_PUSH_STAND_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE""ACT_MP_PUSH_CROUCH_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"	"ACT_MP_PUSH_SWIM_SECONDARY"
+					"ACT_VM_RELOAD"	"ACT_SECONDARY_VM_RELOAD_2"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY_2"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY_2"
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY_2"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY_2"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -37024,7 +37049,7 @@ Fires....... something"
 			{
 				"john"	"1"
 			}
-			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
+			"mouse_pressed_sound"	"barney/coverme.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 			"attributes"
 			{
@@ -37051,7 +37076,7 @@ Fires....... something"
 				"voice pitch scale"
                 {
                     "attribute_class"    "voice_pitch_scale"
-                    "value"        "0.5"
+                    "value"        "0.85"
                 }
 			}
 		}
@@ -50710,6 +50735,36 @@ Fires....... something"
 			"hidden"	"0"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"10043"
+		{
+			"name"	"has silencer"
+			"attribute_class"	"has_silencer"
+			"description_string"	"Speed and damage boosted as health gets lower"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"10044"
+		{
+			"name"	"silenced model"
+			"attribute_class"	"silenced_model"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"10045"
+		{
+			"name"	"unsilenced model"
+			"attribute_class"	"unsilenced_model"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
 		}
 	}
 	"attribute_controlled_attached_particles"
