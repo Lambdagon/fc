@@ -20141,8 +20141,8 @@
 				"scout"	"1"
 				"engineer"	"1"
 			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 			"xifier_class_remap"	"TTG Max Pistol"
 			"attributes"
 			{
@@ -20154,19 +20154,34 @@
 				"damage bonus vs burning"
 				{
 					"attribute_class"	"mult_dmg_vs_burning"
-					"value"	"1.15"
+					"value"	"1.30"
 				}
 				"dmg penalty vs nonburning"
 				{
 					"attribute_class"	"mult_dmg_vs_nonburning"
-					"value"	"0.7"
+					"value"	"0.20"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.60"
+				}
+				"mult_spread_scales_consecutive"
+				{
+					"attribute_class" 	"mult_spread_scales_consecutive"
+					"value" "1"
 				}
 				"attach particle effect name"
 				{
 					"attribute_class"	"set_attached_particle_name"
 					"value"	"superrare_burning1"
 				}
-			}	
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_AR2.Single"
+				"sound_burst"			"Weapon_Lugermorph.SingleCrit"
+			}				
 		}
 		"9101"
 		{
