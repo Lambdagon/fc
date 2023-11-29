@@ -32,7 +32,7 @@
 
 
 // Half-Life Server Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Sat Nov 04 19:56:50 AM
+// File generated:  Tue Nov 28 19:12:24 AM
 //
 //
 // Cvar	-	Setting
@@ -109,6 +109,13 @@ DESCRIPTION SERVER_OPTIONS
 	"mp_flashlight"
 	{
 		"#lfce_AllowFlashlight"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"mp_reset"
+	{
+		"#fc_reset"
 		{ BOOL }
 		{ "1" }
 	}
@@ -270,6 +277,14 @@ DESCRIPTION SERVER_OPTIONS
 		"#Tooltip_lfce_AllowAutoJump"
 		{ BOOL }
 		{ "1" }
+	}
+
+	"fc_bunnyjump_max_speed_factor"
+	{
+		"Autojump Speed limit"
+		"sets the AutoJump Speed Limit"
+		{ NUMBER -1 999 }
+		{ "1.2" }
 	}
 
 	"fc_duckjump"
