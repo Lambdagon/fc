@@ -16,11 +16,12 @@ testchmb_a_04
 			}
 		}
 		create {classname "info_player_coop" origin "900 125 60" values {targetname "syn_spawnpoint_01" startdisabled "1" angles "0 180 0" parentname "a04-a05_elevator_body"} }
-		create {classname "info_player_equip"
+		create {classname "lfce_weapon_progress"
 			values
 			{
-				targetname "syn_equipment_base"
-				tf_weapon_portalgun "1"
+				targetname "equipment_base"
+				portalgun_progress "1"
+				physcannon_progress "0"
 			}
 		}
 		delete {targetname "a04-a05_trigger_elevator_move"}
