@@ -25,6 +25,7 @@
 			"modelname"	"models/player/saxton_hale.mdl"
 			"modelname_hwm"	"models/player/saxton_hale.mdl"
 			"skin"		"1"
+			"vcd"		"scenes/Player/saxton/low/class_select.vcd"
 						
 		}
 	}
