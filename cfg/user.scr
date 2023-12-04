@@ -1,38 +1,38 @@
 // NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
-//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
-// User options script
-//
-// Format:
-//  Version [float]
-//  Options description followed by 
-//  Options defaults
-//
-// Option description syntax:
-//
-//  "cvar" { "Prompt" { type [ type info ] } { default } }
-//
-//  type = 
-//   BOOL   (a yes/no toggle)
-//   STRING
-//   NUMBER
-//   LIST
-//
-// type info:
-// BOOL                 no type info
-// NUMBER       min max range, use -1 -1 for no limits
-// STRING       no type info
-// LIST          delimited list of options value pairs
-//
-//
-// default depends on type
-// BOOL is "0" or "1"
-// NUMBER is "value"
-// STRING is "value"
-// LIST is "index", where index "0" is the first element of the list
+			//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+			// User options script
+			//
+			// Format:
+			//  Version [float]
+			//  Options description followed by 
+			//  Options defaults
+			//
+			// Option description syntax:
+			//
+			//  "cvar" { "Prompt" { type [ type info ] } { default } }
+			//
+			//  type = 
+			//   BOOL   (a yes/no toggle)
+			//   STRING
+			//   NUMBER
+			//   LIST
+			//
+			// type info:
+			// BOOL                 no type info
+			// NUMBER       min max range, use -1 -1 for no limits
+			// STRING       no type info
+			// LIST          delimited list of options value pairs
+			//
+			//
+			// default depends on type
+			// BOOL is "0" or "1"
+			// NUMBER is "value"
+			// STRING is "value"
+			// LIST is "index", where index "0" is the first element of the list
 
 
 // Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Wed Nov 01 19:45:11 AM
+// File generated:  Thu Nov 09 01:32:39 AM
 //
 //
 // Cvar	-	Setting
@@ -71,14 +71,14 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"#TFOption_ammobucket"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"fc_muzzlelight"
 	{
 		"#TFOption_muzzlelight"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"mat_vignette_enable"
@@ -86,7 +86,7 @@ DESCRIPTION INFO_OPTIONS
 		"#LFEOption_Vignette"
 		"#LFEOption_Vignette"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"fc_dof"
@@ -114,9 +114,8 @@ DESCRIPTION INFO_OPTIONS
 	"viewmodel_fov"
 	{
 		"Viewmodel Field of View"
-		"#Tooltip_viewmodelfov_option"
 		{ SLIDER 0 100 }
-		{ "75" }
+		{ "70" }
 	}
 
 	"category2"
@@ -143,7 +142,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_autoreload"
 		"#Tooltip_autoreload"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"hud_fastswitch"
@@ -151,7 +150,7 @@ DESCRIPTION INFO_OPTIONS
 		"#GameUI_FastSwitchCheck"
 		"#Tooltip_hud_fastswitch"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
 	"tf_dingalingaling"
@@ -386,7 +385,7 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_DisableWeatherParticles"
 		"#Tooltip_DisableWeatherParticles"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 
 	"cl_disablehtmlmotd"
