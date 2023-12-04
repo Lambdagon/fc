@@ -1,4 +1,4 @@
-"classes/Randompc_blue.res"
+"classes/Randompc_red.res"
 {
 	"classNameLabel"
 	{
@@ -67,7 +67,7 @@
 		{
 			"modelname"	"models/class_menu/random_class_icon.mdl"
 			"modelname_hwm"	"models/class_menu/random_class_icon.mdl"
-			"skin" "1"
+			"skin" "0"
             "angles_x" "0"
             "angles_y" "180"
             "angles_z" "0"
