@@ -15012,6 +15012,7 @@
 				"saxton" "1"
 				"robo" "1"
 				"combine" "1"
+				"agent"	"1"
 			}
 			"attributes"
 			{
@@ -15079,6 +15080,7 @@
 				"saxton" "1"
 				"robo" "1"
 				"combine" "1"
+				"agent"	"1"
 			}
 			"attributes"
 			{
@@ -15147,6 +15149,7 @@
 				"saxton" "1"
 				"robo" "1"
 				"combine" "1"
+				"agent"	"1"
 			}
 			"attributes"
 			{
@@ -18933,7 +18936,15 @@
 				"sound_melee_miss"	"Weapon_Crowbar_OF.Miss"
 				"sound_melee_hit"	"Weapon_Crowbar_OF.HitFlesh"
 				"sound_burst"		"Weapon_Crowbar_OF.MissCrit"
-			}	
+			}
+			"attributes"
+			{
+				"dmg bonus vs breakables"
+				{
+					"attribute_class"	"mult_dmg_vs_breakables"
+					"value" "2"
+				}
+			}
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
@@ -19000,7 +19011,15 @@
 				"sound_melee_miss"	"Weapon_Crowbar_OF.Miss"
 				"sound_melee_hit"	"Weapon_Crowbar_OF.HitFlesh"
 				"sound_burst"		"Weapon_Crowbar_OF.MissCrit"
-			}	
+			}
+			"attributes"
+			{
+				"dmg bonus vs breakables"
+				{
+					"attribute_class"	"mult_dmg_vs_breakables"
+					"value" "2"
+				}
+			}			
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
@@ -19326,10 +19345,15 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.7"
 				}
+				"dmg bonus vs breakables"
+				{
+					"attribute_class"	"mult_dmg_vs_breakables"
+					"value" "2"
+				}
 				"crit mod disabled hidden"
 				{
 					"attribute_class"	"mult_crit_chance"
-					"value"	"0.5"
+					"value"	"0.6"
 				}
 			}
 			
@@ -23684,10 +23708,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.25"
 				}
-				"maxammo secondary reduced"
+				"maxammo secondary increased"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.90"
+					"value"	"1.80"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -23738,7 +23762,15 @@ Fires....... something"
 				"sound_melee_miss"	"Weapon_Crowbar_OF.Miss"
 				"sound_melee_hit"	"Weapon_Crowbar_OF.HitFlesh"
 				"sound_burst"		"Weapon_Crowbar_OF.MissCrit"
-			}	
+			}
+			"attributes"
+			{
+				"dmg bonus vs breakables"
+				{
+					"attribute_class"	"mult_dmg_vs_breakables"
+					"value" "2"
+				}
+			}			
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
@@ -23748,7 +23780,7 @@ Fires....... something"
 		}
 		"9717"
 		{
-			"name"	"The tommy Gun"
+			"name"	"The Tommy Gun"
 			"item_class"	"tf_weapon_smg"
 			"capabilities"
 			{
@@ -24215,6 +24247,7 @@ Fires....... something"
         {
             "name"    "TF_WEAPON_SHOTGUN_MERC"
             "first_sale_date"    "2010/09/29"
+			"item_class"	"tf_weapon_shotgun_primary"
             "prefab"    "weapon_shotgun"
             "baseitem"    "0"
 			"item_name"		"Shotgun"
@@ -34825,6 +34858,8 @@ Fires....... something"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/xms_santa_hat_scout.mdl"
+				"agent"		"models/player/items/all_class/xms_santa_hat_scout.mdl"
+				"robo"		"models/player/items/all_class/xms_santa_hat_scout.mdl"
 				"sniper"	"models/player/items/all_class/xms_santa_hat_sniper.mdl"
 				"soldier"	"models/player/items/all_class/xms_santa_hat_soldier.mdl"
 				"demoman"	"models/player/items/all_class/xms_santa_hat_demo.mdl"
@@ -34833,7 +34868,8 @@ Fires....... something"
 				"spy" 		"models/player/items/all_class/xms_santa_hat_spy.mdl"
 				"engineer" 	"models/player/items/all_class/xms_santa_hat_engineer.mdl"
 				"pyro" 		"models/player/items/all_class/xms_santa_hat_pyro.mdl"
-				"mercenary" 	"models/player/items/all_class/xms_santa_hat_heavy.mdl"
+				"mercenary" "models/player/items/all_class/xms_santa_hat_heavy.mdl"
+				"civilian" 	"models/player/items/all_class/xms_santa_hat_engineer.mdl"
 			}
 			"used_by_classes"
 			{
@@ -34846,7 +34882,9 @@ Fires....... something"
 				"spy" 		"1"
 				"engineer" 	"1"
 				"pyro" 		"1"
-				"mercenary" 	"1"
+				"mercenary" "1"
+				"agent"		"1"
+				"civilian"	"1"
 			}
 			"visuals"
 			{
@@ -37252,7 +37290,7 @@ Fires....... something"
 			"item_logname"				"enforcer"
 			"item_iconname"				"enforcer"
 			"item_type_name"			"#TF_Weapon_Revolver"
-			"item_name"					"Mr. Snub"
+			"item_name"					"#FC_Weapon_MrSnub"
 			"item_quality"				"unique"
 			"item_slot"					"secondary"
 			"anim_slot"					"secondary"
@@ -37379,7 +37417,7 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.70"
+					"value"	"0.60"
 				}
 				"max health additive penalty"
 				{
@@ -37600,6 +37638,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.24"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
 				}
 			}
 			"particle_suffix"		"shotgun"
@@ -39922,58 +39965,7 @@ Fires....... something"
 		}
 		"30525"
 		{
-			"name"	"The B.M.O.C."
-			"first_sale_date"	"2011/12/15"
-			"prefab"	"hat"
-			"craft_class"	""
-			"capabilities"
-			{
-				"paintable"		"1"
-			}
-			"item_name"	"#TF_Winter2011_SantaHat"
-			"item_description"	"#TF_Winter2011_SantaHat_Desc"
-			"item_type_name"		"#TF_Wearable_Holiday_Hat"
-			"image_inventory"	"backpack/player/items/all_class/xms_santa_hat_demo"
-			"propername" "1"
-			"drop_type"	"drop"
-			"model_player_per_class"
-			{
-				"scout"	"models/player/items/all_class/xms_santa_hat_scout.mdl"
-				"agent"	"models/player/items/all_class/xms_santa_hat_scout.mdl"
-				"robo"	"models/player/items/all_class/xms_santa_hat_scout.mdl"
-				"soldier"	"models/player/items/all_class/xms_santa_hat_soldier.mdl"
-				"demoman"	"models/player/items/all_class/xms_santa_hat_demo.mdl"
-				"pyro"	"models/player/items/all_class/xms_santa_hat_pyro.mdl"
-				"engineer"	"models/player/items/all_class/xms_santa_hat_engineer.mdl"
-				"sniper"	"models/player/items/all_class/xms_santa_hat_sniper.mdl"
-				"heavy"	"models/player/items/all_class/xms_santa_hat_heavy.mdl"
-				"spy"	"models/player/items/all_class/xms_santa_hat_spy.mdl"
-				"medic"	"models/player/items/all_class/xms_santa_hat_medic.mdl"
-			}
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"			"1"
-					"headphones"	"1"
-				}
-			}
-			"static_attrs"
-			{
-				"limited quantity item"		"1"
-			}
+			//was duplicated bmoc
 		}
 		"30570"
 		{
