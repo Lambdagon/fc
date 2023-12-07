@@ -13,5 +13,16 @@ hls03amrl
 				startdisabled "1"
 			}
 		}
+		
+		delete {targetname "c1a3c_collapse_mm"}
+		create {classname "multi_manager"
+			values
+			{
+				targetname "c1a3c_collapse_mm"
+				OnTrigger "hgrunt_repel_trigger,Enable,,0,-1"
+				OnTrigger "c1a3_debris,Break,,3,-1"
+				OnTrigger "bunker_glow,kill,,3,-1"
+			}
+		}
 	}
 }
