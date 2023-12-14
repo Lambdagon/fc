@@ -1,0 +1,33 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "models\workshop\weapons\c_models\c_quadball/w_quadball_grenade_yellow"
+	"$selfillum" "1"
+
+	"$phong" "1"
+	"$phongexponent" "35"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges" "[0.25 0.5 1]"
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" $selfillumtint
+			"sinemin" .1
+			"sinemax" 2.00
+			"sineperiod" 0.30
+		}
+	}
+
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"weapon_invis"
+		{
+		}
+	}
+
+}

@@ -1,0 +1,40 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "models\weapons\w_cannonball/w_cannonball_green"
+	"$selfillum" "1"
+	"$bumpmap" "models\player\shared\shared_normal"
+	"$phong" "1"
+	"$phongexponent" "35"
+	"$phongboost" "5"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges" "[0.25 0.5 1]"
+
+
+	"$rimlight" "1"
+	"$rimlightexponent" "2.5"
+	"$rimlightboost" "2"  
+
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" $selfillumtint
+			"sinemin" .1
+			"sinemax" 5.00
+			"sineperiod" 0.30
+		}
+	}
+
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"invis"
+		{
+		}
+	}
+
+}
+
