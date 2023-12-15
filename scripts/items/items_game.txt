@@ -13618,6 +13618,91 @@
 			"mouse_pressed_sound" "ui/item_boxing_gloves_pickup.wav"
 			"drop_sound" "ui/item_boxing_gloves_drop.wav"
 		}
+		"589"
+		{
+			"name"	"The Eureka Effect"
+			"first_sale_date"	"2011/12/15"
+			"item_class"	"tf_weapon_wrench"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_destroy_sappers"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Wrench"
+			"item_name"	"#TF_Wrenchmotron"
+			"item_description"	"#TF_Wrenchmotron_Desc"
+			"item_slot"	"melee"
+			"item_quality"	"unique"
+			"item_logname"	"eureka_effect"
+			"item_iconname"	"eureka_effect"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"propername"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_drg_wrenchmotron/c_drg_wrenchmotron"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"50"
+			"model_player"	"models/workshop/weapons/c_models/c_drg_wrenchmotron/c_drg_wrenchmotron.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -2 -9"				
+			}
+			"attributes"
+			{
+				"alt fire teleport to spawn"
+				{
+					"attribute_class"	"alt_fire_teleport_to_spawn"
+					"value" "1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+				"Construction rate decreased"
+				{
+					"attribute_class"	"mult_construction_value"
+					"value" "0.50"
+				}
+				"metal_pickup_decreased"
+				{
+					"attribute_class"	"mult_metal_pickup"
+					"value" "0.8"
+				}
+				"mod teleporter cost"
+				{
+					"attribute_class"	"mod_teleporter_cost"
+					"value" "0.5"
+				}
+			}
+			"visuals"
+			{
+				"attached_particlesystems"
+				{
+					"0"
+					{
+						"system"	"drg_wrenchmotron_idle"
+						"attachment" "electrode_0"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 		"593"
 		{
 			"name"	"The Third Degree"
