@@ -83,7 +83,7 @@
 		{
 			"ControlName"	"CExLabel"
 			"fieldName"		"namelabel"
-			"font"			"ItemFontNameLarge"
+			"font"			"ItemFontNameMedium"
 			"xpos"			"0"
 			"ypos"			"0"
 			"zpos"			"2"
@@ -94,7 +94,7 @@
 			"visible"		"1"
 			"enabled"		"1"
 			"labelText"		"%itemname%"
-			"textAlignment"	"south"
+			"textAlignment"	"center"
 			"fgcolor"		"235 226 202 255"
 			"centerwrap"	"1"
 		}

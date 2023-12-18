@@ -13,110 +13,73 @@
 		"visible"			"1"
 		"enabled"			"1"
 	}
-
-	"FakeBGImage"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"FakeBGImage"
-		"xpos"			"0"
-		"ypos"			"0"	
-		"zpos"			"200"		
-		"wide"			"f0"
-		"tall"			"f0"
-		"visible"		"0"
-		"enabled"		"1"
-		"image"			"../console/background03_widescreen"
-		"alpha"			"255"
-		"scaleImage"	"1"	
-	}
-
-	"Background"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"Background"
-		"xpos"			"cs-0.5"
-		"ypos"			"0"
-		"zpos"			"-200"
-		"wide"			"f0"
-		"tall"			"f0"
-		"visible"		"0"
-		"enabled"		"1"
-		"image"			""
-		"scaleImage"	"1"
-
-		if_halloween
-		{
-			"visible"		"1"
-			"image"		"../console/lfe_title_team_halloween2018"
-		}
-		if_christmas
-		{
-			"visible"		"1"
-			"image"		"../console/background_xmas2011_widescreen"
-		}		
-	}
-
-	"TFCharacterImage"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"TFCharacterImage"
-		"xpos"			"c-250"
-		"ypos"			"-80"
-		"zpos"			"-99"
-		"wide"			"600"
-		"tall"			"600"
-		"visible"		"1"
-		"enabled"		"1"
-		"scaleImage"	"1"
-	}
-
-	"Logo"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"Logo"
-		"xpos"			"30"
-		"ypos"			"30"
-		"zpos"			"1"
-		"wide"			"265"
-		"tall"			"70"
-		"visible"		"1"
-		"enabled"		"1"
-		"image"			"../logo/fc_logo"
-		"alpha"			"255"
-		"scaleImage"	"1"	
-	}
-
-	"LogoCircle"
-	{
-		"ControlName"	"CTFRotatingImagePanel"
-		"fieldName"		"LogoCircle"
-		"xpos"			"164"
-		"ypos"			"64"
-		"zpos"			"5"
-		"wide"			"30"
-		"tall"			"30"
-		"image"			"../logo/tf2_logo_icon"
-		"visible"		"0"
-		"enabled"		"0"
-	}
-
-	"MainMenuBGPanel"
+	
+"TitleBanner"
+    {
+        "ControlName"    "ImagePanel"
+        "fieldName"        "TitleBanner"
+        "xpos"            "0"
+        "ypos"            "0"
+        "wide"            "o8"
+        "tall"            "86"
+        "visible"        "1"
+        "enabled"        "1"
+        "image"            "menu_header"
+        "scaleImage"    "1"
+    }
+	
+	"Footer"
 	{
 		"ControlName"	"EditablePanel"
-		"fieldName"		"MainMenuBGPanel"
-		"xpos"			"30"
-		"ypos"			"160"
-		"zpos"			"-1"
-		"wide"			"265"
-		"tall"			"195"
+		"fieldName"		"Footer"
+		"xpos"			"0"
+		"ypos"			"r60"
+		"zpos"			"-100"
+		"wide"			"f0"
+		"tall"			"60"
 		"visible"		"1"
-		"pinCorner"		"0"
-		"autoResize"	"0"
-		"PaintBackgroundType"	"2"
-		"border"		"MainMenuBGBorder"
-		//"bgcolor_override"	"100 255 150 55"
-		"mouseinputenabled"	"0"
+		"enabled"		"1"
+		"bgcolor_override"			"46 43 42 255"
+		"tileImage"		"1"
 	}
+	
+	"FakeBGImage"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"			"FakeBGImage"
+		"xpos"				"0"
+		"ypos"				"0"
+		"zpos"				"200"
+		"wide"				"f0"
+		"tall"				"f0"
+		"visible"			"0"
+		"enabled"			"1"
+		"image"				"../console/background03_widescreen"
+		"alpha"				"255"
+		"scaleImage"		"1"
+	}
+	
+	"Logo"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"			"Logo"
+		"xpos"				"c-305"
+		"ypos"				"30"
+		"zpos"				"3"
+		"wide"				"375"
+		"tall"				"175"
+		"visible"			"0"
+		"enabled"			"1"
+		"image"				"main_menu/TF2_Classic_Logo_NoCircle"
+		"alpha"				"255"
+		"scaleImage"		"1"
+		
+		"if_inlevel"
+		{
+			"image"			"main_menu/TF2_Classic_Logo"
+		}
+	}
+	
 	"BlogPanel"
 	{
 		"ControlName"		"CTFBlogPanel"
@@ -130,145 +93,298 @@
 		"enabled"			"1"
 		"border"			"MainMenuAdvButtonDepressed"	
 	}
-
-	"BackgroundFooter"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"BackgroundFooter"
-		"xpos"			"0"
-		"ypos"			"420"
-		"zpos"			"-50"
-		"wide"			"f0"
-		"tall"			"60"
-		"visible"		"1"
-		"enabled"		"1"
-		"image"			"loadout_bottom_gradient"
-		"tileImage"		"1"
-	}				
-	"FooterLine"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"FooterLine"
-		"xpos"			"0"
-		"ypos"			"420"
-		"zpos"			"-5-"
-		"wide"			"f0"
-		"tall"			"10"
-		"visible"		"1"
-		"enabled"		"1"
-		"image"			"loadout_solid_line"
-		"scaleImage"	"1"
-	}
-	"AvatarBG"
+	
+	"MainMenuBG"
 	{
 		"ControlName"		"EditablePanel"
-		"fieldName"			"AvatarBG"
-		"xpos"				"35"
-		"ypos"				"105"
-		"zpos"				"5"
-		"wide"				"50"
-		"tall"				"50"
+		"fieldName"			"MainMenuBG"
+		"xpos"				"64"
+		"ypos"				"90"
+		"zpos"				"3"
+		"wide"				"260"
+		"tall"				"234"
 		"visible"			"1"
 		"enabled"			"1"
-		"border"			"MainMenuBGBorderAlpha"
-		"font"				"MenuMainTitle"
-		"bgcolor_override"	"105 105 105 250"
-	}
-
-	"AvatarImage"
-	{
-		"ControlName"	"CAvatarImagePanel"
-		"fieldName"		"AvatarImage"
-		"xpos"			"40"
-		"ypos"			"110"
-		"zpos"			"6"
-		"wide"			"40"
-		"tall"			"40"
-		"visible"		"1"
-		"enabled"		"1"
-		"image"			""
-		"scaleImage"		"1"	
-		"color_outline"		"52 48 45 255"
-	}	
-
-	"WelcomeBG"
-	{
-		"ControlName"		"EditablePanel"
-		"fieldName"			"WelcomeBG"
-		"xpos"				"40"
-		"ypos"				"105"
-		"zpos"				"4"
-		"wide"				"255"
-		"tall"				"50"
-		"visible"			"1"
-		"enabled"			"1"
-		"border"			"MainMenuBGBorder"
+		"bgcolor_override"	"0 0 0 210"
+		"PaintBackgroundType"	"2"
 		"font"				"MenuMainTitle"
 	}
-
-	"MenuBG"
-	{
-		"ControlName"		"EditablePanel"
-		"fieldName"			"MenuBG"
-		"xpos"				"25"
-		"ypos"				"-10"
-		"zpos"				"-100"
-		"wide"				"275"
-		"tall"				"f0"
-		"visible"			"1"
-		"enabled"			"1"
-		"border"			"AdvRoundedButtonDefault"
-		"font"				"MenuMainTitle"
-	}
-
+		
 	"WelcomeLabel"
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"			"WelcomeLabel"
-		"xpos"				"90"
-		"ypos"				"108"
+		"xpos"				"71"
+		"ypos"				"92"
 		"zpos"				"6"
-		"wide"				"190"
-		"tall"				"20"
+		"wide"				"223"
+		"tall"				"30"
 		"autoResize"		"0"
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
 		"alpha"				"255"
-		"labelText"			"#WelcomeBack2"
+		"labelText"			"#TF_Welcome"
 		"textAlignment"		"west"
-		"font"				"HudFontMediumSmallBold"
-		"fgcolor"			"AdvTextDefault"
+		//"font"				"HudFontMediumSmall"
+		"font"				"TF2MenuTitleMedium"
+		"fgcolor"			"TanLight"
+		//"bgcolor_override"	"255 0 0 128"
+		
+		"if_inlevel"
+		{
+			"visible"		"0"
+		}
 	}
-
+	
+	"AvatarBG"
+	{
+		"ControlName"		"EditablePanel"
+		"fieldName"			"AvatarBG"
+		"xpos"				"294"
+		"ypos"				"94"
+		"zpos"				"5"
+		"wide"				"24"
+		"tall"				"24"
+		"visible"			"1"
+		"enabled"			"1"
+		"border"			"MainMenuAdvBGBorderAlpha"
+		"font"				"MenuMainTitle"
+		"bgcolor_override"	"117 107 94 255"
+		
+		"if_inlevel"
+		{
+			"visible"		"0"
+		}
+	}
+	
+	"AvatarImage"
+	{
+		"ControlName"		"CAvatarImagePanel"
+		"fieldName"			"AvatarImage"
+		"xpos"				"296"
+		"ypos"				"96"
+		"zpos"				"6"
+		"wide"				"20"
+		"tall"				"20"
+		"visible"			"1"
+		"enabled"			"1"
+		"image"				""
+		"scaleImage"		"1"
+		"color_outline"		"52 48 45 255"
+		
+		"if_inlevel"
+		{
+			"visible" "0"
+		}
+	}
+	
 	"NicknameLabel"
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"			"NicknameLabel"
-		"xpos"				"90"
-		"ypos"				"125"
-		"zpos"				"5"
-		"wide"				"190"
+		"xpos"				"163"
+		"ypos"				"96"
+		"zpos"				"6"
+		"wide"				"133"
 		"tall"				"20"
 		"autoResize"		"0"
 		"pinCorner"			"0"
-		"visible"			"1"
+		"visible"			"0"
 		"enabled"			"1"
+		"alpha"				"255"
 		"labelText"			"%nickname%"
 		"textAlignment"		"west"
-		"font"				"HudFontMediumSmallBold"
-		"fgcolor"			"AdvTextDefault"
+		"font"				"TF2MenuTitle"
+		"fgcolor"			"TanLight"
+		
+		"if_inlevel"
+		{
+			"visible" "0"
+		}
+		
+		"if_longname"
+		{
+			"visible" "0"
+		}
 	}
+	// IN LEVEL START
 
+	"ResumeButton"
+	{
+		"ControlName"			"CTFButton"
+		"fieldName"				"ResumeButton"
+		//"xpos"					"35"
+		"xpos"				"70"
+		"ypos"				"92"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
+		"visible"				"0"
+		"enabled"				"1"
+		"command"			"gamemenucommand ResumeGame"
+		"labelText"			"#GameUI_GameMenu_ResumeGame"
+		"textinsetx"			"28"
+		"use_proportional_insets" "1"
+		"textAlignment"			"west"
+		"font"						"TF2MainMenuButton"
+		"defaultFgColor_override"		"TanLight"
+		"armedFgColor_override"			"TanLight"
+		"depressedFgColor_override"		"MatchmakingMenuItemTitleColor"
+		
+		"border_default"		"XboxMenuButtonDefault"
+		"border_armed"			"XboxMenuButtonArmed"
+		"border_depressed" 		"XboxMenuButtonDepressed"
+		
+		"image_drawcolor"		"TanLight"
+		"image_armedcolor"		"TanLight"
+		"image_depressedcolor"	"MatchmakingMenuItemTitleColor"
+		"xshift"				"5"
+		"yshift"				"0"
+		
+		"if_inmenu"
+		{
+			"default"			"1"
+			"navUp"				"QuitButton"
+		}
+		
+		"if_inlevel"
+		{
+			"visible" 			"1"
+			"navUp"				"ResumeButton"
+		}
+		
+		"navDown"		"ServerBrowserButton"
+		"navLeft"		"MultiplayerGameButton"
+		"navRight"		"ServerListToggleCheck"
+		
+		"SubImage"
+		{
+			"ControlName"		"ImagePanel"
+			"fieldName"		"SubImage"
+			"xpos"			"5"
+			"ypos"			"5"
+			"wide"			"18"
+			"tall"			"18"
+			"visible"		"1"
+			"enabled"		"1"
+			"image"			"icon_resume"
+			"scaleImage"		"1"
+		}
+	}
+	
+	"VoteButton"
+	{
+		"ControlName"			"CTFButton"
+		"fieldName"				"VoteButton"
+		"xpos"					"294"
+		"ypos"					"436"
+		"zpos"					"6"
+		"wide"					"30"
+		"tall"					"30"
+		"visible"				"0"
+		"enabled"				"1"
+		"command"				"callvote"
+		"labelText"				""
+		"textAlignment"			"west"
+		"font"					"TF2MainMenuButton"
+		"defaultFgColor_override"	"TanDarker"
+		"armedFgColor_override"		"TanLight"
+		"depressedFgColor_override"	"TanDarker"
+		"border_default"		"MainMenuAdvButtonDefault"
+		"border_armed"			"MainMenuAdvButtonArmed"
+		"border_depressed"		"MainMenuAdvButtonDepressed"
+		"image_drawcolor"		"TanDarker"
+		"image_armedcolor"		"TanLight"
+		"image_depressedcolor"	"TanDarker"
+		"tooltip"				"#TF_Menu_Vote"
+		
+		"if_inmenu"
+		{
+			"visible"			"0"
+		}
+		
+		"navUp"					"QuitButton"
+		"navDown"				"ServerListToggleCheck"
+		"navLeft"				"OptionsOldButton"
+		"navRight"				"MuteButton"
+		
+		"SubImage"
+		{
+			"ControlName"		"ImagePanel"
+			"fieldName"			"SubImage"
+			"xpos"				"6"
+			"ypos"				"6"
+			"wide"				"18"
+			"tall"				"18"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"icon_checkbox"
+			"scaleImage"		"1"
+		}
+	}
+	
+	"MuteButton"
+	{
+		"ControlName"			"CTFButton"
+		"fieldName"				"MuteButton"
+		"xpos"					"262"
+		"ypos"					"436"
+		"zpos"					"6"
+		"wide"					"30"
+		"tall"					"30"
+		"visible"				"0"
+		"enabled"				"1"
+		"command"				"gamemenucommand openplayerlistdialog"
+		"labelText"				""
+		"textAlignment"			"west"
+		"font"					"TF2MainMenuButton"
+		"defaultFgColor_override"	"TanDarker"
+		"armedFgColor_override"		"TanLight"
+		"depressedFgColor_override"	"TanDarker"
+		"border_default"		"MainMenuAdvButtonDefault"
+		"border_armed"			"MainMenuAdvButtonArmed"
+		"border_depressed"		"MainMenuAdvButtonDepressed"
+		"image_drawcolor"		"TanDarker"
+		"image_armedcolor"		"TanLight"
+		"image_depressedcolor"	"TanDarker"
+		"tooltip"				"#TF_Menu_Mute"
+		
+		"if_inmenu"
+		{
+			"visible"			"0"
+		}
+		
+		"navUp"					"QuitButton"
+		"navDown"				"MultiplayerGameButton"
+		"navLeft"				"VoteButton"
+		"navRight"				"ResumeButton"
+		
+		"SubImage"
+		{
+			"ControlName"		"ImagePanel"
+			"fieldName"			"SubImage"
+			"xpos"				"6"
+			"ypos"				"6"
+			"wide"				"18"
+			"tall"				"18"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"glyph_muted"
+			"scaleImage"		"1"
+		}
+	}
+	
 	"ServerBrowserButton"
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"ServerBrowserButton"
-		"xpos"					"35"
-		"ypos"					"170"
+		//"xpos"					"35"
+		"xpos"				"70"
+		"ypos"				"120"
 		"zpos"					"5"
-		"wide"					"254"
-		"tall"					"25"
+		"wide"					"248"
+		"tall"					"28"
 		"visible"				"1"
 		"enabled"				"1"
 		"bordervisible"			"1"
@@ -290,14 +406,17 @@
 			"imagewidth"		"16"	
 		}
 	}
-
-	"MultiplayerGameButton"
+	
+	"CreateServerButton"
 	{
 		"ControlName"			"CTFButton"
-		"fieldName"				"MultiplayerGameButton"
-		"xpos"					"35"
-		"ypos"					"200"
-		"zpos"					"11"
+		"fieldName"				"CreateServerButton"
+		//"xpos"					"35"
+		"xpos"				"70"
+		"ypos"				"148"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
 		"wide"					"254"
 		"tall"					"25"
 		"visible"				"1"
@@ -321,16 +440,16 @@
 			"imagewidth"		"14"
 		}	
 	}
-
+	
 	"LoadoutButton"
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"LoadoutButton"
-		"xpos"					"35"
-		"ypos"					"230"
-		"zpos"					"11"
-		"wide"					"254"
-		"tall"					"25"
+		"xpos"					"70"
+		"ypos"					"176"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
 		"visible"				"1"
 		"enabled"				"1"
 		"bordervisible"			"1"	
@@ -352,109 +471,16 @@
 			"imagewidth"		"16"	
 		}
 	}
-
-	"OptionsDialogButton"
-	{
-		"ControlName"			"CTFButton"
-		"fieldName"				"OptionsDialogButton"
-		"xpos"					"35"
-		"ypos"					"260"
-		"zpos"					"11"
-		"wide"					"224"
-		"tall"					"25"
-		"visible"				"1"
-		"enabled"				"1"
-		"bordervisible"			"1"	
-		"command"				"newoptionsdialog"
-
-		"labelText" 			"#GameUI_GameMenu_Options"
-		"xshift" 				"0"
-		"yshift" 				"-2"
-		"textAlignment"			"west"	
-		"font"					"HudFontSmallBold"
-		"border_default"		"AdvRoundedButtonDefault"
-		"border_armed"			"AdvRoundedButtonArmed"
-		"border_depressed"		"AdvRoundedButtonDepressed"
-		"paintbackground"       "0"
-
-		"SubImage"
-		{
-			"image" 			"glyph_options"
-			"imagewidth"		"16"
-		}		
-	}
-
+	
 	"AchievementsButton"
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"AchievementsButton"
-		"xpos"					"35"
-		"ypos"					"310"
-		"zpos"					"11"
-		"wide"					"124"
-		"tall"					"25"
-		"visible"				"0"
-		"enabled"				"0"
-		"bordervisible"			"1"	
-		"command"				"gamemenucommand OpenAchievementsDialog"
-
-		"labelText" 			"#GameUI_GameMenu_Achievements"
-		"xshift" 				"0"
-		"yshift" 				"-1"
-		"textAlignment"			"west"
-		"font"					"HudFontSmallBold"
-		"defaultFgColor_override"		"MainMenuTextDefault"
-		"armedFgColor_override"			"MainMenuTextArmed"
-		"depressedFgColor_override"		"MainMenuTextDepressed"
-        "paintbackground"    			"0"		
-
-		"SubImage"
-		{
-			"image" 			"glyph_achievements"
-			"imagewidth"		"16"	
-		}
-	}
-
-	"StatsButton"
-	{
-		"ControlName"			"CTFButton"
-		"fieldName"				"StatsButton"
-		"xpos"					"165"
-		"ypos"					"310"
-		"zpos"					"11"
-		"wide"					"124"
-		"tall"					"25"
-		"visible"				"0"
-		"enabled"				"0"
-		"bordervisible"			"1"	
-		"command"				"newstats"
-
-		"labelText" 			"#GameUI_GameMenu_PlayerStats"
-		"xshift" 				"0"
-		"yshift" 				"-1"
-		"textAlignment"			"west"	
-		"font"					"HudFontSmallBold"
-		"defaultFgColor_override"	"MainMenuTextDefault"
-		"armedFgColor_override"		"MainMenuTextArmed"
-		"depressedFgColor_override"	"MainMenuTextDepressed"
-        "paintbackground"    		"0"		
-
-		"SubImage"
-		{
-			"image" 			"main_menu/glyph_stats"
-			"imagewidth"		"16"
-		}
-	}
-
-	"SmallAchievementsButton"
-	{
-		"ControlName"		"CTFButton"
-		"fieldName"			"SmallAchievementsButton"
-		"xpos"					"35"
-		"ypos"					"290"
-		"zpos"					"11"
-		"wide"					"254"
-		"tall"					"25"
+		"xpos"					"70"
+		"ypos"					"204"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
 		"visible"			"1"
 		"enabled"			"1"
 		"bordervisible"		"1"
@@ -477,15 +503,15 @@
 		}
 	}
 	
-	"SmallStatsButton"
+	"StatsButton"
 	{
-		"ControlName"	"CTFButton"
-		"fieldName"		"SmallStatsButton"
-		"xpos"					"35"
-		"ypos"					"320"
-		"zpos"					"11"
-		"wide"					"254"
-		"tall"					"25"
+		"ControlName"			"CTFButton"
+		"fieldName"				"StatsButton"
+		"xpos"					"70"
+		"ypos"					"232"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
@@ -522,50 +548,48 @@
 		}				
 	}
 
-	"OptionsOldButton"
+	
+	"OptionsDialogButton"
 	{
 		"ControlName"			"CTFButton"
-		"fieldName"				"OptionsOldButton"		
-		"xpos"					"260"
+		"fieldName"				"StatsButton"
+		"xpos"					"70"
 		"ypos"					"260"
 		"zpos"					"5"
-		"wide"					"30"
-		"tall"					"25"
+		"wide"					"248"
+		"tall"					"28"
+		"visible"				"1"
 		"visible"				"1"
 		"enabled"				"1"
-		"tabPosition"			"0"
-		"bordervisible"			"1"
-		"labelText"				""
-		"font"					"HudFontSmallBold"
-		"command"				"gamemenucommand openoptionsdialog"
+		"bordervisible"			"1"	
+		"command"				"newoptionsdialog"
 
-		"labelText" 			""
+		"labelText" 			"#GameUI_GameMenu_Options"
 		"xshift" 				"0"
-		"yshift" 				"-1"
-		"tooltip" 				"#MMenu_Tooltip_OldOptions"
-		"textAlignment"			"center"
+		"yshift" 				"-2"
+		"textAlignment"			"west"	
 		"font"					"HudFontSmallBold"
-		"border_default"		"AdvRightButtonDefault"
-		"border_armed"			"AdvRightButtonArmed"
-		"border_depressed"		"AdvRightButtonDepressed"
+		"border_default"		"AdvRoundedButtonDefault"
+		"border_armed"			"AdvRoundedButtonArmed"
+		"border_depressed"		"AdvRoundedButtonDepressed"
 		"paintbackground"       "0"
 
 		"SubImage"
 		{
-			"image" 			"glyph_steamworkshop"
+			"image" 			"glyph_options"
 			"imagewidth"		"16"
-		}
+		}		
 	}
-
+	
 	"QuitButton"
 	{
 		"ControlName"			"CTFButton"
 		"fieldName"				"QuitButton"
-		"xpos"					"35"
-		"ypos"					"430"
-		"zpos"					"1"
-		"wide"					"124"
-		"tall"					"25"
+		"xpos"					"70"
+		"ypos"					"288"
+		"zpos"					"5"
+		"wide"					"248"
+		"tall"					"28"
 		"visible"				"1"
 		"enabled"				"1"
 		"bordervisible"			"1"	
@@ -592,8 +616,8 @@
 	{
 		"ControlName"		"CTFCvarToggleCheckButton"
 		"fieldName"			"MusicToggleCheck"
-		"xpos"				"c240"		//+19
-		"ypos"				"30"
+		"xpos"				"70"
+		"ypos"				"436"
 		"zpos"				"6"
 		"wide"				"32"
 		"tall"				"32"
@@ -627,13 +651,13 @@
 			"scaleImage"	"1"
 		}
 	}
-
+	
 	"RandomMusicButton"
 	{
 		"ControlName"		"CTFButton"
 		"fieldName"			"RandomMusicButton"
-		"xpos"				"c271"
-		"ypos"				"30"
+		"xpos"				"102"
+		"ypos"				"436"
 		"zpos"				"5"
 		"wide"				"32"
 		"tall"				"32"
@@ -661,13 +685,14 @@
 		}
 	}
 
+	
 	"BlogToggleCheck"
 	{
 		"ControlName"		"CTFCvarToggleCheckButton"
 		"fieldName"			"BlogToggleCheck"
-		"xpos"				"c200"
-		"ypos"				"30"
-		"zpos"				"10"
+		"xpos"				"198"
+		"ypos"				"436"
+		"zpos"				"6"
 		"wide"				"32"
 		"tall"				"32"
 		"visible"			"1"
@@ -700,7 +725,93 @@
 			"scaleImage"	"1"
 		}
 	}
+	
+	"OptionsOldButton"
+	{
+		"ControlName"			"CTFButton"
+		"fieldName"				"OptionsOldButton"
+		"xpos"					"240"
+		"ypos"					"436"
+		"zpos"					"6"
+		"wide"					"32"
+		"tall"					"32"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		""
+		"font"			"HudFontSmallBold"
+		"command"				"gamemenucommand openoptionsdialog"
+		"bordervisible"		"1"
 
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"UI/buttonclickrelease.wav"
+
+		"image_drawcolor"	"235 226 202 255"
+
+		"labelText" 		""
+		"xshift" 			"0"
+		"yshift" 			"-1"
+		"tooltip" 				"#MMenu_Tooltip_OldOptions"
+		"textAlignment"			"center"
+		"font"					"HudFontSmallBold"
+		"border_default"	"AdvRoundedButtonDefault"
+		"border_armed"		"AdvRoundedButtonArmed"
+		"border_depressed"	"AdvRoundedButtonDepressed"
+		"paintbackground"       "0"
+
+		"SubImage"
+		{
+			"image" 			"glyph_steamworkshop"
+			"scaleImage"		"1"
+			"imagewidth"		"24"
+		}		
+	}
+	
+	"CreditsButton"
+	{
+		"ControlName"	"CTFCvarToggleCheckButton"
+		"fieldName"		"CreditsButton"
+		"xpos"					"150"
+		"ypos"					"436"
+		"zpos"					"6"
+		"wide"				"32"
+		"tall"				"32"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		""
+		"font"			"HudFontSmallBold"
+		"Command"		"newcredits"
+		"bordervisible"		"1"
+
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"UI/buttonclickrelease.wav"
+
+		"image_drawcolor"	"235 226 202 255"
+
+		"labelText" 		""
+		"xshift" 			"0"
+		"yshift" 			"-1"
+		"tooltip" 			"#MMenu_Tooltip_ToggleBlog"
+		"textAlignment"		"center"
+		"font"				"MenuSmallFont"
+		"border_default"	"AdvRoundedButtonDefault"
+		"border_armed"		"AdvRoundedButtonArmed"
+		"border_depressed"	"AdvRoundedButtonDepressed"
+
+		"SubImage"
+		{
+			"image" 			"glyph_credits"
+			"scaleImage"		"1"
+			"imagewidth"		"24"
+		}	
+		"SubCheckImage"
+		{
+			"image" 		"main_menu/glyph_disabled"
+			"scaleImage"	"1"
+		}		
+	}
+	
 	"VersionLabelVerText"
 	{
 		"ControlName"		"CExLabel"
@@ -714,7 +825,7 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"labelText"			"Version: SEPTEMBER 2023"
+		"labelText"			"Version: October 2023"
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"
