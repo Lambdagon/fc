@@ -24584,6 +24584,16 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_primary"
 					"value"	"0.60"
 				}
+				"Burst Fire Size"
+				{
+					"attribute_class"	"burst_size"
+					"value"	"3"
+				}
+				"Burst Fire Delay"
+				{
+					"attribute_class"	"burst_delay"
+					"value"	"0.30"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -26386,6 +26396,16 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"	"0.45"
 				}
+				"Burst Fire Size"
+				{
+					"attribute_class"	"burst_size"
+					"value"	"3"
+				}
+				"Burst Fire Delay"
+				{
+					"attribute_class"	"burst_delay"
+					"value"	"0.30"
+				}
 			}
 			"visuals"
 			{
@@ -26470,6 +26490,16 @@ Fires....... something"
 					"attribute_class"	"mult_crit_chance"
 					"value"				"0"
 				}	
+				"Burst Fire Size"
+				{
+					"attribute_class"	"burst_size"
+					"value"	"3"
+				}
+				"Burst Fire Delay"
+				{
+					"attribute_class"	"burst_delay"
+					"value"	"0.30"
+				}
 			}
 			"visuals"
 			{
@@ -30949,13 +30979,13 @@ Fires....... something"
 			"name"	"TF_WEAPON_BUILDER"
 			"hidden"	"0"
 			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_builder"
+			"item_class"	"tf_weapon_pda_engineer_build"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"New Technology"
 			"item_name"	"Handy Little Partner"
 			"item_description" "Mann. Co approved!"
-			"item_slot"	"building"
+			"item_slot"	"pda"
 			"item_quality"	"normal"
 			"show_in_armory"	"1"
 			"baseitem" "0"
@@ -30964,8 +30994,9 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_partner/c_partner"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"1"
-			"model_player"	"models/weapons/c_models/c_toolbox/c_toolbox.mdl"
+			"attach_to_hands"	"2"
+			"model_player"	"models/weapons/v_models/v_handy_partner/v_handy_partner.mdl"
+			"model_world"	"models/weapons/w_models/w_handy_partner/w_handy_partner.mdl"
 			"used_by_classes"
 			{
 				"engineer"	"1"
@@ -30988,8 +31019,8 @@ Fires....... something"
 			{
 				"animation_replacement"
 				{
-					"ACT_VM_IDLE"	"ACT_ENGINEER_BLD_VM_IDLE"
-					"ACT_VM_DRAW"	"ACT_ENGINEER_BLD_VM_DRAW"
+					"ACT_VM_IDLE"	"ACT_ENGINEER_PDA2_VM_IDLE"
+					"ACT_VM_DRAW"	"ACT_ENGINEER_PDA2_VM_DRAW"
 				}
 			}
 		}
@@ -51456,7 +51487,7 @@ Fires....... something"
 		{
 			"name"	"has silencer"
 			"attribute_class"	"has_silencer"
-			"description_string"	"Speed and damage boosted as health gets lower"
+			"description_string"	"Has a removable supressor on ALT-FIRE"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"positive"
@@ -51477,6 +51508,24 @@ Fires....... something"
 			"description_string"	"#Attrib_DmgVsBreakable_decreased"
 			"description_format"	"value_is_percentage"
 			"effect_type"	"negative"
+		}
+		"10046"
+		{
+			"name"	"Burst Fire Size"
+			"attribute_class"	"burst_size"
+			"description_string"	"#Attrib_BurstFire_Size"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+		}
+		"10047"
+		{
+			"name"	"Burst Fire Delay"
+			"attribute_class"	"burst_delay"
+			"description_string"	"#Attrib_BurstFire_Delay"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
 		}
 	}
 	"attribute_controlled_attached_particles"
