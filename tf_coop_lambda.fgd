@@ -2512,39 +2512,76 @@
 		2 : "CP HUD"
 		3 : "Payload HUD"
 	]
+	
+	fourteammode(choices) : "4 Team Mode" : 0 : "Sets 4 team mode on." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
 
-	//ctf_overtime(choices) : "CTF Overtime" : 1 : "Allow Overtime for CTF maps." =
-	//[
-	//	0 : "No"
-	//	1 : "Yes"
-	//]
+	ctf_overtime(choices) : "CTF Overtime" : 0 : "Allow Overtime for CTF maps." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
 
 	force_dynamicnpcs(choices) : "Dynamic NPCs" : 0 : "Force Dynamic NPCs System." =
 	[
 		0 : "No"
 		1 : "Yes"
 	]
+	
+	nocustomclasses(choices) : "No Custom Classes" : 0 : "Force disables custom classes on this map." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	npc_drop_currency(choices) : "Enable NPCs drop currency" : 0 : "Enables regular NPCs to drop currency." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	npc_drop_currency_chance(float) : "NPC currency drop chance" : 0.0 : "If set to 0, fc_dropcurrency_ondeath_chance will be used instead."
 
 	input SetRedTeamRespawnWaveTime(float) : "Set the RED team's respawn wave time"
 	input SetBlueTeamRespawnWaveTime(float) : "Set the BLU team's respawn wave time"
+	input SetGreenTeamRespawnWaveTime(float) : "Set the Green team's respawn wave time"
+	input SetYellowTeamRespawnWaveTime(float) : "Set the Yellow team's respawn wave time"
 	input AddRedTeamRespawnWaveTime(float) : "Add to the RED team's respawn wave time"
 	input AddBlueTeamRespawnWaveTime(float) : "Add to the BLU team's respawn wave time"
+	input AddGreenTeamRespawnWaveTime(float) : "Add to the Green team's respawn wave time"
+	input AddYellowTeamRespawnWaveTime(float) : "Add to the Yellow team's respawn wave time"
 	input SetRedTeamGoalString(string) : "Set the RED team's goal string to show in the hud"
 	input SetBlueTeamGoalString(string) : "Set the BLU team's goal string to show in the hud"
+	input SetGreenTeamGoalString(string) : "Set the Green team's goal string to show in the hud"
+	input SetYellowTeamGoalString(string) : "Set the Yellow team's goal string to show in the hud"
 	input SetRedTeamRole(integer) : "Set RED team role, 0=none, 1=defenders, 2=attackers"
 	input SetBlueTeamRole(integer) : "Set BLU team role, 0=none, 1=defenders, 2=attackers"
+	input SetGreenTeamRole(integer) : "Set Green team role, 0=none, 1=defenders, 2=attackers"
+	input SetYellowTeamRole(integer) : "Set Yellow team role, 0=none, 1=defenders, 2=attackers"
 	input AddRedTeamScore(integer) : "Add to the RED team score (can be a negative number)"
 	input AddBlueTeamScore(integer) : "Add to the BLU team score (can be a negative number)"
+	input AddGreenTeamScore(integer) : "Add to the Green team score (can be a negative number)"
+	input AddYellowTeamScore(integer) : "Add to the Yellow team score (can be a negative number)"
 	//input SetRequiredObserverTarget(string) : "Sets the given entity (by name) to be the required observer target for all spectators. Must be cleared to allow spectators to cycle through targets normally again."
 	//input SetStalemateOnTimelimit(bool) : "Determines whether mp_timelimit can end the match in the middle of a round."
 	input SetRedKothClockActive(void) : "Set the RED team clock active for KOTH maps."
 	input SetBlueKothClockActive(void) : "Set the BLU team clock active for KOTH maps."
+	input SetGreenKothClockActive(void) : "Set the Green team clock active for KOTH maps."
+	input SetYellowKothClockActive(void) : "Set the Yellow team clock active for KOTH maps."
 	input SetCTFCaptureBonusTime(float) : "Set the length (in seconds) of team crit time for CTF captures. 0 = none"
 	input PlayVORed(string) : "Play the given sound entry via the VO channel"
 	input PlayVOBlue(string) : "Play the given sound entry via the VO channel"
+	input PlayVOGreen(string) : "Play the given sound entry via the VO channel"
+	input PlayVOYellow(string) : "Play the given sound entry via the VO channel"
 	input PlayVO(string) : "Play the given sound entry via the VO channel"
-	//input HandleMapEvent(string) : "Handles map events. This will be different events for different maps."
-	//input SetCustomUpgradesFile(string) : "Specifies the path relative to the game directory to the upgrades file to be used."
+	
+	input HandleMapEvent(string) : "Handles map events. This will be different events for different maps."
+	input SetCustomUpgradesFile(string) : "Specifies the path relative to the game directory to the upgrades file to be used."
+	input SetRoundRespawnFreezeEnabled(integer) : "Enable/disable the player movement freeze period after a round begins."
+	input SetMapForcedTruceDuringBossFight(bool) : "Enable/disable truce between the teams during a fight with Monoculus or Merasmus."
 
 	input InputSetTimeScale(float) : "Set server timescale."
 	input SpawnBoss(void) : "Spawn Dynamic NPC's Bosses."
@@ -2556,6 +2593,14 @@
 
 	output IsHL2BetaEnabled(void) : "Fired when sv_hl2_beta is enabled."
 	output IsDynamicNPCEnabled(void) : "Fired when sv_dynamicnpcs is enabled."
+	
+	output OnStateEnterBetweenRounds(void) : "Fired when entering the between-rounds state (MvM and Competitive)."
+	output OnStateEnterPreRound(void) : "Fired when entering the pre-round state (just before round running)."
+	output OnStateExitPreRound(void) : "Fired when exiting the pre-round state (just before round running)."
+	output OnStateEnterRoundRunning(void) : "Fired when entering the round-running state."
+	//output OnMatchSummaryStart(void) : "Fired when the match summary begins and players are spawned on stage."
+	output OnTruceStart(void) : "Sent when a truce starts."
+	output OnTruceEnd(void) : "Sent when a truce ends."
 ]
 
 @PointClass base(Targetname, Parentname, TeamNum, EnableDisable, Angles) studio("models/player/heavy.mdl") = info_player_teamspawn :
