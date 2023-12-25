@@ -3587,6 +3587,137 @@
 	output OnDestroyed(void) : "Fired when this entity is destroyed."
 ]
 
+@PointClass base(Targetname) = bot_roster : "Entity specifies what classes TFBots can choose"
+[
+	team(choices) : "Team" : "auto" : "Team" =
+	[
+		"auto" : "Any"
+		"red" : "Red"
+		"blue" : "Blue"
+		"green" : "Green"
+		"yellow" : "Yellow"
+	]
+
+	allowClassChanges(choices) : "Allow Class Changes" : 1 : "Allow TFBots to choose a new class when they respawn." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	allowScout(choices) : "Allow Scout" : 1 : "Allow TFBots to choose Scouts as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowSniper(choices) : "Allow Sniper" : 1 : "Allow TFBots to choose Snipers as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowSoldier(choices) : "Allow Soldier" : 1 : "Allow TFBots to choose Soldiers as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowDemoman(choices) : "Allow Demoman" : 1 : "Allow TFBots to choose Demoman as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowMedic(choices) : "Allow Medics" : 1 : "Allow TFBots to choose Medics as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowHeavy(choices) : "Allow Heavy" : 1 : "Allow TFBots to choose Heavy as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowPyro(choices) : "Allow Pyro" : 1 : "Allow TFBots to choose Pyro as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowSpy(choices) : "Allow Spy" : 1 : "Allow TFBots to choose Spy as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowEngineer(choices) : "Allow Engineer" : 1 : "Allow TFBots to choose Engineer as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	allowCivilian(choices) : "Allow " : 1 : "Allow TFBots to choose Civilian as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowJohn(choices) : "Allow " : 1 : "Allow TFBots to choose John as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowMercenary(choices) : "Allow " : 1 : "Allow TFBots to choose Mercenary as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowCombine(choices) : "Allow " : 1 : "Allow TFBots to choose Repressor as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowZombie(choices) : "Allow " : 1 : "Allow TFBots to choose Enforcer as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowAntlion(choices) : "Allow " : 1 : "Allow TFBots to choose Jerry as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowSaxton(choices) : "Allow " : 1 : "Allow TFBots to choose Saxton as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowRobo(choices) : "Allow " : 1 : "Allow TFBots to choose Telecon as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	allowAgent(choices) : "Allow " : 1 : "Allow TFBots to choose Agent as a class." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	// Inputs
+	input SetAllowScout(bool) : "Sets whether TFBots can choose Scouts as a class. 0 = No, 1 = Yes"
+	input SetAllowSniper(bool) : "Sets whether TFBots can choose Snipers as a class. 0 = No, 1 = Yes"
+	input SetAllowSoldier(bool) : "Sets whether TFBots can choose Soldiers as a class. 0 = No, 1 = Yes"
+	input SetAllowDemoman(bool) : "Sets whether TFBots can choose Demoman as a class. 0 = No, 1 = Yes"
+	input SetAllowMedic(bool) : "Sets whether TFBots can choose Medics as a class. 0 = No, 1 = Yes"
+	input SetAllowHeavy(bool) : "Sets whether TFBots can choose Heavy as a class. 0 = No, 1 = Yes"
+	input SetAllowPyro(bool) : "Sets whether TFBots can choose Pyro as a class. 0 = No, 1 = Yes"
+	input SetAllowSpy(bool) : "Sets whether TFBots can choose Spy as a class. 0 = No, 1 = Yes"
+	input SetAllowEngineer(bool) : "Sets whether TFBots can choose Engineer as a class. 0 = No, 1 = Yes"
+	
+	input SetAllowCivilian(bool) : "Sets whether TFBots can choose Civilian as a class. 0 = No, 1 = Yes"
+	input SetAllowJohn(bool) : "Sets whether TFBots can choose John as a class. 0 = No, 1 = Yes"
+	input SetAllowMercenary(bool) : "Sets whether TFBots can choose Mercenary as a class. 0 = No, 1 = Yes"
+	input SetAllowCombine(bool) : "Sets whether TFBots can choose Repressor as a class. 0 = No, 1 = Yes"
+	input SetAllowZombie(bool) : "Sets whether TFBots can choose Enforcer as a class. 0 = No, 1 = Yes"
+	input SetAllowAntlion(bool) : "Sets whether TFBots can choose Jerry as a class. 0 = No, 1 = Yes"
+	input SetAllowSaxton(bool) : "Sets whether TFBots can choose Saxton as a class. 0 = No, 1 = Yes"
+	input SetAllowRobo(bool) : "Sets whether TFBots can choose Telecon as a class. 0 = No, 1 = Yes"
+	input SetAllowAgent(bool) : "Sets whether TFBots can choose Agent as a class. 0 = No, 1 = Yes"
+]
+
 @SolidClass base(Trigger, Targetname, DamageTypeP) = trigger_hurt :
 	"A trigger volume that damages entities that touch it."
 [
@@ -9560,11 +9691,25 @@
 	itemid(integer) : "Item ID" : 1 : "ID of Weapon"
 	itemclassname(string) : "Item Classname" : "" : "Classname of Weapon"
 
-	//skipbaseattribute(choices) : "Skip Base Attributes" : "0" : "" =
-	//[
-	//	0 : "No"
-	//	1 : "Yes"
-	//]
+	skipbaseattribute(choices) : "Skip Base Attributes" : "0" : "" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	noweapondrop(choices) : "No Weapon Drop" : "0" : "Prevents dropping weapon in the slot that this would use." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	norotate(choices) : "Disable Rotating" : "0" : "" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	respawntime(float) : "RespawnTime" : "0.0" : "RespawnTime after being picked up."
 
 	at1(integer) : "Attributes 1" : 0 : "Index of The Attribute"
 	at2(integer) : "Attributes 2" : 0 : "Index of The Attribute"
@@ -9603,7 +9748,7 @@
 
 @PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfce_weapon_progress : 
 "'Weapon progression' disables the automatic "+
-"giveaway of weapons on the beggining of a 'round'. "+
+"giveaway of weapons on the beginning of a 'round'. "+
 "Players have to earn weapons by picking them up in the map. "+
 "This entity can also be used for automatically giving "+
 "a Gravity Gun at the beggining of a round. This is isolated "+
