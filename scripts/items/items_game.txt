@@ -7091,7 +7091,7 @@
 		}
 		"16"
 		{
-			"name"	"TF_WEAPON_SMG"
+			"name"	"TF_WEAPON_SMG_SNIPER"
 			"prefab"	"weapon_smg"
 			"capabilities"
 			{
@@ -7122,6 +7122,19 @@
 			"used_by_classes"
 			{
 				"sniper"	"1"
+			}
+			"attributes"
+			{
+				"weapon spread bonus hidden"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.75"
+				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -23116,7 +23129,7 @@ Fires....... something"
                         }
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-                }
+        }
 		"9708"
 		{
 			"enabled"	"1"
@@ -23193,78 +23206,59 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-                "9709"
+        "9709"
 		{
-			"item_class"	"tf_weapon_sniperrifle_decap"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
+			"name"	"TF_WEAPON_SMG_MEDIC"
+			"prefab"	"weapon_smg"
 			"capabilities"
 			{
 				"nameable"		"1"
 			}
 			"tags"
 			{
-				"can_deal_damage"		"1"
-				"can_deal_critical_damage"	"1"
+				"can_deal_damage"			"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"The Scopeless Bargain"
-			"item_type_name"	"Scopeless Bazaar Bargain"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Weapon_SMG"
 			"item_slot"	"primary"
+			"anim_slot"	"primary"
 			"item_quality"	"unique"
-			"item_name"			"The Scopeless Bargain"
-			"item_description"	""
+			"baseitem" "0"
+			"min_ilevel"	"1"
 			"show_in_armory"	"1"
-			"propername"	"1"
-			"item_logname"	"scopeless"
-			"item_iconname"	"scopeless"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_scopeless_bazaar"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_scopelessbazaar/c_bazaar_sniper/c_bazaar_sniper.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "32"
+			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
+            "model_world"	"models/weapons/w_models/w_smg.mdl"
+			"attach_to_hands"	"2"
 			"used_by_classes"
 			{
 				"medic"	"1"
 			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -6"
-			}
 			"attributes"
 			{
-                                "fire rate bonus"
+				"spread penalty hidden"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.60"
-                                }
-                                "maxammo primary reduced"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"1.25"
+				}
+				"damage penalty hidden"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.20"
-                                }
-                                "sniper no charge"
-				{
-					"attribute_class"	"unimplemented_mod_sniper_no_charge"
-					"value" "1"
-                                }
-				"mod max primary clip override"
-				{
-					"attribute_class"	"mod_max_primary_clip_override"
-					"value"	"-1"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.875"
 				}
 			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Bazaar_Bargain.Single"
-				"sound_burst"	"Weapon_Bazaar_Bargain.SingleCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"9710"
 		{
@@ -36617,7 +36611,7 @@ Fires....... something"
 				"increased jump height"
 				{
 					"attribute_class"	"mod_jump_height"
-					"value" "1.25"
+					"value" "1.35"
 				}
 				"cancel falling damage"
 				{
@@ -38224,6 +38218,7 @@ Fires....... something"
 			"item_description" "The shotgun is back."
 			"item_type_name"	"Medic Shotgun"
             "item_slot"    "Secondary"
+			"item_quality"	"unique"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
 			"show_in_armory"	"1"
             "model_player"    "models/weapons/v_models/v_shotgun_medic.mdl"
@@ -39182,6 +39177,7 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
+			"model_world"	"models/weapons/w_models/w_smg.mdl"
 			"attach_to_hands"	"2"
 			"used_by_classes"
 			{
@@ -40143,7 +40139,6 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_grenades1"
 					"value" "1.5"
 				}
-				
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
@@ -40187,10 +40182,10 @@ Fires....... something"
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"dmg falloff reduced"
+				"reload time decreased"
 				{
-					"attribute_class"	"mult_dmg_falloff"
-					"value"				"0"
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.5"
 				}
 				"fire rate penalty HIDDEN"
 				{
@@ -40211,56 +40206,7 @@ Fires....... something"
 		}
 		"30527"
 		{
-			"name"						"#FC_Weapon_LeverGun"
-			//"prefab"					"weapon_sniperrifle"
-			"item_slot"					"secondary"
-			"anim_slot"					"primary"
-			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver_slot2"
-			"item_logname"				"hunterrifle"
-			"item_iconname"				"hunterrifle"
-			"item_type_name"			"#TF_Weapon_SniperRifle"
-			"item_name"					"#FC_Weapon_LeverGun"
-			"propername"				"1"
-			"min_ilevel"				"8"
-			"max_ilevel"				"8"
-			"image_inventory"			"backpack/weapons/w_models/w_levergun"
-			"model_world"				"models/weapons/w_models/w_levergun.mdl"
-			"model_player"				"models/weapons/v_models/v_levergun_merc.mdl"
-			"attach_to_hands"			"2"
-			"used_by_classes"
-			{
-				"mercenary"	"1"
-				"engineer"	"1"
-			}
-			"attributes"
-			{
-				"revolver use hit locations"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"dmg falloff reduced"
-				{
-					"attribute_class"	"mult_dmg_falloff"
-					"value"				"0"
-				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"3.2"
-				}
-				"clip size penalty HIDDEN"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.10"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_Levergun.Single"
-				"sound_burst" 			"Weapon_Levergun.SingleCrit"
-			}
+		//no
 		}
 		"30570"
 		{
