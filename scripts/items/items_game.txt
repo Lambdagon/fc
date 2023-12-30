@@ -17721,16 +17721,6 @@
 					"attribute_class"	"mult_airblast_cost"
 					"value"	"0.25"
 				}
-				"Burst Fire Size"
-				{
-					"attribute_class"	"burst_size"
-					"value"	"3"
-				}
-				"Burst Fire Delay"
-				{
-					"attribute_class"	"burst_delay"
-					"value"	"0.30"
-				}
 			}
 			"visuals"
 			{
@@ -40159,11 +40149,18 @@ Fires....... something"
 		"30526"
 		{
 			"name"						"#FC_Weapon_LeverGun"
-			//"prefab"					"weapon_sniperrifle"
+			"prefab"					"weapon_sniperrifle"
 			"item_slot"					"primary"
 			"anim_slot"					"primary"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver"
+			"item_class"				"tf_weapon_sniperrifle"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
 			"item_type_name"			"#TF_Weapon_SniperRifle"
@@ -40181,9 +40178,19 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"revolver use hit locations"
+				"sniper no charge but can scope"
 				{
-					"attribute_class"	"set_weapon_mode"
+					"attribute_class" 	"mod_sniper_cannot_charge"
+					"value" "1"
+				}
+				"sniper crit no scope"
+				{
+					"attribute_class"	"sniper_crit_no_scope"
+					"value" "1"
+				}
+				"no scope"
+				{
+					"attribute_class"	"mod_no_scope"
 					"value"	"1"
 				}
 				"clip size penalty HIDDEN"
@@ -40191,20 +40198,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.10"
 				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"2.2"
-				}
 				"sniper fires tracer"
  				{
 					"attribute_class"	"sniper_fires_tracer"
 					"value"	"1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
 				}
 			}
 			"visuals"
@@ -51583,6 +51580,16 @@ Fires....... something"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"neutral"
+		}
+		"10048"
+		{
+			"name"	"no scope"
+			"attribute_class"	"mod_no_scope"
+			"description_string"	"#Attrib_NoScope"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
 		}
 	}
 	"attribute_controlled_attached_particles"
