@@ -12232,7 +12232,7 @@
 				"airblast vulnerability multiplier"
 				{
 					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value"	"1.75"
+					"value"	"0.25"
 				}
 				"boots falling stomp"
 				{
@@ -15058,12 +15058,12 @@
 				"sapper health bonus"
 				{
 					"attribute_class"	"mult_sapper_health"
-					"value"				"3"								
+					"value"				"4"								
 				}
 				"sapper damage penalty"
 				{
 					"attribute_class"	"mult_sapper_damage"
-					"value" "0.70"
+					"value" "0.60"
 				}
 			}
 			"mouse_pressed_sound"	"KYS.wav"
@@ -23787,7 +23787,7 @@ Fires....... something"
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"0.8"
+					"value"	"0.75"
 				}
 				"clip size bonus"
 				{
@@ -24563,20 +24563,20 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.20"
 				}
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"2.30"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.75"
-				}
-				"no damage falloff over distance"
-				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
 					"value"	"0.80"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.75"
 				}
 				"maxammo primary reduced"
 				{
@@ -24594,12 +24594,12 @@ Fires....... something"
 					"value"	"0.30"
 				}
 			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"9736"
 		{
-		"name"    "TF_WEAPON_SHOTGUN_MERC_SECONDARY"
+			"name"    "TF_WEAPON_SHOTGUN_MERC_SECONDARY"
             "first_sale_date"    "2010/09/29"
             "prefab"    "weapon_shotgun"
 			"item_class"	"tf_weapon_shotgun_hwg"
@@ -26328,7 +26328,7 @@ Fires....... something"
 			"name"						"Fortunate Son alt"
 			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_smg"
-			"item_slot"					"secondary"
+			"item_slot"					"primary"
 			"item_quality"				"rarity2"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -26365,25 +26365,10 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.85"
 				}
-				"no damage falloff over distance"
-				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
-				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.80"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.85"
-				}
-                "no damage falloff over distance"
-				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
 				}
                 "crit mod disabled"
 				{
@@ -26420,7 +26405,7 @@ Fires....... something"
 		"9562"
 		{
 			"name"						"Fortunate Son"
-			"show_in_armory"			"1"
+			"show_in_armory"			"0"
 			"item_class"				"tf_weapon_smg"
 			"item_slot"					"secondary"
 			"item_quality"				"rarity2"
@@ -40165,11 +40150,18 @@ Fires....... something"
 		"30526"
 		{
 			"name"						"#FC_Weapon_LeverGun"
-			//"prefab"					"weapon_sniperrifle"
+			"prefab"					"weapon_sniperrifle"
 			"item_slot"					"primary"
 			"anim_slot"					"primary"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver"
+			"item_class"				"tf_weapon_sniperrifle"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
 			"item_type_name"			"#TF_Weapon_SniperRifle"
@@ -40187,20 +40179,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"revolver use hit locations"
+				"sniper no charge but can scope"
 				{
-					"attribute_class"	"set_weapon_mode"
+					"attribute_class" 	"mod_sniper_cannot_charge"
+					"value" "1"
+				}
+				"sniper crit no scope"
+				{
+					"attribute_class"	"sniper_crit_no_scope"
+					"value" "1"
+				}
+				"no scope"
+				{
+					"attribute_class"	"mod_no_scope"
 					"value"	"1"
-				}
-				"reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"2"
-				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"3.2"
 				}
 				"clip size penalty HIDDEN"
 				{
@@ -40211,11 +40203,6 @@ Fires....... something"
  				{
 					"attribute_class"	"sniper_fires_tracer"
 					"value"	"1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
 				}
 			}
 			"visuals"
@@ -51594,6 +51581,16 @@ Fires....... something"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"neutral"
+		}
+		"10048"
+		{
+			"name"	"no scope"
+			"attribute_class"	"mod_no_scope"
+			"description_string"	"#Attrib_NoScope"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
 		}
 	}
 	"attribute_controlled_attached_particles"
