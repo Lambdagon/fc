@@ -22450,25 +22450,35 @@ Fires....... something"
 					"attribute_class" 	"mult_dmg"
 					"value" "2"
 				}
+				"sniper only fire zoomed"
+				{
+					"attribute_class"	"sniper_only_fire_zoomed"
+					"value"	"1"
+				}
 				"sniper no charge but can scope"
 				{
 					"attribute_class" 	"mod_sniper_cannot_charge"
 					"value" "1"
 				}
-				"maxammo primary reduced"
-				{
-					"attribute_class" 	"mult_maxammo_primary"
-					"value" "0.55"
+				 "sniper fires tracer"
+ 				{
+					"attribute_class"	"sniper_fires_tracer"
+					"value"	"1"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.35"
 				}
- 				"sniper fires tracer"
- 				{
-					"attribute_class"	"sniper_fires_tracer"
-					"value"	"1"
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "15"
+				}
+				"spawn ammo override"
+				{
+					"attribute_class"	"mod_spawn_ammo_override"
+					"value" "15"
 				}
 				
 			}
@@ -23283,7 +23293,7 @@ Fires....... something"
         "9709"
 		{
 			"name"	"TF_WEAPON_SMG_MEDIC"
-			"prefab"	"weapon_smg"
+			//dont prefab
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -24647,10 +24657,15 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.75"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.60"
+					"attribute_class"	"max_ammo"
+					"value" "60"
+				}
+				"spawn ammo override"
+				{
+					"attribute_class"	"mod_spawn_ammo_override"
+					"value" "60"
 				}
 				"Burst Fire Size"
 				{
@@ -24670,11 +24685,11 @@ Fires....... something"
 		{
 			"name"    "TF_WEAPON_SHOTGUN_MERC_SECONDARY"
             "first_sale_date"    "2010/09/29"
-            "prefab"    "weapon_shotgun"
-			"item_class"	"tf_weapon_shotgun_hwg"
+            "prefab"    "weapon_shotgun_multiclass"
             "baseitem"    "0"
 			"item_name"		"Shotgun"
             "item_slot"    "secondary"
+			"anim_slot"    "primary"
 			"show_in_armory"	"1"
 			//this will get executed if its too good
             "model_player"    "models/weapons/v_models/v_shotgun_merc.mdl"
@@ -25792,27 +25807,17 @@ Fires....... something"
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "0.40"
-                }
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.70"
+					"value" "0.50"
                 }
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value" "0.65"
+					"value" "0.50"
                 }
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "1.40"
-                }
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.80"
                 }
 				"bullets per shot hidden"
 				{
@@ -27958,6 +27963,16 @@ Fires....... something"
 			"propername"	"0"
 			"attributes"
 			{
+				"torso scale"
+				{
+					"attribute_class"		"torso_scale"
+					"value"		"1.3"
+				}  
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0.6"
+				}
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
@@ -27968,30 +27983,15 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"	"0"
 				}
-				"maxammo grenades1 increased"
-				{
-					"attribute_class"	"mult_maxammo_grenades1"
-					"value"	"7"
-				}
-				"increased jump height"
-				{
-					"attribute_class"	"mod_jump_height"
-					"value" "2.30"
-				}
                 "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"1.50"
+					"value"	"1.30"
 				}
                 "max health additive bonus"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value"	"120"
-				}
-				"dmg taken from bullets reduced"
-				{
-					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.55"
+					"value"	"50"
 				}
 			}
 			"used_by_classes"
@@ -28105,32 +28105,32 @@ Fires....... something"
 				"SET BONUS: dmg from sentry reduced"
 				{
 					"attribute_class"	"dmg_from_sentry_reduced"
-					"value"	"0.30"
+					"value"	"0.50"
 				}
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"0.30"
+					"value"	"0.40"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
 					"value"	"0.50"
 				}
-				"dmg taken from crit reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"0.70"
-				}
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"2.80"
+					"value"	"3"
 				}
 				"dmg taken from blast increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value"	"1.30"
+				}
+				"dmg taken from crit increased"
+				{
+					"attribute_class"	"mult_dmgtaken_from_crit"
+					"value"	"1.50"
 				}
             }
 			"static_attrs"
@@ -28196,6 +28196,11 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_primary"
 					"value"	"1.30"
 				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" "0.50"
+                }
             }
 		}			
 		"9793"
@@ -29749,14 +29754,6 @@ Fires....... something"
 				"soldier"	"1"
 				"mercenary"	"1"
 				"heavy"	"1"
-			}
-			"attributes"
-			{
-				"SET BONUS: no death from headshots"
-				{
-					"attribute_class"	"no_death_from_headshots"
-					"value"	"1"
-				}
 			}
 			"visuals"
 			{
@@ -37366,8 +37363,10 @@ Fires....... something"
 			"tags"
 			{
 				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
+				"can_headshot"				"1"
+				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_deal_critical_damage"	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
@@ -37913,6 +37912,7 @@ Fires....... something"
 				"soldier"	"1"
 				"engineer" 	"1"
 				"agent"		"1"
+				"saxton"	"1"
 			}
 			"visuals"
 			{
@@ -40228,12 +40228,10 @@ Fires....... something"
 		}
 		"30526"
 		{
-			"name"						"#FC_Weapon_LeverGun"
-			"prefab"					"weapon_sniperrifle"
-			"item_slot"					"primary"
-			"anim_slot"					"primary"
-			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_sniperrifle"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
 			"tags"
 			{
 				"can_deal_damage"			"1"
@@ -40241,6 +40239,12 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
+			"name"						"#FC_Weapon_LeverGun"
+			//dont prefab
+			"item_slot"					"primary"
+			"anim_slot"					"primary"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_sniperrifle"
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
 			"item_type_name"			"#TF_Weapon_SniperRifle"
@@ -40249,6 +40253,8 @@ Fires....... something"
 			"min_ilevel"				"8"
 			"max_ilevel"				"8"
 			"image_inventory"			"backpack/weapons/w_models/w_levergun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
 			"model_world"				"models/weapons/w_models/w_levergun.mdl"
 			"model_player"				"models/weapons/v_models/v_levergun_merc.mdl"
 			"attach_to_hands"			"2"
@@ -40273,15 +40279,25 @@ Fires....... something"
 					"attribute_class"	"mod_no_scope"
 					"value"	"1"
 				}
-				"clip size penalty HIDDEN"
+				"decapitate type"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.10"
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
 				}
 				"sniper fires tracer"
  				{
 					"attribute_class"	"sniper_fires_tracer"
 					"value"	"1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0.80"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
 				}
 				"max ammo override"
 				{
@@ -40294,11 +40310,19 @@ Fires....... something"
 					"value" "25"
 				}
 			}
+			"static_attrs"
+			{
+				"weapon_stattrak_module_scale"			"0.676"
+				"min_viewmodel_offset"					"10 0 -10"
+			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_Levergun.Single"
 				"sound_burst" 			"Weapon_Levergun.SingleCrit"
 			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+			"particle_suffix"		"sniperrifle"
 		}
 		"30527"
 		{
