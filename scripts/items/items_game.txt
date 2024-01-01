@@ -26626,6 +26626,11 @@ Fires....... something"
 					"attribute_class"	"mult_projectile_speed"
 					"value"	"1.45"
 				}
+				"impulse grenade blast"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value" "3"
+				}
 				"Blast radius decreased"
 				{
 					"attribute_class"	"mult_explosion_radius"
@@ -51752,6 +51757,15 @@ Fires....... something"
 			"attribute_class"	"max_ammo"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+		}"10050"
+		{
+			"name"	"impulse grenade blast"
+			"attribute_class"	"set_detonate_mode"
+			"description_string"	"#Attrib_ExplodeOnImpact"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
 			"effect_type"	"neutral"
 			"stored_as_integer"	"1"
 		}
