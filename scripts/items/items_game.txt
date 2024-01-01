@@ -21094,7 +21094,7 @@
 		"9404"  
 		{
 			"name"	"John AR2"
-			"item_class"	"tf_weapon_syringegun_medic"
+			"item_class"	"tf_weapon_hl2_ar2"
 			"baseitem" "0"
 			"tags"
 			{
@@ -21147,11 +21147,6 @@
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "0.8"
-				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1"
 				}
 				"maxammo primary reduced"
 				{
@@ -37963,6 +37958,52 @@ Fires....... something"
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_drop.wav"
+		}
+		"9963"
+		{
+			"name"	"Enforcer's Grenade"
+			"item_class"	"tf_weapon_lunchbox_grenade"
+			"enabled"	"1"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_LunchBox"
+			"item_name"	"#TF_Unique_Achievement_EnergyDrink"
+			"item_description" "#TF_Unique_Achievement_EnergyDrink_desc"
+			"anim_slot"	"ITEM1"
+			"item_slot"	"pda"
+			"baseitem" "1"
+			"image_inventory"	"backpack/weapons/c_models/c_energy_drink/c_energy_drink"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_enforcer_grenade/v_Grenade.mdl"
+			"model_world"	"models/weapons/w_grenade.mdl"
+			"attach_to_hands"	"2"
+			"item_quality"	"normal"
+			"used_by_classes"
+			{
+				"zombiefast"	"1"
+			}
+			"visuals"
+			{
+				"sound_deploy"	"Scout.DodgeCanOpen"
+			}
+			"allowed_attributes"
+			{
+				"all_items"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"0 0 -5"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+		    }			
+			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
+			"drop_sound"		    "ui/item_soda_can_drop.wav"
 		}
 		"30143"
 		{

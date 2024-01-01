@@ -1649,6 +1649,22 @@
 		criteria ConceptPlayerTaunt IsAntlion WeaponIsAntlionClaw
 		response AntlionTauntMelee
 	}
+	
+//============================================================================================================
+
+
+// Enforcer
+//------------------------------------------------------------------------------------------------------------
+	response "EnforcerTauntGrenade"
+	{
+		scene "scenes/player/enforcer/low/taunt03.vcd" 
+	}
+
+	rule EnforcerTauntPlayer
+	{
+		criteria ConceptPlayerTaunt IsEnforcer WeaponIsEnforcerGrenade
+		response EnforcerTauntGrenade
+	}
 
 
 //============================================================================================================
