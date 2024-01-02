@@ -2846,6 +2846,14 @@
 @PointClass base(Item) studio("models/items/medkit_small.mdl") = item_healthkit_small :	"Health Kit Small" []
 @PointClass base(Item) studio("models/items/medkit_medium.mdl") = item_healthkit_medium : "Health Kit Medium" []
 
+@PointClass base(Item) size(-1 -1 -48, 1 1 1) studioprop() = item_healthkit_tiny :	
+    "Overheal health kit for players." 
+[
+	model(studio) : "Model" : "models/items/medkit_overheal.mdl" : "The model this entity should appear as. 128-character limit."
+	pickup_sound(sound): "Pickup Sound" : "" : "Sound to play when picking up this pill."
+]
+
+
 @PointClass base(Item) studio("models/items/ammopack_large.mdl") = item_ammopack_full :	"Ammo Pack Full" []
 @PointClass base(Item) studio("models/items/ammopack_small.mdl") = item_ammopack_small : "Ammo Pack Small" []
 @PointClass base(Item) studio("models/items/ammopack_medium.mdl") = item_ammopack_medium : "Ammo Pack Medium" []
