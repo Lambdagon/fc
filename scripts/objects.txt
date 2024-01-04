@@ -147,4 +147,56 @@ objects
 		BuildCount		1
 		RequiresOwnBuilder	0
 	}
+	
+// FC BUILDABLES
+
+	OBJ_CATAPULT
+	{
+		ClassName			obj_catapult
+		StatusName			"#TF_Object_Catapult"
+		BuildTime			5.5
+		MaxObjects			1
+		Cost				70
+		CostMultiplier		1
+		UpgradeCost			200
+		UpgradeDuration		1.5
+		MaxUpgradeLevel		1
+		BuilderWeaponName	"Bouncepad"
+		BuilderPlacementString	"Place on ground"
+		SelectionSlot		5
+		SelectionPosition	2
+		SapperAttachTime	0.0
+		IconActive			obj_catapult
+		IconInactive		obj_catapult
+		IconMenu			hud_menu_bouncepad_a_build
+		SolidToPlayerMovement	0
+		UseItemInfo			1
+		Viewmodel			"models/weapons/c_models/c_toolbox/c_toolbox.mdl"
+		Playermodel			"models/weapons/c_models/c_toolbox/c_toolbox.mdl"
+		DisplayPriority		2
+		HudStatusIcon		"obj_status_bouncepad"
+		VisibleInWeaponSelection 0
+		ExplodeSound		"Building_Dispenser.Explode"
+		ExplodeEffect		"ExplosionCore_buildings"
+		UpgradeSound		"Building_Sentrygun.Built"
+		BuildCount			1
+		RequiresOwnBuilder	0
+		
+		AltModes
+		{
+			AltMode0
+			{
+				StatusName	"#TF_Object_Catapult"
+				ModeName	"#TF_Bouncepad_Mode_A"
+				IconMenu	hud_menu_bouncepad_a_build
+			}
+			AltMode1
+			{
+				StatusName	"#TF_Object_Catapult"
+				ModeName	"#TF_Bouncepad_Mode_B"
+				IconMenu	hud_menu_bouncepad_b_build
+			}
+		}
+	}
+	
 }

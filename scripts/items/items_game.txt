@@ -17816,6 +17816,82 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
+		"1179"
+		{
+			"name"	"The Thermal Thruster"
+			"item_class"			"tf_weapon_rocketpack"
+			"craft_class"			"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_logname"	"rocketpack"
+			"item_iconname"	"rocketpack"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_RocketPack"
+			"item_name"			"#TF_ThermalThruster"
+			"item_description"	"#TF_ThermalThruster_Desc"
+			"item_slot"			"secondary"
+			"equip_region"		"back"
+			"anim_slot"			"ITEM4"
+			"image_inventory"	"backpack/weapons/c_models/c_rocketpack/c_rocketpack"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"60"			
+			"model_player"	"models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
+			"attach_to_hands"	"1"
+			"attach_to_hands_vm_only"	"1"
+			"extra_wearable" "models/weapons/c_models/c_rocketpack/c_rocketpack.mdl" 
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+				}
+			}
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -9"	
+				"damage force increase hidden"	"1.5"
+				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
+				"taunt attack time"		"4.7"
+				"item_meter_charge_type"						"1"
+				"item_meter_charge_rate"			"30"
+				"holster_anim_time"		"0.8"
+				"falling_impact_radius_pushback"	"1"
+				"thermal_thruster"					"1"
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"pyro"	"scenes/player/pyro/low/taunt_gasblast.vcd"
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"pyro"	"models/player/items/taunts/matchbox/matchbox.mdl"
+				}
+			}
+			"visuals_red"
+			{
+				"skin" "0"
+			}
+			"visuals_blu"
+			{
+				"skin" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 		"1181"
 		{
 			"name"	"The Hot Hand"
@@ -31033,7 +31109,7 @@ Fires....... something"
 			"item_name"	"#FC_Weapon_HandyPDA"
 			"item_description" "#FC_Weapon_HandyPDA_Desc"
 			"item_slot"	"pda"
-			"item_quality"	"normal"
+			"item_quality"	"unique"
 			"show_in_armory"	"1"
 			"baseitem" "0"
 			"min_ilevel"	"1"
@@ -38009,6 +38085,56 @@ Fires....... something"
 		    }			
 			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
 			"drop_sound"		    "ui/item_soda_can_drop.wav"
+		}
+		"9964"
+		{
+			"name"	"TF_WEAPON_BUILDER"
+			"hidden"	"0"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_pda_engineer_build"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"New Technology"
+			"item_name"	"Bouncepad PDA"
+			"item_description" "#FC_Weapon_HandyPDA_Desc"
+			"item_slot"	"pda"
+			"item_quality"	"unique"
+			"show_in_armory"	"1"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_builder"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"2"
+			"model_world"	"models/weapons/c_models/c_builder/c_builder.mdl"
+			"model_player"	"models/weapons/v_models/v_builder_engineer.mdl"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -8"				
+			}
+			"attributes"
+			{
+				"override engineer object type"
+				{
+					"attribute_class"	"override_engineer_object_type"
+					"value" 	"0" 
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_ENGINEER_PDA2_VM_IDLE"
+					"ACT_VM_DRAW"	"ACT_ENGINEER_PDA2_VM_DRAW"
+				}
+			}
 		}
 		"30143"
 		{
@@ -51759,11 +51885,32 @@ Fires....... something"
 			"hidden"	"1"
 			"effect_type"	"neutral"
 			"stored_as_integer"	"1"
-		}"10050"
+		}
+		"10050"
 		{
 			"name"	"impulse grenade blast"
 			"attribute_class"	"set_detonate_mode"
 			"description_string"	"#Attrib_ExplodeOnImpact"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+		}
+		"10051"
+		{
+			"name"	"override engineer object type"
+			"attribute_class"	"override_engineer_object_type"
+			"description_string"	"#Attrib_OverrideEngineerObjectType"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+		}
+		"10052"
+		{
+			"name"	"override engineer object type 2"
+			"attribute_class"	"override_engineer_object_type_2"
+			"description_string"	"#Attrib_OverrideEngineerObjectType2"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"neutral"
