@@ -46,6 +46,7 @@ Scheme
 		Border.Bright					"TFTanLightDark"	// the lit side of a control
 		Border.Dark						"TFTanLightDark"		// the dark/unlit side of a control
 		Border.Selection				"BorderSelection"			// the additional border color for displaying the default/selected button
+		Border.DarkSolid				"TFDarkBrown"		// border for the console
 
 		Button.TextColor				"TFDarkBrown"
 		Button.BgColor					"TFTanLight"
@@ -129,6 +130,71 @@ Scheme
 		TextEntry.TextColor			        "TFTextBright"
 		TextEntry.DisabledTextColor	        "TFTextMedium"
 		TextEntry.SelectedBgColor	        "TFOrangeBright"
+	}
+	Borders
+	{
+		BaseBorder							SubtleBorder
+		ButtonBorder						RaisedBorder
+		ComboBoxBorder						DepressedBorder
+		MenuBorder							SubtleBorder
+		BrowserBorder						DepressedBorder
+		PropertySheetBorder					RaisedBorder
+
+		FrameBorder
+		{
+			Left
+			{
+				"1"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+				"2"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+			}
+			Right
+			{
+				"1"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+				"2"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+			}
+			Top
+			{
+				"1"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+				"2"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+			}
+			Bottom
+			{
+				"1"
+				{
+					"color" 				"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+				"2"
+				{
+					"color"					"Border.DarkSolid"
+					"offset" 				"0 0"
+				}
+			}
+		}
 	}
 	
 	Fonts

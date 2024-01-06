@@ -7,10 +7,11 @@
 		"enabled"		"1"
 		"xpos"			"r162"	[$WIN32]
 		"ypos"			"r92"	[$WIN32]
-		"xpos_minmode"	"r70"	[$WIN32]
-		"ypos_minmode"	"r74"	[$WIN32]
+		"xpos_minmode"	"r185"	[$WIN32]
+		"ypos_minmode"	"r40"	[$WIN32]
 		"xpos"			"r194"	[$X360]
 		"ypos"			"r74"	[$X360]
+		"zpos"			"1"
 		"wide"			"100"
 		"tall"			"50"
 		"MeterFG"		"White"
@@ -38,7 +39,7 @@
 		"teambg_4"		"../hud/misc_ammo_area_green"
 		"teambg_4_lodef"	"../hud/misc_ammo_area_green_lodef"			
 		"teambg_5"		"../hud/misc_ammo_area_yellow"
-		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"						
+		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"		
 	}
 	
 	"ItemEffectMeterLabel"
@@ -46,7 +47,7 @@
 		"ControlName"			"CExLabel"
 		"fieldName"				"ItemEffectMeterLabel"
 		"xpos"					"25"
-		"ypos"					"22"
+		"ypos"					"25"
 		"zpos"					"2"
 		"wide"					"41"
 		"tall"					"15"
@@ -55,7 +56,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"#TF_Berzerk"
+		"labelText"				"#TF_Ball"
 		"textAlignment"			"center"
 		"dulltext"				"0"
 		"brighttext"			"0"
@@ -89,7 +90,7 @@
 		"ControlName"			"CExLabel"
 		"fieldName"				"ItemEffectMeterCount"
 		"xpos"					"25"
-		"ypos"					"5"
+		"ypos"					"7"
 		"zpos"					"2"
 		"wide"					"40"
 		"tall"					"20"	

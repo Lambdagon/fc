@@ -104,7 +104,7 @@
 		"enabled"		"1"
 		"labelText"		"%MaxHealth%"
 		"textAlignment"	"center"	
-		"font"			"DefaultSmall"
+		"font"			"HudFontSmallest"
 		"fgcolor"		"TanDark"
 	}
 	"PlayerStatusBleedImage"
@@ -609,7 +609,7 @@
 		"scaleImage"	"1"	
 		"image"			"../vgui/slowed"
 		"fgcolor"		"TanDark"
-	}	
+	}
 	"PlayerStatus_CivilianDefenseBuff"
 	{
 		"ControlName"	"ImagePanel"

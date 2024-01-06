@@ -6,9 +6,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"xpos"			"r86"	[$WIN32]
-		"ypos"			"r102"	[$WIN32]
+		"ypos"			"r110"	[$WIN32]
 		"xpos_minmode"	"r70"	[$WIN32]
-		"ypos_minmode"	"r130"	[$WIN32]
+		"ypos_minmode"	"r135"	[$WIN32]
 		"wide"			"100"
 		"tall"			"60"
 		"MeterFG"		"White"
@@ -36,7 +36,7 @@
 		"teambg_4"		"../hud/misc_ammo_area_green"
 		"teambg_4_lodef"	"../hud/misc_ammo_area_green_lodef"			
 		"teambg_5"		"../hud/misc_ammo_area_yellow"
-		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"				
+		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"	
 	}
 	
 	"ItemEffectIcon"

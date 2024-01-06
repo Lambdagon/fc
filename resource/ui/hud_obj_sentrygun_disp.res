@@ -60,8 +60,8 @@
 		{
 			"ControlName"	"CExLabel"
 			"fieldName"		"NotBuiltLabel"
-			"font"			"DefaultVerySmall"
-			"xpos"			"60"
+			"font"			"ItemFontAttribSmall"
+			"xpos"			"55"
 			"ypos"			"0"
 			"wide"			"200"
 			"tall"			"20"
@@ -245,7 +245,7 @@
 			{	
 				"ControlName"	"CExLabel"
 				"fieldName"		"KillsLabel"
-				"font"			"DefaultSmall"
+				"font"			"ItemFontAttribSmall"
 				"xpos"			"12"
 				"ypos"			"6"
 				"wide"			"200"

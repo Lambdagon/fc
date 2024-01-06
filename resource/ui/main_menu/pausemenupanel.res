@@ -14,7 +14,7 @@
 		"enabled"			"1"
 	}
 	
-"TitleBanner"
+	"TitleBanner"
     {
         "ControlName"    "ImagePanel"
         "fieldName"        "TitleBanner"
@@ -28,19 +28,36 @@
         "scaleImage"    "1"
     }
 	
-	"Footer"
+	// ---------- Footer Content ----------
+	
+	"FooterBackground"
 	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"Footer"
-		"xpos"			"0"
-		"ypos"			"r60"
-		"zpos"			"-100"
-		"wide"			"f0"
-		"tall"			"60"
-		"visible"		"1"
-		"enabled"		"1"
-		"bgcolor_override"			"46 43 42 255"
-		"tileImage"		"1"
+		"ControlName"		"ImagePanel"
+		"fieldName"			"FooterBackground"
+		"xpos"				"0"
+		"ypos"				"420"
+		"zpos"				"-100"
+		"wide"				"f0"
+		"tall"				"62"
+		"visible"			"1"
+		"enabled"			"1"
+		"image"				"loadout_bottom_gradient"
+		"scaleImage"		"0"
+		"tileImage"			"1"
+	}				
+	"FooterLine"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"			"FooterLine"
+		"xpos"				"0"
+		"ypos"				"420"
+		"zpos"				"-50"
+		"wide"				"f0"
+		"tall"				"10"
+		"visible"			"1"
+		"enabled"			"1"
+		"image"				"loadout_solid_line"
+		"scaleImage"		"1"
 	}
 	
 	"FakeBGImage"
@@ -59,26 +76,37 @@
 		"scaleImage"		"1"
 	}
 	
-	"Logo"
+	// ---------- Header Content ----------
+	
+	"HeaderBackground"
 	{
 		"ControlName"		"ImagePanel"
-		"fieldName"			"Logo"
-		"xpos"				"c-305"
-		"ypos"				"30"
-		"zpos"				"3"
-		"wide"				"375"
-		"tall"				"175"
+		"fieldName"			"HeaderBackground"
+		"xpos"				"0"
+		"ypos"				"0"
+		"zpos"				"-100"
+		"wide"				"f0"
+		"tall"				"90"
 		"visible"			"0"
 		"enabled"			"1"
-		"image"				"main_menu/TF2_Classic_Logo_NoCircle"
-		"alpha"				"255"
+		"image"				"loadout_bottom_gradient"
+		"scaleImage"		"0"
+		"tileImage"			"1"
+	}				
+	"HeaderLine"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"			"HeaderLine"
+		"xpos"				"0"
+		"ypos"				"90"
+		"zpos"				"70"
+		"wide"				"f0"
+		"tall"				"10"
+		"visible"			"0"
+		"enabled"			"1"
+		"image"				"loadout_solid_line"
 		"scaleImage"		"1"
-		
-		"if_inlevel"
-		{
-			"image"			"main_menu/TF2_Classic_Logo"
-		}
-	}
+	}	
 	
 	"BlogPanel"
 	{
@@ -99,7 +127,7 @@
 		"ControlName"		"EditablePanel"
 		"fieldName"			"MainMenuBG"
 		"xpos"				"64"
-		"ypos"				"90"
+		"ypos"				"125"
 		"zpos"				"3"
 		"wide"				"260"
 		"tall"				"234"
@@ -115,7 +143,7 @@
 		"ControlName"		"CExLabel"
 		"fieldName"			"WelcomeLabel"
 		"xpos"				"71"
-		"ypos"				"92"
+		"ypos"				"127"
 		"zpos"				"6"
 		"wide"				"223"
 		"tall"				"30"
@@ -142,7 +170,7 @@
 		"ControlName"		"EditablePanel"
 		"fieldName"			"AvatarBG"
 		"xpos"				"294"
-		"ypos"				"94"
+		"ypos"				"129"
 		"zpos"				"5"
 		"wide"				"24"
 		"tall"				"24"
@@ -163,7 +191,7 @@
 		"ControlName"		"CAvatarImagePanel"
 		"fieldName"			"AvatarImage"
 		"xpos"				"296"
-		"ypos"				"96"
+		"ypos"				"131"
 		"zpos"				"6"
 		"wide"				"20"
 		"tall"				"20"
@@ -184,7 +212,7 @@
 		"ControlName"		"CExLabel"
 		"fieldName"			"NicknameLabel"
 		"xpos"				"163"
-		"ypos"				"96"
+		"ypos"				"131"
 		"zpos"				"6"
 		"wide"				"133"
 		"tall"				"20"
@@ -343,7 +371,7 @@
 		"fieldName"				"ServerBrowserButton"
 		//"xpos"					"35"
 		"xpos"				"70"
-		"ypos"				"120"
+		"ypos"				"155"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -375,7 +403,7 @@
 		"fieldName"				"CreateServerButton"
 		//"xpos"					"35"
 		"xpos"				"70"
-		"ypos"				"148"
+		"ypos"				"183"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -408,7 +436,7 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"LoadoutButton"
 		"xpos"					"70"
-		"ypos"					"176"
+		"ypos"					"211"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -439,7 +467,7 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"AchievementsButton"
 		"xpos"					"70"
-		"ypos"					"204"
+		"ypos"					"239"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -470,7 +498,7 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"StatsButton"
 		"xpos"					"70"
-		"ypos"					"232"
+		"ypos"					"267"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -516,7 +544,7 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"StatsButton"
 		"xpos"					"70"
-		"ypos"					"260"
+		"ypos"					"295"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -548,7 +576,7 @@
 		"ControlName"			"CTFButton"
 		"fieldName"				"QuitButton"
 		"xpos"					"70"
-		"ypos"					"288"
+		"ypos"					"323"
 		"zpos"					"5"
 		"wide"					"248"
 		"tall"					"28"
@@ -681,11 +709,6 @@
 			"scaleImage"		"1"
 			"imagewidth"		"24"
 		}
-		"SubCheckImage"
-		{
-			"image" 		"main_menu/glyph_disabled"
-			"scaleImage"	"1"
-		}
 	}
 	
 	"OptionsOldButton"
@@ -787,7 +810,7 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"labelText"			"Version: October 2023"
+		"labelText"			""
 		"textAlignment"		"east"
 		"fgcolor"			"HudOffWhite"
 		"font"				"MenuSmallFont"

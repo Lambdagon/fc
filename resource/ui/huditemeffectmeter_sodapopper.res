@@ -39,7 +39,7 @@
 		"teambg_4"		"../hud/misc_ammo_area_horiz3_green"
 		"teambg_4_lodef"	"../hud/misc_ammo_area_green_lodef"		
 		"teambg_5"		"../hud/misc_ammo_area_horiz3_yellow"
-		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"					
+		"teambg_5_lodef"	"../hud/misc_ammo_area_yellow_lodef"	
 	}
 	
 	"ItemEffectMeterLabel"
@@ -60,7 +60,7 @@
 		"textAlignment_minmode"			"west"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"#TF_Hype"
+		"labelText"				"#TF_ENERGYDRINK"
 		"textAlignment"			"center"
 		"dulltext"				"0"
 		"brighttext"			"0"

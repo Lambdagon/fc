@@ -4,10 +4,10 @@
 	{
 		"ControlName"		"CEmbeddedItemModelPanel"
 		"fieldName"		"itemmodelpanel"
-	
+
 		"xpos"			"0"
 		"ypos"			"0"
-		"zpos"			"1"		
+		"zpos"			"1"
 		"wide"			"100"
 		"tall"			"100"
 		"autoResize"		"0"
@@ -56,22 +56,22 @@
 		"teambg_4_lodef"	"../hud/color_panel_grn"
 		"teambg_5"		"../hud/color_panel_ylw"
 		"teambg_5_lodef"	"../hud/color_panel_ylw"
-		
+
 		"src_corner_height"		"23"				// pixels inside the image
 		"src_corner_width"		"23"
-			
+
 		"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
-		"draw_corner_height" 	"5"	
+		"draw_corner_height" 	"5"
 	}
 
 	"DisguiseNameLabel"
-	{	
+	{
 		"ControlName"	"Label"
 		"fieldName"		"DisguiseNameLabel"
 		"font"			"HudFontMediumSmallSecondary"
 		"font_minmode"	"TFFontMedium"
 		"xpos"			"52"
-		"xpos_minmode"	"34"
+		"xpos_minmode"	"50"
 		"ypos"			"31"
 		"ypos_minmode"	"51"
 		"zpos"			"1"
@@ -86,15 +86,15 @@
 		"dulltext"		"0"
 		"brighttext"		"0"
 	}
-	
+
 	"WeaponNameLabel"
-	{	
+	{
 		"ControlName"	"Label"
 		"fieldName"		"WeaponNameLabel"
 		"font"			"HUDFontSmall"
 		"font_minmode"	"TFFontMedium"
 		"xpos"			"52"
-		"xpos_minmode"	"34"
+		"xpos_minmode"	"50"
 		"ypos"			"45"
 		"ypos_minmode"	"58"
 		"zpos"			"1"
@@ -109,24 +109,23 @@
 		"dulltext"		"0"
 		"brighttext"		"0"
 	}
-	
+
 	"SpectatorGUIHealth"
 	{
 		"ControlName"		"EditablePanel"
 		"fieldName"		"SpectatorGUIHealth"
-		"xpos"			"20"
-		"xpos_minmode"	"10"
+		"xpos"			"5"
 		"ypos"			"30"
-		"ypos_minmode"	"45"
-		"wide"			"32"
+		"ypos_minmode"	"46"
+		"wide"			"45"
 		"tall"			"32"
 		"visible"		"1"
-		"enabled"		"1"	
+		"enabled"		"1"
 		"HealthBonusPosAdj"	"10"
 		"HealthDeathWarning"	"0.49"
 		"TFFont"		"HudFontSmall"
 		"HealthDeathWarningColor"	"HUDDeathWarning"
 		"TextColor"		"HudOffWhite"
-	}	
-	
+	}
+
 }

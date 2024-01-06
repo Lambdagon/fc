@@ -70,21 +70,7 @@
 		"scaleImage"	"1"
 	}
 
-	"Logo"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"Logo"
-		"xpos"			"30"
-		"ypos"			"-2"
-		"zpos"			"1"
-		"wide"			"256"
-		"tall"			"128"
-		"visible"		"1"
-		"enabled"		"1"
-		"image"			"../logo/fc_logo"
-		"alpha"			"255"
-		"scaleImage"	"1"	
-	}
+	
 
 	"LogoCircle"
 	{

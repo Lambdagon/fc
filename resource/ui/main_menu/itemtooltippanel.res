@@ -12,7 +12,11 @@
 		"pinCorner"			"0"
 		"visible"			"1"
 		"enabled"			"1"
-		"border"			"MainMenuAdvButtonDepressed"
+		"border"			"LoadoutItemMouseOverBorder"
+		//"border"			"BackpackItemBorder"
+		//"border"			"BackpackItemBorder_SelfMade"
+		"paintbackground" "1"
+		"PaintBackgroundType"	"2"
 	}	
 		
 	"TextLabel"
@@ -99,6 +103,7 @@
 	{
 		"ControlName"	"CTFAdvModelPanel"
 		"fieldName"		"classmodelpanel"
+		
 		
 		"xpos"			"0"
 		"ypos"			"0"

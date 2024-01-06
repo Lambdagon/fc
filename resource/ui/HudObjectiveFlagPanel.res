@@ -25,30 +25,29 @@
 		"xpos"			"c-140"
 		"ypos"			"r75"	[$WIN32]
 		"ypos"			"r96"	[$X360]
+		"xpos_minmode"	"c-110"
+		"ypos_minmode"	"r55"
 		"zpos"			"1"
 		"wide"			"280"
 		"tall"			"80"
+		"wide_minmode"	"224"
+		"tall_minmode"	"64"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_bg_left"
 		"scaleImage"	"1"	
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
-		{
-			"visible"	"0"
-		}
-
-		"if_mvn"
 		{
 			"visible"	"0"
 		}
@@ -61,30 +60,29 @@
 		"xpos"			"c-140"
 		"ypos"			"r75"	[$WIN32]
 		"ypos"			"r96"	[$X360]
+		"xpos_minmode"	"c-110"
+		"ypos_minmode"	"r55"
 		"zpos"			"1"
 		"wide"			"280"
 		"tall"			"80"
+		"wide_minmode"	"224"
+		"tall_minmode"	"64"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_bg_right"
 		"scaleImage"	"1"	
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
-		{
-			"visible"	"0"
-		}
-
-		"if_mvn"
 		{
 			"visible"	"0"
 		}
@@ -97,30 +95,29 @@
 		"xpos"			"c-140"
 		"ypos"			"r75"	[$WIN32]
 		"ypos"			"r96"	[$X360]
+		"xpos_minmode"	"c-110"
+		"ypos_minmode"	"r55"
 		"zpos"			"2"
 		"wide"			"280"
 		"tall"			"80"
+		"wide_minmode"	"224"
+		"tall_minmode"	"64"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_bg_outline"
 		"scaleImage"	"1"	
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
-		{
-			"visible"	"0"
-		}
-
-		"if_mvn"
 		{
 			"visible"	"0"
 		}
@@ -134,6 +131,8 @@
 		"ypos"			"r47"
 		"ypos_lodef"	"r88"
 		"ypos_hidef"	"r93"
+		"xpos_minmode"	"c-100"
+		"ypos_minmode"	"r37"
 		"zpos"			"8"
 		"wide"			"75"
 		"tall"			"35"
@@ -146,28 +145,24 @@
 		"font"			"HudFontBig"
 		"font_hidef"	"HudFontGiant"
 		"font_lodef"	"HudFontGiant"
+		"font_minmode"	"HudFontMedium"
 		"fgcolor"		"TanLight"
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 		
 	"BlueScoreShadow"
 	{
@@ -177,6 +172,8 @@
 		"ypos"			"r46"
 		"ypos_lodef"	"r87"
 		"ypos_hidef"	"r92"
+		"xpos_minmode"	"c-98"
+		"ypos_minmode"	"r36"
 		"zpos"			"7"
 		"wide"			"75"
 		"tall"			"35"
@@ -189,28 +186,24 @@
 		"font"			"HudFontBig"
 		"font_hidef"	"HudFontGiant"
 		"font_lodef"	"HudFontGiant"
+		"font_minmode"	"HudFontMedium"
 		"fgcolor"		"Black"
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 							
 	"RedScore"
 	{
@@ -220,6 +213,8 @@
 		"ypos"			"r47"
 		"ypos_lodef"	"r88"
 		"ypos_hidef"	"r93"
+		"xpos_minmode"	"c27"
+		"ypos_minmode"	"r37"
 		"zpos"			"8"
 		"wide"			"75"
 		"tall"			"35"
@@ -232,28 +227,24 @@
 		"font"			"HudFontBig"
 		"font_hidef"	"HudFontGiant"
 		"font_lodef"	"HudFontGiant"
+		"font_minmode"	"HudFontMedium"
 		"fgcolor"		"TanLight"		
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 		
 	"RedScoreShadow"
 	{
@@ -263,6 +254,8 @@
 		"ypos"			"r46"
 		"ypos_lodef"	"r87"
 		"ypos_hidef"	"r92"
+		"xpos_minmode"	"c29"
+		"ypos_minmode"	"r36"
 		"zpos"			"7"
 		"wide"			"75"
 		"tall"			"35"
@@ -275,28 +268,24 @@
 		"font"			"HudFontBig"
 		"font_hidef"	"HudFontGiant"
 		"font_lodef"	"HudFontGiant"
+		"font_minmode"	"HudFontMedium"
 		"fgcolor"		"Black"		
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 															
 	"OutlineImage"
 	{
@@ -318,12 +307,11 @@
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"CarriedImage"
-		"xpos"			"c-50"
-		"ypos"			"r137"	[$WIN32]
-		"ypos"			"r158"	[$X360]
+		"xpos"			"c-23"
+		"ypos"			"r70"
 		"zpos"			"10"
-		"wide"			"100"
-		"tall"			"100"
+		"wide"			"45"
+		"tall"			"45"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_carried_red"
@@ -336,7 +324,8 @@
 		
 		"if_specialdelivery"
 		{
-			"visible"	"r142"
+			"ypos"			"r77"
+			"visible"		"0"
 		}
 	}		
 	
@@ -360,27 +349,22 @@
 		"brighttext"	"0"
 		"font"			"HudFontSmall"
 		"fgcolor"		"TanLight"
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 			
 	"PlayingToBG"
 	{
@@ -400,27 +384,22 @@
 		"image"			"../hud/objectives_flagpanel_bg_playingto"
 		"image_hidef"	"../hud/objectives_flagpanel_bg_playingto_hidef"
 		"scaleImage"	"1"	
-
+		
 		"if_hybrid"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_mvm"
 		{
 			"visible"	"0"
 		}
-
+		
 		"if_specialdelivery"
 		{
 			"visible"	"0"
 		}
-
-		"if_mvn"
-		{
-			"visible"	"0"
-		}
-	}
+	}	
 		
 	"BlueFlag"
 	{
@@ -429,6 +408,8 @@
 		"xpos"			"c-135"
 		"ypos"			"r95"	[$WIN32]
 		"ypos"			"r116"	[$X360]
+		"xpos_minmode"	"c-110"
+		"ypos_minmode"	"r80"
 		"zpos"			"5"
 		"wide"			"160"
 		"tall"			"90"
@@ -460,6 +441,12 @@
 		{
 			"visible"	"0"
 		}
+		
+		"if_mvm"
+		{
+			"xpos_minmode"	"c-75"
+			"ypos_minmode"	"r75"
+		}
 	}
 			
 	"RedFlag"
@@ -469,6 +456,8 @@
 		"xpos"			"c-25"
 		"ypos"			"r95"	[$WIN32]
 		"ypos"			"r116"	[$X360]
+		"xpos_minmode"	"c-35"
+		"ypos_minmode"	"r80"
 		"zpos"			"5"
 		"wide"			"160"
 		"tall"			"90"

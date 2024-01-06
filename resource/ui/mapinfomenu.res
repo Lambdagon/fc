@@ -181,6 +181,7 @@
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"command"		"back"
+		"default"		"1"
 		"font"			"MenuSmallFont"
 		"fgcolor"		"Black"
 	}
