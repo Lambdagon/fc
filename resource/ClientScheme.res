@@ -2820,6 +2820,17 @@ Scheme
 				"antialias" "1"
 			}
 		}
+		"ItemFontNameMedium"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"9.5"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
 		"ItemFontNameLarge"
 		{
 			"1"
