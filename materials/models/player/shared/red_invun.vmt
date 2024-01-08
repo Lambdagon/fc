@@ -1,14 +1,13 @@
 "VertexLitGeneric"
 {
-	"$basetexture"	"models/player/scout/scout_red"
+	"$basetexture"	"effects/red"
 	<dx90
 	{
 		 	"$bumpmap" "water/dx80_tfwater001_normal"
 	}
 	"$bumpmap" "water/tfwater001_normal"
-	"$detail" "models/player/shared/red_uber"
-	"$detailblendfactor" "0.76"
 	"$envmap" "effects/invun_red"
+//	"$envmaptint" "[.2 .2 .2]"
 	"$surfaceprop" "metal"
 	"$halflambert" "1"
 
@@ -50,7 +49,7 @@
 	"$cloakPassEnabled" "1"
 	"Proxies"
 	{
-		"spy_invis" //wmodel cloak support
+		"spy_invis" //wmodel cloak support, team colors dont work for shared mat
 		{
 		}
 		"invis" //vmodel cloak support
@@ -127,5 +126,8 @@
 			"srcVar1" "$invulnphong"
 			"resultVar" "$phongboost" 
 		}
+
+
+
 	}
 }
