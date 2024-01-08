@@ -38106,9 +38106,8 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/w_models/w_builder"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"2"
-			"model_world"	"models/weapons/c_models/c_builder/c_builder.mdl"
-			"model_player"	"models/weapons/v_models/v_builder_engineer.mdl"
+			"attach_to_hands"	"1"
+			"model_player"	"models/weapons/c_models/c_bounce_pda/c_builder.mdl"
 			"used_by_classes"
 			{
 				"engineer"	"1"
@@ -38128,6 +38127,11 @@ Fires....... something"
 				{
 					"attribute_class"	"override_engineer_object_type_2"
 					"value" 	"2" 
+				}
+				"bounce pad pda"
+				{
+					"attribute_class"	"bounce_pad_desc"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -51962,6 +51966,16 @@ Fires....... something"
 			"hidden"	"0"
 			"effect_type"	"neutral"
 			"stored_as_integer"	"1"
+		}
+		"10053" //DUMMY DESCRIPTION ATTRIBUTE DOES NOTHING
+		{
+			"name"	"bounce pad pda"
+			"attribute_class"	"bounce_pad_desc"
+			"description_string"	"#Attrib_Bouncepaddesc"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 	}
 	"attribute_controlled_attached_particles"
