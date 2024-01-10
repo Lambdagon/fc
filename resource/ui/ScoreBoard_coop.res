@@ -78,7 +78,7 @@
 		"pinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"border"		"AdvRoundedButtonCoopDefault"
+		"border"		"AdvRoundedButtonDefault"
 	}						
 	"RedTeamPlayerCount"
 	{
