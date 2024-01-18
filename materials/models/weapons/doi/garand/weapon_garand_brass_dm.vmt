@@ -1,16 +1,68 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models\weapons\doi\garand\weapon_garand_dm"
-	"$bumpmap"						"models\weapons\tfa_doi\garand\weapon_garand_nm"
+	"$basetexture"					"models\weapons\doi\garand\weapon_garand_brass"
+	"$bumpmap"						"models\weapons\doi\garand\weapon_garand_nm"
 
-	"$color2"						"[0.75 0.75 0.75]"
+	"$color2"						"[1.5 1.5 1.5]"
 
 	"$phong"						"1"
-	"$phongexponent"				"32"
+	"$phongexponent"				"16"
 	"$phongboost"					"4"
 	"$phongfresnelranges"			"[0.2 0.5 1]"
+	// Cloaking
+	"$cloakPassEnabled" "1"
 	
-	//"$envmap"						"env_cubemap"
-	//"$envmapfresnel"				"1"
-	//"$envmaptint"					"[0.05 0.025 0]"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 		"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 		"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	
+	
+		"WeaponSkin" {
+		}
+	}
 }
