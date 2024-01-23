@@ -6065,51 +6065,6 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		
-		"weapon_nailgun_tfc"
-		{
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_posthumous_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"first_sale_date"	"2010/09/29"
-			"enabled"	"0"
-			"item_class"	"tf_weapon_tfc_nailgun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"#TF_Weapon_NailGun"
-			"item_name"	"#TF_Weapon_Nailgun"
-			"item_slot"	"primary"
-			"item_quality"	"normal"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_nailgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 				"44"					
-			"model_player"	"models/weapons/v_models/v_nailgun_scout.mdl"
-			"model_world"	"models/weapons/w_models/w_nailgun.mdl"
-			"attach_to_hands"	"2"
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -12"
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_NailGun.Single"
-				"sound_burst"			"Weapon_NailGun.SingleCrit"
-				"sound_reload"			"Weapon_NailGun.Reload"
-				"sound_deploy"			"Weapon_Nailgun.Draw"
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-		}
 
 		"weapon_targe"
 		{
@@ -6573,7 +6528,7 @@
 				"can_deal_long_distance_damage"			"1"
 			}
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_syringegun_medic"
+			"item_class"				"tf_weapon_tfc_nailgun"
 			"item_type_name"			"#TF_Weapon_Nailgun"
 			"item_name"					"#TF_Weapon_Nailgun"
 			"item_quality"				"normal"
@@ -6590,78 +6545,18 @@
 			{
 				"min_viewmodel_offset"					"10 0 -11"
 			}
+			
 			"attributes"
 			{
-							"hidden primary max ammo bonus"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"5.1"
+					"attribute_class"	"max_ammo"
+					"value" "100"
 				}
-				"custom projectile model"
+				"spawn ammo override"
 				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_NailGun.Single"
-				"sound_burst"			"Weapon_NailGun.SingleCrit"
-				"sound_reload"			"Weapon_NailGun.Reload"
-				"sound_deploy"			"Weapon_Nailgun.Draw"
-			}
-			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
-			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
-		}
-		
-		"weapon_nailgun_pistol"
-		{
-			"tags"
-			{
-				"can_deal_damage"						"1"
-				"can_deal_critical_damage"				"1"
-				"can_deal_mvm_penetration_damage"		"1"
-				"can_deal_long_distance_damage"			"1"
-			}
-			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_pistol"
-			"item_type_name"			"Nail Gun"
-			"item_name"					"Nail Gun"
-			"item_quality"				"normal"
-			"propername"				"1"
-			"min_ilevel"				"5"
-			"max_ilevel"				"5"
-			"image_inventory"			"backpack/weapons/w_models/w_nailgun"
-			"image_inventory_size_w"	"128"
-			"image_inventory_size_h"	"128"
-			"attach_to_hands"			"2"
-			"model_world"				"models/weapons/w_models/w_nailgun.mdl"
-			"model_player"				"models/weapons/v_models/v_nailgun_scout.mdl"
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -11"
-			}
-			"attributes"
-			{
-							"hidden primary max ammo bonus"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"5.1"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"5" 
+					"attribute_class"	"mod_spawn_ammo_override"
+					"value" "100"
 				}
 			}
 			"visuals"
@@ -26026,13 +25921,13 @@ Fires....... something"
 		}
 		"9754"
 		{
-			"name"						"The Hunting Revolver"
+			"name"						"The High Noon"
 			"prefab"					"weapon_sniperrifle"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver"
+			"item_class"				"tf_weapon_revolver_slot1"
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
-			"item_type_name"			"#TF_Weapon_SniperRifle"
+			"item_type_name"			"#TF_Weapon_RevRifle_Type"
 			"item_name"					"#TF_Weapon_RevRifle"
 			"propername"				"1"
 			"min_ilevel"				"8"
@@ -26043,430 +25938,32 @@ Fires....... something"
 			"attach_to_hands"			"2"
 			"attributes"
 			{
-				"max health additive bonus"
+				"max health additive bonus HIDDEN"
 				{
 					"attribute_class"	"add_maxhealth"
 					"value"				"25"
 				}
-				"fire rate penalty"
+				"fire rate penalty HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"1.3"
 				}
-				"revolver use hit locations"
+				"revolver use hit locations HIDDEN"
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"dmg falloff reduced"
+				"dmg falloff reduced HIDDEN"
 				{
 					"attribute_class"	"mult_dmg_falloff"
 					"value"				"0"
 				}
-			}
-		}
-		"9755"
-		{
-			"name"	"Grenade"
-			"prefab"	"valve weapon_grenade"
-			"first_sale_date"	"2010/09/29"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" 	"25"
-			"item_type_name"	"Grenade"
-			"item_name" 	"Frag Grenade"
-			"item_description"	"A grenade is an explosive weapon typically thrown by hand"
-			"show_in_armory"	"1"
-			"anim_slot"			"melee"
-			"image_inventory"	"backpack/weapons/w_models/w_grenade_frag"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/grenade/v_grenade_frag_new.mdl"
-			"model_world"	"models/weapons/lambda/grenade/w_grenade_frag.mdl" 
-			"static_attrs"
-			{
-				"item_meter_charge_type"						"1"
-				"item_meter_charge_rate"			"30"
-				"meter_label"							"Frag"
-			}
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-			}
-			"attributes"
-			{
-				"override projectile type"
+				"disable fancy class select anim"
 				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"31"
-				}
-				"charge recharge rate increased"
-				{
-					"attribute_class"	"charge_recharge_rate"
-					"value"	"1.75"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
+					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models/weapons/lambda/grenade/w_grenade_frag.mdl"
-				}
 			}
-			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
-			"drop_sound"		"ui/item_bottle_drop.wav"
-		}
-		"9756"
-			{
-			"name"    "super_shotgun"
-			"enabled"	"1"
-			"item_class"	"tf_weapon_scattergun"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_collect" "1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_Shotgun"
-			"item_slot"		"primary"
-			"item_name"	"Pseudo Super Shotgun"
-			"item_description"	"what even is this?
-			Model by A Paint Bucket Named Huey"
-			"baseitem" "0"
-			"item_logname"	"supershot"
-			"item_iconname"	"supershot"
-			"show_in_armory"	"0"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"item_quality"	"unique"
-			"inspect_panel_dist" "40"
-			"image_inventory"	"backpack/weapons/c_models/c_double_barrel"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"    "models/weapons/lambda/supershotty/c_super_shotgun.mdl"
-			"anim_slot"	"item2"
-			"attach_to_hands"	"1"
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-			"particle_suffix"		"shotgun"
-			"visuals"
-			{
-				"sound_single_shot"	"HL2_Weapon_Shotgun.Double"
-				"sound_single_shot"	"HL2_Weapon_Shotgun.Double"
-				"sound_reload"	"HL2_Weapon_Shotgun.Reload"
-			}
-				"used_by_classes"
-				{
-					"scout"		  "1"
-				}
-				
-				"attributes"
-			{
-				"scattergun has knockback"
-				{
-					"attribute_class"	"set_scattergun_has_knockback"
-					"value"	"1"
-				}
-				"bullets per shot bonus"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "2.00"
-				}
-				"damage causes airblast"
-				{
-					"attribute_class"	"damage_causes_airblast"
-					"value" "20.0"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.25"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.10"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "3.50"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.50"
-				}
-				"dmg falloff increased"
-				{
-					"attribute_class"	"mult_dmg_falloff"
-					"value"	"4.00"
-				}
-				"scattergun no reload single"
-				{
-					"attribute_class"	"set_scattergun_no_reload_single"
-					"value"	"1"
-				}
-				"Reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"1.60"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-			}
-		}
-		"9757"
-		{
-			"name"						"TF_WEAPON_NAILGUN"
-			"prefab"					"weapon_nailgun"
-			"show_in_armory"			"0"
-			"used_by_classes"
-			{
-				"scout"					"1"
-				"robo"	"1"
-			}
-			"attributes"
-			{
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -11"
-				"mult_maxammo_primary"					"4.0"
-			}
-		}
-		"9578"
-		{
-			"name"	"longpister"
-			"first_sale_date"	"2010/09/29"
-			"item_class"	"tf_weapon_pistol"
-			"craft_class"	""
-			"craft_material_type"		""
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"ouch"
-			"item_slot"	"secondary"
-			"item_logname"	"walther"
-			"item_iconname"	"maxgun"
-			"image_inventory"	"backpack/weapons/w_models/w_pistol"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"		"models/weapons/lambda/long/c_pistol.mdl"
-			"extra_wearable"	"models/player/items/scout/batter_helmet.mdl"
-			"attach_to_hands"	"1"
-			"item_quality"	"unique"
-			"propername"	"1"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"engineer"	"1"
-			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"888.88"
-				}
-				"critboost on kill"
-				{
-					"attribute_class"	"add_onkill_critboost_time"
-					"value"	"5"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.10"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.25"
-				}
-				"reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"2.65"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"xifier_class_remap"	"TTG Max Pistol"
-		}
-		"9579"
-		{
-			"name"	"FakeDynamite"
-			"prefab"	"valve weapon_grenade"
-			"first_sale_date"	"2010/09/29"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"attach_to_hands"	"2"
-			"inspect_panel_dist" 	"25"
-			"item_type_name"	"bomb?"
-			"item_name" 	"Dynamite"
-			"item_description"	"Only blows up once"
-			"show_in_armory"	"1"
-			"anim_slot"			"melee"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"image_inventory"			"backpack/weapons/w_models/w_grenade_mirv_demo"
-			"model_world"				"models/weapons/lambda/dynamite/w_grenade_mirv_demo.mdl"
-			"model_player"				"models/weapons/lambda/dynamite/v_mirv_demo.mdl"
-			"static_attrs"
-			{
-				"item_meter_charge_type"						"1"
-				"item_meter_charge_rate"			"40"
-				"meter_label"							"Dynamite"
-			}
-			"used_by_classes"
-			{
-				"demoman"	"1"
-			}
-			"attributes"
-			{
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"31"
-				}
-				"charge recharge rate increased"
-				{
-					"attribute_class"	"charge_recharge_rate"
-					"value"	"1.95"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models/weapons/lambda/dynamite/w_grenade_mirv_demo.mdl"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
-			"drop_sound"		"ui/item_bottle_drop.wav"
-		}
-		"9560"
-		{
-			"name" "Engy Revolver"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"first_sale_date" "2007/06/27"
-			"item_class"	"tf_weapon_pistol"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"#TF_Weapon_Revolver"
-			"item_name"	"Revolver"
-			"item_description"	""
-			"item_logname"	"revolver"
-			"item_iconname"	"revolver"
-			"item_slot"	"secondary"
-			"anim_slot"		"secondary"
-			"baseitem" "0"
-			"min_ilevel"	"10"
-			"max_ilevel"	"10"
-			"image_inventory"	"backpack/weapons/w_models/w_revolver"
-			"show_in_armory"	"0"
-			"attach_to_hands"	"2"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"31"
-			"model_player"	"models/weapons/v_models/v_revolver_spy.mdl"
-			"model_world"	"models/weapons/w_models/w_revolver.mdl"
-			"capabilities"
-			{
-				"can_collect" "1"
-			}
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -10"
-				"mult_spread_scale"						"0.50"
-			}
-			"attributes"
-			{
-				"clip size penalty HIDDEN"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"3.5"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"3"
-				}
-			}
-						"visuals"																		
-			{
-				"sound_single_shot"		"Weapon_Revolver.Fire"
-				"sound_burst"			"Weapon_Revolver.FireCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
 		"9561"
 		{
@@ -31694,50 +31191,10 @@ Fires....... something"
 			"item_description"			"#TF_Weapon_Nailgun_Desc"
 			"item_slot"					"primary"
 			"anim_slot"					"item2"
+			"show_in_armory"			"1"
 			"used_by_classes"
 			{
 				"scout"					"1"
-			}
-			"attributes"
-			{
-				"hidden primary max ammo bonus"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"5.1"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -11"
-			}
-		}
-		"9866"
-		{
-			"name"						"TF_WEAPON_NAILGUN_MERCENARY"
-			"prefab"					"weapon_nailgun_pistol"
-			"anim_slot"					"secondary"
-			"item_slot"					"secondary"
-			"used_by_classes"
-			{
-				"mercenary"					"1"
-			}
-			"attributes"
-			{
-				"centerfire projectile"
-				{
-					"attribute_class"	"centerfire_projectile"
-					"value"	"1"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models\w_nail.mdl"
-				}
 			}
 			"static_attrs"
 			{
@@ -38142,6 +37599,7 @@ Fires....... something"
 					"ACT_VM_IDLE"	"ACT_ENGINEER_PDA2_VM_IDLE"
 					"ACT_VM_DRAW"	"ACT_ENGINEER_PDA2_VM_DRAW"
 				}
+				"sound_special1"		"Bouncepad.Jump"
 			}
 		}
 		"30143"
