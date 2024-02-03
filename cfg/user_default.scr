@@ -1,49 +1,10 @@
-// NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
-//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
-// User options script
-//
-// Format:
-//  Version [float]
-//  Options description followed by 
-//  Options defaults
-//
-// Option description syntax:
-//
-//  "cvar" { "Prompt" { type [ type info ] } { default } }
-//
-//  type = 
-//   BOOL   (a yes/no toggle)
-//   STRING
-//   NUMBER
-//   LIST
-//
-// type info:
-// BOOL                 no type info
-// NUMBER       min max range, use -1 -1 for no limits
-// STRING       no type info
-// LIST          delimited list of options value pairs
-//
-//
-// default depends on type
-// BOOL is "0" or "1"
-// NUMBER is "value"
-// STRING is "value"
-// LIST is "index", where index "0" is the first element of the list
-
-
-// Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
-// File generated:  Tue Jul 13 17:43:58 AM
-//
-//
-// Cvar	-	Setting
-
 VERSION 1.0
 
 DESCRIPTION INFO_OPTIONS
 {
 	"category0"
 	{
-		"#MMenu_AdvOptions"
+		"#TF_OptionCategory_Extended"
 		{ CATEGORY }
 	}
 
@@ -61,12 +22,6 @@ DESCRIPTION INFO_OPTIONS
 		{ "1" }
 	}
 	
-	"category1"
-	{
-		"#TF_OptionCategory_Extended"
-		{ CATEGORY }
-	}
-
 	"fc_ammobucket"
 	{
 		"#TFOption_ammobucket"
@@ -97,6 +52,12 @@ DESCRIPTION INFO_OPTIONS
 		{ "0" }
 	}
 	
+	"category1"
+	{
+		"Gameplay Options"
+		{ CATEGORY }
+	}
+	
 	"cl_wpn_sway_interp"
 	{
 		"Weapon sway interp"
@@ -118,48 +79,51 @@ DESCRIPTION INFO_OPTIONS
 		{ SLIDER 0 100 }
 		{ "60" }
 	}
-	
-	"category2"
-	{
-		"#GameUI_Portal"
-		{ CATEGORY }
-	}
 
-	"r_portal_stencil_depth"
-	{
-		"#GameUI_PortalDepthLabel"
-		{ SLIDER 0 9 }
-		{ "2" }
-	}
-
-	"category3"
-	{
-		"#TF_OptionCategory_Combat"
-		{ CATEGORY }
-	}
-	
 	"cl_autoreload"
 	{
-		"#TF_autoreload"
-		"#Tooltip_autoreload"
+		"Enable Auto Reload"
+		"Automatically reload when not firing, if possible."
 		{ BOOL }
 		{ "0" }
 	}
-	
+
 	"hud_fastswitch"
 	{
-		"#GameUI_FastSwitchCheck"
+		"Weapon Switch Method"
 		"#Tooltip_hud_fastswitch"
-		{ BOOL }
-		{ "1" }
+		{ LIST
+			"Default"         "0"
+			"Fast Switch"     "1"
+			"Buckets Plus"    "2"
+			"Carousel Scroll" "3"
+		}
+		{ "0" }
 	}
-	
+
 	"tf_dingalingaling"
 	{
-		"#TF_Hitbeeps"
+		"Enable Hitsounds"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
+	}
+
+	"tf_dingalingaling_effect"
+	{
+		"Hit Sound"
+		{ LIST
+			"#tf_dingalingaling_Default"				"0"
+			"#tf_dingalingaling_Electro"				"1"
+			"#tf_dingalingaling_Notes"					"2"
+			"#tf_dingalingaling_Percussion"			"3"
+			"#tf_dingalingaling_Retro"					"4"
+			"#tf_dingalingaling_Space"					"5"
+			"#tf_dingalingaling_Beepo"					"6"
+			"#tf_dingalingaling_Vortex"					"7"
+			"#tf_dingalingaling_Squasher"				"8"
+		}
+		{ "-1" }
 	}
 
 	"tf_dingaling_volume"
@@ -170,24 +134,6 @@ DESCRIPTION INFO_OPTIONS
 		{ "0.75" }
 	}
 	
-	"tf_dingalingaling_effect"
-	{
-		"#tf_dingalingaling_effect"
-		{ LIST
-			"#tf_dingalingaling_Default"                "0"
-			"#tf_dingalingaling_Electro"                "1"
-			"#tf_dingalingaling_Notes"	            	"2"
-			"#tf_dingalingaling_Percussion"             "3"
-			"#tf_dingalingaling_Retro"                  "4"
-			"#tf_dingalingaling_Space"					"5"
-			"#tf_dingalingaling_Beepo"					"6"
-			"#tf_dingalingaling_Vortex"					"7"
-			"#tf_dingalingaling_Squasher"				"8"
-			"#tf_dingalingaling_Custom"					"9"
-		}
-		{ "-1" }
-	}
-
 	"tf_dingaling_pitchmindmg"
 	{
 		"#TF_Dingaling_PitchLowDmg"
@@ -206,9 +152,26 @@ DESCRIPTION INFO_OPTIONS
 	
 	"tf_dingalingaling_lasthit"
 	{
-		"#TF_LastHitbeeps"
-		"#Tooltip_Hitbeeps"
+		"Enable Killsounds"
+		"Plays a sound upon killing an enemy"
 		{ BOOL }
+		{ "0" }
+	}
+
+	"tf_dingalingaling_last_effect"
+	{
+		"Kill Sound"
+		{ LIST
+			"#tf_dingalingaling_Default"				"0"
+			"#tf_dingalingaling_Electro"				"1"
+			"#tf_dingalingaling_Notes"					"2"
+			"#tf_dingalingaling_Percussion"			"3"
+			"#tf_dingalingaling_Retro"					"4"
+			"#tf_dingalingaling_Space"					"5"
+			"#tf_dingalingaling_Beepo"					"6"
+			"#tf_dingalingaling_Vortex"					"7"
+			"#tf_dingalingaling_Squasher"				"8"
+		}
 		{ "0" }
 	}
 
@@ -218,24 +181,6 @@ DESCRIPTION INFO_OPTIONS
 		"#Tooltip_Dingaling_Volume"
 		{ SLIDER 0 1 }
 		{ "0.75" }
-	}
-
-	"tf_dingalingaling_last_effect"
-	{
-		"#tf_dingalingaling_last_effect"
-		{ LIST
-			"#tf_dingalingaling_Default"                "0"
-			"#tf_dingalingaling_Electro"                "1"
-			"#tf_dingalingaling_Notes"	            	"2"
-			"#tf_dingalingaling_Percussion"             "3"
-			"#tf_dingalingaling_Retro"                  "4"
-			"#tf_dingalingaling_Space"					"5"
-			"#tf_dingalingaling_Beepo"					"6"
-			"#tf_dingalingaling_Vortex"					"7"
-			"#tf_dingalingaling_Squasher"				"8"
-			"#tf_dingalingaling_Custom"					"9"
-		}
-		{ "0" }
 	}
 
 	"tf_dingaling_lasthit_pitchmindmg"
@@ -253,13 +198,13 @@ DESCRIPTION INFO_OPTIONS
 		{ SLIDER 1 255 }
 		{ "100" }
 	}
-	
+
 	"hud_combattext"
 	{
-		"#TF_CombatText"
+		"Display Damage Numbers"
 		"#Tooltip_CombatText"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
 	
 	"hud_combattext_batching"
@@ -267,54 +212,81 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_CombatTextBatching"
 		"#Tooltip_CombatTextBatching"
 		{ BOOL }
+		{ "0" }
+	}
+
+	"hud_combattext_batching_window"
+	{
+		"Combat Text Batching Window"
+		"#Tooltip_CombatTextBatching"
+		{ SLIDER 0.1 2 }
+		{ "0.2" }
+	}
+
+	"hud_combattext_doesnt_block_overhead_text"
+	{
+		"#TF_CombatTextDoesntBlock"
+		"#Tooltip_CombatTextDoesntBlock"
+		{ BOOL }
 		{ "1" }
 	}
 
-	//"hud_combattext_doesnt_block_overhead_text"
-	//{
-	//	"#TF_CombatTextDoesntBlock"
-	//	"#Tooltip_CombatTextDoesntBlock"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
-
 	"hud_combattext_red"
 	{
-		"#TF_CombatText_Red"
-		{ SLIDER 0 255 }
+		"#Tooltip_CombatTextRed"
+		"#Tooltip_CombatTextColors"
+		{ SLIDER 1 255 }
 		{ "255" }
 	}
 
 	"hud_combattext_green"
 	{
-		"#TF_CombatText_Green"
-		{ SLIDER 0 255 }
+		"#Tooltip_CombatTextGreen"
+		"#Tooltip_CombatTextColors"
+		{ SLIDER 1 255 }
 		{ "0" }
 	}
 
 	"hud_combattext_blue"
 	{
-		"#TF_CombatText_Blue"
-		{ SLIDER 0 255 }
+		"#Tooltip_CombatTextBlue"
+		"#Tooltip_CombatTextColors"
+		{ SLIDER 1 255 }
+		{ "0" }
+	}
+	
+	"tf_remember_activeweapon"
+	{
+		"#TF_rememberactiveweapon"
+		"#Tooltip_rememberactiveweapon"
+		{ BOOL }
+		{ "0" }
+	}	
+	
+	"tf_remember_lastswitched"
+	{
+		"#TF_rememberlastweapon"
+		"#Tooltip_rememberlastweapon"
+		{ BOOL }
+		{ "0" }
+	}	
+
+	"tf_simple_disguise_menu"
+	{
+		"Compact Disguise Menu"
+		"#Tooltip_simple_disguise_menu_option"
+		{ BOOL }
 		{ "0" }
 	}
 
-	//"tf_remember_activeweapon"
-	//{
-	//	"#TF_rememberactiveweapon"
-	//	"#Tooltip_rememberactiveweapon"
-	//	{ BOOL }
-	//	{ "0" }
-	//}	
-	
-	//"tf_remember_lastswitched"
-	//{
-	//	"#TF_rememberlastweapon"
-	//	"#Tooltip_rememberlastweapon"
-	//	{ BOOL }
-	//	{ "0" }
-	//}	
-	
+	"cl_autorezoom"
+	{
+		"Rescope Sniper Rifle after firing"
+		"#Tooltip_autozoom"
+		{ BOOL }
+		{ "1" }
+	}
+
 	"tf_sniper_fullcharge_bell"
 	{
 		"#TF_sniperbell"
@@ -322,72 +294,52 @@ DESCRIPTION INFO_OPTIONS
 		{ BOOL }
 		{ "0" }
 	}	
-	 	
-	"category4"
-	{
-		"#TF_OptionCategory_ClassSpecific"
-		{ CATEGORY }
-	}
 
-	//"tf_simple_disguise_menu"
-	//{
-	//	"#TF_simple_disguise_menu_option"
-	//	"#Tooltip_simple_disguise_menu_option"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-	
-	"cl_autorezoom"
+	"tf_hud_no_crosshair_on_scope_zoom"
 	{
-		"#TF_autozoom"
-		"#Tooltip_autozoom"
+		"Hide Crosshair while Scoped"
+		"#Tooltip_nocrosshaironscopezoomn"
 		{ BOOL }
-		{ "1" }
-	}
+		{ "0" }
+	}	
 
-	//"tf_hud_no_crosshair_on_scope_zoom"
-	//{
-	//	"#TF_nocrosshaironscopezoom"
-	//	"#Tooltip_nocrosshaironscopezoomn"
-	//	{ BOOL }
-	//	{ "0" }
-	//}	
-	
 	"tf_medigun_autoheal"
 	{
-		"#TF_medigun_autoheal"
+		"Enable Medigun Lock-On"
 		"#Tooltip_medigun_autoheal"
 		{ BOOL }
-		{ "1" }
+		{ "0" }
 	}
-	
-	//"hud_medichealtargetmarker"
-	//{
-	//	"#TF_HealTargetMarker"
-	//	"#Tooltip_HealTargetMarker"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-	
-	//"hud_medicautocallers"
-	//{
-	//	"#TF_AutoMedicCallers"
-	//	"#Tooltip_AutoMedicCallers"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-	
-	//"hud_medicautocallersthreshold"
-	//{
-	//	"#TF_AutoMedicCallThreshold"
-	//	"#Tooltip_AutoMedicCallThreshold"
-	//	{ SLIDER 10 99 }
-	//	{ "75" }
-	//}
-		
-	"category5"
+
+	"hud_medichealtargetmarker"
 	{
-		"#TF_OptionCategory_HUD"
+		"Heal Target Marker"
+		"#Tooltip_HealTargetMarker"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"hud_medicautocallers"
+	{
+		"#TF_AutoMedicCallers"
+		"#Tooltip_AutoMedicCallers"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"hud_medicautocallersthreshold"
+	{
+		"Medic Auto-Call Threshold"
+		"#Tooltip_AutoMedicCallThreshold"
+		{ NUMBER 10 99 }
+		{ "75" }
+	}
+
+
+
+	"category2"
+	{
+		"UI Options"
 		{ CATEGORY }
 	}
 
@@ -399,30 +351,30 @@ DESCRIPTION INFO_OPTIONS
 		{ "0" }
 	}
 
-	//"tf_colorblindassist"
-	//{
-	//	"#TF_colorblindassist"
-	//	"#Tooltip_colorblindassist"
-	//	{ BOOL }
-	//	{ "0" }
-	//}	
+	"tf_colorblindassist"
+	{
+		"#TF_colorblindassist"
+		"#Tooltip_colorblindassist"
+		{ BOOL }
+		{ "0" }
+	}
 
-	//"cl_use_tournament_specgui"
-	//{
-	//	"#TF_UseAdvancedTourneyGUI"
-	//	"#Tooltip_UseAdvancedTourneyGUI"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
+	"cl_use_tournament_specgui"
+	{
+		"#TF_UseAdvancedTourneyGUI"
+		"#Tooltip_UseAdvancedTourneyGUI"
+		{ BOOL }
+		{ "0" }
+	}
 
-	//"cl_spec_carrieditems"
-	//{
-	//	"#TF_SpectateCarriedItems"
-	//	"#Tooltip_SpectateCarriedItems"
-	//	{ BOOL }
-	//	{ "1" }
-	//}	
-	
+	"cl_spec_carrieditems"
+	{
+		"#TF_SpectateCarriedItems"
+		"#Tooltip_SpectateCarriedItems"
+		{ BOOL }
+		{ "1" }
+	}
+
 	"glow_outline_effect_enable"
 	{
 		"#TF_UseGlowEffect"
@@ -430,228 +382,60 @@ DESCRIPTION INFO_OPTIONS
 		{ BOOL }
 		{ "1" }
 	}
-	
-	"fc_enable_team_glow"
+
+	"tf_enable_glows_after_respawn"
 	{
-		"#LFEOption_teamglow"
+		"#TF_EnableGlowsAfterRespawn"
 		{ BOOL }
-		{ "0" }
+		{ "1" }
 	}
 
-	//"cl_hud_playerclass_use_playermodel"
-	//{
-	//	"#GameUI_HudPlayerClassUsePlayerModel"
-	//	"#ToolTip_HudPlayerClassUsePlayerModel"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
-	
+	"cl_hud_playerclass_use_playermodel"
+	{
+		"#GameUI_HudPlayerClassUsePlayerModel"
+		"#ToolTip_HudPlayerClassUsePlayerModel"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"fov_desired"
+	{
+		"Field of View"
+		{ NUMBER 20 90 }
+		{ "75" }
+	}
+
+	"r_drawviewmodel"
+	{
+		"Display viewmodels"
+		"Draws the player's current weapon on-screen in first-person."
+		{ BOOL }
+		{ "1" }
+	}
+
 	"viewmodel_fov"
 	{
 		"#TF_viewmodelfov_option"
-		"#Tooltip_viewmodelfov_option"
-		{ SLIDER 54 70 }
-		{ "1" }
+		"The Field of View to use when during weapons in first-person. Larger values will make the weapon appear smaller on-screen, but may introduce visual errors."
+		{ NUMBER 1 179 }
+		{ "54" }
 	}
-	
-	//"tf_spectator_target_location"
-	//{
-	//	"#TF_Spectator_TargetID_Location"
-	//	{ LIST
-	//		"#TF_Spectator_Default" "0"
-	//		"#TF_Spectator_Bottom_Left" "1"
-	//		"#TF_Spectator_Bottom_Center" "2"
-	//		"#TF_Spectator_Bottom_Right" "3"
-	//	}
-	//	{ "0" }
-	//}	
-	
-	"hud_freezecamhide"
+
+	"tf_use_min_viewmodels"
 	{
-		"#TF_FreezeCamHide"
-		"#Tooltip_FreezeCamHide"
+		"#TF_use_min_viewmodels_option"
+		"#Tooltip_use_min_viewmodels_option"
 		{ BOOL }
 		{ "0" }
 	}	
 
-	//"tf_spectate_pyrovision"
-	//{
-	//	"#TF_SpectatePyroVision"
-	//	"#Tooltip_SpectatePyroVision"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-	
-	//"tf_romevision_opt_in"
-	//{
-	//	"#TF_RomeVisionOptIn"
-	//	"#Tooltip_RomeVisionOptIn"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-
-	//"tf_hud_target_id_disable_floating_health"
-	//{
-	//	"#TF_TargetID_Disable_Floating"
-	//	"#ToolTip_TargetID_Disable_Floating"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-
-	"tf_hud_target_id_alpha"
+	"cl_first_person_uses_world_model"
 	{
-		"#TF_TargetID_Alpha"
-		"#ToolTip_TargetID_Alpha"
-		{ SLIDER 0 255 }
-		{ "100" }
-	}
-
-	//"tf_contract_progress_show"
-	//{
-	//	"#TF_Contract_Progress"
-	//	"#ToolTip_TF_Contract_Progress"
-	//	{ LIST
-	//		"#TF_Contract_Progress_None"	"0"
-	//		"#TF_Contract_Progress_All"		"1"
-	//		"#TF_Contract_Progress_Active"	"2"
-	//	}
-	//	{ "1" }
-	//}
-
-	//"tf_scoreboard_mouse_mode"
-	//{
-	//	"#TF_ScoreBoard_MouseMode"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-
-	"tf_scoreboard_ping_as_text"
-	{
-		"#TF_ScoreBoard_PingAsText"
-		{ BOOL }
-		{ "1" }
-	}
-
-	"tf_scoreboard_alt_class_icons"
-	{
-		"#TF_ScoreBoard_AltClassIcons"
+		"First Person uses world model"
+		"Uses the world model seen by other players instead of first person viewmodels."
 		{ BOOL }
 		{ "0" }
 	}
-
-	//"category6"
-	//{
-	//	"#TF_OptionCategory_Replay"
-	//	{ CATEGORY }
-	//}
-	
-	//"youtube_http_proxy"
-	//{
-	//	"#TFOption_httpproxy"
-	//	"#Tooltip_httpproxy"
-	//	{ STRING }
-	//	{ "" }
-	//}
-	
-	//"replay_postdeathrecordtime"
-	//{
-	//	"#TFOption_postdeathrecordtime"
-	//	"#Tooltip_postdeathrecordtime"
-	//	{ SLIDER 0 10 }
-	//	{ "5" }
-	//}
-	
-	//"replay_enableeventbasedscreenshots"
-	//{
-	//	"#TFOption_replay_enableeventbasedscreenshots"
-	//	"#Tooltip_replay_enableeventbasedscreenshots"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
-
-	//"replay_screenshotresolution"
-	//{
-	//	"#TFOption_replay_screenshotresolution"
-	//	"#Tooltip_replay_screenshotresolution"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
-	
-	//"replay_maxscreenshotsperreplay"
-	//{
-	//	"#TFOption_replay_maxscreenshots"
-	//	"#Tooltip_replay_maxscreenshots"
-	//	{ NUMBER 1 1000 }
-	//	{ "200" }
-	//}
-	
-	//"replay_mintimebetweenscreenshots"
-	//{
-	//	"#TFOption_mintimebetweenscreenshots"
-	//	"#Tooltip_mintimebetweenscreenshots"
-	//	{ NUMBER 1 1000 }
-	//	{ "5" }
-	//}
-
-	//"tf_replay_pyrovision"
-	//{
-	//	"#TF_ReplayPyroVision"
-	//	"#Tooltip_ReplayPyroVision"
-	//	{ BOOL }
-	//	{ "0" }
-	//}
-	
-	"category7"
-	{
-		"#TF_OptionCategory_Performance"
-		{ CATEGORY }
-	}
-	
-	"tf_particles_disable_weather"
-	{
-		"#TF_DisableWeatherParticles"
-		"#Tooltip_DisableWeatherParticles"
-		{ BOOL }
-		{ "0" }
-	}	
-	
-	"cl_disablehtmlmotd"
-	{
-		"#Valve_DisableHTMLMOTD"
-		"#Tooltip_DisableHTMLMOTD"
-		{ BOOL }
-		{ "0" }
-	}	
-
-	"mp_decals"
-	{
-		"#Valve_Multiplayer_Decal_Limit"
-		"#Tooltip_Multiplayer_Decal_Limit"
-		{ SLIDER 0 4096 }
-		{ "4096" }
-	}
-	
-	"category8"
-	{
-		"#TF_OptionCategory_Misc"
-		{ CATEGORY }
-	}
-	
-	"hud_takesshots"
-	{
-		"#game_takesshots"
-		"#Tooltip_takesshots"
-		{ BOOL }
-		{ "0" }
-	}
-	
-	//"tf_respawn_on_loadoutchanges"
-	//{
-	//	"#TF_loadoutrespawn"
-	//	"#Tooltip_loadoutrespawn"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
 
 	"cl_flipviewmodels"
 	{
@@ -661,50 +445,505 @@ DESCRIPTION INFO_OPTIONS
 		{ "0" }
 	}
 
-	"tf_use_min_viewmodels"
+	"tf_spectator_target_location"
 	{
-		"#TF_use_min_viewmodels_option"
-		"#Tooltip_use_min_viewmodels_option"
+		"#TF_Spectator_TargetID_Location"
+		{ LIST
+			"#TF_Spectator_Default" "0"
+			"#TF_Spectator_Bottom_Left" "1"
+			"#TF_Spectator_Bottom_Center" "2"
+			"#TF_Spectator_Bottom_Right" "3"
+		}
+		{ "0" }
+	}	
+
+	"hud_freezecamhide"
+	{
+		"#TF_FreezeCamHide"
+		"#Tooltip_FreezeCamHide"
+		{ BOOL }
+		{ "0" }
+	}	
+
+	"cl_mvm_wave_status_visible_during_wave"
+	{
+		"Display remaining robots in wave"
+		"Shows the total robots remaining in an MvM wave in the status bar."
 		{ BOOL }
 		{ "0" }
 	}
 
-	"cl_playerspraydisable"
+	"tf_hud_target_id_disable_floating_health"
 	{
-		"#GameUI_DisableSprays"
-		"#Tooltip_DisableSprays"
+		"#TF_TargetID_Disable_Floating"
+		"#ToolTip_TargetID_Disable_Floating"
 		{ BOOL }
 		{ "0" }
 	}
 
-	//"sb_close_browser_on_connect"
+	"tf_hud_target_id_alpha"
+	{
+		"#TF_TargetID_Alpha"
+		"#ToolTip_TargetID_Alpha"
+		{ SLIDER 0 255 }
+		{ "100" }
+	}
+
+	"tf_scoreboard_mouse_mode"
+	{
+		"#TF_ScoreBoard_MouseMode"
+		{ LIST
+			"No"	"0"
+			"Yes"		"1"
+			"On Click"	"2"
+		}
+		{ "0" }
+	}
+
+	"tf_scoreboard_ping_as_text"
+	{
+		"#TF_ScoreBoard_PingAsText"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"tf_scoreboard_alt_class_icons"
+	{
+		"#TF_ScoreBoard_AltClassIcons"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_vote_ui_active_after_voting"
+	{
+		"Show Voting UI After Voting"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"tf_queue_spinner_color"
+	{
+		"Use alternate queue spinner color"
+		"Displays the queue spinner seen while queued for matchmaking."
+		{ BOOL }
+		{ "0" }
+	}
+
+	"tf_use_match_hud"
+	{
+		"#TF_UseMatchHUD"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"hud_saytext_time"
+	{
+		"Chat Message Lifetime"
+		"The number of seconds to display new chat messages in-game."
+		{ NUMBER 0 4096 }
+		{ "12" }
+	}
+
+	"hud_deathnotice_time"
+	{
+		"Killfeed Item Display Time"
+		"The number of seconds to display entries in the killfeed."
+		{ NUMBER 0 4096 }
+		{ "6" }
+	}
+
+	"cl_hud_killstreak_display_time"
+	{
+		"Killstreak Notification Display Time"
+		"The number of seconds to display killstreak banners."
+		{ NUMBER 0 100 }
+		{ "3" }
+	}
+
+
+
+	"category8"
+	{
+		"#TF_OptionCategory_Communication"
+		{ CATEGORY }
+	}
+
+	"voice_modenable"
+	{
+		"#TF_EnableVoiceChat"
+		"#Tooltip_EnableVoiceChat"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"cl_enable_text_chat"
+	{
+		"#TF_EnableTextChat"
+		"#Tooltip_EnableTextChat"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"chat_filter_settings"
+	{
+		"#TF_ChatFilterSettings"
+		"#Tooltip_ChatFilterSettings"
+		{ BUTTON }
+		{ "open_chat_filter_settings" }
+	}
+
+	"voice_loopback"
+	{
+		"Voice Loopback"
+		"When using voice chat, hear yourself whenever you speak."
+		{ BOOL }
+		{ "0" }
+	}
+
+
+
+	"category7"
+	{
+		"Graphics Settings"
+		{ CATEGORY }
+	}
+
+	"cl_burninggibs"
+	{
+		"Burning Gibs"
+		"If a player is gibbed while on fire, the giblets will be on fire as well."
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_new_impact_effects"
+	{
+		"Use Newer Impact Effects"
+		"Uses an updated particle system to render bullet impact effects."
+		{ BOOL }
+		{ "0" }
+	}
+
+	"r_lod"
+	{
+		"Object LODs"
+		"Determines the level of detail used on objects."
+		{ LIST
+			"Detail is determined by distance" "-1"
+			"Force high detail models" "0"
+			"Force low detail models" "2"
+		}
+		{ "-1" }
+	}
+
+
+
+	"category3"
+	{
+		"#TF_OptionCategory_Performance"
+		{ CATEGORY }
+	}
+
+	"tf_particles_disable_weather"
+	{
+		"#TF_DisableWeatherParticles"
+		"#Tooltip_DisableWeatherParticles"
+		{ BOOL }
+		{ "0" }
+	}	
+
+	"r_3dsky"
+	{
+		"Draw 3D Skybox"
+		"Sets whether to render the 3D environment used for distant scenery."
+		{ BOOL }
+		{ "0" }
+	}	
+
+	"cl_disablehtmlmotd"
+	{
+		"#Valve_DisableHTMLMOTD"
+		"#Tooltip_DisableHTMLMOTD"
+		{ BOOL }
+		{ "0" }
+	}	
+
+	"mat_viewportscale"
+	{
+		"Viewport Scale"
+		"Scales the resolution of the game to reduce GPU requirements"
+		{ NUMBER 0.001563 1 }
+		{ "1" }
+	}
+
+	"cl_jiggle_bone_framerate_cutoff"
+	{
+		"Jigglebone Minimum Framerate"
+		"If the frames per second drops below this value, disables jigglebone simulation."
+		{ NUMBER 0.001563 1 }
+		{ "1" }
+	}
+
+	"fps_max"
+	{
+		"Framerate Limit"
+		"The upper limit to the rendered FPS. Option does not save between sessions."
+		{ NUMBER 0 999 }
+		{ "300" }
+	}
+
+	"mp_decals"
+	{
+		"#Valve_Multiplayer_Decal_Limit"
+		"#Tooltip_Multiplayer_Decal_Limit"
+		{ NUMBER 0 2048 }
+		{ "200" }
+	}
+
+	"engine_no_focus_sleep"
+	{
+		"Limit FPS while unfocused"
+		"When the game window is unfocused, sets the game in a low performance state."
+		{ LIST
+			"Disabled" "0"
+			"Enabled" "50"
+		}
+		{ "50" }
+	}
+
+
+
+	"category4"
+	{
+		"Networking Settings"
+		{ CATEGORY }
+	}
+
+	"cl_interp"
+	{
+		"Interpolation Amount"
+		"The minimum interpolation delay in milliseconds. Set to 0 to use 'Interp. Ratio' instead."
+		{ NUMBER 0.0 0.5 }
+		{ "0.1" }
+	}
+
+	"cl_interp_ratio"
+	{
+		"Interp. Ratio"
+		"The number of dropped packed to compensate for."
+		{ NUMBER 1 33 }
+		{ "2" }
+	}
+
+	"cl_updaterate"
+	{
+		"Update Rate"
+		"How often to receive updates from the server."
+		{ NUMBER 20 66 }
+		{ "20" }
+	}
+
+	"cl_cmdrate"
+	{
+		"Command Rate"
+		"How often inputs are sent to the server."
+		{ NUMBER 30 66 }
+		{ "30" }
+	}
+
+	"rate"
+	{
+		"Data Rate"
+		"The maximum download speed for received data, measured in bytes/second."
+		{ NUMBER 24576 1048576 }
+		{ "80000" }
+	}
+
+	"cl_timeout"
+	{
+		"Server Timeout Cap"
+		"The number of seconds before you are forced to disconnect due to lost connection."
+		{ NUMBER 5 60 }
+		{ "30" }
+	}
+
+	"tf_mm_custom_ping_enabled"
+	{
+		"Use Matchmaking Ping Limit"
+		"Set an upper bound on ping when searching for a match via matchmaking."
+		{ BOOL }
+		{ "0" }
+	}
+
+	"tf_mm_custom_ping"
+	{
+		"Matchmaking Ping Limit"
+		"The highest ping server matchmaking can join you into."
+		{ NUMBER 25 350 }
+		{ "100" }
+	}
+
+	"cl_allowupload"
+	{
+		"Upload Player Files"
+		"Upload custom files to other players, such as sprays."
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_allowdownload"
+	{
+		"Download Player Files"
+		"Download custom files from other players, such as sprays."
+		{ BOOL }
+		{ "1" }
+	}
+
+	"tf_mm_custom_ping_enabled"
+	{
+		"Use Matchmaking Ping Limit"
+		"Set an upper bound on ping when searching for a match via matchmaking."
+		{ BOOL }
+		{ "0" }
+	}
+
+
+
+	"category5"
+	{
+		"#TF_OptionCategory_Misc"
+		{ CATEGORY }
+	}
+
+	"hud_takesshots"
+	{
+		"#game_takesshots"
+		"#Tooltip_takesshots"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	//"hud_classautokill"
 	//{
-	//	"#GameUI_CloseBrowserOnConnect"
+	//	"#TF_classautokill"
+	//	"#Tooltip_classautokill"
 	//	{ BOOL }
 	//	{ "1" }
 	//}
 	
-	//"cl_cloud_settings"
-	//{
-	//	"#Valve_UseSteamCloud"
-	//	"#Tooltip_UseSteamCloud"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
+	"tf_respawn_on_loadoutchanges"
+	{
+		"#TF_loadoutrespawn"
+		"#Tooltip_loadoutrespawn"
+		{ BOOL }
+		{ "1" }
+	}
 
-	//"cl_steamscreenshots"
-	//{
-	//	"#Valve_SteamScreenshots"
-	//	"#Tooltip_SteamScreenshots"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
+	"cl_spraydisable"
+	{
+		"#GameUI_DisableSprays"
+		"#Tooltip_DisableSprays"
+		{ BOOL }
+		{ "1" }
+	}
 
-	//"cl_notifications_show_ingame"
-	//{
-	//	"#TF_ShowNotificationsInGame"
-	//	"#Tooltip_ShowNotificationsInGame"
-	//	{ BOOL }
-	//	{ "1" }
-	//}
+	"tf_taunt_first_person"
+	{
+		"Taunt in First Person"
+		"If set, taunts will be done from a first person perspective, instead of third person."
+		{ BOOL }
+		{ "0" }
+	}
+
+	"category6"
+	{
+		"#TF_OptionCategory_DemoSupport"
+		{ CATEGORY }
+	}
+
+	"ds_enable"
+	{
+		"#TF_DemoSupport"
+		"#TF_DemoSupport_ToolTip"
+		{ LIST
+			"#TF_DemoSupport_Manual" "0"
+			"#TF_DemoSupport_Comp" "1"
+			"#TF_DemoSupport_All" "2"
+			"#TF_DemoSupport_Tournament" "3"
+		}
+		{ "0" }
+	}
+
+	"ds_dir"
+	{
+		"#TF_DemoSupport_Dir"
+		"#TF_DemoSupport_Dir_ToolTip"
+		{ STRING }
+		{ "Demos" }
+	}
+
+	"ds_prefix"
+	{
+		"#TF_DemoSupport_Prefix"
+		"#TF_DemoSupport_Prefix_ToolTip"
+		{ STRING }
+		{ "" }
+	}
+
+	"ds_sound"
+	{
+		"#TF_DemoSupport_Sound"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"ds_log"
+	{
+		"#TF_DemoSupport_Log"
+		"#TF_DemoSupport_Log_ToolTip"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"ds_notify"
+	{
+		"#TF_DemoSupport_Notify"
+		{ LIST
+			"#TF_DemoSupport_Notify_ConsoleOnly" "0"
+			"#TF_DemoSupport_Notify_Chat" "1"
+			"#TF_DemoSupport_Notify_HUD" "2"
+		}
+		{ "0" }
+	}
+
+	"ds_screens"
+	{
+		"#TF_DemoSupport_Screens"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"ds_min_streak"
+	{
+		"#TF_DemoSupport_MinStreak"
+		"#TF_DemoSupport_MinStreak_ToolTip"
+		{ NUMBER 2 1000 }
+		{ "4" }
+	}
+
+	"ds_kill_delay"
+	{
+		"#TF_DemoSupport_KillDelay"
+		"#TF_DemoSupport_KillDelay_ToolTip"
+		{ NUMBER 5 1000 }
+		{ "15" }
+	}
+
+	"ds_autodelete"
+	{
+		"#TF_DemoSupport_AutoDelete"
+		"#TF_DemoSupport_AutoDelete_ToolTip"
+		{ BOOL }
+		{ "0" }
+	}
 }
