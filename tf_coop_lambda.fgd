@@ -2619,6 +2619,16 @@
 		64 :   "Pyro" : 1
 		128 :  "Spy" : 1
 		256 :  "Engineer" : 1
+		//512 :	   "Civilian" : 1
+		//1024 :    "John" : 1
+		//2048 :    "Mercenary" : 1
+		//4096 :    "Repressor" : 1
+		//8192 :    "Enforcer" : 1
+		//16384 :   "Jerry" : 1
+		//32768 :   "Saxton" : 1
+		//65536 :   "Telecon" : 1
+		//131072 :  "Agent" : 1
+		//commented out until someone finds a way to make it so that old player spawns have these flags on by default -spyguy26
 	]
 
  	round_bluespawn(target_destination) : "Blue spawn for round" : : "Blue spawn point when the associated round is being played."
@@ -3152,6 +3162,12 @@
 	]
 
 	AllowTeleporters(choices) : "Allow Teleporters" : 0 : "Teleporters are allowed to be built in this volume" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	AllowBouncepads(choices) : "Allow Bouncepads" : 0 : "Bouncepads are allowed to be built in this volume" =
 	[
 		0 : "No"
 		1 : "Yes"
