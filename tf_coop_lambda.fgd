@@ -2854,10 +2854,52 @@
 // Items
 //
 
-@PointClass base(Item) studio("models/items/medkit_large.mdl") = item_healthkit_full : "Health Kit Full" []
-@PointClass base(Item) studio("models/items/medkit_small.mdl") = item_healthkit_small :	"Health Kit Small" []
-@PointClass base(Item) studio("models/items/medkit_medium.mdl") = item_healthkit_medium : "Health Kit Medium" []
-@PointClass base(Item) studio("models/items/medkit_mega.mdl") = item_healthkit_mega : "Health Kit Mega" []
+//@PointClass base(Item) studio("models/items/medkit_large.mdl") = item_healthkit_full : "Health Kit Full" []
+//@PointClass base(Item) studio("models/items/medkit_small.mdl") = item_healthkit_small :	"Health Kit Small" []
+//@PointClass base(Item) studio("models/items/medkit_medium.mdl") = item_healthkit_medium : "Health Kit Medium" []
+//@PointClass base(Item) studio("models/items/medkit_mega.mdl") = item_healthkit_mega : "Health Kit Mega" []
+
+@PointClass base(Item) studio("models/items/medkit_large.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_full :
+	"Health Kit Full"
+[
+	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/props_halloween/halloween_medkit_large.mdl" : "Halloween Soup Cauldron"
+	]
+]
+
+@PointClass base(Item) studio("models/items/medkit_small.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_small :
+	"Health Kit Small"
+[
+	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/props_halloween/halloween_medkit_small.mdl" : "Halloween Candy Bar"
+	]
+]
+
+@PointClass base(Item) studio("models/items/medkit_medium.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_medium :
+	"Health Kit Medium"
+[
+	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/props_halloween/halloween_medkit_medium.mdl" : "Halloween Pumpkin Candy Tin"
+		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
+	]
+]
+
+@PointClass base(Item) studio("models/items/medkit_mega.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_mega :
+	"Health Kit Mega"
+[
+	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/props_halloween/halloween_medkit_mega.mdl" : "Halloween Pumpkin Candy Tin"
+		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
+	]
+]
 
 @PointClass base(Item) size(-1 -1 -48, 1 1 1) studioprop() = item_healthkit_tiny :	
     "Overheal health kit for players." 
@@ -7325,7 +7367,15 @@
 @PointClass base(HLItem) studio("models/items/BoxBuckshot.mdl")= item_box_buckshot : "Box Buckshot" []
 @PointClass base(HLItem) studio("models/weapons/w_missile_closed.mdl")= item_rpg_round : "RPG Round" []
 @PointClass base(HLItem) studio("models/items/AR2_Grenade.mdl")= item_ammo_smg1_grenade : "SMG1 Grenade" []
-@PointClass base(HLItem) studio("models/items/battery.mdl") = item_battery : "HEV battery" []
+//@PointClass base(HLItem) studio("models/items/battery.mdl") = item_battery : "HEV battery" []
+@PointClass base(HLItem) studio("models/items/battery.mdl") = item_battery : "HEV battery"
+[
+	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/w_battery.mdl" : "Hl1 Battery"
+	]
+]
 @PointClass base(HLItem) studio("models/items/healthkit.mdl") = item_healthkit : "Small Health Kit" []
 @PointClass base(HLItem) studio("models/healthvial.mdl") = item_healthvial : "Personal Health Kit" []
 @PointClass base(HLItem) studio("models/items/combine_rifle_ammo01.mdl") = item_ammo_ar2_altfire : "AR2 Alt-fire Round" []
