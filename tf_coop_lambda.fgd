@@ -214,6 +214,9 @@
 		"item_healthkit_full"
 		"item_healthkit_medium"
 		"item_healthkit_small"
+		"item_healthkit_tiny"
+		"item_healthkit_mega"
+		"item_grenadepack"
 		"item_teamflag"
 		"item_bonuspack"
 		"logic_active_autosave"
@@ -9569,7 +9572,14 @@
 	model(studio) : "model"
 ]
 
-@NPCClass base(BaseNPC) studio("models/roach.mdl") = monster_cockroach : "Cockroach" []
+@NPCClass base(BaseNPC) studio("models/roach.mdl") = monster_cockroach : "Cockroach" 
+[
+	model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+	[
+		"" : "Default"
+		"models/tf2_roach.mdl" : "TF2 styled cockroach"
+	]
+]
 @PointClass base(Targetname, RenderFields, Angles) studio("models/light.mdl") = xen_plantlight : "Xen Plant Light" []
 @PointClass base(Targetname, RenderFields, Angles) studio("models/hair.mdl") = xen_hair : "Xen Hair" 
 [
