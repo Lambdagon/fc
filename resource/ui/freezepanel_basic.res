@@ -289,6 +289,24 @@
 			"HealthDeathWarningColor"	"HUDDeathWarning"
 			"TextColor"		"HudOffWhite"
 		}	
+		
+			"FreezePanelArmor"
+		{
+			"ControlName"	"CTFFreezePanelArmor"
+			"fieldName"		"FreezePanelArmor"
+			"xpos"			"32"
+			"ypos"			"60"
+			"zpos"			"1"
+			"wide"			"31"
+			"tall"			"31"
+			"visible"		"1"
+			"enabled"		"1"	
+			"HealthBonusPosAdj"	"9"
+			"HealthDeathWarning"	"0.49"
+			"TFFont"		"HudFontSmall"
+			"HealthDeathWarningColor"	"HUDDeathWarning"
+			"TextColor"		"HudOffWhite"
+		}
 
 		"FreezeLabelKiller"
 		{	
@@ -323,6 +341,60 @@
 			"scaleImage"		"1"	
 			"color_outline"		"52 48 45 255"
 		}	
+		
+		"FreezeLabelArmor"
+		{	
+			"ControlName"		"Label"
+			"fieldName"		"FreezeLabelArmor"
+			"font"			"DefaultSmall"
+			"xpos"			"62"
+			"ypos"			"62"
+			"zpos"			"1"
+			"wide"			"230"
+			"tall"			"12"
+			"autoResize"		"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"labelText"		"#FreezePanel_Killer"
+			"textAlignment"		"North-West"
+			"dulltext"		"0"
+			"brighttext"		"0"
+		}
+		
+		"FreezeLabelKillerArmor"
+		{	
+			"ControlName"	"Label"
+			"fieldName"		"FreezeLabelKillerArmor"
+			"font"			"HudFontSmall"
+			"xpos"			"83"
+			"ypos"			"73"
+			"zpos"			"1"
+			"wide"			"230"
+			"tall"			"18"
+			"autoResize"	"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"labelText"		"%killername%"
+			"textAlignment"		"Left"
+		}
+
+		"AvatarImageArmor"
+		{
+			"ControlName"		"CAvatarImagePanel"
+			"fieldName"		"AvatarImageArmor"
+			"xpos"			"62"
+			"ypos"			"71"
+			"zpos"			"0"
+			"wide"			"18"
+			"tall"			"18"
+			"visible"		"1"
+			"enabled"		"1"
+			"image"			""
+			"scaleImage"		"1"	
+			"color_outline"		"52 48 45 255"
+		}
 		
 		"NemesisSubPanel"
 		{
