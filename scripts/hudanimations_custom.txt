@@ -75,6 +75,30 @@ event HudHealthDyingPulseStop
 	
 	Animate	PlayerHealthValue			FgColor		"TanLight"		Accel 0.0 0.0
 }
+
+//===========================================
+
+//Armor Dying Pulse
+event HudArmorDyingPulse
+{
+	Animate	PlayerStatusArmorBonusImage 	Alpha		"255"		Linear 0.0 0.075
+	Animate	PlayerStatusArmorBonusImage 	Alpha		"0"			Linear 0.125 0.075
+	
+	RunEvent HudArmorDyingPulseLoop	0.25
+}
+
+// call to loop HudArmorDyingPulse
+event HudArmorDyingPulseLoop
+{
+	RunEvent HudArmorDyingPulse 0.0
+}
+
+event HudHealthDyingPulseStop
+{
+	StopEvent HudArmorDyingPulse 0.0
+	StopEvent HudArmorDyingPulseLoop 0.0
+}
+
 //==================================================================================
 
 
