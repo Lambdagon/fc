@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/props_spytech/control_room_consoles_yellow"
+	"$selfillum"	1
+	"$nodecal" "1"
+
+	// Use separate self-illum mask on Pre DX9 hardware
+	">=DX90"
+	{
+		"$baseTexture" 		"models/props_spytech/control_room_consoles_yellow_noalpha"
+		"$selfillummask" 	"models/props_spytech/control_room_consoles_selfillum"
+	}
+
+	// Use redundant self-illum in base alpha on Pre DX9 hardware
+	"<DX90"
+	{
+		"$baseTexture" 	"models/props_spytech/control_room_consoles_yellow"
+	}
+}
