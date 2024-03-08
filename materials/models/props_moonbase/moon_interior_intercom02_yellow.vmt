@@ -1,0 +1,34 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "models\props_moonbase/moon_interior_intercom01_yellow"
+	$bumpmap "effects/flat_normal"
+	"$phong" "1"
+	"$phongexponent" "60"
+	"$phongboost" "21"
+	//"$lightwarptexture" "models/lightwarps/weapon_lightwarp"
+	"$phongfresnelranges"	"[.5 .5 3]"
+	"$halflambert" "1"
+	$phongtint "[ 1.0 0.7 0.55 ]"
+
+
+
+	// Rim lighting parameters
+	"$rimlight" "1"			
+	"$rimlightexponent" "20"	
+	"$rimlightboost" "1"
+	
+	$selfillum 1
+	$selfillummask "models\props_moonbase/moon_interior_intercom01_illum"
+	"Proxies"
+	{
+			"Sine" // a proxy which produces a sine wave
+		{
+			resultVar $selfillumtint // The shader parameter to be manipulated
+			sineperiod	2
+			sinemin	 	2
+			sinemax		4 
+		}
+	}
+}
+
+
