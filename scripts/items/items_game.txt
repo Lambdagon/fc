@@ -19655,12 +19655,12 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.55"
+					"value"	"1.35"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.35"
+					"value"	"1.25"
 				}
 				"bullets per shot hidden"
 				{
@@ -20664,35 +20664,30 @@
 			}
 			"attributes"
 			{
-				"health regen"
+				"dmg from melee increased"
 				{
-					"attribute_class"	"add_health_regen"
-					"value"	"5"
+					"attribute_class"	"dmg_from_melee"
+					"value"	"0.5"
 				}
-				"maxammo primary increased"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"1.50"
-				}
-                                "dmg taken from blast reduced"
-				{
-					"attribute_class"	"	mult_dmgtaken_from_explosions"
-					"value"	"0.60"
-				}
-                                "health from healers reduced"
+				"health from healers reduced"
 				{
 					"attribute_class"	"ult_health_fromhealers"
-					"value"	"0.25"
+					"value"	"0.70"
 				}
-                                "health from packs decreased"
+				"health from packs decreased"
 				{
 					"attribute_class"	"mult_health_frompacks"
-					"value"	"0.30"
+					"value"	"0.80"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
 			"drop_sound"		"ui/item_pack_drop.wav"
-                }
+        }
                 "9119"
 		{
 			"name"			"The Assassin's Tire"
@@ -24595,13 +24590,14 @@ Fires....... something"
 		{
 			"name"    "TF_WEAPON_SHOTGUN_MERC_SECONDARY"
             "first_sale_date"    "2010/09/29"
-            "prefab"    "weapon_shotgun_multiclass"
+            "item_class"	"tf_weapon_shotgun"
             "baseitem"    "0"
 			"item_name"		"Shotgun"
             "item_slot"    "secondary"
 			"anim_slot"    "primary"
 			"show_in_armory"	"1"
 			//this will get executed if its too good
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
             "model_player"    "models/weapons/v_models/v_shotgun_merc.mdl"
             "model_world"    "models/weapons/c_models/c_shotgun/c_shotgun.mdl"
             "attach_to_hands"    "2"
@@ -27644,6 +27640,11 @@ Fires....... something"
 					"attribute_class"	"mult_dmgtaken_from_crit"
 					"value"	"1.25"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
             }
 			"static_attrs"
 			{
@@ -28020,7 +28021,7 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.80"
+					"value" "1.25"
 				}
 				"weapon spread bonus"
 				{
@@ -36699,6 +36700,11 @@ Fires....... something"
 					"attribute_class"	"silent_steps"
 					"value" "1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 				//the stats we need dont exist, these will do
             }
 			"static_attrs"
@@ -36753,6 +36759,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"0.80"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
             }
 			"static_attrs"
@@ -36816,6 +36827,11 @@ Fires....... something"
 				{
 					"attribute_class"	"override_footstep_sound_set"
 					"value"				"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
             }
 			"static_attrs"
