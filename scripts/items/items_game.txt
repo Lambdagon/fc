@@ -19422,7 +19422,7 @@
 		"9039"
 		{
 			"name"	"HL2 Crowbar"
-			"item_class"	"tf_weapon_bat"
+			"item_class"	"tf_weapon_knife"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -19464,7 +19464,7 @@
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.7"
+					"value" "0.3"
 				}
 				"dmg bonus vs breakables"
 				{
@@ -19475,6 +19475,16 @@
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0.6"
+				}
+				"damage penalty HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"cannot backstab HIDDEN"
+				{
+					"attribute_class" 	"mod_cannot_backstab"
+					"value" "1"
 				}
 			}
 			
@@ -19655,7 +19665,7 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.35"
+					"value"	"1.25"
 				}
 				"spread penalty"
 				{
@@ -21075,25 +21085,15 @@
 					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"	"1"
 				}
-				"clip size penalty HIDDEN"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.75"
-				}
-				"damage bonus"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "2"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0.8"
-				}
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.90"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "3"
 				}
 			}
 			"static_attrs"
@@ -28244,10 +28244,10 @@ Fires....... something"
 					"attribute_class"	"mult_maxammo_primary"
 					"value"	"3"
 				}
-				"bullets per shot bonus"
+				"fire rate bonus"
 				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "2"
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.7"
 				}
 				"clip size bonus"
 				{
@@ -28257,12 +28257,12 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.7"
+					"value"	"0.5"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.6"
+					"value"	"1.50"
 				}
 				"move speed penalty"
 				{
@@ -28272,7 +28272,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "2"
+					"value" "3"
 				}
 
             }
@@ -28532,7 +28532,7 @@ Fires....... something"
 		}
 		"9808"  
 		{
-			"name"	"John CSS Deagle"
+			"name"	"John OP4 CSS Deagle"
 			"item_class"	"tf_weapon_pistol"
 			"baseitem" "0"
 			"tags"
@@ -28579,24 +28579,19 @@ Fires....... something"
 					"value"	"2.5"
 				}
 				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.3"
-				}
+                {
+                    "attribute_class"    "mult_spread_scale"
+                    "value" "0.90"
+                }
 				"clip size penalty"
 				{
 					"attribute_class" 	"mult_clipsize"
 					"value" "0.58"
 				}
-				"crit_dmg_falloff"
-				{
-					"attribute_class" 	"crit_dmg_falloff"
-					"value" "1"
-				}
 				"fire rate penalty"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" "2.5"
+					"value" "1.75"
 				}
 				"mult_spread_scales_consecutive"
 				{
@@ -28606,12 +28601,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "13"
-				}
-				"single wep deploy time increased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.2"
+					"value" "8"
 				}
 				"maxammo secondary reduced"
 				{
@@ -37056,7 +37046,7 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.60"
+					"value"	"0.5"
 				}
 				"max health additive penalty"
 				{
