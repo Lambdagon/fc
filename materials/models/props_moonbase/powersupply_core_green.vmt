@@ -1,0 +1,50 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "glass/glasswindow002a"
+	"$surfaceprop" "default"
+	$selfillum 1
+	$selfillumtint "[1 1 1]"
+	"$blendtintbybasealpha" "0" 
+	"$blendtintcoloroverbase" "1"  
+
+	"$colortint_base" "{62 107 51}"
+	"$color2" "{0 0 0}"  
+	"$colortint_tmp" "[0 0 0]"
+	
+	"$envmap" "cubemaps/cubemap_sheen001"
+	"$envmaptint" "[1 1 1]"
+	$envmapcontrast 0
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[5 6 5]"
+	"$lightwarptexture" "models/lightwarps/weapon_lightwarp"
+
+
+	"$rimlight" "1"						
+	"$rimlightexponent" "10"				
+	"$rimlightboost" "100"
+	
+	"Proxies"
+	{
+
+  		"ItemTintColor"
+  		{
+   			"resultVar" "$colortint_tmp"
+  		}
+  		"SelectFirstIfNonZero"
+  		{
+   			"srcVar1" "$colortint_tmp"
+   			"srcVar2" "$colortint_base"
+   			"resultVar" "$color2"
+  		}
+		"Sine" // a proxy which produces a sine wave
+		{
+			resultVar $selfillumtint // The shader parameter to be manipulated
+			sineperiod	1
+			sinemin	 	-10
+			sinemax		100
+		}
+
+	}
+}
