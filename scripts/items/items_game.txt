@@ -27683,37 +27683,54 @@ Fires....... something"
             }
         }
 		"9791"
+		// scout shotgun pellet gun
         {
-            "name"    "TF_WEAPON_SHOTGUN_SCOUT"
+            "name"    "Scout PELLET GUN"
             "first_sale_date"    "2010/09/29"
-            "prefab"    "weapon_shotgun"
+			"item_class"	"tf_weapon_tfc_shotgun"
             "baseitem"    "0"
-			"item_name"		"Shotgun"
-			"item_description" "Generally weaker than a Scattergun. Holds more reserve"
-            "item_slot"    "primary"
+			"item_name"		"Pellet Gun"
+			"item_description" "Remember switching to your other shotgun is faster than reloading."
+			"item_logname"	"pelletgun"
+			"item_iconname"	"shotgun"
+            "item_slot"    "secondary"
+			//someone fix scout having no ability for a secondary shotgun
+			"item_type_name"	"#TF_Weapon_Peppergun"
 			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
             "model_player"    "models/weapons/v_models/v_shotgun_scout.mdl"
             "model_world"    "models/weapons/w_models/w_shotgun_multiclass.mdl"
 			"anim_slot"		 "primary"
+			"item_quality"	"unique"
             "attach_to_hands"    "0"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"particle_suffix"		"shotgun"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
             "used_by_classes"
             {
 				"scout"	 "1"
             }
 			"attributes"
 			{
-				"maxammo primary increased"
+				"max health additive penalty"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"1.35"
+					"attribute_class"	"add_maxhealth"
+					"value" "-15"
 				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value" "0.50"
-                }
             }
-		}			
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ShotgunHL1.Single"
+				"sound_burst"			"Weapon_Shotgun.Double"
+				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
+				"sound_reload"			"HL2_Weapon_Shotgun.Reload"
+				"sound_special1"		"HL2_Weapon_Shotgun.Special1"
+			}
+		}				
 		"9793"
 		{
 			"name"	"Engi Thumper"
