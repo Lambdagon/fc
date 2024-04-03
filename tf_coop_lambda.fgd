@@ -4933,8 +4933,33 @@
 	output OnPhysGunDrop(void) : "Released by physgun"
 ]
 
-@NPCClass base(BaseNPC) studio("models/missile_defense.mdl") = npc_missiledefense : "Missile Defense"
+//@NPCClass base(BaseNPC) studio("models/missile_defense.mdl") = npc_missiledefense : "Missile Defense"
+//[
+//]
+
+@NPCClass base(BaseNPC) studio("models/missile_defense.mdl") = npc_missiledefense : "A turret who takes down rockets from the player"
 [
+	spawnflags(flags) = 
+	[
+		65536  :  "Vulnerable to bullets" : 0
+	]
+
+	Health(Integer) : "Health" : 10
+	TurretModel(studio) : "Turret Model" : "models/missile_defense.mdl"
+	GibModel(studio) : "Gib Model" : "models/gibs/missile_defense_gibs.mdl"
+	FireSound(sound) : "Fire Sound" : "npc/turret_floor/shoot1.wav"
+	RotateSound(sound) :	"Rotate Sound": "npc/turret_floor/ping.wav"
+	ReloadSound(sound) :	"Reload Sound": "vehicles/tank_readyfire1.wav"
+	
+	StartOn(choices) : "Start On" : 1 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	// Inputs
+	input TurnOn(void) : "Turn on: Look for enemies"
+	input TurnOff(void) : "Turn off: Stop looking for enemies"
 ]
 
 @NPCClass base(BaseNPC) studio("models/combine_soldier.mdl") = npc_sniper : "Sniper"
