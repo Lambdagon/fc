@@ -44,6 +44,20 @@
 		"scaleImage"	"1"	
 	}
 	
+	"TFCharacterImage"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"TFCharacterImage"
+		"xpos"			"c-250"
+		"ypos"			"-80"
+		"zpos"			"-99"
+		"wide"			"600"
+		"tall"			"600"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleImage"	"1"
+	}
+	
 	// ---------- Footer Content ----------
 	
 	"FooterBackground"
@@ -52,7 +66,7 @@
 		"fieldName"			"FooterBackground"
 		"xpos"				"0"
 		"ypos"				"420"
-		"zpos"				"-100"
+		"zpos"				"-98"
 		"wide"				"f0"
 		"tall"				"62"
 		"visible"			"1"
