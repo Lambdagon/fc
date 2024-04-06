@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\props_lights/walllight001a_yellow"
+	"$surfaceprop" "metal"
+	"$selfillum" 1
+
+	// Use separate self-illum mask on Pre DX9 hardware
+	">=DX90"
+	{
+		"$baseTexture" 		"models\props_lights/walllight001a_yellow_noalpha"
+		"$selfillummask" 	"models\props_lights/walllight001a_selfillum"
+	}
+
+	// Use redundant self-illum in base alpha on Pre DX9 hardware
+	"<DX90"
+	{
+		"$baseTexture" 	"models\props_lights/walllight001a_yellow"
+	}
+}
