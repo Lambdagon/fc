@@ -4392,8 +4392,8 @@
 			{
 				"weapon spread bonus"
 				{
-				"attribute_class"	"mult_spread_scale"
-				"value"	"0.30"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.30"
 				}
 				"Reload time decreased"
 				{
@@ -14718,7 +14718,8 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
+			// baby face's blaster broke
 			"item_type_name"	"#TF_Weapon_Scattergun"
 			"item_name"	"#TF_Weapon_PEP_Scattergun"
 			"item_description"	"#TF_Weapon_PEP_Scattergun_Desc"
@@ -19751,6 +19752,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"5"
 				}
+				"lunchbox healing decreased"
+				{
+					"attribute_class" "lunchbox_healing_scale"
+					"value" "0.0"
+				}
 			}
 		}
 
@@ -20624,6 +20630,16 @@
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.5"
 				}
+				"Burst Fire Size"
+				{
+					"attribute_class"	"burst_size"
+					"value"	"6"
+				}
+				"Burst Fire Delay"
+				{
+					"attribute_class"	"burst_delay"
+					"value"	"0.10"
+				}
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
@@ -21448,7 +21464,7 @@
 		}	
 		"9410"
 		{
-			"name"	"Spy shotgun"
+			"name"	"Spy Shotgun"
 			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -21493,15 +21509,15 @@
 			}
 			"attributes"
 			{
-				"fire rate penalty"
+				"dmg falloff increased"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.15"
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"2.00"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.80"
+					"value"	"1.75"
 				}
 				"move speed penalty"
 				{
@@ -21517,6 +21533,16 @@
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "15"
+				}
+				"torso scale"
+				{
+					"attribute_class"		"torso_scale"
+					"value"		"1.15"
+				} 
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
 				}
 			}
 			"visuals"
@@ -23414,7 +23440,7 @@ Fires....... something"
 			"item_description"	"Model by Wowza"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"propername"	"1"
 			"item_logname"	"twentysix"
 			"item_iconname"	"twentysix"
@@ -23440,11 +23466,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_no_reload_display_only"
 					"value"	"1"
-				}
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"1.30"
 				}
 				"fire rate bonus"
 				{
@@ -23526,26 +23547,16 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"single wep deploy time decreased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"0.20"
-				}
 				"SRifle Charge rate increased"
 				{
 					"attribute_class"	"mult_sniper_charge_per_sec"
-					"value"				"1.70"
+					"value"				"1.50"
  				}
 				"crits_become_minicrits"
 				{
 					"attribute_class"	"crits_become_minicrits"
 					"value"				"1"
 				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.50"
- 				}
 				"sniper fires tracer"
  				{
 					"attribute_class"	"sniper_fires_tracer"
@@ -23559,13 +23570,13 @@ Fires....... something"
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"				"0.20"
+					"value"				"0.25"
  				}
-				"lunchbox adds minicrits"
+				"no_jump"
 				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"2"
-				}
+					"attribute_class"	"no_jump"
+					"value"				"1"
+ 				}
 			}
 			"visuals"
 			{
@@ -24698,7 +24709,7 @@ Fires....... something"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_lever/v_sniperrifle_sniper.mdl"
 			"model_world"	"models/weapons/w_models/w_lever/w_sniperrifle.mdl"
-			"attach_to_hands"	"2"
+			"attach_to_hands"	"0"
 			"visuals"
 			{
 				"show_player_bodygroup_name"	"bullets"
@@ -24713,11 +24724,6 @@ Fires....... something"
 				{
 					"attribute_class"	"see_enemy_health"
 					"value" "1"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.90"
 				}
 				"damage penalty"
 				{
@@ -25195,48 +25201,39 @@ Fires....... something"
 					"attribute_class"	"override_projectile_type"
 					"value"				"6"
 				}
-				"maxammo primary increased"
+				"crit_vs_burning_FLARES_DISPLAY_ONLY"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"1.50"
-				}
-				"mod max primary clip override"
-				{
-					"attribute_class"	"mod_max_primary_clip_override"
-					"value"	"-1"
+					"attribute_class"	"crit_vs_burning_FLARES_DISPLAY_ONLY"
+					"value"	"1"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.50"
-				}
-				"mod no reload DISPLAY ONLY"
-				{
-					"attribute_class"	"mod_no_reload_display_only"
-					"value"				"1"
+					"value" "0.75"
 				}
 				"projectile spread angle penalty"
 				{
 					"attribute_class"	"projectile_spread_angle"
-					"value"				"5"
-				}
-				"mod ammo per shot"
-				{
-					"attribute_class"	"add_onhit_addammo"
-					"value" "3"
+					"value"				"3"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.80"
+					"value" "0.90"
 				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.30"
+				}
+				
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_SuperShotgun.Single"
 				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
-				"muzzle_flash"	"muzzle_bignasty"
-				"tracer_effect"	"bullet_bignasty_tracer01"
+				"muzzle_flash"			"muzzle_bignasty"
+				"tracer_effect"			"bullet_bignasty_tracer01"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -26952,28 +26949,18 @@ Fires....... something"
 				}
 				"fire rate bonus"
 				{
-					"attribute_class"	"	mult_postfiredelay"
+					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.80"
-				}
-				"Construction rate decreased"
-				{
-					"attribute_class"	"mult_construction_value"
-					"value"	"0.30"
 				}
 				"Repair rate decreased"
 				{
 					"attribute_class"	"mult_repair_value"
-					"value"	"0.30"
+					"value"	"0.60"
 				}
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"1.30"
-				}
-				"dmg penalty vs buildings"
-				{
-					"attribute_class"	"mult_dmg_vs_buildings"
-					"value" "0.30"
 				}
 				"crit mod disabled"
 				{
@@ -26994,11 +26981,6 @@ Fires....... something"
 				{
 					"attribute_class"	"kill_eater_score_type_2"
 					"value" 	"0"									
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
 				}
 			}
 		}
@@ -27103,100 +27085,7 @@ Fires....... something"
 		}
 		"9777"
 		{
-			"prefab"	"weapon_sword"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_be_equipped_by_soldier_or_demo"	"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_taunt_damage"		"1"
-			}
-			"base_item_name"	"The Eyelander"
-			"item_name"	"The Highlander"
-			"item_description"	"Model by Mr Funreal"
-			"propername"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_highlander"
-			"model_player"	"models/weapons/lambda/w_models/c_claymore.mdl"
-			"show_in_armory"	"1"
-			"attach_to_hands"	"1"
-			"used_by_classes"
-			{
-				"demoman"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"12 -3 -10"
-			}
-			"visuals"
-			{
-				"sound_melee_miss"	"Weapon_Sword.Swing"
-				"sound_melee_hit"	"Weapon_Sword.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_Sword.HitWorld"
-				"sound_burst"		"Weapon_Sword.SwingCrit"
-				"sound_special1"	"Sword.Hit"
-				"sound_special2"	"Sword.Idle"
-				"styles"
-				{
-					"0"
-					{
-						"skin_red" "0"
-						"skin_blu" "1"
-						"selectable"	"0"
-					}
-					"1"
-					{
-						"skin_red"	"2"
-						"skin_blu"	"3"
-						"selectable"	"0"
-						"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore_gold"
-					}
-				}
-			}
-			"attributes"
-			{
-				"is_a_sword"
-				{
-					"attribute_class"	"is_a_sword"
-					"value"				"72"
-				}
-				"decapitate type"
-				{
-					"attribute_class"	"decapitate_type"
-					"value"	"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"6"									
-				}
-				"kill eater kill type"
-				{
-					"attribute_class"	"kill_eater_kill_type"
-					"value"	"6"			
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.4"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"xifier_class_remap"	"eyelander"
+// was demoman HIGHlander
 		}
 		"9778"
 		{
@@ -27289,6 +27178,7 @@ Fires....... something"
 			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_revolver"
 			"item_quality"		"unique"
+			"anim_slot" "primary"
 			"item_logname"				"garand_sniper"
 			"item_iconname"				"garand"
 			"item_type_name"			"Rifle"
@@ -27857,7 +27747,7 @@ Fires....... something"
 		}
 		"9797"
 		{
-			"name"	"Pyro Combine Playermodel"
+			"name"	"Pyro Combine Mask"
 			"first_sale_date"	"2012/12/20"
 			"prefab"	"valve base_misc"
 			"hidden"	"0"
@@ -28312,7 +28202,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "5"
+					"value" "2"
 				}
 
             }
@@ -31426,18 +31316,8 @@ Fires....... something"
 				"sound_single_shot"		"Weapon_1911.Single"
 				"sound_burst"			"Weapon_1911.SingleCrit"
 			}
-						"attributes"
+			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"1.50"
-				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.90"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -36592,7 +36472,7 @@ Fires....... something"
 				"can_deal_damage"			"1"
 				"can_deal_taunt_damage"		"1"
 			}
-			"item_class" "tf_weapon_shovel"
+			"item_class" "tf_weapon_knife"
 			"enabled"	"0"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -36621,20 +36501,15 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"mod see enemy health hidden"
+				"deploy time decreased"
 				{
-					"attribute_class"	"see_enemy_health"
-					"value"	"1"
+					"attribute_class"	"mult_deploy_time"
+					"value"	"0.8"
 				}
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" "1.10"
-				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value"	"0.5"
+					"value" "1.25"
 				}
 				"fire rate bonus"
 				{
@@ -38656,6 +38531,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "0.85"
+				}
+				"bayonet_melee_damage"
+				{
+					"attribute_class"	"bayonet_melee_damage"
+					"value" "35.0"
 				}
 			}
 			"visuals"
