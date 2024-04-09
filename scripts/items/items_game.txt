@@ -20630,16 +20630,6 @@
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.5"
 				}
-				"Burst Fire Size"
-				{
-					"attribute_class"	"burst_size"
-					"value"	"6"
-				}
-				"Burst Fire Delay"
-				{
-					"attribute_class"	"burst_delay"
-					"value"	"0.10"
-				}
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
@@ -22763,51 +22753,10 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
                 }
-                "9701"
+    "9701"
 		{
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-			}
-			"first_sale_date"	"2010/09/29"
-			"enabled"	"1"
-			"show_in_armory"	"1"
-			"item_class"	"tf_weapon_shovel"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"Shovel"
-			"item_name"	"#TF_Weapon_Shovel"
-			"item_slot"	"melee"
-			"item_quality"	"normal"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_shovel"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"1"
-			"model_player"		"models/weapons/w_models/w_shovel.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"spy"	"1"
-                        }
-                        "visuals"
-			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"
-			}
-			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
-			"drop_sound"		"ui/item_shovel_drop.wav"
-                }
+		//was spy shovel
+        }
 		"9702"
 		{
 		//was shotgun melee
@@ -22853,22 +22802,17 @@ Fires....... something"
 					"attribute_class"	"mod_jump_height"
 					"value" "2.30"
 				}
-                                "move speed bonus"
+                "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"1.50"
 				}
-                                "max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"	"-40"
-				}
-                                "dmg taken increased"
+                "dmg taken increased"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.55"
+					"value"	"0.60"
 				}
-                                "no double jump"
+                "no double jump"
 				{
 					"attribute_class"	"set_scout_doublejump_disabled"
 					"value"	"1"
@@ -22878,6 +22822,7 @@ Fires....... something"
 			"drop_sound"		"ui/item_pack_drop.wav"
 		}
 		"9704"
+		// SPY CABER
 		{
 			"name"	"The Ullapool Caber"
 			"first_sale_date"	"2010/12/08"
@@ -22947,6 +22892,7 @@ Fires....... something"
 			}
 		}
 		"9705"
+		// teufort slugger ???
 		{
 			"capabilities"
 			{
@@ -22982,9 +22928,9 @@ Fires....... something"
 				"heavy"	"1"
 				"sniper"	"1"
 				"pyro"	"1"
-                        }
-                        "visuals"
-			{       "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+            }
+            "visuals"
+			{   "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
 				"sound_melee_miss"	"Weapon_Machete.Miss"
 				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
 				"sound_burst"		"Weapon_Machete.MissCrit"
@@ -23365,7 +23311,7 @@ Fires....... something"
 			"propername"	"1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_mkvi/c_mkvi"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -23416,91 +23362,11 @@ Fires....... something"
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-                }
+        }
 		"9711"
 		{
- 			"enabled"	"1"
-			"item_class"	"tf_weapon_pistol"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"		"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"The Twenty Six Shooter"
-			"item_type_name"	"Revolver"
-			"item_name"	"The Twenty Six Shooter"
-			"item_description"	"Model by Wowza"
-			"item_slot"	"secondary"
-			"item_quality"	"unique"
-			"show_in_armory"	"1"
-			"propername"	"1"
-			"item_logname"	"twentysix"
-			"item_iconname"	"twentysix"
-			"min_ilevel"	"5"
-			"max_ilevel"	"5"
-			"image_inventory"	"backpack/weapons/c_models/c_twentysix"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_twentysix/c_pistol/c_pistol.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "32"
-			"used_by_classes"
-			{
-				"engineer"	"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"10 0 -6"
-			}
-			"attributes"
-			{
-				"mod no reload DISPLAY ONLY"
-				{
-					"attribute_class"	"mod_no_reload_display_only"
-					"value"	"1"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.80"
-				}
-                "spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "1.60"
-                }
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.40"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"mod max primary clip override"
-				{
-					"attribute_class"	"mod_max_primary_clip_override"
-					"value"	"-1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot" "Weapon_Ambassador.Single"
-				"sound_burst" "Weapon_Ambassador.SingleCrit"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-                }
+		// was twenty six shooter
+		}
 		"9712"
 		{
 			"prefab"	"weapon_sniperrifle_alt1"
@@ -26945,27 +26811,22 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.80"
+					"value"	"1.20"
 				}
 				"Repair rate decreased"
 				{
 					"attribute_class"	"mult_repair_value"
 					"value"	"0.60"
 				}
-				"single wep deploy time increased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.30"
-				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"1.30"
 				}
 				"decapitate type"
 				{
