@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.PositiveVocalization02"
+    event speak "telecon.PositiveVocalization02"
     {
       time 0.000000 0.728526
-      param "Scout.PositiveVocalization02"
+      param "telecon.PositiveVocalization02"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "happyBigUpper"
     {
       time 0.010417 0.729055
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happyBigUpper"
       event_ramp
       {

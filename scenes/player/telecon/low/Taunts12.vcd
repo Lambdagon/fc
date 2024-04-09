@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.Taunts12"
+    event speak "telecon.Taunts12"
     {
       time 0.000000 1.985306
-      param "Scout.Taunts12"
+      param "telecon.Taunts12"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "madUpper"
     {
       time 0.020833 0.864583
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {
@@ -28,7 +28,7 @@ actor "robo"
     event expression "scaredUpper"
     {
       time 0.885417 2.010417
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "scaredUpper"
       event_ramp
       {

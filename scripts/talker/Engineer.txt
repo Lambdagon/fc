@@ -180,22 +180,6 @@ Rule PlayerCappedIntelligenceEngineer
 	Response PlayerCappedIntelligenceEngineer
 }
 
-Response KilledPlayerEngineer2
-{
-	speak "engineer_dominationengineer06"
-	speak "cm_engie_pregamefirst_rare_03"
-	speak "cm_engie_pregamefirst_comp_02"
-	speak "Engineer.Taunts04"
-	speak "Engineer.Taunts02"
-	speak "engineer_mvm_loot_godlike01"
-	speak "engineer_mvm_loot_rare02"
-}
-Rule KilledPlayerEngineer2
-{
-	criteria ConceptKilledPlayer IsEngineer
-	Response KilledPlayerEngineer2
-}
-
 Response PlayerCapturedPointEngineer
 {
 	scene "scenes/Player/Engineer/low/16.vcd" 

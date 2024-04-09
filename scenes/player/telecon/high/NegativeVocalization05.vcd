@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.NegativeVocalization05"
+    event speak "telecon.NegativeVocalization05"
     {
       time 0.000000 1.909841
-      param "Scout.NegativeVocalization05"
+      param "telecon.NegativeVocalization05"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "madUpper"
     {
       time 0.006256 0.495054
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {
@@ -28,7 +28,7 @@ actor "scout"
     event expression "painBigUpper"
     {
       time 0.438113 1.916667
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {

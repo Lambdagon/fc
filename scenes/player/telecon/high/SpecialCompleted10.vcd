@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.SpecialCompleted10"
+    event speak "telecon.SpecialCompleted10"
     {
       time 0.000000 1.933061
-      param "Scout.SpecialCompleted10"
+      param "telecon.SpecialCompleted10"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "madUpper"
     {
       time 0.027778 1.916667
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

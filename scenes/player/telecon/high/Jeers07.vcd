@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.Jeers07"
+    event speak "telecon.Jeers07"
     {
       time 0.000000 1.602177
-      param "Scout.Jeers07"
+      param "telecon.Jeers07"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "painBigUpper"
     {
       time 0.005417 0.798750
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {
@@ -29,7 +29,7 @@ actor "scout"
     event expression "madUpper"
     {
       time 0.810667 1.592000
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

@@ -202,16 +202,6 @@ Rule soldierMerasmusHideTaunt
 	Response soldierMerasmusHideTaunt
 }
 
-Response pyroHalloweenMerasmusPitFall
-{
-	scene	"scenes/Player/Pyro/low/1586.vcd"
-}
-Rule pyroHalloweenMerasmusPitFall
-{
-	criteria ConceptHalloweenPlayerPitFall IsPyro
-	Response pyroHalloweenMerasmusPitFall
-}
-
 Response scoutHalloweenMerasmusPitFall
 {
 	scene	"scenes/player/scout/low/4455.vcd"
@@ -220,7 +210,7 @@ Response scoutHalloweenMerasmusPitFall
 }
 Rule scoutHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsScout
+	criteria ConceptHalloweenPlayerPitFall Isscout
 	Response scoutHalloweenMerasmusPitFall
 }
 
@@ -230,18 +220,8 @@ Response heavyHalloweenMerasmusPitFall
 }
 Rule heavyHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsHeavy
+	criteria ConceptHalloweenPlayerPitFall Isheavy
 	Response heavyHalloweenMerasmusPitFall
-}
-
-Response engineerHalloweenMerasmusPitFall
-{
-	scene	"scenes/Player/Engineer/low/1253.vcd"
-}
-Rule engineerHalloweenMerasmusPitFall
-{
-	criteria ConceptHalloweenPlayerPitFall IsEngineer
-	Response engineerHalloweenMerasmusPitFall
 }
 
 Response demomanHalloweenMerasmusPitFall
@@ -250,7 +230,7 @@ Response demomanHalloweenMerasmusPitFall
 }
 Rule demomanHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsDemoman
+	criteria ConceptHalloweenPlayerPitFall Isdemoman
 	Response demomanHalloweenMerasmusPitFall
 }
 
@@ -260,7 +240,7 @@ Response medicHalloweenMerasmusPitFall
 }
 Rule medicHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsMedic
+	criteria ConceptHalloweenPlayerPitFall Ismedic
 	Response medicHalloweenMerasmusPitFall
 }
 
@@ -271,7 +251,7 @@ Response spyHalloweenMerasmusPitFall
 }
 Rule spyHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsSpy
+	criteria ConceptHalloweenPlayerPitFall Isspy
 	Response spyHalloweenMerasmusPitFall
 }
 
@@ -282,7 +262,7 @@ Response soldierHalloweenMerasmusPitFall
 }
 Rule soldierHalloweenMerasmusPitFall
 {
-	criteria ConceptHalloweenPlayerPitFall IsSoldier
+	criteria ConceptHalloweenPlayerPitFall Issoldier
 	Response soldierHalloweenMerasmusPitFall
 }
 

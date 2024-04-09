@@ -517,20 +517,6 @@ Rule PlayerKilledDominatingScoutSpy
 	Response PlayerKilledDominatingScoutSpy
 }
 
-Response PlayerKilledScoutSpy
-{
-	speak "spy_paulingkilltaunt01"
-	speak "spy_paulingkilltaunt02"
-	speak "spy_paulingkilltaunt03"
-	speak "Spy.TeaseVictim"
-	speak "Spy.Chuckle"
-}
-Rule PlayerKilledScoutSpy
-{
-	criteria ConceptKilledPlayer IsSpy IsVictimScout"
-	Response PlayerKilledScoutSpy
-}
-
 Response PlayerKilledDominatingSniperSpy
 {
 	scene "scenes/Player/Spy/low/3012.vcd" predelay "2.5"

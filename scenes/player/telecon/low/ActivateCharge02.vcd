@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.ActivateCharge02"
+    event speak "telecon.ActivateCharge02"
     {
       time 0.000000 0.835918
-      param "Scout.ActivateCharge02"
+      param "telecon.ActivateCharge02"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "happyBigUpper"
     {
       time 0.002315 0.834490
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happyBigUpper"
       event_ramp
       {

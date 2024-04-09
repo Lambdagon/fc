@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.CloakedSpyIdentify02"
+    event speak "telecon.CloakedSpyIdentify02"
     {
       time 0.000000 1.549932
-      param "Scout.CloakedSpyIdentify02"
+      param "telecon.CloakedSpyIdentify02"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "painSmallUpper"
     {
       time 0.000000 1.520834
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painSmallUpper"
       event_ramp
       {

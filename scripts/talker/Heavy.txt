@@ -482,7 +482,6 @@ Response KilledPlayerManyHeavy
 	scene "scenes/Player/Heavy/low/326.vcd" 
 	scene "scenes/Player/Heavy/low/327.vcd" 
 	scene "scenes/player/heavy/low/335.vcd"
-	speak "Heavy.Taunts06"
 }
 Rule KilledPlayerManyHeavy
 {
@@ -501,36 +500,6 @@ Rule KilledPlayerMeleeHeavy
 	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee HeavyNotKillSpeechMelee IsHeavy
 	ApplyContext "HeavyKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeHeavy
-}
-Response KilledPlayer2
-{
-	speak "Heavy.Domination17"
-	speak "Heavy.Domination11"
-	speak "Heavy.Taunts02"
-	speak "Heavy.Taunts05"
-	speak "Heavy.Taunts06"
-	speak "Heavy.Taunts07"
-	speak "Heavy.Taunts09"
-	speak "Heavy.Taunts11"
-	speak "Heavy.Taunts13"
-	speak "Heavy.LaughterBig01"
-	speak "Heavy.LaugherBigSnort01"
-	speak "Heavy.Singing05"
-	speak "Heavy.Singing04"
-	speak "Heavy.Singing03"
-	speak "Heavy.Singing02"
-	speak "Heavy.Singing01"
-	speak "Heavy.Cheers08"
-	speak "Heavy.Cheers07"
-	speak "Heavy.Cheers05"
-	speak "Heavy.Cheers03"
-	speak "Heavy.Jeers03"
-	speak "Heavy.NeedDispenser01"
-}
-Rule KilledPlayer2
-{
-	criteria ConceptKilledPlayer IsHeavy
-	Response KilledPlayer2
 }
 
 // Custom stuff
@@ -1312,8 +1281,6 @@ Response PlayerJeersHeavy
 	scene "scenes/Player/Heavy/low/264.vcd" 
 	scene "scenes/Player/Heavy/low/265.vcd" 
 	scene "scenes/Player/Heavy/low/266.vcd" 
-	speak "Heavy.PainSevere03"
-	speak "Heavy.PainSevere02"
 }
 Rule PlayerJeersHeavy
 {

@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.PainSevere03"
+    event speak "telecon.PainSevere03"
     {
       time 0.000000 0.476009
-      param "Scout.PainSevere03"
+      param "telecon.PainSevere03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "painBigUpper"
     {
       time 0.015152 0.461174
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {

@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.Taunts03"
+    event speak "telecon.Taunts03"
     {
       time 0.614583 3.041069
-      param "Scout.Taunts03"
+      param "telecon.Taunts03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -20,7 +20,7 @@ actor "scout"
     event expression "mad"
     {
       time 0.052083 3.875000
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "mad"
       event_ramp
       {
@@ -34,7 +34,7 @@ actor "scout"
     event expression "madUpper"
     {
       time 0.625000 3.000000
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

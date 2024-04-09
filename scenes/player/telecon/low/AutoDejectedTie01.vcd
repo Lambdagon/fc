@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.AutoDejectedTie01"
+    event speak "telecon.AutoDejectedTie01"
     {
       time 0.000000 1.457052
-      param "Scout.AutoDejectedTie01"
+      param "telecon.AutoDejectedTie01"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "madUpper"
     {
       time 0.020833 1.447917
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.Cheers03"
+    event speak "telecon.Cheers03"
     {
       time 0.250441 1.179239
-      param "Scout.Cheers03"
+      param "telecon.Cheers03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -14,7 +14,7 @@ actor "scout"
     event expression "happyBig"
     {
       time 0.024826 2.988594
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happyBig"
       event_ramp
       {
@@ -26,7 +26,7 @@ actor "scout"
     event expression "happyBigUpper"
     {
       time 0.376984 1.239303
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happyBigUpper"
       event_ramp
       {

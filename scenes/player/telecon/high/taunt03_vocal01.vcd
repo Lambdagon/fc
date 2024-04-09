@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.SpecialCompleted09"
+    event speak "telecon.SpecialCompleted09"
     {
       time 0.031250 2.283586
-      param "Scout.SpecialCompleted09"
+      param "telecon.SpecialCompleted09"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -20,7 +20,7 @@ actor "scout"
     event expression "mad"
     {
       time 1.927083 3.895833
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "mad"
       event_ramp
       {
@@ -29,10 +29,10 @@ actor "scout"
         1.8424 0.7759
       }
     }
-    event speak "Scout.SpecialCompleted02"
+    event speak "telecon.SpecialCompleted02"
     {
       time 2.447916 2.928279
-      param "Scout.SpecialCompleted02"
+      param "telecon.SpecialCompleted02"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -40,7 +40,7 @@ actor "scout"
     event expression "scared"
     {
       time 2.427083 2.843750
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "scared"
       event_ramp
       {
@@ -53,7 +53,7 @@ actor "scout"
     event expression "painBigUpper"
     {
       time 0.010417 2.187500
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {

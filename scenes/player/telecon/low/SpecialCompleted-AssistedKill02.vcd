@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.SpecialCompleted-AssistedKill02"
+    event speak "telecon.SpecialCompleted-AssistedKill02"
     {
       time 0.000000 1.181315
-      param "Scout.SpecialCompleted-AssistedKill02"
+      param "telecon.SpecialCompleted-AssistedKill02"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "happySmallUpper"
     {
       time 0.010417 1.177083
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happySmallUpper"
       event_ramp
       {

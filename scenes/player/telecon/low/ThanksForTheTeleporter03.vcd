@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.ThanksForTheTeleporter03"
+    event speak "telecon.ThanksForTheTeleporter03"
     {
       time 0.000000 1.175510
-      param "Scout.ThanksForTheTeleporter03"
+      param "telecon.ThanksForTheTeleporter03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "madUpper"
     {
       time 0.031250 1.166667
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

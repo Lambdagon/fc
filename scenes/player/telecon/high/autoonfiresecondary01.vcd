@@ -1,28 +1,28 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.PainSharp01"
+    event speak "telecon.PainSharp01"
     {
       time 0.000000 0.321451
-      param "Scout.PainSharp01"
+      param "telecon.PainSharp01"
       fixedlength
       cctype "cc_master"
       cctoken ""
     }
-    event speak "Scout.PainSharp04"
+    event speak "telecon.PainSharp04"
     {
       time 0.362500 0.732568
-      param "Scout.PainSharp04"
+      param "telecon.PainSharp04"
       fixedlength
       cctype "cc_master"
       cctoken ""
     }
-    event speak "Scout.PainSharp05"
+    event speak "telecon.PainSharp05"
     {
       time 0.752500 1.148690
-      param "Scout.PainSharp03"
+      param "telecon.PainSharp03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -33,7 +33,7 @@ actor "scout"
     event expression "painBigUpper"
     {
       time 0.011667 0.320417
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {

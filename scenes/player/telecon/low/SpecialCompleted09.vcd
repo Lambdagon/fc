@@ -3,10 +3,10 @@ actor "robo"
 {
   channel "audio"
   {
-    event speak "Scout.SpecialCompleted09"
+    event speak "telecon.SpecialCompleted09"
     {
       time 0.000000 2.252336
-      param "Scout.SpecialCompleted09"
+      param "telecon.SpecialCompleted09"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "robo"
     event expression "painBigUpper"
     {
       time 0.010417 2.187500
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "painBigUpper"
       event_ramp
       {

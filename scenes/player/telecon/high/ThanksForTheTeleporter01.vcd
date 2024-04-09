@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.ThanksForTheTeleporter01"
+    event speak "telecon.ThanksForTheTeleporter01"
     {
       time 0.000000 1.024580
-      param "Scout.ThanksForTheTeleporter01"
+      param "telecon.ThanksForTheTeleporter01"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "scaredUpper"
     {
       time 0.041667 0.989583
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "scaredUpper"
       event_ramp
       {

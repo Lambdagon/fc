@@ -1,5 +1,5 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
@@ -9,18 +9,18 @@ actor "scout"
       param "taunt03"
       fixedlength
     }
-    event speak "Scout.Taunts07"
+    event speak "telecon.Taunts07"
     {
       time 0.142857 1.181950
-      param "Scout.Taunts07"
+      param "telecon.Taunts07"
       fixedlength
       cctype "cc_master"
       cctoken ""
     }
-    event speak "Scout.SpecialCompleted03"
+    event speak "telecon.SpecialCompleted03"
     {
       time 2.333334 2.778867
-      param "Scout.SpecialCompleted03"
+      param "telecon.SpecialCompleted03"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -28,7 +28,7 @@ actor "scout"
     event expression "scared"
     {
       time 2.392857 2.785714
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "scared"
       event_ramp
       {
@@ -42,7 +42,7 @@ actor "scout"
     event expression "scaredUpper"
     {
       time 0.040178 1.940476
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "scaredUpper"
       event_ramp
       {
@@ -54,7 +54,7 @@ actor "scout"
     event expression "madUpper"
     {
       time 1.669643 3.863095
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "madUpper"
       event_ramp
       {

@@ -1,12 +1,12 @@
 // Choreo version 1
-actor "scout"
+actor "telecon"
 {
   channel "audio"
   {
-    event speak "Scout.AutoCappedControlPoint01"
+    event speak "telecon.AutoCappedControlPoint01"
     {
       time 0.000000 1.085533
-      param "Scout.AutoCappedControlPoint01"
+      param "telecon.AutoCappedControlPoint01"
       fixedlength
       cctype "cc_master"
       cctoken ""
@@ -17,7 +17,7 @@ actor "scout"
     event expression "happyBigUpper"
     {
       time 0.002315 1.086456
-      param "player\scout\emotion\emotion"
+      param "player\telecon\emotion\emotion"
       param2 "happyBigUpper"
       event_ramp
       {
