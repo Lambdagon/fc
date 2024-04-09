@@ -732,6 +732,13 @@
 	input Toggle(void) : "Toggle the enabled/disabled status of this entity."
 ]
 
+@BaseClass = FadeDistance
+[
+	fademindist(float) : "Start Fade Dist" : -1 : "Distance at which the prop starts to fade (<0 = use fademaxdist)."
+	fademaxdist(float) : "End Fade Dist" : 0 : "Maximum distance at which the prop is visible (0 = don't fade out)."
+]
+
+
 @BaseClass = GameType
 [
 	GameType(choices) : "Game Type" : 0 : "Type of game this flag will be used for." =
@@ -2857,63 +2864,82 @@
 // Items
 //
 
-//@PointClass base(Item) studio("models/items/medkit_large.mdl") = item_healthkit_full : "Health Kit Full" []
-//@PointClass base(Item) studio("models/items/medkit_small.mdl") = item_healthkit_small :	"Health Kit Small" []
-//@PointClass base(Item) studio("models/items/medkit_medium.mdl") = item_healthkit_medium : "Health Kit Medium" []
-//@PointClass base(Item) studio("models/items/medkit_mega.mdl") = item_healthkit_mega : "Health Kit Mega" []
-
-@PointClass base(Item) studio("models/items/medkit_large.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_full :
-	"Health Kit Full"
+@BaseClass color(0 0 200) base(Targetname, TeamNum, EnableDisable, Toggle, Angles, PlayerTouch, FadeDistance) = Item
 [
-	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
-	[
-		"" : "Default"
-		"models/props_halloween/halloween_medkit_large.mdl" : "Halloween Soup Cauldron"
-	]
-]
-
-@PointClass base(Item) studio("models/items/medkit_small.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_small :
-	"Health Kit Small"
-[
-	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
-	[
-		"" : "Default"
-		"models/props_halloween/halloween_medkit_small.mdl" : "Halloween Candy Bar"
-	]
-]
-
-@PointClass base(Item) studio("models/items/medkit_medium.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_medium :
-	"Health Kit Medium"
-[
-	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
-	[
-		"" : "Default"
-		"models/props_halloween/halloween_medkit_medium.mdl" : "Halloween Pumpkin Candy Tin"
-		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
-	]
-]
-
-@PointClass base(Item) studio("models/items/medkit_mega.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_mega :
-	"Health Kit Mega"
-[
-	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
-	[
-		"" : "Default"
-		"models/props_halloween/halloween_medkit_mega.mdl" : "Halloween Pumpkin Candy Tin"
-		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
-		"models/pickups/pickup_powerup_megahealth.mdl" : "Megahealth Powerup"
-	]
-	
+	powerup_model(string) : "Model" : "" : "Change the model to something other than the default model." 
 	respawntime(integer) : "Respawn Time" : 10 : "Changes the time, in seconds, before the item respawns."
 	respawndelay(integer) : "Initial Spawn Delay" : 0 : "Makes the item spawn after a initial delay."
 	spawn_sound(sound): "Spawn Sound" : "Item.Materialize" : "Sound to play when Pickup Spawns."
 	HiddenWhenRespawning(boolean) : "Hidden while Respawning?" : 1 : "Whether or not the pickup becomes hidden on pickup."	
-	AutoMaterialize(boolean) : "Auto-Materialize?" : 1 : "The pickup should automatically materialize after being picked up."
-	
+	AutoMaterialize(choices) : "Auto-Materialize" : 1 : "The pickup should automatically materialize after being picked up." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
 	output OnPlayerTouch(void) : "Fires when the player touches this item."
-	output OnRespawn(void) : "Fires when the item respawns."
-	
+	//output OnCacheInteraction(void) : "This output fires when the player proves they have 'found' this item. Fires on: Player Touch (whether or not player actually acquires the item) or picked up by +USE."
+	output OnRespawn(void) : "Fires when the item respawns."	
+
 ]
+
+@PointClass base(Item) studio("models/items/medkit_large.mdl") = item_healthkit_full : "Health Kit Full" []
+@PointClass base(Item) studio("models/items/medkit_small.mdl") = item_healthkit_small :	"Health Kit Small" []
+@PointClass base(Item) studio("models/items/medkit_medium.mdl") = item_healthkit_medium : "Health Kit Medium" []
+@PointClass base(Item) studio("models/items/medkit_mega.mdl") = item_healthkit_mega : "Health Kit Mega" []
+
+//@PointClass base(Item) studio("models/items/medkit_large.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_full :
+//	"Health Kit Full"
+//[
+//	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+//	[
+//		"" : "Default"
+//		"models/props_halloween/halloween_medkit_large.mdl" : "Halloween Soup Cauldron"
+//	]
+//]
+//
+//@PointClass base(Item) studio("models/items/medkit_small.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_small :
+//	"Health Kit Small"
+//[
+//	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+//	[
+//		"" : "Default"
+//		"models/props_halloween/halloween_medkit_small.mdl" : "Halloween Candy Bar"
+//	]
+//]
+//
+//@PointClass base(Item) studio("models/items/medkit_medium.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_medium :
+//	"Health Kit Medium"
+//[
+//	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+//	[
+//		"" : "Default"
+//		"models/props_halloween/halloween_medkit_medium.mdl" : "Halloween Pumpkin Candy Tin"
+//		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
+//	]
+//]
+
+//@PointClass base(Item) studio("models/items/medkit_mega.mdl") sphere(fademindist) sphere(fademaxdist) = item_healthkit_mega :
+//	"Health Kit Mega"
+//[
+//	powerup_model(choices) : "Model" : "" : "Change the model to something other than the default model. Not shown in Hammer." =
+//	[
+//		"" : "Default"
+//		"models/props_halloween/halloween_medkit_mega.mdl" : "Halloween Pumpkin Candy Tin"
+//		"models/props_medieval/medieval_meat.mdl" : "Medieval Ham"
+//		"models/pickups/pickup_powerup_megahealth.mdl" : "Megahealth Powerup"
+//	]
+//	
+//	respawntime(integer) : "Respawn Time" : 10 : "Changes the time, in seconds, before the item respawns."
+//	respawndelay(integer) : "Initial Spawn Delay" : 0 : "Makes the item spawn after a initial delay."
+//	spawn_sound(sound): "Spawn Sound" : "Item.Materialize" : "Sound to play when Pickup Spawns."
+//	HiddenWhenRespawning(boolean) : "Hidden while Respawning?" : 1 : "Whether or not the pickup becomes hidden on pickup."	
+//	AutoMaterialize(boolean) : "Auto-Materialize?" : 1 : "The pickup should automatically materialize after being picked up."
+//	
+//	output OnPlayerTouch(void) : "Fires when the player touches this item."
+//	output OnRespawn(void) : "Fires when the item respawns."
+//	
+//]
 
 @PointClass base(Item) size(-1 -1 -48, 1 1 1) studioprop() = item_healthkit_tiny :	
     "Overheal health kit for players." 
@@ -2930,6 +2956,44 @@
 @PointClass base(Item) studio("models/items/grenade_pack.mdl") = item_grenadepack : "Grenade Pack" []
 
 @PointClass base(Item) studio("models/items/item_armor.mdl") = item_armor : "Armor Pack" []
+
+@PointClass base(Item) studio("models/props_halloween/hwn_spellbook_flying.mdl") sphere(fademindist) sphere(fademaxdist) = tf_spell_pickup : "Spell"
+[
+	tier(choices) : "Spell Tier" : 0 : "Tier of spells that would be randomly assigned to the player" =
+	[
+		0 : "Common"
+		1 : "Rare"
+	]
+]
+
+@PointClass color(0 0 200) base(Targetname, TeamNum, EnableDisable, Toggle, Angles, PlayerTouch, FadeDistance) studio("models/crafting/moustachium.mdl") sphere(fademindist) sphere(fademaxdist) = item_bonuspack : "Bonus Pack"
+[
+	powerup_model(string) : "Model" : "" : "Change the model to something other than the default model." 
+]
+
+@PointClass base(Item, Parentname) studio("models/items/target_duck.mdl") sphere(fademindist) sphere(fademaxdist) = tf_halloween_pickup : "Halloween pickup"
+[
+
+	//AutoMaterialize(boolean) : "Auto-Materialize?" : 1 : "The pickup should automatically materialize after being picked up."
+
+	pickup_sound(string) : "Sound Effect" : "" : "The sound script entry that is played when the item is picked up." 
+	pickup_particle(string) : "Particle Effect" : "" : "The particle effect that is displayed when the item is picked up." 
+
+	output OnRedPickup(void) : "Sent when Red picks-up the item."
+	output OnBluePickup(void) : "Sent when Blue picks-up the item."
+]
+
+@PointClass base(Targetname, EnableDisable) studio("models/pickups/pickup_powerup_regen.mdl") sphere(fademindist) sphere(fademaxdist) = info_powerup_spawn : "Powerup spawn location. Only one of each type of Powerup will spawn in a game, so some Powerup spawn locations may not be used in some rounds. Locations and Powerup types are chosen at random. Will only spawn if tf_powerup_mode is set"
+[
+	team(choices) : "Owner Team" : -2 : "Teams can own spawn points. When Powerups are dropped, they resposition themselves after timing out. They will try to pick a spawn point based on what team designation they had when they repositioned. Set to Everyone to have no team bias in spawn positioning" =
+	[
+		-2 : "Everyone"
+		2 : "Red"
+		3 : "Blue"
+	]
+]
+@PointClass base(Targetname, EnableDisable) studio("models/pickups/pickup_powerup_crit.mdl") sphere(fademindist) sphere(fademaxdist) = item_powerup_crit :	"Temporary Crit Powerup. Powerup effect wears off. Powerup respawns automatically" []
+@PointClass base(Targetname, EnableDisable) studio("models/pickups/pickup_powerup_uber.mdl") sphere(fademindist) sphere(fademaxdist) = item_powerup_uber :	"Temporary Uber Powerup. Powerup effect wears off. Powerup respawns automatically" []
 
 //
 // Filters
@@ -10011,7 +10075,7 @@
 		1 : "Yes"
 	]
 	
-	respawntime(float) : "RespawnTime" : "0.0" : "RespawnTime after being picked up."
+	//respawntime(float) : "RespawnTime" : "0.0" : "RespawnTime after being picked up."
 
 	at1(integer) : "Attributes 1" : 0 : "Index of The Attribute"
 	at2(integer) : "Attributes 2" : 0 : "Index of The Attribute"
@@ -10619,6 +10683,132 @@
 [
 	input GiveCurrency(integer) : "Give this much currency to the activator."
 	input GiveCurrencyToAll(integer) : "Give this much currency to all players."
+]
+
+@PointClass base(Targetname,Parentname) iconsprite("editor/bullseye.vmt") = halloween_zapper : 
+	"Halloween Hell Zapper" 
+[
+	touch_trigger(target_destination) : "Custom Touch Trigger"
+	ParticleEffect(string)	: "Particle Effect"	: ""	: "The particle effect to be played when we fired."
+	ZapperType(choices) : "Zapper Type" : 0 : "Type of zapper." =
+	[
+		0 : "Zap on touch"
+		1 : "Zap only on input"
+	]
+
+	input ZapTouching(void) : "Zap all touching players."
+]
+
+@SolidClass base(Trigger, Targetname, EnableDisable, Toggle) = trigger_player_respawn_override : "Respawn Override"
+[
+	RespawnTime(float) : "Respawn Time" : -1 : "The number of seconds before players that die inside the volume of this trigger can respawn.  Setting -1 will allow the game to decide."
+	RespawnName(string) : "Respawn Entity Name" : "" : "The name of the player team spawn(s) to use when a player dies in this volume."
+
+	// Inputs
+	input SetRespawnTime(float) : "The number of seconds before players that die inside the volume of this trigger can respawn."
+	input SetRespawnName(string) : "The name of the info_player_teamspawn to use when players die inside the volume of this trigger."
+	input Enable(void) : "Enable"
+	input Disable(void) : "Disable"
+]
+
+@PointClass base(Targetname, Studiomodel) = prop_soccer_ball : "Soccer Ball"
+[
+	trigger_name(string) : "Trigger Name" : "" : "The name of the trigger(s) to try and touch"
+]
+
+@BaseClass = MiniGame
+[	
+	// Inputs
+	input ReturnFromMinigame(void) : "Force players to return from the current minigame."
+	input TeleportToMinigame(integer) : "Teleport to a specific minigame."
+	input TeleportToRandomMinigame(void) : "Teleport to a random minigame"
+	input SetAdvantageTeam(string) : "Set which team has the advantage."
+]
+
+@PointClass base(Targetname,MiniGame) = tf_logic_minigames : "Minigame mode logic."
+[
+]
+
+@PointClass base(Targetname) = tf_base_minigame : "Base minigame"
+[
+	RedSpawn(target_source) : "Red Spawn Name" : "" : "The name of the spawnpoints for RED for this minigame"
+	BlueSpawn(target_source) : "Blue Spawn Name" : "" : "The name of the spawnpoints for BLUE for this minigame"
+	InRandomPool(choices) : "Put in Random Pool" : 1 : "If Yes, allowed to be chosen when told to go to a random minigame" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	MaxScore(integer) : "Max Score" : 5 : "When a team hits this score, the On<Team>HitMaxScore output will be fired"
+	hud_res_file(string) : "HUD Res File" : "" : "Res file to use for this minigame"
+	your_team_score_sound(string) : "Your Team Score Sound" : "" : "Sound file to play when your team scores a point"
+	enemy_team_score_sound(string) : "Enemy Team Score Sound" : "" : "Sound file to play when the enemy team scores a point"
+	ScoreType(choices) : "Scoring Type" : 0 : "What to use for scoring" =
+	[
+		0 : "Points"
+		1 : "Players alive"
+	]
+	SuddenDeathTime(float) : "Sudden Death Time" : -1 : "Time til sudden death starts (-1 for sudden death)"
+
+	// Inputs
+	input ScoreTeamRed(integer) : "Give points to team RED"
+	input ScoreTeamBlue(integer) : "Give points to team BLUE"
+	input ReturnFromMinigame(void) : "Force players to return from the current minigame."
+	input ChangeHudResFile(string) : "Change the HUD resource file."
+
+	// Outputs
+	output OnReturnFromMinigame(void) : "Sent when players return from this minigame."
+	output OnTeleportToMinigame(void) : "Sent when players arrive in this minigame."
+	output OnRedHitMaxScore(void) : "Sent RED hits the max score for this minigame."
+	output OnBlueHitMaxScore(void) : "Sent BLUE hits the max score for this minigame."
+	output OnAllRedDead(void) : "Sent when the entire RED team is dead."
+	output OnAllBlueDead(void) : "Send when the entire BLUE team is dead."
+	output OnSuddenDeathStart(void) : "Sent when sudden death starts."
+]
+
+@PointClass base(Targetname,tf_base_minigame) = tf_halloween_minigame : "Halloween 2014 Minigame"
+[
+	MinigameType(choices) : "Minigame Type" : 1 : "Which minigame is this" =
+	[
+		1 : "Halloween Collection"
+		2 : "Halloween Platforms"
+		3 : "Halloween Soccer"
+	]
+
+	input KartWinAnimationRed(void) : "Play win animation for all players in kart on team RED"
+	input KartWinAnimationBlue(void) : "Play win animation for all players in kart on team BLUE"
+	input KartLoseAnimationRed(void) : "Play lose animation for all players in kart on team RED"
+	input KartLoseAnimationBlue(void) : "Play lose animation for all players in kart on team BLUE"
+
+	input EnableSpawnBoss(string) : "Spawn Halloween boss HHH at specified target entity"
+	input DisableSpawnBoss(void) : "Stop spawning Halloween boss"
+]
+
+@PointClass base(Targetname,tf_halloween_minigame) = tf_halloween_minigame_falling_platforms : "Halloween 2014 Falling Platform Minigame"
+[
+	input ChoosePlatform(void) : "Fire to get the next SAFE platform and the next platform that wont come back"
+
+	output OutputSafePlatform(void) : "Sends the index of the SAFE platform."
+	output OutputRemovePlatform(void) : "Sends the index of the platform that shouldn't come back."
+]
+
+@PointClass base(Targetname,Origin,Angles) studio("models/bots/merasmus/merasmas_misfortune_teller.mdl") = halloween_fortune_teller : "Halloween Fortune Teller trigger" 
+[
+	red_teleport(string) : "Red Teleport Entity" : "" :  "Where to teleport the red team"
+	blue_teleport(string) : "Blue Teleport Entity" : "" : "Where to teleport the blue team"
+
+	input EnableFortuneTelling( void) :"Enable fortune telling"
+	input DisableFortuneTelling( void) :"Disable fortune telling"
+	input StartFortuneTelling(void) : "Start fortune telling"
+	input EndFortuneTelling(void) : "Stop the current fortune" 
+
+	output OnFortuneWarning(void) : "Sent before a fortune will be told."
+	output OnFortuneTold(void) : "Sent when a fortune is told."
+	output OnFortuneCurse(void) : "Sent when a fortune curse all players"
+	output OnFortuneEnd(void) : "Sent when a fortune is ended."
+]
+
+@PointClass base(Targetname,Origin,Angles) = tf_teleport_location : "Players teleport locations which will be delete on round start"
+[
 ]
 
 @PointClass base(Targetname) = point_event_proxy : "An entity that allows fires simple game events from map logic"
