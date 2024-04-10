@@ -22579,12 +22579,11 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/v_models/v_claymore.mdl"
 			"model_world"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"2"
 			"anim_slot"	"melee"
 			"used_by_classes"
 			{
-				"soldier"	"1"
 			}
 			"static_attrs"
 			{
@@ -22710,7 +22709,7 @@ Fires....... something"
 			    "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value" "1.10"
+					"value" "1.20"
                 }
 				"dmg pierces resists absorbs"
 				{
@@ -26671,11 +26670,16 @@ Fires....... something"
 		}
 		"9776"
 		{
-			"prefab"	"weapon_sword"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
+			"enabled"	"1"
+			"item_class"	"tf_weapon_sword"
+			"item_type_name"	"#TF_Weapon_Sword"
+			"item_slot"	"melee"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
 			"tags"
 			{
 				"can_deal_damage"			"1"
@@ -37455,9 +37459,9 @@ Fires....... something"
             "first_sale_date"    "1969/12/08"
             "item_class"    "tf_weapon_shotgun_primary"	
             "baseitem"    "0"
-			"item_name"		"Medic's Last Straw"
-			"item_description" "The shotgun is back."
-			"item_type_name"	"Medic Shotgun"
+			"item_name"		"#TF_Weapon_Shotgun"
+			"item_description" "#FC_Weapon_Medic_Shotgun_Desc"
+			"item_type_name"	"#TF_Weapon_Shotgun"
             "item_slot"    "Secondary"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
@@ -37484,7 +37488,7 @@ Fires....... something"
 				"medic regen penalty"
 				{
 					"attribute_class"	"medic_regen"
-					"value"	"1.50"
+					"value"	"1.66"
 				}
 				"health drain"
 				{
@@ -37504,7 +37508,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "1"
+					"value" "2"
 				}
 			}
 		}
