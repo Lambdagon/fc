@@ -10621,11 +10621,11 @@
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
 				}
-				"energy buff dmg taken multiplier"
-				{
-					"attribute_class"	"energy_buff_dmg_taken_multiplier"
-					"value"	"1.2"
-				}
+				//"energy buff dmg taken multiplier"
+				//{
+				//	"attribute_class"	"energy_buff_dmg_taken_multiplier"
+				//	"value"	"1.2"
+				//}
 			}
 		}
 		"312"
@@ -19213,21 +19213,20 @@
 			}
 			"attributes"
 			{
-				
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.50"
-				}
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
-					"value"	"30"
+					"value"	"8"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.75"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.50"
 				}
 				"crit mod disabled"
 				{
@@ -22892,84 +22891,8 @@ Fires....... something"
 			}
 		}
 		"9705"
-		// teufort slugger ???
 		{
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-			}
-			"first_sale_date"	"2010/09/29"
-			"enabled"	"1"
-			"show_in_armory"	"1"
-			"item_class"	"tf_weapon_shovel"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"item_type_name"	"Bat with two axes strapped to it"
-			"item_name"	"#FC_Weapon_Slugger"	
-			"item_description"	"Model by Jeckler"
-			"item_slot"	"melee"
-			"item_quality"		"unique"
-			"item_logname"	"slugger"
-			"item_iconname"	"slugger"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_slugger"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"attach_to_hands"	"1"
-			"model_player"		"models/weapons/c_models/c_slugger/c_claidheamohmor/c_claidheamohmor.mdl"
-			"anim_slot" "MELEE_ALLCLASS"
-			"used_by_classes"
-			{
-				"heavy"	"1"
-				"sniper"	"1"
-				"pyro"	"1"
-            }
-            "visuals"
-			{   "sound_melee_hit_world"	"Weapon_Machete.HitWorld"
-				"sound_melee_miss"	"Weapon_Machete.Miss"
-				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
-				"sound_burst"		"Weapon_Machete.MissCrit"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -9"
-			}
-			"attributes"
-			{
-				"is_a_sword"
-				{
-					"attribute_class"	"is_a_sword"
-					"value"	"72"
-				}
-				"bleeding duration"
-				{
-					"attribute_class"	"bleeding_duration"
-					"value"	"5"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
-				}
-				"single wep deploy time increased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"2.0"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
-			"drop_sound"	
-                        "ui/item_metal_weapon_drop.wav"
+		// teufort slugger ???
 		}
 		"9706"
 		{
@@ -23094,7 +23017,6 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"sniper"	"1"
-				"heavy" 	"1"
 			}
                         "visuals"
 			{
@@ -23107,11 +23029,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "5.00"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
 				}
 				"clip size bonus"
 				{
@@ -23278,90 +23195,7 @@ Fires....... something"
 		}
 		"9710"
 		{
-			"enabled"	"1"
-			"item_class"	"tf_weapon_revolver"
-			"item_class"	"tf_weapon_revolver"
-			"craft_class"	"weapon"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"static_attrs"
-			{
-				"min_viewmodel_offset"					"10 0 -11"
-				"weapon_stattrak_module_scale"				"0.66"
-
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"item_type_name"	"#TF_Weapon_Revolver"
-			"item_description"	"Model by Boomsta"
-			"item_name"	"MK-VI"
-			"item_slot"	"primary"
-			"anim_slot"	"secondary"
-			"item_quality"	"unique"
-			"item_logname"	"revolver"
-			"item_iconname"	"revolver"
-			"propername"	"1"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"show_in_armory"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_mkvi/c_mkvi"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/lambda/mkvi/c_shortstop.mdl"
-			"attach_to_hands" "1"
-			"inspect_panel_dist" "27"
-			"used_by_classes"
-			{
-				"scout"	"1"
-			}
-			"attributes"
-			{
-				"reload time increased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"1.25"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.8"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.15"
-                }
-			}
-			"visuals"
-			{
-				"animation_replacement"
-				{
-					"ACT_VM_IDLE"	"ACT_SECONDARY_VM_IDLE_2"
-					"ACT_VM_DRAW"	"ACT_SECONDARY_VM_DRAW_2"
-					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY_VM_PRIMARYATTACK_2"
-					"ACT_MP_ATTACK_STAND_SECONDARYFIRE" "ACT_MP_PUSH_STAND_SECONDARY"
-					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE""ACT_MP_PUSH_CROUCH_SECONDARY"
-					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"	"ACT_MP_PUSH_SWIM_SECONDARY"
-					"ACT_VM_RELOAD"	"ACT_SECONDARY_VM_RELOAD_2"
-					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY_2"
-					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY_2"
-					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY_2"
-					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY_2"
-					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+		// was the MK VI mkvi
         }
 		"9711"
 		{
@@ -27488,11 +27322,7 @@ Fires....... something"
             }
 			"attributes"
 			{
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "-15"
-				}
+			
             }
 			"visuals"
 			{
@@ -27838,7 +27668,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "5"
+					"value" "1"
 				}
 			}
 			"static_attrs"
