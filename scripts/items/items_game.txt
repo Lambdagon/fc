@@ -19942,6 +19942,11 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"				"2"
 				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.6"
+				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -26545,40 +26550,35 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"is_a_sword"
+				"increased jump height from weapon"
 				{
-					"attribute_class"	"is_a_sword"
-					"value"				"72"
+					"attribute_class"	"mod_jump_height_from_weapon"
+					"value" "1.50"
 				}
-				"decapitate type"
+				"minicrit when jumping"
 				{
-					"attribute_class"	"decapitate_type"
-					"value"	"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"6"									
-				}
-				"kill eater kill type"
-				{
-					"attribute_class"	"kill_eater_kill_type"
-					"value"	"6"			
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
+					"attribute_class" "mod_jump_hit"
 					"value" "1"
 				}
-				"damage bonus"
+				"mod mini-crit airborne"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.20"
+					"attribute_class"	"mini_crit_airborne"
+					"value" "1"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.4"
+					"value"	"1.25"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -26734,18 +26734,18 @@ Fires....... something"
 			
 			"taunt"
 			{
-				"custom_taunt_scene_per_class"
-				{
-					"sniper"	"scenes\player\sniper\low\taunt01.vcd"
-				}
+				//"custom_taunt_scene_per_class"
+				//{
+				//	"sniper"	"scenes\player\sniper\low\taunt01.vcd"
+				//}
 			}
 			
 			"visuals"
 			{
-				"animation_replacement"
-				{
-					"taunt_concept"	"TLK_TAUNT_PRIMARY"
-				}
+				//"animation_replacement"
+				//{
+				//	"taunt_concept"	"TLK_TAUNT_PRIMARY"
+				//}
 				"sound_single_shot" "Weapon_M1.Single"
 				"sound_burst" "Weapon_M1.Single"
 				"sound_reload"	"Weapon_M1.Reload"
@@ -27372,15 +27372,15 @@ Fires....... something"
 					"attribute_class" "mod_jump_hit"
 					"value" "1"
 				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.30"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
-				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"	"-15"
 				}
 				
 				
@@ -38179,17 +38179,17 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "1.45"
+					"value" "1.25"
 				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.45"
+					"value"	"1.25"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.45"
+					"value"	"1.50"
 				}
 			}
 			"visuals"
