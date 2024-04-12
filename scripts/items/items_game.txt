@@ -19490,7 +19490,7 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.25"
+					"value"	"1.20"
 				}
 				"spread penalty"
 				{
@@ -20855,6 +20855,11 @@
 			}
 			"attributes"
 			{
+				//"maxammo grenades1 increased"
+				//{
+				//	"attribute_class"	"mult_maxammo_grenades1"
+				//	"value"	"3"
+				//}
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -20886,7 +20891,7 @@
 				"can_deal_long_distance_damage"	"1"
 			}
 			"item_type_name"	"Pulse Rifle"
-			"item_name"	"Overwatch Standard Issue"
+			"item_name"	"#TF_Weapon_AR2_Weapon"
 			"item_slot"	"primary"
 			"show_in_armory"	"1"
 			"image_inventory"	"backpack/weapons/c_models/c_ar2"
@@ -20920,11 +20925,6 @@
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.90"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "3"
 				}
 			}
 			"static_attrs"
@@ -22522,7 +22522,7 @@ Fires....... something"
 			    "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value" "1.20"
+					"value" "1.10"
                 }
 				"dmg pierces resists absorbs"
 				{
@@ -22547,7 +22547,7 @@ Fires....... something"
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.15"
+					"value"	"0.20"
 				}
 			}
 			"visuals"
@@ -26678,9 +26678,9 @@ Fires....... something"
 			"name"						"M1 GARAND SNIPER"
 			"prefab"					"weapon_sniperrifle"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver"
+			"item_class"				"tf_weapon_revolver_slot1"
 			"item_quality"		"unique"
-			"anim_slot" "primary"
+			"anim_slot" 		"primary"
 			"item_logname"				"garand_sniper"
 			"item_iconname"				"garand"
 			"item_type_name"			"Rifle"
@@ -26739,16 +26739,13 @@ Fires....... something"
 					"sniper"	"scenes\player\sniper\low\taunt01.vcd"
 				}
 			}
+			
 			"visuals"
 			{
 				"animation_replacement"
 				{
 					"taunt_concept"	"TLK_TAUNT_PRIMARY"
 				}
-			}
-			
-			"visuals"
-			{
 				"sound_single_shot" "Weapon_M1.Single"
 				"sound_burst" "Weapon_M1.Single"
 				"sound_reload"	"Weapon_M1.Reload"
@@ -27046,12 +27043,7 @@ Fires....... something"
 				"dmg taken from blast increased"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"1.25"
-				}
-				"dmg taken from crit increased"
-				{
-					"attribute_class"	"mult_dmgtaken_from_crit"
-					"value"	"1.25"
+					"value"	"1.15"
 				}
 				"allowed in medieval mode"
 				{
@@ -27667,10 +27659,15 @@ Fires....... something"
 					"attribute_class"	"set_scattergun_has_knockback"
 					"value"	"1"
 				}
+				"scattergun knockback mult"
+				{
+					"attribute_class"	"scattergun_knockback_mult"
+					"value"	"0.20"
+				}
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value"	"3"
+					"value"	"2"
 				}
 				"fire rate bonus"
 				{
@@ -27685,24 +27682,18 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.5"
+					"value"	"0.85"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value"	"3.00"
 				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.7"
-				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "2"
 				}
-
             }
             "static_attrs"
             {
@@ -30146,7 +30137,7 @@ Fires....... something"
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.7"
+					"value"	"0.8"
 				}
 				"allowed in medieval mode"
 				{
@@ -30253,7 +30244,7 @@ Fires....... something"
 					"attribute_class"	"ragdolls_plasma_effect"
 					"value" "1"
 				}
-				"damage bonus HIDDEN"
+				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"1.40"
@@ -35608,22 +35599,22 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.80"
+					"value"	"0.66"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.50"
+					"value"	"0.33"
 				}
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"2"
+					"value"	"3"
 				}
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.70"
+					"value"	"0.8"
 				}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
@@ -35864,7 +35855,7 @@ Fires....... something"
 			"name"	"Suppressed_Luger"
 			"baseitem" "0"
 			"enabled"	"1"
-			"item_class"	"tf_weapon_revolver_slot2"
+			"item_class"	"tf_weapon_revolver_slot1"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -35880,6 +35871,7 @@ Fires....... something"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_name"	"The Luger-S"
 			"item_slot"	"secondary"
+			"anim_slot" "secondary"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"show_in_armory"		"1"
@@ -36328,7 +36320,7 @@ Fires....... something"
 		{
 			"name"						"Agent Revolver Mr Snub"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver"
+			"item_class"				"tf_weapon_revolver_slot1"
 			"item_logname"				"enforcer"
 			"item_iconname"				"enforcer"
 			"item_type_name"			"#TF_Weapon_Revolver"
