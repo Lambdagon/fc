@@ -4321,30 +4321,25 @@
 			}
 			"attributes"
 			{
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"1.50"
-				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.90"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.45"
+					"value"	"1.40"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"0.85"
+					"value"	"0.75"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.5"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "3"
 				}
             }
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -4352,80 +4347,6 @@
 			"particle_suffix"		"pistol"
 		}
 		
-		"weapon_1911_primary"
-		{
-			"craft_class"	""
-			"baseitem"		"0"
-			"enabled"	"1"
-			"item_class"	"tf_weapon_syringegun_medic"
-			"craft_material_type"	"weapon"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"1"
-			"item_type_name"	"#FC_Weapon_1911_Type"
-			"item_description"	"#FC_Weapon_1911_Desc"	
-			"item_name"	"#FC_Weapon_1911"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
-			"model_player"	"models/weapons/c_models/c_pistol/c_pistol.mdl"
-			"static_attrs"
-			{
-				"weapon_stattrak_module_scale"			"0.723"
-				"min_viewmodel_offset"				"10 0 -10"
-			}
-			"attributes"
-			{
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.30"
-				}
-				"Reload time decreased"
-				{
-					"attribute_class"	"mult_reload_time"
-					"value"	"0.85"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.05"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.25"
-				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1" 
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.9"
-				}
-            }
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
-		}
-
 		"weapon_powerjack"
 		{
 			"enabled"	"1"
@@ -27436,25 +27357,25 @@ Fires....... something"
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-				"damage bonus"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "1.25"
-				}
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "0.2"
+					"value" "0.8"
 				}
 				"mult_spread_scales_consecutive"
 				{
 					"attribute_class"	"mult_spread_scales_consecutive"
-					"value"				"0.5"
+					"value"				"0.4"
 				}
-				"override projectile type"
+				"clip size penalty"
 				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1"
+					"attribute_class"	"mult_clipsize"
+					"value" "0.80"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.25"
 				}
 				"maxammo primary reduced"
 				{
@@ -27469,7 +27390,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "1"
+					"value" "2"
 				}
 			}
 			"static_attrs"
@@ -27662,7 +27583,7 @@ Fires....... something"
 				"scattergun knockback mult"
 				{
 					"attribute_class"	"scattergun_knockback_mult"
-					"value"	"0.20"
+					"value"	"0.40"
 				}
 				"maxammo primary increased"
 				{
@@ -27692,7 +27613,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "2"
+					"value" "1"
 				}
             }
             "static_attrs"
@@ -30810,17 +30731,22 @@ Fires....... something"
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
+					"value"	"1.40"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value"	"0.85"
+					"value"	"0.75"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.8"
+					"value"	"1.5"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "3"
 				}
             }
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -30830,26 +30756,7 @@ Fires....... something"
         }
 		"9869"
         {
-            "name"    "TF_WEAPON_1911_MEDIC"
-            "first_sale_date"    "2010/09/29"
-            "prefab"    "weapon_1911_primary"
-			"item_slot" 	"primary"
-			"show_in_armory"	"0"
-            "baseitem"    "0"
-			"item_name"		"#FC_Weapon_1911"
-			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
-            "model_world"    "models/weapons/c_1911/c_pistol.mdl"
-            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
-            "attach_to_hands"    "2"
-            "used_by_classes"
-            {
-				"medic"	"1"
-            }
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_1911.Single"
-				"sound_burst"			"Weapon_1911.SingleCrit"
-			}
+			// was medic casual
 		}
 		"9870"
 		{
@@ -35599,12 +35506,12 @@ Fires....... something"
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.66"
+					"value"	"0.60"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.33"
+					"value"	"0.30"
 				}
 				"damage force reduction"
 				{
