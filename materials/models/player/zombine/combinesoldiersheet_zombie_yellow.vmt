@@ -2,6 +2,14 @@ VertexLitGeneric
 {
 	$basetexture "models/player/zombine/combinesoldiersheet_zombie_yellow"
 
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+	"$one" "1"
+
 	$nocull 1
 
 	$phong 1
@@ -23,11 +31,15 @@ VertexLitGeneric
 	$ambientocclusion 1
 	$model 1
 
-	// Cloaking
+	"360?$color2" "[ 0.7 0.7 0.7 ]"
+
 	"$cloakPassEnabled" "1"
 	"Proxies"
 	{
-		"spy_invis"
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
 		{
 		}
 		"AnimatedTexture"

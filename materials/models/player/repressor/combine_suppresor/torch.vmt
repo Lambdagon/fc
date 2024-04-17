@@ -3,6 +3,9 @@
 	$BaseTexture 			   "models\player\repressor\combine_suppresor\torch_red"
 	$BumpMap 				   "models\player\repressor\combine_suppresor\torch_n"
 
+	"$yellow" "0"
+	"$one" "1"
+
 	$phong 					   1
 	$phongboost 			   5
 	$phongfresnelranges 	   "[0.44 0.8 1.64]"
@@ -19,4 +22,34 @@
 	$rimlight                  1
 	$rimlightexponent          2
 	$rimlightboost             .2
+	
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		//"BurnLevel"
+		//{
+		//	"resultVar" "$detailblendfactor"
+		//}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
 }
