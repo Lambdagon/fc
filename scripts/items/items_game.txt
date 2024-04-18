@@ -4336,14 +4336,24 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.5"
 				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "24"
+				}
+				"spawn ammo override"
+				{
+					"attribute_class"	"mod_spawn_ammo_override"
+					"value" "24"
+				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "3"
 				}
             }
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
 		
@@ -20737,12 +20747,16 @@
 			}
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			
+		"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class" 	"mult_player_movespeed"
+					"value" "1.25"
+				}
 			}
-		
-		
-		
-		
-
+		}
 		"9403"
 		{
 			"name"	"John Rebel Playermodel"
@@ -20781,11 +20795,11 @@
 			}
 			"attributes"
 			{
-				//"maxammo grenades1 increased"
-				//{
-				//	"attribute_class"	"mult_maxammo_grenades1"
-				//	"value"	"3"
-				//}
+				"maxammo grenades1 increased"
+				{
+					"attribute_class"	"mult_maxammo_grenades1"
+					"value"	"0"
+				}
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -20799,7 +20813,7 @@
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.80"
+					"value"	"0.90"
 				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
@@ -24003,6 +24017,8 @@ Fires....... something"
 				"sound_single_shot"		"Weapon_AR.Single"
 				"sound_burst"			"Weapon_AR.SingleCrit"
 				"sound_reload"			"Weapon_AR.WorldReload"
+				"muzzle_flash"			"muzzle_scattergun"
+				"tracer_effect"			"bullet_scattergun_tracer01"
 			}
 			"attributes"
 			{
@@ -25226,7 +25242,7 @@ Fires....... something"
 			{
 				"nameable"		"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Crossbow"
 			"item_name"	"Crossbow"
 			"item_description"	""
@@ -25287,20 +25303,10 @@ Fires....... something"
 					"attribute_class"	"mult_crit_chance"
 					"value" "0"
 				}
-				"mod use metal ammo type"
-				{
-					"attribute_class"	"mod_use_metal_ammo_type"
-					"value"	"1"
-				}
 				"projectile penetration"
 				{
 					"attribute_class"	"projectile_penetration"
 					"value"		"1"
-				}
-				"maxammo metal reduced"
-				{
-					"attribute_class"	"mult_maxammo_metal"
-					"value"	"0.18"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_bottle_drop.wav"
@@ -25567,6 +25573,11 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"3"
+				}
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
@@ -25740,11 +25751,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"3"
-				}
 				"custom projectile model"
 				{
 					"attribute_class"	"custom_projectile_model"
@@ -25753,7 +25759,7 @@ Fires....... something"
 				"bleeding duration"
 				{
 					"attribute_class"	"bleeding_duration"
-					"value"	"10"
+					"value"	"8"
 				}
 				"sticky arm time bonus"
 				{
@@ -25763,7 +25769,7 @@ Fires....... something"
 				"Blast radius increased"
 				{
 					"attribute_class"	"mult_explosion_radius"
-					"value"	"2.30"
+					"value"	"1.30"
 				}
 				"stickybomb charge rate"
 				{
@@ -25773,17 +25779,17 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.10"
+					"value"	"0.25"
 				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_mult_clipsize"
 					"value"	"0.25"
 				}
-				"sticky air burst mode"
+				"grenade not explode on impact"
 				{
-					"attribute_class"	"set_detonate_mode"
-					"value"	"2"
+					"attribute_class"	"grenade_not_explode_on_impact"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -26181,6 +26187,11 @@ Fires....... something"
 				{
 					"attribute_class"	"mod_disable_overheal"
 					"value"	"1"
+				}
+				"ubercharge rate penalty"
+				{
+					"attribute_class"	"mult_medigun_uberchargerate"
+					"value"	"0.80"
 				}
 			}
 			"visuals"
@@ -27257,7 +27268,7 @@ Fires....... something"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
 			"item_logname"	"minecraft_kukri"
-			"item_iconname"	"minecraft"
+			"item_iconname"	"club"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Club"
 			"item_description"	"1 stick, two ingots, and a lot of glue."
@@ -27283,10 +27294,10 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"minicrits become crits"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.07"
+					"attribute_class"	"minicrits_become_crits"
+					"value" "1"
 				}
 				"minicrit when jumping"
 				{
@@ -27296,15 +27307,18 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.30"
+					"value" "1.25"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.5"
 				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				
-				
 			}
 			"visuals"
 			{
@@ -27357,15 +27371,15 @@ Fires....... something"
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.25"
+				}
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "0.8"
-				}
-				"mult_spread_scales_consecutive"
-				{
-					"attribute_class"	"mult_spread_scales_consecutive"
-					"value"				"0.4"
+					"value" "0.70"
 				}
 				"clip size penalty"
 				{
@@ -27375,7 +27389,7 @@ Fires....... something"
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.25"
+					"value"	"1.40"
 				}
 				"maxammo primary reduced"
 				{
@@ -27405,7 +27419,9 @@ Fires....... something"
 				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
 				"sound_reload"			"Weapon_AR2.Reload"
 				"sound_special1"		"Weapon_AK47.Single"
-
+				"muzzle_flash"			"muzzle_scattergun"
+				"tracer_effect"			"bullet_scattergun_tracer01"
+				
 				"animation_replacement"
 				{
 				    "ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_AR2"
@@ -30743,14 +30759,24 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.5"
 				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "24"
+				}
+				"spawn ammo override"
+				{
+					"attribute_class"	"mod_spawn_ammo_override"
+					"value" "24"
+				}
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
 					"value" "3"
 				}
             }
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 			"particle_suffix"		"pistol"
 
         }
@@ -35503,15 +35529,20 @@ Fires....... something"
                     "attribute_class"    "voice_pitch_scale"
                     "value"        "0"
                 }
-				"dmg taken from blast reduced"
+				"fire retardant"
 				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.60"
+					"attribute_class"	"set_fire_retardant"
+					"value"	"1"
 				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.30"
+					"value"	"0.60"
+				}
+				"dmg taken from blast reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"	"0.80"
 				}
 				"damage force reduction"
 				{
@@ -35521,7 +35552,7 @@ Fires....... something"
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.8"
+					"value"	"0.9"
 				}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
