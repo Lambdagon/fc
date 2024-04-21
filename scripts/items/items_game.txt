@@ -4339,12 +4339,7 @@
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "24"
-				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
-					"value" "24"
+					"value" "27"
 				}
 				"mod_recoil_angle"
 				{
@@ -4352,8 +4347,8 @@
 					"value" "3"
 				}
             }
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
 		
@@ -19438,10 +19433,10 @@
 					"attribute_class"	"mod_recoil_angle"
 					"value" "10"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.30"
+					"attribute_class"	"max_ammo"
+					"value" "30"
 				}
 			}
 			"particle_suffix"		"shotgun"
@@ -19479,7 +19474,7 @@
 			}
 			"static_attrs"
 			{
-				"item_meter_charge_rate"	"30"
+				"item_meter_charge_rate"	"10"
 				"meter_label"				"#LoadoutSlot_PrimaryMod"
 			}
 			"attributes"
@@ -19868,10 +19863,10 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.75"
 				}
-				"maxammo secondary increased"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"2"
+					"attribute_class"	"max_ammo"
+					"value" "200"
 				}
 				"damage penalty"
 				{
@@ -20008,10 +20003,10 @@
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.8"
 				}
-				"maxammo secondary increased"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"2"
+					"attribute_class"	"max_ammo"
+					"value" "200"
 				}
 				"crits_become_minicrits"
 				{
@@ -20759,7 +20754,7 @@
 		}
 		"9403"
 		{
-			"name"	"John Rebel Playermodel"
+			"name"	"John Rebel Playermodel / GEARED UP"
 			"first_sale_date"	"2012/12/20"
 			"prefab"	""
 			"hidden"	"0"
@@ -20798,22 +20793,17 @@
 				"maxammo grenades1 increased"
 				{
 					"attribute_class"	"mult_maxammo_grenades1"
-					"value"	"0"
+					"value"	"1.5"
 				}
-				"dmg taken from bullets reduced"
+				"maxammo primary increased"
 				{
-					"attribute_class"	"mult_dmgtaken_from_bullets"
-					"value"	"0.80"
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "1.25"
 				}
-				"dmg taken from blast reduced"
+				"maxammo secondary increased"
 				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.80"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.90"
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "1.50"
 				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
@@ -20861,10 +20851,10 @@
 					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"	"1"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.90"
+					"attribute_class"	"max_ammo"
+					"value" "90"
 				}
 			}
 			"static_attrs"
@@ -20873,13 +20863,12 @@
 			}
 			"visuals"
 			{
-				"sound_single_shot"		"Weapon_AR2.Single"
-				"sound_double_shot"		"Weapon_AR2.Single"
-				"sound_burst"			"Weapon_AR2.Single"
-				"sound_empty"			"HL2_Weapon_Shotgun.Empty"
-				"sound_reload"			"Weapon_AR2.Reload"
-				"sound_special1"		"Weapon_AR2.Single"
-
+				"special1"		"Weapon_CombineGuard.Special1"
+				"empty"			"Weapon_IRifle.Empty"
+				"double_shot"	"Weapon_IRifle.Single"
+				"reload"		"Weapon_AR2.Reload"
+				"single_shot"	"Weapon_AR2.Single"
+					
 				"animation_replacement"
 				{
 				    "ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_AR2"
@@ -20962,10 +20951,10 @@
                     "attribute_class"    "mult_postfiredelay"
                     "value"    "8"
                 }
-				"maxammo secondary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.175"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 				"clip size penalty HIDDEN"
 				{
@@ -21052,15 +21041,25 @@
 			}
 			"attributes"
 			{
-				"damage force increase"
+				"voice pitch scale"
 				{
-					"attribute_class"	"damage_force_reduction"
-					"value"	"1.80"
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.25"
 				}
-				"airblast vulnerability multiplier"
+				"health regen"
 				{
-					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value" "1.3"
+					"attribute_class"	"add_health_regen"
+					"value"	"12"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"-35"
+				}
+				"health from packs decreased"
+				{
+					"attribute_class"	"mult_health_frompacks"
+					"value"				"0.25"
 				}
             }
 			"mouse_pressed_sound"	"items/kleiner_select.wav"
@@ -24047,11 +24046,6 @@ Fires....... something"
 					"attribute_class"	"max_ammo"
 					"value" "60"
 				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
-					"value" "60"
-				}
 				"Burst Fire Size"
 				{
 					"attribute_class"	"burst_size"
@@ -25031,10 +25025,10 @@ Fires....... something"
 					"attribute_class"	"override_projectile_type"
 					"value"				"36"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.04"
+					"attribute_class"	"max_ammo"
+					"value" "4"
 				}
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -25263,7 +25257,10 @@ Fires....... something"
 			}
 			"visuals"
 			{
-				"sound_single_shot"	"Weapon_Crossbow.Single"
+				"single_shot"	"Weapon_Crossbow.Single"
+				"reload"	"Weapon_Crossbow.Reload"
+				"special1"	"Weapon_Crossbow.BoltElectrify"
+				"special2"	"Weapon_Crossbow.BoltFly"
 				"animation_replacement"
 				{
 				    "ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_CROSSBOW"
@@ -25298,19 +25295,25 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value" "1.35"
 				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value" "0"
-				}
 				"projectile penetration"
 				{
 					"attribute_class"	"projectile_penetration"
 					"value"		"1"
 				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value" "0"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "24"
+				}
 			}
-			"mouse_pressed_sound"	"ui/item_bottle_drop.wav"
-			"drop_sound"		"ui/item_bottle_drop.wav"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"crusaders_crossbow"
 
 		}
 		"9754"
@@ -25361,8 +25364,8 @@ Fires....... something"
 		}
 		"9561"
 		{
-			"name"						"Fortunate Son alt"
-			"show_in_armory"			"1"
+			"name"						"Fortunate Son Engi"
+			"show_in_armory"			"0"
 			"item_class"				"tf_weapon_smg_primary"
 			"item_slot"					"primary"
 			"item_quality"				"rarity2"
@@ -25376,8 +25379,8 @@ Fires....... something"
 			"propername"				"1"
 			"anim_slot"					"primary"
 			"image_inventory"			"backpack/weapons/w_models/w_assaultrifle"
-			"model_world"				"models/weapons/lambda/assaultrifle/w_assault_rifle_soldier.mdl"
-			"model_player"				"models/weapons/lambda/assaultrifle/v_assault_rifle_soldier_new.mdl"
+			"model_player"				"models/weapons/v_models/v_assault_rifle_dm.mdl"
+			"model_world"				"models/weapons/w_models/w_assault_rifle.mdl"
 			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
@@ -25396,25 +25399,25 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.20"
 				}
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"2.30"
+				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"0.85"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
 					"value"	"0.80"
 				}
-                "crit mod disabled"
+				"weapon spread bonus"
 				{
-					"attribute_class"	"mult_crit_chance"
-					"value"				"0"
-				}	
-				"maxammo secondary reduced"
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.85"
+				}
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.45"
+					"attribute_class"	"max_ammo"
+					"value" "60"
 				}
 				"Burst Fire Size"
 				{
@@ -25435,8 +25438,8 @@ Fires....... something"
 				"muzzle_flash"			"muzzle_scattergun"
 				"tracer_effect"			"bullet_scattergun_tracer01"
 			}
-			"mouse_pressed_sound"		"ui/item_light_gun_pickup.wav"
-			"drop_sound"				"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 		}
 		"9562"
 		{
@@ -25455,8 +25458,8 @@ Fires....... something"
 			"propername"				"1"
 			"anim_slot"					"secondary"
 			"image_inventory"			"backpack/weapons/w_models/w_assaultrifle"
-			"model_world"				"models/weapons/lambda/assaultrifle/w_assault_rifle_soldier.mdl"
-			"model_player"				"models/weapons/lambda/assaultrifle/v_assault_rifle_soldier_new.mdl"
+			"model_world"				""
+			"model_player"				""
 			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
@@ -25847,30 +25850,20 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1"
-				}
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.65"
+					"value" "0.2"
 				}
 				"mod max primary clip override"
 				{
 					"attribute_class"	"mod_max_primary_clip_override"
-					"value"	"7"
-				}
-				"bullets per shot bonus"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value" "1.40"
+					"value"	"9"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.75"
+					"value"	"0.70"
 				}
 				"spread penalty"
 				{
@@ -25880,7 +25873,7 @@ Fires....... something"
 				"mult_spread_scales_consecutive"
 				{
 					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "1"
+					"value" "0.5"
 				}
 			}
 			"visuals"																		
@@ -25933,11 +25926,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_minigun_spindown_time"
 					"value"				"0.5"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"0.5" 
 				}
 				"maxammo primary increased"
 				{
@@ -27391,10 +27379,10 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.40"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.90"
+					"attribute_class"	"max_ammo"
+					"value" "90"
 				}
 				"crit mod disabled"
 				{
@@ -27516,10 +27504,10 @@ Fires....... something"
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				"maxammo secondary increased HIDDEN"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"2.00"
+					"attribute_class"	"max_ammo"
+					"value" "114"
 				}
 				"mod_recoil_angle"
 				{
@@ -27601,10 +27589,10 @@ Fires....... something"
 					"attribute_class"	"scattergun_knockback_mult"
 					"value"	"0.40"
 				}
-				"maxammo primary increased"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"2"
+					"attribute_class"	"max_ammo"
+					"value" "200"
 				}
 				"fire rate bonus"
 				{
@@ -27959,10 +27947,10 @@ Fires....... something"
 					"attribute_class"	"mod_recoil_angle"
 					"value" "8"
 				}
-				"maxammo secondary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"0.32"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 			}
 			"static_attrs"
@@ -30719,7 +30707,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_description"	"#FC_Weapon_1911_Desc"
 			"item_name"	"#FC_Weapon_1911"
@@ -30762,12 +30750,7 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "24"
-				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
-					"value" "24"
+					"value" "32"
 				}
 				"mod_recoil_angle"
 				{
@@ -30775,8 +30758,8 @@ Fires....... something"
 					"value" "3"
 				}
             }
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 
         }
@@ -35529,11 +35512,12 @@ Fires....... something"
                     "attribute_class"    "voice_pitch_scale"
                     "value"        "0"
                 }
-				"fire retardant"
-				{
-					"attribute_class"	"set_fire_retardant"
-					"value"	"1"
-				}
+				//being fire retardant is broken
+				//"fire retardant"
+				//{
+				//	"attribute_class"	"set_fire_retardant"
+				//	"value"	"1"
+				//}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
@@ -36343,7 +36327,7 @@ Fires....... something"
 		}
 		"9956"
 		{
-			"name"	"Fish Module"
+			"name"	"Fish Module / Shephard"
 			"first_sale_date"	"2012/12/20"
 			"prefab"	""
 			"hidden"	"0"
@@ -36381,31 +36365,26 @@ Fires....... something"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 			"attributes"
 			{
-				"health regen"
+				"dmg taken from bullets reduced"
 				{
-					"attribute_class"	"add_health_regen"
-					"value"	"15"
+					"attribute_class"	"mult_dmgtaken_from_bullets"
+					"value"	"0.80"
 				}
 				"dmg taken from blast reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value"	"0.5"
 				}
-				"max health additive penalty"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"				"-50"
-				}
-				"health from packs decreased"
-				{
-					"attribute_class"	"mult_health_frompacks"
-					"value"				"0.2"
-				}
 				"voice pitch scale"
                 {
                     "attribute_class"    "voice_pitch_scale"
                     "value"        "0.85"
                 }
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.50"
+				}
 			}
 		}
 		"9957"
@@ -36606,10 +36585,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value" "0.34"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.24"
+					"attribute_class"	"max_ammo"
+					"value" "24"
 				}
 				"mod_recoil_angle"
 				{

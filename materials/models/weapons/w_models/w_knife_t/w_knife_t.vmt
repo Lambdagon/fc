@@ -1,4 +1,43 @@
 "vertexlitgeneric"
 {
 	"$baseTexture" "models/weapons/w_models/w_knife_t/w_knife_t"
+	//"$envmap" "env_cubemap"
+	//"$envmapmask" "models\weapons\v_models\knife_t\knife_t_ref"
+
+
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost" "0"	
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$halflambert" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	
+	// Glow
+	$glowcolor 1
+
+	"Proxies"
+	{
+		"vm_invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+	}
 }
