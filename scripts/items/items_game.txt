@@ -22424,13 +22424,13 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"base_item_name"	"#FC_Weapon_Stampede"
+			"base_item_name"	"#FC_Weapon_FatScout"
 			"item_type_name"	"#TF_Weapon_Shotgun"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"anim_slot" "secondary"
-			"item_name"			"The Stampede Destroyer"
-			"item_description"	"#FC_Weapon_Stampede_Desc"
+			"item_name"			"#FC_Weapon_FatScout"
+			"item_description"	"#FC_Weapon_FatScout_Desc"
 			"show_in_armory"	"1"
 			"propername"	"1"
 			"item_logname"	"stampede"
@@ -22463,6 +22463,11 @@ Fires....... something"
 					"attribute_class"	"mod_pierce_resists_absorbs"
 					"value"	"1"
 				}
+				"fixed_shot_pattern_supershotgun"
+                {
+                    "attribute_class"     "fixed_shot_pattern_supershotgun"
+                    "value" "1"
+                }
                 "bullets per shot bonus"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
@@ -24828,11 +24833,6 @@ Fires....... something"
 					"attribute_class"	"damage_causes_airblast"
 					"value" "30"
 				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.80"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -24846,7 +24846,12 @@ Fires....... something"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.40"
+					"value" "0.30"
+				}
+				"bullets per shot hidden"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"0.5"
 				}
 				"dmg falloff increased"
 				{
@@ -24866,7 +24871,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "4"
+					"value" "8"
 				}
 			}
 			"visuals"
@@ -24898,7 +24903,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"The Genuine Deagle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"Desert Eagle"
 			"item_description"	"Model by The_Fanciest_Of_Pants"
 			"item_name"	"The Deagle"
@@ -24917,32 +24922,27 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.15"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0.40"
-				}
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value" "1.50"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.50"
+				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.60"
+					"value" "1.50"
 				}
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
 					"value" "1.40"
 				}
-                        }
+            }
 			"static_attrs"
 			{
 				"weapon_stattrak_module_scale"			"0.723"
@@ -24954,7 +24954,7 @@ Fires....... something"
 				"sound_burst"			"Weapon_Deagle.SingleCrit"
 			}	
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
 		"9751"
