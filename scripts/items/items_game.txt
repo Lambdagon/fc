@@ -632,7 +632,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -6"
-				"crit_dmg_falloff"			"1"
+				//"crit_dmg_falloff"			"1"
 			}
 			"attributes"
 			{
@@ -19837,7 +19837,7 @@
 		"9097"
 		{
 			"name"						"SMG1"
-			"item_type_name"	"MP7"
+			"item_type_name"			"MP7"
 			"item_class"					"tf_weapon_smg"
 			"item_name"					"SMG1"
 			"image_inventory"			"backpack/weapons/c_models/c_smg1"
@@ -20264,11 +20264,6 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.25"
-				}
 				"turn to gold"
 				{
 					"attribute_class"	"set_turn_to_gold"
@@ -20928,7 +20923,7 @@
             }
             "particle_suffix"        "ar2"
             "mouse_pressed_sound"    "ui/item_heavy_gun_pickup.wav"
-            "drop_sound"        "ui/item_heavy_gun_drop.wav"
+            "drop_sound"        	 "ui/item_heavy_gun_drop.wav"
             "attributes"
             {
 				"revolver use hit locations"
@@ -20954,7 +20949,7 @@
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "32"
+					"value" "30"
 				}
 				"clip size penalty HIDDEN"
 				{
@@ -20964,7 +20959,7 @@
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "20"
+					"value" "22"
 				}
 				
             }
@@ -22413,7 +22408,7 @@ Fires....... something"
 		{
 			//was spy's panic attack
 		}	
-                "9123"
+        "9123"
 		{
 			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
@@ -22461,7 +22456,7 @@ Fires....... something"
 			    "move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value" "1.10"
+					"value" "1.11"
                 }
 				"dmg pierces resists absorbs"
 				{
@@ -22473,6 +22468,11 @@ Fires....... something"
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.30"
                 }
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
+				}
                 "spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
@@ -22483,10 +22483,10 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value" "1.15"
                 }
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.20"
+					"attribute_class"	"max_ammo"
+					"value" "42"
 				}
 			}
 			"visuals"
@@ -22495,8 +22495,8 @@ Fires....... something"
 				"sound_burst"			"Weapon_BackShot_Shotty.SingleCrit"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-                }
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+        }
     "9701"
 		{
 		//was spy shovel
@@ -23177,10 +23177,10 @@ Fires....... something"
 					"attribute_class"	"mult_explosion_radius"
 					"value"	"0.8"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.16"
+					"attribute_class"	"max_ammo"
+					"value" "16"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -23287,10 +23287,10 @@ Fires....... something"
 					"attribute_class"	"mult_clipsize"
 					"value"	"1.25"
 				}
-				"maxammo secondary increased"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"1.80"
+					"attribute_class"	"max_ammo"
+					"value" "200"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -23495,7 +23495,7 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				 "fixed_shot_pattern_supershotgun"
+				"fixed_shot_pattern_supershotgun"
                 {
                     "attribute_class"     "fixed_shot_pattern_supershotgun"
                     "value" "1"
@@ -23510,6 +23510,21 @@ Fires....... something"
                     "attribute_class"    "mult_reload_time"
                     "value" "0.75"
                 }
+				"crit kill will gib"
+				{
+					"attribute_class"	"crit_kill_will_gib"
+					"value"	"1"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "16"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "10"
+				}
 			}
 			"static_attrs"
 			{
@@ -23809,10 +23824,10 @@ Fires....... something"
             }
 			"attributes"
 			{
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.32"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 			}
 			"visuals"
@@ -23896,10 +23911,10 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.75"
 				}
-				"maxammo secondary increased"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"1.80"
+					"attribute_class"	"max_ammo"
+					"value" "200"
 				}
 				"spread penalty"
 				{
@@ -24081,10 +24096,10 @@ Fires....... something"
             }
 			"attributes"
 			{
-				"maxammo secondary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.32"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 			}
 			"visuals"
@@ -24798,52 +24813,71 @@ Fires....... something"
 			}
 			"attributes"
 			{
-
+				"scattergun has knockback"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
+				}
+				"scattergun knockback mult"
+				{
+					"attribute_class"	"scattergun_knockback_mult"
+					"value"	"0.60"
+				}
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
 					"value" "30"
 				}
-				//"fire rate bonus"
-				//{
-				//	"attribute_class"	"mult_postfiredelay"
-				//	"value" "0.80"
-				//}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "0.80"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "2"
+				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value" "3"
 				}
-				//"clip size penalty"
-				//{
-				//	"attribute_class"	"mult_clipsize"
-				//	"value" "0.30"
-				//}
-				//"maxammo secondary reduced"
-				//{
-				//	"attribute_class"	"mult_maxammo_secondary"
-				//	"value"	"0.32"
-				//}
-				//"no reload single"
-				//{
-				//	"attribute_class"	"set_no_reload_single"
-				//	"value" "1"
-				//}
-				//"dmg falloff increased"
-				//{
-				//	"attribute_class"	"mult_dmg_falloff"
-				//	"value"	"3.00"
-				//}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.40"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"1.50"
+				}
+				"no reload single"
+				{
+					"attribute_class"	"set_no_reload_single"
+					"value" "1"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "24"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "4"
+				}
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_SuperShotgun.Single"
 				"sound_burst"			"Weapon_SuperShotgun.SingleCrit"
-				"muzzle_flash"	"muzzle_bignasty"
-				"tracer_effect"	"bullet_bignasty_tracer01"
+				"muzzle_flash"			"muzzle_bignasty"
+				"tracer_effect"			"bullet_bignasty_tracer01"
 			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
 		"9750"
 		{
@@ -25188,10 +25222,10 @@ Fires....... something"
 					"attribute_class"	"mult_mult_bullets_per_shot"
 					"value" "0.50"
                 }
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.32"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 			}
 			"visuals"
@@ -27950,7 +27984,7 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "32"
+					"value" "28"
 				}
 			}
 			"static_attrs"
@@ -29002,9 +29036,7 @@ Fires....... something"
 			"show_in_armory"	"1"
 			"item_type_name" 	"Backpack"
 			"item_name"	"The Camping Trip"
-			"item_description"	" I paused my game to be here. 
-			
-			    (Model from Open Fortress)"
+			"item_description"	"I paused my game to be here."
 			"item_slot"		"secondary"
 			"equip_region"	"chest"
 			"anim_slot"	"FORCE_NOT_USED"
@@ -29031,16 +29063,26 @@ Fires....... something"
 				"maxammo primary increased"
 				{
 					"attribute_class"	"mult_maxammo_primary"
-					"value" "4"
+					"value" "2"
 				}
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value" "0.70"
+					"value" "0.85"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				"torso scale"
+				{
+					"attribute_class"		"torso_scale"
+					"value"		"1.18"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
-			"drop_sound"		"ui/item_pack_drop.wav"
+			"drop_sound"			"ui/item_pack_drop.wav"
 		}
 		"9834"
 		{
