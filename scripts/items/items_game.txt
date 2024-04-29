@@ -1507,6 +1507,11 @@
 			}
 			"attributes"
 			{
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "1.50"
+				}
 				"kill eater score type"
 				{
 					"attribute_class"	"kill_eater_score_type"
@@ -3866,25 +3871,25 @@
 			}
 			"attributes"
 			{
+				"damage bonus vs burning"
+				{
+					"attribute_class"	"mult_dmg_vs_burning"
+					"value"	"1.25"
+				}
 				"ring of fire while aiming"
 				{
 					"attribute_class"	"ring_of_fire_while_aiming"
 					"value"	"12"
-				}
-				"uses ammo while aiming"
-				{
-					"attribute_class"	"uses_ammo_while_aiming"
-					"value" "4"
 				}
 				"dmg penalty vs nonburning"
 				{
 					"attribute_class"	"mult_dmg_vs_nonburning"
 					"value"	"0.90"
 				}
-				"damage bonus vs burning"
+				"uses ammo while aiming"
 				{
-					"attribute_class"	"mult_dmg_vs_burning"
-					"value"	"1.25"
+					"attribute_class"	"uses_ammo_while_aiming"
+					"value" "4"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -4727,6 +4732,11 @@
 				{	
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.80"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.85"
 				}
 				"clip size penalty"
 				{
@@ -8175,7 +8185,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
-                                "demoman"       "1"
+                //"demoman"       "1"
 			}
 			"static_attrs"
 			{
@@ -14813,7 +14823,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
-                                "demoman"       "1"
+                //"demoman"       "1"
 			}
 			"static_attrs"
 			{
@@ -15533,15 +15543,15 @@
 			"inspect_panel_dist" 			"55"
 			"attributes"
 			{
-				"bleeding duration"
+				"Projectile speed increased"
 				{
-					"attribute_class"	"bleeding_duration"
-					"value"	"10"
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.8"
 				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.85"
+					"value"	"0.80"
 				}
 			}
 		}
@@ -20800,6 +20810,11 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "1.50"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
@@ -21188,6 +21203,11 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.66"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.85"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -21385,6 +21405,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -6"
+				"projectile_model_scale"	"2"
 			}
 			"attributes"
 			{
@@ -21393,42 +21414,37 @@
 					"attribute_class"	"override_projectile_type"
 					"value"				"2"
 				}
-				"clip size penalty"
+				"Blast radius increased"
 				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.3"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "0.3"
-				}
-                "fire rate penalty"
-                {
-                    "attribute_class"    "mult_postfiredelay"
-                    "value"    "1.5"
-                }
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.2"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"1.3"
 				}
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"	"0.7"
+					"value"	"0.50"
+				}
+				"fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"		"1.20"
+                }
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"		"0.75"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" 	"0.50"
 				}
 			}
 			"visuals"
 			{
 			}
 			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}
 		"9414"
 		{
@@ -22180,11 +22196,6 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "15"
-				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
 					"value" "15"
 				}
 				
@@ -23167,6 +23178,11 @@ Fires....... something"
 					"attribute_class"	"centerfire_projectile"
 					"value"	"1"
 				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.4"
+				}
 				"damage causes airblast"
 				{
 					"attribute_class"	"damage_causes_airblast"
@@ -23801,6 +23817,11 @@ Fires....... something"
 					"attribute_class"	"mult_single_wep_deploy_time"
 					"value"	"0.80"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.85"
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
@@ -24185,10 +24206,10 @@ Fires....... something"
 					"attribute_class"	"see_enemy_health"
 					"value" "1"
 				}
-				"damage penalty"
+				"damage penalty on bodyshot"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.85"
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0.90"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -24995,7 +25016,7 @@ Fires....... something"
 			}
 			"static_attrs"
 			{
-			"projectile_model_scale"	"0.4"
+			"projectile_model_scale"	"2"
 			}
 			"visuals"
 			{
@@ -25374,20 +25395,20 @@ Fires....... something"
 			"attach_to_hands"			"2"
 			"attributes"
 			{
-				"max health additive bonus HIDDEN"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"				"25"
-				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.3"
-				}
-				"revolver use hit locations HIDDEN"
+				//"max health additive bonus HIDDEN"
+				//{
+				//	"attribute_class"	"add_maxhealth"
+				//	"value"				"25"
+				//}
+				"revolver use hit locations"
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.3"
 				}
 				"dmg falloff reduced HIDDEN"
 				{
@@ -25404,7 +25425,7 @@ Fires....... something"
 		"9561"
 		{
 			"name"						"Fortunate Son Engi"
-			"show_in_armory"			"0"
+			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_smg_primary"
 			"item_slot"					"primary"
 			"item_quality"				"rarity2"
@@ -25447,11 +25468,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"0.80"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.85"
 				}
 				"max ammo override"
 				{
@@ -25892,12 +25908,7 @@ Fires....... something"
 				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "0.2"
-				}
-				"mod max primary clip override"
-				{
-					"attribute_class"	"mod_max_primary_clip_override"
-					"value"	"9"
+					"value" "1.2"
 				}
 				"damage penalty"
 				{
@@ -25907,12 +25918,12 @@ Fires....... something"
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"1.20" 
+					"value"				"0.50" 
 				}
 				"mult_spread_scales_consecutive"
 				{
 					"attribute_class" 	"mult_spread_scales_consecutive"
-					"value" "0.5"
+					"value" "1"
 				}
 			}
 			"visuals"																		
@@ -26000,6 +26011,7 @@ Fires....... something"
 		}
 		"9570"
 		{
+			// one shot thing wonder
 			"name"	"oneshit"
 			"prefab"	"valve"
 			"first_sale_date"	"2010/09/29"
@@ -26042,27 +26054,26 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage causes airblast"
+				"sniper charge per sec"
 				{
-					"attribute_class"	"damage_causes_airblast"
-					"value" "200"
+					"attribute_class"	"mult_sniper_charge_per_sec"
+					"value"	"1.30"
 				}
-				"maxammo primary reduced"
+				"scattergun has knockback"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.6"
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"	"1"
 				}
-				"fire rate penalty"
+				"damage penalty on bodyshot"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.15"
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0"
 				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				
 			}
 			"visuals"
 			{
@@ -30591,6 +30602,11 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"2.00"
+				}
 				"energy weapon no ammo"
 				{
 					"attribute_class"	"energy_weapon_no_ammo"
@@ -30625,7 +30641,7 @@ Fires....... something"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}
 		"588"
 		{
@@ -38143,17 +38159,12 @@ Fires....... something"
 				"clip size bonus"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "1.25"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.25"
+					"value" "1.30"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.50"
+					"value"	"1.60"
 				}
 			}
 			"visuals"
@@ -38240,12 +38251,7 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "25"
-				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
-					"value" "25"
+					"value" "15"
 				}
 			}
 			"static_attrs"
@@ -38321,10 +38327,31 @@ Fires....... something"
 			"model_player"	"models/weapons/c_models/c_smle/c_smle.mdl"
 			"attributes"
 			{
+				//i only put these here cause i know you're gonna use it in playtests LAMBDA!!!
 				"sniper crit no scope"
 				{
 					"attribute_class"	"sniper_crit_no_scope"
 					"value" "1"
+				}
+				"sniper no charge but can scope"
+				{
+					"attribute_class" 	"mod_sniper_cannot_charge"
+					"value" "1"
+				}
+				"sniper crit no scope"
+				{
+					"attribute_class"	"sniper_crit_no_scope"
+					"value" "1"
+				}
+				"no scope"
+				{
+					"attribute_class"	"mod_no_scope"
+					"value"	"1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class"	"bodyshot_damage_modify"
+					"value" "0.8"
 				}
 			}
 		}
