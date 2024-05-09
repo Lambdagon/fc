@@ -19893,6 +19893,22 @@
 					"attribute_class"	"mod_recoil_angle"
 					"value" "0.1"
 				}
+				
+				"underbarrel grenade"
+				{
+					"attribute_class"	"underbarrel_grenade"
+					"value"	"1"
+				}	
+				"mod underbarrel grenade cost"
+				{
+					"attribute_class"	"mod_underbarrel_ammo_cost"
+					"value"	"15"
+				}
+				"secondary projectile entity name"
+				{
+					"attribute_class"	"secondary_projectile_entity_name"
+					"value"	"grenade_ar2"
+				}	
 			}
 			"used_by_classes"
 			{
@@ -28117,10 +28133,10 @@ Fires....... something"
 		
 		"9810"
 		{
-			"name" "Primary SMG"
+			"name" "DudeTheNinja Dev SMG"
 			"prefab"	"weapon_smg"
 			"enabled"	"1"
-			"item_class"	"tf_weapon_smg_primary"
+			"item_class"	"tf_weapon_smg"
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -28134,10 +28150,10 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			//"base_item_name"	"TF_WEAPON_SMG_PRIMARY"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SMG"
-			"item_name"	"TEST SMG Primary"
-			"item_slot"	"primary"
+			"item_name"	"TEST SMG "
+			"item_slot"	"secondary"
 			"item_quality"		"selfmade"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -28152,21 +28168,21 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"scattergun has knockback"
+				"underbarrel grenade"
 				{
-					"attribute_class"	"set_scattergun_has_knockback"
+					"attribute_class"	"underbarrel_grenade"
 					"value"	"1"
-				}
-				"scattergun knockback mult"
+				}	
+				"mod underbarrel grenade cost"
 				{
-					"attribute_class"	"scattergun_knockback_mult"
-					"value"	"1"
+					"attribute_class"	"mod_underbarrel_ammo_cost"
+					"value"	"5"
 				}
-				"hidden primary max ammo bonus"
+				"secondary projectile entity name"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"3"
-				}
+					"attribute_class"	"secondary_projectile_entity_name"
+					"value"	"npc_headcrab"
+				}			
 			}
 			"static_attrs"
 			{
@@ -49878,6 +49894,45 @@ Fires....... something"
 			"hidden"	"0"
 			"effect_type"	"positive"
 			"stored_as_integer"	"1"
+		}
+		"10057"
+		{
+			"name"	"underbarrel grenade"
+			"attribute_class"	"underbarrel_grenade"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+			"description_string" "Press the alt-fire key to fire a grenade"
+		}
+		"10058"
+		{
+			"name"	"mod underbarrel grenade cost"
+			"attribute_class"	"mod_underbarrel_ammo_cost"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+			"description_string" "Grenade uses %1s ammo"
+		}
+		"10059"
+		{
+			"name"	"secondary projectile entity name"
+			"attribute_class"	"secondary_projectile_entity_name"
+			"description_format"	"value_is_additive"
+			"attribute_type" "string"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+		}
+		"10060"
+		{
+			"name"	"secondary projectile override number"
+			"attribute_class"	"secondary_projectile_override_number"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+						"stored_as_integer"	"1"
+
 		}
 	}
 	"attribute_controlled_attached_particles"
