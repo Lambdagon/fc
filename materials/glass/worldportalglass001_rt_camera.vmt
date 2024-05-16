@@ -1,0 +1,23 @@
+SDK_LightmappedReflective
+{
+	// This works by using the refract texture instead of the reflect texture,
+	// as the refract texture does not reflect in the shader.
+	"%tooltexture" "dev/flat_normal"
+	"$refracttexture" "_rt_Camera"
+	"$refractamount" "1"
+	"$refracttint" "[1.0 1.0 1.0]"
+
+	"$reflecttexture" "_rt_WaterRefraction"
+	"$reflectamount" "0"
+	"$reflecttint" "[1 1 1]"
+
+	"$fresnelpower" "0"
+	"$minreflectivity" "0.0"
+	"$maxreflectivity" "0.0"
+	
+	"$normalmap" "dev/flat_normal"
+
+	"$surfaceprop" "glass"
+	"$bumpframe" "0"
+}
+
