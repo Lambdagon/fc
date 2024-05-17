@@ -6,11 +6,36 @@
 //
 // PRIORITY LEVELS
 //
+// MARINE
+// 150	dead... switch your dude
+// 145  disturbance triggered
+// 140	infested (self)
+// 135	infested (other)
+// 130	extinguish
+// 125	scanner
+// 123	dive
+// 120	boss battle
+// 115	friendly fire
+// 110	button usage
+// 105	door welding
+// 100	heal self
+// 95	heal other
+// 90	presumed combat
+// 85	clip usage
+// 80	offhand
+// 75	switch weapon
+// 70-73build sentry
+// 65	pick up item
+// 60	get weapon/ammo
+// 55	ammo bag
+// 50	melee attack
+// 45	shoot
+// 35	map/general
+// 30	movement
+// 20	reload
 //
-// NOTE: Zero priority lessons are NOT affected by , but NEVER affect priority
-// 00
-//
-//
+// NOTE: Zero (0) priority lessons are NOT affected by, but NEVER affect priority
+// 00	notice panic button, notice finale radio, explain disturbance, open/close door, failed to take pills, get money/health/power
 //
 // INSTANCE TYPES
 //
@@ -36,7 +61,6 @@
 // 0x00000400 LOCATOR_ICON_FX_FORCE_CAPTION
 // 0x00000800 LOCATOR_ICON_FX_FADE_OUT
 // 0x00001000 LOCATOR_ICON_FX_FADE_IN
-// 0x00002000 LOCATOR_ICON_FX_ENTITY_GLOW
 //
 // 
 // CAPTION COLOR - supply a string in the format "rrr,ggg,bbb"  ex. "255,255,255" for white
@@ -48,15 +72,19 @@
 	"version number"
 	{
 		"priority"			"0"
-		"success_limit"		"1"
+		"success_limit"		"1"	// increase this number to force a reset counts for everyone
 	}
 
+	//--------------------------------------------------------
+	// env_instructor_hint lesson
+	// This lesson listens for the event that is triggered by the map editor entity.
+	//--------------------------------------------------------
 	"Serverside Hint"
 	{
 		"priority"				"0"
-		"instance_type"			"2"
-
-		// instance name is stored in string1
+		"instance_type"				"2"
+		
+		//instance name is stored in string1
 		"timeout"				"0"
 		"onscreen_icon"			"icon_none"
 		"offscreen_icon"		"icon_none"
@@ -69,50 +97,67 @@
 		"allow_nodraw_target"	"1"
 		"no_offscreen"			"0"
 		"force_caption"			"0"
-		"entity_glow"			"0"
 
 		"open"
 		{
+			// Non-local player only version
 			"instructor_server_hint_create"
 			{
-				"flags set"					"int hint_flags"
-				"flags has bit"				"int 8"
 				"icon_target set"			"player local_player"
-				"string1 set"				"string hint_name"
-				"timeout set"				"int hint_timeout"
-				"onscreen_icon set"			"string hint_icon_onscreen"
-				"offscreen_icon set"		"string hint_icon_offscreen"
-				"caption set"				"string hint_caption"
-				"caption_color set"			"string hint_color"
-				"icon_offset set"			"float hint_icon_offset"
-				"range set"					"float hint_range"
-				"binding set"				"string hint_binding"
-				"allow_nodraw_target set"	"bool hint_allow_nodraw_target"
-				"no_offscreen set"			"bool hint_nooffscreen"
-				"force_caption set"			"bool hint_forcecaption"
+                		"integer1 set"              		"bool hint_local_player_only"
+                		"integer1 is"               		"int 0"
+				"entity2 ?set"				"player hint_activator_userid"
+				"string1 ?set"				"string hint_name"
+				"replace_key ?set"			"string hint_replace_key"
+				"icon_target ?set"			"entity hint_target"
+				"timeout ?set"				"int hint_timeout"
+				"onscreen_icon ?set"			"string hint_icon_onscreen"
+				"offscreen_icon ?set"			"string hint_icon_offscreen"
+				"caption ?set"				"string hint_caption"
+				"void scope in"				"void"
+					// Special message for activator
+					"local_player is"		"player entity2"
+					"caption ?set"			"string hint_activator_caption"	
+					"void scope out"		"void"
+				"caption_color ?set"			"string hint_color"
+				"icon_offset ?set"			"float hint_icon_offset"
+				"range ?set"				"float hint_range"
+				"flags ?set"				"int hint_flags"
+				"binding ?set"				"string hint_binding"
+				"allow_nodraw_target ?set"		"bool hint_allow_nodraw_target"
+				"no_offscreen ?set"			"bool hint_nooffscreen"
+				"force_caption ?set"			"bool hint_forcecaption"
 			}
-
+			
+			// Local player only version
 			"instructor_server_hint_create"
 			{
-				"flags set"					"int hint_flags"
-				"flags !has bit"			"int 8"
-				"icon_target set"			"entity hint_target"
-				"string1 set"				"string hint_name"
-				"timeout set"				"int hint_timeout"
-				"onscreen_icon set"			"string hint_icon_onscreen"
-				"offscreen_icon set"		"string hint_icon_offscreen"
-				"caption set"				"string hint_caption"
-				"caption_color set"			"string hint_color"
-				"icon_offset set"			"float hint_icon_offset"
-				"range set"					"float hint_range"
-				"binding set"				"string hint_binding"
-				"allow_nodraw_target set"	"bool hint_allow_nodraw_target"
-				"no_offscreen set"			"bool hint_nooffscreen"
-				"force_caption set"			"bool hint_forcecaption"
-				"entity_glow set"			"bool hint_hint_entityglow"
+				"icon_target set"			"player local_player"
+				"entity2 ?set"				"player hint_activator_userid"
+				"local_player is"           		"player entity2"
+				"string1 ?set"				"string hint_name"
+				"replace_key ?set"			"string hint_replace_key"
+				"icon_target ?set"			"entity hint_target"
+				"timeout ?set"				"int hint_timeout"
+				"onscreen_icon ?set"			"string hint_icon_onscreen"
+				"offscreen_icon ?set"			"string hint_icon_offscreen"
+				"caption ?set"				"string hint_caption"
+				"void scope in"				"void"
+					// Special message for activator
+					"local_player is"		"player entity2"
+					"caption ?set"			"string hint_activator_caption"	
+					"void scope out"		"void"
+				"caption_color ?set"			"string hint_color"
+				"icon_offset ?set"			"float hint_icon_offset"
+				"range ?set"				"float hint_range"
+				"flags ?set"				"int hint_flags"
+				"binding ?set"				"string hint_binding"
+				"allow_nodraw_target ?set"		"bool hint_allow_nodraw_target"
+				"no_offscreen ?set"			"bool hint_nooffscreen"
+				"force_caption ?set"			"bool hint_forcecaption"
 			}
 		}
-
+		
 		"close"
 		{
 			"instructor_server_hint_stop"
@@ -121,202 +166,42 @@
 			}
 		}
 	}
+	
+	//--------------------------------------------------------
+	// Example lesson: Explain how to fire a weapon.
+	// https://developer.valvesoftware.com/wiki/Adding_the_Game_Instructor
+	//--------------------------------------------------------
+	"Primary Attack"
+	{
+		"instance_type"    "2"
+		"caption"          "Press to shoot"
 
+		"onscreen_icon"    "use_binding"
+		"offscreen_icon"   "icon_info"
+		"binding"          "+attack"
 
-	///////////////////
-	///////////////////
-	//// MORE!   ////
-	///////////////////
-	///////////////////
-	
-	"Reload"
-	{
-		"priority" 			"2"
-	    "instance_type"    	"1"
-	    "caption"          	"Reload"
-	 
-	    "onscreen_icon"    	"use_binding"
-	    "offscreen_icon"   	"icon_info"
-	    "binding"          	"+reload"
-	 
-	    "success_limit"    	"2"
-	    "timeout"          	"8"
-	    "can_open_when_dead" "0"
-	 
-	    "open"
-	    {
-	    	"instructor_reload"
-	        {
-	            "local_player is"   "player userid"
-	            "icon_target set"   "player local_player"
-	        }
-	    }
-		
-		"close"
-		{
-			"close_weapon_hint"
-			{
-				"local_player is"   "player userid"
-			}
-		}
-	 
-	    "success"
-	    {
-	        "use_reload"
-	        {
-	            "local_player is"   "player userid"
-	            "void close"        "void"
-	        }
-	    }
-	}
-	
-	"Break Explosive Props"
-	{
-		"priority" 			"2"
-	    "instance_type"    	"1"
-	    "caption"          	"#Instructor_Attack_Explosive"
-	 
-	    "onscreen_icon"    	"use_binding"
-	    "offscreen_icon"   	"icon_info"
-	    "binding"          	"+attack"
-	 
-	    "success_limit"    	"3"
-	    "timeout"          	"30"
-	    "can_open_when_dead" "0"
-		"force_caption"		"1"
-		"entity_glow"		"1"
-	 
-	    "open"
-	    {
-	    	"physics_visible"
-	        {
-	            "local_player is"   "player userid"
-				"string1 set"		"string type"
-				"string1 is"		"string explosive_near_enemy"
-				
-	            "icon_target set"   "entity subject"
-				"integer1 set"			"int subject"
-				
-				"void scope in"		"void"
-					"icon_target modelname is"	"string props_c17\oildrum001_explosive.mdl"
-					"icon_offset set"	"float 30"
-				"void scope out"	"void"
-	        }
-	    }
-	 
-	    "close"
-		{
-			"break_prop"
-			{
-				"integer1 is"			"int entindex"
-			}
-		}
-		
-		"success"
-		{			
-			"break_prop"
-			{
-				"local_player is"	"player userid"
-				"integer1 is"			"int entindex"
-			}
-		}
-	}
-	
-	"Movement"
-	{
-		"priority"			"145"
-		"instance_type"		"1"
-		
-		
-		"only_keyboard"		"1"
-		
-		"binding"			"+forward;+back;+moveleft;+moveright"
-		"onscreen_icon"		"use_binding"
-		"caption"			"#Instructor_Walk"
-		
+		"success_limit"    "2"
+		"timeout"          "8"
+
 		"open"
 		{
-			"movement_hint"
+			// Open when the code fires this event.
+			// Example: Player has picked up a weapon.
+			"instructor_primaryattack"
 			{
-				"local_player is"		"player userid"
+				"local_player is"   "player userid"
+				"icon_target set"   "player local_player"
+			}
+		}
 
-				// Init
-				"icon_target set"		"player local_player"
-			}
-			
-			"client_keyhint"
-			{
-				"string1 set"			"string text"
-				"string1 is"			"string Valve_Hint_Movement"
-				
-				// Init
-				"icon_target set"		"player local_player"
-				"timeout set"			"float 8"
-			}
-		}
-		
-		"close"
-		{
-			"movement_hint_success"
-			{
-				"local_player is"		"player userid"
-			}
-		}
-		
 		"success"
 		{
-			"movement_hint_success"
+			// Tutorial successfully completed when the code fires this event.
+			// Example: Player has pressed the primary mouse button.
+			"use_primaryattack"
 			{
-				"local_player is"		"player userid"
-			}
-		}
-	}
-	
-	"Break Item Crate"
-	{
-		"priority" 			"2"
-	    "instance_type"    	"0"
-	    "caption"          	"#Instructor_Break"
-	 
-	    "onscreen_icon"    	"use_binding"
-	    "offscreen_icon"   	"icon_tip"
-	    "binding"          	"+attack"
-	 
-	    "success_limit"    	"5"
-	    "timeout"          	"120"
-	    "can_open_when_dead" "0"
-		"force_caption"		"1"
-		"entity_glow"		"1"
-		
-		"icon_relative_offset"	"20"
-	 
-	    "open"
-	    {
-	    	"entity_visible"
-	        {
-	            "local_player is"   "player userid"
-				"string1 set"		"string classname"
-				"string1 is"		"string item_item_crate"
-				
-	            "icon_target set"   "entity subject"
-				"integer1 set"			"int subject"
-	        }
-	    }
-	 
-	    "close"
-		{
-			"break_prop"
-			{
-				"integer1 is"			"int entindex"
-			}
-		}
-		
-		"success"
-		{			
-			"break_prop"
-			{
-				"local_player is"	"player userid"
-				"integer1 is"			"int entindex"
+				"local_player is"   "player userid"
+				"void close"        "void"
 			}
 		}
 	}

@@ -31,37 +31,37 @@ Scheme
 
 	Fonts
 	{
-		"InstructorTitle"  //Left 4 Dead
+		"InstructorTitle"
 		{
 			"1"
 			{
-				"name"		"Trade Gothic Bold"
-				"tall"		"18"
-				"weight"	"400"
+				"Name"			"Trade Gothic"
+				"tall"			"16"
+				"weight"	"100"
 				"antialias" "1"
-				"dropshadow"	"1"
+				//"dropshadow"	"1"
 			}
 		}
-		"InstructorTitle_ss"  //Left 4 Dead
+		"InstructorTitle_ss"
 		{
 			"1"
 			{
-				"name"		"Trade Gothic Bold"
-				"tall"		"14"
-				"weight"	"400"
+				"Name"			"Trade Gothic"
+				"tall"			"16"
+				"weight"	"100"
 				"antialias" "1"
-				"dropshadow"	"1"
+				//"dropshadow"	"1"
 			}
 		}
-
 		"InstructorTitleGlow"
 		{
 			"1"
 			{
-				"name"		"Trade Gothic Bold"
-				"tall"		"18"
-				"weight"	"400"
+				"Name"			"Trade Gothic"
+				"tall"			"16"
+				"weight"	"100"
 				"antialias" "1"
+				//"dropshadow"	"1"
 				"blur"	"2"
 			}
 		}
@@ -69,9 +69,9 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"Trade Gothic Bold"
-				"tall"		"18"
-				"weight"	"400"
+				"Name"			"Trade Gothic"
+				"tall"			"16"
+				"weight"	"100"
 				"antialias" "1"
 				//"dropshadow"	"1"
 				"blur"	"2"
@@ -85,6 +85,16 @@ Scheme
 				"name"		"Buttons"
 				"scalex"	"0.65"
 				"scaley"	"0.65"
+			}
+		}
+		"InstructorKeyBindings"
+		{
+			"1"
+			{
+				"name"		"Trade Gothic"
+				"tall"		"11"
+				"weight"	"500"
+				"antialias" "1"
 			}
 		}
 		"TF2MenuTitleBig"

@@ -10842,42 +10842,41 @@
 	input GenerateGameEvent(void) : "Generate my game event. (This entity is sent as the SUBJECT)"
 ]
 
-@PointClass base(Targetname) iconsprite("editor/env_instructor_hint.vmt") = env_instructor_hint : "An entity that allows for creation and control of instructor lessons by map logic"
+@PointClass base(Targetname) = env_instructor_hint : "An entity that allows for creation and control of instructor lessons by map logic"
 [
+	hint_replace_key(string) : "Replace Key" : : "Unique name so that messages with the same key will replace each other."
 	hint_target(target_destination) : "Target Entity" : : "The entity to show this hint on top of. The entity used must exist on the client, info_target_instructor_hint can be parented to server only entities for this purpose."
-
-	hint_name(string) : "Lesson Name" : : "Hints with the same lesson name use a common base and are treated as instances the same lesson type."
-
 	hint_static(Choices) : "Positioning" : 0 : "Either show at the position of the Target Entity. Or show the hint directly on the hud at a fixed position." =
 	[
 		0 : "Follow the Target Entity"
 		1 : "Show on the hud"
 	]
-
+	
 	hint_allow_nodraw_target(Choices) : "Allow invisible target" : 1 : "Do we allow the hint to follow entites with nodraw set?" =
 	[
 		0 : "End immediately on nodraw"
 		1 : "Yes"
 	]
-
+	
 	hint_caption(string) : "Caption" : : "The text of your hint."
+	hint_activator_caption(string) : "Activator Caption" : : "The text of your hint shown to only the activating player."
 	hint_color(color255) : "Caption Color" : "255 255 255" : "The color of the caption text"
 	hint_forcecaption(Choices) : "Force caption" : 0 : "Do we show the caption text even if the hint is occluded by a wall?" =
 	[
 		0 : "No"
 		1 : "Show when occluded"
 	]
-
+	
 	hint_icon_onscreen(Choices) : "Onscreen Icon" : "icon_tip" : "The icon to use when the hint is within the player's view." =
 	[
-		"icon_tip" : "icon_tip"
-		"icon_info" : "icon_info"
-		"icon_shield" : "icon_shield"
+		"icon_bulb" : "icon_bulb"
+		"icon_caution" : "icon_caution"
 		"icon_alert" : "icon_alert"
 		"icon_alert_red" : "icon_alert_red"
 		"icon_tip" : "icon_tip"
 		"icon_skull" : "icon_skull"
 		"icon_no" : "icon_no"
+		"icon_run" : "icon_run"
 		"icon_interact" : "icon_interact"
 		"icon_button" : "icon_button"
 		"icon_door" : "icon_door"
@@ -10886,19 +10885,21 @@
 		"icon_arrow_plain_white_up" : "icon_arrow_plain_white_up"
 		"icon_arrow_up" : "icon_arrow_up"
 		"icon_arrow_right" : "icon_arrow_right"
+		"icon_fire" : "icon_fire"
+		"icon_present" : "icon_present"
 		"use_binding" : "show key bindings"
 	]
-
+	
 	hint_icon_offscreen(Choices) : "Offscreen Icon" : "icon_tip" : "The icon to use when the hint is outside the player's view." =
 	[
-		"icon_tip" : "icon_tip"
-		"icon_info" : "icon_info"
-		"icon_shield" : "icon_shield"
+		"icon_bulb" : "icon_bulb"
+		"icon_caution" : "icon_caution"
 		"icon_alert" : "icon_alert"
 		"icon_alert_red" : "icon_alert_red"
 		"icon_tip" : "icon_tip"
 		"icon_skull" : "icon_skull"
 		"icon_no" : "icon_no"
+		"icon_run" : "icon_run"
 		"icon_interact" : "icon_interact"
 		"icon_button" : "icon_button"
 		"icon_door" : "icon_door"
@@ -10907,14 +10908,16 @@
 		"icon_arrow_plain_white_up" : "icon_arrow_plain_white_up"
 		"icon_arrow_up" : "icon_arrow_up"
 		"icon_arrow_right" : "icon_arrow_right"
+		"icon_fire" : "icon_fire"
+		"icon_present" : "icon_present"
 	]
-
+	
 	hint_nooffscreen(Choices) : "Show offscreen" : 0 : "When the hint is offscreen, do we show an icon and arrow?" =
 	[
 		0 : "Show"
 		1 : "Don't show"		
 	]
-
+	
 	hint_binding(string) : "Bound Command" : : "If using 'show key bindings' for the onscreen icon, this field should be the command we want to show bindings for"
 	hint_icon_offset(float) : "Icon Height Offset" : 0 : "A height offset from the target entity's origin to display the hint"
 	hint_pulseoption(Choices) : "Size Pulsing" : 0 : "The icon size can pulsate" =
@@ -10924,7 +10927,7 @@
 		2 : "Fast Pulse"
 		3 : "Urgent Pulse"
 	]
-
+	
 	hint_alphaoption(Choices) : "Alpha Pulsing" : 0 : "The icon alpha can pulsate" =
 	[
 		0 : "No Pulse"
@@ -10932,7 +10935,7 @@
 		2 : "Fast Pulse"
 		3 : "Urgent Pulse"
 	]
-
+	
 	hint_shakeoption(Choices) : "Shaking" : 0 : "The icon can shake" =
 	[
 		0 : "No Shaking"
@@ -10940,32 +10943,12 @@
 		2 : "Wide Shake"
 	]
 
+	hint_local_player_only(boolean) : "Only Local Player" : "No" : "The hint will only be shown to the local player."
+	
 	hint_timeout(integer) : "Timeout" : 0 : "The automatic timeout for the hint. 0 will persist until stopped with EndHint."
-	hint_display_limit(integer) : "Display Limit" : 0 : "The number of times a hint can be seen. 0 means unlimited."
-	hint_range(float) : "Display Range" : 0 : "The visible range of the hint. 0 will show it at any distance."
-
-	// New field - setting default to 2 to match the default for all previously shipped instances of this entity
-	hint_instance_type(Choices) : "Instance Type" : 2 : "How many instances of a single lesson type can be open or active at the same time" =
-	[
-		0 : "Multiple"
-		1 : "Single Open"
-		2 : "Fixed Replace"
-		3 : "Single Active"
-	]
-
-	hint_auto_start(Choices) : "Show on First Sight" : 1 : "When the player first sees it, it will automatically show for them." =
-	[
-		0 : "No"
-		1 : "Yes"
-	]
-
-	hint_suppress_rest(Choices) : "Suppress rest before moving" : 0 : "Suppress the initial icon display in center of screen?" =
-	[
-		0 : "No"
-		1 : "Yes"
-	]
-
-	input ShowHint(void) : "Start showing the hint. If an entity name is passed as a parameter, the hint is shown only to that entity."	
+	hint_range(float) : "Display Range" : 0 : "The visible range of the hint."	
+	
+	input ShowHint(string) : "Start showing the hint. If an entity name is passed as a parameter, the hint is shown only to that entity."	
 	input EndHint(void) : "Stop showing the hint if it hasn't already timed out."
 ]
 
