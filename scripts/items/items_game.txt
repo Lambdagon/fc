@@ -19903,11 +19903,6 @@
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.2"
 				}
-				"override projectile type"
-				{
-					"attribute_class"	"override_projectile_type"
-					"value"				"1"
-				}
 				"single wep deploy time decreased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
@@ -19927,11 +19922,6 @@
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "0.3"
 				}
 			}
 		}
@@ -20797,7 +20787,7 @@
 		"9406"
         {
             "name"    "John 357"
-            "item_class"    "tf_weapon_pistol"
+            "item_class"    "tf_weapon_revolver_slot2"
             "baseitem" "0"
             "tags"
             {
@@ -20838,35 +20828,30 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
-                "damage bonus HIDDEN"
-                {
-                    "attribute_class"     "mult_dmg"
-                    "value" "3"
-                }
                 "weapon spread bonus"
                 {
                     "attribute_class"    "mult_spread_scale"
                     "value" "0"
                 }
+				"Reload time decreased"
+				{
+					"attribute_class"    "mult_reload_time"
+					"value"    "0.85"
+                }
                 "fire rate penalty"
                 {
                     "attribute_class"    "mult_postfiredelay"
-                    "value"    "5"
-		}
-		"Reload time decreased"
-		{
-		    "attribute_class"    "mult_reload_time"
-		    "value"    "0.85"
-                }
+                    "value"    "1.65"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
 					"value" "30"
-				}
-				"clip size penalty HIDDEN"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
 				}
 				"mod_recoil_angle"
 				{
@@ -21159,12 +21144,12 @@
 				"dmg falloff increased"
 				{
 					"attribute_class"	"mult_dmg_falloff"
-					"value"	"2.00"
+					"value"	"3.00"
 				}
 				"spread penalty"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.75"
+					"value"	"1.50"
 				}
 				"move speed penalty"
 				{
@@ -21175,11 +21160,6 @@
 				{
 					"attribute_class" "mod_no_cloak_when_active"
 					"value" "1"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "15"
 				}
 				"torso scale"
 				{
@@ -23318,7 +23298,7 @@ Fires....... something"
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value" "0.50"
+					"value" "0.80"
 				}
 				"mult_spread_scales_consecutive"
 				{
@@ -27296,11 +27276,11 @@ Fires....... something"
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "2"
-				}
+				//"mod_recoil_angle"
+				//{
+				//	"attribute_class"	"mod_recoil_angle"
+				//	"value" "2"
+				//}
 			}
 			"static_attrs"
 			{
@@ -27416,11 +27396,11 @@ Fires....... something"
 					"attribute_class"	"max_ammo"
 					"value" "114"
 				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "3"
-				}
+				//"mod_recoil_angle"
+				//{
+				//	"attribute_class"	"mod_recoil_angle"
+				//	"value" "3"
+				//}
             }
             "static_attrs"
             {
@@ -27852,7 +27832,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "8"
+					"value" "5"
 				}
 				"max ammo override"
 				{
@@ -35309,7 +35289,7 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
-			"item_name"	"Sharp Dresser"
+			"item_name"	"Assassin's Blade"
 			"item_slot"	"melee"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -35318,10 +35298,12 @@ Fires....... something"
 			"item_logname"	"sharp_dresser"
 			"item_iconname"	"sharp_dresser"
 			"image_inventory"	"backpack/workshop/weapons/c_models/c_acr_hookblade/c_acr_hookblade"
+			//lambda make an actual backpack image
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"30"
 			"attach_to_hands" "1"
+			//lambda get an actual good model path i wont bother FOR NOW
 			"model_player"	"models/workshop/weapons/c_models/c_acr_hookblade/c_acr_hookblade.mdl"
 			"used_by_classes"
 			{
@@ -35359,6 +35341,32 @@ Fires....... something"
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
+				"deploy time decreased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value" "0.50"
+				}
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"increased jump height"
+				{
+					"attribute_class"	"mod_jump_height"
+					"value" "1.35"
+				}
+				"cancel falling damage"
+				{
+					"attribute_class"	"cancel_falling_damage"
+					"value" "1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.30"
+				}
+				
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -35537,7 +35545,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "20"
+					"value" "15"
 				}
 			}
 			"visuals"
@@ -35617,11 +35625,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"mod see enemy health hidden"
-				{
-					"attribute_class"	"see_enemy_health"
-					"value"	"1"
-				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -35651,11 +35654,6 @@ Fires....... something"
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "5"
 				}
 			}
 			"visuals"
@@ -35711,11 +35709,6 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"mod see enemy health hidden"
-				{
-					"attribute_class"	"see_enemy_health"
-					"value"	"1"
-				}
 				"has silencer"
 				{
 					"attribute_class"	"has_silencer"
@@ -35754,7 +35747,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "8"
+					"value" "5"
 				}
 			}
 			"visuals"
@@ -35893,11 +35886,6 @@ Fires....... something"
 				{
 					"attribute_class"	"boots_falling_stomp"
 					"value" "1"
-				}
-				"SET BONUS: mystery solving time decrease"
-				{
-					"attribute_class"	"mystery_solving_time_decrease"
-					"value"	"1.66"
 				}
 				"voice pitch scale"
                 {
@@ -36119,7 +36107,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "5"
+					"value" "3"
 				}
 				
 			}
@@ -36182,7 +36170,7 @@ Fires....... something"
 				"mod_recoil_angle"
 				{
 					"attribute_class"	"mod_recoil_angle"
-					"value" "30"
+					"value" "15"
 				}
 				"dmg falloff increased"
 				{
@@ -36303,7 +36291,7 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_sandwich/c_sandwich"
 			"model_player"	"models/weapons/c_models/c_sandwich/c_sandwich.mdl"			
 			"propername" 		"1"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			//does not work
 			"used_by_classes"
 			{
@@ -36380,9 +36368,10 @@ Fires....... something"
 			"model_player"				"models/player/items/scout/pn2_longfall.mdl"
 			//someone get a model hack of the P2 Boots for John
 			"attach_to_hands" "0"
+			//this kinda sucks idk
 			"inspect_panel_dist" "40"
 			"attach_to_hands" "0"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"inspect_panel_dist" "40"
 			"item_quality"	"normal"
 			"propername"	"1"
@@ -37106,25 +37095,20 @@ Fires....... something"
 					"attribute_class"	"medic_regen"
 					"value"	"1.66"
 				}
-				"health drain"
+				//"health drain"
+				//{
+				//	"attribute_class"	"add_health_regen"
+				//	"value"	"-2"
+				//}
+				//"move speed penalty"
+				//{
+				//	"attribute_class"	"mult_player_movespeed"
+				//	"value"	"0.93"
+				//}
+				"max ammo override"
 				{
-					"attribute_class"	"add_health_regen"
-					"value"	"-2"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.93"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.40"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "2"
+					"attribute_class"	"max_ammo"
+					"value" "32"
 				}
 			}
 		}
