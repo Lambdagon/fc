@@ -9949,41 +9949,40 @@
 			}
 			"attributes"
 			{
-			
-				"damage bonus"
+				"is_a_sword"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"			"1.5"
-				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"			"1.35"
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
 				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
-					"value"			"0.0"
+					"value"	"0"
 				}
 				"max health additive penalty"
 				{
 					"attribute_class"	"add_maxhealth"
-					"value" "-50"
+					"value" "-25"
 				}
-				"single wep deploy time increased HIDDEN"
+				"decapitate type"
 				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"2.0"
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
 				}
-				"provide on active"
+				"kill eater score type"
 				{
-					"attribute_class"	"provide_on_active"
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"6"									
+				}
+				"kill eater kill type"
+				{
+					"attribute_class"	"kill_eater_kill_type"
+					"value"	"6"			
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
 					"value" "1"
-				}
-				"health drain"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"	"-1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -12645,29 +12644,7 @@
 			{
 				"min_viewmodel_offset"		"10 0 -6"
 			}
-			"attributes"
-			{
-				"crit from behind"
-				{
-					"attribute_class"	"crit_from_behind"
-					"value" "1.0"
-				}
-				"crits_become_minicrits"
-				{
-					"attribute_class"	"crits_become_minicrits"
-					"value" "1.0"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.25"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value" "0"
-				}
-			}
+
 			"visuals"
 			{
 				"sound_melee_hit_world"		"Weapon_Machete.HitWorld"
@@ -12724,29 +12701,7 @@
 			{
 				"min_viewmodel_offset"		"10 0 -6"
 			}
-			"attributes"
-			{
-				"crit from behind"
-				{
-					"attribute_class"	"crit_from_behind"
-					"value" "1.0"
-				}
-				"crits_become_minicrits"
-				{
-					"attribute_class"	"crits_become_minicrits"
-					"value" "1.0"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.25"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value" "0"
-				}
-			}
+
 			"visuals"
 			{
 				"sound_melee_hit_world"		"Weapon_Machete.HitWorld"
@@ -12802,29 +12757,7 @@
 			{
 				"min_viewmodel_offset"		"10 0 -6"
 			}
-			"attributes"
-			{
-				"crit from behind"
-				{
-					"attribute_class"	"crit_from_behind"
-					"value" "1.0"
-				}
-				"crits_become_minicrits"
-				{
-					"attribute_class"	"crits_become_minicrits"
-					"value" "1.0"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.25"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value" "0"
-				}
-			}
+
 			"visuals"
 			{
 				"sound_melee_hit_world"		"Weapon_Machete.HitWorld"
@@ -13946,34 +13879,7 @@
 			{
 				"min_viewmodel_offset"					"10 0 -14"
 			}
-			"attributes"
-			{
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-				"mod crit while airborne"
-				{
-					"attribute_class"	"crit_while_airborne"
-					"value"	"1"
-				}
-				"mod mini-crit airborne"
-				{
-					"attribute_class"	"mini_crit_airborne"
-					"value" "1"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-			}
+			
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
@@ -14435,16 +14341,6 @@
 				{
 					"attribute_class"	"special_taunt"
 					"value" "1"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "1.25"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.25"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
@@ -15541,19 +15437,7 @@
 			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_bow_thief/c_bow_thief"
 			"model_player"	"models/workshop_partner/weapons/c_models/c_bow_thief/c_bow_thief.mdl"
 			"inspect_panel_dist" 			"55"
-			"attributes"
-			{
-				"Projectile speed increased"
-				{
-					"attribute_class"	"mult_projectile_speed"
-					"value"	"1.8"
-				}
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0.80"
-				}
-			}
+
 		}
 		"1098"
 		{
@@ -20171,19 +20055,6 @@
 				"scout"	"1"
 				"engineer"	"1"
 			}
-			"attributes"
-			{
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "0.70"
-				}
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"2.50"
-				}
-			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_Lugermorph.Single"
@@ -22197,35 +22068,7 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"5 0 -8"
 			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "1.40"
-				}
-				"sniper only fire zoomed"
-				{
-					"attribute_class"	"sniper_only_fire_zoomed"
-					"value"	"1"
-				}
-				"sniper no charge but can scope"
-				{
-					"attribute_class" 	"mod_sniper_cannot_charge"
-					"value" "1"
-				}
-				"sniper fires tracer"
- 				{
-					"attribute_class"	"sniper_fires_tracer"
-					"value"	"1"
-				}
-				"max ammo override"
-				{
-					"attribute_class"	"max_ammo"
-					"value" "15"
-				}
-				
-			}
+
 			"visuals"
 			{
 				"sound_single_shot"	"Weapon_AWP.Single"
@@ -22316,19 +22159,7 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -10"
 			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.15"
-				}
-				"mod flamethrower push"
-				{
-					"attribute_class"	"set_flamethrower_push_disabled"
-					"value" "1"
-				}
-			}	
+
 			"visuals"
 			{
 				"animation_replacement"
@@ -35478,7 +35309,7 @@ Fires....... something"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Knife"
-			"item_name"	"Assassin's Blade"
+			"item_name"	"Sharp Dresser"
 			"item_slot"	"melee"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -35528,32 +35359,6 @@ Fires....... something"
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
-				"deploy time decreased"
-				{
-					"attribute_class"	"mult_deploy_time"
-					"value" "0.50"
-				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value" "1"
-				}
-				"increased jump height"
-				{
-					"attribute_class"	"mod_jump_height"
-					"value" "1.35"
-				}
-				"cancel falling damage"
-				{
-					"attribute_class"	"cancel_falling_damage"
-					"value" "1"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value" "1.30"
-				}
-				
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
