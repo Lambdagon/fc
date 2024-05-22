@@ -1,0 +1,244 @@
+// generic woods
+"lighthouse.woods"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"wave"		"ambient/wind/crucial_wind_outdoors_1.wav"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".07"
+		"pitch"		"100"
+		"wave"		"ambient/levels/caves/cave_crickets_loop1.wav"
+	}
+
+	//shoreline waves
+	"playlooping"
+	{
+		"volume"	".7"
+		"pitch"		"100"
+		"wave"		"ambient/water/ShorelineWaves_Loop.wav"
+		"origin"	"2360.081299, -82.879097, 173.257355;"
+		"soundlevel" 	"SNDLVL_130dB"
+	}
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"19,39"
+		"volume"	".2"
+		"pitch"		"90,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/nature/wind_leaves_mild_gust_1.wav"
+			"wave"	"ambient/levels/forest/treewind1.wav"
+			"wave"	"ambient/levels/forest/treewind2.wav"
+			"wave"	"ambient/levels/forest/treewind3.wav"
+			"wave"	"ambient/levels/forest/treewind4.wav"
+		}
+	}
+	// wind gusts with leaves
+	"playrandom"
+	{
+		"time"		"11,23"
+		"volume"	".15,.25"
+		"pitch"		"80,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle03.wav"
+			
+		}
+	}
+	
+	// bird sounds
+	"playrandom"
+	{
+		"time"		"2,15"
+		"volume"	".05,.8"
+		"pitch"		"90,110"
+		"position"	"random"
+		"attenuation"	"0.9,1.3"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull03.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull04.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull05.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_Seagull06.wav"
+		}
+	}
+	//distant foghorn
+	"playrandom"
+	{
+		"time"		"23,25"
+		"volume"	".89"
+		"pitch"		"100"
+		"origin"	"2974.346191, 768.078979, 904.317993;"
+		"soundlevel"	"SNDLVL_100dB"
+
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_DistFoghorn.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_DistFoghorn.wav"
+
+		}
+	}
+	//close foghorn
+	"playrandom"
+	{
+		"time"		"28,35"
+		"volume"	"1"
+		"pitch"		"100"
+		"origin"	"1000.085571, -277.444183, 1118.276611;"
+		"soundlevel"	"SNDLVL_130dB"
+
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/FogHorn_Close.wav"
+			"wave"	"ambient/Random_Amb_SFX/FogHorn_Close.wav"
+
+		}
+	}
+
+}
+
+"lighthouse.house"
+{
+	"dsp" "1"
+
+	
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".19"
+		"pitch"		"100"
+		"wave"		"ambient/ambience/crucial_smallroomtone_amb_loop.wav"
+	}
+	"playlooping"
+	{
+		"volume"	".03"
+		"pitch"		"100"
+		"wave"		"ambient/levels/caves/cave_crickets_loop1.wav"
+	}
+	//shoreline waves
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"100"
+		"wave"		"ambient/water/ShorelineWaves_Loop.wav"
+		"origin"	"2360.081299, -82.879097, 173.257355;"
+		"soundlevel" 	"SNDLVL_130dB"
+	}
+	//close foghorn
+	"playrandom"
+	{
+		"time"		"28,35"
+		"volume"	".82"
+		"pitch"		"100"
+		"origin"	"1000.085571, -277.444183, 1118.276611;"
+		"soundlevel"	"SNDLVL_130dB"
+
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/FogHorn_Close.wav"
+			"wave"	"ambient/Random_Amb_SFX/FogHorn_Close.wav"
+
+		}
+	}
+
+	// creeky wood
+	"playrandom"
+	{
+		"time"		"5,14"
+		"volume"	".7,.99"
+		"pitch"		"80,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/wood_creak1.wav"
+			"wave"	"ambient/materials/wood_creak2.wav"
+			"wave"	"ambient/materials/wood_creak3.wav"
+			"wave"	"ambient/materials/wood_creak4.wav"
+			"wave"	"ambient/materials/wood_creak5.wav"
+			"wave"	"ambient/materials/wood_creak6.wav"
+		}
+	}
+
+	//fireplace
+	"playlooping"
+	{
+		"volume"	".7"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"736.468323, -88.491501, 854.333374;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	//distant foghorn
+	"playrandom"
+	{
+		"time"		"23,25"
+		"volume"	".5"
+		"pitch"		"100"
+		"origin"	"2974.346191, 768.078979, 904.317993;;"
+		"soundlevel"	"SNDLVL_100dB"
+
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_DistFoghorn.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR5b_DistFoghorn.wav"
+
+		}
+	}
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	".3"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/nature/wind_leaves_mild_gust_1.wav"
+			"wave"	"ambient/levels/forest/treewind1.wav"
+			"wave"	"ambient/levels/forest/treewind2.wav"
+			"wave"	"ambient/levels/forest/treewind3.wav"
+			"wave"	"ambient/levels/forest/treewind4.wav"
+		}
+	}
+
+	// shutters
+	"playrandom"
+	{
+		"time"		"5,9"
+		"volume"	"0.7"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/shutter6.wav"
+			"wave"	"ambient/materials/shutter8.wav"
+			"wave"	"ambient/materials/shutter7.wav"
+		}
+	}
+}

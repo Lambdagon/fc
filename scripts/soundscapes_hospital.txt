@@ -1,0 +1,980 @@
+//
+// Hospital Soundscapes
+//
+// These are Derived from the urban soundscapes.
+//
+// Please keep all generic and global updates within urban, 
+// while any map specific replacements or changes go here.
+
+
+//=======================
+//=======================
+//   Hospital 01
+//=======================
+//=======================
+
+"background_menu.streetrain"
+{
+	"dsp" "1"
+
+	
+	"playrandom"
+	{
+		"time"		"45,60"
+		"volume"	"0.55, 0.65"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"music/contagion/BH_Rabies_01.wav"
+			"wave"	"music/contagion/BH_Rabies_02.wav"
+			"wave"	"music/contagion/BH_Rabies_03.wav"
+			"wave"	"music/contagion/BH_Rabies_04.wav"
+			"wave"	"music/contagion/BH_Rabies_05.wav"
+			"wave"	"music/contagion/BH_Rabies_06.wav"
+			"wave"	"music/contagion/BH_Rabies_07.wav"
+			"wave"	"music/contagion/BH_Rabies_08.wav"
+			"wave"	"music/contagion/BH_Rabies_09.wav"
+			"wave"	"music/contagion/BH_Rabies_10.wav"
+
+			"wave"	"music/contagion/DA_Rabies_01.wav"
+			"wave"	"music/contagion/DA_Rabies_02.wav"
+			"wave"	"music/contagion/DA_Rabies_03.wav"
+			"wave"	"music/contagion/DA_Rabies_04.wav"
+			"wave"	"music/contagion/DA_Rabies_05.wav"
+			"wave"	"music/contagion/DA_Rabies_06.wav"
+			"wave"	"music/contagion/DA_Rabies_07.wav"
+			"wave"	"music/contagion/DA_Rabies_08.wav"
+			"wave"	"music/contagion/DA_Rabies_09.wav"
+			"wave"	"music/contagion/DA_Rabies_10.wav"
+
+			"wave"	"music/contagion/NM_Rabies_01.wav"
+			"wave"	"music/contagion/NM_Rabies_02.wav"
+			"wave"	"music/contagion/NM_Rabies_03.wav"
+			"wave"	"music/contagion/NM_Rabies_04.wav"
+			"wave"	"music/contagion/NM_Rabies_05.wav"
+			"wave"	"music/contagion/NM_Rabies_06.wav"
+			"wave"	"music/contagion/NM_Rabies_07.wav"
+			"wave"	"music/contagion/NM_Rabies_08.wav"
+			"wave"	"music/contagion/NM_Rabies_09.wav"
+			"wave"	"music/contagion/NM_Rabies_10.wav"
+
+			"wave"	"music/contagion/DT_Rabies_01.wav"
+			"wave"	"music/contagion/DT_Rabies_02.wav"
+			"wave"	"music/contagion/DT_Rabies_03.wav"
+			"wave"	"music/contagion/DT_Rabies_04.wav"
+			"wave"	"music/contagion/DT_Rabies_05.wav"
+			"wave"	"music/contagion/DT_Rabies_06.wav"
+			"wave"	"music/contagion/DT_Rabies_07.wav"
+			"wave"	"music/contagion/DT_Rabies_08.wav"
+			"wave"	"music/contagion/DT_Rabies_09.wav"
+			"wave"	"music/contagion/DT_Rabies_10.wav"
+
+
+		}
+	}
+	"playrandom"
+	{
+		"time"		"17,27"
+		"volume"	"0.55, 0.65"
+		"pitch"		"100"
+
+		"rndwave"
+		{
+			"wave"		"music/zombiechoir/ZombieChoir_01.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_02.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_03.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_04.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_05.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_06.wav"
+			"wave"		"music/zombiechoir/ZombieChoir_07.wav"
+	     }
+	}
+	
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.6"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"0.25"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_med1.wav"
+			"wave"	"ambient/wind/wind_med2.wav"
+		}
+	}
+	// gusts 2
+	"playrandom"
+	{
+		"time"			"12,18"
+		"pitch"			"95,102"
+		"volume"		"0.39"
+		
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"60,90"
+		"volume"	".05,.1"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/overhead/plane1.wav"
+			"wave"	"ambient/overhead/plane2.wav"
+			"wave"	"ambient/overhead/plane3.wav"
+		}
+	}
+
+	// animals
+	"playrandom"
+	{
+		"position"	"0"
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.3"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" ".8"
+	}
+
+	"playsoundscape"
+	{
+		"volume" ".8"
+		"name"	"urban.util_distantexplosions"
+	}
+	
+}
+
+
+"hospital_01.alleyrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alleyrain"
+		"volume" "1"
+	}
+}
+
+"hospital_01.streetrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.streetrain"
+		"volume" "1"
+	}
+}
+
+
+"hospital_01.subway"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.subway"
+		"volume" "1"
+	}
+}
+
+
+"hospital_01.rooftop_1b_interior2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b_interior2"
+		"volume" "1"
+	}
+}
+
+
+"hospital_01.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+}
+
+
+"hospital_01.rooftop_1b"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b"
+		"volume" "1"
+	}
+}
+
+
+"hospital_01.rooftop_1b_interior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b_interior"
+		"volume" "1"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Hospital 02
+//=======================
+//=======================
+
+
+
+"hospital_02.rooftop_1b_interior2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b_interior2"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.underground_2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.underground_2"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.underground_1"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.underground_1"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.underground_3"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.underground_3"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.pillarsroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.pillarsroom"
+		"volume" "1"
+	}
+	// Rats 
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	".5,.6"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+		}
+	}
+	//dead bodies Flies
+	"playlooping"
+	{
+		"volume"	".9"
+		"pitch"		"120"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"8155.776855, 3031.043945, -147.455017;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+
+	
+}
+
+
+"hospital_02.alleyrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alleyrain"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.generatorroom_off"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.generatorroom_off"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.generatorroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.generatorroom"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.streetrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.streetrain"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.rooftop_1b_interior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b_interior"
+		"volume" "1"
+	}
+	// vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"	"SNDLVL_65dB"
+		"volume" 	".70"
+		"origin"	"7611.458984, 4382.668945, 259.274872;"
+	}
+	//Flies on body
+	"playlooping"
+	{
+		"volume"	".9"
+		"pitch"		"110"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"7775.968750, 4061.743896, 248.021545;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+
+"hospital_02.rooftop"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop"
+		"volume" "1"
+	}
+}
+
+
+"hospital_02.controlroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"		"urban.controlroom"
+		"volume" 	".5"
+	}
+}
+
+
+"hospital_02.warehouseoutside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.warehouseoutside"
+		"volume" "1"
+	}
+}
+
+
+//=======================
+//=======================
+//   Hospital 03
+//=======================
+//=======================
+
+
+
+"hospital_03.alleyrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alleyrain"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"115"
+		"wave"		"ambient/gas/steam2.wav"
+		"origin"	"12817.862305, 8036.788574, 125.838715;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+
+"hospital_03.rooftop_1b_interior2"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+		"volume" 	".79"
+		"position"	"random"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient\weather\crucial_rumble_rain_nowind.wav"
+		"volume" 	".9"
+		"origin"	" 11136.497070, 5917.669434, 86.230179;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient\weather\crucial_rumble_rain_nowind.wav"
+		"volume" 	".9"
+		"origin"	" 10925.726563, 7097.053223, 296.031250;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+
+
+	
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+	}
+}
+
+
+"hospital_03.warehouse_1"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_BigWarehouseAmb_loop.wav"
+		"volume" 	".8"
+		"position"	"random"
+	}
+	// ambient fx
+	"playrandom"
+	{
+		"time"		"6,13"
+		"volume"	"0.4,.7"
+		"pitch"		"50,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+		}
+	}
+}
+
+
+"hospital_03.steamtunnel"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.steamtunnel"
+		"volume" "1"
+	}
+}
+
+
+"hospital_03.boilerroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.boilerroom"
+		"volume" "1"
+	}
+}
+
+
+"hospital_03.sewer"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.sewer"
+		"volume" "1"
+	}
+	//Water leaking in from above
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"90"
+		"soundlevel"  	"SNDLVL_70dB"
+		"wave"		"ambient/Spacial_Loops/4b_HospAtrium_WaterLeak.wav"
+		"origin"	"14283.930664, 11623.138672, -351.968750;"
+	}
+	//weather sfx coming from open manhole above
+	"playlooping"
+	{
+		"volume"	"0.56"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain.wav"
+		"soundlevel"  	"SNDLVL_70dB"
+		"origin"	"14278.092773, 11623.968750, -100.949738;"
+	}
+}
+
+
+"hospital_03.pipetunnel"
+{
+	"dsp" "1"
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.pipetunnel"
+		"volume" "1"
+	}
+	
+	
+}
+
+
+"hospital_03.streetrain"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.streetrain"
+		"volume" "1"
+
+	}
+}
+
+
+"hospital_03.hospital"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.hospital"
+		"volume" "1"
+	}
+	//Flies on body
+	"playlooping"
+	{
+		"volume"	".85"
+		"pitch"		"110"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"12662.568359, 12319.380859, 31.773811;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+	// vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"	"SNDLVL_60dB"
+		"volume" 	".5"
+		"origin"	"12311.408203, 12419.258789, 39.798462;"
+	}
+	//weather sfx coming from open door
+	"playlooping"
+	{
+		"volume"	"0.56"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain.wav"
+		"soundlevel"  	"SNDLVL_70dB"
+		"origin"	"12882.794922, 12341.797852, 16.031250;"
+	}
+}
+
+
+"hospital_03.rooftop_1b_interior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop_1b_interior"
+		"volume" "1"
+	}
+}
+
+
+"hospital_03.respawn"
+{
+	"dsp" "1"
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Hospital 04
+//=======================
+//=======================
+
+
+
+"hospital_04.hospital_interior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.hospital_interior"
+		"volume" "1"
+	}
+// ambient fx
+	"playrandom"
+	{
+		"time"		"9,29"
+		"volume"	"0.2,0.3"
+		"pitch"		"68,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+		}
+	}
+}
+
+
+"hospital_04.hospital_atrium"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.hospital_interior"
+		"volume" "1"
+	}
+
+	//leaking water
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/4b_HospAtrium_WaterLeak.wav"
+		"volume" 	".7"
+                "soundlevel"	"SNDLVL_75dB"
+		"origin"	"12709.096680, 12042.679688, 191.229706;"
+	}
+
+	// ambient fx
+	"playrandom"
+	{
+		"time"		"9,29"
+		"volume"	"0.2,.3"
+		"pitch"		"68,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+		}
+	}
+}
+
+
+"hospital_04.elevator"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.elevator"
+		"volume" "1"
+	}
+}
+
+
+"hospital_04.finaleoutside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.finaleoutside"
+		"volume" "1"
+	}
+}
+
+
+"hospital_04.construction"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.construction"
+		"volume" "1"
+	}
+}
+
+
+"hospital_04.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+}
+
+
+"hospital_04.respawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+	}
+
+}
+
+
+//=======================
+//=======================
+//   Hospital 05
+//=======================
+//=======================
+
+
+
+"hospital_05.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+}
+
+
+"hospital_05.finaleinside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.finaleinside"
+		"volume" "1"
+	}
+	//Inside rain
+	"playlooping"
+	{
+		"volume"	".8"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+		"origin"	"5819.670410, 8430.615234, 5920.031250;"
+		"soundlevel" 	"SNDLVL_85dB"
+	}
+//Flies on body
+	"playlooping"
+	{
+		"volume"	".9"
+		"pitch"		"100"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"5819.670410, 8430.615234, 5920.031250;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+
+"hospital_05.finaleoutside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.finaleoutside"
+		"volume" "1"
+	}
+}
+
+
+"hospital_05.respawn"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.2"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_SmallRoomtone_Amb_loop.wav"
+		"position"	"random"
+	}
+}
+
+
+"hospital_05.finaleroof"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.finaleroof"
+		"volume" "1"
+	}
+}
+
+
+"hospital_05.elevatorshaft"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.elevator"
+		"volume" "1"
+	}
+	//rain from roof
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/4b_HospAtrium_WaterLeak.wav"
+		"volume" 	".7"
+                "soundlevel"	"SNDLVL_70dB"
+		"origin"	"7200.163086, 9297.327148, 5920.031250;"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient/weather/crucial_rumble_rain.wav"
+		"volume" 	".7"
+                "soundlevel"	"SNDLVL_70dB"
+		"origin"	"7179.416504, 9275.031250, 6091.313477;"
+	}
+}
+

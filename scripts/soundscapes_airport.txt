@@ -1,0 +1,1348 @@
+//
+// Airport Soundscapes
+//
+// These are Derived from the urban soundscapes.
+//
+// Please keep all generic and global updates within urban, 
+// while any map specific replacements or changes go here.
+
+//
+// Generic Finale Outside ambience
+//
+"airport.finaleoutside"
+{
+	"dsp"	"1"
+
+
+	"playlooping"
+	{
+		"volume"	"0.98"
+		"pitch"		"100"
+		"wave"		"(ambient/ambience/crucial_AirportAmbWindOutside.wav"
+		"position"	"random"
+	}
+	
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"5,10"
+		"volume"	"1"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_hit1.wav"
+			"wave"	"ambient/wind/wind_hit2.wav"
+			"wave"	"ambient/wind/wind_hit3.wav"
+		}
+	}
+	
+
+	
+
+	
+}
+
+
+//=======================
+//=======================
+//   Airport 01
+//=======================
+//=======================
+
+
+
+"airport_01.rooftop"
+{
+	"dsp" "1"
+
+	"playsoundscape" 
+ 	{
+		"name"	"urban.rooftop"
+		"volume" "1"
+	}
+
+
+}
+
+"urban.airport.rooftop.spawn"
+{
+	"dsp" "1"
+
+	"playsoundscape" 
+ 	{
+		"name"	"urban.rooftop"
+		"volume" "1"
+	}
+
+
+}
+
+"airport_01.apartment"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.apartment"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/StreetWind01_loop.wav"
+		"origin"	"3418.339111, 2239.676270, 272.905487;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+
+"airport_01.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+	// paper gusts
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".3,.6"
+		"pitch"		"100,140"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers02.wav"
+			
+		}
+	}
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/StreetWind01_loop.wav"
+		"position"	"random"
+	}
+
+}
+
+
+"airport_01.alley"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alley"
+		"volume" "1"
+	}
+}
+
+
+"airport_01.rooftopspawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.hospitalspawn"
+		"volume" "1"
+	}
+}
+
+
+"airport_01.inn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.apartment"
+		"volume" "1"
+	}
+}
+
+"airport_01.hotel"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.apartment"
+		"volume" "1"
+	}
+}
+
+
+
+
+"airport_01.greenhouse"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop"
+		"volume" "1"
+	} 
+	// greenhouse rattles
+	"playrandom"
+	{
+		"time"		"9,19"
+		"volume"	".7"
+		"pitch"		"97,103"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle02.wav"
+			
+		}
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Airport 02
+//=======================
+//=======================
+
+
+
+"airport_02.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"airport_01.street"
+		"volume" "1"
+	}
+}
+
+
+"airport_02.alley"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alley"
+		"volume" "1"
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"5090.925781, 3289.044678, 61.513275;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	//pipes
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/pipes_loop02.wav"
+		"origin"	"8962.263672, 3601.842041, 32.031250;"
+		"soundlevel" 	"SNDLVL_75dB"
+	}
+}
+
+
+"airport_02.apartment"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.apartment"
+		"volume" "1"
+	}
+// Vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"  	"SNDLVL_70dB"
+		"pitch"		"110"
+		"volume" 	".63"
+		"origin"	"4910.517578, 2638.240967, 466.052490;"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+		"soundlevel"  	"SNDLVL_70dB"
+		"volume" 	".99"
+		"origin"	"9295.328125, 3890.531982, 677.210815;"
+	}
+}
+
+
+"airport_02.rooftop"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.rooftop"
+		"volume" "1"
+	}
+//Fire 
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"6274.140137, 3824.393799, 516.561218;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+
+"airport_02.pillarsroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.pillarsroom"
+		"volume" "1"
+	}
+}
+
+
+"airport_02.office"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.office"
+		"volume" "1"
+	}
+	// ambient noises
+	"playrandom"
+	{
+		"time"		"6,10"
+		"volume"	".6,.8"
+		"pitch"		"45,123"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_06.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_07.wav"
+			
+		}
+	}
+	// vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"	"SNDLVL_65dB"
+		"volume" 	".75"
+		"origin"	"8496.579102, 4025.561523, 104.338684;"
+	}
+}
+
+"airport_02.respawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+}
+
+
+
+
+//=======================
+//=======================
+//   Airport 03
+//=======================
+//=======================
+
+
+
+"airport_03.alley"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.alley"
+		"volume" "1"
+	}
+	// pole rattles
+	"playrandom"
+	{
+		"time"		"7,19"
+		"volume"	".3,.65"
+		"pitch"		"99,102"
+		"position"	"random"
+		
+		"rndwave"
+		{
+		"wave"	"ambient/Random_Amb_SFX/Pole_Rattle01.wav"
+		"wave"	"ambient/Random_Amb_SFX/Pole_Rattle02.wav"
+			
+		}
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"-4942.736816, -2730.215088, 61.322891;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"-4584.352539, -910.558105, 61.295944;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+
+	
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	
+	
+	
+	
+	// position 3 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"3"
+	}
+	
+	// position 4 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"4"
+	}	
+	
+	// Position 5 : General Fire
+	"playlooping"
+	{
+		"position"	"5"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}	
+}
+
+"airport_03.boilerroom"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+		"volume" 	".8"
+	}
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/pipes_loop02.wav"
+		"volume" 	".12"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" "1"
+	}
+
+
+	// position 0 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	".5"
+		"positionoverride"	"0"
+	}
+}
+
+"airport_03.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/StreetWind01_loop.wav"
+		"position"	"random"
+	}
+	// paper gusts
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".3,.6"
+		"pitch"		"100,140"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers02.wav"
+			
+		}
+	}
+	"playrandom"
+	{
+		"volume"	"1"
+		"time"		"5,14"
+		"pitch"		"45,110"
+		"origin"	"-6795.312500, -1355.786255, 244.031250;"
+		"soundlevel" 	"SNDLVL_100dB"
+		"rndwave"
+		{	
+			"wave"	"ambient\Random_Amb_SFX\Metal_Rattle_Scaffold01.wav"
+			"wave"	"ambient\Random_Amb_SFX\Metal_Rattle_Scaffold02.wav"
+		}
+	}
+	
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	
+	
+	
+	
+	// Position 3 : Burning Car
+	"playlooping"
+	{
+		"position"	"3"
+		"volume"	"1"
+		//"attenuation"	"1"
+		"soundlevel"	"SNDLVL_75dB"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/CarFire_Loop.wav"
+	}
+	
+	// position 4 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"4"
+	}
+	
+	// Position 5 : General Fire
+	"playlooping"
+	{
+		"position"	"5"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+}
+
+"airport_03.streetoffices"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".6"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+	}
+	
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	  
+	
+	// Position 2 : General Fire
+	"playlooping"
+	{
+		"position"	"2"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+	
+	// Position 3 : Burning Car
+	"playlooping"
+	{
+		"position"	"3"
+		"volume"	"1"
+		//"attenuation"	"1"
+		"soundlevel"	"SNDLVL_75dB"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/CarFire_Loop.wav"
+	}
+}
+"airport_03.pumproomsmall"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".6"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+	}
+
+}
+
+"airport_03.powerplant"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.powerplant"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	"0.44"
+		"pitch"		"70"
+		"wave"		"(ambient/Ambience/Generator_Amb01_loop.wav"
+		"position"	"random"
+	}
+	// gusts
+	"playrandom"
+	{
+		"time"			"7,13"
+		"pitch"			"95,102"
+		"volume"		"0.85"
+		
+
+		"rndwave"
+		{
+		"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+		"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+		"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+		
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	
+	
+	// Position 2 : General Fire
+	"playlooping"
+	{
+		"position"	"2"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+
+	// Position 3 : Rustling Tree
+	"playlooping"
+	{
+		"position"	"3"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		""
+	}
+	
+	// position 4 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"4 "
+	}
+		
+}
+
+
+"airport_03.powerplantinside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.powerplantinside"
+		"volume" "1"
+	}
+	
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"100"
+		"wave"		"ambient/gas/steam2.wav"
+		"origin"	"-3068.729248, 2143.318604, 45.384712;"
+		"soundlevel" 	"SNDLVL_65dB"
+	
+	}
+	
+	
+}
+
+
+"airport_03.controlroom"
+{
+	"dsp" "1"
+
+	
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".7"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_1a_Communications_Room_Amb.wav"
+		"position"	"random"
+	}
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+	
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}	
+	
+	// position 2 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"2"
+	}	
+}
+
+"airport_03.respawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"1"
+	}
+	
+	// position 2 comes from leaking water
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/4b_HospAtrium_WaterLeak.wav"
+		"attenuation"	".5"
+		"volume" 	"0"
+                "soundlevel"	"SNDLVL_89dB"
+		"position"	"2"
+	}
+}
+
+"airport_03.parkinggarage"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.parkinggarage"
+		"volume" "1"
+	}
+	
+	
+	// Position 1 : General Fire
+	"playlooping"
+	{
+		"position"	"1"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+
+	
+}
+
+"airport_03.skybridge"
+{
+	"dsp" "1"
+
+	
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+	"playrandom"
+	{
+		"time"		"3,5"
+		"volume"	".5,.8"
+		"pitch"		"99,123"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+	
+	// position 0 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"0"
+	}
+}
+
+"airport_03.airportinterior"
+{
+	"dsp" "1"
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".6"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+		"position"	"random"
+	}
+	
+	
+	
+	
+	
+		
+}
+
+
+
+//=======================
+//=======================
+//   Airport 04
+//=======================
+//=======================
+
+
+
+"airport_04.office"
+{
+	"dsp" "1"
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.7"
+		"pitch"		"86"
+		"wave"		"ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+	}
+
+	// vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"	"SNDLVL_65dB"
+		"pitch"		"110"
+		"volume" 	".75"
+		"origin"	"1145.202393, 3943.290283, 312.050690;"
+	}
+	
+}
+
+
+"airport_04.baggageclaim"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.6"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/Airport_Lobby_Amb_loop.wav"
+	
+	}
+	"playlooping"
+	{
+		"volume"	"0.75"
+		"pitch"		"66"
+		"wave"		")ambient/ambience/crucial_URB4b_ShaftWind_Loop.wav"
+	}
+	"playrandom"
+	{
+		"time"		"7,17"
+		"volume"	".5,1"
+		"pitch"		"50,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb05.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb06.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb07.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb08.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb09.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"4,12"
+		"volume"	".3,.5"
+		"pitch"		"77,123"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+}
+
+
+"airport_04.terminal"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"100"
+		"wave"		"(ambient/atmosphere/corridor2.wav"
+		"position"	"random"
+	}
+	"playlooping"
+	{
+		"volume"	".4"
+		"pitch"		"100"
+		"wave"		"(ambient/atmosphere/crucial_Drone1LP.wav"
+		"position"	"random"
+	}
+	"playrandom"
+	{
+		"time"		"4,12"
+		"volume"	".9"
+		"pitch"		"50,60"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+	"playrandom"
+	{
+		"time"		"7,14"
+		"volume"	".89"
+		"pitch"		"50"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb05.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb06.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb07.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb08.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb09.wav"
+		}
+	}
+}
+
+
+"airport_04.conveyor"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"76"
+		"wave"		"(ambient/atmosphere/crucial_undercity_loop1.wav"
+		"position"	"random"
+	}
+	"playrandom"
+	{
+		"time"		"4,12"
+		"volume"	".6,.89"
+		"pitch"		"77,123"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+}
+
+
+"airport_04.respawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+}
+
+
+"airport_04.ramp"
+{
+	"dsp" "1"
+	"playlooping"
+	{
+		"volume"	".4"
+		"pitch"		"100"
+		"wave"		")ambient/atmosphere/crucial_Drone1LP.wav"
+	}
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	"0.3,0.5"
+		"pitch"		"90,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_06.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_07.wav"
+		}
+	}
+
+	
+}
+
+
+"airport_04.bathroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+}
+ 
+
+"airport_04.ticketing"
+{
+	"dsp" "1"
+	"playsoundscape"
+	{
+		"name"	"airport_04.baggageclaim"
+		"volume" ".4"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+	}
+}
+
+
+"airport_04.security"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+	}
+	"playlooping"
+	{
+		"volume"	".7"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+"playrandom"
+	{
+		"time"		"4,12"
+		"volume"	".5,.8"
+		"pitch"		"77,123"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"60"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"1818.478760, 1358.976318, 25.941608;"
+		"soundlevel" 	"SNDLVL_75dB"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Airport 05
+//=======================
+//=======================
+
+
+
+"airport_05.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.street"
+		"volume" "1"
+	}
+}
+
+
+"airport_05.finaleinside"
+{
+	"dsp" "1"
+
+	"playlooping"
+	{
+		"volume"	".9"
+		"pitch"		"90"
+		"wave"		"(ambient/Ambience/crucial_InsidePlaneAmb_loop.wav"
+		"position"	"random"
+	}
+}
+
+
+"airport_05.finaleoutside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"airport.finaleoutside"
+		"volume" "1"
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	".7"
+		"pitch"		"70"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"-5060.309570, 9600.119141, -313.472473;"
+		"soundlevel" 	"SNDLVL_80dB"
+	}
+}
+
+
+"airport_05.respawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.respawn"
+		"volume" "1"
+	}
+	//Fire 
+	"playlooping"
+	{
+		"volume"	".88"
+		"pitch"		"105"
+		"wave"		"ambient/Ambience/crucial_InsidePlaneAmb_loop.wav"
+		"origin"	"4475.377441, 4562.379395, 62.179222;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+
+"airport_05.finaleroof"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"urban.finaleroof"
+		"volume" "1"
+	}
+}
+

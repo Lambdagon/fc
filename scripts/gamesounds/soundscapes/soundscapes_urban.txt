@@ -1,0 +1,3259 @@
+// generic ubran soundscapes
+// Author: Scott Dalton
+
+// DSP Effects
+// 0 : "Normal (off)"
+// 1 : "Generic"
+// 2 : "Metal Small"
+// 3 : "Metal Medium"
+// 4 : "Metal Large"
+// 5 : "Tunnel Small"
+// 6 : "Tunnel Medium"
+// 7 : "Tunnel Large"
+// 8 : "Chamber Small"
+// 9 : "Chamber Medium"
+// 10: "Chamber Large"
+// 11: "Bright Small"
+// 12: "Bright Medium"
+// 13: "Bright Large"
+// 14: "Water 1"
+// 15: "Water 2"
+// 16: "Water 3"
+// 17: "Concrete Small"
+// 18: "Concrete Medium"
+// 19: "Concrete Large"
+// 20: "Big 1"
+// 21: "Big 2"
+// 22: "Big 3"
+// 23: "Cavern Small"
+// 24: "Cavern Medium"
+// 25: "Cavern Large"
+// 26: "Weirdo 1"
+// 27: "Weirdo 2"
+// 28: "Weirdo 3"
+
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f	75dB
+//	ATTN_IDLE		2.0f	60dB
+//	ATTN_STATIC		1.25f	66dB
+//	ATTN_RICOCHET	1.5f	65dB
+//	ATTN_GUNFIRE	0.27f	140dB
+
+//	SNDLVL_50dB		= 50,	// 3.9
+//	SNDLVL_55dB		= 55,	// 3.0
+//	SNDLVL_IDLE		= 60,	// 2.0
+//	SNDLVL_TALKING	= 60,	// 2.0
+//	SNDLVL_60dB		= 60,	// 2.0
+//	SNDLVL_65dB		= 65,	// 1.5
+//	SNDLVL_STATIC	= 66,	// 1.25
+//	SNDLVL_70dB		= 70,	// 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	// 0.8
+//	SNDLVL_80dB		= 80,	// 0.7
+//	SNDLVL_85dB		= 85,	// 0.6
+//	SNDLVL_90dB		= 90,	// 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	// 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140,	// 0.27
+//	SNDLVL_140dB	= 140,	// 0.2
+//	SNDLVL_150dB	= 150,	// 0.2
+
+
+
+
+// utility soundscapes
+
+
+"urban.util_interiorslams"
+{
+
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"6,12"
+		"volume"	"0.25,0.65"
+		"pitch"		"90,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_06.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_07.wav"
+		}
+	}
+
+}
+
+
+"urban.util_metalslams"
+{
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"7,23"
+		"volume"	"0.59,0.9"
+		"pitch"		"50,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/BinHit01.wav"
+			"wave"	"ambient/Random_Amb_SFX/BinHit02.wav"
+			"wave"	"ambient/Random_Amb_SFX/BinHit03.wav"
+		}
+	}
+
+}
+"urban.util_metalslams 2"
+{
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"7,20"
+		"volume"	"0.7,0.9"
+		"pitch"		"60,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalRattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalRattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalRattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalShake01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalShake02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalSqueak01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalSqueak02.wav"
+		}
+	}
+
+}
+
+
+"urban.util_woodfloorsqueaks"
+{
+
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"4,16"
+		"volume"	"0.5,0.8"
+		"pitch"		"50,115"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak06.wav"
+		}
+	}
+
+}
+
+
+"urban.util_windgust"
+{
+
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"6,40"
+		"volume"	"0.25,0.35"
+		"pitch"		"90,105"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+}
+
+
+
+"urban.util_distantcombat"
+{
+
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"6,27"
+		"volume"	"0.65,0.88"
+		"pitch"		"90,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_MachineGun_06.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_Pistol_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_Pistol_02.wav"
+		}
+	}
+
+}
+
+
+
+
+"urban.util_distantexplosions"
+{
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"5,30"
+		"volume"	"0.86,0.98"
+		"pitch"		"90,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Dist_Explosion_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_Explosion_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_Explosion_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Dist_Explosion_04.wav"
+		}
+	}
+
+}
+
+
+"urban.util_rat_scratches"
+{
+	"dsp"	"1"
+	
+	"playrandom"
+	{
+		"time"		"5,30"
+		"volume"	"0.6,0.9"
+		"pitch"		"90,105"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/RatPath01.wav"
+			"wave"	"ambient/creatures/RatPath02.wav"
+			"wave"	"ambient/creatures/RatPath03.wav"
+			
+		}
+	}
+
+}
+
+"urban.util_genericrooftop"
+{
+	"dsp"	"1"
+	
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/Urban_Rooftop_AmbLoop02.wav"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.8"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+
+	
+}
+
+
+
+"urban.util_genericexterior_from_interior_1"
+{
+	
+	"dsp"	"1"
+
+
+	"playlooping"
+	{
+		"volume"	"0.25"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/Urban_Rooftop_AmbLoop02.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.1"
+		"pitch"		"100"
+		//"attenuation"	"2.2"
+		"wave"		")ambient/Ambience/1b_RooftoptRain_st_Loop.wav"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		//"attenuation"	"1.5"
+		"wave"		")ambient/weather/crucial_rumble_rain.wav"
+	}
+
+
+	
+}
+
+
+
+"urban.util_genericexterior_from_interior_2"
+{
+	"dsp"	"1"
+	
+	"playlooping"
+	{
+		"volume"	"0.25"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"wave"		")ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+}
+
+
+"urban.util_flies"
+{
+
+	"dsp"	"1"
+
+	"playrandom"
+	{
+		"time"		"2,4"
+		"volume"	".6,.8"
+		"soundlevel"  	"SNDLVL_55dB"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/flies1.wav"
+			"wave"	"ambient/creatures/flies2.wav"
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/flies4.wav"
+		}
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.8"
+		"soundlevel"  	"SNDLVL_55dB"
+		"pitch"		"100"
+		"attenuation"	"2.5"
+		"wave"		"ambient/creatures/housefly_loop_02.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"soundlevel"  	"SNDLVL_50dB"
+		"pitch"		"100"
+		"attenuation"	"2.5"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+	}
+
+}
+
+
+"urban.util_steam"
+{
+
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	".65"
+		"pitch"		"90,110"
+		"soundlevel"	"SNDLVL_75dB"
+		"attenuation"	"1.5"
+		"wave"		"ambient/gas/steam2.wav"
+	}
+
+}
+
+"urban.util_pipes"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	".6"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"attenuation"	"1.5"
+		"wave"		"ambient/gas/steam2.wav"
+	}
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+		"volume" 	".1"
+	}
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/pipes_loop02.wav"
+		"volume" 	".2"
+	}
+
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/plumbing_run_loop.wav"
+		"volume" 	".15"
+	}
+}
+
+
+//------------------------------------------------------------------------------------------
+//
+// Urban 1b Rooftop ambience
+//
+"urban.rooftop_1b"
+{
+
+	"dsp"	"1"
+
+	// underlying area tone
+	"playsoundscape"
+	{
+		"name"	"urban.util_genericrooftop"
+		"volume" "1"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" ".7"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_windgust"
+		"volume" ".5"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" ".75, 1"
+	}
+
+
+
+	// position 1 comes from downstairs
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+		"positionoverride"	"1"
+	}
+
+	// position 2 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"2"
+	}
+	// position 3 comes from the tarp
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/1b_RainOnTarp_Loop.wav"
+		"volume" 	"1"
+		"position"	"3"
+	}
+
+	// animals
+	"playrandom"
+	{
+		"position"	"0"
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.75"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+
+}
+
+
+"urban.rooftop_1b_interior"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+		"volume" 	".65"
+		"position"	"random"
+	}
+	
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_woodfloorsqueaks"
+		"volume" ".86"
+	}
+
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" ".025"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" ".35"
+	}
+	
+	// position 0 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_1"
+		"volume" 		".75"
+		"positionoverride"	"0"
+	}
+
+	// position 1 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_2"
+		"volume" 		".75"
+		"positionoverride"	"1"
+	}
+	"playlooping"
+	{
+		"volume"	".82"
+		"pitch"		"120"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"2091.785156, 1145.620972, 305.905975;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+ 	//Flies in hallway
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"7586.001953, 4049.452148, 20.738647;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+
+
+"urban.rooftop_1b_interior2"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+		"volume" 	".67"
+		"position"	"random"
+	}
+
+	
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_woodfloorsqueaks"
+		"volume" "1"
+	}
+
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" ".25"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" ".3"
+	}
+	
+	// position 0 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_1"
+		"volume" 		".75"
+		"positionoverride"	"0"
+	}
+
+	// position 1 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_2"
+		"volume" 		".75"
+		"positionoverride"	"1"
+	}
+
+	
+	//plumbing
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/plumbing_run_loop.wav"
+		"volume" 	"1"
+		"soundlevel"	"SNDLVL_50dB"
+		"origin"	"3023.506104, 3176.031250, 59.382553;"
+	}
+
+	// vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"	"SNDLVL_65dB"
+		"volume" 	".75"
+		"origin"	"1747.186035, 954.334106, 72.057831;"
+	}
+	// position 5 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".25"
+		"position"	"5"
+	}
+
+	// Position 6 : General Fire
+	"playlooping"
+	{
+		"position"	"6"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"120"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"2853.761475, 3473.059814, -222.575531;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+	//Flies by broken wall
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"1740.451660, 915.849915, 160.031250;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+
+	//Flies by door in apartment
+	"playlooping"
+	{
+		"volume"	".90"
+		"pitch"		"100"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"2173.427490, 1053.011963, 35.409119;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+}
+
+
+"urban.underground_1"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".67"
+		"position"	"random"
+	}
+
+	"playsoundscape"
+	{
+		"name" 		"urban.subway"
+		"volume" 	"1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" ".6"
+	}
+
+	// Position 0 : General Fire
+	"playlooping"
+	{
+		"position"	"0"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_60dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+
+
+	// position 1 comes from a ticket machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"volume" 	".1"
+		"position"	"1"
+	}
+
+	// position 2 comes from plumbing
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/plumbing_run_loop.wav"
+		"attenuation"	"1.5"
+		"volume" 	".35"
+		"position"	"2"
+	}
+
+	
+	// position 4 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"4"
+	}
+	//dead bodies Flies
+	"playlooping"
+	{
+		"volume"	".8"
+		"pitch"		"120"
+		"wave"		"ambient/creatures/Flies_Loop.wav"
+		"origin"	"3893.850586, 4238.327637, -511.968750;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+	
+
+}
+
+
+
+"urban.underground_2"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".7"
+		"position"	"random"
+	}
+
+	"playsoundscape"
+	{
+		"name" 		"urban.subway"
+		"volume" 	"1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" ".3"
+	}
+
+	// Position 0 : General Fire
+	"playlooping"
+	{
+		"position"	"0"
+		"volume"	"1"
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+
+	//  steam jets
+
+	
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"110"
+		"wave"		"ambient/gas/steam2.wav"
+		"origin"	"4056.336426, 4229.337402, -300.522736;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"100"
+		"wave"		"ambient/gas/steam2.wav"
+		"origin"	"5780.425293, 3697.630859, -219.212357;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+
+
+	// position 2 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"2"
+	}
+
+	// position 3 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"attenuation"	"2"
+		"pitch"		"115"
+		"volume" 	".75"
+		"position"	"3"
+	}
+	// position 4 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"4"
+	}
+	// position 5 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"5"
+	}
+	// position 6 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"6"
+	}
+	// position 7 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"7"
+	}
+
+}
+
+
+
+"urban.underground_3"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".5"
+	}
+
+	"playsoundscape"
+	{
+		"name" 		"urban.subway"
+		"volume" 	"1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" ".27"
+	}
+
+
+	// position 0 comes from plumbing
+	"playsoundscape"
+	{
+		"name"	"urban.util_pipes"
+		"volume" "1"
+		"positionoverride"	"0 "
+	}
+
+
+	// position 1  comes from a vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"attenuation"	"2"
+		"volume" 	".75"
+		"position"	"1"
+	}
+
+	// position 2 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"2"
+	}
+	// position 3 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".35"
+		"position"	"3"
+	}
+	// position 4 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"4"
+	}
+	// position 5 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"5"
+	}
+	// position 6 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"6"
+	}
+	// position 7 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	"1"
+		"positionoverride"	"7"
+	}
+
+}
+
+
+
+"urban.controlroom"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".7"
+	}
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/tones/fan2_loop.wav"
+		"volume" 	"1"
+	}
+
+	// position 0 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/TicketMachine_Loop.wav"
+		//"attenuation"	"2"
+		"pitch"		"125"
+		"volume" 	".65"
+		"position"	"0"
+	}
+
+	// position 1 comes from a humming machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"attenuation"	"2"
+		"pitch"		"115"
+		"volume" 	".75"
+		"position"	"1"
+	}
+	// position 2 comes from a monitor
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Computer_spatial_amb_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".7"
+		"position"	"2"
+	}
+	// position 3 comes from nearby generator area
+	"playlooping"
+	{
+		"wave"		"ambient/Ambience/crucial_GenRoom_stereo_loop.wav"
+		"volume" 	".5"
+		"position"	"3"
+	}
+}
+
+
+
+"urban.warehouse_1"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_BigWarehouseAmb_loop.wav"
+		"volume" 	".5"
+		"position"	"random"
+	}
+
+	"playsoundscape"
+	{
+		"name" 		"urban.warehouseinside"
+		"volume" 	"1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" "1"
+	}
+
+	// position 0 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_1"
+		"volume" 		"1"
+		"positionoverride"	"0"
+	}
+
+	// position 1 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_2"
+		"volume" 		"1"
+		"positionoverride"	"1"
+	}
+
+
+	// position 0 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_1"
+		"volume" 		"1"
+		"positionoverride"	"2"
+	}
+
+	// position 1 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_2"
+		"volume" 		"1"
+		"positionoverride"	"3"
+	}
+
+
+	// position 4 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".25"
+		"position"	"4"
+	}
+
+	// Position 5 : steam jet
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_steam"
+		"volume" ".01"
+		"position"	"5"
+	}
+}
+
+
+"urban.steamtunnel"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".35"
+	}
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+		"volume" 	".1"
+	}
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/pipes_loop02.wav"
+		"volume" 	".25"
+	}
+
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" "1"
+	}
+
+
+
+	// Position 0 : steam jet
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_steam"
+		"volume" "1"
+		"positionoverride"	"0"
+	}
+
+	// Position 1 : steam jet
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_steam"
+		"volume" "1"
+		"positionoverride"	"1"
+	}
+	// Position 2 : steam jet
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_steam"
+		"volume" "1"
+		"positionoverride"	"2"
+	}
+	// Position 3 : steam jet
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_steam"
+		"volume" "1"
+		"positionoverride"	"3"
+	}
+	// position 4 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	".5"
+		"positionoverride"	"4"
+	}
+}
+
+
+"urban.boilerroom"
+{
+
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/crucial_big_pipes_loop.wav"
+		"volume" 	".8"
+	}
+
+	"playlooping"
+	{
+		"wave"		")ambient/Spacial_Loops/pipes_loop02.wav"
+		"volume" 	".12"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" "1"
+	}
+
+
+	// position 0 comes from the dead body
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	".5"
+		"positionoverride"	"0"
+	}
+
+
+	// position 1 comes from the sewers below
+	//"playsoundscape"
+	//{
+	//	"name"	"urban.sewer"
+	//	"volume" 	".125"
+	//	"positionoverride"	"1"
+	//}
+
+	// position 2 comes from the sewers below
+	//"playsoundscape"
+	//{
+	//	"name"	"urban.sewer"
+	//	"volume" 	".125"
+	//	"positionoverride"	"2"
+	//}
+
+	// position 3 comes from the sewers below
+	//"playsoundscape"
+	//{
+	//	"name"	"urban.sewer"
+	//	"volume" 	".125"
+	//	"positionoverride"	"3"
+	//}
+
+	// position 4 comes from the sewers below
+	//"playsoundscape"
+	//{
+	//	"name"	"urban.sewer"
+	//	"volume" 	".125"
+	//	"positionoverride"	"4"
+	//}
+}
+
+
+
+
+"urban.hospital_interior"
+{
+ 
+	"dsp"	"1"
+
+	// underlying area "tone"
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_MedRoomtone_Amb_loop.wav"
+		"volume" 	".6"
+		"position"	"random"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.hospital"
+		"volume" "1"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_woodfloorsqueaks"
+		"volume" ".3"
+	}
+
+	// position 0 comes from dead bodies
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	".5"
+		"positionoverride"	"0"
+	}
+
+	// position 1 comes from dead bodies
+	"playsoundscape"
+	{
+		"name"	"urban.util_flies"
+		"volume" 	".5"
+		"positionoverride"	"1"
+	}
+	
+	// position 2 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_1"
+		"volume" 		".75"
+		"positionoverride"	"2"
+	}
+
+
+	// position 3 comes from the upper doorway or windows
+	"playsoundscape"
+	{
+		"name"			"urban.util_genericexterior_from_interior_2"
+		"volume" 		".75"
+		"positionoverride"	"3"
+	}
+
+
+	// position 4 comes from a vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"attenuation"	"2"
+		"volume" 	".75"
+		"position"	"4"
+	}
+	// position 5 comes from a flourescent light
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"2"
+		"volume" 	".25"
+		"position"	"5"
+	}
+
+	// position 6 comes from leaking water
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/4b_HospAtrium_WaterLeak.wav"
+		"attenuation"	"1"
+		"volume" 	".7"
+                "soundlevel"	"SNDLVL_85dB"
+		"position"	"6"
+	}
+
+}
+
+
+//------------------------------------------------------------------------------------------
+// Copied from the hospital
+//------------------------------------------------------------------------------------------
+
+//
+// For Housefly particle system
+//
+"urban.flies"
+{
+	"dsp"	"1"
+
+	"playrandom"
+	{
+		"time"		".5,1"
+		"volume"	".5,.7"
+		"soundlevel"  	"SNDLVL_50dB"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/flies1.wav"
+			"wave"	"ambient/creatures/flies2.wav"
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/flies4.wav"
+		}
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.7"
+		"soundlevel"  	"SNDLVL_50dB"
+		"pitch"		"100"
+		"wave"		"ambient/creatures/housefly_loop_01.wav"
+	}
+
+}
+
+//
+// Generic Rooftop ambience
+//
+"urban.rooftop"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/Urban_Rooftop_AmbLoop02.wav"
+		"position"	"random"
+	}
+	"playlooping"
+	{
+		"volume"	"0.94"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+		"position"	"random"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"7,16"
+		"volume"	"0.5,0.7"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_med1.wav"
+			"wave"	"ambient/wind/wind_med2.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"60,90"
+		"volume"	".05,.1"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/overhead/plane1.wav"
+			"wave"	"ambient/overhead/plane2.wav"
+			"wave"	"ambient/overhead/plane3.wav"
+		}
+	}
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" "1"
+	}
+}
+
+//
+// Generic outdoors ambience
+//
+"urban.street"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.8"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_town_ambience.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"0.6"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_med1.wav"
+			"wave"	"ambient/wind/wind_med2.wav"
+		}
+	}
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"40,70"
+		"volume"	".9,.8"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/overhead/plane1.wav"
+			"wave"	"ambient/overhead/plane2.wav"
+			"wave"	"ambient/overhead/plane3.wav"
+		}
+	}
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" "1"
+	}
+
+}
+
+//
+// Generic outdoors ambience
+//
+"urban.streetrain"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.9"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"0.65"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_med1.wav"
+			"wave"	"ambient/wind/wind_med2.wav"
+		}
+	}
+	// gusts 2
+	"playrandom"
+	{
+		"time"			"6,12"
+		"pitch"			"95,102"
+		"volume"		"0.79"
+		
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"60,90"
+		"volume"	".05,.1"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/overhead/plane1.wav"
+			"wave"	"ambient/overhead/plane2.wav"
+			"wave"	"ambient/overhead/plane3.wav"
+		}
+	}
+
+	// animals
+	"playrandom"
+	{
+		"position"	"0"
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.5"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+	}
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+
+	// Position 1: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"1"
+		"name"			"urban.flies"
+	}
+
+	// Position 2: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"2"
+		"name"			"urban.flies"
+	}
+
+
+	// Position 3 : Burning Car
+	"playlooping"
+	{
+		"position"	"3"
+		"volume"	"1"
+		//"attenuation"	"1"
+		"soundlevel"	"SNDLVL_75dB"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/CarFire_Loop.wav"
+	}
+
+	// Position 4 : General Fire
+	"playlooping"
+	{
+		"position"	"4"
+		"volume"	"1"
+		//"attenuation"	"1"	
+		"pitch"		"100"
+		"soundlevel"	"SNDLVL_75dB"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+	}
+	//garbage can fire
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"3074.218262, 4064.646729, 61.281250;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+
+//
+// Generic alley ambience
+//
+"urban.alley"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.9"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/tone_alley.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.6"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+	"playsoundscape"
+	{
+		"name"		"urban.util_metalslams 2"
+		"volume"	".69"
+	}
+	"playsoundscape"
+	{
+		"name"		"urban.util_metalslams"
+		"volume"	".5"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,21"
+		"volume"	"0.3"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_snippet1.wav"
+			"wave"	"ambient/wind/wind_snippet2.wav"
+			"wave"	"ambient/wind/wind_snippet3.wav"
+		}
+	}
+
+	// creatures
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".2,.4"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/flies1.wav"
+			"wave"	"ambient/creatures/flies2.wav"
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+		}
+	}
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" "1"
+	}
+}
+
+//
+// Generic alley ambience
+//
+"urban.alleyrain"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"11,24"
+		"volume"	"0.8"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_snippet1.wav"
+			"wave"	"ambient/wind/wind_snippet2.wav"
+			"wave"	"ambient/wind/wind_snippet3.wav"
+		}
+	}
+
+	// creatures
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".6,.8"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/flies1.wav"
+			"wave"	"ambient/creatures/flies2.wav"
+			"wave"	"ambient/creatures/flies3.wav"
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+		}
+	}
+
+	// animals
+	"playrandom"
+	{
+		"position"	"0"
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.6"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+	// metal sfx
+	"playrandom"
+	{
+		"position"	"random"
+		"time"			"14,23"
+		"pitch"			"75,100"
+		"volume"		"0.6,.9"
+		
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+		}
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantcombat"
+		"volume" "1"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_distantexplosions"
+		"volume" "1"
+	}
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+	"playlooping"
+	{
+		"volume"	".95"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"2657.182861, 1841.603394, 61.281250;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	//Fire by gas station hospital03 alleyrain
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"11818.375977, 6007.173828, 65.281250;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	//Fire by gas station lift
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"110"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"12675.755859, 6965.870117, 61.281250;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+//
+// Generic sewer ambience
+//
+"urban.sewer"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	
+	
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"(ambient/Ambience/URB_3b_sewerAmb.wav"
+		"position"	"random"
+	}
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".4"
+	}
+
+	// drips
+	"playrandom"
+	{
+		"time"		"1,4"
+		"volume"	"0.8"
+		"pitch"		"90,110"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/water/distant_drip1.wav"
+			"wave"	"ambient/water/distant_drip2.wav"
+			"wave"	"ambient/water/distant_drip3.wav"
+			"wave"	"ambient/water/distant_drip4.wav"
+		}
+	}
+	// drips
+	"playrandom"
+	{
+		"time"		"8,28"
+		"volume"	".5,0.8"
+		"pitch"		"90,110"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Random_Drips01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Drips02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Drips03.wav"
+		}
+	}
+		
+
+
+	// rats
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".4,.5"
+		"pitch"		"90,100"
+		"position"	"random"
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats1.wav"
+			"wave"	"ambient/creatures/rats2.wav"
+			"wave"	"ambient/creatures/rats3.wav"
+			"wave"	"ambient/atmosphere/hole_hit1.wav"
+			"wave"	"ambient/atmosphere/hole_hit2.wav"
+			"wave"	"ambient/atmosphere/hole_hit3.wav"
+			"wave"	"ambient/atmosphere/hole_hit4.wav"
+			"wave"	"ambient/atmosphere/hole_hit5.wav"
+		}
+	}
+}
+
+//
+// Generic pipe tunnel ambience
+//
+"urban.pipetunnel"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.65"
+		"pitch"		"100"
+		"wave"		"ambient/water/crucial_corridor_water.wav"
+	}
+
+}
+
+//
+// Generic apartment ambience
+//
+"urban.apartment"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.65"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_quiet_cellblock_amb.wav"
+	}
+
+
+	// scary sounds
+	"playrandom"
+	{
+		"time"		"5,11"
+		"volume"	".4,.8"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/town_scared_breathing1.wav"
+			"wave"	"ambient/creatures/town_scared_breathing2.wav"
+			"wave"	"ambient/creatures/town_scared_sob1.wav"
+			"wave"	"ambient/creatures/town_scared_sob2.wav"
+			"wave"	"ambient/creatures/town_moan1.wav"
+			"wave"	"ambient/materials/wood_creak1.wav"
+			"wave"	"ambient/materials/wood_creak2.wav"
+			"wave"	"ambient/materials/wood_creak3.wav"
+			"wave"	"ambient/materials/wood_creak4.wav"
+			"wave"	"ambient/materials/wood_creak5.wav"
+			"wave"	"ambient/materials/wood_creak6.wav"
+		}
+	}
+
+	"playsoundscape"
+	{
+		
+		"name"			"urban.util_woodfloorsqueaks"
+		"volume"		"1"
+	}
+	"playsoundscape"
+	{
+		"name"			"urban.util_distantexplosions"
+		"volume" 		"1"
+	}
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+
+	
+
+	// Position 1: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"1"
+		"name"			"urban.flies"
+	}
+}
+
+//
+// Generic Generator Room ambience
+//
+
+"urban.generatorroom_off"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.57"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/indoor2.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.59"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/crucial_SmallRoomtone_Amb_loop.wav"
+	}
+	"playrandom"
+	{
+		"time"		"5,14"
+		"volume"	"1"
+		"pitch"		"50,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb05.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb06.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb07.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb08.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb09.wav"
+		}
+	}
+
+
+	// position 6, 7 are pipes and steam
+	"playsoundscape"
+	{
+		"name"	"urban.util_pipes"
+		"volume" ".75"
+		"positionoverride"	"6"
+	}
+	"playsoundscape"
+	{
+		"name"	"urban.util_pipes"
+		"volume" ".75"
+		"positionoverride"	"7"
+	}
+}
+
+
+
+"urban.generatorroom"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.55"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/indoor2.wav"
+	}
+
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_GenRoom_stereo_loop.wav"
+		"volume" 	"1"
+		"pitch"		"60"
+	}
+
+	// scary machine sounds
+	"playrandom"
+	{
+		"time"		"5,11"
+		"volume"	".7,.9"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/machines/machine1_hit1.wav"
+			"wave"	"ambient/machines/machine1_hit2.wav"
+			"wave"	"ambient/materials/metal_stress1.wav"
+			"wave"	"ambient/materials/metal_stress2.wav"
+			"wave"	"ambient/materials/metal_stress3.wav"
+			"wave"	"ambient/materials/metal_stress4.wav"
+			"wave"	"ambient/materials/metal_stress5.wav"
+		}
+	}
+	
+	// position 0 and 1 are generators
+	"playlooping"
+	{
+		"wave"		"ambient/Ambience/crucial_Big_Generator_Loop.wav"
+		"volume" 	"1"
+		"pitch"		"90, 110"
+		"soundlevel"  	"SNDLVL_85dB"
+		"position"	"0"
+	}
+
+	"playlooping"
+	{
+		"wave"		"ambient/Ambience/crucial_Big_Generator_Loop.wav"
+		"volume" 	"1"
+		"pitch"		"110"
+		"soundlevel"  	"SNDLVL_85dB"
+		"position"	"1"
+	}
+	// Vending machine
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"soundlevel"  	"SNDLVL_75dB"
+		"pitch"		"110"
+		"volume" 	".85"
+		"origin"	"7254.258301, 3786.201172, 250.806961;"
+	}
+	// position 3,4,5 are generators
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"1.5"
+		"pitch"		"90, 110"
+		"volume" 	".35"
+		"position"	"3"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"1.5"
+		"pitch"		"90, 110"
+		"volume" 	".35"
+		"position"	"4"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"1.5"
+		"pitch"		"90, 110"
+		"volume" 	".35"
+		"position"	"5"
+	}
+	"playlooping"
+	{
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"attenuation"	"1.5"
+		"pitch"		"90, 110"
+		"volume" 	".35"
+		"position"	"6"
+	}
+
+	// position 6, 7 are pipes and steam
+	"playsoundscape"
+	{
+		"name"	"urban.util_pipes"
+		"volume" ".45"
+		"positionoverride"	"6"
+	}
+	"playsoundscape"
+	{
+		"name"	"urban.util_pipes"
+		"volume" ".45"
+		"positionoverride"	"7"
+	}
+}
+
+//
+// Generic Respawn Room ambience
+//
+"urban.respawn"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"wave"		"ambient/ambience/crucial_smallroomtone_amb_loop.wav"
+	}
+
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+
+}
+
+//
+// Empty Respawn for nav test
+//
+"hospital.respawn"
+{
+	"dsp"	"1"
+
+	// "playlooping"
+	// {
+		// "wave"		"(test/stereoTest.wav"
+		// // "attenuation"	"1.5"
+		// "pitch"		"100"
+		// "volume" 	"1.0"
+		// // "soundlevel" "SNDLVL_150db"
+	
+// // 		"position"	"random"
+	    // "origin" "0.0, 0.0, 0.0"
+	// }
+
+// 	"playlooping"
+// 	{
+// 		"wave"		"test/stereoTest.wav"
+// 		// "attenuation"	"1.5"
+// 		"pitch"		"100"
+// 		"volume" 	"1.0"
+// 		// "soundlevel" "SNDLVL_150db"
+	
+// // 		"position"	"random"
+// 	    "origin" "1519.968750, -479.968750, 176.031250"
+// 	}
+
+// 	"playrandom"
+// 	{
+// 		"time"      "1, 3"
+// 		"rndwave"
+// 		{	
+// 			"wave"		"buttons/bell1.wav"
+// 		}
+// 		// "attenuation"	"1.5"
+// 		"pitch"		"100"
+// 		"volume" 	"1.0"
+// 		"soundlevel" "SNDLVL_80dB"
+	
+// // 		"position"	"random"
+// 	    "origin" "-1503.968750, -464.158112, 176.031250"
+
+
+// 	}
+
+}
+
+//
+// Rooftop Spawn ambience
+//
+"urban.rooftopspawn"
+{
+	"dsp"	"1"
+
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.97"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/Urban_Rooftop_AmbLoop02.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.88"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+
+	// gusts
+	"playrandom"
+	{
+		"time"			"9,32"
+		"pitch"			"95,102"
+		"volume"		"0.75"
+		
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+}
+
+//
+//  Spawn ambience
+//
+"urban.hospitalspawn"
+{
+	"dsp"	"1"
+
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.97"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/Urban_Rooftop_AmbLoop02.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.88"
+		"pitch"		"100"
+		"wave"		")ambient/Ambience/crucial_Urban_Rooftop_AmbLoop01.wav"
+	}
+
+	// gusts
+	"playrandom"
+	{
+		"time"			"9,22"
+		"pitch"			"95,102"
+		"volume"		"0.75"
+		
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+
+}
+
+//
+// Generic Spawn Room ambience
+//
+"urban.spawnrain"
+{
+	"dsp"	"1"
+
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.8"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+
+
+	// animals
+	"playrandom"
+	{
+		"position"	"0"
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.75"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+
+}
+
+//
+// Generic Hospital ambience
+//
+"urban.hospital"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.3"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/crucial_SmallRoomtone_Amb_loop.wav"
+	}
+
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"10,20"
+		"volume"	".2,.5"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"	
+		}
+	}	
+	
+}
+
+//
+// Hospital Office ambience
+//
+"urban.office"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_indoor1.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.55"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_quiet_cellblock_amb.wav"
+	}
+
+
+	
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+
+	// Position 1: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"1"
+		"name"			"urban.flies"
+	}
+}
+
+//
+// Generic Subway ambience
+//
+"urban.subway"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_undercity_loop1.wav"
+	}
+
+
+	// Metal tunnel sounds
+	"playrandom"
+	{
+		"time"		"10,20"
+		"volume"	".2,.3"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/materials/metal9.wav"
+		}
+	}
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+
+	// Position 1: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"1"
+		"name"			"urban.flies"
+	}
+
+	// Position 2: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"2"
+		"name"			"urban.flies"
+	}
+
+	// Position 3: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"3"
+		"name"			"urban.flies"
+	}
+}
+
+//
+// Generic Pillars Room ambience
+//
+"urban.pillarsroom"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/underground_hall_loop1.wav"
+	}
+
+	"playlooping"
+	{
+		"wave"		"(ambient/Ambience/crucial_UnderGroundRumbleTone_loop.wav"
+		"volume" 	".6"
+		"position"	"random"
+	}
+
+	// Rats_running
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	".5,.9"
+		"pitch"		"90,100"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/RatPath01.wav"
+			"wave"	"ambient/creatures/RatPath02.wav"
+			"wave"	"ambient/creatures/RatPath03.wav"
+		}
+	}
+
+}
+
+//
+// Generic Convenience Store ambience
+//
+"urban.conveniencestore"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_indoor1.wav"
+	}
+
+	// Position 0: Flies
+	"playsoundscape"
+	{
+		"positionoverride"	"0"
+		"name"			"urban.flies"
+	}
+}
+
+//
+// Generic Warehouse Outside ambience
+//
+"urban.warehouseoutside"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"0.2"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_med1.wav"
+			"wave"	"ambient/wind/wind_med2.wav"
+		}
+	}
+
+	// planes flying overhead
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	".05,.1"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/overhead/plane1.wav"
+			"wave"	"ambient/overhead/plane2.wav"
+			"wave"	"ambient/overhead/plane3.wav"
+		}
+	}
+}
+
+//
+// Generic Warehouse Inside ambience
+//
+"urban.warehouseinside"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_cargo_hold2.wav"
+	}
+
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".3,.5"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/atmosphere/cave_hit1.wav"
+			"wave"	"ambient/atmosphere/cave_hit2.wav"
+			"wave"	"ambient/atmosphere/cave_hit3.wav"
+			"wave"	"ambient/atmosphere/cave_hit4.wav"
+			"wave"	"ambient/atmosphere/cave_hit5.wav"
+			"wave"	"ambient/atmosphere/cave_hit6.wav"
+		}
+	}
+}
+
+//
+// Generic Tank Room ambience
+//
+"urban.tankroom"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_pipe1.wav"
+	}
+
+
+	// drips
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"0.1"
+		"pitch"		"90,110"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/water/distant_drip1.wav"
+			"wave"	"ambient/water/distant_drip2.wav"
+			"wave"	"ambient/water/distant_drip3.wav"
+			"wave"	"ambient/water/distant_drip4.wav"
+		}
+	}
+
+
+	// Metal Sounds
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".3,.5"
+		"pitch"		"90,100"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/creatures/rats3.wav"
+			"wave"	"ambient/materials/rustypipes1.wav"
+			"wave"	"ambient/materials/rustypipes2.wav"
+			"wave"	"ambient/materials/rustypipes3.wav"
+		}
+	}
+}
+
+//
+// Generic Power Plant ambience
+//
+"urban.powerplant"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/noise2.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.85"
+		"pitch"		"78"
+		"wave"		"ambient/Ambience/crucial_Big_Generator_Loop.wav"
+	}
+
+	
+	
+	
+}
+
+
+//
+// Generic Power Plant Inside ambience
+//
+"urban.powerplantinside"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.45"
+		"pitch"		"89"
+		"wave"		"ambient/atmosphere/elev_shaft1.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.75"
+		"pitch"		"100"
+		"wave"		"ambient/Ambience/crucial_BigWarehouseAmb_loop.wav"
+	}
+	"playrandom"
+	{
+		"time"		"7,17"
+		"volume"	".08,1"
+		"pitch"		"50,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb01.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb03.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb04.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb05.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb06.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb07.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb08.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb09.wav"
+		}
+	}
+	
+}
+
+//
+// Generic Parking Garage ambience
+//
+"urban.parkinggarage"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.45"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_Drone1LP.wav"
+	}
+
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"5,14"
+		"volume"	".6,.8"
+		"pitch"		"69,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/materials/metal9.wav"
+			"wave"	"ambient/atmosphere/cave_hit1.wav"
+			"wave"	"ambient/atmosphere/cave_hit2.wav"
+			"wave"	"ambient/atmosphere/cave_hit3.wav"
+			"wave"	"ambient/atmosphere/cave_hit4.wav"
+			"wave"	"ambient/atmosphere/cave_hit5.wav"
+			"wave"	"ambient/atmosphere/cave_hit6.wav"
+		}
+	}
+}
+
+//
+// Generic Elevator ambience
+//
+"urban.elevator"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/elev_shaft1.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"(ambient/ambience/crucial_URB4b_ShaftWind_Loop.wav"
+		"position"	"random"
+	}
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"5,10"
+		"volume"	".3,.5"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/cartrap_rope1.wav"
+			"wave"	"ambient/materials/cartrap_rope2.wav"
+			"wave"	"ambient/materials/cartrap_rope3.wav"
+			"wave"	"ambient/materials/creaking.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".2,.5"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/machines/machine1_hit1.wav"
+			"wave"	"ambient/machines/machine1_hit2.wav"
+			"wave"	"ambient/materials/metal_stress1.wav"
+			"wave"	"ambient/materials/metal_stress2.wav"
+			"wave"	"ambient/materials/metal_stress3.wav"
+			"wave"	"ambient/materials/metal_stress4.wav"
+			"wave"	"ambient/materials/metal_stress5.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"3,11"
+		"volume"	".55,.65"
+		"pitch"		"30,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb02.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb07.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb05.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalRattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomMetalShake02.wav"
+			
+		}
+	}
+	"playrandom"
+	{
+		"time"		"6,10"
+		"volume"	".7,1"
+		"pitch"		"55"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle02.wav"
+			
+		}
+	}
+	"playrandom"
+	{
+		"time"		"6,10"
+		"volume"	"1"
+		"pitch"		"80,100"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+
+}
+
+//
+// Generic Construction Level ambience
+//
+"urban.construction"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.35"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/tunnel1.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.9"
+		"pitch"		"100"
+		"wave"		"(ambient/ambience/crucial_URB4b_TopFloorWind_Loop.wav"
+		"position"	"random"
+	}
+
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"5,20"
+		"volume"	".2,.5"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/levels/citadel/strange_talk1.wav"
+			"wave"	"ambient/levels/citadel/strange_talk5.wav"
+			"wave"	"ambient/levels/citadel/strange_talk7.wav"
+			"wave"	"ambient/levels/citadel/strange_talk8.wav"
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/materials/metal9.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"5,12"
+		"volume"	"1"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+			
+		}
+	}
+	"playrandom"
+	{
+		"time"		"6,17"
+		"volume"	".9,1"
+		"pitch"		"55"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle02.wav"
+			
+		}
+	}
+}
+
+//------------------------------------------------------------------------------------------
+//
+// Generic Finale Inside ambience
+//
+"urban.finaleinside"
+{
+	"dsp"	"1"
+
+		// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.87"
+		"pitch"		"100"
+		"wave"		"ambient/atmosphere/crucial_plaza_amb.wav"
+	}
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"8,22"
+		"volume"	".5,.7"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_rattle1.wav"
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/materials/metal9.wav"
+		}
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+	}
+
+
+
+	// Spooky Sounds
+	"playrandom"
+	{
+		"time"		"5,15"
+		"volume"	".5,.8"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/levels/citadel/strange_talk1.wav"
+			"wave"	"ambient/levels/citadel/strange_talk5.wav"
+			"wave"	"ambient/levels/citadel/strange_talk7.wav"
+			"wave"	"ambient/levels/citadel/strange_talk8.wav"
+			"wave"	"ambient/materials/metal4.wav"
+			"wave"	"ambient/materials/metal5.wav"
+			"wave"	"ambient/materials/metal9.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"6,26"
+		"volume"	"0.7,.9"
+		"pitch"		"45,105"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+		}
+	}
+
+}
+
+//
+// Generic Finale Outside ambience
+//
+"urban.finaleoutside"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".88"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain_nowind.wav"
+	}
+	"playlooping"
+	{
+		"volume"	"0.56"
+		"pitch"		"100"
+		"wave"		"(ambient/ambience/crucial_URB4b_TopFloorWind_Loop.wav"
+		"position"	"random"
+	}
+	"playlooping"
+	{
+		"volume"	"0.37"
+		"pitch"		"100"
+		"wave"		"(vehicles/helicopter/HelicopterWind_Loop.wav"
+		"position"	"random"
+	}
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"5,10"
+		"volume"	"0.7"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_hit1.wav"
+			"wave"	"ambient/wind/wind_hit2.wav"
+			"wave"	"ambient/wind/wind_hit3.wav"
+		}
+	}
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_interiorslams"
+		"volume" "1"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		")ambient/ambience/crucial_URB4b_ShaftWind_Loop.wav"
+	}
+}
+
+//
+// Generic Finale Outside ambience
+//
+"urban.finaleroof"
+{
+	"dsp"	"1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.8"
+		"pitch"		"100"
+		"wave"		"ambient/weather/crucial_rumble_rain.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"5,10"
+		"volume"	"0.9"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/windgust.wav"
+			"wave"	"ambient/wind/windgust_strong.wav"
+			"wave"	"ambient/wind/wind_hit1.wav"
+			"wave"	"ambient/wind/wind_hit2.wav"
+			"wave"	"ambient/wind/wind_hit3.wav"
+		}
+	}
+
+	// underlying area tone
+	"playsoundscape"
+	{
+		"name"	"urban.util_genericrooftop"
+		"volume" "1"
+	}
+
+
+	"playsoundscape"
+	{
+		"name"	"urban.util_metalslams"
+		"volume" "1"
+	}
+
+
+	"playrandom"
+	{
+		"time"		"6,13"
+		"volume"	"0.83,1"
+		"pitch"		"90,105"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RandomWindGust03.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"5,15"
+		"volume"	"0.6,.7"
+		"pitch"		"45,105"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Cable_Rattle05.wav"
+		}
+	}
+
+}
+

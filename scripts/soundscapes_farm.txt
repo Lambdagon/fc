@@ -1,0 +1,544 @@
+//
+// Farm Soundscapes
+//
+// These are Derived from the rural soundscapes.
+//
+// Please keep all generic and global updates within Rural, 
+// while any map specific replacements or changes go here.
+
+
+//=======================
+//=======================
+//   Farm 01
+//=======================
+//=======================
+
+
+
+"farm_01.morning"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.morning"
+		"volume" "1"
+	}
+}
+
+"farm_01.bridge"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.bridge"
+		"volume" "1"
+	}
+}
+
+"farm_01.smallbuilding"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.smallbuilding"
+		"volume" "1"
+	}
+}
+
+"farm_01.trainyardentrance"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardrespawn"
+		"volume" ".8"
+	}
+	"playlooping"
+	{
+		"volume"	"0.17"
+		"pitch"		"100"
+		"wave"		"ambient/levels/forest/crucial_frogs_loop1.wav"
+	}
+}
+
+"farm_01.trainyardrespawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardrespawn"
+		"volume" "1"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Farm 02
+//=======================
+//=======================
+
+
+
+"farm_02.trainyardentrance"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardentrance"
+		"volume" "1"
+	}
+}
+
+"farm_02.trainyardrespawn"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardrespawn"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".77"
+		"pitch"		"123"
+		"wave"		"ambient/Spacial_Loops/ticketmachine_loop.wav"
+		"origin"	"-6377.344238, -6575.940918, 352.264008;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+}
+
+"farm_02.trainyardbuilding2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardbuilding2"
+		"volume" "1"
+	}
+
+	// pole rattles
+	"playrandom"
+	{
+		"time"		"6,16"
+		"volume"	".86,1"
+		"pitch"		"50"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Pole_Rattle02.wav"
+			
+		}
+	}
+}
+
+"farm_02.trainyardbuilding2window"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardbuilding2window"
+		"volume" "1"
+	}
+}
+
+
+"farm_02.trainyard2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyard2"
+		"volume" "1"
+	}
+}
+
+"farm_02.traintunnel"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.traintunnel"
+		"volume" "1"
+	}
+
+
+	// verb metals
+	"playrandom"
+	{
+		"time"		"8,19"
+		"volume"	".7,1"
+		"pitch"		"50,103"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb08.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb09.wav"
+			"wave"	"ambient/Random_Amb_SFX/MetalScrapeVerb10.wav"
+			
+		}
+	}
+	// rhumbles
+	"playrandom"
+	{
+		"time"		"8,18"
+		"volume"	"1"
+		"pitch"		"100"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble03.wav"
+			
+		}
+	}
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"123"
+		"wave"		"ambient/fire/fire_big_loop1.wav"
+		"origin"	"-3481.246338, -8872.658203, 39.145626;"
+		"soundlevel" 	"SNDLVL_75dB"
+	}
+}
+
+"farm_02.drainagesmall"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagesmall"
+		"volume" "1"
+	}
+}
+
+
+//=======================
+//=======================
+//   Farm 03
+//=======================
+//=======================
+
+
+"farm_03.drainagesmall"
+{
+	"dsp" "1"
+
+	// underlying area "tone"
+	
+	"playlooping"
+	{
+		"volume"	"1.0"
+		"pitch"		"95"
+		"wave"		"(ambient/Ambience/crucial_URB4b_Shaftwind_Loop.wav"
+		"position"	"random"
+	}
+	"playlooping"
+	{
+		"volume"	".4"
+		"pitch"		"67"
+		"wave"		"(ambient/Ambience/crucial_pumproom_amb_loop.wav"
+		"position"	"random"
+	}
+
+	// rhumbles
+	"playrandom"
+	{
+		"time"		"8,18"
+		"volume"	"1"
+		"pitch"		"100"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Random_Rhumble03.wav"
+			
+		}
+	}
+}
+
+"farm_03.drainagebig"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagebig"
+		"volume" "1"
+	}
+}
+
+"farm_03.traintunnel"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.traintunnel"
+		"volume" "1"
+	}
+}
+
+"farm_03.morning"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.morning"
+		"volume" "1"
+	}
+
+	// frogs
+	"playrandom"
+	{
+		"time"		"6,26"
+		"volume"	".3,.5"
+		"pitch"		"110,113"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Frog_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Frog_02.wav"
+			
+		}
+	}
+}
+"farm_03.house"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.house"
+		"volume" "1"
+	}
+}
+
+
+//=======================
+//=======================
+//   Farm 04
+//=======================
+//=======================
+
+
+"farm_04.morning"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.morning"
+		"volume" "1"
+	}
+}
+
+"farm_04.trainyardentrance"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardentrance"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".27"
+		"pitch"		"100"
+		"wave"		"ambient/levels/forest/crucial_frogs_loop1.wav"
+	}
+
+	// creeky wood
+	"playrandom"
+	{
+		"time"		"5,16"
+		"volume"	".8,.9"
+		"pitch"		"55"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak06.wav"
+		}
+	}
+}
+
+"farm_04.bridge"
+{
+
+	"dsp" "1"
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	"0.24"
+		"pitch"		"100"
+		"wave"		"ambient/levels/forest/crucial_frogs_loop1.wav"
+	}
+
+	// underlying area "tone"
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/crucial_Rural01a_RiverLoop1d.wav"
+	}
+
+
+	// wind gusts
+	"playrandom"
+	{
+		"time"		"15,30"
+		"volume"	"1"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/nature/wind_leaves_mild_gust_1.wav"
+			"wave"	"ambient/levels/forest/treewind1.wav"
+			"wave"	"ambient/levels/forest/treewind2.wav"
+			"wave"	"ambient/levels/forest/treewind3.wav"
+			"wave"	"ambient/levels/forest/treewind4.wav"
+		}
+	}
+	// bridge creaks
+	"playrandom"
+	{
+		"time"		"3,6"
+		"volume"	".8,1"
+		"pitch"		"40"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak06.wav"
+			
+		}
+	}
+
+
+	// animals
+	"playrandom"
+	{
+		"time"			"20,40"
+		"pitch"			"95,102"
+		"volume"		"0.15"
+		"soundlevel"  	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/animal/crow_1.wav"
+			"wave"	"ambient/animal/crow_2.wav"
+		}
+	}
+}
+
+"farm_04.smallbuilding2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.smallbuilding2"
+		"volume" "1"
+	}
+}
+
+
+"farm_04.house"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.house"
+		"volume" "1"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Farm 05
+//=======================
+//=======================
+
+
+
+"farm_05.trainyardentrance"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardrespawn"
+		"volume" "1"
+	}
+}
+
+"farm_05.morning"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.morning"
+		"volume" "1"
+	}
+}
+
+
+"farm_05.smallbuilding2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.smallbuilding2"
+		"volume" "1"
+	}
+}
+
+"farm_05.smallbuilding2"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.smallbuilding2"
+		"volume" "1"
+	}
+}
+

@@ -1,0 +1,968 @@
+//
+// Small Town Soundscapes
+//
+// These are Derived from the rural soundscapes.
+//
+// Please keep all generic and global updates within Rural, 
+// while any map specific replacements or changes go here.
+
+
+//=======================
+//=======================
+//   Small Town 01
+//=======================
+//=======================
+
+
+// the very start of the map, surrounded by cars, not up over the hill yet
+"smalltown_01.woods_start"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods"
+		"volume" "1"
+	}
+// shore animal sounds
+	"playrandom"
+	{
+		"time"		"4,21"
+		"volume"	".6,.8"
+		"pitch"		"90,110"
+		"attenuation"	".2,.5"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl03.wav"
+			
+		}
+	}	
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_far_heavy"
+		"positionoverride"	"0"
+	}
+
+}
+
+// generic woods
+"smalltown_01.woods"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods"
+		"volume" "1"
+	}
+// shore animal sounds
+	"playrandom"
+	{
+		"time"		"4,21"
+		"volume"	".6,.8"
+		"pitch"		"90,110"
+		"attenuation"	".2,.5"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl03.wav"
+			
+		}
+	}	
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_far_heavy"
+		"positionoverride"	"0"
+	}
+
+}
+
+// riverbed replaced river....river went away!
+"smalltown_01.riverbed"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods"
+		"volume" "1"
+	}
+//positional tone
+	"playlooping"
+	{
+		"volume"	".3"
+		"pitch"		"100"
+		"wave"		"ambient/levels/canals/swamp_frogs_loop2.wav"
+		"origin"	"-13336.701172, -11634.560547, -510.178101;"
+		"soundlevel" 	"SNDLVL_100dB"
+	}
+// shore animal sounds
+	"playrandom"
+	{
+		"time"		"4,21"
+		"volume"	".6,.8"
+		"pitch"		"90,110"
+		"attenuation"	".2,.5"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_RandomScreechOwl03.wav"
+			
+		}
+	}	
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_far_heavy"
+		"positionoverride"	"0"
+	}
+
+}
+
+// this is inside the tunnel throughout.  
+"smalltown_01.tunnel"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.caveclosed"
+		"volume" "1"
+	}
+}
+
+// small halls off of the tunnel 
+"smalltown_01.tunnel_hall"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagesmall"
+		"volume" "1"
+	}
+}
+
+// the big room right before the stairs that lead to the woods
+"smalltown_01.tunnel_bigroom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.bigroom"
+		"volume" "1"
+	}
+}
+
+// river is not used
+"smalltown_01.river"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.river"
+		"volume" "1"
+	}
+}
+
+// caves are not used
+"smalltown_01.caveclosed"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.caveclosed"
+		"volume" "1"
+	}
+	// cave frogs
+	"playrandom"
+	{
+		"time"		"3,9"
+		"volume"	".6,.9"
+		"pitch"		"55,110"
+		"attenuation"	".2,.5"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Frog_01a.wav"
+			"wave"	"ambient/Random_Amb_SFX/Frog_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Frog_02a.wav"
+			"wave"	"ambient/Random_Amb_SFX/Frog_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Frog_03a.wav"
+			
+		}
+	}	
+}
+
+"smalltown_01.caveopen"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.caveopen"
+		"volume" "1"
+	}
+}
+
+
+"smalltown_01.pumproom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.pumproom"
+		"volume" ".7"
+	}
+}
+
+
+
+
+//=======================
+//=======================
+//   Small Town 02
+//=======================
+//=======================
+
+
+
+"smalltown_02.pumproom"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.pumproom"
+		"volume" ".7"
+	}
+	
+}
+
+"smalltown_02.drainagesmall"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagesmall"
+		"volume" "1"
+	}
+}
+
+// NEW
+"smalltown_02.drainagemedium"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagesmall"
+		"volume" "1"
+	}
+	"playrandom"
+	{
+		"time"		"5,12"
+		"volume"	"1"
+		"pitch"		"50,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_stress1.wav"
+			"wave"	"ambient/materials/metal_stress2.wav"
+			"wave"	"ambient/materials/metal_stress3.wav"
+			"wave"	"ambient/materials/metal_stress4.wav"
+			"wave"	"ambient/materials/metal_stress5.wav"
+		}
+	}
+}
+
+"smalltown_02.drainagebig"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainagebig"
+		"volume" "1"
+	}
+}
+
+"smalltown_02.drainageopen"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.drainageopen"
+		"volume" "1"
+	}
+}
+
+
+"smalltown_02.trainyardbuilding"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardbuilding"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+}
+
+"smalltown_02.woods"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	// little louder, but less frequent
+	"playsoundscape"
+	{
+		"name"	"rural.combat_far_medium"
+		"positionoverride"	"0"
+	}
+}
+
+
+//=======================
+//=======================
+//   Small Town 03
+//=======================
+//=======================
+
+
+"smalltown_03.trainyardbuilding"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardbuilding"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+}
+
+"smalltown_03.trainyard"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyard"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+}
+
+"smalltown_03.woods_far"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+
+	
+}
+
+"smalltown_03.woods_medium"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+
+	"playlooping"
+	{
+		"volume"	".76"
+		"pitch"		"75"
+		"wave"		"ambient/Spacial_Loops/carfire_loop.wav"
+		"origin"	"-9756.758789, -3895.526855, 16.995613"
+		"soundlevel" 	"SNDLVL_80dB"
+	}
+}
+
+"smalltown_03.woods_close"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+}
+
+"smalltown_03.graveyard"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" "1"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+}
+
+"smalltown_03.church"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" ".5"
+	}
+
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+
+	// creeky wood
+	"playrandom"
+	{
+		"time"		"5,16"
+		"volume"	".8,.9"
+		"pitch"		"90,100"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Wood_Floor_Squeak06.wav"
+		}
+	}
+}
+
+"smalltown_03.house"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.woods3"
+		"volume" ".3"
+	}
+	// combat sounds coming from the town over the hill (from soundscapes_rural)
+	"playsoundscape"
+	{
+		"name"	"rural.combat_close_light"
+		"positionoverride"	"0"
+	}
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"100"
+		"wave"		"ambient/fire/fire_small_loop2.wav"
+		"origin"	"-6956.063965, -1823.382813, 10.212468;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	// shutters
+	"playrandom"
+	{
+		"time"		"1,4"
+		"volume"	"0.5,0.8"
+		"pitch"		"90,110"
+
+		"rndwave"
+		{
+			"wave"	"ambient/materials/shutter6.wav"
+			"wave"	"ambient/materials/shutter8.wav"
+			"wave"	"ambient/materials/shutter7.wav"
+		}
+	}
+}
+
+"smalltown_03.town"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.town"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".9"
+		"pitch"		"90"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"-239.482910, -1101.991211, -243.295319;"
+		"soundlevel" 	"SNDLVL_75dB"
+	}
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"150"
+		"wave"		"ambient/Spacial_Loops/CarFire_Loop.wav"
+		"origin"	"-221.181152, -1391.906738, -159.932785;"
+		"soundlevel" 	"SNDLVL_70dB"
+	}
+	"playlooping"
+	{
+		"volume"	".62"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/VendingMachineHum_Loop.wav"
+		"origin"	"-3283.993164, -2058.968750, -52.794048;"
+		"soundlevel" 	"SNDLVL_60dB"
+	}
+	"playrandom"
+	{
+		"time"		"15,25"
+		"volume"	".24"
+		"pitch"		"90,110"
+		"attenuation"	".2,.3"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig03.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig04.wav"
+			
+		}
+	}	
+}
+
+"smalltown_03.towninside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.towninside"
+		"volume" ".6"
+	}
+}
+
+"smalltown_03.townalley"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.townalley"
+		"volume" ".7"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Small Town 04
+//=======================
+//=======================
+
+
+"smalltown_04.town"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.town"
+		"volume" "1"
+	}
+	
+	
+	"playlooping"
+	{
+		"volume"	".8"
+		"pitch"		"120"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"4306.207520, -4515.686035, 61.858189;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+	"playrandom"
+	{
+		"time"		"11,25"
+		"volume"	".39"
+		"pitch"		"90,110"
+		"attenuation"	".2,.3"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig01.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig02.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig03.wav"
+			"wave"	"ambient/Random_Amb_SFX/RUR_Random_DogBig04.wav"
+			
+		}
+	}
+	
+		// paper gusts
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".08"
+		"pitch"		"140"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Blowing_papers02.wav"
+			
+		}
+	}
+	// wind metal rattles
+	"playrandom"
+	{
+		"time"		"6,15"
+		"volume"	".3,.4"
+		"pitch"		"97,103"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_01.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_03.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_04.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_05.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_06.wav"
+			"wave"	"ambient/Random_Amb_SFX/Urban_1b-5b_RandomMetal_Interior/Random_InteriorMetal_07.wav"
+			
+		}
+	}	
+}
+
+"smalltown_04.towninside"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.towninside"
+		"volume" ".7"
+	}
+	"playlooping"
+	{
+		"volume"	".5"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/Fluorescent_Lights_loop.wav"
+		"origin"	"1871.428345, -5544.370605, 22.182076;"
+		"soundlevel" 	"SNDLVL_55dB"
+	}
+}
+
+"smalltown_04.townalley"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.townalley"
+		"volume" "1"
+	}
+	"playlooping"
+	{
+		"volume"	".8"
+		"pitch"		"120"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"-1128.436768, -4921.853516, -40.168610;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+"smalltown_04.street"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"hospital.street"
+		"volume" "1"
+	}
+}
+
+
+"smalltown_04.house"
+{
+	"dsp" ".5"
+
+	"playsoundscape"
+	{
+		"name"	"urban.apartment"
+		"volume" ".45"
+	}
+}
+
+
+"smalltown_04.trainyardbuilding"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.trainyardbuilding"
+		"volume" ".7"
+	}
+}
+
+
+
+//=======================
+//=======================
+//   Small Town 05
+//=======================
+//=======================
+
+
+"smalltown_05.park"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.town_02"
+		"volume" "1"
+	}
+	// leaves rustling
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".4,.5"
+		"pitch"		"100,120"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle03.wav"
+			
+		}
+	}
+	"playlooping"
+	{
+		"volume"	".75"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"5312.284668, -859.436951, 9.130814;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+
+}
+
+"smalltown_05.shack"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.shack"
+		"volume" "1"
+	}
+}
+
+
+"smalltown_05.town"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.town_02"
+		"volume" "1"
+	}
+
+	// 1st fire 
+	"playlooping"
+	{
+		"volume"	".8"
+		"pitch"		"120"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"2656.173828, 2919.529785, -18.677378;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+	//2nd fire
+	"playlooping"
+	{
+		"volume"	".75"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"2980.757324, 1780.566162, -38.367176;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+}
+
+"smalltown_05.boatinterior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.boatinterior"
+		"volume" "1"
+	}
+}
+
+"smalltown_05.boatexterior"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.shoreline"
+		"volume" "1"
+	}
+	// leaves rustling
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".4,.5"
+		"pitch"		"100,120"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle03.wav"
+			
+		}
+	}
+	"playlooping"
+	{
+		"volume"	".75"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"5312.284668, -859.436951, 9.130814;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+
+}
+
+"smalltown_05.shoreline"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.shoreline"
+		"volume" "1"
+	}
+	// leaves rustling
+	"playrandom"
+	{
+		"time"		"6,21"
+		"volume"	".4,.5"
+		"pitch"		"100,120"
+		"position"	"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle02.wav"
+			"wave"	"ambient/Random_Amb_SFX/Leaves_Rustle03.wav"
+			
+		}
+	}
+	"playlooping"
+	{
+		"volume"	".75"
+		"pitch"		"100"
+		"wave"		"ambient/Spacial_Loops/MediumFire_Loop.wav"
+		"origin"	"5312.284668, -859.436951, 9.130814;"
+		"soundlevel" 	"SNDLVL_65dB"
+	}
+
+}
+
+"smalltown_05.house"
+{
+	"dsp" "1"
+
+	"playsoundscape"
+	{
+		"name"	"rural.house"
+		"volume" "1"
+	}
+}
