@@ -22648,7 +22648,7 @@ Fires....... something"
 					"attribute_class"	"mult_reload_time"
 					"value"	"1.60"
 				}
-                        }
+            }
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
         }
@@ -35414,16 +35414,15 @@ Fires....... something"
                     "attribute_class"    "voice_pitch_scale"
                     "value"        "0"
                 }
-				//being fire retardant is broken
-				//"fire retardant"
-				//{
-				//	"attribute_class"	"set_fire_retardant"
-				//	"value"	"1"
-				//}
+				"fire retardant"
+				{
+					"attribute_class"	"set_fire_retardant"
+					"value"	"1"
+				}
 				"dmg taken from fire reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"	"0.60"
+					"value"	"0.75"
 				}
 				"dmg taken from blast reduced"
 				{
@@ -35435,11 +35434,11 @@ Fires....... something"
 					"attribute_class"	"damage_force_reduction"
 					"value"	"3"
 				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.9"
-				}
+				//"move speed penalty"
+				//{
+				//	"attribute_class"	"mult_player_movespeed"
+				//	"value"	"0.9"
+				//}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
 		}
