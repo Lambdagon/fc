@@ -140,6 +140,76 @@
 		"iconColor"		"255 255 255 255"
 	}
 		
+	"Bouncepad1Label"
+	{
+		"ControlName"	"Label"
+		"fieldName"		"Bouncepad1Label"
+		"font"			"Default"
+		"xpos"			"0"
+		"ypos"			"185"
+		"wide"			"150"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"3"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"paintbackground"	"0"
+	}
+	
+	"Bouncepad1Icon"
+	{
+		"ControlName"	"CIconPanel"
+		"fieldName"		"Bouncepad1Icon"
+		"xpos"			"0"
+		"ypos"			"200"
+		"wide"			"150"
+		"tall"			"150"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleImage"	"1"	
+		"icon"			"obj_status_tele_entrance"
+		"iconColor"		"255 255 255 255"
+	}
+	
+	"Bouncepad2Label"
+	{
+		"ControlName"	"Label"
+		"fieldName"		"Bouncepad2Label"
+		"font"			"Default"
+		"xpos"			"150"
+		"ypos"			"185"
+		"wide"			"150"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"4"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"paintbackground"	"0"
+	}
+	
+	"Bouncepad2Icon"
+	{
+		"ControlName"	"CIconPanel"
+		"fieldName"		"Bouncepad2Icon"
+		"xpos"			"150"
+		"ypos"			"200"
+		"wide"			"150"
+		"tall"			"150"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleImage"	"1"	
+		"icon"			"obj_status_tele_exit"
+		"iconColor"		"255 255 255 255"
+	}
+		
 	"CancelLabel"
 	{
 		"ControlName"	"Label"
