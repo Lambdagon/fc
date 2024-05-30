@@ -20702,7 +20702,7 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
-			"model_player" "models/player/playermodels/john_freeman_rebel.mdl"
+			"model_player"    "models/empty.mdl"
 			"model_world" "models/player/playermodels/john_freeman_rebel.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -20750,6 +20750,11 @@
 				{
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.9"
 				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
@@ -20963,7 +20968,7 @@
 			"item_class"	"tf_wearable"
 			"craft_class"	"hat"
 			"baseitem"	"0"
-			"model_player" "models/player/kleiner.mdl"
+			"model_player"    "models/empty.mdl"
 			"model_world" "models/player/kleiner.mdl"
 			"craft_material_type"	"hat"
 			"capabilities"
@@ -35430,42 +35435,42 @@ Fires....... something"
 	    }
         "9946"
         {
-            "name"    "The One Freeman"
-            "first_sale_date"    "1969/04/20"
-            "prefab"    "valve base_misc"
-            "item_class"    "tf_wearable"
-            "craft_class"    "hat"
-            "craft_material_type"    "hat"
-            "capabilities"
-			"enabled"	"1"
+			"name"	"The One Freeman"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	""
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"baseitem"	"0"
+			"model_player"    "models/empty.mdl"
+			"model_world" "models/player/playermodels/gordon.mdl"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
 			"show_in_armory"	"1"
-            {
-                "nameable"        "1"
-                "can_craft_count"    "1"
-                "can_craft_if_purchased"    "1"
-            }
-            "loadondemand" "1"
-            "propername" "1"
-            "show_in_armory"    "1"
-            "item_type_name"    "Gordon Freeman"
-            "item_name"    "The One Freeman"
-            "item_description"    ". . ."
-            "item_slot"    "misc2"
-            "equip_region"        "disconnected_floating_item"
-            "item_quality"    "unique"
-            "min_ilevel"    "20"
-            "max_ilevel"    "20"
-            "image_inventory"    "backpack/player/items/pm_gordon"
-            "image_inventory_size_w"        "128"
-            "image_inventory_size_h"        "82"
-            "model_world"    "models/player/playermodels/gordon.mdl"
-            "model_player"    "models/player/playermodels/gordon.mdl"
-            "used_by_classes"
-            {
-                "john" "1"
-            }
-            "attributes"
-            {
+			"item_type_name"	"Outfit"
+			"item_name"	"Gordon Freeman"
+			"item_description"	"The One Freeman"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/player/items/pm_gordon"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"used_by_classes"
+			{
+				"john"	"1"
+			}
+			"attributes"
+			{
                 "voice pitch scale"
                 {
                     "attribute_class"    "voice_pitch_scale"
@@ -35491,13 +35496,14 @@ Fires....... something"
 					"attribute_class"	"damage_force_reduction"
 					"value"	"3"
 				}
-				//"move speed penalty"
-				//{
-				//	"attribute_class"	"mult_player_movespeed"
-				//	"value"	"0.9"
-				//}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.9"
+				}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 		}
 		"9947"
 		{
@@ -36287,7 +36293,7 @@ Fires....... something"
 			"item_description"	"The death of one man is a tragedy. The death of millions is a statistic."
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
-			"model_player"	"models/conscript.mdl"
+			"model_player"    "models/empty.mdl"
 			"model_world" 	"models/conscript.mdl"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
