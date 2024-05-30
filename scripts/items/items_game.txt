@@ -4353,7 +4353,7 @@
 				}
             }
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 			"particle_suffix"		"pistol"
 		}
 		
@@ -21512,8 +21512,8 @@ Fires....... something"
 			"visuals"
 			{
 			}
-			"mouse_pressed_sound"	"heavy.wav"
-			"drop_sound"	"vo/heavy_laughhappy02.mp3"
+			"mouse_pressed_sound"	"vo/heavy_laughhappy02.mp3"
+			"drop_sound"			"vo/heavy_laughhappy02.mp3"
 		}
 
 		"9418"
@@ -30435,8 +30435,8 @@ Fires....... something"
             "baseitem"    "0"
 			"item_name"		"#FC_Weapon_Casual"	
 			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
-            "model_world"    "models/weapons/c_1911/c_pistol.mdl"
-            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
+            "model_world"    "models/weapons/w_models/w_1911/w_1911.mdl"
+            "model_player"    "models/weapons/v_models/v_1911/v_1911.mdl"
             "attach_to_hands"    "2"
             "used_by_classes"
             {
@@ -30450,7 +30450,81 @@ Fires....... something"
 				"sound_burst"			"Weapon_1911.SingleCrit"
 			}
         }
-
+		"9868"
+        {
+            "name"    "TF_WEAPON_1911_SOLDIER"
+            "first_sale_date"    "2010/09/29"
+			"item_class" "tf_weapon_pistol"
+            "baseitem"    "0"
+			"item_name"		"#FC_Weapon_1911"
+			"anim_slot" "secondary2"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"base_item_name"	"TF_WEAPON_PISTOL"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_description"	"#FC_Weapon_1911_Desc"
+			"item_name"	"#FC_Weapon_1911"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "31"
+			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
+            "model_world"		"models/weapons/w_models/w_1911/w_1911.mdl"
+            "model_player"    	"models/weapons/v_models/v_1911/v_1911.mdl"
+            "attach_to_hands"    "2"
+            "used_by_classes"
+            {
+				"soldier"	"1"
+            }
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_1911.Single"
+				"sound_burst"			"Weapon_1911.SingleCrit"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.40"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.75"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.5"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "36"
+				}
+				"mod_recoil_angle"
+				{
+					"attribute_class"	"mod_recoil_angle"
+					"value" "3"
+				}
+            }
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
+			"particle_suffix"		"pistol"
+        }
 		"442"
 		{
 			"name"	"The Righteous Bison"
@@ -30646,82 +30720,6 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"9868"
-        {
-            "name"    "TF_WEAPON_1911_SOLDIER"
-            "first_sale_date"    "2010/09/29"
-			"item_class" "tf_weapon_pistol"
-            "baseitem"    "0"
-			"item_name"		"#FC_Weapon_1911"
-			"anim_slot" "secondary2"
-			"capabilities"
-			{
-				"nameable"		"1"
-			}
-			"tags"
-			{
-				"can_deal_damage"			"1"
-				"can_deal_critical_damage"	"1"
-				"can_deal_mvm_penetration_damage"	"1"
-				"can_deal_long_distance_damage"	"1"
-			}
-			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_description"	"#FC_Weapon_1911_Desc"
-			"item_name"	"#FC_Weapon_1911"
-			"item_slot"	"secondary"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"attach_to_hands"	"1"
-			"inspect_panel_dist" "31"
-			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
-            "model_world"    "models/weapons/c_1911/c_pistol_soldier.mdl"
-            "model_player"    "models/weapons/c_1911/v_pistol_engineer.mdl"
-            "attach_to_hands"    "2"
-            "used_by_classes"
-            {
-				"soldier"	"1"
-            }
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_1911.Single"
-				"sound_burst"			"Weapon_1911.SingleCrit"
-			}
-			"attributes"
-			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.40"
-				}
-				"clip size penalty"
-				{
-					"attribute_class"	"mult_clipsize"
-					"value"	"0.75"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.5"
-				}
-				"max ammo override"
-				{
-					"attribute_class"	"max_ammo"
-					"value" "32"
-				}
-				"mod_recoil_angle"
-				{
-					"attribute_class"	"mod_recoil_angle"
-					"value" "3"
-				}
-            }
-			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
-
-        }
 		"9869"
         {
 			// was medic casual
