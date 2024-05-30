@@ -36807,6 +36807,113 @@ Fires....... something"
 				"sound_special1"		"Bouncepad.Jump"
 			}
 		}
+		"9965"
+		{
+			"name"	"USP Match (REPRESSOR PLACEHOLDER SECONDRARY, PLANNED TO USE THE EZ2 PULSE PISTOL. FOR NOW HE USES THE USP MATCH.)"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_pistol"
+			"craft_class"	""
+			"craft_material_type"		""
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"baseitem"	"1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Pistol"
+			"item_name"	"USP Match"
+			"item_description"	"Repressor has big plans for this pistol... He thinks bullets aren't enough."
+			"item_slot"	"secondary"
+			"item_logname"	"usp"
+			"item_iconname"	"pistol"
+			"image_inventory"	"backpack/weapons/c_models/c_usp"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_pistol.mdl"
+			"model_player"	"models/weapons/v_pistol.mdl"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"combine"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"visuals"
+			{
+				"sound_single_shot"	"HL2_Weapon_Pistol.Single"
+				"sound_burst"	"HL2_Weapon_Pistol.NPC_Single"
+				"animation_replacement"
+				{
+				    "ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_AIRWALK_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+					"ACT_MP_ATTACK_CROUCH_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+					"ACT_MP_ATTACK_SWIM_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+					"ACT_MP_ATTACK_AIRWALK_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+					"ACT_MP_RELOAD_STAND_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_CROUCH_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_SWIM_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+					"ACT_MP_RELOAD_AIRWALK_SECONDARY"	"ACT_HL2MP_RELOAD_PISTOL"
+				}
+			}
+			"xifier_class_remap"	"TTG Max Pistol"
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.5	"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.2"
+				}
+				"single wep deploy time decreased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"	"0.8"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "200"
+				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value" "1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+			}
+		}
 		"30143"
 		{
 			"name"		"tw_demobot_armor"
