@@ -38408,6 +38408,147 @@ Fires....... something"
 				"engineer"	"primary"
 			}
 		}
+		"30533"
+        {
+            "name"    "TF_WEAPON_1911_L4D"
+            "first_sale_date"    "2010/09/29"
+            "prefab"    "weapon_1911"
+            "baseitem"    "0"
+			"item_name"		"#FC_Weapon_Casual"	
+			"image_inventory"	"backpack/weapons/c_models/1911/c_pistol"
+            "model_world"    "models/weapons/w_models/w_1911/w_1911.mdl"
+            "model_player"    "models/weapons/v_models/v_1911/v_1911.mdl"
+            "attach_to_hands"    "2"
+            "show_in_armory"	 "0"
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.0"
+				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "200"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_1911.Single"
+				"sound_burst"			"Weapon_1911.SingleCrit"
+			}
+        }
+		"30534"
+		{
+			"name"	"TF_WEAPON_MAC10_L4D"
+			"prefab"	"weapon_smg_telecon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"Mac 10"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"baseitem" "1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"model_world"	"models/weapons/w_models/telecon/w_nailgun.mdl"
+			"model_player"	"models/weapons/v_models/telecon/v_nailgun_scout.mdl"
+			"attach_to_hands"	"2"
+			"show_in_armory"	"0"
+			"attributes"
+			{
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "128"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30535"
+		{
+			"name"	"TF_WEAPON_SMG_L4D"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_smg_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Weapon_SMG"
+			"item_slot"	"primary"
+			"anim_slot"	"primary"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"1"
+			"show_in_armory"	"0"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_smg_sniper.mdl"
+            "model_world"	"models/weapons/w_models/w_smg.mdl"
+			"attach_to_hands"	"2"
+			"attributes"
+			{
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "128"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"30536"
+        {
+            "name"    "TF_WEAPON_SHOTGUN_L4D"
+            "prefab"    "weapon_shotgun"
+			"item_class" "tf_weapon_shotgun_primary"
+            "baseitem"    "0"
+			"item_name"		"Shotgun"
+            "item_slot"    "primary"
+			"show_in_armory"	"0"
+            "model_player"    "models/weapons/v_models/v_shotgun_merc.mdl"
+            "model_world"    "models/weapons/w_models/w_shotgun_multiclass.mdl"
+			"anim_slot"		 "primary"
+            "attach_to_hands"    "2"
+			"attributes"
+			{
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "80"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"0.50"
+				}
+			}
+        }
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
