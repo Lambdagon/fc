@@ -17655,6 +17655,76 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+		"1180"
+		{
+			"name"	"The Gas Passer"
+			"item_class"	"tf_weapon_jar_gas"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Jar_Gas"
+			"item_name"	"#TF_GasPasser"
+			"item_description"	"#TF_GasPasser_Desc"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"attach_to_hands"	"1"
+			"propername"	"1"
+			"anim_slot" "MELEE_ALLCLASS"
+			"image_inventory"	"backpack/weapons/c_models/c_gascan/c_gascan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_gascan/c_gascan.mdl"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 3 -7"				
+				"item_meter_charge_type"						"3"
+				"item_meter_charge_rate"			"60"
+				"item_meter_damage_for_full_charge"			"750"
+				"item_meter_resupply_denied"		"1"
+				"grenades1_resupply_denied"				"1"
+				"item_meter_starts_empty_DISPLAY_ONLY"	"1"
+				"item_meter_charge_type_3_DISPLAY_ONLY"	"1"
+				"meter_label"							"#TF_Gas"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"				"ACT_ITEM2_VM_DRAW"
+					"ACT_VM_IDLE"				"ACT_ITEM2_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK"		"ACT_ITEM2_VM_FIRE"
+					"ACT_MP_ATTACK_STAND_MELEE_ALLCLASS"		"ACT_MP_ATTACK_STAND_ITEM2"
+					"ACT_MP_ATTACK_CROUCH_MELEE_ALLCLASS"		"ACT_MP_ATTACK_CROUCH_ITEM2"
+					"ACT_MP_ATTACK_SWIM_MELEE_ALLCLASS"			"ACT_MP_ATTACK_SWIM_ITEM2"
+					"ACT_SECONDARY_VM_INSPECT_START"		"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"			"ACT_ITEM2_VM_INSPECT_END"
+				}
+				"custom_particlesystem"
+				{
+					"system"	"energydrink_milk_splash"
+				}
+				"player_poseparam"
+				{
+					"r_hand_grip"		"16"
+				}
+				"sound_deploy"	"Weapon_GasCan.Draw"
+				"sound_single_shot"	"Weapon_GasCan.Throw"
+				"sound_special1"		"Weapon_GasCan.Explode"  
+			}
+			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
+			"drop_sound"		"ui/item_bottle_drop.wav"
+		}
 		"1181"
 		{
 			"name"	"The Hot Hand"
@@ -35488,7 +35558,7 @@ Fires....... something"
 				}
 				"dmg taken from blast reduced"
 				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"attribute_class"	"mult_dmgtaken_from_explosions"	
 					"value"	"0.80"
 				}
 				"damage force reduction"
