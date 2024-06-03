@@ -6333,7 +6333,7 @@
 			"model_player"	"models/workshop/weapons/c_models/c_winger_pistol/c_winger_pistol.mdl"
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
 				"engineer"	"1"
 			}
 			"static_attrs"
@@ -20756,11 +20756,7 @@
 			
 		"attributes"
 			{
-				"move speed bonus"
-				{
-					"attribute_class" 	"mult_player_movespeed"
-					"value" "1.25"
-				}
+			//
 			}
 		}
 		"9403"
@@ -20824,7 +20820,7 @@
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.9"
+					"value"	"0.75"
 				}
             }
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
@@ -22524,24 +22520,24 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"scout"	        "1"
-				"robo"	"1"
+				"robo"			"1"
 			}
 			"attributes"
 			{
+				"move speed bonus"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"1.25"
+				}
 				"increased jump height"
 				{
 					"attribute_class"	"mod_jump_height"
-					"value" "2.30"
-				}
-                "move speed bonus"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"1.50"
+					"value" "2.00"
 				}
                 "dmg taken increased"
 				{
 					"attribute_class"	"mult_dmgtaken"
-					"value"	"0.60"
+					"value"	"0.75"
 				}
                 "no double jump"
 				{
@@ -32732,18 +32728,18 @@ Fires....... something"
 				}
 				"damage penalty"
 				{
-				"attribute_class"	"mult_dmg"
-				"value"	"0.5"
+					"attribute_class"	"mult_dmg"
+					"value"	"0.5"
 				}
 				"no reload single"
 				{
 					"attribute_class"	"set_no_reload_single"
 					"value" "1"
 				}
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.24"
+					"attribute_class"	"max_ammo"
+					"value" "16"
 				}
 			}
 			"visuals"
@@ -35569,7 +35565,7 @@ Fires....... something"
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.9"
+					"value"	"0.75"
 				}
             }
 			"mouse_pressed_sound"	"items/suitchargeok1.wav"
@@ -36140,7 +36136,7 @@ Fires....... something"
 				"move speed bonus"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"1.10"
+					"value"	"1.20"
 				}
 				"cancel falling damage"
 				{
@@ -36150,7 +36146,7 @@ Fires....... something"
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"4"
+					"value"	"2"
 				}
 				"override footstep sound set"
 				{
@@ -36167,8 +36163,8 @@ Fires....... something"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
-			"mouse_pressed_sound"    "ui/item_metal_weapon_pickup.wav"
-            "drop_sound"        "ui/item_metal_weapon_drop.wav"
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+            "drop_sound"			"ui/item_metal_weapon_drop.wav"
 		}
 		"9954"
 		{
@@ -36398,6 +36394,11 @@ Fires....... something"
 				{
 					"attribute_class"	"damage_force_reduction"
 					"value"	"1.50"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.75"
 				}
 			}
 		}
@@ -38531,7 +38532,7 @@ Fires....... something"
 			"item_name"	"Mac 10"
 			"item_slot"	"primary"
 			"item_quality"	"normal"
-			"baseitem" "1"
+			"baseitem" "0"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
 			"model_world"	"models/weapons/w_models/telecon/w_nailgun.mdl"
@@ -38657,6 +38658,7 @@ Fires....... something"
 				"spy"	"models/player/items/spy/spy_bill.mdl"
 				"engineer"	"models/player/items/engineer/engineer_bill.mdl"
 				"pyro"	"models/player/items/pyro/pyro_bill.mdl"
+				"agent"	"models/player/items/scout/scout_bill.mdl"
 			}
 			"drop_type"	"drop"
 			"used_by_classes"
@@ -38666,11 +38668,12 @@ Fires....... something"
 				"soldier"	"1"
 				"mercenary"	"1"
 				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+				"agent"		"1"
 			}
 			"visuals"
 			{
