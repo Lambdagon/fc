@@ -1,0 +1,686 @@
+
+
+"Player.JumpLand"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	".55"
+	"soundlevel" "SNDLVL_85dB"
+	"pitch"		"95,105"
+
+	"wave"		"player/jumplanding.wav"
+}
+
+"PlayerZombie.JumpLand" 
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	".55"
+	"soundlevel" "SNDLVL_85dB"
+	"pitch"		"95,105"
+
+	"wave"		"player/jumplanding_zombie.wav"
+}
+
+"Player.HeartbeatLoop"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"VOL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+
+	"wave"		"player/HeartbeatLoop.wav"
+}
+
+
+// // UNUSED!!!
+// DELETE FOR TESTING
+// "Player.claw_hit_flesh_1"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave" "player/claw_hit_flesh_1.wav"
+// }
+// "Player.claw_hit_flesh_2"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave" "player/claw_hit_flesh_2.wav"
+// }
+// "Player.claw_hit_flesh_3"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave" "player/claw_hit_flesh_3.wav"
+// }
+// "Player.claw_hit_flesh_4"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave" "player/claw_hit_flesh_4.wav"
+// }
+
+
+
+
+////////////////////////
+
+// unused
+// "Flesh.ImpactQuiet"
+// {
+	// "CompatibilityAttenuation"	"1.0"
+	// "volume"		"0.2"
+	// "pitch"			"PITCH_NORM"
+	// "rndwave"
+	// {
+		// "wave"	"physics/body/body_medium_impact_soft1.wav"
+		// "wave"	"physics/body/body_medium_impact_soft2.wav"
+		// "wave"	"physics/body/body_medium_impact_soft3.wav"
+		// "wave"	"physics/body/body_medium_impact_soft4.wav"
+		// "wave"	"physics/body/body_medium_impact_soft7.wav"
+	// }
+// }
+
+// unused?
+"Flesh.ImpactNormal"
+{
+	"CompatibilityAttenuation"	"1.0"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"	"physics/body/body_medium_impact_soft1.wav"
+		"wave"	"physics/body/body_medium_impact_soft2.wav"
+		"wave"	"physics/body/body_medium_impact_soft3.wav"
+		"wave"	"physics/body/body_medium_impact_soft4.wav"
+		"wave"	"physics/body/body_medium_impact_soft5.wav"
+		"wave"	"physics/body/body_medium_impact_soft6.wav"
+		"wave"	"physics/body/body_medium_impact_soft7.wav"
+	}
+}
+
+// --------------------------------------------------------------------
+
+
+
+// blood splatter on the screen
+// need different ones of these
+"Blood.Splat"
+{
+	"volume"		"0.38"
+	"soundlevel"	"SNDLVL_55dB"
+	"pitch"			"95,105"
+
+	"rndwave"
+	{
+		"wave" "player/survivor/splat/Hit_SlimeSplat1.wav"
+		"wave" "player/survivor/splat/Hit_SlimeSplat2.wav"
+		"wave" "player/survivor/splat/Hit_SlimeSplat7.wav"
+	}
+}
+
+
+//----------------------------------------------------------------------
+// Stuff from game_sounds_terror.txt
+//----------------------------------------------------------------------
+// Generic Weapon Swings -----------------------------------------------------------------
+
+// survivor melee attacks
+"Weapon.Swing"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"95, 105"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/swing/Swish_WeaponSwing_Swipe3.wav"
+		"wave"	"player/survivor/swing/Swish_WeaponSwing_Swipe4.wav"
+		"wave"	"player/survivor/swing/Swish_WeaponSwing_Swipe5.wav"
+		"wave"	"player/survivor/swing/Swish_WeaponSwing_Swipe6.wav"
+	}
+}
+
+
+
+// this is played when melee hit's something (someone?) unknown
+// need to check against entity's sound parameter
+"Weapon.HitWorld"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"			"95, 105"
+
+	"wave"	"player/survivor/hit/rifle_swing_hit_world.wav"
+}
+
+
+// shoving other survivors
+// should be the least aggressive
+// "Weapon.Shove"
+"Weapon.HitSurvivor"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"			"95, 105"
+	"rndwave"
+	{
+		"wave"	"player/survivor/hit/rifle_swing_hit_survivor1.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_survivor2.wav"
+	}
+}
+
+
+// played in a few places
+// - By a non-survivor player (PZ) when "struck" (should there be separate sound for shoving boomer?)
+//
+// - InfectedShoved.cpp (OnStart) when an infected is "shoved"
+// - When a non-wandering infected is melee'd ( same as above? triggered twice? )
+"Weapon.HitInfected"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_70dB"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected7.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected8.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected9.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected10.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected11.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected12.wav"
+	}
+}
+
+"Weapon.HitBoomer"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected7.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected8.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected9.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected10.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected11.wav"
+		"wave"	"player/survivor/hit/rifle_swing_hit_infected12.wav"
+	}
+}
+
+
+// Baseball Bat --------------------------------------------------------------------------
+// unused???
+// "BaseballBat.Swing"
+// {
+	// "channel"		"CHAN_ITEM"
+	// "volume"		"1"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"95, 105"
+
+	// "rndwave"
+	// {
+		// "wave"	"player/survivor/swing/Whoosh_TossObject1.wav"
+		// "wave"	"player/survivor/swing/Whoosh_TossObject2.wav"
+		// "wave"	"player/survivor/swing/Whoosh_TossObject3.wav"
+	// }
+// }
+
+// unused?
+// "BaseballBat.Hit"
+// {
+	// "channel"		"CHAN_WEAPON"
+	// "volume"		"1"
+	// "soundlevel"	"SNDLVL_90dB"
+	// "pitch"			"95, 105"
+
+	// "rndwave"
+	// {
+		// "wave"	"player/survivor/hit/Hit_MetalPoleImpact1.wav"
+		// "wave"	"player/survivor/hit/Hit_MetalPoleImpact2.wav"
+		// "wave"	"player/survivor/hit/Hit_MetalPoleImpact3.wav"
+	// }
+// }
+
+// UNUSED see Weapon.HitBody
+// "BaseballBat.HitBody"
+// {
+	// "channel"		"CHAN_WEAPON"
+	// "volume"		"1"
+	// "soundlevel"	"SNDLVL_90dB"
+	// "pitch"			"95, 105"
+
+	// "rndwave"
+	// {
+		// "wave"	"player/survivor/hit/Bone_Break18.wav"
+		// "wave"	"player/survivor/hit/Bone_Break19.wav"
+	// }
+// }
+
+
+
+
+// USED????? see below!!
+// the sound you hear when an Infected hits you
+// "Player.Hit_BeatManWithClub1"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_65dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub1.wav"
+// }
+// "Player.Hit_BeatManWithClub2"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_65dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub2.wav"
+// }
+// "Player.Hit_BeatManWithClub3"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_65dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub3.wav"
+// }
+// "Player.Hit_BeatManWithClub4"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_65dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub4.wav"
+// }
+
+// --------------------------------------------------------------------
+
+// clearly one of these is UNUSED
+// "Player.bandaging_1"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"0.6"
+	// "soundlevel"	"SNDLVL_60dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "wave" "player/bandaging_1.wav"
+// }
+
+"Player.BandagingWounds"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"0.6"
+	"soundlevel"	"SNDLVL_60dB"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave" "player/survivor/heal/bandaging_1.wav"
+	}
+}
+
+
+// UNUSED
+//"Player.orch_hit_Csharp_short"
+//{
+//	"channel"		"CHAN_STATIC"
+//	"volume"		"1"
+//	"soundlevel"	"SNDLVL_75dB"
+//	"pitch"			"PITCH_NORM"
+//
+//	"wave" "player/orch_hit_Csharp_short.wav"
+//}
+
+
+// Sent when a player transitions from STATE_ACTIVE
+"Player.StopVoice"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_75dB"
+
+	"wave"	"common/null.wav"
+}
+
+
+// Sent when a player transitions from STATE_ACTIVE
+"Player.StopItem"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_75dB"
+
+	"wave"	"common/null.wav"
+}
+
+
+// Sent when a player transitions from STATE_ACTIVE
+"Player.StopBody"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_75dB"
+
+	"wave"	"common/null.wav"
+}
+
+
+"Player.TongueResist"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player/survivor/voice/$survivor/HurtMinor01.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor02.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor03.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor04.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor05.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor06.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor07.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor08.wav"
+	}
+}
+
+"Player.Choke"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_80dB"
+	"pitch"			"95, 105"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/voice/choke_1.wav"
+		"wave"	"player/survivor/voice/choke_2.wav"
+		"wave"	"player/survivor/voice/choke_3.wav"
+		"wave"	"player/survivor/voice/choke_4.wav"
+		"wave"	"player/survivor/voice/choke_5.wav"
+		"wave"	"player/survivor/voice/choke_6.wav"
+		"wave"	"player/survivor/voice/choke_7.wav"
+		"wave"	"player/survivor/voice/choke_8.wav"
+		"wave"	"player/survivor/voice/choke_9.wav"
+	}
+}
+
+
+"Player.Shoved"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave"		"player/survivor/voice/$survivor/HurtMinor01.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor02.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor03.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor04.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor05.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor06.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor07.wav"
+		"wave"		"player/survivor/voice/$survivor/HurtMinor08.wav"
+	}
+}
+
+"Player.Fall"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"			"90, 100"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/voice/$survivor/Fall01.wav"
+		"wave"	"player/survivor/voice/$survivor/Fall02.wav"
+		"wave"	"player/survivor/voice/$survivor/Fall03.wav"
+	}
+}
+
+"Player.RelaxedSigh"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		".70666"
+	"soundlevel"	"SNDLVL_60dB"
+	"pitch"			"90, 100"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/voice/$survivor/PainReliefSigh01.wav"
+		"wave"	"player/survivor/voice/$survivor/PainReliefSigh02.wav"
+		"wave"	"player/survivor/voice/$survivor/PainReliefSigh03.wav"
+		"wave"	"player/survivor/voice/$survivor/PainReliefSigh04.wav"
+	}
+}
+
+"Player.ScreamWhilePounced"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_100dB"
+	"pitch"			"90, 100"
+
+	"rndwave"
+	{
+		"wave"	"player/survivor/voice/$survivor/ScreamWhilePounced01.wav"
+		"wave"	"player/survivor/voice/$survivor/ScreamWhilePounced02.wav"
+		"wave"	"player/survivor/voice/$survivor/ScreamWhilePounced03.wav"
+	}
+}
+
+
+// Bite -----------------------------------------------------------------------------------
+// TEMP DELETE
+//
+// "Bite.Miss"
+// {
+	// "channel"	"CHAN_VOICE"
+	// "volume"	"VOL_NORM"
+	// "soundlevel" "SNDLVL_90dB"
+	// "pitch"		"95,100"
+
+	// "rndwave"
+	// {
+		// "wave"		"player/Cough_Male03.wav"
+		// "wave"		"player/Cough_Male06.wav"
+		// "wave"		"player/Cough_Male13.wav"
+	// }
+// }
+
+
+// "Bite.Hit"
+// {
+	// "channel"	"CHAN_VOICE"
+	// "volume"	"VOL_NORM"
+	// "soundlevel" "SNDLVL_90dB"
+	// "pitch"		"95,100"
+
+	// "rndwave"
+	// {
+		// "wave"		"player/Cough_Male03.wav"
+		// "wave"		"player/Cough_Male06.wav"
+		// "wave"		"player/Cough_Male13.wav"
+	// }
+// }
+
+
+// Claws ---------------------------------------------------------------------------------
+"Claw.Swing"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"95, 105"
+
+	"rndwave"
+	{
+		"wave"	"player/PZ/miss/claw_miss_1.wav"
+		"wave"	"player/PZ/miss/claw_miss_2.wav"
+	}
+}
+
+"Claw.Hit"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"95, 105"
+
+	"rndwave"
+	{
+		"wave"	"player/PZ/hit/claw_scrape_1.wav"
+		"wave"	"player/PZ/hit/claw_scrape_2.wav"
+		"wave"	"player/PZ/hit/claw_scrape_3.wav"
+		"wave"	"player/PZ/hit/claw_scrape_4.wav"
+		"wave"	"player/PZ/hit/claw_scrape_5.wav"
+		"wave"	"player/PZ/hit/claw_scrape_6.wav"
+	}
+}
+
+"Claw.HitFlesh"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"PITCH_NORM"
+
+	"rndwave"
+	{
+		"wave" "player/PZ/hit/claw_hit_flesh_1.wav"
+		"wave" "player/PZ/hit/claw_hit_flesh_2.wav"
+		"wave" "player/PZ/hit/claw_hit_flesh_3.wav"
+		"wave" "player/PZ/hit/claw_hit_flesh_4.wav"
+	}
+}
+
+
+
+// Pain Pills ----------------------------------------------------------------------------
+"PainPills.Deploy"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"95, 105"
+
+	"rndwave"
+	{
+		"wave"	"player/items/pain_pills/pills_deploy_1.wav"
+		"wave"	"player/items/pain_pills/pills_deploy_2.wav"
+		"wave"	"player/items/pain_pills/pills_deploy_3.wav"
+	}
+}
+
+"PainPills.Use"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"95, 105"
+
+	"wave"	"player/items/pain_pills/pills_use_1.wav"
+}
+
+// ---------------
+"Player.Heartbeat"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"VOL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+
+	"wave"		"player/HeartbeatLoop.wav"
+}
+
+
+// DELETE FOR TESTING
+// "Player.FleshRip"
+// {
+	// "channel"		"CHAN_BODY"
+	// "volume"		"1.0"
+	// "soundlevel"	"SNDLVL_75dB"
+	// "pitch"			"PITCH_NORM"
+
+	// "rndwave"
+	// {
+		// "wave" "player/PZ/hit/claw_hit_flesh_1.wav"
+		// "wave" "player/PZ/hit/claw_hit_flesh_2.wav"
+		// "wave" "player/PZ/hit/claw_hit_flesh_3.wav"
+		// "wave" "player/PZ/hit/claw_hit_flesh_4.wav"
+	// }
+// }
+
+// the sound you hear when an Infected hits you
+"Player.HitInternal"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"0.5,0.7"
+	"soundlevel"	"SNDLVL_70dB"
+	"pitch"			"95,105"
+
+	"rndwave"
+	{
+		// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub1.wav"
+		// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub2.wav"
+		// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub3.wav"
+		// "wave"	"player/survivor/hit/$survivor/Hit_BeatManWithClub4.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_BodyHit03.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_BodyHit04.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit1.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit2.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit3.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit4.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit5.wav"
+		"wave"	"player/survivor/hit/int/Punch_Boxing_FaceHit6.wav"
+
+	}
+}
+
+"Player.AwardUpgrade"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_75dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave" "player/orch_hit_Csharp_short.wav"
+}
+
+
+"Player.NeckSnap"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"VOL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+
+	"wave"		"player/neck_snap_01.wav"
+}
+

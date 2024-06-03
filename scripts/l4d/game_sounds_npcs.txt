@@ -1,0 +1,698 @@
+
+//
+//
+// VOL_NORM		1.0f
+//
+//-----------------------------------------------------------------------------
+// common attenuation values
+//-----------------------------------------------------------------------------
+//
+// DON'T USE THESE - USE SNDLVL_ INSTEAD!!!
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f
+//	ATTN_IDLE		2.0f
+//	ATTN_STATIC		1.25f 
+//	ATTN_RICOCHET	1.5f
+//	ATTN_GUNFIRE	0.27f
+//
+//	SNDLVL_NONE		= 0,
+//	SNDLVL_25dB		= 25,
+//	SNDLVL_30dB		= 30,
+//	SNDLVL_35dB		= 35,
+//	SNDLVL_40dB		= 40,
+//	SNDLVL_45dB		= 45,
+//	SNDLVL_50dB		= 50,	= 3.9
+//	SNDLVL_55dB		= 55,	= 3.0
+//	SNDLVL_IDLE		= 60,	= 2.0
+//	SNDLVL_TALKING		= 60,	= 2.0
+//	SNDLVL_60dB		= 60,	= 2.0
+//	SNDLVL_65dB		= 65,	= 1.5
+//	SNDLVL_STATIC		= 66,	= 1.25
+//	SNDLVL_70dB		= 70,	= 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	= 0.8
+//	SNDLVL_80dB		= 80,	= 0.7
+//	SNDLVL_85dB		= 85,	= 0.6
+//	SNDLVL_90dB		= 90,	= 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	= 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140, = 0.27
+//	SNDLVL_140dB	= 140,	= 0.2
+//	SNDLVL_150dB	= 150,	= 0.2
+//
+//-----------------------------------------------------------------------------
+
+//"npc.ChopperPilot_hospital_intro_01"
+//{
+//	"channel"		"CHAN_VOICE"
+//	"volume"		"1"
+//	"soundlevel"		"SNDLVL_150dB"
+//	"pitch"			"PITCH_NORM"
+//
+//	"wave"	"^npc/chopper_pilot/hospital_intro_01.wav"
+//}
+
+"npc.ChopperPilot_hospital_intro_hello_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_hello_01.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_hello_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_hello_02.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_01.wav"
+}
+
+
+"npc.ChopperPilot_hospital_intro_heli_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_02.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_03.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_04.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_05.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_06.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_07.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_08.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_09.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_10.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_11.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_12"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_12.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_13"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_13.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_14"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_14.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_15"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_15.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_16"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_100dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_16.wav"
+}
+
+"npc.ChopperPilot_hospital_intro_heli_17"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.60"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_intro_heli_17.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_04.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_05.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getin_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"^npc/chopper_pilot/hospital_finale_getin_06.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getready_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_getready_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getready_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_getready_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_getready_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_getready_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_04.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_05.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_06.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_07.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_08.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_09.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_intransit_10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_intransit_10.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_onmyway_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_onmyway_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_onmyway_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_onmyway_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_onmyway_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_onmyway_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_04.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_05.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_06.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_120dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_07.wav"
+}
+
+//"npc.ChopperPilot_hospital_finale_pickup_08"
+//{
+//	"channel"		"CHAN_VOICE"
+//	"volume"		"1"
+//	"soundlevel"		"SNDLVL_120dB"
+//	"pitch"			"PITCH_NORM"
+//
+//	"wave"	"npc/chopper_pilot/hospital_finale_pickup_08.wav"
+//}
+
+"npc.ChopperPilot_hospital_finale_pickup_loud_01"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_loud_01.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_pickup_loud_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_150dB"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_pickup_loud_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_01a"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_01a.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_01b"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_01b.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_01c"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_01c.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_02"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_02.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_03"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_03.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_04"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_04.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_05"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_05.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_06"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_06.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_07"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_07.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_08"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_08.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_09"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_09.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_10"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_10.wav"
+}
+
+"npc.ChopperPilot_hospital_finale_flyout_11"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1"
+	"soundlevel"		"SNDLVL_NONE"
+	"pitch"			"PITCH_NORM"
+
+	"wave"	"npc/chopper_pilot/hospital_finale_flyout_11.wav"
+}
+
