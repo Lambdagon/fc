@@ -35978,7 +35978,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Disguise apparatus"
 			"item_name"	"Deep Cover"
-			"item_slot"	"primary"
+			"item_slot"	"pda"
 			"item_description"	"I'm in."
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
@@ -36052,7 +36052,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Kevlar Armor"
 			"item_name"	"Bulletproof Vest"
-			"item_slot"	"primary"
+			"item_slot"	"pda"
 			"item_description"		"Not actually bulletproof."
 			"image_inventory"		"backpack/workshop/player/items/soldier/spr17_flakcatcher/spr17_flakcatcher"
 			//we're gonna need a model for that too
@@ -36075,6 +36075,11 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"SET BONUS: dmg from sentry reduced"
+				{
+					"attribute_class"	"dmg_from_sentry_reduced"
+					"value"	"0.50"
+				}
 				"dmg taken from bullets reduced"
 				{
 					"attribute_class"	"mult_dmgtaken_from_bullets"
@@ -36111,7 +36116,7 @@ Fires....... something"
 			}
 			"item_type_name"	"Boots"
 			"item_name"	"Tippety Boots"
-			"item_slot"	"primary"
+			"item_slot"	"pda"
 			"item_description"	"Dress Sharp."
 			"image_inventory"	"backpack/workshop/player/items/demo/demo_booties/demo_booties"
 			"image_inventory_size_w"		"128"
@@ -36643,7 +36648,7 @@ Fires....... something"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
 			"item_name"	"#TF_Weapon_Displacer"
 			"item_slot"	"primary"
-			"item_description"	"poop"
+			"item_description"	"Super weapon ammo doesn't come easy."
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"image_inventory"			"backpack/weapons/w_models/w_rocketlauncher"
@@ -36661,25 +36666,30 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"mercenary"  "1"
-				"robo" "1"
+				//"robo" "1"
 			}
 			"attributes"
 			{
-				"blast dmg to self reduced"
+				"damage penalty HIDDEN"
 				{
-					"attribute_class"	"blast_dmg_to_self"
-					"value"	"0.5"
+					"attribute_class"	"mult_dmg"
+					"value" "0.5"
 				}
+				//"blast dmg to self reduced"
+				//{
+				//	"attribute_class"	"blast_dmg_to_self"
+				//	"value"	"0.5"
+				//}
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "10"
+					"value" "4"
 				}
-				"spawn ammo override"
-				{
-					"attribute_class"	"mod_spawn_ammo_override"
-					"value" "10"
-				}
+				//"spawn ammo override"
+				//{
+				//	"attribute_class"	"mod_spawn_ammo_override"
+				//	"value" "4"
+				//}
 			}
 			"static_attrs"
 			{
@@ -36984,6 +36994,9 @@ Fires....... something"
 					"value"	"0"
 				}
 			}
+		}
+		"9966"
+		{
 		}
 		"30143"
 		{
