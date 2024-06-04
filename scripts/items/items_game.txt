@@ -21242,8 +21242,8 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"item_type_name"	"Shotgun"
-			"item_name"	"Spy's Shotgun"
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_name"			"#TF_Weapon_Shotgun"
 			"item_description"	"Spy is not the best with larger guns."
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
@@ -21306,7 +21306,7 @@
 			{
 			}
 			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
-			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}		
 		"9412"
 		{
@@ -35714,8 +35714,8 @@ Fires....... something"
 		{
 			"name" "SMG-S"
 			"baseitem" "1"
-			"enabled"	"1"
-			"item_class"	"tf_weapon_smg"
+			"enabled"	"0"
+			"item_class"	"tf_weapon_smg_primary"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -35730,7 +35730,7 @@ Fires....... something"
 			}
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"SMG-S"
-			"item_slot"	"secondary"
+			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"item_logname"	"pro_smg"
@@ -35795,9 +35795,9 @@ Fires....... something"
 		"9949"
 		{
 			"name"	"Suppressed_Luger"
-			"baseitem" "0"
+			"baseitem" "1"
 			"enabled"	"1"
-			"item_class"	"tf_weapon_revolver_slot1"
+			"item_class"	"tf_weapon_revolver_slot2"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -36257,13 +36257,14 @@ Fires....... something"
 		{
 			"name"						"Agent Revolver Mr Snub"
 			"show_in_armory"			"1"
+			"baseitem"    				"1"
 			"item_class"				"tf_weapon_revolver_slot1"
 			"item_logname"				"enforcer"
 			"item_iconname"				"enforcer"
 			"item_type_name"			"#TF_Weapon_Revolver"
 			"item_name"					"#FC_Weapon_MrSnub"
 			"item_quality"				"unique"
-			"item_slot"					"secondary"
+			"item_slot"					"primary"
 			"anim_slot"					"secondary"
 			"propername"				"1"
 			"min_ilevel"				"8"
@@ -36997,6 +36998,82 @@ Fires....... something"
 		}
 		"9966"
 		{
+			"name"	"Agent Single Barrel"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"baseitem"    		"0"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"item_type_name"	""
+			"item_name"	"Single Barrel"
+			"item_description"	"THE AEGIS"
+			"item_slot"	"primary"
+			"anim_slot"	"primary"
+			"item_quality"	"normal"
+			"show_in_armory"	"1"
+			"propername"	"0"
+			"item_logname"	"shotgun"
+			"item_iconname"	"shotgun"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"image_inventory"	"backpack/weapons/c_models/c_double_barrel"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_double_barrel.mdl"
+			"attach_to_hands" "1"
+			"inspect_panel_dist" "32"
+			"used_by_classes"
+			{
+				"agent"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class" 	"mult_bullets_per_shot"
+					"value" "1.5"
+				}
+				"dmg falloff increased"
+				{
+					"attribute_class"	"mult_dmg_falloff"
+					"value"	"3.00"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0.30"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"2.00"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}
 		"30143"
 		{
