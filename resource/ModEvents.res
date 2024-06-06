@@ -2004,13 +2004,7 @@
 		"userid"	"short"
 	}
 	
-		"set_instructor_group_enabled"
-	{
-		"group"		"string"
-		"enabled"	"short"
-	}
-	
-	"instructor_server_hint_create" //create a hint using data supplied entirely by the server/map. Intended for hints to smooth playtests before content is ready to make the hint unneccessary. NOT INTENDED AS A SHIPPABLE CRUTCH
+	"instructor_server_hint_create" // Originally ported from the Alien Swarm SDK
 	{
 		"hint_name"					"string"	// what to name the hint. For referencing it again later (e.g. a kill command for the hint instead of a timeout)
 		"hint_replace_key"			"string"	// type name so that messages of the same type will replace each other
@@ -2030,21 +2024,11 @@
 		"hint_nooffscreen"			"bool"		// if true, the hint will not show when outside the player view
 		"hint_forcecaption"			"bool"		// if true, the hint caption will show even if the hint is occluded
 		"hint_local_player_only"	"bool"		// if true, only the local player will see the hint
+		"hint_start_sound"			"string"	// Mapbase - the sound to play when the hint is opened
+		"hint_target_pos"			"short"		// Mapbase - where the icon should be when there's a hint target
 	}
-	
 	"instructor_server_hint_stop" //destroys a server/map created hint
 	{
 		"hint_name"					"string"	// The hint to stop. Will stop ALL hints with this name
-	}
-	
-	// Events for the sample lesson, you can edit or delete them.
-	// See: scripts/instructor_lessons.txt
-	"instructor_primaryattack"
-	{
-		"userid" 	"short"
-	}
-	"use_primaryattack"
-	{
-		"userid" 	"short"
 	}
 }

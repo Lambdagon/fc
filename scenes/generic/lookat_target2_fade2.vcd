@@ -1,0 +1,43 @@
+// Choreo version 1
+actor "!Target1"
+{
+  channel "look at"
+  {
+    event lookat "Look at !target2"
+    {
+      time 0.000000 3.000000
+      param "!target2"
+      event_ramp
+      {
+        0.2714 0.1645
+        0.6224 0.8421
+        1.0347 0.9605
+        1.6379 0.9474
+        1.7034 0.9342
+        1.7828 0.8750
+        1.8510 0.7829
+        2.4276 0.1053
+      }
+    }
+  }
+  channel "trigger"
+  {
+    event firetrigger "Firetrigger 1"
+    {
+      time 1.500000 -1.000000
+      param "1"
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "140"
+  "ExpressionTool" "100"
+  "RampTool" "58"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

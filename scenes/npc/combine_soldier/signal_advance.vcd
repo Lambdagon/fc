@@ -1,0 +1,57 @@
+// Choreo version 1
+actor "!Target1"
+{
+  channel "audio"
+  {
+  }
+  channel "look at"
+  {
+  }
+  channel "face to"
+  {
+  }
+  channel "move to"
+  {
+  }
+  channel "facial flex"
+  {
+  }
+  channel "gestures"
+  {
+    event gesture "gesture_signal_advance"
+    {
+      time 0.000000 1.027778
+      param "gesture_signal_advance"
+      absolutetags playback_time
+      {
+        "apex" 0.250000
+        "accent" 0.388889
+        "loop" 0.666666
+        "end" 0.750000
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.250000
+        "accent" 0.388889
+        "loop" 0.666667
+        "end" 0.750000
+      }
+      sequenceduration 1.027778
+    }
+  }
+  channel "trigger"
+  {
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "ExpressionTool" "100"
+  "RampTool" "98"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
