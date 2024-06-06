@@ -15877,6 +15877,63 @@
 				}
 			}
 		}
+		"1105"	
+		{
+			"name"	"The Self-Aware Beauty Mark"
+			"prefab"	"valve weapon_jarate"
+			"craft_class" ""
+			"first_sale_date"		"2014/06/18"
+			"propername" "1"
+			"item_name"	"#TF_Weapon_SelfAwareBeautyMark"
+			"item_description"	"#TF_Weapon_SelfAwareBeautyMark_Desc"
+			"image_inventory"	"backpack/weapons/c_models/c_breadmonster/c_breadmonster"
+			"model_player"		"models/weapons/c_models/c_breadmonster/c_breadmonster.mdl"
+			"item_slot"			"secondary"
+			"anim_slot" "MELEE_ALLCLASS"
+			"attach_to_hands"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"inspect_panel_dist" 			"35"
+			"show_in_armory" "1"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"24" 
+				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+				"min_viewmodel_offset"		"10 0 -10"				
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_MELEE_ALLCLASS"	"ACT_MP_THROW"
+					"ACT_VM_DRAW" 							"ACT_BREADMONSTER_VM_DRAW"
+					"ACT_VM_IDLE" 							"ACT_BREADMONSTER_VM_IDLE"
+					"ACT_VM_PRIMARYATTACK" 					"ACT_BREADMONSTER_VM_PRIMARYATTACK"
+					"ACT_SECONDARY_VM_INSPECT_START"		"ACT_BREADMONSTER_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"			"ACT_BREADMONSTER_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"			"ACT_BREADMONSTER_VM_INSPECT_END"
+				}
+				"player_poseparam"
+				{
+					"r_hand_grip"		"13"
+				}
+				"item_poseparam"
+				{
+					"r_hand_grip"		"13"
+				}
+			}
+		}
 		"1106"
 		{
 			"name"	"Square Dance Taunt"
@@ -36799,16 +36856,12 @@ Fires....... something"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/v_models/v_enforcer_grenade/v_Grenade.mdl"
-			"model_world"	"models/weapons/w_grenade.mdl"
+			"model_world"	"models/weapons/w_models/w_enforcer_grenade/w_grenade.mdl"
 			"attach_to_hands"	"2"
 			"item_quality"	"normal"
 			"used_by_classes"
 			{
 				"zombiefast"	"1"
-			}
-			"visuals"
-			{
-				"sound_deploy"	"Scout.DodgeCanOpen"
 			}
 			"allowed_attributes"
 			{
