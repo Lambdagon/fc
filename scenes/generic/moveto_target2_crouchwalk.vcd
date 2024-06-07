@@ -1,0 +1,31 @@
+// Choreo version 1
+event section "pause"
+{
+  time 2.500000 -1.000000
+  param "noaction"
+}
+actor "!Target1"
+{
+  channel "move to"
+  {
+    event moveto "Moveto !target2"
+    {
+      time 0.000000 3.000000
+      param "!target2"
+      param2 "CrouchWalk"
+      resumecondition
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "96"
+  "ExpressionTool" "100"
+  "RampTool" "58"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

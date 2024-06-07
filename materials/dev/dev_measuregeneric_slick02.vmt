@@ -1,0 +1,20 @@
+"SDK_LightmappedGeneric"
+{
+	// "Slick", a limited edition self-illuminating dev measure generic for 20 something-bux.
+	"$selfillum" 1
+	"$surfaceprop" "concrete"
+	"%keywords" "mapbase_dev"
+
+	// From combinesoldiersheet. Who cares if DX9 was 15 years ago?
+	">=dx90_20b"
+	{
+		"$baseTexture" 	"Dev/dev_measuregeneric_slick02"
+		"$selfillummask" 	"Dev/dev_measuregeneric_slick02"
+	}
+
+	// Use redundant self-illum in base alpha on Pre DX9 hardware
+	"<dx90_20b"
+	{
+		"$baseTexture" 	"Dev/dev_measuregeneric_slick02"
+	}
+}

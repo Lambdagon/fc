@@ -13,8 +13,8 @@
 		"visible"			"1"
 		"enabled"			"1"
 	}
-	
-	"TitleBanner"
+
+		"TitleBanner"
     {
         "ControlName"    "ImagePanel"
         "fieldName"        "TitleBanner"
@@ -22,11 +22,27 @@
         "ypos"            "0"
         "wide"            "o8"
         "tall"            "86"
-        "visible"        "1"
+        "visible"        "0"
         "enabled"        "1"
         "image"            "menu_header"
         "scaleImage"    "1"
     }
+	
+	"Logo"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"Logo"
+		"xpos"			"45"
+		"ypos"			"30"
+		"zpos"			"1"
+		"wide"			"271"
+		"tall"			"79"
+		"visible"		"1"
+		"enabled"		"1"
+		"image"			"../logo/tf_logo"
+		"alpha"			"255"
+		"scaleImage"	"1"	
+	}
 	
 	// ---------- Footer Content ----------
 	
