@@ -1,0 +1,58 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "console/models/loyalists/marisa/face"
+	"$bumpmap" "console/models/loyalists/marisa/shader/normal"
+
+	"$normalmapalphaphongmask"	"1"
+	"$phong" "1"
+	"$phongboost"	"10"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "console/models/loyalists/marisa/shader/phong_exp"
+	"$phongfresnelranges"	"[.001 .001 2]"
+
+	"$lightwarptexture" "console/models/loyalists/marisa/shader/face_shader"
+
+	"$halflambert" "1"	
+	"$AmbientOcclusion" "1"	
+	"$nocull" "1"
+	"$nodecal" "1"
+	"$translucent" "1"
+
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+
+	"$yellow" "0"
+	"$one" "1"
+
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
