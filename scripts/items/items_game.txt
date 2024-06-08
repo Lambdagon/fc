@@ -3801,6 +3801,11 @@
 					"attribute_class"	"grenade_no_spin"
 					"value"	"1"
 				}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"1.20"
+				}
 			}
 			"visuals"
 			{
@@ -9525,25 +9530,25 @@
 			"brass_eject_model"	""	
 			"attributes"
 			{
-				"sniper no headshots"
-				{
-					"attribute_class" "set_weapon_mode"
-					"value" "1"
-				}
+				//"sniper no headshots"
+				//{
+				//	"attribute_class" "set_weapon_mode"
+				//	"value" "1"
+				//}
 				"jarate duration"
 				{
 					"attribute_class" "jarate_duration"
 					"value" "5"
 				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
 				"sniper charge per sec"
 				{
 					"attribute_class"	"mult_sniper_charge_per_sec"
 					"value"	"1.25"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
 				}
 			}
 		}
@@ -14832,7 +14837,8 @@
 		{
 			"name"	"The Huo Long Heatmaker"
 			"prefab"		"weapon_long_heatmaker"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
+			//FCBroken: This live weapon has no functionality and is hidden until it is fixed
 			"inspect_panel_dist" "88"
 		}
  		"812"
@@ -25138,7 +25144,8 @@ Fires....... something"
 			}
 			"item_logname"	"pro_rifle"
 			"item_iconname"	"pro_rifle"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
+			//FCBroken: This live weapon has no functionality and is hidden until it is fixed
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"	"#TF_Pro_SniperRifle"
 			"item_description"	"#TF_Pro_SniperRifle_Desc"
@@ -25202,7 +25209,7 @@ Fires....... something"
 				"sound_burst"			"Weapon_ProSniperRifle.SingleCrit"
 			}
 		}
-                "9752"
+        "9752"
 		{
 			"item_class"	"tf_weapon_shotgun_primary"
 			"craft_class"	"weapon"
@@ -35771,7 +35778,7 @@ Fires....... something"
 		{
 			"name" "SMG-S"
 			"baseitem" "1"
-			"enabled"	"0"
+			"enabled"	"1"
 			"item_class"	"tf_weapon_smg_primary"
 			"capabilities"
 			{
@@ -35810,30 +35817,10 @@ Fires....... something"
 			}
 			"attributes"
 			{
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.2"
-				}
-				"revolver use hit locations"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"	"0.2"
-				}
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"3"
-				}
-				"fire rate penalty"
+				"fire rate bonus"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.5"
+					"value" "0.5"
 				}
 				"crit mod disabled"
 				{
@@ -36694,7 +36681,7 @@ Fires....... something"
 		}
 		"9960"
 		{
-			"name"	"Displacer Cannon"
+			"name"	"Displacer Cannon Nerfed Type"
 			"item_class"	"tf_weapon_displacer"
 			"baseitem" "0"
 			"enabled" "1"
@@ -36731,7 +36718,7 @@ Fires....... something"
 				"damage penalty HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value" "0.5"
+					"value" "0.25"
 				}
 				//"blast dmg to self reduced"
 				//{
@@ -36741,13 +36728,24 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "4"
+					"value" "3"
 				}
 				//"spawn ammo override"
 				//{
 				//	"attribute_class"	"mod_spawn_ammo_override"
-				//	"value" "4"
+				//	"value" "3"
 				//}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"	"1.50"
+				}
+				//doesn't really do anything, just tells the player that you will die at close quarters
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" "0"
+				}
 			}
 			"static_attrs"
 			{
@@ -37099,7 +37097,7 @@ Fires....... something"
 				"bullets per shot bonus"
 				{
 					"attribute_class" 	"mult_bullets_per_shot"
-					"value" "1.5"
+					"value" "1.8"
 				}
 				"dmg falloff increased"
 				{
@@ -37109,7 +37107,7 @@ Fires....... something"
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.30"
+					"value" "0.15"
 				}
 				"spread penalty"
 				{
@@ -37124,9 +37122,21 @@ Fires....... something"
 			}
 			"visuals"
 			{
+				"sound_single_shot"	"Weapon_Scatter_Gun_Double.Single"
+				"sound_burst"	"Weapon_Scatter_Gun_Double.SingleCrit"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_ITEM2_VM_INSPECT_END"
+				}
 			}
-			"mouse_pressed_sound"	"weapons/shotgun_cock_forward.wav"
-			"drop_sound"			"ui/item_light_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"force_a_nature"
 		}
 		"30143"
 		{
