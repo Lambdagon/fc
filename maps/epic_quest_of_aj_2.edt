@@ -1,0 +1,38 @@
+"epic_quest_of_aj_2"
+{
+	entity
+	{
+		delete {classname "trigger_weapon_strip"}
+		delete {targetname "equipment_base"}
+		delete {classname "game_player_equip"}
+		delete {targetname "sequencefin"}
+		delete {classname "scripted_sequence"}
+		create {classname "info_player_equip"}
+			values
+			{
+				targetname "equipment_base"
+				startdisabled "0"
+				item_suit "1"
+				item_armor "1"
+				weapon_physcannon "1"
+			}
+		delete { classname "scripted_sequence" origin "-1424 -1738 -327" }
+		create
+		{
+			classname		"scripted_sequence"
+			origin			"-1424 -1738 -327"
+			values
+			{
+				angles			"0 270 0"
+				m_fMoveTo		"1"
+				m_iszEntity				"Pete"
+				m_iszPlay		"Wave"
+				targetname			"sequencefin"
+				OnEndSequence		"fade1,Fade,,0,-1"
+				OnBeginSequence				"petevoice2,PlaySound,,0,-1"
+				OnBeginSequence				"petevoice1,PlaySound,,1.5,-1"
+				OnEndSequence		"servercommand,Command,map d1_trainstation_01,4,-1"
+			}
+		}
+	}
+}
