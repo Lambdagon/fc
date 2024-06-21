@@ -3087,10 +3087,10 @@
 					"hands"			"1"
 				}
 
-				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
-				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_miss"		"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"		"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
-				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+				"sound_burst"			"Weapon_BoxingGloves.CritHit"
 				"animation_replacement"
 				{
 					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
@@ -4489,7 +4489,7 @@
 				"grenade no bounce"
 				{
 					"attribute_class"	"grenade_no_bounce"
-					"value"	"1"
+					"value"				"1"
 				}
 				"custom projectile model"
 				{
@@ -4498,15 +4498,16 @@
 				}
 				"fuse bonus"
 				{
-					"attribute_class" "fuse_mult"
-					"value" "0.7"
+					"attribute_class" 	"fuse_mult"
+					"value"				"0.7"
 				}
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_TackyGrenadier.Single"
 				"sound_burst"			"Weapon_TackyGrenadier.SingleCrit"
-				"sound_special1"		"Weapon_Airstrike.Explosion"
+				"sound_special1"		"Weapon_TackyGrendadier.Explode"
+				//sound special1 is broken it does nothing
 				"animation_replacement"
 				{
 					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
@@ -7769,10 +7770,10 @@
 				{
 					"hands"		"1"
 				}
-				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
-				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_miss"		"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"		"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
-				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+				"sound_burst"			"Weapon_BoxingGloves.CritHit"
 				"animation_replacement"
 				{
 					"ACT_MELEE_VM_INSPECT_START"	"ACT_MELEE_ALT1_VM_INSPECT_START"
@@ -9759,19 +9760,19 @@
 			{
 				"use_visualsblock_as_base"	"visuals"
 				"skin"	"2"
-				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
-				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_miss"		"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"		"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
-				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+				"sound_burst"			"Weapon_BoxingGloves.CritHit"
 			}
 			"visuals_blu"
 			{
 				"use_visualsblock_as_base"	"visuals"
 				"skin"	"3"
-				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
-				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_miss"		"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"		"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
-				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+				"sound_burst"			"Weapon_BoxingGloves.CritHit"
 			}
 		}
 		"264"
@@ -19683,10 +19684,10 @@
 				{
 					"hands"			"1"
 				}
-				"sound_melee_miss"	"Weapon_BoxingGloves.Miss"
-				"sound_melee_hit"	"Weapon_BoxingGloves.HitFlesh"
+				"sound_melee_miss"		"Weapon_BoxingGloves.Miss"
+				"sound_melee_hit"		"Weapon_BoxingGloves.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_BoxingGloves.HitWorld"
-				"sound_burst"	"Weapon_BoxingGloves.MissCrit"
+				"sound_burst"			"Weapon_BoxingGloves.CritHit"
 			}
 			"visuals_red"
 			{
@@ -24333,11 +24334,6 @@ Fires....... something"
 					"attribute_class"	"mult_dmg"
 					"value"				"0.2"
 				}
-				"bullets per shot hidden"
-				{
-					"attribute_class"	"mult_bullets_per_shot"
-					"value"	"0.75"
-				}
 				"dmg falloff increased"
 				{
 					"attribute_class"	"mult_dmg_falloff"
@@ -24346,7 +24342,7 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "150"
+					"value" "200"
 				}
 			}
 			"visuals"																		
