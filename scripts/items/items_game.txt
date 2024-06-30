@@ -20687,17 +20687,17 @@
                 "damage bonus vs burning"
 				{
 					"attribute_class"	"mult_dmg_vs_burning"
-					"value"	"1.20"
+					"value"	"1.50"
 				}
 				"dmg penalty vs nonburning"
 				{
 					"attribute_class"	"mult_dmg_vs_nonburning"
-					"value"	"0.30"
+					"value"	"0.50"
 				}
 				"dmg penalty vs buildings"
 				{
 					"attribute_class"	"mult_dmg_vs_buildings"
-					"value"	"0.60"
+					"value"	"0.50"
 				}
 				"Blast radius decreased"
 				{
@@ -20707,29 +20707,19 @@
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value" "1.20"
+					"value" "1.30"
                 }
-				"maxammo primary reduced"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0.04"
-				}
-				"reload time increased hidden"
-				{
-					"attribute_class"	"mult_reload_time_hidden"
-					"value"	"0.70"
-				}
-				"no reload single"
-				{
-					"attribute_class"	"set_no_reload_single"
-					"value"	"1"
+					"attribute_class"	"max_ammo"
+					"value" "12"
 				}
 			}
 			"visuals"
 			{
-				"sound_single_shot"	"Weapon_Does_Dumpster.Single"
-				"sound_burst"		"Weapon_Does_Dumpster.SingleCrit"
-				"sound_reload"		"Weapon_DumpsterRocket.Reload"
+				"sound_single_shot"		"Weapon_Does_Dumpster.Single"
+				"sound_burst"			"Weapon_Does_Dumpster.SingleCrit"
+				"sound_reload"			"Weapon_DumpsterRocket.Reload"
 				"sound_special1"		"Weapon_Airstrike.Explosion"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -22765,12 +22755,12 @@ Fires....... something"
 				"weapon burn dmg increased"
 				{
 					"attribute_class"	"mult_wpn_burndmg"
-					"value" "1.20"
+					"value" "1.25"
 				}
 				"weapon burn time increased"
 				{
 					"attribute_class"	"afterburn_duration_mult"
-					"value" "1.20"
+					"value" "1.25"
 				}
 				"airblast cost decreased"
 				{
@@ -22785,7 +22775,7 @@ Fires....... something"
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "150"
+					"value" "140"
 				}
 			}
 			"visuals"
@@ -24324,25 +24314,25 @@ Fires....... something"
 					"attribute_class"	"mult_spread_scale"
 					"value"	"0.7"
 				}
-				"fire rate bonus"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"0.5"
-				}
-				"damage penalty"
+				"damage bonus hidden"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.2"
+					"value"	"1.50"
 				}
-				"dmg falloff increased"
+				//"fire rate bonus"
+				//{
+				//	"attribute_class"	"mult_postfiredelay"
+				//	"value"				"0.5"
+				//}
+				"bullets per shot hidden"
 				{
-					"attribute_class"	"mult_dmg_falloff"
-					"value"	"2.00"
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"0.25"
 				}
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "200"
+					"value" "140"
 				}
 			}
 			"visuals"																		
@@ -24760,20 +24750,20 @@ Fires....... something"
 					"attribute_class"	"mult_postfiredelay"
 					"value" "0.75"
 				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.85"
+				}
 				"projectile spread angle penalty"
 				{
 					"attribute_class"	"projectile_spread_angle"
 					"value"				"3"
 				}
-				"damage penalty"
+				"max ammo override"
 				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.90"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"				"0.30"
+					"attribute_class"	"max_ammo"
+					"value" "24"
 				}
 				
 			}
@@ -24974,6 +24964,7 @@ Fires....... something"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
 		"9750"
+		// Spy Deagle
 		{
 			"craft_class"	""
 			"baseitem"		"0"
@@ -25036,6 +25027,11 @@ Fires....... something"
 					"attribute_class"	"mod_recoil_angle"
 					"value" "3"
 				}
+				"max ammo override"
+				{
+					"attribute_class"	"max_ammo"
+					"value" "27"
+				}
             }
 			"static_attrs"
 			{
@@ -25049,7 +25045,8 @@ Fires....... something"
 			}	
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
-			"particle_suffix"		"pistol"
+			"xifier_class_remap"	"weapon_revolver"
+			"particle_suffix"		"revolver"
 		}
 		"9751"
 		{
@@ -26157,6 +26154,7 @@ Fires....... something"
 		}
 		"9571"
 		{
+		//
 			"name"	"The .357"
 			"first_sale_date"	"2011/08/11"
 			"item_class"	"tf_weapon_revolver"
@@ -26175,7 +26173,8 @@ Fires....... something"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
+			//it's just the ambassador,, 
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name" ".357 Magnum"
 			"item_description"	""
@@ -35576,10 +35575,10 @@ Fires....... something"
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
 				}
-				"deploy time decreased"
+				"switch from wep deploy time decreased"
 				{
-					"attribute_class"	"mult_deploy_time"
-					"value" "0.50"
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value"	"0.5"
 				}
 				"provide on active"
 				{
@@ -37180,6 +37179,79 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 			"xifier_class_remap"	"force_a_nature"
+		}
+		"9967"
+		{
+			"name"	"Fire Retardant Suit / Protective Suit"
+			// cause i want to see chaos
+			"item_class"	"tf_wearable"
+			"baseitem" "0"
+			"enabled" "1"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Protective Suit"
+			"item_name"	"Fire Retardant Suit"
+			"item_slot"	"secondary"
+			"item_description"	"I HATE YOU."
+			//desc later idf
+			"image_inventory"	"backpack/player/items/spy/firesuit"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	""
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"show_in_armory"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"spy"  "1"
+			}
+			"attributes"
+			{
+				"fire retardant"
+				{
+					"attribute_class"	"set_fire_retardant"
+					"value"	"1"
+				}
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"	"0.5"
+				}
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value"	"1.50"
+				}
+				"torso scale"
+				{
+					"attribute_class"		"torso_scale"
+					"value"		"1.15"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				//the stats we need dont exist, these will do
+            }
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"mouse_pressed_sound" 	"ui/item_light_gun_pickup.wav"
+			"drop_sound" 		"ui/item_light_gun_drop.wav"
 		}
 		"30143"
 		{
@@ -50546,6 +50618,16 @@ Fires....... something"
 			"effect_type"	"neutral"
 						"stored_as_integer"	"1"
 
+		}
+		"10061"
+        {
+            "name"    "bullets per shot"
+            "attribute_class"    "mult_bullets_per_shot"
+            "description_string"    "#Attrib_BulletsPerShot_Bonus"
+            "description_format"    "value_is_percentage"
+            "hidden"    "0"
+            "effect_type"    "negative"
+            "stored_as_integer"    "0"
 		}
 	}
 	"attribute_controlled_attached_particles"
