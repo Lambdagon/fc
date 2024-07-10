@@ -2542,10 +2542,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus HIDDEN"
+				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.60"
+					"value"	"1.40"
 				}
 				"melee range multiplier"
 				{
@@ -2561,11 +2561,6 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"2"	
-				}
-				"gunslinger punch combo"
-				{
-					"attribute_class"	"gunslinger_punch_combo"
-					"value"				"1"
 				}
 				"crit kill will gib"
 				{
@@ -19086,7 +19081,7 @@
 		}
 		"9035"
 		{
-			"name"	"TFC Umbrella"
+			"name"	"Civilian Umbrella"
 			"item_class"	"tf_weapon_tfc_umbrella"
 			"baseitem" "1"
 			"capabilities"
@@ -19140,11 +19135,6 @@
 				{
 					"attribute_class"	"allowed_in_medieval_mode"
 					"value"	"1"
-				}
-				"damage bonus"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"1.70"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -26896,71 +26886,7 @@ Fires....... something"
 			}
 		"9785"
 		{
-			"name"	"Security Shades DX"
-			"first_sale_date"	"2011/07/05"
-			"prefab"		"base_misc"
-			"loadondemand" "1"
-			"item_class"	"tf_wearable"
-			"craft_material_type"	"hat"
-			"craft_class"	"hat"
-			"capabilities"
-			{
-				"nameable"				"1"
-				"can_craft_count"		"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"show_in_armory"	"1"
-			"item_type_name" "Glasses"
-			"item_name"	"Security Shades Deluxe"
-			"item_description"	"MAD: 100%"
-			"item_slot"	"misc"
-			"equip_region"	"glasses"
-			"item_quality"	"unique"
-			"image_inventory"	"backpack/cop_glasses_dx"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/items/heavy/cop_glasses.mdl"
-			"drop_type"	"drop"
-			"propername"	"0"
-			"attributes"
-			{
-				"torso scale"
-				{
-					"attribute_class"		"torso_scale"
-					"value"		"1.3"
-				}  
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0.6"
-				}
-				"maxammo primary reduced"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value"	"0"
-				}
-				"maxammo secondary reduced"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0"
-				}
-                "move speed bonus"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"1.30"
-				}
-                "max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"	"50"
-				}
-			}
-			"used_by_classes"
-			{
-				"heavy"		"1"
-			}
-			"mouse_pressed_sound"	"pootis.mp3"
-			"drop_sound"		"ui/item_hat_drop.wav"
+			// was security shades DX
 		}
 		"9786"
 		{
@@ -30165,10 +30091,15 @@ Fires....... something"
 			}
 			"attributes"
 			{
+				"SET BONUS: dmg from sentry reduced"
+				{
+					"attribute_class"	"dmg_from_sentry_reduced"
+					"value"	"0.70"
+				}
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value"	"0.75"
+					"value"	"0.7"
 				}
 				"boots falling stomp"
 				{
@@ -30178,12 +30109,7 @@ Fires....... something"
 				"charge impact damage increased"
 				{
 					"attribute_class"	"charge_impact_damage"
-					"value"			"4.0"
-				}
-				"dmg taken from blast reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"			"0.8"
+					"value"			"3.0"
 				}
 				"dmg taken from bullets reduced"
 				{
@@ -30200,11 +30126,6 @@ Fires....... something"
 					"attribute_class"	"mod_jump_height"
 					"value" "2.00"
 				}
-				"mod_air_control_blast_jump"
-				{
-					"attribute_class"	"mod_air_control_blast_jump"
-					"value" "3.0"
-				}
 				"maxammo primary reduced"
 				{
 					"attribute_class"	"mult_maxammo_primary"
@@ -30217,7 +30138,7 @@ Fires....... something"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
+			"drop_sound"			"ui/item_wood_pole_drop.wav"
 		}
 		"9860"
 		{
@@ -31690,19 +31611,6 @@ Fires....... something"
 				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/spr18_frag_proof_fragger/spr18_frag_proof_fragger.mdl"
-			"attributes"
-			{
-				"dmg taken from blast reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"	"0.99"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.99"
-				}
-			}
 			"used_by_classes"
 			{
 				"demoman"		"1"
@@ -32890,7 +32798,7 @@ Fires....... something"
 			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-"model_player_per_class"
+			"model_player_per_class"
 			{
 				"civilian"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_civilian.mdl"
 			}
@@ -33128,7 +33036,7 @@ Fires....... something"
 		}
 		"9935"
 		{
-			"name"	"Civ L'etranger"
+			"name"	"Civ L'etranger Stranger"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_revolver"
 			"craft_class"	"weapon"
@@ -36723,7 +36631,7 @@ Fires....... something"
 		}
 		"9960"
 		{
-			"name"	"Displacer Cannon Nerfed Type"
+			"name"	"Displacer Cannon"
 			"item_class"	"tf_weapon_displacer"
 			"baseitem" "0"
 			"enabled" "1"
@@ -36744,7 +36652,8 @@ Fires....... something"
 			"attach_to_hands" "2"
 			"inspect_panel_dist" "40"
 			"attach_to_hands" "2"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
+			//never supposed to show in armory
 			"inspect_panel_dist" "40"
 			"item_quality"	"normal"
 			"propername"	"1"
@@ -36753,36 +36662,14 @@ Fires....... something"
 			"used_by_classes"
 			{
 				"mercenary"  "1"
-				//"robo" "1"
 			}
 			"attributes"
 			{
-				"damage penalty HIDDEN"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.25"
-				}
-				//"blast dmg to self reduced"
-				//{
-				//	"attribute_class"	"blast_dmg_to_self"
-				//	"value"	"0.5"
-				//}
 				"max ammo override"
 				{
 					"attribute_class"	"max_ammo"
-					"value" "3"
+					"value" "4"
 				}
-				//"spawn ammo override"
-				//{
-				//	"attribute_class"	"mod_spawn_ammo_override"
-				//	"value" "3"
-				//}
-				"blast dmg to self increased"
-				{
-					"attribute_class"	"blast_dmg_to_self"
-					"value"	"1.50"
-				}
-				//doesn't really do anything, just tells the player that you will die at close quarters
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_clipsize"
