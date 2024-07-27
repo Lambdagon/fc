@@ -241,7 +241,7 @@
 			"border_armed"			"AdvRightButtonArmed"
 			"border_depressed"		"AdvRightButtonDepressed"	
 			"selectedFgColor_override"		"255 255 180 255"
-			
+		}
 	}
 
 }
