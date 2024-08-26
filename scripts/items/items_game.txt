@@ -11222,7 +11222,7 @@
 			{
 				"soldier"	"1"
 				"demoman"	"1"
-				"civilian"  "1"
+				//"civilian"  "1"
 			}
 			"static_attrs"
 			{
@@ -14553,7 +14553,7 @@
 			"used_by_classes"
 			{
 				"pyro"	"1"
-				"civilian"	"1"
+				//"civilian"	"1"
 			}
 			"static_attrs"
 			{
@@ -14865,8 +14865,7 @@
 		{
 			"name"	"The Huo Long Heatmaker"
 			"prefab"		"weapon_long_heatmaker"
-			"show_in_armory"	"0"
-			//FCBroken: This live weapon has no functionality and is hidden until it is fixed
+			"show_in_armory"	"1"
 			"inspect_panel_dist" "88"
 		}
  		"812"
@@ -18914,7 +18913,7 @@
 				"scout"		"1"
 				"soldier"	"1"
 				"demoman"	"1"
-				"civilian"	"1"
+				//"civilian"	"1"
 				"agent"		"1"
 			}
 			"visuals"
@@ -19051,7 +19050,7 @@
 			"used_by_classes"
 			{
 				"medic"	"1"
-				"civilian"	"1"
+				//"civilian"	"1"
 				"mercenary"	"1"
 			}
 			"static_attrs"
@@ -27226,7 +27225,7 @@ Fires....... something"
 			"item_name"	"Benefactor's Bowl"
 			"item_description"	""
 			"item_slot"	"head"
-			"equip_region"		"disconnected_floating_item"
+			"equip_region"		"pyro_head_replacement"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
@@ -33719,6 +33718,13 @@ Fires....... something"
 			"item_name"		"Issued Protector"
 			"item_description"		""
 			"item_slot"	"misc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/pyro/short2014_sengoku_scorcher2/short2014_sengoku_scorcher"
 			"capabilities"
@@ -37144,6 +37150,90 @@ Fires....... something"
 			}
 			"mouse_pressed_sound" 	"ui/item_light_gun_pickup.wav"
 			"drop_sound" 		"ui/item_light_gun_drop.wav"
+		}
+		"9968"
+		{
+			"name"	"Quarter Zatoichi"
+			"item_class"	"tf_weapon_tfc_umbrella"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1" 
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_SoldierKatana"
+			"item_name"	"Quarter Zatoichi"
+			"item_description"	""
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_shogun_katana/c_shogun_katana"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/v_models/v_shogun_katana_civilian.mdl"
+			"model_world"	"models/weapons/w_models/w_shogun_katana_civilian.mdl"
+			"attach_to_hands"	"2"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
+			"static_attrs"
+			{
+				"item_meter_charge_type"						"1"
+				"item_meter_charge_rate"			"15"
+				"meter_label"							"Boost"
+			}
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"51" 
+				}
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value"	"2"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+				"is_a_sword"
+				{
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
+				}
+				"decapitate type"
+				{
+					"attribute_class"	"decapitate_type"
+					"value"	"1"
+				}
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"50"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"honorbound"
+				{
+					"attribute_class"	"honorbound"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"30143"
 		{
