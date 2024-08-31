@@ -26476,11 +26476,11 @@ Fires....... something"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 			"attributes"
 			{
-				"melee range multiplier"
-				{
-					"attribute_class"	"melee_range_multiplier"
-					"value"	"1.60"
-				}
+				//"melee range multiplier"
+				//{
+				//	"attribute_class"	"melee_range_multiplier"
+				//	"value"	"1.60"
+				//}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
@@ -26496,10 +26496,15 @@ Fires....... something"
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
-				"single wep deploy time increased"
+				//"single wep deploy time increased"
+				//{
+				//	"attribute_class"	"mult_single_wep_deploy_time"
+				//	"value"	"1.30"
+				//}
+				"is_a_sword"
 				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.30"
+					"attribute_class"	"is_a_sword"
+					"value"				"72"
 				}
 				"decapitate type"
 				{
@@ -26515,6 +26520,11 @@ Fires....... something"
 				{
 					"attribute_class"	"kill_eater_score_type_2"
 					"value" 	"0"									
+				}
+				"small sentry"
+				{
+					"attribute_class" "build_small_sentries"
+					"value"		"1"
 				}
 			}
 		}
@@ -50931,6 +50941,16 @@ Fires....... something"
             "hidden"    "0"
             "effect_type"    "negative"
             "stored_as_integer"    "0"
+		}
+		"10062"
+        {
+            "name"    "small sentry"
+            "attribute_class"    "build_small_sentries"
+            "description_string"    "Build a slightly smallers sentry"
+            "description_format"    "value_is_additive"
+            "hidden"    "0"
+            "effect_type"    "neutral"
+            "stored_as_integer"    "1"
 		}
 	}
 	"attribute_controlled_attached_particles"
