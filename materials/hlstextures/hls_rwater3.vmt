@@ -3,10 +3,6 @@
 	"$color" "[2 2 2]"
 	"$basetexture" "hlstextures/hls_rwater3"
 	"$alpha" "0.99"
-	"$bumpmap" "dev/water_dudv"
-	"$bumpframe" "0"
-	"$ssbump" 1
-	
 	"$refracttexture" "_rt_WaterRefraction"
 	"$refractamount" "0"
 	"%compilewater" 1
@@ -18,21 +14,15 @@
 	"$fogend" 550.00
 
     "$translate" "[0.0 0.0]"
-	"$scale" "[1 1]"
+	"$scale" "[1.5 1.5]"
 
     "Proxies"
     {
-		"AnimatedTexture"
-		{
-			"animatedtexturevar" "$bumpmap"
-			"animatedtextureframenumvar" "$bumpframe"
-			"animatedtextureframerate" 30
-		}
         "Sine"
         {
-            "sineperiod" 10
-            "sinemin" "1.75"
-            "sinemax" "1.77"
+            "sineperiod" 15
+            "sinemin" "1.8"
+            "sinemax" "1.83"
             "resultVar" "$scale"
         }
        
