@@ -10281,6 +10281,8 @@
 		0 : "No"
 		1 : "Yes"
 	]
+	
+	Target(string) : "Sets the target entity to teleport players to when using TeleportPlayersNotTouching"
 
 	PlayerValue(integer) : "Number of Players" : 50 : "The value this trigger will use to compare with.  Use value range of 0 - 100 for percentage."
 
@@ -10288,6 +10290,7 @@
 	output OnPlayersOut(void) : "This gets fired after the player count drops below the requirement."
 	
 	input Toggle(void) : "Toggles this trigger between enabled and disabled states."
+	input TeleportPlayersNotTouching(void) : "Toggles this trigger between enabled and disabled states."
 ]
 
 @PointClass base(Targetname, Parentname) = logic_mirror_movement :

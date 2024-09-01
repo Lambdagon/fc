@@ -403,7 +403,6 @@ ep1_citadel_00
 			}
 		}
 
-
 		create {classname "logic_auto"
 			values
 			{
@@ -415,7 +414,7 @@ ep1_citadel_00
 		}
 
 		// never stop the lcs ents
-		delete { targetname "relay_cancelVCDs" }//triggerd by trigger_falldeath
+		delete {targetname "relay_cancelVCDs"} //triggerd by trigger_falldeath
 
 		// fix damage filters here (useing !activator instead of !player and use syn filter)
 		delete { classname "trigger_multiple" origin "-7918 5582 72" }
@@ -431,12 +430,19 @@ ep1_citadel_00
 			}
 		}
 
+		create {classname "fc_weapon_progress"
+			values
+			{
+				targetname "weapon_progress"
+				wpnprogress "0"
+				physcannon_progress "0"
+			}
+		}
 		create {classname "logic_relay"
 			values
 			{
 				targetname "relay_givegravgun_1"
-				OnTrigger "syn_new_weapon,Enable,,0,-1"
-				OnTrigger "syn_new_weapon,EquipAllPlayers,,0.1,-1"
+				OnTrigger "weapon_progress,SetPhyscannonProgress,1,0,-1"
 				OnTrigger "relay_take_grav_gun1Nag,kill,,0,0"
 				OnTrigger "speaker_TakeGravGun1Nag,TurnOff,,0,0"
 				OnTrigger "sprite_gravgun,kill,,0,0"
@@ -448,5 +454,8 @@ ep1_citadel_00
 		delete { targetname "trigger_falldeath" }
 
 		delete { classname "trigger_multiple" origin "-8592 5690 -83.33" }
+		
+		// Fix precache
+		create {classname "ambient_generic" values {message "ambient/fire/fire_small_loop2.wav"} }
 	}
 }
