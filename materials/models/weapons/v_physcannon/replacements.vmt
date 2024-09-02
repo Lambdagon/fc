@@ -1,0 +1,255 @@
+replacements
+{
+	templates
+	{
+		v_physcannon_sheet
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					"$baseTexture" "Models/Weapons/v_physcannon/v_physcannon_sheet_pyro"
+					"$normalmap" "Models/Weapons/v_physcannon/v_superphyscannon_sheet_normal"
+					"$phongexponenttexture" "Models/Weapons/v_physcannon/v_superphyscannon_sheet_ao"
+
+					"$selfillum" 1
+
+					"$phong" "1"
+					"$phongexponent" "18"
+					"$phongboost" "1"
+					"$lightwarptexture" "models\weapons\lightwarp_tf2style\lightwarp_tf2style02"
+					
+					"$phongfresnelranges"	"[.5 .9 .3]"
+
+					"$halflambert" "1"
+
+					"$tempvar" "0"
+
+					"$commadd_phongexponent" "20"
+					"$commadd_phongboost" 	"22.5"
+
+					"$basemapalphaphongmask" "1"
+					
+					"$rimlight" "3"						
+					"$rimlightexponent" "28"				
+					"$rimlightboost" "3"
+
+					// Cloaking
+					"$cloakPassEnabled" "1"
+					"$sheenPassEnabled" "1"
+
+					"$yellow" "0"
+
+					"Proxies"
+					{
+						"AnimatedWeaponSheen"
+						{
+							"animatedtexturevar" 		"$sheenmapmask"
+							"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+							"animatedtextureframerate" 		"40"
+						}
+						"YellowLevel"
+						{
+							"resultVar" "$yellow"
+						}
+						"Multiply"
+						{
+							"srcVar1" "$color2"
+							"srcVar2" "$yellow"
+							"resultVar" "$color2"
+						}
+					}
+				}
+			}
+		}
+		v_superphyscannon_sheet
+		{
+			"VertexLitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					"$baseTexture" "Models/Weapons/v_physcannon/v_superphyscannon_sheet_pyro"
+					"$normalmap" "Models/Weapons/v_physcannon/v_superphyscannon_sheet_normal"
+					"$phongexponenttexture" "Models/Weapons/v_physcannon/v_superphyscannon_sheet_ao"
+
+					"$selfillum" 1
+
+					"$phong" "1"
+					"$phongexponent" "18"
+					"$phongboost" "1"
+					"$lightwarptexture" "models\weapons\lightwarp_tf2style\lightwarp_tf2style02"
+					
+					"$phongfresnelranges"	"[.5 .9 .3]"
+
+					"$halflambert" "1"
+
+					"$tempvar" "0"
+
+					"$commadd_phongexponent" "20"
+					"$commadd_phongboost" 	"22.5"
+
+					"$basemapalphaphongmask" "1"
+					
+					"$rimlight" "3"						
+					"$rimlightexponent" "28"				
+					"$rimlightboost" "3"
+
+					// Cloaking
+					"$cloakPassEnabled" "1"
+					"$sheenPassEnabled" "1"
+
+					"$yellow" "0"
+
+					"Proxies"
+					{
+						"AnimatedWeaponSheen"
+						{
+							"animatedtexturevar" 		"$sheenmapmask"
+							"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+							"animatedtextureframerate" 		"40"
+						}
+						"YellowLevel"
+						{
+							"resultVar" "$yellow"
+						}
+						"Multiply"
+						{
+							"srcVar1" "$color2"
+							"srcVar2" "$yellow"
+							"resultVar" "$color2"
+						}
+					}
+				}
+			}
+		}
+		w_physics_sheet
+		{
+			"VertexlitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					"$basetexture" "Models/Weapons/V_physcannon/w_physics_sheet_pyro"
+					"$selfillum" "1"
+					"$envmap" "env_cubemap"
+					"$envmapcontrast" ".7"
+					"$envmapsaturation" "[.8 .8 .8]"
+					"$normalmapalphaenvmapmask" 1
+
+				// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+					"$phong" "1"
+				//	"$lightwarptexture" "models/alyx/skin_lightwarp"
+					"$phongexponent" "32"
+					"$phongboost"	"4"
+					"$phongfresnelranges"	"[.3 0.4 3.5]"
+
+					"$yellow" "0"
+
+					// Cloaking
+					"$cloakPassEnabled" "1"
+					"$sheenPassEnabled" "1"
+
+					"Proxies"
+					{
+						"AnimatedWeaponSheen"
+						{
+							"animatedtexturevar" 		"$sheenmapmask"
+							"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+							"animatedtextureframerate" 		"40"
+						}
+						"YellowLevel"
+						{
+							"resultVar" "$yellow"
+						}
+						"Multiply"
+						{
+							"srcVar1" "$color2"
+							"srcVar2" "$yellow"
+							"resultVar" "$color2"
+						}
+					}
+				}
+			}
+		}
+		w_physics_sheet2
+		{
+			"VertexlitGeneric"
+			{
+				pyro_vision
+				{
+					$EFFECT					1
+					$VERTEX_LIT				1
+
+					"$basetexture" "Models/Weapons/V_physcannon/w_physics_sheet2_pyro"
+					"$selfillum" "1"
+					"$envmap" "env_cubemap"
+					"$envmapcontrast" ".7"
+					"$envmapsaturation" "[.8 .8 .8]"
+					"$normalmapalphaenvmapmask" 1
+
+				// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+					"$phong" "1"
+				//	"$lightwarptexture" "models/alyx/skin_lightwarp"
+					"$phongexponent" "32"
+					"$phongboost"	"4"
+					"$phongfresnelranges"	"[.3 0.4 3.5]"
+
+					"$yellow" "0"
+
+					// Cloaking
+					"$cloakPassEnabled" "1"
+					"$sheenPassEnabled" "1"
+
+					"Proxies"
+					{
+						"AnimatedWeaponSheen"
+						{
+							"animatedtexturevar" 		"$sheenmapmask"
+							"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+							"animatedtextureframerate" 		"40"
+						}
+						"YellowLevel"
+						{
+							"resultVar" "$yellow"
+						}
+						"Multiply"
+						{
+							"srcVar1" "$color2"
+							"srcVar2" "$yellow"
+							"resultVar" "$color2"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	patterns
+	{
+		v_physcannon_sheet
+		{
+			template	"v_physcannon_sheet"
+		}
+		v_superphyscannon_sheet
+		{
+			template	"v_superphyscannon_sheet"
+		}
+		w_physics_sheet
+		{
+			template	"w_physics_sheet"
+		}
+		w_physics_sheet2
+		{
+			template	"w_physics_sheet2"
+		}
+	}
+}
+
