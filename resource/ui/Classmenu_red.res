@@ -1263,5 +1263,186 @@
 		"textAlignment"	"center"
 		"font"			"MenuClassBuckets"
 		"fgcolor"		"TanLight"
-	}								
+	}	
+
+	"numRobo" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numRobo"
+		"xpos"			"c-300"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numRobo%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}	
+	
+	"numMercenary" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numMercenary"
+		"xpos"			"c-250"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numMercenary%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}		
+	
+	"numAntlion" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numAntlion"
+		"xpos"			"c-200"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numAntlion%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}			
+	
+	"numZombieFast" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numZombieFast"
+		"xpos"			"c-110"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numZombieFast%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}				
+	
+	"numJohn" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numJohn"
+		"xpos"			"c-60"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numJohn%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}					
+	
+	"numSaxton" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numSaxton"
+		"xpos"			"c-10"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numSaxton%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}						
+	
+	"numCombine" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numCombine"
+		"xpos"			"c78"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numCombine%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}							
+	
+	"numCivilian" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numCivilian"
+		"xpos"			"c128"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numCivilian%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}						
+	
+	"numAgent" [$WIN32]
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"numAgent"
+		"xpos"			"c178"
+		"ypos"			"380"
+		"zpos"			"5"
+		"wide"			"50"
+		"tall"			"12"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%numAgent%"
+		"textAlignment"	"center"
+		"font"			"MenuClassBuckets"
+		"fgcolor"		"TanLight"
+	}		
+	
 }
