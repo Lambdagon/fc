@@ -14733,17 +14733,17 @@
 					"attribute_class"	"provide_on_active"
 					"value" "1"
 				}
-				"heal on kill"
-				{
-					"attribute_class"	"heal_on_kill"
-					"value" "20"
-				}
-				//this is a bandaid fix
-				//"heal on hit for rapidfire"
+				//"heal on kill"
 				//{
-				//	"attribute_class"	"add_onhit_addhealth"
-				//	"value"	"3"
+				//	"attribute_class"	"heal_on_kill"
+				//	"value" "20"
 				//}
+				//this is a bandaid fix
+				"heal on hit for rapidfire"
+				{
+					"attribute_class"	"add_onhit_addhealth"
+					"value"	"3"
+				}
 				//THIS SHIT IS BROKEN, **SOMEONE** PLEASE FIX
 				"fire rate bonus"
 				{
@@ -25132,6 +25132,88 @@ Fires....... something"
 			}
 			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
+		
+		"751"
+		{
+			"name" "The Cleaner's Carbine"
+			"first_sale_date"	"2012/06/27"
+			"baseitem" "0"
+			"propername"	"1"
+			"item_class"	"tf_weapon_charged_smg"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_logname"	"pro_smg"
+			"item_iconname"	"pro_smg"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_name"	"#TF_Pro_SMG"
+			"item_description"	"#TF_Pro_SMG_Desc"
+			"item_slot"	"secondary"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pro_smg/c_pro_smg"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_pro_smg/c_pro_smg.mdl"
+			"attach_to_hands"	"1"
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "1.25"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.80"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"minicrit_boost_charge_rate"
+				{
+					"attribute_class" "minicrit_boost_charge_rate"
+					"value" "1"
+				}
+				"minicrit_boost_when_charged"
+				{
+					"attribute_class" "minicrit_boost_when_charged"
+					"value" "8"
+				}
+			}
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -7"							
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_UrbanProfessional.Single"
+				"sound_burst"		"Weapon_UrbanProfessional.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
 		"752"
 		{
 			"name"	"The Hitman's Heatmaker"
@@ -25153,8 +25235,7 @@ Fires....... something"
 			}
 			"item_logname"	"pro_rifle"
 			"item_iconname"	"pro_rifle"
-			"show_in_armory"	"0"
-			//FCBroken: This live weapon has no functionality and is hidden until it is fixed
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"	"#TF_Pro_SniperRifle"
 			"item_description"	"#TF_Pro_SniperRifle_Desc"
