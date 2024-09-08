@@ -1,0 +1,82 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"models/workshop/player/items/spy/spy_tec_specs/spy_tec_specs_color"
+	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
+	"$phong"		"1"
+	"$phongexponent"		"25"
+	"$phongboost"		"0.100000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"4"
+	"$rimlightboost"		"2"
+	"$blendtintbybasealpha"		"0"
+	"$blendtintcoloroverbase"		"0.000000"
+	"$colortint_base"		"{ 255 255 255 }"
+	"$color2"		"{ 250 220 255 }"
+	"$colortint_tmp"		"[0 0 0]"
+	"$bumpmapalphaphongmask"		"1"
+	"$cloakPassEnabled"		"1"
+	"$detail"		"effects/tiledfire/fireLayeredSlowTiled512"
+	"$detailscale"		"5"
+	"$detailblendfactor"		"0"
+	"$detailblendmode"		"6"
+	"$yellow"		"0"
+	">=DX90"
+	{
+		"$selfillum"		"0"
+	}
+	"$selfillumtint"		"[1.741177 1.741177 1.741177]"
+	"$angle"		"0.000000"
+	"$translate"		"[0.0 0.0]"
+	"$center"		"[0.5 0.5]"
+	"proxies"
+	{
+		"LinearRamp"
+		{
+			"rate"		"-360"
+			"initialValue"		"0.000000"
+			"resultVar"		"$angle"
+		}
+		"TextureTransform"
+		{
+			"translateVar"		"$translate"
+			"rotateVar"		"$angle"
+			"centerVar"		"$center"
+			"resultVar"		"$basetexturetransform"
+		}
+		"invis"
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar"		"$detail"
+			"animatedtextureframenumvar"		"$detailframe"
+			"animatedtextureframerate"		"30"
+		}
+		"BurnLevel"
+		{
+			"resultVar"		"$detailblendfactor"
+		}
+		"ItemTintColor"
+		{
+			"resultVar"		"$colortint_tmp"
+		}
+		"SelectFirstIfNonZero"
+		{
+			"srcVar1"		"$colortint_tmp"
+			"srcVar2"		"$colortint_base"
+			"resultVar"		"$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar"		"$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1"		"$color2"
+			"srcVar2"		"$yellow"
+			"resultVar"		"$color2"
+		}
+	}
+}
+
