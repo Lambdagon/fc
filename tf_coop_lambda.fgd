@@ -717,7 +717,6 @@
 [
 	TeamNum(choices) : "Team" : 0 : "Team" =
 	[
-		-1 : "No Team"
 		0 : "Any"
 		2 : "RED/Rebel"
 		3 : "BLU/Combine"
@@ -3384,7 +3383,7 @@
 
 
 //====================================================================================================================
-// CAPTURE POINT HANDLING
+// CAPTURE POINT HANDLING // FIXED BY THE REAL FISHMAN NOT THAT FAKE ASS BITCH
 //====================================================================================================================
 @PointClass base(Targetname, EnableDisable, Angles, Parentname) studio("models/effects/cappoint_hologram.mdl") = team_control_point :
 	"Control Point"
@@ -3435,22 +3434,32 @@
 	team_capsound_0(sound) : "Reset Sound" : "" : "Sound made when point resets."
 	team_capsound_2(sound) : "Red Capture Sound" : "" : "Sound made when RED captures."
 	team_capsound_3(sound) : "Blue Capture Sound" : "" : "Sound made when BLUE captures."
+	team_capsound_4(sound) : "Green Capture Sound" : "" : "Sound made when GREEN captures."
+	team_capsound_5(sound) : "Yellow Capture Sound" : "" : "Sound made when YELLOW captures."
 
 	team_model_0(studio) 	: "Reset Model" : "models/effects/cappoint_hologram.mdl" : "Model when point reset."
 	team_model_2(studio) 	: "RED Model" : "models/effects/cappoint_hologram.mdl" : "Model when RED owns the point."
 	team_model_3(studio) 	: "BLUE Model" : "models/effects/cappoint_hologram.mdl" : "Model when BLUE owns the point."
+	team_model_4(studio) 	: "GREEN Model" : "models/effects/cappoint_hologram.mdl" : "Model when GREEN owns the point."
+	team_model_5(studio) 	: "YELLOW Model" : "models/effects/cappoint_hologram.mdl" : "Model when YELLOW owns the point."
 
 	team_bodygroup_0(integer) : "Reset model bodygroup" : 3
 	team_bodygroup_2(integer) : "RED model bodygroup" : 1
 	team_bodygroup_3(integer) : "BLUE model bodygroup" : 1
+	team_bodygroup_4(integer) : "GREEN model bodygroup" : 1
+	team_bodygroup_5(integer) : "YELLOW model bodygroup" : 1
 
 	team_icon_0(material)	: "HUD icon neutral" : "sprites/obj_icons/icon_obj_neutral" : "HUD icon material when no one owns the point."
 	team_icon_2(material)	: "HUD icon RED" : "sprites/obj_icons/icon_obj_red" : "HUD icon material when RED owns the point."
 	team_icon_3(material)	: "HUD icon BLUE" : "sprites/obj_icons/icon_obj_blu" : "HUD icon material when BLUE owns the point."
+	team_icon_4(material)	: "HUD icon GREEN" : "sprites/obj_icons/icon_obj_grn" : "HUD icon material when GREEN owns the point."
+	team_icon_5(material)	: "HUD icon YELLOW" : "sprites/obj_icons/icon_obj_ylw" : "HUD icon material when YELLOW owns the point."
 
 	team_overlay_0(material) : "HUD overlay neutral" : "" : "HUD material that will overlay the icon when no one owns the point."
 	team_overlay_2(material) : "HUD overlay RED" : "" : "HUD material that will overlay the icon when RED owns the point."
 	team_overlay_3(material) : "HUD overlay BLUE" : "" : "HUD material that will overlay the icon when BLUE owns the point."
+	team_overlay_4(material) : "HUD overlay GREEN" : "" : "HUD material that will overlay the icon when GREEN owns the point."
+	team_overlay_5(material) : "HUD overlay YELLOW" : "" : "HUD material that will overlay the icon when YELLOW owns the point."
 
  	team_previouspoint_2_0(target_source) : "RED Previous Required Point 1" : "" : "The name of a previous capture point that RED must own to be able to capture this point. If empty, the team must own all points preceding this one."
 	team_previouspoint_2_1(target_source) : "RED Previous Required Point 2" : "" : "The name of a second previous capture point that RED must own to be able to capture this point."
@@ -3458,6 +3467,13 @@
 	team_previouspoint_3_0(target_source) : "BLUE Previous Required Point 1" : "" : "The name of a previous capture point that BLUE must own to be able to capture this point. If empty, the team must own all points preceding this one."
 	team_previouspoint_3_1(target_source) : "BLUE Previous Required Point 2" : "" : "The name of a second previous capture point that BLUE must own to be able to capture this point."
 	team_previouspoint_3_2(target_source) : "BLUE Previous Required Point 3" : "" : "The name of a third previous capture point that BLUE must own to be able to capture this point."
+
+	team_previouspoint_4_0(target_source) : "GREEN Previous Required Point 1" : "" : "The name of a previous capture point that GREEN must own to be able to capture this point. If empty, the team must own all points preceding this one."
+	team_previouspoint_4_1(target_source) : "GREEN Previous Required Point 2" : "" : "The name of a second previous capture point that GREEN must own to be able to capture this point."
+	team_previouspoint_4_2(target_source) : "GREEN Previous Required Point 3" : "" : "The name of a third previous capture point that GREEN must own to be able to capture this point."
+	team_previouspoint_5_0(target_source) : "YELLOW Previous Required Point 1" : "" : "The name of a previous capture point that YELLOW must own to be able to capture this point. If empty, the team must own all points preceding this one."
+	team_previouspoint_5_1(target_source) : "YELLOW Previous Required Point 2" : "" : "The name of a second previous capture point that YELLOW must own to be able to capture this point."
+	team_previouspoint_5_2(target_source) : "YELLOW Previous Required Point 3" : "" : "The name of a third previous capture point that YELLOW must own to be able to capture this point."
 
 	// Outputs
 	output OnOwnerChangedToTeam1(void) : "Sent when owner is changed to RED."
