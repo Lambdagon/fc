@@ -1,0 +1,68 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models/Weapons/v_crowbar/crowbar_cyl"
+	"$bumpmap" "models/Weapons/v_crowbar/crowbar_normal"
+//	"$envmap" "Environment Maps/specular"
+//	"$envmaptint" "[ .64 .64 .64 ]"
+//	"$envmap" "env_cubemap"
+//	"$normalmapalphaenvmapmask" 1
+
+// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+	"$phong" "1"
+//	"$lightwarptexture" "models/alyx/skin_lightwarp"
+	"$phongexponent" "15"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[.1 0.4 2]"
+
+	"$glowcolor" "1"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 			"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 			"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 			"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+
+
+}

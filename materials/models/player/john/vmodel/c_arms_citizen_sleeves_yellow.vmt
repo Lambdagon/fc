@@ -39,26 +39,43 @@
 	
 	// $FixPhongTint "{0.0001 0.0001 0.0001}"
 	
-	Proxies
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+	
+	"$yellow" "0"
+	"$one" "1"
+	
+	"360?$color2" "[ 0.7 0.7 0.7 ]"
+	
+	"$cloakPassEnabled" "1"
+	"Proxies"
 	{
-		PlayerColor
+		"spy_invis" //wmodel and team color cloak support
 		{
-			resultVar	$color2
-			default		0.2 0.4 0.7
 		}
-		Clamp
+		"invis" //vmodel cloak support
 		{
-			min 0.2
-			max 0.5
-			srcVar1 "$color2"
-			resultVar "$phongtint"
 		}
-		Clamp
+		"AnimatedTexture"
 		{
-			min 0.01
-			max 1.50
-			srcVar1 "$color2"
-			resultVar "$color2"
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
 		}
 	}
 }

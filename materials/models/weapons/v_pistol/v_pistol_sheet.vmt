@@ -1,0 +1,66 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/Weapons/V_pistol/v_pistol_sheet"
+	"$bumpmap" "Models/Weapons/V_pistol/v_pistol_sheet_normal"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.1 .1 .1]"
+	"$normalmapalphaenvmapmask" 1
+	"$selfillum" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongexponent" "15"
+	"$phongalbedotint" "1"								
+	"$phongfresnelranges"	"[.1 5 1]"
+	
+	"$glowcolor" "1"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 			"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 			"0"
+
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 			"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+
+	
+}

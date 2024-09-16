@@ -12,15 +12,28 @@ VertexLitGeneric
 
 	"$halflambert" "1"
 
+	"$glowcolor" "1"
 	// Cloaking
 	"$cloakPassEnabled" "1"
-	
-	// Glow
-	$glowcolor 1
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 			"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 			"0"
+
+	"$yellow" "0"
 
 	"Proxies"
 	{
-		"vm_invis"
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 			"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
 		{
 		}
 		"ModelGlowColor"
@@ -37,5 +50,16 @@ VertexLitGeneric
 			"srcVar1"  "$glowcolor"
 			"resultVar" "$color2"
 		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
 	}
+
 }
