@@ -4,6 +4,16 @@
 	"$bumpmap" "models/synth_blaster/normal"
 //	"$bumpmap" "normalclean"
 
+	"$detail" "effects/tiledfire/fireLayeredSlowTiled512.vtf"	
+	"$detailscale" "5"
+	"$detailblendfactor" .01
+	"$detailblendmode" 6
+	
+	"$yellow" "0"
+	"$one" "1"
+
+	"360?$color2" "[ 0.7 0.7 0.7 ]"
+
 	"$surfaceprop" "flesh"
 
 	"$envmap" "env_cubemap"
@@ -28,6 +38,7 @@
 
 	"$selfillum"	"1"
 	"$selfillummask"	"models/synth_blaster/selfillum_2"
+	"$cloakPassEnabled" "1"
 	"Proxies"
 	{
 		"Sine" 
@@ -51,6 +62,31 @@
 			"sinemin"		"1"
 			"sinemax"	"4"
 
+		}
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
 		}
 
 	}
