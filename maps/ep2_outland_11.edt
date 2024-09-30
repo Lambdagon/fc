@@ -1,0 +1,25 @@
+ep2_outland_11
+{
+	entity
+	{
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "ss_lamar_jump,AddOutput,OnEndSequence movekleiner:MoveToPosition::0.5:-1,0,-1"
+				OnMapSpawn "ss_lamar_jump,AddOutput,OnEndSequence movekleiner:CancelSequence::1:-1,0,-1"
+			}
+		}
+		create {classname "scripted_sequence" origin "1800 -9830 -242"
+			values
+			{
+				targetname "movekleiner"
+				spawnflags "96"
+				m_iszEntity "Kleiner"
+				m_fMoveTo "2"
+				m_flRadius "0"
+				angles "0 180 0"
+			}
+		}
+	}
+}
