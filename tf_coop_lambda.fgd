@@ -11119,3 +11119,16 @@
 	// Outputs
 	output OnFoundEntity(void) : "Fired when FindEntity is input and an entity was found. Passes the found entity as !Caller."
 ]
+
+@PointClass base(Item)  studio("models/weapons/w_models/w_shotgun.mdl") = tf_weapon_spawner :
+	"Shit Weapon spawner."
+[
+	model(studio) : "Model" : "" : "Overwrite the default model with a custom one."
+	itemid(integer) : "Item ID" : 1 : "The weapon id (from items_game.txt) to use for the spawner."
+	itemcost(integer) : "Price" : 0 : "The cost of the weapon, default if 0."
+
+	output OnPurchaseSuccessful(void) : ""
+	output OnPurchaseFailure(void) : ""
+	output OnAmmoTaken(void) : ""
+	output OnItemTaken(void) : ""
+]
