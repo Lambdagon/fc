@@ -25502,7 +25502,7 @@ Fires....... something"
 			"name"						"The High Noon"
 			"prefab"					"weapon_sniperrifle"
 			"show_in_armory"			"1"
-			"item_class"				"tf_weapon_revolver_slot1"
+			"item_class"				"tf_weapon_hunterrifle"
 			"item_logname"				"hunterrifle"
 			"item_iconname"				"hunterrifle"
 			"item_type_name"			"#TF_Weapon_RevRifle_Type"
@@ -25516,30 +25516,61 @@ Fires....... something"
 			"attach_to_hands"			"2"
 			"attributes"
 			{
-				//"max health additive bonus HIDDEN"
+				//"no scope" // 360
 				//{
-				//	"attribute_class"	"add_maxhealth"
-				//	"value"				"25"
+				//	"attribute_class"	"mod_no_scope"
+				//	"value"				"1"
 				//}
-				"revolver use hit locations"
+				"punch angle is constant"
 				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"1"
+					"attribute_class"	"punch_angle_is_constant"
+					"value"				"1"
 				}
-				"fire rate penalty"
+				"soft zoom"
 				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.3"
+					"attribute_class"	"mod_sniper_soft_zoom"
+					"value"				"1"
 				}
-				"dmg falloff reduced HIDDEN"
+				"max health additive bonus"
 				{
-					"attribute_class"	"mult_dmg_falloff"
-					"value"				"0"
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
+				//"sniper no dmg charge"
+				//{
+				//	"attribute_class"	"mod_sniper_no_dmg_charge"
+				//	"value"				"1"
+				//}
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"2.0"
 				}
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY"				"ACT_MP_RELOAD_STAND_PRIMARY_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"				"ACT_MP_RELOAD_CROUCH_PRIMARY_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"				"ACT_MP_RELOAD_SWIM_PRIMARY_ALT"
 				}
 			}
 		}
@@ -51279,6 +51310,26 @@ Fires....... something"
             "hidden"    "0"
             "effect_type"    "neutral"
             "stored_as_integer"    "1"
+		}
+		"10063"
+		{
+			"name"					"longer damage falloff distance"
+			"attribute_class"		"mult_falloff_distance"
+			"description_string"	"+%s1% damage falloff distance"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"positive"
+			"hidden"				"1"
+			"stored_as_integer"		"0"
+		}
+		"10064"
+		{
+			"name"	"soft zoom"
+			"attribute_class"	"mod_sniper_soft_zoom"
+			"description_string"	"#Attrib_SoftZoom"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
 		}
 	}
 	"attribute_controlled_attached_particles"

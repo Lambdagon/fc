@@ -1,0 +1,102 @@
+WeaponData
+{
+	// Attributes Base.
+	"printname"		"#TF_Weapon_HunterRifle"
+	"BuiltRightHanded"	"0"
+	"weight"		"3"
+	"WeaponType"		"primary"
+	"ITEM_FLAG_NOITEMPICKUP" 	"1"
+	
+	// Attributes TF.
+	"Damage"		"40"
+	"Range"			"8192"
+	"BulletsPerShot"	"1"
+	"Spread"		"0.0"
+	"TimeFireDelay"		"0.675"	// Reduced to 0.675 by fire rate attribute
+	"Secondary_TimeFireDelay"	"0.675" 
+	"TimeReload"		"1.5"
+	"ProjectileType"	"projectile_bullet"
+	"DoInstantEjectBrass"	"0"
+
+	// Ammo & Clip.
+	"primary_ammo"		"TF_AMMO_PRIMARY"
+	"secondary_ammo"	"None"
+	"clip_size"		"6"
+	"default_clip"		"6"
+	//"MaxAmmo"			"24"
+
+	// Buckets.
+	"bucket"		"0"
+	"bucket_position"	"0"
+
+	// Models.
+	"viewmodel"		"models/weapons/v_models/v_poacherspride_sniper.mdl"
+	"playermodel"	"models/weapons/w_models/w_poacherspride.mdl"
+	"anim_prefix"		"ac"
+	
+	//"HasTeamSkins_Viewmodel"	"1"
+	
+	// Muzzleflash
+	"MuzzleFlashModel"	"models/effects/muzzleflash/minigunmuzzle.mdl"
+	"MuzzleFlashParticleEffect" "muzzle_sniperrifle"
+	"MuzzleflashModelScale"	".3"
+
+	// Tracer.
+	//"TracerEffect"		"bullet_hunting_revolver_tracer01"
+	//"TracerFreq"		"1"
+
+	// Sounds.
+	// Max of 16 per category (ie. max 16 "single_shot" sounds).
+	SoundData
+	{
+		"reload"		"Weapon_HuntingRifle.WorldReload"
+		"single_shot"	"Weapon_HuntingRifle.Single"
+		"empty"			"Weapon_HuntingRifle.ClipEmpty"	
+		"burst"			"Weapon_huntingRifle.SingleCrit"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"sprites/bucket_sniper"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"weapon_s"
+		{	
+				"file"		"sprites/bucket_sniper"
+				"x"		"0"
+				"y"		"0"
+				"width"		"200"
+				"height"		"128"
+		}
+		"ammo"
+		{
+				"file"		"sprites/a_icons1"
+				"x"		"55"
+				"y"		"60"
+				"width"		"73"
+				"height"	"15"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"32"
+				"height"	"32"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}
