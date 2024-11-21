@@ -10310,6 +10310,49 @@
 	input TeleportPlayersNotTouching(void) : "Toggles this trigger between enabled and disabled states."
 ]
 
+@PointClass base(Targetname, Angles) color(0 255 0) studio() = info_vehicle_spawn : "Vehicle Spawn Entity keeps a vehicle for every player, with options to relocate vehicles upon certain conditions."
+[
+	model(studio) : "Vehicle Model Name" : ""
+
+	StartEnabled(choices) : "Start Enabled" : 1 : "Initial state of the vehicle spawn." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	StartGunEnabled(choices) : "Start with gun enabled" : 1 : "Vehicles will spawn with guns." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	VehicleType(choices) : "Vehicle Type" : 1 : "Type of vehicle this spawn will use." =
+	[
+		1 : "Jeep"
+		2 : "Airboat"
+		3 : "Jalopy"
+		4 : "Jeep again"
+	]
+
+	//RespawnVehicle(choices) : "Respawn Vehicle" : 0 : "Respawn vehicles if the players die." =
+	//[
+	//	0 : "No"
+	//	1 : "Yes"
+	//]
+
+	VehicleScript(string) : "Vehicle Script" : "scripts/vehicles/jeep_test.txt" : "Vehicle Script File"
+	VehicleSize(integer) : "Vehicle Spawn Size" : 192 : "Radius at which active vehicle must exit before spawning the next vehicle."
+
+	input Enable(void) : "Enable the use of the vehicles."
+	input Disable(void) : "Disable use of the vehicles."
+	input EnableGun(void) : "Enables vehicles from this spawner to have mounted guns."
+	input DisableGun(void) : "Disables vehicles from this spawner from having mounted guns."
+	input ResetEmpty(void) : "Removes vehicles spawned by this spawner that have nobody in them."
+	input ResetAll(void) : "Removed vehicles spawned by this spawner and kicks players out."
+
+	output OnSpawnVehicle(void) : "Fired when a vehicle is spawned, the !activator will be the vehicle."
+]
+
 @PointClass base(Targetname, Parentname) = logic_mirror_movement :
 	"An entity that can mirror entity movement to another entity."
 [
