@@ -8643,6 +8643,8 @@
 
 	input CreateLinkController(void) : "Automatically builds and attaches a link controller to the car, which cuts the node connections under the car while the car is standing still."
 	input DestroyLinkController(void) : "Destroys the link controller created by CreateLinkController."
+	
+	input EnableGun(bool) : "Enables or disables the gun and associated crosshair."
 
 	
 	CargoVisible(choices): "Hopper Visible" : 0 : "Is the striderbuster cargo hopper visible?" =
@@ -8654,6 +8656,12 @@
 	spawnflags(Flags) = 
 	[
 		1 : "HUD Locator Precache" : 0
+	]
+	
+	spawnwithextraseat(choices) : "Spawn With Legacy Seat" : 0 : "Enables spawning with an attached seat that you can't fire from." =
+	[
+		0 : "No"
+		1 : "Yes"
 	]
 
 	
@@ -8677,6 +8685,11 @@
 	model(studio) : "World model" : "models/airboat.mdl"
 	vehiclescript(string) : "Vehicle Script File" : "scripts/vehicles/airboat.txt"
 	EnableGun(choices) : "Has Gun" : 0 : "Whether the airboat's gun is enabled or disabled." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	spawnwithextraseat(choices) : "Spawn With Legacy Seat" : 0 : "Enables spawning with an attached seat that you can't fire from." =
 	[
 		0 : "No"
 		1 : "Yes"
