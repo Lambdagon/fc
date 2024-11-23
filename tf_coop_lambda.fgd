@@ -2613,6 +2613,8 @@
 	output OnTruceEnd(void) : "Sent when a truce ends."
 ]
 
+@PointClass base(PlayerClass, Angles) studio("models/editor/playerstart.mdl") = info_player_coop : "This entity indicates the position and facing direction at which the player will spawn in co-op modes." []
+
 @PointClass base(Targetname, Parentname, TeamNum, EnableDisable, Angles) studio("models/player/heavy.mdl") = info_player_teamspawn :
 	"This entity marks the spawn point for Team Fortress players."
 [
