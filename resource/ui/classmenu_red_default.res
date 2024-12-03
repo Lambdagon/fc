@@ -137,57 +137,22 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"1"	[$WIN32]
+		"labelText"			"&1"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 1"
+		"Command"			"joinclass scout"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_scout_red"
 		"inactiveimage"		"class_sel_sm_scout_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		"selectedFgColor_override" "TanDark"
-			
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_scout_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	"soldier_red"
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"soldier_red"
-		"xpos"				"c-250"
+			"xpos"				"c-250"
 		"xpos_hidef"				"c-244"
 		"xpos_lodef"		"c-225"
 		"ypos"				"-5"
@@ -201,51 +166,16 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"2"	[$WIN32]
+		"labelText"			"&2"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 3"
+		"Command"			"joinclass soldier"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_soldier_red"
 		"inactiveimage"		"class_sel_sm_soldier_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		"selectedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_soldier_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	"pyro_red"
 	{
@@ -265,50 +195,16 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"3"	[$WIN32]
+		"labelText"			"&3"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 7"
+		"Command"			"joinclass pyro"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_pyro_red"
 		"inactiveimage"		"class_sel_sm_pyro_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_pyro_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	
 	"Defense"
@@ -316,7 +212,7 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"Defense"
 		"xpos"			"c-110"
-		"xpos_hidef"			"c-105"
+		"xpos_hidef"	"c-105"
 		"xpos_lodef"	"c-95"
 		"ypos"			"96"
 		"ypos_hidef"			"102"
@@ -336,6 +232,12 @@
 		"font_lodef"			"MenuMainTitle"
 		"fgcolor"		"TanDark"
 		"fgcolor_lodef"	"TanLight"
+		"if_special_classes"
+		{
+			"xpos"			"c-138"
+			"xpos_hidef"	"c-133"
+			"xpos_lodef"	"c-123"
+		}
 	}
 	"demoman_red"
 	{
@@ -354,50 +256,16 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"4"	[$WIN32]
+		"labelText"			"&4"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 4"
+		"Command"			"joinclass demoman"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_demo_red"
 		"inactiveimage"		"class_sel_sm_demo_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_demo_inactive"
-			"scaleImage"	"1"
-		}				
 	}	
 	"heavyweapons_red"
 	{
@@ -416,50 +284,16 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"5"	[$WIN32]
+		"labelText"			"&5"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 6"
+		"Command"			"joinclass heavyweapons"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_heavy_red"
 		"inactiveimage"		"class_sel_sm_heavy_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_heavy_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	"engineer_red"
 	{
@@ -477,58 +311,24 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"6"	[$WIN32]
+		"labelText"			"&6"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 9"
+		"Command"			"joinclass engineer"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_engineer_red"
 		"inactiveimage"		"class_sel_sm_engineer_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_engineer_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	
-	"Support"
+		"Support"
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"Support"
 		"xpos"			"c76"
-		"xpos_hidef"			"c74"
+		"xpos_hidef"	"c74"
 		"xpos_lodef"	"c70"
 		"ypos"			"96"
 		"ypos_hidef"			"102"
@@ -548,13 +348,19 @@
 		"font_lodef"			"MenuMainTitle"
 		"fgcolor"		"TanDark"
 		"fgcolor_lodef"	"TanLight"
+		"if_special_classes"
+		{
+			"xpos"			"c23"
+			"xpos_hidef"	"c21"
+			"xpos_lodef"	"c17"
+		}
 	}
 	"medic_red"
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"medic_red"
 		"xpos"				"c78"
-		"xpos_hidef"				"c70"
+		"xpos_hidef"		"c70"
 		"xpos_lodef"		"c65"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
@@ -567,57 +373,23 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"7"	[$WIN32]
+		"labelText"			"&7"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 5"
+		"Command"			"joinclass medic"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_medic_red"
 		"inactiveimage"		"class_sel_sm_medic_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_medic_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	"sniper_red"
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"sniper_red"
 		"xpos"				"c128"
-		"xpos_hidef"				"c120"
+		"xpos_hidef"		"c120"
 		"xpos_lodef"		"c105"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
@@ -630,57 +402,23 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"8"	[$WIN32]
+		"labelText"			"&8"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 2"
+		"Command"			"joinclass sniper"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_sniper_red"
 		"inactiveimage"		"class_sel_sm_sniper_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_sniper_inactive"
-			"scaleImage"	"1"
-		}				
 	}
 	"spy_red"
 	{
 		"ControlName"		"ImageButton"
 		"fieldName"			"spy_red"
 		"xpos"				"c178"
-		"xpos_hidef"				"c170"
+		"xpos_hidef"		"c170"
 		"xpos_lodef"		"c145"
 		"ypos"				"-5"
 		"ypos_lodef"				"9"
@@ -693,82 +431,27 @@
 		"visible"			"1"
 		"enabled"			"1"
 		"tabPosition"		"0"
-		"labelText"			"9"	[$WIN32]
+		"labelText"			"&9"	[$WIN32]
 		"labelText"			""		[$X360]
 		"textAlignment"		"south-west"
-		"Command"			"select 8"
+		"Command"			"joinclass spy"
 		"Default"			"0"
 		"font"				"MenuKeys"
+		"fgcolor"			"TanDark"
 		"scaleImage"		"1"
-		
 		"activeimage"		"class_sel_sm_spy_red"
 		"inactiveimage"		"class_sel_sm_spy_inactive"
-		
-		"fgcolor"			"TanDark"
-		"defaultFgColor_override" "TanDark"
-		"armedFgColor_override" "TanDark"
-		"depressedFgColor_override" "TanDark"
-		
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"sound_armed"		"UI/buttonrollover.wav"
-		
-		"paintbackground"	"0"
-		
-		"image_drawcolor"		"255 255 255 180"
-		"image_armedcolor"		"255 255 255 255"
-		"image_selectedcolor"	"255 255 255 255"
-		
-		"stayselectedonclick"	"1"
-		"selectonhover"			"1"
-		"keyboardinputenabled"	"0"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"7"
-			"wide"			"50"
-			"tall"			"100"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"class_sel_sm_spy_inactive"
-			"scaleImage"	"1"
-		}				
-	}	
-
-	"CancelButton"
-	{
-		"ControlName"	"CExButton"
-		"fieldName"		"CancelButton"
-		"xpos"			"r190"
-		"ypos"			"r40"
-		"ypos_lodef"			"r64"
-		"zpos"			"8"
-		"wide"			"150"
-		"tall"			"30"
-		"autoResize"	"0"
-		"pinCorner"		"2"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		"#TF_Cancel"
-		"textAlignment"	"center"
-		"Command"		"vguicancel"
-		"font"			"HudFontSmallBold"
 	}
-	
+
 	"LoadoutButton"
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"LoadoutButton"
-		"xpos"			"r350"
-		"ypos"			"r40"
+		"xpos"			"r125"
+		"ypos"			"r80"
 		"ypos_lodef"			"r64"
 		"zpos"			"8"
-		"wide"			"150"
+		"wide"			"100"
 		"tall"			"30"
 		"autoResize"	"0"
 		"pinCorner"		"2"
@@ -778,6 +461,27 @@
 		"labelText"		"#TF_Edit_Loadout"
 		"textAlignment"	"center"
 		"Command"		"open_charinfo"
+		"font"			"HudFontSmallBold"
+	}
+
+	"CancelButton"
+	{
+		"ControlName"	"CExButton"
+		"fieldName"		"CancelButton"
+		"xpos"			"r125"
+		"ypos"			"r40"
+		"ypos_lodef"			"r64"
+		"zpos"			"8"
+		"wide"			"100"
+		"tall"			"30"
+		"autoResize"	"0"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"#TF_Cancel"
+		"textAlignment"	"center"
+		"Command"		"vguicancel"
 		"font"			"HudFontSmallBold"
 	}
 
@@ -1768,7 +1472,7 @@
 				"enabled"		"1"
 				"image"			"close_button"
 				"scaleImage"	"1"
-			}				
+			}
 		}
 	}		
 }
