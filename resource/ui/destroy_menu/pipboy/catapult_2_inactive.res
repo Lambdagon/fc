@@ -1,4 +1,4 @@
-"Resource/UI/build_menu/tele_exit_inactive.res"
+"Resource/UI/build_menu/catapult_2_inactive.res"
 {
 	"ItemNameLabel"
 	{	
