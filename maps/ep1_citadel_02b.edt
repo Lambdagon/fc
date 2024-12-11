@@ -2,6 +2,233 @@ ep1_citadel_02b
 {
 	entity
 	{
-		edit {targetname "citadel_train_lift01_1" values {edt_addspawnflags "512"} }
+//--Setup--
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//Prevent Backtracking
+		create {classname "trigger_push" origin "0 -56 0"
+			values {model "*23"
+				spawnflags "1"
+				speed "750"
+				pushdir "0 270 0"} }
+		edit {classname "trigger_changelevel" values {edt_map "ep1_citadel_02" edt_landmark "ep1_citadel_02_to_02b" spawnflags "6" startdisabled "1"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"45"
+				weapon_physcannon	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "1023.59 4639.06 2496.03"
+			values {angles "0 270 0" targetname "syn_spawn_player_1"} }
+//On Elevator
+		create {classname "info_player_coop" origin "3200 4645 2550"
+			values {angles "0 0 0" targetname "syn_spawn_player_2" StartDisabled "1" parentname "citadel_train_lift01_1"} }
+//After Elevator
+		create {classname "info_player_coop" origin "3585.37 4645.98 -6680"
+			values {angles "0 0 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+// Edited on 12/10/2024 by saintsoftware very sloppily, I commented out this entire area to fix the issue in FC where the elevator and alyx would randomly disappear and it would kill everyone on the elevator.
+
+// //--Extra--
+// //End of Trav|Edt
+// //Trav|Edt - allow everyone to see alyxface
+// //Trav|Edt - disable fading on player fall
+// //Trav|Edt - hurt players who block lift
+// //Trav|Edt - make sure alyx makes level trainsistion (only when alyx is inside)
+// //Trav|Edt - teleport players to alyx after scene
+// //balimbanana fix
+// //delay autosaving
+// //don't allow player skip elevator
+// OnMapSpawn "blackout,AddOutput,OnAnimationDone trav_teleport_players:Teleport::0:-1,8,-1"} }
+// OnMapSpawn "citadel_train_lift01_1,AddOutput,dmg 100,0,-1"} }
+// OnMapSpawn "stalker,AddOutput,OnDeath syn_elevator_antiskip:Disable::0:1,0,-1"
+// OnPass "alyx_elevator_movingfast_rl_1,Trigger,,0,-1"
+// OnPass "alyx_elevator_proceed_vcd_3,Start,,0,-1"
+// OnPass "autosave_trigger,Enable,,5,-1"
+// OnPass "autosave_trigger,enable,,5,-1"
+// OnPass "citadel_train_lift01_1,SetSpeedReal,180,0,-1"
+// StartDisabled "0"
+// angles "0 0 0"
+// angles "0 180 0"
+// classname "logic_auto"
+// classname "path_track"
+// classname "trigger_hurt" origin "3308 4716 -6000"
+// create
+// create {
+// create { classname "info_intermission" origin "3618.281250 4981.218750 2760.031250" values { angles "25 -150 0" } }
+// create {classname "logic_auto"
+// create {classname "point_teleport"
+// damage "1000"
+// damagetype "32"
+// delete {classname "trigger_multiple" origin "5545.25 4642.47 -6606"}
+// delete {classname "trigger_once" origin "3008 4392 -8796"}
+// delete {targetname "citadel_path_lift01_18"}
+// delete {targetname "citadel_path_lift01_20"}
+// delete {targetname "entry_transition_door"}
+// edit {targetname "airlock_exit_counter_1" values {max "1"} }//2
+// edit {targetname "blackout_viewcontroller" values {spawnflags "156"} }
+// edt_getbspmodelfor_classname "trigger_once"
+// edt_getbspmodelfor_origin "3308 4716 -7000"
+// nodmgforce "1"
+// orientationtype "1"
+// origin "-7544 -3981 387"
+// origin "3264 4648 -1816"
+// origin "3264 4648 168"
+// spawnflags "0"
+// spawnflags "1"
+// target "!player"} }
+// target "citadel_path_lift01_12"
+// target "citadel_path_lift01_14"
+// targetname "citadel_path_lift01_18"
+// targetname "citadel_path_lift01_20"
+// targetname "syn_elevator_antiskip"
+// values
+// values {
+// values {spawnflags "1"
+// values {targetname "trav_teleport_players"
+// {
+// }
+		edit {targetname "global_newgame_template_base_items" values {targetname "syn_disabled__global_newgame_template_base_items"} }
+
+		// when elevator starts down, activate checkpoint
+		// also enable the trigger that will allow us to break the elevator
+//		delete { targetname "train_initial_start_counter" }
+//		create { classname "math_counter" origin "3358.99 4733.78 2608"
+//			values {
+//				"max" "3"
+//				"targetname" "train_initial_start_counter"
+//				"OnHitMax" "citadel_train_lift01_1,SetSpeedReal,51,0.6,1"
+//				"OnHitMax" "citadel_train_lift01_1,StartForward,,0.5,1"
+//				"OnHitMax" "player_clip_1,Enable,,0,1"
+//				"OnHitMax" "alyx_follow_player,Deactivate,,0,1"
+//				"OnHitMax" "elevator_link,TurnOff,,0,1"
+//
+//				"OnHitMax" "trigger_checkpoint_ent,Enable,,0,1"
+//			}
+//		}
+
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "train_initial_start_counter,AddOutput,OnHitMax trigger_checkpoint_ent:Enable::0:1,0,-1"
+				OnMapSpawn "lift_constraint,AddOutput,OnBreak syn_spawn_manager:SetCheckPoint:syn_spawn_player_3:0:1,0,-1"
+				OnMapSpawn "alyx_elevator_ss_1,AddOutput,OnEndSequence trigger_tpalyx:Enable::0:1,0,-1"
+				OnMapSpawn "alyx_elevator_ss_1,AddOutput,OnEndSequence syn_spawn_manager:SetCheckPoint:syn_spawn_player_2:0:1,0,-1"
+			}
+		}
+
+		create {classname "point_teleport"
+			origin "3272 4745 2510"
+			values {targetname "syn_teleport_alyx2"
+				angles "0 180 0"
+				target "alyx"} }
+				
+		create { classname "trigger_once" origin "3261 4647 2554"
+			values {
+				"model" "*55"
+				"targetname" "trigger_checkpoint_ent"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+
+//				"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.05,-1"
+//				"OnTrigger" "trigger_explode_elevator_test,Enable,,0,-1"
+			}
+		}
+		create { classname "trigger_once" origin "3258 4649 2509"
+			values {
+				"model" "*72"
+				"spawnflags" "1"
+				"StartDisabled" "1"
+				"targetname" "trigger_tpalyx"
+				"OnTrigger" "syn_teleport_alyx2,Teleport,,0,-1"
+				"OnTrigger" "alyx_follow_player,Deactivate,,0,-1"
+				"OnTrigger" "alyx_clip_1,Enable,,0,-1"
+			}
+		}
+
+//tp Alyx if there is enough players at the end
+		create {classname "trigger_coop"
+			origin "5545.25 4642.47 -6606"
+			values {
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "5545.25 4642.47 -6606"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnPlayersIn "syn_teleport_alyx_end,Teleport,,0.1,1"
+				OnPlayersIn "alyx_follow_player,Deactivate,,0,-1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+		create {classname "point_teleport"
+			origin "5582 4757 -6691"
+			values {targetname "syn_teleport_alyx_end"
+				angles "0 180 0"
+				target "alyx"} }
+
+//		// whats with this door
+//		delete { targetname "entry_transition_door" }
+//
+//		// if all players are off the elevator, explode
+//		create { classname "trigger_multiple" origin "3261 4647 2554"
+//			values {
+//				"model" "*55"
+//				"targetname" "trigger_explode_elevator_test"
+//				"origin" "3261 4647 2554"
+//				"StartDisabled" "1"
+//				"spawnflags" "1"
+//				"wait" "0.1"
+//				"parentname" "citadel_train_lift01_1"
+//
+//				"OnEndTouchAll" "citadel_train_physconvert,ConvertTarget,,0,-1"
+//				"OnEndTouchAll" "alyx,SetHealth,0,0,-1"
+//				"OnEndTouchAll" "loadsaved,Reload,,5,-1"
+//				"OnEndTouchAll" "citadel_train_lift_glass,Break,,0,-1"
+//				"OnEndTouchAll" "elevator_mild_tremor_shake_1,StartShake,,0,-1"
+//				"OnEndTouchAll" "npc_response_system,ForceTriggerResponseEvent,TLK_PLAYERFELL,0,-1"
+//				"OnEndTouchAll" "elevator_break_tesla_1,TurnOn,,0,-1"
+//				"OnEndTouchAll" "elevator_break_sparks,SparkOnce,,0,-1"
+//				"OnEndTouchAll" "response_system,ForceTriggerResponseEvent,TLK_STARTLEREACT,0,-1"
+//				"OnEndTouchAll" "elevator_break_wav_3,PlaySound,,0,-1"
+//				"OnEndTouchAll" "elevator_break_wav_2,PlaySound,,0,-1"
+//				"OnEndTouchAll" "elevator_break_wav_1,PlaySound,,0,-1"
+//				"OnEndTouchAll" "elevator_break_wav_4,PlaySound,,0,-1"
+//				"OnEndTouchAll" "elevator_break_wav_5,PlaySound,,0,-1"
+//				"OnEndTouchAll" "fade_out,Fade,,2,-1"
+//			}
+//		}
+//
+//		delete { targetname "path_elevator_guard_end" }
+//		create { classname "path_track" origin "3264 4648 -6448"
+//			values {
+//				"spawnflags" "0"
+//				"target" "path_elevator_guard_end1"
+//				"orientationtype" "0"
+//				"angles" "0 0 0"
+//				"targetname" "path_elevator_guard_end"
+//
+//				"OnPass" "finale_rl,Trigger,,0.1,-1"
+//				"OnPass" "trigger_explode_elevator_test,Kill,,0,-1"
+//			}
+//		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep1_citadel_02b"} }
 	}
 }
