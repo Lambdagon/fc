@@ -1,0 +1,315 @@
+ep1_c17_05
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "global_newgame_template"}
+		delete {targetname "global_newgame_spawner_xbow"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "global_newgame_spawner_dynamic"}
+		delete {targetname "global_newgame_spawner_physgun"}
+		delete {targetname "global_newgame_spawner_rpg"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_suit"}
+		create {classname "point_template" origin "9857.3 12437.5 -601.679"
+			values {//	"Template11" "global_newgame_spawner_xbow"
+			//	"Template09" "global_newgame_spawner_pistol"
+			//	"Template08" "global_newgame_spawner_dynamic"
+			//	"Template07" "global_newgame_spawner_physgun"
+			//	"Template06" "global_newgame_spawner_rpg"
+			//	"Template05" "global_newgame_spawner_ar2"
+			//	"Template04" "global_newgame_spawner_smg"
+			//	"Template03" "global_newgame_spawner_shotgun"
+			//	"Template02" "global_newgame_spawner_crowbar"
+			//	"Template01" "global_newgame_spawner_suit"
+				"Template01" "alyx"
+				"spawnflags" "2"
+				"targetname" "global_newgame_template"} }
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//Prevent Backtracking
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "exit_doors,UnLock,,1,-1"
+				OnMapSpawn "exit_doors,Close,,2,-1"
+				OnMapSpawn "exit_doors,Lock,,3,-1"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_pistol		"1"
+				weapon_shotgun		"1"
+				weapon_smg1			"1"
+				weapon_ar2			"1"
+				weapon_frag			"1"
+				weapon_slam			"1"
+				weapon_crossbow		"1"
+				weapon_crowbar		"1"
+				ammo_pistol			"54"
+				ammo_buckshot		"12"
+				ammo_smg1			"45"
+				ammo_ar2			"30"
+				ammo_grenade		"1"
+				weapon_rpg			"1"
+				//ammo_crossbow		"0"
+			} }
+//New Weapons
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapons"
+				StartDisabled "1"
+				weapon_357		"1"
+				ammo_357		"6"
+			} }
+
+	//	create {classname "info_player_equip"
+	//		values {targetname "syn_new_weapons_rpg"
+	//			StartDisabled "1"
+	//			weapon_rpg		"1"
+	//		} }
+
+		create {classname "trigger_multiple"
+			origin "9682.66 9670 -682"
+			values {model "*50"
+				spawnflags "1"
+				targetname "syn_new_weapon_trigger"
+				StartDisabled "1"
+				filtername "syn_new_weapon_filter"
+				OnStartTouch "syn_new_weapons,Enable,,0,-1"
+				OnStartTouch "syn_new_weapons,EquipPlayer,,0.1,-1"
+				OnStartTouch "!activator,AddOutput,targetname syn_ep1_c17_05_got_new_weapons,0.1,-1"} }
+
+		create {classname "filter_activator_name"
+			values {targetname "syn_new_weapon_filter"
+				Negated "1"
+				filtername "syn_ep1_c17_05_got_new_weapons"} }
+
+		delete {classname "weapon_357"}
+
+		create {classname "weapon_357" origin "9674 9615 -700"//z-710
+			values {OnPlayerPickup "syn_new_weapon_trigger,Enable,,0.1,1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "9852 12341 -625"
+			values {angles "0 0 0" targetname "syn_spawn_player_1"} }
+//Barney Meeting
+		create {classname "info_player_coop" origin "10362 11829 -675"
+			values {angles "0 -130 0" targetname "syn_spawn_player_1_1" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+		create { classname "info_intermission" origin "10455 12032 -482" values { angles "9 -125 0" } }
+
+//Trav|Edt - add hudhints for squad commands + crowbar [prolly no workie]
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "relay_advisor_scene"
+				OnTrigger "trav_crowbar_equip,EquipAllPlayers,,40,-1"
+				OnTrigger "trav_hudhint,showhudhint,,45,-1"
+				OnTrigger "trav_hudhint2,showhudhint,,60,-1"} }
+
+		create {classname "env_hudhint"
+			values {targetname "trav_hudhint"
+				message "valve_hint_command_send"} }
+
+		create {classname "env_hudhint"
+			values {targetname "trav_hudhint2"
+				message "valve_hint_command_recall"} }
+
+		create {classname "info_player_equip"
+			values {targetname "trav_crowbar_equip"
+				StartDisabled "1"
+				weapon_crowbar "1"} }
+
+		create { classname "trigger_once" origin "10176 11968 -641"
+			values {
+				"model" "*84"
+				"spawnflags" "1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.2,-1"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_1_1,0,-1"
+			}
+		}
+//TODO: make him only killable via non-rpgs? (like in d3_c17_09
+//Trav|Edt - make sniper harder
+		delete {targetname "sniper"}
+
+		create {classname "npc_sniper"
+			origin "9920 12098 -195"
+			values {spawnflags "3215108"
+				angles "0 270 0"
+				targetname "sniper"
+				//damagefilter "trav_filter_sniper_grenade"
+				ignoreunseenenemies "1"
+				OnDeath "aisc_nag_Barney_sniper,Kill,,0,-1"
+				OnDeath "relay_citizens_spawn,Enable,,0,-1"
+				OnDeath "aisc_Barney_sniper_success,Enable,,0,-1"
+				OnDeath "relay_citizens_spawn,Trigger,,0.1,-1"
+				OnShotFired "barney,SpeakResponseConcept,ConceptSniperFire,0,-1"} }
+
+//Trav|Edt - do not close final
+		delete {targetname "brush_clip_rearsoldiers"}
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "door_rollertraining,AddOutput,targetname syn_door_rollertraining,5,-1"} }
+				
+//modi - faster combine spawns
+//todo - remade it to support vanilla mode
+		delete {targetname "relay_parkinglot_right_wait"}
+		delete {targetname "relay_repairroom_soldiers_wait"}
+		delete {targetname "relay_parkinglot_roof_wait"}
+		create {
+			classname "logic_relay"
+			values {
+				targetname "relay_parkinglot_right_wait"
+				origin "10659.3 12321.6 -496"
+				OnTrigger "relay_spawn_parkinglot_right,Trigger,,1,-1"
+			}
+		}
+		create {
+			classname "logic_relay"
+			values {
+				targetname "relay_repairroom_soldiers_wait"
+				origin "8919 10513.4 -738.935"
+				OnTrigger "relay_spawn_repairroom_soldiers,Trigger,,1,-1"
+			}
+		}
+		create {
+			classname "logic_relay"
+			values {
+				targetname "relay_repairroom_soldiers_wait"
+				origin "8919 10513.4 -738.935"
+				OnTrigger "relay_spawn_parkinglot_roof,Trigger,,1,-1"
+			}
+		}
+				
+
+		// create { classname "point_servercommand" values { targetname "theEndCmd" } }
+//modi: made citizens proceed automatically - BUG on Synergy 56.16: citizens stops following any player when someone connects. Remove if you need vanilla "Follow Citizen"
+		create {classname "scripted_sequence"
+			origin "9400 9720 -734"
+			values {spawnflags "100"
+				angles "0 0 0"
+				targetname "modi_citizens_proceed_1"
+				m_iszEntity "citizen_refugees_1"
+				m_fMoveTo "2"} }
+		create {classname "scripted_sequence"
+			origin "9436 9720 -734"
+			values {spawnflags "100"
+				angles "0 0 0"
+				targetname "modi_citizens_proceed_2"
+				m_iszEntity "citizen_refugees_2"
+				m_fMoveTo "2"} }
+		create {classname "scripted_sequence"
+			origin "9350 9720 -734"
+			values {spawnflags "100"
+				angles "0 0 0"
+				targetname "modi_citizens_proceed_3"
+				m_iszEntity "citizen_refugees_3"
+				m_fMoveTo "2"} }
+		create {classname "scripted_sequence"
+			origin "9500 9720 -734"
+			values {spawnflags "100"
+				angles "0 0 0"
+				targetname "modi_citizens_proceed_4"
+				m_iszEntity "citizen_refugees_4"
+				m_fMoveTo "2"} }
+		
+		//don't follow players
+		edit {targetname "citizen_refugees_1" values {spawnflags "5768708"}}
+		edit {targetname "citizen_refugees_2" values {spawnflags "9569796"}}
+		edit {targetname "citizen_refugees_3" values {spawnflags "5244420"}}
+		edit {targetname "citizen_refugees_4" values {spawnflags "5244420"}}
+				
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "lcs_al_c17_05_barneyoverhere,AddOutput,OnCompletion modi_citizens_proceed_1:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "lcs_al_c17_05_barneyoverhere,AddOutput,OnCompletion modi_citizens_proceed_2:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "lcs_al_c17_05_barneyoverhere,AddOutput,OnCompletion modi_citizens_proceed_3:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "lcs_al_c17_05_barneyoverhere,AddOutput,OnCompletion modi_citizens_proceed_4:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "trigger_pickup_citizens,AddOutput,OnTrigger modi_citizens_proceed_1:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "trigger_pickup_citizens,AddOutput,OnTrigger modi_citizens_proceed_2:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "trigger_pickup_citizens,AddOutput,OnTrigger modi_citizens_proceed_3:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "trigger_pickup_citizens,AddOutput,OnTrigger modi_citizens_proceed_4:BeginSequence::2:-1,0,-1"
+				OnMapSpawn "lcs_al_c17_05_barneyoverhere,AddOutput,OnCompletion modi_citizens_complete:Trigger::500:-1,0,-1"
+				OnMapSpawn "compare_parkinglot_trips_TO,AddOutput,OnEqualTo modi_citizens_complete:Disable::0:-1,0,-1"} }
+		
+		//forcing map end after 500 seconds
+		create {
+			classname "logic_relay"
+			values {
+				startdisabled "0"
+				targetname "modi_citizens_complete"
+				OnTrigger "relay_first_area_complete,Trigger,,0,1"
+			}
+		}
+
+//Trav|Edt - remove trigger_serverragdoll
+		delete {classname "trigger_serverragdoll"}
+
+//Trav|Edt - add blocker at the top of pre-fallen train prop, and remove after it falls
+		create {classname "trigger_push"
+			origin "8106 10214.4 -328"
+			values {model "*94"
+				spawnflags "1"
+				targetname "trav_antirafter_push"
+				pushdir "0 270 0"
+				speed "750"} }
+
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "relay_trainfalls"
+				OnTrigger "trav_antirafter_push,Disable,5,0,-1"
+			//	OnTrigger "syn_new_weapons_rpg,Enable,,0,-1"
+			//	OnTrigger "syn_new_weapons_rpg,EquipAllPlayers,,1,-1"
+				} }
+
+//Trav|Edt - pair a suit charger with each health charger
+//train
+		create {classname "item_suitcharger"
+			origin "8960 9588 -676"}
+//mid
+		create {classname "item_suitcharger"
+			origin "8976 10887 -712"//8902 10887 -713
+			values {angles "0 270 -5.5"} }
+//barney
+		create {classname "item_suitcharger"
+			origin "10424 10553 -729"
+			values {angles "0 270 0"} }
+
+//Trav|Edt - teleport barney inside b4 level change
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "lcs_rearsoldierslock,AddOutput,OnStart trav_teleport_barney:Teleport::0:-1,0,-1"} }
+//higher
+		create {classname "point_teleport"
+			origin "9824 9792 -608"//9672 9464 -728
+			values {targetname "trav_teleport_barney"
+				angles "0 0 0"
+				target "barney"} }
+
+//End of Trav|Edt
+
+		// add some extra weapons
+	//	create { classname "weapon_frag" origin "9180 9943 -828" values { angles "0 0 0" RespawnCount "-1" } }
+	//	create { classname "weapon_frag" origin "9201 9943 -828" values { angles "0 0 0" RespawnCount "-1" } }
+	//	create { classname "weapon_rpg" origin "8869 10854 -729" values { angles "0 0 0" RespawnCount "-1" } }
+
+		// let citizens be commanded so they can follow specific players
+		edit { classname "npc_citizen" values { "denycommandconcept" "" } }
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep1_c17_05"} }
+	}
+}

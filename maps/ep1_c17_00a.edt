@@ -1,0 +1,396 @@
+ep1_c17_00a
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "weapons"}
+		delete {targetname "physcannon"}
+		delete {targetname "suit"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//Prevent Backtracking
+			// TODO: origin needs to be looked at, not sure if it prevents touch to changelevel
+		create {classname "trigger_push" origin "790 2708 184"
+			values {model "*44"
+				spawnflags "1"
+				speed "750"
+				pushdir "0 270 0"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_pistol		"1"
+				weapon_shotgun		"1"
+				ammo_pistol			"54"
+				ammo_buckshot		"12"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "863 2600 350"
+			values {angles "0 93 0" targetname "syn_spawn_player_1"} }
+//waterroom
+		create {classname "info_player_coop" origin "1605 4375 400"
+			values {angles "0 0 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+//DarkRoom
+		create {classname "info_player_coop" origin "2912 4000 452"
+			values {angles "0 0 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//End
+		create {classname "info_player_coop" origin "4593 3577 441"
+			values {angles "0 180 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+		
+//Fix backtrack
+		edit {classname "trigger_changelevel" values {edt_landmark "landmark_c17_00_to_00a" edt_map "ep1_c17_00" spawnflags "6" startdisabled "1"} }
+//--Extra--
+//prevent blocking the exit valve after the first antlion encounter
+		edit {targetname "gate2_wheel" values {spawnflags "1185"} }
+		create {classname "logic_auto"
+		    values
+		    {
+			spawnflags "1"
+			OnMapSpawn "gate2_wheel,AddOutput,OnPressed !self:Lock::0:-1,0,-1"
+			OnMapSpawn "gate2_wheel,AddOutput,OnPressed !self:SetPosition:1:0:-1,0,-1"
+		    }
+		}
+//Increase Zombie battle time
+		edit {targetname "logic_timer_elevator_start"
+			values {LowerRandomBound "120"//79
+				UpperRandomBound "121"} }//80
+				
+		delete {classname "func_brush" origin "4508 3580 558"}
+		
+//make Alyx invencible (preventing elevator disappear)
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "alyx,SetDamageFilter,syn_dfilter_null,10,-1"} }
+
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+				
+		edit {targetname "alyx" values {damagefilter "syn_dfilter_null"} }
+		
+//close safe-zone
+		create {classname "prop_dynamic" origin "4175 3612 662"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_nowall"
+				angles "90 0 0"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"} }
+		create {classname "prop_dynamic" origin "3390 3100 550"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_nowall"
+				angles "90 90 0"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"} }
+
+//Trav|Edt - failsafe for alyx spazzing out
+		delete {classname "prop_physics" origin "3149.5 3266.34 460.235"}
+		create {classname "prop_physics_override" origin "3149.5 3266.34 460.235"
+			values {spawnflags "8"
+				angles "-0.669866 0.025724 -89.9889"
+				model "models/props_debris/wood_board03a.mdl"
+				health "99999"
+				targetname "bar"
+				OnBreak "bar_rl,Trigger,,0,-1"} }
+		
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trigger_elevator_player,AddOutput,OnTrigger npc_template_maker:Kill::0:-1,0,1"
+				OnMapSpawn "trigger_elevator_player,AddOutput,OnTrigger syn_teleport_alyx_relay:Trigger::0:-1,0,1"
+				OnMapSpawn "trigger_elevator_alyx,AddOutput,OnTrigger syn_teleport_alyx:CancelPending::0:-1,0,1"
+				OnMapSpawn "lcs_elevator_00a,AddOutput,OnStart bar:SetHealth:10:0:-1,0,1"
+				OnMapSpawn "lcs_elevator_00a,AddOutput,OnStart bar:EnableMotion::0:-1,0,1"} }
+
+		create {classname "logic_relay"
+			values {targetname "syn_teleport_alyx_relay"
+				OnTrigger "syn_teleport_alyx,Teleport,,30,-1"} }
+
+		create {classname "point_teleport"
+			origin "4592 3592 480"
+			values {targetname "syn_teleport_alyx"
+				angles "0 180 0"
+				target "alyx"} }
+
+//Use fog controller for networking range
+	//	create {classname "env_fog_controller"
+	//		values {targetname "syn_fog_zombiebattle"
+	//			fogenable "0"
+	//			fogcolor "0 0 0"
+	//			fogcolor2 "0 0 0"
+	//			fogstart "1000"
+	//			fogend "1024"
+	//			fogmaxdensity "1"
+	//			fogdir "1 0 0"
+	//			farz "1024"} }
+
+		create { classname "info_intermission" origin "672 3808 656" values { target "soundscape_3" } }
+//TODO: increase battle duration
+//Trav|Edt - Elevator fanile (allow more zombies) and allow them to spawn visiablity (none spawn with alot of ppl >.>)
+//wave 1
+		edit {targetname "maker_garage_zombie"
+			values{MaxNPCCount "6"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_zombine"
+			values{MaxNPCCount "4"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+//wave 2
+		edit {targetname "maker_garage_zombie_2"
+			values{MaxNPCCount "6"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_fastzombie"
+			values{MaxNPCCount "2"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+//wave 3
+		edit {targetname "maker_garage_zombie_3"
+			values{MaxNPCCount "6"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_zombine_3"
+			values{MaxNPCCount "6"
+				spawnflags "16"
+				MaxLiveChildren "4"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_fastzombie_3"
+			values{MaxNPCCount "4"
+				spawnflags "16"
+				MaxLiveChildren "2"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_Poisonzombie"
+			values{MaxNPCCount "2"
+				spawnflags "16"
+				MaxLiveChildren "-1"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+//wave 4
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "maker_garage_zombie_4,AddMaxChildren,32,0,-1"
+				OnMapSpawn "garage_zombine_4,AddMaxChildren,32,0,-1"
+				OnMapSpawn "garage_fastzombie_4,AddMaxChildren,32,0,-1"} }
+
+		edit {targetname "maker_garage_zombie_4"
+			values{MaxLiveChildren "4"//1
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+
+		edit {targetname "garage_zombine_4"
+			values{MaxLiveChildren "4"//1
+				spawnflags "16"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+//no fast zombies this wave as default?
+		edit {targetname "garage_fastzombie_4"
+			values{MaxLiveChildren "4"//0
+				spawnflags "16"
+				CriterionVisibility "2"
+				CriterionDistance "1"} }
+				
+
+//tp players to waterroom
+		create { classname "trigger_once" origin "1696.28 4331.06 406.5"
+			values {
+				"model" "*46"
+				"targetname" "syn_modi_tpwaterroom"
+				"wait" "1"
+				"spawnflags" "1"
+				"StartDisabled" "0"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_4,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+				"OnTrigger" "syn_teleport_alyx_waterroom,Teleport,,0.1,-1"
+			}
+		}
+				
+		create {classname "point_teleport"
+			origin "1593 4481 406"
+			values {
+				targetname "syn_teleport_alyx_waterroom"
+				angles "0 0 0"
+				target "alyx"
+			} 
+		}
+
+//End of Trav|Edt
+
+		// fix the door close counter
+		// we need to change it from a math_counter to two separate triggers
+		// one for player and one for alyx, the alyx trigger will enable the player trigger
+		// which will activate a checkpoint and close the door
+
+			// remove old trigger
+			delete { classname "trigger_multiple" origin "3739.75 3764 535" }
+
+			// create new filter
+			// I don't know why Valve is missing this in the first place
+			create { classname "filter_activator_name"
+				values {
+					"targetname" "alyx_filter"
+					"filtername" "alyx"
+					"negated" "0"
+				}
+			}
+
+			// create new ones
+//			create { classname "trigger_multiple" origin "3739.75 3764 535"
+//				values {
+//					"model" "*80"
+//					"targetname" "trigger_closedoor_alyx"
+//					"wait" "1"
+//					"spawnflags" "16"
+//					"filtername" "alyx_filter"
+//					"StartDisabled" "0"
+//					"OnStartTouch" "trigger_closedoor_player,Enable,,0,-1"
+//					"OnEndTouch" "trigger_closedoor_player,Disable,,0,-1"
+//				}
+//			}
+
+//			create { classname "trigger_once" origin "3739.75 3764 535"
+//				values {
+//					"model" "*80"
+//					"targetname" "trigger_closedoor_player"
+//					"wait" "1"
+//					"spawnflags" "1"
+//					"StartDisabled" "1"
+//					"OnTrigger" "trigger_closedoor_alyx,Kill,,0,-1"
+//					"OnTrigger" "door_water_garage,Close,,0,-1"
+//					"OnTrigger" "door_water_garage,Lock,,0,-1"
+//					"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+//					"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+//					OnTrigger "prop_ragdoll,DisableMotion,,6,-1"
+//					OnTrigger "npc_pullaway,EnableMotion,,7,-1"
+//				}
+//			}
+
+			// cleanup
+			delete { targetname "math_count_door" }
+
+		// make sure alyx is in the elevator before a player
+		// also activate checkpoint when elevator starts
+//		delete { targetname "player_elev_filter" }
+//		create { classname "filter_activator_class" origin "4644 3580 548"
+//			values {
+//				"targetname" "player_elev_filter"
+//				"filterclass" "player"
+//				"Negated" "0"
+//				"OnPass" "trigger_elevator_start,,,0,-1"
+//			}
+//		}
+
+//		edit { targetname "trigger_elevator_player"
+//			values {
+//				"StartDisabled" "1"
+//				"classname" "trigger_coop"
+//				"target" "syn_elevatortp"
+//				"filtername" ""
+//			}
+//		}
+		
+//		create {classname "info_target" origin "4590 3575 -50"
+//			values {
+//				targetname "syn_elevatortp" angles "0 180 0" parentname "elevator_garage"
+//			}
+//		}
+		
+//		delete { classname "func_brush" origin "4508 3580 558"}
+//		delete { targetname "alyx_elev_clip" }
+
+//		delete { classname "trigger_multiple" origin "4611 3584 469.5" }
+//		create { classname "trigger_multiple" origin "4611 3584 469.5"
+//			values {
+//				"model" "*12"
+//				"filtername" "alyx_elev_filter"
+//				"targetname" "trigger_elevator_alyx"
+//				"wait" "0"
+//				"spawnflags" "2"
+//				"StartDisabled" "0"
+//				"OnStartTouch" "counter_elevator,Add,1,0,-1"
+//				"OnEndTouch" "counter_elevator,Subtract,1,0,-1"
+//				//"OnStartTouch" "clip_alyx_inelev,//Enable,,0,1"
+//				"OnStartTouch" "compare_lcs,SetValue,1,0,-1"
+//				"OnStartTouch" "alyx,SetLightingOriginHack,relative_elevator_lighting,0,1"
+//				"OnStartTouch" "trigger_elevator_player,Enable,0,0,-1"
+//				"OnEndTouch" "trigger_elevator_player,Disable,,0,1"
+//				
+//				"OnStartTouch" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+//				"OnStartTouch" "trigger_elevator_player,TeleportPlayersNotTouching,,1.5,1"
+//
+//				// "OnStartTouch" "modi_enable_elevator_on_coop,Enable,,0,-1"
+//				// "OnEndTouch" "modi_enable_elevator_on_coop,Disable,,0,-1"
+//			}
+//		}
+		
+		// create { classname "trigger_coop" origin "4644 3584 481.5"
+			// values {
+				// "model" "*13"
+				// "wait" "1"
+				// "targetname" "modi_enable_elevator_on_coop"
+				// "StartDisabled" "1"
+				// "spawnflags" "1"
+				// CountType "1"
+				// PlayerValue "50"
+				// UseHud "1"
+				// "OnPlayersIn" "counter_elevator,Add,1,0,-1"
+				// "OnPlayersOut" "counter_elevator,Subtract,,0,1"
+			// }
+		// }
+
+		delete { targetname "counter_elevator" }
+		create { classname "math_counter" origin "4660 3580 548"
+			values {
+				"max" "2"
+				"min" "0"
+				"startvalue" "0"
+				"targetname" "counter_elevator"
+				"OnHitMax" "lcs_elevator_08,//Start,,0,1"
+				"OnHitMax" "ele_door_B_L,Close,,0,1"
+				"OnHitMax" "ele_door_B_R,Close,,0,1"
+				"OnHitMax" "prop_elevatordoor_bottom_1,SetAnimation,close,0,1"
+				"OnHitMax" "ai_sched_final wave,StartSchedule,,0,-1"
+				"OnHitMax" "player_elev_clip,Enable,,0,-1"
+				"OnHitMax" "lcs_elevator_05,Resume,,0.01,1"
+				"OnHitMax" "alyx,StartScripting,,0,1"
+				"OnHitMax" "compare_lcs,SetValueCompare,2,1,-1"
+				
+				//"OnHitMax" "modi_enable_elevator_on_coop,Kill,0,1,-1"
+
+				//"OnHitMax" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+				//"OnHitMax" "syn_spawn_manager,MovePlayers,,0.05,-1"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d3_c17_00a"} }
+	}
+}

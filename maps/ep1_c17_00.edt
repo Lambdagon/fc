@@ -1,0 +1,186 @@
+ep1_c17_00
+{
+	entity
+	{
+//--Setup--
+		delete {classname "weapon_physcannon"}
+		delete {classname "item_suit"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+			} }
+//New Weapons
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapons"
+				StartDisabled "1"
+				weapon_pistol		"1"
+				weapon_shotgun		"1"
+				ammo_pistol			"54"
+				ammo_buckshot		"12"
+			} }
+
+		create {classname "trigger_multiple"
+			origin "4294.5 -2819 -99"// 4409.5 -2691 -99
+			values {model "*83"
+				spawnflags "1"
+				targetname "syn_new_weapon_trigger"
+				StartDisabled "1"
+				filtername "syn_new_weapon_filter"
+				OnStartTouch "syn_new_weapons,EquipPlayer,,0,-1"
+				OnStartTouch "!activator,AddOutput,targetname syn_ep1_c17_00_got_new_weapons,0.1,-1"} }
+
+		create {classname "filter_activator_name"
+			values {targetname "syn_new_weapon_filter"
+				Negated "1"
+				filtername "syn_ep1_c17_00_got_new_weapons"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "rubble_tunnel_door_1_lock,AddOutput,OnBreak syn_new_weapon_trigger:Enable::0.1:-1,0,-1"
+				OnMapSpawn "rubble_tunnel_door_1_lock,AddOutput,OnBreak syn_new_weapons:Enable::0:-1,0,-1"} }
+
+//disable stalker sequence from previous map
+		edit {
+			classname "trigger_multiple"
+			origin "5040 -6048 88"
+			values {
+				targetname "modi_stalkerpod_phys"
+				StartDisabled "1"
+			}
+		}
+
+		create {
+			classname "logic_auto"
+			values {
+				spawnflags "1"
+				OnMapSpawn "stalkerPod_Physanim,DisablePhyscannonPickup,,0,-1"
+			}
+		}
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "4695 -5767 -70"
+			values {angles "0 328 0" targetname "syn_spawn_player_1"} }
+			
+		create {classname "info_player_coop" origin "4441 -285 -70"
+			values {angles "0 0 0" targetname "syn_spawn_player_1_zombine" StartDisabled "1"} }
+			
+		create {classname "info_player_coop" origin "4156 -4.81 -58"
+			values {angles "0 0 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+//close skip
+		create {classname "prop_dynamic" origin "4580 -5877 25"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_nowall"
+				angles "90 0 0"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"} }
+
+//Doors: Open Only
+		edit {targetname "barnacle_exit_door" values {spawnflags "0"} }
+		edit {classname "prop_door_rotating" values {returndelay "-1"} }
+
+		create { classname "info_intermission" origin "4088 -5312 8" values { target "mcf_camtarg" } }
+		create { classname "info_target" origin "3992 -4808 -104" values { targetname "mcf_camtarg" } }
+
+//Trav|Edt - fix zombine's intro angles
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnMapSpawn "train_2_ambush_zombine,AddOutput,angles 0 0 0,5,-1"} }
+				
+		create {classname "info_teleport_destination" origin "4424 -2477 -70"
+			values {angles "0 180 0"
+				targetname "trav_teleport_modi"} }
+
+		create {classname "trigger_once"
+			origin "4530 -2465 -10"
+			values {model "*83"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,TeleportPlayers,trav_teleport_modi,2,-1"} }	
+				
+//tp alyx before scene
+		create {classname "point_teleport"
+			origin "4512 -340 -91.6"
+			values {targetname "syn_teleport_alyx1"
+				angles "0 180 0"
+				target "alyx"} }
+
+		delete {classname "trigger_once" origin "4416 -288 -43.55"}
+		create {classname "trigger_once"
+			origin "4410 -295 -44.5"
+			values {
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "4416 -288 -43.55"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_1_zombine,0,-1"
+				OnTrigger "syn_teleport_alyx1,Teleport,,0,-1"
+				OnTrigger "sc_alyx_zombineIntro,Enable,,0.1,-1"
+			}
+		}
+
+		create {classname "trigger_once"
+			origin "4333 153.5 -62.5"
+			values {model "*24"
+				spawnflags "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,syn_spawn_player_2,0.05,-1"} }	
+
+//modi - open gate automatically
+		edit {targetname "gate3_wheel" values {spawnflags "1121"} }
+		create {classname "logic_auto"
+            values
+            {
+                spawnflags "1"
+                OnMapSpawn "gate3_wheel,AddOutput,OnPressed !self:Lock::0:-1,0,-1"
+                OnMapSpawn "gate3_wheel,AddOutput,OnPressed !self:SetPosition:1:0:-1,0,-1"
+            }
+        }
+
+//Trav|Edt - make alyx not shoot idle barnicles
+		delete {classname "trigger_multiple" origin "1784 1176 179"}
+		delete {targetname "alyx_likes_barnacles"}
+
+		create {classname "ai_relationship"
+			values {subject "npc_alyx"
+				target "npc_barnacle"
+				disposition "4"
+				StartActive "1"} }
+
+//Trav|Edt - Auti-rush
+		create {classname "trigger_coop"
+			origin "1837 138.5 236.16"
+			values {model "*82"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				OnPlayersIn "syn_antirush_push,Disable,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+		create {classname "trigger_push"
+			origin "1932 48 354.5"
+			values {model "*81"
+				spawnflags "1"
+				targetname "syn_antirush_push"
+				pushdir "0 270 0"
+				speed "450"} }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep1_c17_00"} }
+	}
+}

@@ -1,0 +1,295 @@
+ep1_c17_01
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "pistol"}
+		delete {targetname "shotgun"}
+		delete {targetname "physgun"}
+		delete {targetname "suit"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_pistol		"1"
+				weapon_shotgun		"1"
+				ammo_pistol			"54"
+				ammo_buckshot		"12"
+			} }
+//New Weapons
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapons"
+				StartDisabled "1"
+				weapon_smg1			"1"
+				ammo_smg1			"45"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "4882 -376 -219"
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
+//Post Combinewall
+		//create {classname "info_player_coop" origin "1664 -136 0"
+		//	values {angles "0 330 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//Post Combinewall
+		create {classname "info_player_coop" origin "2592 -1344 36"
+			values {angles "0 105 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//after solving puzzle
+		create {classname "info_player_coop" origin "1859 1906 23"
+			values {angles "0 105 0" targetname "syn_spawn_player_2_1" StartDisabled "1"} }
+//Post Broken Stairs
+		create {classname "info_player_coop" origin "-678 127 102"
+			values {angles "0 180 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+		create { classname "info_intermission" origin "4632 744 304" values { target "look_kliener" } }
+
+//Trav|Edt - fix elevator bouncyness
+		create {classname "func_brush" origin "4980.01 -280 -268"
+			values {model "*167" angles "90 0 0"
+				spawnflags "2"
+				targetname "syn_bouncyvatorness"
+				rendermode "10"} }
+				
+//modi - fix crank locking
+		create {classname "logic_relay"
+			values {spawnflags "1"
+			targetname "_syn_vint"
+				OnTrigger "button_crank_a,AddOutput,spawnflags 1153,0,-1"
+				OnTrigger "synvint_gatecontroller,CancelPending,,1,-1"} }
+				
+		create {classname "logic_relay"
+			values {
+				targetname "synvint_gatecontroller"
+				OnSpawn "button_crank_a,AddOutput,OnPressed !self:SetPosition:1:0.1:-1,5,-1"
+				OnSpawn "button_crank_a,AddOutput,OnPressed !self:Lock::0:-1,5,-1"
+				OnSpawn "button_crank,AddOutput,OnPressed !self:SetPosition:1:0.1:-1,5,-1"
+				OnSpawn "button_crank,AddOutput,OnPressed !self:Lock::0:-1,5,-1"} }
+		edit {
+			targetname "button_crank_a" 
+			values {
+				spawnflags "1185"
+				speed "140"
+			}
+		}
+		edit {
+			targetname "physbox_crank_beans"
+			values {
+				OnPhysGunDrop "trigger_crank*,Enable,,0,-1"
+			}
+		}
+		edit {
+			targetname "trigger_crank"
+			values {
+				StartDisabled "0"
+			}
+		}
+//for trans
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "elevator_garage,Kill,,1,-1"} }
+
+//add failsafe to stop antlions spawn and start final scene "thats over"
+		create {
+			classname "trigger_once"
+			origin "-2926 456 58"
+			values {
+				edt_getbspmodelfor_targetname "trigger_car_detect"
+				targetname "test_trigger"
+				StartDisabled "0"
+				filtername "filter_alyx"
+				spawnflags "2"
+				OnTrigger "spawner_ants_chaseAlyx,Disable,,0,-1"
+			}
+		}
+		
+		create {
+			classname "trigger_once"
+			origin "-3400 552 58"
+			values {
+				edt_getbspmodelfor_targetname "trigger_car_detect"
+				targetname "test_trigger"
+				StartDisabled "0"
+				filtername "filter_alyx"
+				spawnflags "2"
+				OnTrigger "sc_alyx_startGarrisonScene,Enable,,0,1"
+				OnTrigger "npc_antlion,SetHealth,0,0,-1"
+			}
+		}
+
+//Trav|Edt - Prevent door(s) from autoclosing
+		edit {targetname "building_door" values {spawnflags "18432" returndelay "-1"} }
+		edit {classname "prop_door_rotating"
+			values {returndelay "-1"} }
+
+//Trav|Edt - allow more rapple combine
+//		create {classname "logic_auto"
+//			values {spawnflags "1"
+//				OnMapSpawn "maker_csoldier_rappelintro_*,addmaxchildren,3,0,-1"
+//				OnMapSpawn "maker_csoldier_rappelintro_*,setmaxlivechildren,2,0,-1"} }
+
+//Trav|Edt - add checkpoint when combine wall crushes
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trigger_combine_wall_2,AddOutput,OnTrigger syn_spawn_manager:MovePlayers::0.1:1,0,-1"
+				OnMapSpawn "trigger_combine_wall_2,AddOutput,OnTrigger syn_new_weapons:Enable::0:1,0,-1"
+				OnMapSpawn "trigger_combine_wall_2,AddOutput,OnTrigger syn_new_weapons:EquipAllPlayers::0.1:1,0,1"
+				OnMapSpawn "trigger_combine_wall_2,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawn_player_2:0:1,0,-1"} }
+
+//Freeze propphys_collapse_gib after fall
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "breakable_collapse,AddOutput,OnBreak propphys_collapse_gib:DisableMotion::5:-1,0,-1"} }
+
+//don't allow ceiling breaking by shooting on it
+		edit {targetname "breakable_collapse" values {spawnflags "3073"} }
+
+//Trav|Edt - make rapple combine use normal tacticts ???
+		//edit {targetname "csoldier_rappelintro_*" values {tacticalvariant "0"} }
+
+//Trav|Edt - make sniper harder
+		delete {targetname "csoldier_sniperAlley_sniper"}
+
+		create {classname "npc_sniper"
+			origin "406 90 344"
+			values {spawnflags "3473924"
+				angles "0 89 0"
+				targetname "csoldier_sniperAlley_sniper"
+				//damagefilter "trav_filter_sniper_grenade"
+				ignoreunseenenemies "1"
+				OnDeath "counter_sniperAndGunnerDead,Add,1,0,-1"
+				OnDeath "alyx,RemoveContext,ep1_c17_01_RollermineHint,0,-1"
+				OnDeath "lcs_al_sniper_CantGoOut,CancelAtNextInterrupt,,0,-1"
+				OnDeath "sniper_ragdoll_shooter,Shoot,,0,-1"
+				OnDeath "rollermines_hate_sniperbullseyes,ApplyRelationship,,0,-1"
+				OnDeath "alyx,ClearContext,,0,-1"
+				OnDeath "lcs_al_sniper_CantGoOut,Kill,,0,-1"} }
+
+//Trav|Edt - add more zombies on alyx's bridge
+		create {classname "trigger_once"
+			origin "-866 296 384"
+			values {model "*69"
+				spawnflags "1"
+				OnTrigger "ptemplate_bridge,ForceSpawn,,1,-1"
+				OnTrigger "ptemplate_bridge,ForceSpawn,,2,-1"
+				OnTrigger "ptemplate_bridge,ForceSpawn,,3,-1"} }
+
+//Trav|Edt - dont let sniper_wall_1 disappear
+		edit {targetname "sniper_wall_1" values {targetname "syn_sniper_wall_1" StartDisabled "0"} }
+
+//make fire deal more damage
+		edit {targetname "hellskitchen_hurtbrush_1" values {"damage" "10000" "damagecap" "10000"} }
+
+//block skipping fire puzzle
+		create {
+			classname "trigger_push"
+			origin "1820 1874 40"
+			values {
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "1720 1874 40"
+				angles "0 0 0"
+				targetname "modi_antiskip_cafe"
+				spawnflags "1"
+				speed "450"
+				pushdir "0 180 0"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "relay_hellskitchen_start,AddOutput,OnTrigger modi_antiskip_cafe:Disable::1:-1,0,-1"} }
+
+//End of Trav|Edt
+
+//modi: clip physics on combine patrol wall
+		create {
+			classname "func_clip_vphysics"
+			origin "-2926 277 240"
+			values {
+				angles "0 -5 0"
+				edt_getbspmodelfor_targetname "brush_sniperblockclip"
+				targetname "modi_vphysics_blocker"
+			}
+		}
+		create {
+			classname "func_clip_vphysics"
+			origin "-2926 608 240"
+			values {
+				angles "0 -5 0"
+				edt_getbspmodelfor_targetname "brush_sniperblockclip"
+				targetname "modi_vphysics_blocker"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "relay_openGate,AddOutput,OnTrigger modi_vphysics_blocker:Disable::0.1:1,0,-1"} }
+
+
+		create { classname "logic_relay" origin "0 0 10"
+			values {
+				"targetname" "relay_closewall"
+				"spawnflags" "1"
+				"StartDisabled" "0"
+
+				"OnTrigger" "syn_spawn_player_2,SetCheckpoint,syn_spawn_player_2,0,0"
+				"OnTrigger" "syn_spawn_player_2,MovePlayers,,.3,0"
+			}
+		}
+
+		// keep door unlocked
+		create { classname "logic_relay" origin "0 0 20"
+			values {
+				"targetname" "relay_collapse"
+				"StartDisabled" "0"
+
+				"OnTrigger"	"building_door,Unlock,,.4,-1"
+				"OnTrigger"	"building_door,Open,,.6,-1"
+			}
+		}
+		
+		
+		create { classname "trigger_once"
+			values {
+				"origin" "1720 2240 188"
+				"spawnflags" "1"
+				"model" "*110"
+				"OnTrigger"	"syn_spawn_manager,SetCheckpoint,syn_spawn_player_2_1,0,0"
+				"OnTrigger"	"syn_spawn_manager,MovePlayers,,0.2,0"
+			}
+		}
+
+		create { classname "trigger_once"
+			values {
+				"origin" "-686 26 188"
+				"spawnflags" "1"
+				"StartDisabled" "0"
+				"model" "*226"
+
+				"OnTrigger"	"syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,0"
+				"OnTrigger"	"syn_spawn_manager,MovePlayers,,0.2,0"
+			}
+		}	
+		
+		create { classname "trigger_once"
+			values {
+				"origin" "-3135 406 32"
+				"spawnflags" "1"
+				"model" "*76"
+				"OnTrigger"	"syn_spawn_manager,MovePlayers,,0.2,0"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep1_c17_01"} }
+	}
+}
