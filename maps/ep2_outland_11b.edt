@@ -1,0 +1,280 @@
+ep2_outland_11b
+{
+	entity
+	{
+//--Setup--
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+					ammo_ar2altfire	"1"
+				weapon_crossbow		"1"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "365 -9554 -319"
+			values {angles "0 90 0" targetname "syn_spawn_player_1"} }
+//Monitor Room
+		create {classname "info_player_coop" origin "300 -8632 -318"
+			values {angles "0 45 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//Train Room
+		create {classname "info_player_coop" origin "234 -9009 -319"
+			values {angles "0 -140 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+//Strider Test
+		create {classname "info_player_coop" origin "-181 -9107 -344"
+			values {angles "0 -120 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+//Trav|Edt - make npc's invencibles from player exploits
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_magnusson,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_kleiner,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_eli,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_dog,SetDamageFilter,syn_dfilter_null,10,-1"} }
+
+
+		delete { classname "logic_auto" origin "440.339 -9459.9 -288.501" }
+		create { classname "logic_auto" origin "440.339 -9459.9 -288.501"
+			values {
+				"spawnflags" "1"
+				"hammerid" "2799825"
+			//	"OnNewGame" "global_newgame_template_base_items,ForceSpawn,,0,1"
+			//	"OnNewGame" "global_newgame_template_local_items,ForceSpawn,,0.2,1"
+			//	"OnNewGame" "global_newgame_template_ammo,ForceSpawn,,0.5,1"
+				"OnNewGame" "template_alyx,ForceSpawn,,0.1,-1"
+				"OnMapTransition" "global_friendly_encounter,TurnOn,,0,-1"
+				"OnNewGame" "global_friendly_encounter,TurnOn,,0,-1"
+			}
+		}
+
+//Trav|Edt - Add gnome if NewGame
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+	//	create {classname "point_template"
+	//		values {spawnflags "2"
+	//			targetname "syn_new_gnome"
+	//			Template01 "gnome"} }
+
+	//	create {classname "prop_physics" origin "-292 -8444 -272"//526 -8572 -300//620 -8692 -320alyxcup
+	//		values {model "models/props_junk/gnome.mdl"
+	//			angles "0 270 0" spawnflags "1"
+	//			targetname "gnome"} }
+
+		create {classname "prop_physics" origin "-6400 -2568 5490"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 315 0" spawnflags "8"
+				targetname "gnome2"} }
+
+		// ----- level changes -----
+
+		// first door needs to acitvate checkpoint
+
+		create { classname "trigger_once" origin "448 -8557 -254.01"
+			values {
+				"model" "*62"
+				"targetname" "trigger_player_closedoor_1"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+			}
+		}
+
+		// do not close the magnusson tv door using math_counter
+		// activate checkpoint after door closes too
+					// player trigger pusher
+		create { classname "trigger_push" origin "404 -9336 -276"
+			values {
+				"model" "*68"
+				"spawnflags" "1"
+				"pushdir" "0 90 0"
+				"speed" "500"
+				"StartDisabled" "1"
+				"targetname" "trigger_close_tvdoor_transition_1"
+			}
+		}
+
+					// player trigger
+		delete { classname "trigger_multiple" origin "404 -9272 -276" }
+		create { classname "trigger_once" origin "404 -9272 -276"
+			values {
+				"model" "*68"
+				"wait" "1"
+				"targetname" "trigger_close_tvdoor_transition_1_player"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"hammerid" "2799193"
+			//	"OnStartTouch" "counter_mag_transition_01,Add,1,0,-1"
+			//	"OnEndTouch" "counter_mag_transition_01,Subtract,1,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_1,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+
+				"OnTrigger" "door_silo_lab_1,Close,,0,-1"
+				"OnTrigger" "brush_pclip_door_silo_lab_1,Enable,,0,-1"
+
+				"OnTrigger" "trigger_close_tvdoor_transition_1,Disable,,0,-1"
+			}
+		}
+
+					// magnusson trigger
+		delete { classname "trigger_once" origin "384 -8944 -276" }
+		create { classname "trigger_once" origin "384 -8944 -276"
+			values {
+				"model" "*69"
+				"targetname" "trigger_close_tvdoor_transition_1"
+				"StartDisabled" "1"
+				"spawnflags" "2"
+				"filtername" "filter_magnusson1"
+				"hammerid" "2799196"
+			//	"OnStartTouch" "counter_mag_transition_01,Add,1,0,-1"
+
+				"OnStartTouch" "trigger_close_tvdoor_transition_1_player,Enable,,0,-1"
+			}
+		}
+
+		// do not close the that leads to the practise room
+
+					// magnusson trigger
+		delete { classname "trigger_once" origin "252 -9088 -248" }
+		create { classname "trigger_once" origin "252 -9088 -248"
+			values {
+				"model" "*2"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"filtername" "filter_magnusson"
+				"hammerid" "968594"
+			//	"OnTrigger" "door_silo_lab_3_counter,Add,1,0,-1"
+
+				"OnTrigger" "door_silo_lab_3_counter_playertrigger,Enable,,0,-1"
+			}
+		}
+
+					// player trigger
+		delete { classname "trigger_multiple" origin "130 -9088 -248" }
+		create { classname "trigger_once" origin "130 -9088 -248"
+			values {
+				"model" "*14"
+				"wait" "1"
+				"targetname" "door_silo_lab_3_counter_playertrigger"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"hammerid" "1393727"
+			//	"OnStartTouch" "door_silo_lab_3_counter,Add,1,0,-1"
+			//	"OnEndTouch" "door_silo_lab_3_counter,Subtract,1,0,-1"
+				"OnTrigger" "tonemap,SetAutoExposureMax,2,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+
+				"OnTrigger" "door_silo_lab_3,Close,,0,-1"
+			//	"OnTrigger" "door_silo_lab_3_counter_playertrigger,Kill,,0,-1"
+				"OnTrigger" "door_silo_lab_3_brush,Enable,,0,-1"
+				"OnTrigger" "colorcorrection,SetFadeInDuration,4,0,-1"
+				"OnTrigger" "colorcorrection,Enable,,0.1,-1"
+			}
+		}
+
+		// activate checkpoint outside in the strider test area
+
+					// player trigger
+		delete { classname "trigger_multiple" origin "-232 -9100 -232" }
+		create { classname "trigger_multiple" origin "-232 -9100 -232"
+			values {
+				"model" "*5"
+				"wait" "1"
+				"targetname" "magnusson_ragdoll_door_playerout_trigger"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"hammerid" "1228293"
+			//	"OnStartTouch" "magnusson_ragdoll_door_counter,Add,1,0,-1"
+			//	"OnEndTouch" "magnusson_ragdoll_door_counter,Subtract,1,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_4,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+
+				"OnTrigger" "magnusson_ragdoll_door_brush,Enable,,0,-1"
+				"OnTrigger" "magnusson_ragdoll_door,Close,,0,-1"
+				"OnTrigger" "magnusson_ragdoll_door_playerout_trigger,Kill,,0,-1"
+				
+				//modi: failsafe if something went wrong (no new magnussons, strider stuck while moving or smth)
+				"OnTrigger" "magnusson_training_lcs4,Start,,60,-1"
+				"OnTrigger" "magnusson_courtyard_exitdoor,Open,,120,-1"
+			}
+		}
+
+					// magnusson trigger
+		delete { classname "trigger_once" origin "-94 -9088 -232" }
+		create { classname "trigger_once" origin "-94 -9088 -232"
+			values {
+				"model" "*20"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"filtername" "filter_magnusson"
+				"hammerid" "1883716"
+			//	"OnTrigger" "magnusson_ragdoll_door_counter,Add,1,0,-1"
+
+				"OnTrigger" "magnusson_ragdoll_door_playerout_trigger,Enable,,0,-1"
+			}
+		}
+
+		// before we enable the trigger, move the players to the transition
+		create { classname "info_teleport_destination" origin "-143 -8796 -320" values { angles "0 180 0" targetname "PS_ToEnd_TP" } }
+
+		delete { targetname "level_exit_relay" }
+		create { classname "logic_relay" origin "-312.935 -8891.87 -311"
+			values {
+				"targetname" "level_exit_relay"
+				"StartDisabled" "1"
+				"spawnflags" "0"
+				"hammerid" "2796040"
+				"OnTrigger" "changelevel_to_12,Enable,,3,-1"	// 1
+
+				"OnTrigger" "syn_spawn_manager,TeleportPlayers,PS_ToEnd_TP,0,-1"
+			}
+		}
+
+		// fix the vehicle to be episodic version
+//		edit { classname "prop_vehicle_jeep" values { classname "prop_vehicle_jeep_episodic" } }
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_11b"} }
+	}
+}

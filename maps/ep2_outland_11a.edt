@@ -1,0 +1,154 @@
+ep2_outland_11a
+{
+	entity
+	{
+//--Setup--
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+				weapon_crossbow		"1"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "2063.90 -9054.67 -1535.97"
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
+//Lab
+		create {classname "info_player_coop" origin "179.68 -11266.33 64.03"
+			values {angles "0 90 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//Trav|Edt - add vclip to avoid large props going in to conferenceroom
+		create {classname "func_clip_vphysics"
+			origin "292 -11260 128"
+			values {model "*116"} }
+
+//--Extra--
+
+		delete { classname "logic_auto" origin "1976.34 -9080.83 -1527" }
+		create { classname "logic_auto" origin "1976.34 -9080.83 -1527"
+			values {
+				"spawnflags" "1"
+				"hammerid" "2068562"
+			//	"OnNewGame" "global_newgame_template_base_items,ForceSpawn,,0,1"
+			//	"OnNewGame" "global_newgame_template_local_items,ForceSpawn,,0.2,1"
+			//	"OnNewGame" "global_newgame_template_ammo,ForceSpawn,,0.5,1"
+				"OnNewGame" "lockers_1_door_right,Open,,0,-1"
+				"OnMapTransition" "lockers_1_door_right,Open,,0,-1"
+				"OnMapTransition" "prop_door_silo_lab_4,SetAnimation,lock,0.2,1"
+			}
+		}
+
+//Trav|Edt - Add gnome if NewGame
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+	//	create {classname "point_template"
+	//		values {spawnflags "2"
+	//			targetname "syn_new_gnome"
+	//			Template01 "gnome"} }
+
+	//	create {classname "prop_physics" origin "1018 -9816 -1536"
+	//		values {model "models/props_junk/gnome.mdl"
+	//			angles "0 180 0" //spawnflags "1"
+	//			targetname "gnome"} }
+
+//Trav|Edt - dont disable leak
+		delete {classname "trigger_multiple" origin "-64 -11136 -1056"}
+
+		create {classname "trigger_once" origin "-64 -11136 -1056"
+			values {model "*73"
+				spawnflags "1"
+				OnTrigger "leak_1,Start,,0,-1"} }
+
+//Trav|Edt - Disable Enemy turrets when tipped (avoid player greif)
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_turret_floor,AddOutput,OnTipped !self:SelfDestruct::0:-1,0,-1"} }//DepleteAmmo
+
+		// do not close first blast door
+		edit { targetname "door_blast_attack_1b" values { targetname "DISABLED_door_blast_attack_1b" } }
+		delete { targetname "pclip_hall_attack_1" }
+		edit { classname "prop_dynamic" origin "992 -9168 -1532" values { parentname "DISABLED_door_blast_attack_1b" } }
+
+		// dont know why this filter does not exist for this map
+		create { classname "filter_activator_name" origin "0 0 0"
+			values {
+				"targetname" "filter_alyx"
+				"Negated" "0"
+				"filtername" "alyx"
+			}
+		}
+
+		// activate checkpoint and move players after we get inside the lab
+		create { classname "info_teleport_destination" origin "179.68 -11266.33 64.03" values { angles "0 90 0" targetname "syn_spawn_player_2_TP" } }
+
+		delete { targetname "trigger_transition_go" }
+
+		create { classname "trigger_multiple" origin "184 -10928 112"
+			values {
+				"model" "*85"
+				"wait" "0"
+				"targetname" "trigger_transition_go"
+				"StartDisabled" "1"
+				"spawnflags" "2"
+				"filtername" "filter_alyx"
+
+				"OnStartTouch" "trigger_transition_go_player,Enable,,0,-1"
+			//	"OnEndTouch" "trigger_transition_go_player,Disable,1,0,-1"
+			}
+		}
+
+		create { classname "trigger_once" origin "176 -10880 112"
+			values {
+				"model" "*66"
+				"wait" "0"
+				"targetname" "trigger_transition_go_player"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,1"
+				"OnTrigger" "syn_spawn_manager,TeleportPlayers,syn_spawn_player_2_TP,1,1"
+
+				"OnTrigger" "door_silo_lab_2,Close,,0,1"
+			//	"OnTrigger" "remove_npc_silo2,Enable,,1,-1"
+			//	"OnTrigger" "changelevel_to_11b,Enable,,1.5,-1"
+
+				"OnTrigger" "sound_leaks,StopSound,,0,1"
+				"OnTrigger" "sound_leaks,Kill,,1,1"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_11a"} }
+	}
+}

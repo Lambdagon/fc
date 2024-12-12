@@ -1,0 +1,385 @@
+ep2_outland_08
+{
+	console
+	{
+		sk_helicopter_num_bombs1 "12" //3
+		sk_helicopter_num_bombs2 "16" //5
+		sk_helicopter_num_bombs3 "20" //5
+	}
+	entity
+	{
+//--Setup--
+		delete {targetname "spawnitems"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+				weapon_crossbow		"1"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "-12781 -13098 448"
+			values {angles "0 90 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_player_coop" origin "-1373 1084 64"
+			values {angles "0 135 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//Intro
+		create {classname "info_vehicle_spawn" origin "-12352 -10240 448"
+			values {targetname "syn_spawn_vehicle_1"
+				angles "0 0 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-12352 -10240 448"
+			values {targetname "syn_spawn_vehicle_1_med"
+				angles "0 0 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/8seattruck.mdl"
+				vehiclescript "scripts/vehicles/truck.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-12352 -10240 448"
+			values {targetname "syn_spawn_vehicle_1_high"
+				angles "0 0 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-12262 -10575 448"
+			values {targetname "syn_spawn_vehicle_1_high"
+				angles "0 0 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-12262 -10775 448"
+			values {targetname "syn_spawn_vehicle_1_high"
+				angles "0 0 0"
+				StartEnabled "0"
+				StartGunEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/8seattruck.mdl"
+				vehiclescript "scripts/vehicles/truck.txt"} }
+		
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_moreplayers"
+				LowerPlayer "10"
+				UpperPlayer "16"
+				OnLow "syn_spawn_vehicle_1,Enable,,0,-1"
+				OnMed "syn_spawn_vehicle_1_med,Enable,,0,-1"
+				OnHigh "syn_spawn_vehicle_1_high,Enable,,0,-1"
+				OnNotLow "syn_spawn_vehicle_1,Disable,,0,-1"
+				OnNotMed "syn_spawn_vehicle_1_med,Disable,,0,-1"
+				OnNotHigh "syn_spawn_vehicle_1_high,Disable,,0,-1"
+			}
+		}
+
+		create {classname "info_vehicle_spawn" origin "-12576 -10240 448"
+			values {targetname "syn_vint_spawn_vehicle_1"
+				angles "0 0 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+
+//cruel way of disableing gun
+		create {classname "logic_timer"
+			values {RefireTime "5"
+				OnTimer "prop_vehicle_jeep,AddOutput,EnableGun 0,0,-1"} }
+				
+		create { classname "trigger_once" origin "-12608 -7696 268"
+			values {
+				"model" "*136"
+				"spawnflags" "1"
+				OnTrigger "syn_vint_spawn_vehicle_1,Enable,,0,-1"
+				OnTrigger "syn_moreplayers,CheckSkill,,0,-1"
+			}
+		}
+				
+//Game Over text
+		delete {targetname "alyx_check_fail"}
+//		create {classname "logic_auto"
+//			values {
+//				spawnflags "1"
+//				OnMapSpawn "alyx_check_fail_relay,AddOutput,OnTrigger syn_gameover_message:Display::0:-1,1,-1"
+//			}
+//		}
+		create {
+			classname "game_text"
+			values {
+				"y" "-1"
+				"x" "-1"
+				"targetname" "syn_gameover_message"
+				"spawnflags" "1"
+				"message" "EP2_GameOver_AlyxLeft"
+				"holdtime" "5"
+				"fxtime" "0.25"
+				"fadeout" "0.5"
+				"fadein" "1.5"
+				"effect" "0"
+				"color2" "240 110 0"
+				"color" "100 100 100"
+				"channel" "1"
+			}
+		}
+
+//--Extra--
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "-12646 -6586 384"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 270 0" spawnflags "1"
+				targetname "gnome"} }
+		
+//Trav|Edt - Remove bully brush
+		delete {targetname "brush_clip_trans"}
+
+//Trav|Edt - Changelevel failsafe
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trigger_trans_alyx,AddOutput,OnTrigger trigger_transition_to_09:Changelevel::5:-1,0,-1"} }
+
+		create {classname "logic_relay"
+			values {//spawnflags "1"
+				targetname "relay_deadlyfire"
+				OnTrigger "trav_chopper_ROF_*,Add,1,0,-1"} }
+
+//End of Trav|Edt
+
+		// ----- level changes -----
+
+		// block players from moving backward to previous level
+		create { classname "trigger_push" origin "0 96 0"
+			values {
+				model "*149"
+				spawnflags "1"
+				pushdir "0 90 0"
+				speed "500"
+			}
+		}
+
+		create { classname "func_vehicleclip" origin "0 32 0"//func_clip_vphysics
+			values {
+				model "*149"
+			}
+		}
+		
+		create { classname "trigger_push" origin "-2560 2570 209"
+			values {
+				model "*95"
+				spawnflags "1"
+				pushdir "0 270 0"
+				speed "500"
+			}
+		}
+		
+		create { classname "trigger_push" origin "-2700 55 209"
+			values {
+				model "*95"
+				spawnflags "1"
+				pushdir "0 270 0"
+				speed "500"
+			}
+		}
+
+		// make the jeep the episodic version
+//		edit { classname "prop_vehicle_jeep" values { classname "prop_vehicle_jeep_episodic" } }
+
+		// fix the filter
+		edit { targetname "filter_jeep" values { filterclass "prop_vehicle_jeep_episodic" } }
+
+		// move the player clip brushes so we can place a checkpoint
+		edit { targetname "pclip_dud_return" values { origin "-1310 1076 200" } } // moved [50 0 0]
+
+		// activate a checkpoint when we are in the chopper battle
+
+		create { classname "trigger_once" origin "-1726 974 127.41"
+			values {
+				"model" "*77"
+				"StartDisabled" "0"
+				"spawnflags" "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+//Trav|Edt - using my own teleport -wut?
+			//	"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+			}
+		}
+
+//make final rebel invencible
+		edit {targetname "npc_citizen_opengate" values {damagefilter "syn_dfilter_null"} }
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+		
+		create {classname "trigger_once" origin "-1920 784 127.41"
+			values {model "*111"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"} }
+
+		// fix bug with the chopper not dropping bombs because triggers have filter name with non-existant entity
+		create { classname "filter_activator_name" origin "0 0 0"
+			values {
+				targetname "canals_filter_helicopterbombtrigger"
+				filtername "chopper"
+				Negated "0"//Allow entities that match criteria
+			}
+		}
+
+//break props from exploding tower
+		create {
+			classname "logic_auto"
+			values {
+				spawnflags "1"
+				OnMapSpawn "relay_exploding_tower,AddOutput,OnTrigger syn_explode_tower_props:Trigger::0:-1,1,-1"
+			}
+		}
+
+		create {
+			classname "logic_relay"
+			values {
+				targetname "syn_explode_tower_props"
+				OnTrigger "engine,Break,,1.2,-1"
+				OnTrigger "prop_siren,Break,,1.6,-1"
+				OnTrigger "tower_*,Break,,1.9,-1"
+			}
+		}
+		
+		edit {
+			targetname "tower_ladder_1"
+			values {
+				material "2" //2 - metal, was 0 - glass
+			}
+		}
+		
+		edit {
+			targetname "tower_strut_1"
+			values {
+				material "1" //1 - wood, was 0 - glass
+			}
+		}
+		edit {targetname "tower_strut_2" values {material "1"}}
+		edit {targetname "tower_strut_3" values {material "1"}}
+		edit {targetname "tower_strut_4" values {material "1"}}
+
+		edit {
+			targetname "tower_wall_support_1"
+			values {
+				material "2"
+			}
+		}
+		edit {
+			targetname "tower_wall_support_2"
+			values {
+				material "2"
+			}
+		}
+
+		edit {
+			targetname "tower_roof_support_1"
+			values {
+				material "2"
+			}
+		}
+		edit {targetname "tower_roof_support_3" values {material "2"}}
+		edit {targetname "tower_roof_support_4" values {material "2"}}
+		edit {targetname "tower_roof_support_5" values {material "2"}}
+		
+		// move all players inside the transition here when a player gets in
+		create { classname "info_teleport_destination" origin "-2952 1898 73" values { angles "0 160 0" targetname "PS_End_TP" } }
+		delete { classname "prop_door_rotating" origin "-3251 2026 126.281"}
+	//	delete { targetname "door_08_to_09" }
+	//	create { classname "prop_door_rotating" origin "-2865 1971 126.281"
+	//		values {
+	//			"targetname" "door_08_to_09"
+	//			"speed" "100"
+	//			"spawnpos" "0"
+	//			"spawnflags" "2048"
+	//			"skin" "7"
+	//			"returndelay" "-1"
+	//			"opendir" "0"
+	//			"model" "models/props_c17/door01_left.mdl"
+	//			"hardware" "1"
+	//			"globalname" "door.08.to.09"
+	//			"forceclosed" "1"
+	//			"distance" "90"
+	//			"disableshadows" "1"
+	//			"axis" "-2865.01 1971.01 104.28, -2865.01 1971.01 162.28"
+	//			"angles" "0 180 0"
+	//			"ajarangles" "0 0 0"
+	//			"OnFullyClosed" "syn_spawn_manager,TeleportPlayers,PS_End_TP,0.1,-1"
+	//			"OnFullyClosed" "trigger_transition_to_09,ChangeLevel,,2,-1" // 1
+	//			"OnFullyClosed" "door_08_to_09,Lock,,0,-1"
+	//		}
+	//	}
+
+		// dont end game if alyx isnt there, just teleport her
+		delete { targetname "alyx_check_end_trigger1" }
+		delete { targetname "trigger_alyx_check_postcar" }
+
+	//	delete { targetname "trigger_alyx_check_postcar" } // this one is enabled AFTER the vehicle crashes
+	//	delete { classname "trigger_multiple" origin "-1733.81 -1504 470.93" } // trigger_leavealyx_check_2
+	//	delete { targetname "trigger_leavealyx_check_1" }
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_08"} }
+	}
+}
