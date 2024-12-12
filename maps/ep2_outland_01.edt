@@ -1,0 +1,323 @@
+ep2_outland_01
+{
+	console
+	{
+		sv_test_scripted_sequences 1 // hotfix for alyx getting stuck
+	}
+	entity
+	{
+
+// Community Hotfixes (until we figure out what's going on here)
+	// Fix alyx getting stuck -KillerB (Now fixed in code)
+	//edit {targetname "SS_alyx_scrapyard_down" values {"m_iszPlay" "jumpdownsm"} }
+
+//--Setup--
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1200"} }
+
+		edit {classname "logic_auto" origin "-528 104 912" values {classname "syn_logic_auto"} }
+		edit {classname "logic_auto" origin "-528 88 912" values {classname "syn_logic_auto"} }
+		edit {classname "logic_auto" origin "-528 -64 912" values {classname "syn_logic_auto"} }
+		edit {classname "logic_auto" origin "-56 32 410" values {classname "syn_logic_auto"} }
+
+		edit {targetname "camera_intro" values {spawnflags "148" origin "426 -1690 50" angles "-10 -65 0"} }
+
+		//create {classname "env_fade"
+		//	values {
+		//		targetname "syn_intro_fade_black"
+		//		spawnflags "8"
+		//		renderamt "255"
+		//		rendercolor "0 0 0"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "camera_intro,Enable,,0,-1"
+				OnMapSpawn "timer_shake,Disable,,0,-1"
+				//OnMapSpawn "syn_intro_fade_black,Fade,,0,-1"
+				OnMapSpawn "syn_start_timer,Start,45,0,-1"
+			}
+		}
+
+// Countdown timer
+		create { classname "hud_timer"
+			values {
+				targetname "syn_start_timer"
+				TimerType "1"
+				TimerText "STARTING GAME"
+				OnTimer "syn_logic_auto,Go,,0,-1"
+				OnTimer "timer_shake,Enable,,0,-1"
+				//OnTimer "syn_intro_fade_black,Kill,,0,-1"
+				OnTimer "syn_equip_start,Enable,,12,-1"
+				OnTimer "syn_equip_start,EquipAllPlayers,,12.1,-1"
+			}
+		}
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {targetname "syn_equip_start" StartDisabled "1"
+				item_suit			"1"
+				item_armor			"18"
+			} }
+//New Weapon(s)
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapon" StartDisabled "1"
+				weapon_physcannon	"1"
+				} }
+
+		create { classname "info_player_equip"
+			values {targetname "syn_new_weapon2"
+				StartDisabled "1"
+				weapon_crowbar		"1"
+				} }
+//give gravitygun and enable trigger for next checkpoint
+		create {classname "trigger_once" origin "1011.53 -343.59 21.27"
+			values {model "*70"
+				spawnflags "1"
+				targetname "trigger_Get_physgun"
+				StartDisabled "1"
+				OnTrigger "syn_new_weapon,Enable,,0,-1"
+				OnTrigger "syn_new_weapon,EquipAllPlayers,,0.05,-1"
+				OnTrigger "modi_checkpoint_after_train,Enable,,0,-1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "-668 48 760"
+			values {angles "0 0 0" targetname "syn_spawn_player_1"} }
+//2nd Train (fall)
+		create {classname "info_player_coop" origin "487.42 23.31 -54.13"
+			values {angles "0 -10 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//PortalStorm
+		create {classname "info_player_coop" origin "195.47 -816.66 -0.80"
+			values {angles "0 -90 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+//Alyx Shanked
+		create {classname "info_player_coop" origin "-5498.39 4583.00 -135.97"
+			values {angles "0 210 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+//Elevator Fall
+		create {classname "info_player_coop" origin "-6340.73 3676.37 -1402.26"
+			values {angles "0 -60 0" targetname "syn_spawn_player_5" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--CheckPoints--
+//2nd Train (fall)
+		create {classname "trigger_once" origin "-47.55 51.97 367.05"
+			values {model "*65"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"} }
+//Post Train Doors (pre portal storm), start disabled to prevent teleport by lagged player
+		create {classname "trigger_once" origin "82.36 -1210.4 39.38"
+			values {model "*71"
+				StartDisabled "1"
+				targetname "modi_checkpoint_after_train"
+				spawnflags "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"} }
+//Alyx Shanked
+		create {classname "trigger_once" origin "-5486.51 4505.71 -12"
+			values {model "*29"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_4,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.2,-1"
+				} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "relay_fade_in,AddOutput,OnTrigger syn_forcevehicle:Enable::0:1,0,-1"
+				OnMapSpawn "relay_bulleye_dead,AddOutput,OnTrigger syn_forcevehicle:kill::0:-1,0,-1"
+				OnMapSpawn "trigger.alyx.death,AddOutput,OnTrigger syn_spawn_manager:MovePlayers::0:-1,0,-1"} }
+		
+		create {classname "trigger_multiple" origin "-5498 4583 -135"
+			values
+			{
+				edt_mins "-50 -50 -50"
+				edt_maxs "50 50 50"
+				spawnflags "512"
+				targetname "syn_forcevehicle"
+				startdisabled "1"
+				OnTrigger "coreo_vehicle_01,EnterVehicleImmediate,,0,-1"
+			}
+		}
+
+//Elevator Fall
+		create {classname "logic_relay"
+			values {targetname "relay_crowbar_grabbed"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_5,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"
+				OnTrigger "syn_new_weapon2,Enable,,0,-1"
+				OnTrigger "syn_new_weapon2,EquipAllPlayers,,0.05,-1"
+
+				OnTrigger "syn_gnome_teleport,Teleport,,5,-1"} }
+
+		create { classname "trigger_push" origin "-3412 1573 612"
+			values {
+				"model"			"*121"
+				"pushdir"		"0 180 0"
+				"speed"			"500"
+				"spawnflags"	"1"
+			}
+		}
+		create { classname "trigger_push" origin "-3772 970 460"
+			values {
+				"model"			"*121"
+				"pushdir"		"0 90 0"
+				"speed"			"500"
+				"spawnflags"	"1"
+			}
+		}
+		
+//--Extra--
+
+//modi: getting alyx faster into communication center
+		create {
+			classname "trigger_coop" 
+			origin "-3776 1796 236"
+			values {
+				spawnflags "1"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-3776 1796 236"
+				targetname "syn_coop_alyx_teleport"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnPlayersIn "syn_alyx_teleport,Teleport,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"
+			}
+		}
+
+		create {
+			classname "trigger_once" 
+			origin "-3776 1796 236"
+			values {
+				spawnflags "2"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-3776 1796 236"
+				OnTrigger "syn_coop_alyx_teleport,Disable,,0,1"
+			}
+		}
+		create {
+			classname "point_teleport"
+			values {
+				origin "-3585 1621 176"
+				angles "0 130 0"
+				targetname "syn_alyx_teleport"
+				target "alyx"
+			} 
+		}
+
+//modi: prevent fast wire plugin
+		edit {
+			targetname "lcs_alyx_monitorsout"
+			values {
+				OnTrigger6 "relay_wire_setup,Trigger,,3,-1"
+			}
+		}
+
+//modi: prevent early use of choreo vehicle and soft-locking players (original ep2 bug)
+		edit {
+			targetname "coreo_vehicle_01"
+			values {
+				VehicleLocked "1"
+				PlayerOff "!self,Lock,,0.01,1"
+			}
+		}
+
+//Doors: Prevent Closing
+		edit {classname "prop_door_rotating" origin "-3667 1529 200" values {spawnflags "0"} }
+
+//remove unnecessary damagefilter
+		delete {classname "trigger_multiple" origin "1175.49 -192.36 110.5"}
+		//delete {targetname "filter_invulnerable"}
+
+//Trav|Edt - teleport gnome over vator for no reason
+		create {classname "point_teleport"
+			origin "-6288 3808 -144"
+			values {targetname "syn_gnome_teleport"
+				target "gnome"} }
+
+//Trav|Edt - antirush at end
+
+		create {classname "trigger_coop"
+			origin "-6304 3551.01 -202"
+			values {model "*31"
+				spawnflags "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				OnPlayersIn "syn_antirush_prop,Kill,,0,1"
+				//OnPlayersIn "syn_end_light,TurnOff,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+//		create {classname "prop_dynamic" origin "-6464 3752 -384"
+//			values {model "models/synergy/tools/syn_transition.mdl"
+//				targetname "syn_antirush_prop"
+//				angles "0 270 0"
+//				solid "6"
+//				DisableShadows "1"} }
+
+		//create {classname "light_dynamic" origin ""
+		//	values {targetname "syn_end_light"
+		//		_light "170 255 170"
+		//		brightness "2"
+		//		distance "1024"
+		//		//_inner_cone "75"
+		//		//_cone "80"
+		//		style "12"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//don't kill trains?
+
+		// fix the fall trigger at citadel scene
+		delete {classname "trigger_once" origin "-262.94 -4256.21 -968.09"}
+		create {classname "trigger_hurt" origin "-262.94 -4256.21 -968.09"
+			values {spawnflags "1"
+				model "*77" angles "90 0 0"
+				damage "200"} }
+
+		// remove clip brush that prevents other players from jumping down into the mine
+		delete {targetname "mine_pit_clip_brush"}
+
+		// fix the alyx death scene for multiplayer
+		delete {targetname "teleport.player"}
+
+			// make sure we do not get stuck after we exit the CV
+			create {classname "info_teleport_destination" origin "-5404 4466 -184" values {targetname "PS_ExitVehicle" angles "0 -90 0" } }
+
+			create {classname "logic_relay"
+				values {targetname "relay_bulleye_dead"
+					OnTrigger "syn_spawn_manager,TeleportPlayers,PS_ExitVehicle,0.35,-1"} }
+
+		// kill players that suicide jump
+		create { classname "trigger_hurt" origin "552 -2670 -1200"
+			values {
+				spawnflags "1"
+				damage "1000"
+				damagetype "1"
+				model "*216"
+			}
+		}
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_01"} }
+	}
+}

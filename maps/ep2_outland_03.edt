@@ -1,0 +1,408 @@
+ep2_outland_03
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "spawnitems"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"45"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+				ammo_smg1			"45"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "-967.84 -3892.28 -930.53"
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
+//Shaft Lift
+		create {classname "info_player_coop" origin "808.38 -4910.19 -959.97"
+			values {angles "0 -25 0" targetname "syn_spawn_player_" StartDisabled "1"} }//PS_AboveShaft
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Checkpoints--
+
+//--Extra--
+
+//Trav|Edt - Manage Ragdolls
+		delete {targetname "counterweight_room_ragdoll_template"}
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "holdout_elevator_2_vort_exit_aiss_timer,AddOutput,OnTimer syn_vorttp:Teleport::0:1,0,-1"
+				OnMapSpawn "thumper_arena_ragdolls,DisableMotion,,10,-1"
+				OnMapSpawn "counterweight_room_ragdolls,DisableMotion,,10,-1"} }
+		
+		create {classname "point_teleport" origin "1152 -9211 -465" values {targetname "syn_vorttp" target "vort" angles "0 0 0" parentname "holdout_elevator_2"} }
+//No need to teleport if vort has reached the correct zone
+		create {classname "trigger_once" origin "1195 -9135 -1785"
+			values
+			{
+				edt_mins "-90 -90 -100"
+				edt_maxs "250 250 100"
+				filtername "vortfilter"
+				spawnflags "2"
+				OnTrigger "syn_vorttp,kill,,0,1"
+			}
+		}
+		create {classname "filter_activator_name" values {filtername "vort" targetname "vortfilter" Negated "0"} }
+
+		delete {targetname "thumper_arena_ragdoll_template"}
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "-2108 -5112 -760"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 90 0"
+				targetname "gnome"} }
+
+//Doors
+		edit {targetname "controlroom_exit_door" values {spawnflags "0"} }
+		edit {targetname "bunkroom_door" values {spawnflags "0"} }
+
+//Trav|Edt - moveplayers in zombie/ant/vator area
+		create {classname "trigger_once"
+			origin "1528 -8136 -1625.5"//256 416 828
+			values {model "*125"//125
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0,-1"} }
+
+//Trav|Edt - move back vort-generator trigger for easier initiation
+		edit {targetname "exit_gate_door_trigger" values {origin "1008 -4934.5 -863.49" OnEndTouch ""} }//DEF-O 1378 -4933.5 -863.49
+//modi make vort-generator quicker
+		edit {targetname "vort_exit_generator_trigger" values {origin "1008 -4933.5 -910.49"} }//def 1382.5 -4933.5 -910.49
+//End of Trav|Edt
+
+		// ----- level changes -----
+
+		// do not let players go back from where they came
+		// fix the changelevel ents
+		create { classname "logic_auto" origin "0 0 0"
+			values {
+				"OnNewGame" "changelevel_back_to_02,Disable,,0,-1"
+			}
+		}
+
+		delete { classname "trigger_changelevel" }
+
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*16"
+				"map" "ep2_outland_04"
+				"landmark" "landmark_outland_03_04"
+				"hammerid" "163554"
+			}
+		}
+
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*307"
+				"spawnflags" "0"
+				"map" "ep2_outland_02"
+				"landmark" "landmark_ep2_outland_02-03"
+				"hammerid" "396357"
+
+				"targetname" "changelevel_back_to_02"
+			}
+		}
+
+		create { classname "trigger_push"
+			values {
+				"model" "*307"
+				"spawnflags" "1"
+				"pushdir" "0 180 0"
+				"speed" "500"
+				"StartDisabled" "0"
+				"targetname" "pusher_back_to_02"
+			}
+		}
+
+		// change the mass of the block in the first shaft
+		edit { targetname "platform_1_counterweight_1"
+			values {
+				"overridescript" "mass,1800" // 2000
+			}
+		}
+		
+		edit {targetname "cave_entry_gate" values {overridescript "mass,5000"} }
+		edit {targetname "cave_gate" values {overridescript "mass,5000"} }
+		
+		// Add barrel in front of gate in case it gets stuck players can push it with this
+		create {classname "prop_physics" origin "4032 -8790 -550" values {model "models/props_c17/oildrum001.mdl"} }
+
+		// do not let players get stuck down below
+		// activate a checkpoint here
+
+		delete { "classname" "trigger_once" "origin" "1040.5 -5138.5 -896" }
+//Trav|Edt - raise trigger  so playform freezes in good spot(origin edit)
+		create { "classname" "trigger_once" "origin" "1040.5 -5138.5 -816"
+			values {
+				"model" "*55"
+				"StartDisabled" "0"
+				"spawnflags" "1"
+				"hammerid" "474138"
+				"OnTrigger" "gate2_vort_aiss_1,StartSchedule,,0.1,-1"
+				"OnTrigger" "exit_gate_actbusy,Deactivate,,1,-1"
+				"OnTrigger" "vort_barracks_dropdown_trigger,Kill,,0,-1"
+				"OnTrigger" "vort_barracks_teleport,Teleport,,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,PS_AboveShaft,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+//Trav|Edt freeze lift when players get to top, then reenable incase something bad happens, and/or stop loopng sound
+				OnTrigger "platform_2,DisableMotion,,0,-1"
+				OnTrigger "platform_2,EnableMotion,,10,-1"
+			}
+		}
+
+		// remove wonky brushes
+	//	delete { targetname "bridgecave_areaportal_brush" }
+
+		// activate a checkpoint as the cart goes down
+		create { classname "info_player_coop" origin "3110 -7732 -1447" values { targetname "PS_FallDown" angles "0 -130 0" StartDisabled "1" } }
+
+		create { classname "trigger_once" origin "5148.88 -5507.28 -615"
+			values {
+				"model" "*146"
+				"StartDisabled" "0"
+				"spawnflags" "1"
+				"parentname" "rideable_train_2"
+				"OnTrigger" "rideable_tracktrain_2_start_rl,Trigger,,0.3,-1"
+				"OnTrigger" "rideable_tracktrain_2_crate_1,Break,,0,-1"
+				"OnTrigger" "rideable_train_2_debris_hurt_1,Enable,,1.5,-1"
+				"OnTrigger" "rideable_tracktrain_2_playerblock,Enable,,0.1,-1"
+				"OnTrigger" "watertrain_actbusy,Deactivate,,2,-1"
+				"OnTrigger" "watercrash_train_impact_zombie_template,ForceSpawn,,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,PS_FallDown,0,-1"
+//Trav|Edt - make this teleport instant
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"//10
+
+				"OnTrigger" "lolzBlockWall,Disable,,12,-1"
+			}
+		}
+
+		create { classname "func_brush" origin "3301.82 -7188.18 -1234.85"
+			values {
+				"model" "*331"
+				"vrad_brush_cast_shadows" "0"
+				"targetname" "lolzBlockWall"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"Solidity" "0"
+				"solidbsp" "0"
+				"invert_exclusion" "0"
+				"InputFilter" "0"
+				"disableshadows" "1"
+				"disablereceiveshadows" "0"
+			}
+		}
+
+//modi: platform_2 is designed for one person, boost ot when there is high amount players on server and start platform by trigger_coop
+		create {
+			classname "logic_difficulty"
+			values {
+				targetname "platform_2_counterweight_1_override"
+				LowerPlayer "3"
+				UpperPlayer "5"
+				OnLow "platform_2_thruster_1,Activate,,0,-1"
+				OnNotLow "platform_2_thruster_1,Scale,2,0,-1"
+			}
+		}
+		
+		create {
+			classname "trigger_coop"
+			origin "1040.5 -5138.5 -896"
+			values {
+				"edt_getbspmodelfor_origin" "1040.5 -5138.5 -896"
+				"edt_getbspmodelfor_classname" "trigger_once"
+				"wait" "1"
+				"targetname" "holdout_platform_2_playerriding_trigger_1"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"parentname" "platform_2"
+				CountType "1"
+				PlayerValue "30"
+				UseHud "1"
+				OnPlayersIn "platform_2_counterweight_1_override,CheckSkill,,1,-1"
+				OnPlayersIn "!self,Disable,,1,-1"
+			}
+		}
+		
+		//recrate button and call trigger_coop OnOpen
+		delete {targetname "platform_2_lever_1"}
+		create {
+			classname "func_door_rotating"
+			origin "1232 -5445 -1868"
+			values {
+				edt_getbspmodelfor_targetname "platform_2_lever_1" //"model" "*288"
+				wait "-1"
+				unlocked_sound "0"
+				unlocked_sentence "0"
+				targetname "platform_2_lever_1"
+				speed "30"
+				spawnflags "106"
+				rendermode "0"
+				renderfx "0"
+				rendercolor "255 255 255"
+				renderamt "255"
+				locked_sound "0"
+				locked_sentence "0"
+				lip "0"
+				health "0"
+				dmg "0"
+				distance "17"
+				angles "0 0 0"
+				hammerid "1457382"
+				//OnOpen "platform_2_thruster_1,Activate,,0,-1"
+				OnOpen "holdout_platform_2_playerriding_trigger_1,Enable,,0,-1"
+				OnClose "platform_2_thruster_1,Deactivate,,0,-1"
+				OnClose "holdout_platform_2_playerriding_trigger_1,Disable,,0,-1"
+				OnOpen "platform_2_movesound_1,PlaySound,,0,-1"
+				OnClose "platform_2_freefall_sound_1,PlaySound,,0,-1"
+				OnClose "platform_2_movesound_1,StopSound,,0,-1"
+				OnOpen "platform_2_freefall_sound_1,StopSound,,0,-1"
+				OnOpen "gear_lever_model,SetAnimation,Up_downlight_turnoff_Uplight_turnon,0,-1"
+				OnOpen "gear_lever_model,SetDefaultAnimation,idleUp_Uplight_turnedon,0.1,-1"
+				OnClose "gear_lever_model,SetDefaultAnimation,idleDown_downlight_turnedon,0.1,-1"
+				OnClose "gear_lever_model,SetAnimation,Down_Uplight_turnoff_downlight_turnon,0,-1"
+				OnOpen "gear_engaged_sound_proxy,Start,,0,-1"
+				OnClose "gear_engaged_sound_proxy,Stop,,0,-1"
+				OnOpen "gear_motor_sound_proxy,Start,,0,-1"
+				OnClose "gear_motor_sound_proxy,Stop,,0,-1"
+			}
+		}
+
+		// activate another checkpoint here
+		// after the mine cart flies down the shaft
+		create { classname "info_player_coop" origin "2592.65 -7190.22 -1745.47" values { angles "0 135 0" StartDisabled "1" targetname "PS_AfterCartFall" } }
+
+		create { classname "trigger_once" origin "3125.49 -7152 -1386"
+			values {
+				"model" "*298"
+				"spawnflags" "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,PS_AfterCartFall,0,-1"
+//Trav|Edt - disable moving players here (have one at drop for vator later.
+				//"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+			}
+		}
+
+		// change trigger on the holdout elevator so multiple players can ride it
+		delete { classname "trigger_multiple" origin "1520 -9496 -422" }
+
+//Trav|Edt - replace vator with a coop trigger
+		create { classname "trigger_coop" origin "1520 -9496 -422"
+			values {
+				"model" "*276"
+				"wait" "1"
+				"targetname" "holdout_elevator_1_playerriding_trigger_1"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"parentname" "holdout_elevator_1"
+				//"hammerid" "1314084"
+				CountType "1"
+				PlayerValue "75"
+				UseHud "1"
+				"OnPlayersIn" "playerhealth_proxy_timer,Enable,,0,-1"
+				"OnPlayersIn" "vort_extract_liftalone_vcd,Start,,0.1,1"
+				"OnPlayersIn" "vort_lift_is_here_hurry_vcd,Cancel,,0,-1"
+				"OnPlayersIn" "holdout_elevator_1,StartBackward,,3,-1"//delay start def 0
+				"OnPlayersIn" "vort_lift_is_here_nag_timer,Disable,,0,-1"
+				"OnEndTouchAll" "holdout_elevator_1,StartForward,,0,-1" // All
+				"OnPlayersOut" "vort_lift_is_here_nag_timer,Enable,,0,-1"
+				"OnEndTouch" "playerhealth_proxy_timer,Disable,,0,-1"
+				"OnPlayersIn" "vort_lift_is_here_hurry_vcd,Kill,,5,1"
+				"OnPlayersIn" "logic_stop_redlight,Trigger,,0,1"
+			}
+		}
+
+//Trav|Edt - moveplayers after vator
+		create {classname "trigger_once" origin "1352 -9887.5 -456"
+			values {model "*330"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0,-1"} }
+
+		//create { classname "trigger_multiple" origin "1520 -9496 -422"
+		//	values {
+		//		"model" "*276"
+		//		"wait" "1"
+		//		"targetname" "holdout_elevator_1_playerriding_trigger_1"
+		//		"StartDisabled" "1"
+		//		"spawnflags" "1"
+		//		"parentname" "holdout_elevator_1"
+		//		"hammerid" "1314084"
+		//		"OnStartTouch" "playerhealth_proxy_timer,Enable,,0,-1"
+		//		"OnStartTouch" "vort_extract_liftalone_vcd,Start,,0.1,1"
+		//		"OnStartTouch" "vort_lift_is_here_hurry_vcd,Cancel,,0,-1"
+		//		"OnStartTouch" "holdout_elevator_1,StartBackward,,0,-1"
+		//		"OnStartTouch" "vort_lift_is_here_nag_timer,Disable,,0,-1"
+		//		"OnEndTouchAll" "holdout_elevator_1,StartForward,,0,-1" // All
+		//		"OnEndTouch" "vort_lift_is_here_nag_timer,Enable,,0,-1"
+		//		"OnEndTouch" "playerhealth_proxy_timer,Disable,,0,-1"
+		//		"OnTrigger" "vort_lift_is_here_hurry_vcd,Kill,,5,1"
+		//		"OnTrigger" "logic_stop_redlight,Trigger,,0,1"
+		//	}
+		//}
+
+		// remove player clip
+		delete { targetname "bucket_tunnel_clip" }
+
+//Trav|Edt - fix fall deaths
+		delete {classname "trigger_multiple" origin "-3724 -4614 -2300"}
+		create {classname "trigger_hurt" origin "-3724 -4614 -2300"
+			values {model "*71"
+				spawnflags "3"
+				damage "1000"
+				damagetype "32"//fall
+				nodmgforce "1"} }
+
+		delete {classname "trigger_multiple" origin "-3325.5 -2320.75 -1808"}
+		create {classname "trigger_hurt" origin "-3325.5 -2320.75 -1808"
+			values {model "*104"
+				spawnflags "3"
+				damage "1000"
+				damagetype "32"//fall
+				nodmgforce "1"} }
+
+		delete {classname "trigger_multiple" origin "1664 -7040 -2752"}
+		create {classname "trigger_hurt" origin "1664 -7040 -2752"
+			values {model "*90"
+				spawnflags "3"
+				damage "1000"
+				damagetype "32"//fall
+				nodmgforce "1"} }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_03"} }
+	}
+}

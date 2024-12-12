@@ -1,0 +1,329 @@
+ep2_outland_06a
+{
+	console
+	{
+		sv_test_scripted_sequences "1"
+	}
+	entity
+	{
+//--Setup--
+		delete {classname "logic_auto" origin "5458.23 -144.85 -2420.35"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow"} }// FadeStartDist "1000" FadeDist "1500"
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "5505.06 -21.96 -2464.77"
+			values {angles "0 175 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_player_coop" origin "-3014.74 -9890.71 -1527.97"
+			values {angles "0 135 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//Intro
+		create {classname "info_vehicle_spawn" origin "4992 256 -2432"
+			values {targetname "syn_spawn_vehicle_1"
+				angles "0 90 0"
+				StartEnabled "1"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/buggy_p2.mdl"//models/vehicles/buggy_elite.mdl
+				VehicleScript "scripts/vehicles/jeep_test.txt"
+				OnSpawnVehicle "syn_moreplayers,CheckSkill,,1,1"
+				OnSpawnVehicle "syn_moreplayers,CheckSkill,,5,-1"} }
+		
+		create {classname "info_vehicle_spawn" origin "4992 256 -2432"
+			values {targetname "syn_spawn_vehicle_1_med"
+				angles "0 90 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				StartGunEnabled "0"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/8seattruck.mdl"
+				vehiclescript "scripts/vehicles/truck.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "4992 256 -2432"
+			values {targetname "syn_spawn_vehicle_1_high"
+				angles "0 90 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/8seattruck.mdl"
+				vehiclescript "scripts/vehicles/truck.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "4992 456 -2432"
+			values {targetname "syn_spawn_vehicle_1_high"
+				angles "0 90 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_moreplayers"
+				LowerPlayer "10"
+				UpperPlayer "16"
+				OnLow "syn_spawn_vehicle_1,Enable,,0,-1"
+				OnMed "syn_spawn_vehicle_1_med,Enable,,0,-1"
+				OnHigh "syn_spawn_vehicle_1_high,Enable,,0,-1"
+				OnNotLow "syn_spawn_vehicle_1,Disable,,0,-1"
+				OnNotMed "syn_spawn_vehicle_1_med,Disable,,0,-1"
+				OnNotHigh "syn_spawn_vehicle_1_high,Disable,,0,-1"
+			}
+		}
+		
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_moreplayerssecond"
+				LowerPlayer "10"
+				UpperPlayer "16"
+				OnLow "syn_spawn_vehicle_2,Enable,,0,-1"
+				OnMed "syn_spawn_vehicle_2_med,Enable,,0,-1"
+				OnHigh "syn_spawn_vehicle_2_high,Enable,,0,-1"
+				OnNotLow "syn_spawn_vehicle_2,Disable,,0,-1"
+				OnNotMed "syn_spawn_vehicle_2_med,Disable,,0,-1"
+				OnNotHigh "syn_spawn_vehicle_2_high,Disable,,0,-1"
+			}
+		}
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "al_radio_01,AddOutput,OnTrigger8 syn_moreplayerssecond:CheckSkill::0.5:-1,0,-1"
+				OnMapSpawn "al_radio_01,AddOutput,OnTrigger8 modi_antiskip_hurt:Disable::0.5:-1,0,-1"} }
+//postcomtowergate
+		create {classname "info_vehicle_spawn" origin "-4864 -7936 -1504"//-4480 -7552 -1520
+			values {targetname "syn_spawn_vehicle_2"
+				angles "0 90 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/buggy_p2.mdl"
+				VehicleScript "scripts/vehicles/jeep_test.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-4864 -7936 -1504"
+			values {targetname "syn_spawn_vehicle_2_med"
+				angles "0 85 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				StartGunEnabled "0"
+				VehicleType "4"
+				VehicleSize "192"
+				model "models/vehicles/8seattruck.mdl"
+				vehiclescript "scripts/vehicles/truck.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-4864 -7936 -1504"
+			values {targetname "syn_spawn_vehicle_2_high"
+				angles "0 70 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-4864 -8136 -1504"
+			values {targetname "syn_spawn_vehicle_2_high"
+				angles "0 70 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "-4864 -8336 -1504"
+			values {targetname "syn_spawn_vehicle_2_high"
+				angles "0 70 0"
+				StartEnabled "0"
+				StartGunEnabled "0"
+				RespawnVehicle "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+
+//cruel way of disableing gun
+		create {classname "logic_timer"
+			values {RefireTime "5"
+				OnTimer "prop_vehicle_jeep,AddOutput,EnableGun 0,0,-1"} }
+				
+		create {classname "trigger_hurt" origin "-5800 -5000 -1100"
+			values {model "*196"
+				angles "0 270 0"
+				spawnflags "1"
+				targetname "modi_antiskip_hurt"
+				damage "1000"
+				nodmgforce "1"} }				
+		create {classname "trigger_hurt" origin "-7300 -7000 -450"
+			values {model "*196"
+				angles "0 270 0"
+				spawnflags "1"
+				targetname "modi_antiskip_hurt"
+				damage "1000"
+				nodmgforce "1"} }
+
+//Trav|Edt add van at beg.
+		create {classname "prop_vehicle_mp"
+			origin "4880 352.01 -2400.01"
+			values {targetname "trav_SCAR"
+			angles " 0 90 0"
+			model "models/vehicles/7seatvan.mdl"
+			vehiclescript "scripts/vehicles/van.txt"
+			skin "3"} }
+
+//--Extra--
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "5608 -256 -2464"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 120 0" spawnflags "1"
+				targetname "gnome"} }
+
+//Doors
+		edit {targetname "radio_tower_door_1" values {spawnflags "0"} }
+		edit {targetname "radio_tower_door_2" values {spawnflags "0"} }
+		edit {targetname "door_radioroom_1" values {spawnflags "0"} }
+
+//Trav|Edt - lock plugs when correct (anti-troll)
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trigger_socket_1_long_*,AddOutput,OnTrigger !activator:AddOutput:spawnflags 6407168:0:-1,0,-1"
+				OnMapSpawn "trigger_socket_2_long_*,AddOutput,OnTrigger !activator:AddOutput:spawnflags 6407168:0:-1,0,-1"
+				OnMapSpawn "trigger_socket_3_short_*,AddOutput,OnTrigger !activator:AddOutput:spawnflags 6407168:0:-1,0,-1"
+				OnMapSpawn "trigger_socket_4_short_*,AddOutput,OnTrigger !activator:AddOutput:spawnflags 6407168:0:-1,0,-1"} }
+
+//Trav|Edt anti-rush
+		create {classname "trigger_coop"
+			origin "-9280 -3328 -2211.07"
+			values {model "*260"
+				spawnflags "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				//OnPlayersIn "trav_antirush_brush_end,Kill,,0,1"
+				OnPlayersIn "syn_antirush_prop,Kill,,0,-1"
+				//OnPlayersIn "syn_end_light,TurnOff,,0,-1"
+				OnPlayersIn "!self,Disable,,1,1"
+				OnPlayersIn "syn_teleport_alyx_end_06a,Teleport,,0.1,-1"
+				OnPlayersIn "syn_teleport_jeep_end_06a,Teleport,,0.5,-1"
+				OnPlayersIn "alyx,EnterVehicle,jeep,0.6,-1"} }
+
+		create {classname "prop_dynamic" origin "-9504 -3872 -2264"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_prop"
+				angles "0 30 0"
+				solid "6"
+				DisableShadows "1"} }
+				
+// teleport Alyx and car
+		create {classname "point_teleport"
+			origin "-9794 -3900 -2372"
+			values {targetname "syn_teleport_alyx_end_06a"
+				angles "0 180 0"
+				target "alyx"} }
+				
+		create {classname "point_teleport"
+			origin "-9794 -3900 -2372"
+			values {targetname "syn_teleport_jeep_end_06a"
+				angles "0 75 0"
+				target "jeep"} }
+
+	//	create {classname "light_dynamic" origin "3328 9808 352"
+	//		values {targetname "syn_end_light"
+	//			_light "170 255 170"
+	//			brightness "2"
+	//			distance "1024"
+	//			//_inner_cone "75"
+	//			//_cone "80"
+	//			style "12"} }
+
+		// make the jeep the episodic version
+//		edit { classname "prop_vehicle_jeep" values { classname "prop_vehicle_jeep_episodic" } }
+
+		// update filter for episodic jeep
+//		edit { targetname "filter_jalopy" values { filterclass "prop_vehicle_jeep_episodic" } }
+
+		// activate checkpoint once we get inside the structure
+
+		create { classname "trigger_once" origin "-3080 -9712 -1492"
+			values {
+				"model" "*89"
+				"spawnflags" "1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+				OnTrigger "trav_votecar_enable,Enable,,0,-1"
+			}
+		}
+
+		// remove elevator clip brush
+		delete { targetname "playerclip_elevator" }
+
+		// create additional vehicles
+		create { classname "prop_vehicle_mp" origin "-4504 -7446 -1530"
+			values {
+				"vehiclescript" "scripts/vehicles/van.txt"
+				"model" "models/vehicles/7seatvan.mdl"
+				"angles" "0 -35 0"
+				"targetname" "theGrayVan"
+				"skin" "1"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_06a"} }
+	}
+}

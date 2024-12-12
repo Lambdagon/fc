@@ -1,0 +1,499 @@
+ep2_outland_06
+{
+	entity
+	{
+//--Setup--
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "-858.51 -0.02 832"
+			values {angles "0 0 0" targetname "syn_spawn_player_1"} }
+//Post Intro (drop)
+		create {classname "info_player_coop" origin "88 376 776"
+			values {angles "0 0 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//Warehouse
+		create {classname "info_player_coop" origin "200 2200 -85"
+			values {angles "0 0 0" targetname "syn_spawn_player_2_1" StartDisabled "1"} }
+//Post Fort Lift
+		create {classname "info_player_coop" origin "904 3304 0"
+			values {angles "0 330 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+//Pre Car
+		create {classname "info_player_coop" origin "4784 2416 640"
+			values {angles "0 180 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+//Post Car
+		create {classname "info_player_coop" origin "-95 1654 704"
+			values {angles "0 32 0" targetname "syn_spawn_player_5" StartDisabled "1"} }
+//Very End
+		create {classname "info_player_coop" origin "-1375.68 2494.31 672.03"
+			values {angles "0 -160 0" targetname "syn_spawn_player_6" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+//Fix vort from always transitioning
+		edit {targetname "vort" values {AlwaysTransition "0"} }
+//iftrans
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "vort,AddOutput,AlwaysTransition 0,0,-1"} }
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "-634 662 832"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 0 0" spawnflags "1"
+				targetname "gnome"} }
+				
+//Game Over text
+		delete {targetname "jeep_lost_in_water"}
+		create {classname "logic_auto"
+			values {
+				spawnflags "1"
+				OnMapSpawn "fall_trigger,AddOutput,OnTrigger syn_gameover_message:Display::0:-1,1,-1"
+			}
+		}
+		create {
+			classname "game_text"
+			values {
+				"y" "-1"
+				"x" "-1"
+				"targetname" "syn_gameover_message"
+				"spawnflags" "1"
+				"message" "HL2_GameOver_Object"
+				"holdtime" "5"
+				"fxtime" "0.25"
+				"fadeout" "0.5"
+				"fadein" "1.5"
+				"effect" "0"
+				"color2" "240 110 0"
+				"color" "100 100 100"
+				"channel" "1"
+			}
+		}
+				
+
+//Doors
+		edit {targetname "warehouse_exitdoor" values {spawnflags "16384"} }
+		edit {targetname "door_portal_02" values {spawnflags "0"} }
+		edit {targetname "door_portal_01" values {spawnflags "0"} }
+		
+//Alyx sniper invulnerable
+		edit {targetname "alyx_sniper" values {damagefilter "syn_null"} }
+		create {classname "filter_activator_class" values {targetname "syn_null" negated "0" filterclass "null"} }
+
+//prop_ragdoll disable movement to save network usage
+		create {
+			classname "logic_auto"
+			values {
+				spawnflags "1"
+				OnMapSpawn "prop_ragdoll,DisableMotion,,10,-1"
+			}
+		}
+
+//Trav|Edt - prevent skip of entire level to physjump over building
+		create {
+			classname "trigger_push"
+			origin "60 1264 1050"
+			values {
+				edt_getbspmodelfor_targetname "trigger_goopit3_hurt"
+				angles "0 90 0"
+				targetname "modi_antiskip"
+				spawnflags "1"
+				speed "2000"
+				pushdir "90 0 0"
+			}
+		}
+		create {
+			classname "prop_dynamic" 
+			origin "60 1220 910"
+			values {
+				model "models/synergy/tools/syn_transition.mdl"
+				angles "0 90 90"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"
+			} 
+		}
+
+		create {
+			classname "prop_dynamic" 
+			origin "40 1844 910"
+			values {
+				model "models/synergy/tools/syn_transition.mdl"
+				angles "0 90 90"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"
+			} 
+		}
+
+		create {
+			classname "prop_dynamic" 
+			origin "200 1220 910"
+			values {
+				model "models/synergy/tools/syn_transition.mdl"
+				angles "0 0 90"
+				solid "6"
+				StartDisabled "1"
+				DisableShadows "1"
+			} 
+		}
+
+		edit {"targetname" "trigger_killPlayer02" values 
+			{
+				damagecap "2000"
+				damage "10000"
+			}
+		}
+		edit {"targetname" "trigger_killPlayer01" values 
+			{
+				damagecap "2000"
+				damage "10000"
+			}
+		}
+		edit {"targetname" "trigger_killPlayer00" values 
+			{
+				damagecap "2000"
+				damage "10000"
+			}
+		}
+		
+		create {
+			classname "func_brush"
+			origin "489 2064 784"
+			values {
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "824 2320 784"
+				angles "0 -90 0"
+				targetname "syn_clip_player_bridge"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"Solidity" "0"
+				"solidbsp" "0"
+				"rendermode" "0"
+				"renderfx" "0"
+				"rendercolor" "255 255 255"
+				"renderamt" "255"
+				"invert_exclusion" "0"
+				"InputFilter" "0"
+				"disableshadows" "0"
+				"disablereceiveshadows" "0"
+			}
+		}
+		
+		create {
+			classname "func_brush"
+			origin "489 2600 784"
+			values {
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "824 2320 784"
+				angles "0 90 0"
+				targetname "syn_clip_player_bridge"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"Solidity" "0"
+				"solidbsp" "0"
+				"rendermode" "0"
+				"renderfx" "0"
+				"rendercolor" "255 255 255"
+				"renderamt" "255"
+				"invert_exclusion" "0"
+				"InputFilter" "0"
+				"disableshadows" "0"
+				"disablereceiveshadows" "0"
+			}
+		}
+		
+		create {
+			classname "func_brush"
+			origin "87 1897 784"
+			values {
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "824 2320 784"
+				targetname "syn_clip_player_bridge"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"Solidity" "0"
+				"solidbsp" "0"
+				"rendermode" "0"
+				"renderfx" "0"
+				"rendercolor" "255 255 255"
+				"renderamt" "255"
+				"invert_exclusion" "0"
+				"InputFilter" "0"
+				"disableshadows" "0"
+				"disablereceiveshadows" "0"
+			}
+		}
+		
+		create {
+			classname "func_brush"
+			origin "87 2766 784"
+			values {
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "824 2320 784"
+				targetname "syn_clip_player_bridge"
+				"StartDisabled" "0"
+				"spawnflags" "2"
+				"Solidity" "0"
+				"solidbsp" "0"
+				"rendermode" "0"
+				"renderfx" "0"
+				"rendercolor" "255 255 255"
+				"renderamt" "255"
+				"invert_exclusion" "0"
+				"InputFilter" "0"
+				"disableshadows" "0"
+				"disablereceiveshadows" "0"
+			}
+		}
+		
+//Trav|Edt - teleport players down, so they cannot stay with alyx, and set checkpoint
+		create {classname "trigger_once"
+			origin "256 416 828"
+			values {model "*26"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.5,-1"
+				OnTrigger "trigger_killPlayer00,Kill,,5,-1"} }
+
+//Trav|Edt - teleport players down into warehouse
+		create {
+			classname "trigger_once"
+			origin "408 2415.98 -90"
+			values {
+				model "*163"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2_1,0,-1"
+				OnTrigger "syn_spawn_manager,TeleportPlayers,syn_spawn_player_warehouse_teleport,0.01,-1"
+			}
+		}
+		
+		create {
+			classname "info_teleport_destination"
+			origin "408 2415.98 -90"
+			values {
+				targetname "syn_spawn_player_warehouse_teleport"
+				angles "0 90 0"
+			}
+		}
+
+//Trav|Edt - moveplayers in warehouse-vents + checkpoint
+		create {classname "trigger_once"
+			origin "876 3236 64"//564 3632 108
+			values {model "*191"//*331
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,-1"
+				//OnTrigger "syn_global_settings,AddOutput,IsVehicleMap 1,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.01,-1"
+				} }
+
+//Trav|Edt - prevent cleanup in first goopit
+		delete {targetname "goopit1_cleanup_relay"}
+
+//Trav|Edt disable latter from falling, disable npc cleanup
+		delete {targetname "goo_pit3_ladder_relay"}
+		delete {targetname "goopit3_cleanup_relay"}
+
+//Trav|Edt - save game when player gets to car(crashes if player fails due to lack of save)[doesnt work qq] - fixed in v28
+		delete {classname "logic_autosave"}
+
+		create {classname "logic_autosave"
+			values {targetname "trav_autosave"} }
+
+		create {classname "trigger_once"
+			origin "4512 1888 633"
+			values {model "*210"
+				spawnflags "1"
+				OnTrigger "trav_autosave,save,,1,-1"
+				OnTrigger "autosave,Kill,,0,-1"
+				OnTrigger "autoSave_00,Kill,,0,-1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,trav_checkpoint_jeep,0,-1"} }
+//save after all cars are off (incase of fail)
+		create {classname "logic_relay"
+			values {targetname "relay_bridge_down_normal"
+				OnTrigger "trav_autosave,save,,0,-1"} }
+
+//flash seq messes up save?
+		//create {classname "logic_relay"
+		//	values {spawnflags "1"
+		//		targetname "goo_pit3_ladder_relay"
+		//		OnTrigger "trav_autosave,Save,,5,1"} }
+
+//Trav|Edt - toggle vehicle clips to prevent going pre-bridge-tilt and falling after you make jump
+		create {classname "func_vehicleclip" origin "3232 2264 784.01" values{model "*150" targetname "trav_vclip_start"} }
+		create {classname "func_vehicleclip" origin "800 2336 800" values{model "*150" targetname "trav_vclip_end"} }
+
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "relay_bridge_down"
+				OnTrigger "trav_vclip_start,Disable,,4,-1"//6//8
+				OnTrigger "trav_vclip_end,Disable,,0,-1"} }
+
+//Trav|Edt - add a crule method of vehicles clips around the bridge to keep nubs from failing and crashing server [crash now fixed in v28]
+	//	create {classname "func_vehicleclip" origin "2368 4416 1170.32" values{model "*143"} }//right
+		//create {classname "func_vehicleclip" origin "2304 320 1170.32" values{model "*143"} }//left
+		//create {classname "func_vehicleclip" origin "2304 1856 325.08" values{model "*143"} }//bottom
+		//create {classname "func_vehicleclip" origin "552 2340.13 552" values {model "*325"} }
+
+//Trav|Edt - don't let gate close (part of disableing last moveplayers trigger) also kill vort (trainsistions sometimes, kill for that fails sometimes idk why)
+		delete {targetname "trigger_shutExitGate"}
+	//	create {classname "trigger_once" origin "-1888 2336 800"
+	//		values {model ""
+	//			spawnflags "2"
+	//			targetname "trigger_shutExitGate"
+	//			filtername "alyx_filter"
+	//			//OnTrigger "trigger_shutExitGate,Close,,0,-1"
+	//			OnTrigger "alyx,StopScripting,,0,-1"
+	//			OnTrigger "tunnel_clip_brush,Enable,,0,-1"
+	//			OnTrigger "tunnel_vehicle_clip_brush,Enable,,0,-1"
+	//			//OnTrigger "vort,Kill,,0,-1" - "fixed AlwaysTransition"
+	//			} }
+
+//End of Trav|Edt
+
+		create { classname "point_template" origin "-452.638 197.862 899"
+			values {
+				"Template01" "vort"
+				"Template02" "alyx"
+				"targetname" "global_newgame_template_base_items_2"
+				"spawnflags" "0"
+			}
+		}
+
+		delete { targetname "global_newgame_template_base_items" }
+		create { classname "point_template" origin "-452.638 197.862 899"
+			values {
+				"Template01" "global_newgame_spawner_physcannon"
+				"Template02" "global_newgame_spawner_pistol"
+				"Template03" "global_newgame_spawner_crowbar"
+				"Template04" "global_newgame_spawner_suit"
+				"targetname" "global_newgame_template_base_items"
+				"spawnflags" "0"
+			}
+		}
+
+		delete { classname "logic_auto" origin "-488 568 888" }
+		create { classname "logic_auto" origin "-488 568 888"
+			values {
+				"spawnflags" "1"
+				"hammerid" "1810781"
+				"OnNewGame" "global_newgame_template_base_items_2,ForceSpawn,,0,1"
+			//	"OnNewGame" "global_newgame_template_local_items,ForceSpawn,,0.2,1"
+			//	"OnNewGame" "global_newgame_template_ammo,ForceSpawn,,0.5,1"
+			}
+		}
+
+
+
+		// ----- level changes -----
+
+		// make the jeep the episodic version
+//		edit { classname "prop_vehicle_jeep" values { classname "prop_vehicle_jeep_episodic" } }
+
+		// also need to update the filter because it checks classname
+//		edit { targetname "jeep_filter" values { filterclass "prop_vehicle_jeep_episodic" } }
+
+		// remove some triggers so players can finish the level //kaz - wut
+	//	edit { targetname "trigger_killPlayer00" values { targetname "-trigger_killPlayer00" origin "496 2480 380" } }
+	//	delete { targetname "trigger_killPlayer01" }
+
+		// activate a checkpoint when the jeep is over the bridge
+
+//		create { classname "trigger_once" origin "536 2320 848"
+//			values {
+//				"model" "*43"
+//				"spawnflags" "1"
+
+//				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_5,0,-1"
+//				"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+//Trav|Edt - also enable vclip
+				OnTrigger "trav_vclip_end,Enable,,0,-1"
+				OnTrigger "syn_clip_player_bridge,Disable,,0,-1"
+			}
+		}
+
+		// dont remove the stairs and do not use the clip brush
+		delete { targetname "clip_player_elevator" }
+		edit { targetname "bldg1_tower_brush" values { targetname "-bldg1_tower_brush" } }
+
+		// remove trigger_hurt from killing players when one goes up the ladder
+		delete { targetname "trigger_goopit3_hurt" }
+
+		// activate checkpoint at exit door close
+		create { classname "trigger_once" origin "-1888 2336 800"
+			values {
+				spawnflags "1"
+				model "*57"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_6,0,-1"
+//Trav|Edt - disable the following OnTrigger
+				//"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+			}
+		}
+
+		// test zombie not breaking down door
+	//	delete { targetname "trigger_poisonZombieSurprise" }
+
+		// fix for zombie not breaking the door
+		// this involves changing when the trigger to start the second ss gets enabled
+		delete { targetname "poison_surprise_relay" }
+		create { classname "logic_relay" origin "448 512 656"
+			values {
+				"targetname" "poison_surprise_relay"
+				"spawnflags" "0"
+			//	"OnTrigger" "trigger_poisonZombieSurprise,Enable,,2,-1"
+				"OnTrigger" "logicRelay_poisonZombieScare,Trigger,,1,-1"
+				"OnTrigger" "sound_scaryBreathing,StopSound,,0,-1"
+			}
+		}
+
+		create { classname "logic_auto"
+			values {
+				"OnMapSpawn" "relay_door_zombie_01_broken1,AddOutput,OnTrigger trigger_poisonZombieSurprise:Enable::0:-1,0,-1"
+				//"OnMapSpawn" "!self,Kill,,0.1,-1"
+			}
+		}
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_06"} }
+	}
+}

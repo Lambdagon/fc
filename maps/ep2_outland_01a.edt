@@ -1,0 +1,106 @@
+ep2_outland_01a
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "spawnitems"}
+		delete {targetname "spawnitems_template"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"25"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+			} }
+//New Weapon(s)
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapon" StartDisabled "1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+				} }
+
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapon2"
+				StartDisabled "1"
+				weapon_357			"1"
+					ammo_357		"6"
+				} }
+//USE per player? +filters?
+		create {classname "trigger_once" origin "-7585 -7732 73"
+			values {model "*7"
+				spawnflags "1"
+				OnTrigger "syn_new_weapon,Enable,,0,1"
+				OnTrigger "syn_new_weapon,EquipAllPlayers,,0.1,-1"} }
+//357
+		create {classname "trigger_once" origin "-7503 -8054 -120"
+			values {model "*52"
+				spawnflags "1"
+				OnTrigger "syn_new_weapon2,Enable,,0,1"
+				OnTrigger "syn_new_weapon2,EquipAllPlayers,,0.1,-1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Introz
+		create {classname "info_player_coop" origin "-11421.19 -6193.12 1284.03"
+			values {angles "0 -90 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Checkpoints--
+//Post Intro Lift
+		create {classname "trigger_once"
+			origin "-10943 -7068 1528"//-10943 -7068 1634
+			values {model "*113"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0,-1"} }
+
+//--Extra--
+
+//Trav|Edt - manage ragdolls for newtowork purposes (remove lag)
+		delete {targetname "ragdoll_rumble"}
+		delete {targetname "ragdoll_rumble_2"}
+		delete {targetname "webcache_1_ragdolls"}
+		delete {targetname "webdoor_4_zombine_corpse"}
+		delete {targetname "webcache_1_ragdolls"}
+//Ragdoll Templates
+		delete {targetname "entry_mine_deadantlion_template"}
+		delete {targetname "human_mine_ragdoll_template"}
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "entry_mine_antlion_ragdolls,DisableMotion,10,0,-1"} }
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "-11266 -6556 1314"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 90 0"
+				targetname "gnome"} }
+
+//Trav|Edt - make elevator hold multiple ppl
+		edit {targetname "platform_2_thruster_1" values {force "350"} }
+
+		// remove wonky brushesZ
+		delete { targetname "entrytunnel_portal_1_brush" }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_01a"} }
+	}
+}

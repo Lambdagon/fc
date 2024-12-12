@@ -1,0 +1,108 @@
+ep2_outland_02_p2
+{
+	console
+	{
+		sv_test_scripted_sequences "1"
+	}
+	entity
+	{
+		//edit {classname "point_viewcontrol" values {edt_addedspawnflags "128"} }
+		delete {classname "info_player_start"}
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "gman_start_player_clip,kill,,0,-1"
+				OnMapSpawn "relay_gman_scene_alyx,AddOutput,OnTrigger pvc4:Disable::0.1:-1,0,-1"
+				//OnMapSpawn "relay_gman_scene_alyx,AddOutput,OnTrigger intro:SetCameraViewEntity:pvc1:0:-1,0,-1"
+				OnMapSpawn "elite_shooting,SetAnimation,gman_freeze_pose,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc0:kill::23:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc1:kill::23:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc2:kill::23:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc3:kill::23:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc4:kill::23:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_whiteforest,AddOutput,OnTrigger pvc_black:Enable::24:-1,0,-1"
+			}
+		}
+		
+		//delete {targetname "elite_shooting"}
+		//create {classname "prop_dynamic" origin "-2255.19 -15342 -1175.49"
+		//	values
+		//	{
+		//		targetname "elite_shooting"
+		//		model "models/combine_soldier.mdl"
+		//		angles "0 180 0"
+		//		DefaultAnimation "gman_freeze_pose"
+		//		solid "0"
+		//	}
+		//}
+		
+		// Fix unzoom
+		delete {targetname "fov_normal"}
+		create {classname "env_zoom"
+			values
+			{
+				targetname "fov_normal"
+				spawnflags "1"
+				Rate "0.1"
+				FOV "90"
+			}
+		}
+		
+		// Fixes seeing entities in viewcontrol?
+		delete {classname "env_projectedtexture"}
+		
+		// Crash/performance in odd scenarios
+		delete {targetname "lightshaft"}
+		delete {classname "prop_dynamic" origin "-2368 -15264 -1071.22"}
+		delete {classname "prop_dynamic" origin "-2752 -15264 -1071.22"}
+		delete {classname "prop_dynamic" origin "-2656 -15264 -1071.22"}
+		delete {classname "prop_dynamic" origin "-2464 -15264 -1071.22"}
+		
+		delete {targetname "relay_gman_scene_alyx"}
+		create {classname "logic_relay"
+			values
+			{
+				"targetname" "relay_gman_scene_alyx"
+				"OnTrigger" "pvc5_fov,Zoom,,0,-1"
+				"OnTrigger" "intro,SetNextBlendTime,1.9,11.1,-1"
+				"OnTrigger" "intro,SetNextBlendMode,7,11.01,-1"
+				"OnTrigger" "intro,SetBlendMode,1,0.1,-1"
+				"OnTrigger" "fade_white_pulse_out,Fade,,0,-1"
+				"OnTrigger" "intro,SetCameraViewEntity,camera_black,0,-1"
+				"OnTrigger" "intro,SetFOV,40,0,-1"
+				"OnTrigger" "tonemap_controller,SetAutoExposureMin,8,0,-1"
+				"OnTrigger" "tonemap_controller,SetAutoExposureMax,8,0,-1"
+				"OnTrigger" "tonemap_controller,SetAutoExposureMin,1.5,1,-1"
+				"OnTrigger" "tonemap_controller,SetTonemapRate,.25,0.1,-1"
+				"OnTrigger" "tonemap_controller,SetAutoExposureMax,6,1,-1"
+				"OnTrigger" "intro,SetCameraViewEntity,camera_alyx,11,-1"
+				"OnTrigger" "pvc5,Enable,,0,-1"
+				// Added
+				//"OnTrigger" "pvc1,Enable,,0.1,-1"
+				"OnTrigger" "pvc*,Disable,,0,-1"
+				"OnTrigger" "pvc1_fov2,Zoom,,0.1,-1"
+				"OnTrigger" "intro,SetNextBlendTime,3,0.2,-1"
+				"OnTrigger" "intro,SetNextBlendMode,8,0.11,-1"
+				"OnTrigger" "alyx_gman,Color,255 255 255,0,-1"
+				"OnTrigger" "intro,SetNextBlendTime,10,13.1,-1"
+				"OnTrigger" "intro,SetNextBlendMode,9,13.01,-1"
+				//"OnTrigger" "pvc_black,Enable,,13.01,-1"
+				"OnTrigger" "intro,SetFOV,55,10,-1"
+				"OnTrigger" "intro,SetNextFOV,40,10.1,-1"
+				"OnTrigger" "intro,SetFOVBlendTime,25,10.11,-1"
+				"OnTrigger" "proj_texture_alyx,TurnOn,,0.01,-1"
+				"OnTrigger" "proj_texture_gman,TurnOff,,0,-1"
+			}
+		}
+		
+		create {classname "logic_relay"
+			values
+			{
+				targetname "relay_gman_scene_blackmesa"
+				OnTrigger "intro,AddOutput,targetname introno,13,-1"
+				OnTrigger "introno,AddOutput,targetname intro,24,-1"
+			}
+		}
+	}
+}

@@ -1,0 +1,355 @@
+ep2_outland_04
+{
+	console
+	{
+		//sk_antlionguard_health 7100
+		mp_player_death_items 0
+	}
+	
+	entity
+	{
+//--Setup--
+		delete {targetname "loaditems"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Prevent Backtracking
+		create {classname "trigger_push" origin "0 100 0"
+			values {model "*41"
+				spawnflags "1"
+				targetname "pusher_to_03"
+				pushdir "0 90 0"
+				speed "450"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"45"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "3482.45 -1763.13 384.03"
+			values {angles "0 10 0" targetname "syn_spawn_player_1"} }
+//into the cave
+		create {classname "info_player_coop" origin "6594.28 -3583.99 -179"
+			values {angles "0 -90 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//meet the guardian
+		create {classname "info_player_coop" origin "4432 -1227 -1430"
+			values {angles "0 90 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+//bye guardian
+		create {classname "info_player_coop" origin "5319 -4283 -2290"
+			values {angles "0 90 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+
+//Shaft Lift
+	//	create {classname "info_player_coop" origin "808.38 -4910.19 -959.97"
+	//		values {angles "0 -25 0" targetname "syn_spawn_player_" StartDisabled "1"} }//PS_AboveShaft
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+//Trav|Edt - manage ragdolls
+		delete {targetname "waterweb_1_zombine_corpse"}
+		delete {targetname "waterweb_2_zombine_corpse"}
+
+//Trav|Edt - Add gnome if NewGame
+		delete {targetname "gnome_cheat_template"}
+		delete {targetname "gnome"}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "5152 -1802 384"//4608 -1743 472
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 60 0"
+				targetname "gnome"} }
+
+//Trav|Edt - move vort out of way of intro jump
+		edit {targetname "vort_elevator_waiting_ss_2" values {origin "5096 -1448 384"} }
+		edit {targetname "mark_elevator_jump_wait" values {origin "5087 -1468 396"} }
+
+//Trav|Edt - dont shutup vort if someone falls
+		delete {targetname "player_death_fall_trigger"}
+		
+//modi - don't disable rotating of fanblade if one player comes through
+		delete {classname "trigger_once" origin "4984 -2348 271.5"}
+
+//TraV|Edt - disable fan motion when one player passes
+		create {classname "trigger_once" origin "4984 -2348 271.5"
+			values {model "*120"
+				spawnflags "1"
+				OnTrigger "tunnel_fanblade_1,AddOutput,spawnflags 265,0,-1"
+				OnTrigger "tunnel_fanblade_1,DisableMotion,,0.05,-1"} }//329
+
+//modi checkpoint into the cave
+		create 
+		{
+			classname "trigger_once" 
+			origin "6575 -3585 -179"
+			values
+			{
+				model "*52"
+				StartDisabled "0"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+			}
+		}
+				
+		create 
+		{
+			classname "trigger_once" 
+			origin "6575 -3585 -243"
+			values
+			{
+				model "*52"
+				StartDisabled "0"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,TeleportPlayers,modi_teleport_into_cave,0,-1"
+			}
+		}
+		
+		create 
+		{
+			classname "info_teleport_destination"
+			origin "6575 -3585 -243"
+			values {
+				targetname "modi_teleport_into_cave"
+				angles "72 -93 0"
+			} 
+		}
+
+//modi - meet the guardian
+		
+		create 
+		{
+			classname "info_teleport_destination"
+			origin "4432 -1227 -1430"
+			values {
+				targetname "modi_teleport_meet_guardian"
+				angles "0 90 0"
+			} 
+		}
+		
+		create 
+		{
+			classname "trigger_once" 
+			origin "4395.72 -1251.07 -1275"
+			values
+			{
+				model "*24"
+				StartDisabled "0"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+				OnTrigger "syn_spawn_manager,TeleportPlayers,modi_teleport_meet_guardian,0,1"
+			}
+		}
+
+
+//Trav|Edt teleport all players when at top, and frez //wut?
+
+//Trav|Edt - freeze fan when a player gets under it
+		//create {classname "trigger_once"
+		//	origin "5000 -2324 265.5"
+		//	values {model "*120"
+		//		spawnflags "1"
+		//		OnTrigger "tunnel_fanblade_1,DisableMotion,,0,-1"} }
+
+//Trav|Edt - TEST - force antguard to play last script when applicable
+		//edit {targetname "player_escapedmaze_seq_a" values {spawnflags "608"} }
+
+		delete {classname "trigger_once" origin "5324 -4160 -2120"}
+
+		create {classname "trigger_once" origin "5324 -4160 -2120"
+			values {model "*25"
+				spawnflags "1"
+				OnTrigger "maze_guard,StopScripting,,0,-1"
+				OnTrigger "player_escapedmaze_seq_a,BeginSequence,,0.1,-1"
+				OnTrigger "maze_effects_timer,Disable,,0.1,-1"
+				OnTrigger "player_escapedmaze_seq_trigger,Enable,,0.1,-1"
+				OnTrigger "guard_exit_playerclip,Enable,,0.1,-1"
+				OnTrigger "gib_manager,SetMaxPieces,100,0.1,-1"
+				OnTrigger "skeleton_ragdoll_templates,ForceSpawn,,0.1,-1"} }
+
+//Trav|Edt - teleport players after antlionguard (and disable player death items)
+		create {classname "trigger_once"
+			origin "5324 -4160 -2120"//5312.5 -4154.5 -2301.5
+			values {model "*25"//*55
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0,-1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_4,3,-1"
+//fix elevator_fall_trigger from killing players caught by barnacle
+				OnTrigger "elevator_fall_trigger,Kill,,3,-1"
+				OnTrigger "syn_elevator_fall,Disable,,3,-1"} }
+				
+//Trav|Edt - Stop crap from stopping elevator		
+		create {classname "trigger_hurt"
+			origin "4990 -1650 -381"
+			values {model "*55"
+				spawnflags "1"
+				damage "10000"
+				damagetype "32"
+				targetname "syn_elevator_fall"} }
+				
+		create {classname "trigger_weapon_strip"
+			origin "4990 -1650 -280"
+			values {model "*55"
+				KillWeapons "1"
+				spawnflags "1"
+				targetname "syn_elevator_fall"} }
+				
+		create {classname "trigger_hurt"
+			origin "4930 -1610 366"
+			values {model "*169"
+				targetname "syn_elevator_kill_players"
+				spawnflags "1"
+				damage "10000"
+				damagetype "32"
+				parentname "elevator"} }
+
+//modi - stop blocking elevator!!!
+		create {classname "trigger_remove"
+			origin "4920 -1610 450"
+			values {model "*66"//146//66
+				angles "90 0 0"
+				spawnflags "12"
+				parentname "elevator"
+				filtername "trav_train_filter"} }
+				
+		create {classname "func_clip_vphysics"
+			origin "4974 -1610 590"
+			values {model "*127" angles "90 0 0"
+				spawnflags "2"
+				rendermode "3"
+				parentname "elevator"
+				targetname "syn_modi_elevator_clip"
+				filtername "trav_train_filter"} }
+
+		create {classname "filter_multi"
+			values {targetname "trav_train_filter"
+				FilterType "1"
+				Negated "0"
+				Filter01 "trav_train_filter1"
+				Filter02 "trav_train_filter2"
+				Filter03 "trav_train_filter3"} }
+
+		create {classname "filter_activator_class"
+			values {targetname "trav_train_filter1"
+				filterclass "prop_physics"} }
+//todo: fix filtering dropped weapons and healthkits
+		create {classname "filter_activator_class"
+			values {targetname "trav_train_filter2"
+				filterclass "item_*"} }
+
+		create {classname "filter_activator_class"
+			values {targetname "trav_train_filter3"
+				filterclass "weapon_*"} }
+				
+//fix vort position on elevator
+		edit {
+			targetname "vort_standOnElevator_to_ride_down"
+			values {
+				origin "4925 -1632 384"
+			}
+		}
+		edit {
+			targetname "vort_standOnElevator_to_exit"
+			values {
+				origin "4925 -1632 384"
+			}
+		}
+//keep players here until guard finishes
+		edit {targetname "guard_exit_floor_board" values {classname "prop_physics_override"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "guard_exit_floor_board,AddOutput,health 0,0,-1"} }
+
+//Trav|Edt - if vort is ontop of vator for somreason/stucked in elevator, teleport him down
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "elevator_door_1_open_rl"
+				OnTrigger "trav_teleport_vort_vator,Teleport,,0,-1"} }
+
+		create {classname "point_teleport"
+			origin "4947 -1627 -2240"
+			values {targetname "trav_teleport_vort_vator"
+				angles "0 0 0"
+				target "vort"} }
+
+
+		//edit {targetname "gnome_clip" values {filtername ""} }
+
+//Trav|Edt - allow dynamic light to light word to look good
+		//edit {targetname "extract_light" values {spawnflags "0"} }
+
+//End of Trav|Edt
+
+//		create { classname "logic_auto" origin "0 0 0"
+//			values {
+//				"OnNewGame" "pusher_to_03,Enable,,0,-1"
+//			}
+//		}
+
+		// remove these player clips (func_brush) so other players can complete the level
+//		delete { targetname "guardcaveentry_block_player" }
+//		delete { targetname "maze_bridge_clip" }
+//		delete { targetname "grub_tunnel_1_playerblock" }
+//		delete { targetname "grub_tunnel_2_playerblock" }
+//		delete { targetname "guard_leap_3_playerblock" }
+
+		// the level will change once the elevator reaches the top
+		// however we need to make sure that all the players are in the elevator
+		// or they wont be saved
+//		create { classname "info_player_coop" origin "4926 -1585 398" values { angles "0 -20 0" targetname "PS_End" StartDisabled "1" parentname "elevator" } }
+//		create { classname "info_teleport_destination" origin "4926 -1585 398" values { angles "0 -20 0" targetname "PS_EndTP" parentname "elevator" } }
+
+//		delete { targetname "elevator_exit_trigger" }
+//		create { "classname" "trigger_once" "origin" "4911.5 -1607 420"
+//			values {
+//				edt_getbspmodelfor_targetname "elevator_exit_trigger"
+//				targetname "elevator_exit_trigger"
+//				StartDisabled "1"
+//				spawnflags "1"
+//				parentname "elevator"
+//				OnTrigger "elevator_door_1_close_rl,Trigger,,0,1"
+//				OnTrigger "vort_elevator_dialog_lcs,Start,,1,-1"
+//				OnTrigger "elevator_moving_shake,StartShake,,2.5,-1"
+//				OnTrigger "elevator,StartForward,,2.5,1"
+//				OnTrigger "syn_modi_elevator_clip,Kill,,2.5,1"
+
+//				OnTrigger "syn_spawn_manager,SetCheckPoint,PS_End,0,-1"
+			//	OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"
+//				OnTrigger "syn_spawn_manager,TeleportPlayers,PS_EndTP,0.1,-1"
+//			}
+//		}
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_04"} }
+	}
+}

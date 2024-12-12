@@ -1,0 +1,628 @@
+ep2_outland_02
+{
+	console
+	{
+		//sk_antlionguard_health 7100 //500
+		mp_player_death_items 0
+		sv_test_scripted_sequences "1"
+	}
+	entity
+	{
+//--Setup--
+		delete {classname "logic_auto" origin "-2293.12 -8265.61 -462.834"}
+		delete {targetname "spawnitems"}
+		delete {targetname "spawnitems_template"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"45"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+
+				weapon_stunstick	"1"
+			} }
+//New Weapon(s)
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapon" StartDisabled "1"
+				weapon_smg1		"1"
+					ammo_smg1	"45"
+				} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "smg,AddOutput,OnPlayerPickup syn_new_weapon:Enable::0:-1,0,-1"
+				OnMapSpawn "smg,AddOutput,OnPlayerPickup syn_new_weapon:EquipAllPlayers::0.1:-1,0,-1"
+				OnMapSpawn "relay_gman_scene_end,AddOutput,OnTrigger zoomtodefault:Zoom::0:-1,0,-1"
+				OnMapSpawn "pathTrack_elevator_alyx_stop,AddOutput,OnPass vort_healsAlyx:CancelSequence::1:1,0,-1"
+				OnMapSpawn "pathTrack_elevator_alyx_stop,AddOutput,OnPass vort_healsAlyx:kill::1.1:1,0,-1"
+				//OnMapSpawn "lcs_gman_scene,AddOutput,OnTrigger14 syn_g1:Teleport::3.3:-1,0,-1"
+			}
+		}
+
+// env_zooms - all players
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "env_zoom,AddOutput,AllPlayers 1,0,-1"
+			}
+		}
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro (First Time) [Intro Tunnel]
+		create {classname "info_player_coop" origin "-2253 -8266 -490"//-495z
+			values {angles "0 0 0" targetname "syn_spawn_player_1"} }
+//End (First Time) [Vator]
+		create {classname "info_player_coop" origin "-3252 -9416 112"
+			values {angles "0 180 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//Intro (Second Time) [alyx table]
+		create {classname "info_player_coop" origin "-3120 -9309 -899"
+			values {angles "0 -50 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+//End (Second Time) [gate-to-tunnel]
+		create {classname "info_player_coop" origin "-253.90 -9494.41 -710.18"
+			values {angles "0 -60 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "1"} }
+
+//--Checkpoints--
+		create {classname "info_teleport_destination" origin "-3089 -9460 -896" values { angles "0 180 0" targetname "syn_spawn_player_2_TP" } }
+
+		create {classname "trigger_once" origin "-3128 -9474.5 -857.67"
+			values {model "*37"
+				spawnflags "1"
+				targetname "player_in_elevator_trigger"
+				StartDisabled "1"
+				OnTrigger "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+				//OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"
+				OnTrigger "syn_spawn_manager,TeleportPlayers,syn_spawn_player_2_TP,0.1,-1"
+
+				"OnTrigger" "alyx_likes_antlions,RevertRelationship,,3,-1"
+				"OnTrigger" "vort_likes_antlions,RevertRelationship,,3,-1"} }
+
+//--Extra--
+
+//Trav|Edt - Add gnome if NewGame
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnNewGame "syn_new_gnome,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_new_gnome"
+				Template01 "gnome"} }
+
+		create {classname "prop_physics" origin "-3080 -9796 -660"
+			values {model "models/props_junk/gnome.mdl"
+				angles "0 165 0"
+				targetname "gnome"} }
+
+//Trav|Edt - make the two rebels invencible 
+		edit {targetname "sheckley" values {damagefilter "null"} }//filter_combine_mine
+		edit {targetname "griggs" values {damagefilter "null"} }
+
+//Trav|Edt - block forklift exploit
+	//	create {classname "trigger_push"
+	//		origin "-3099 -9791.5 -534.5"
+	//		values {model "*13"
+	//			spawnflags "1"
+	//			targetname "trav_forklift_push"
+	//			pushdir "0 355 0"
+	//			speed "80"} }
+
+	//	create {classname "func_brush" origin "-3122.36 -9822.06 -751.5"
+	//		values {model "" angles "0 105 0"
+	//			spawnflags "2"} }
+
+	//	create {classname "func_brush" origin "-3105.64 -9754.06 -751.5"
+	//		values {model "" angles "0 105 0"
+	//			spawnflags "2"} }
+
+//		create {classname "func_brush" origin "-3101.82 -9791.72 -656"
+//			values {model "*40" angles "0 -15 0"
+//				spawnflags "2"} }
+
+//		create {classname "func_brush" origin "-3101.82 -9791.72 -534"
+//			values {model "*40" angles "0 -15 0"
+//				spawnflags "2"} }
+
+//		create {classname "func_brush" origin "-3129.91 -9781.72 -534"
+//			values {model "*40" angles "0 -15 0"
+//				spawnflags "2"} }
+
+//Trav|Edt add crate of slams
+		create {classname "item_item_crate"
+			origin	"-2743 -8929 -692"
+			values{ItemClass "weapon_slam"
+				ItemCount "10"} }
+
+//Add a small ammount of workers
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "antlion_spawner_*,AddOutput,workerspawnrate 0.1,0,-1"} }
+
+//Trav|Edt - change breach tunnel antlions to workers
+	//	create {classname "npc_antlion"
+	//		origin "-3120 -9136 -712"
+	//		values {spawnflags "265988"
+	//			targetname "trav_antlion_worker"
+	//			angles "0 270 0"
+	//			//disableshadows "1"
+	//			squadname "ant_squad_1"
+	//			enemyfilter "antlion_enemy_filter"
+	//			startburrowed "1"
+	//			eludedist "2048"
+	//			//unburroweffects "1"
+	//			} }
+
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnMapSpawn "antlion_spawner_00_easy,AddOutput,TemplateName trav_antlion_worker,0,-1"} }
+
+//override worker ai to come out of hideyhole
+	//	create {classname "aiscripted_schedule" origin "-2976 -8480 -576"
+	//		values {spawnflags "4"
+	//			targetname "syn_aiscript_aworkers"
+	//			m_iszEntity "trav_antlion_worker"
+	//			m_flRadius "400"
+	//			graball "1"
+	//			goalent "sheckley_cave_wait_point"
+	//			schedule "2"} }
+
+	//	delete {targetname "antlion_spawner_00_easy"}
+
+//go to target
+	//	create {classname "npc_antlion_template_maker"
+	//		values {spawnflags "4112"
+	//		targetname "antlion_spawner_00_easy"
+	//		StartDisabled "1"
+	//		MaxNPCCount "16"
+	//		SpawnFrequency "1"
+	//		MaxLiveChildren "4"//3
+	//		TemplateName "trav_antlion_worker"//antlion_1
+	//		spawngroup "antspawn00_node"
+	//		spawnradius "4000"
+	//		findtarget "!player"
+	//		//spawntarget "!player"
+	//		vehicledistance "2"
+	//		ignorebugbait "1"
+	//		createspores "1"
+	//		OnAllSpawnedDead "path00_light_easy,lightoff,,0,-1"
+	//		OnAllSpawnedDead "mathCounter_antlionTracker_main,Add,1,0,-1"
+	//		OnSpawnNPC "path00_alarm,StopSound,,0,-1"
+	//		OnSpawnNPC "syn_aiscript_aworkers,StartSchedule,,0,1"} }
+
+		//edit {targetname "antlion_spawner_00_easy" values {TemplateName "trav_antlion_worker" MaxLiveChildren "4"} }
+		//edit {targetname "antlion_spawner_00_meduim" values {TemplateName "trav_antlion_worker"} }
+		//edit {targetname "antlion_spawner_00_hard" values {TemplateName "trav_antlion_worker"} }
+		//edit {targetname "antlion_spawner_00_final" values {TemplateName "trav_antlion_worker"} }
+
+//Trav|Edt - enable burrowing effects and enable shadows
+		edit {targetname "antlion_1" values {unburroweffects "0" disableshadows "0"} }
+
+//Trav|Edt - Increase number of antlions, make final wave epic..er
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "antlion_recharger,Trigger,,25,-1"} }
+
+		delete {targetname "antlion_recharger"}
+		create {classname "logic_relay"
+			values {targetname "antlion_recharger"
+				OnTrigger "antlion_spawner_00_easy,SetMaxChildren,24,0.1,-1"//16
+				OnTrigger "antlion_spawner_01_easy,SetMaxChildren,24,0.2,-1"
+				OnTrigger "antlion_spawner_02_easy,SetMaxChildren,24,0.2,-1"
+				OnTrigger "antlion_spawner_03_easy,SetMaxChildren,24,0.2,-1"
+				OnTrigger "antlion_spawner_00_medium,SetMaxChildren,36,0.2,-1"//32
+				OnTrigger "antlion_spawner_01_medium,SetMaxChildren,36,0.2,-1"
+				OnTrigger "antlion_spawner_02_medium,SetMaxChildren,36,0.2,-1"
+				OnTrigger "antlion_spawner_03_medium,SetMaxChildren,36,0.2,-1"
+				OnTrigger "antlion_spawner_00_hard,SetMaxChildren,56,0.2,-1"//40
+				OnTrigger "antlion_spawner_01_hard,SetMaxChildren,56,0.2,-1"
+				OnTrigger "antlion_spawner_02_hard,SetMaxChildren,56,0.2,-1"
+				OnTrigger "antlion_spawner_03_hard,SetMaxChildren,56,0.2,-1"} }
+
+		edit {targetname "antlion_spawner_00_final" values {MaxLiveChildren "5" MaxNPCCount "72"} }//3,21
+		edit {targetname "antlion_spawner_01_final" values {MaxLiveChildren "5" MaxNPCCount "72"} }//6
+		edit {targetname "antlion_spawner_02_final" values {MaxLiveChildren "5" MaxNPCCount "72"} }
+		edit {targetname "antlion_spawner_03_final" values {MaxLiveChildren "5" MaxNPCCount "72"} }
+
+//Trav|Edt - have workers fly in from top in final wave
+		//create {classname "npc_antlion"
+		//	origin "-2488 -9480 384"
+		//	values {spawnflags "265988"
+		//		targetname "trav_antlion_worker2"
+		//		angles "0 0 0"
+		//		//disableshadows "1"
+		//		squadname "ant_squad_1"
+		//		//enemyfilter "antlion_enemy_filter"
+		//		//startburrowed "1"
+		//		//eludedist "2048"
+		//		//unburroweffects "1"
+		//		} }
+
+		//create {classname "npc_template_maker"
+		//	origin "-2488 -9480 384"
+		//	values {spawnflags "16"
+		//		angles " 0 180 0"
+		//		targetname "trav_tmaker_workers1"
+		//		StartDisabled "1"
+		//		MaxNPCCount "32"
+		//		SpawnFrequency "1"
+		//		MaxLiveChildren "3"
+		//		TemplateName "trav_antlion_worker2"
+		//		OnSpawnNPC "trav_worker_sched,StartSchedule,,0.1,-1"} }
+
+		//create {classname "aiscripted_schedule"
+		//	values {spawnflags "4"
+		//		targetname "trav_worker_sched"
+		//		m_iszEntity "trav_antlion_worker"
+		//		schedule "6"
+		//		goalent "!player"} }
+
+//Trav|Edt - TEST add antlion guard for funkyness
+		create {classname "npc_antlionguard" origin "-1696 -8320 -712"
+			values {spawnflags "131588"
+				angles "0 225 0"
+				targetname "syn_antlionguard"
+				startburrowed "1"} }
+				
+		create {classname "npc_antlionguard" origin "-915 -9603 -712"
+			values {spawnflags "131588"
+				angles "0 225 0"
+				targetname "syn_antlionguard2"
+				startburrowed "1"} }
+				
+		create {classname "npc_antlionguard" origin "-2971 -11043 -712"
+			values {spawnflags "131588"
+				angles "0 225 0"
+				targetname "syn_antlionguard3"
+				startburrowed "1"} }
+
+//only attack players
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard"
+				target "npc_vortigaunt"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard"
+				target "npc_citizen"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard"
+				target "npc_alyx"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard2"
+				target "npc_vortigaunt"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard2"
+				target "npc_citizen"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard2"
+				target "npc_alyx"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard3"
+				target "npc_vortigaunt"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard3"
+				target "npc_citizen"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "ai_relationship"
+			values {subject "syn_antlionguard3"
+				target "npc_alyx"
+				disposition "4"
+				StartActive "1"} }
+
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_vint_moreplayers_guards"
+				LowerPlayer "8"
+				UpperPlayer "16"
+				OnLow "syn_antlionguard,Unburrow,,0,-1"
+				OnMed "syn_antlionguard,Unburrow,,0,-1"
+				OnMed "syn_antlionguard2,Unburrow,,1,-1"
+				OnHigh "syn_antlionguard,Unburrow,,0,-1"
+				OnHigh "syn_antlionguard2,Unburrow,,1,-1"
+				OnHigh "syn_antlionguard3,Unburrow,,2,-1"
+			}
+		}
+		create {classname "logic_relay"
+			values {targetname "logicRelay_finalWave"
+				OnTrigger "syn_vint_moreplayers_guards,CheckSkill,,70,-1"} }
+
+ //remove hoppers to prevent crashes
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_vint_moreplayers_hoppers"
+				LowerPlayer "8"
+				UpperPlayer "16"
+				OnNotLow "combine_mine,Kill,,0,-1"
+			}
+		}
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "syn_vint_moreplayers_hoppers,CheckSkill,,25,-1"} }
+
+//Trav|Edt RETURN, antirush
+		create {classname "trigger_once" origin "-4021 -9549 304"
+			values {model "*63"
+				spawnflags "8"
+				filtername "syn_filter_pphys"
+				//OnStartTouch "!activator,AddOutput,classname prop_physics_override,0,-1"
+				//OnStartTouch "!activator,AddOutput,health 0,1,-1"
+				//OnStartTouch "!activator,AddOutput,spawnflags 8,1,-1"
+				OnStartTouch "!activator,AddOutput,targetname syn_end_boards,1,-1"} }
+
+		create {classname "filter_activator_class"
+			values {targetname "syn_filter_pphys"
+				filterclass "prop_physics"} }
+
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnMapSpawn "antlion_poundonwood_1_alyx_lcs,AddOutput,OnCompletion syn_finishboards:Trigger::0:-1,0,-1"} }
+
+	//	create {classname "logic_relay"
+	//		values {targetname "syn_finishboards"
+	//			OnTrigger "syn_end_boards,AddOutput,health 50,0,-1"} }
+
+		delete {classname "prop_physics" origin "-4049 -9554 250"}
+		delete {classname "prop_physics" origin "-4048 -9554 219"}
+		delete {classname "prop_physics" origin "-4049 -9558 178"}
+
+		create {classname "prop_physics_override" origin "-4049 -9554 250"
+			values {spawnflags "8"
+				angles "0 90 90"
+				model "models/props_debris/wood_board05a.mdl"
+				health "99999"
+				targetname "syn_end_boards"} }
+
+		create {classname "prop_physics_override" origin "-4048 -9554 219"
+			values {spawnflags "8"
+				angles "0.646857 86.9149 -104.986"
+				model "models/props_debris/wood_board05a.mdl"
+				health "99999"
+				targetname "syn_end_boards"} }
+
+		create {classname "prop_physics_override" origin "-4049 -9558 178"
+			values {spawnflags "8"
+				angles "0 86.5 90"
+				model "models/props_debris/wood_board05a.mdl"
+				health "99999"
+				targetname "syn_end_boards"} }
+
+	//	edit {classname "prop_physics" origin "-4049 -9554 250" values {classname "prop_physics_override" spawnflags "8"} }
+	//	edit {classname "prop_physics" origin "-4048 -9554 219" values {classname "prop_physics_override" spawnflags "8"} }
+	//	edit {classname "prop_physics" origin "-4049 -9558 178" values {classname "prop_physics_override" spawnflags "8"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+	//			OnMapSpawn "syn_end_boards,AddOutput,health 9999,0,-1"
+				OnMapSpawn "antlion_poundonwood_1_alyx_lcs,AddOutput,OnCompletion syn_end_boards:SetHealth:40:0:-1,0,-1"} }
+
+//End of Trav|Edt
+
+		delete { targetname "exit_gate_close_player_trigger_1" }
+		delete { targetname "exit_gate_close_player_trigger_2" }
+
+		delete { targetname "exit_gate_close_vort_trigger_1" }
+		create { classname "trigger_multiple" origin "-463 -9603.5 -679"
+			values {
+				"model"			"*28"
+				"wait"			"1"
+				"targetname"	"exit_gate_close_vort_trigger_1"
+				"StartDisabled"	"1"
+				"spawnflags"	"2"
+				"filtername"	"vort_filter"
+				"hammerid"		"425270"
+				"OnStartTouch"	"exit_gate_player_blocker,Enable,,0,-1"
+				"OnStartTouch"	"!self,Disable,,0,-1"
+				"OnTrigger"		"exit_gate_close_vort_trigger_2,Enable,,0,-1"
+			}
+		}
+
+		delete { targetname "exit_gate_close_vort_trigger_2" }
+		create { classname "trigger_multiple" origin "-358 -9608.5 -679"
+			values {
+				"model"			"*27"
+				"wait"			"0"
+				"targetname"	"exit_gate_close_vort_trigger_2"
+				"StartDisabled"	"0"
+				"spawnflags"	"2"
+				"filtername"	"vort_filter"
+				"hammerid"		"425227"
+				"OnStartTouch"	"exit_gate_player_blocker,Disable,,0,-1"
+				"OnStartTouch"	"!self,Disable,,0,-1"
+				"OnTrigger"		"exit_gate_close_vort_trigger_2,Enable,,0,-1"
+			}
+		}
+
+		create { classname "trigger_push" origin "-64 -9800 -592"
+			values {
+				"model"			"*88"
+				"StartDisabled"	"0"
+				"targetname"	"exit_gate_player_blocker"
+				"pushdir"		"0 90 0"
+				"speed"			"500"
+				"spawnflags"	"1"
+			}
+		}
+
+		create { classname "trigger_once" origin "-64 -9832 -592"
+			values {
+				"model"			"*88"
+				"spawnflags"	"1"
+				"OnTrigger"		"syn_spawn_manager,SetCheckPoint,syn_spawn_player_4,0,-1"
+				"OnTrigger"		"syn_spawn_manager,MovePlayers,,0.1,-1"
+				"OnTrigger"		"exit_gate_close_counter,Add,2,0,-1"
+			}
+		}
+
+		// activate checkpoint for in the elevator shaft after we hit the change level
+		delete { classname "trigger_changelevel" }
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*19"
+				"targetname" "trigger_transition_to_04"
+				"spawnflags" "2"
+				"map" "ep2_outland_04"
+				"landmark" "outland_04_to_02"
+				"hammerid" "398635"
+			}
+		}
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*25"
+				"spawnflags" "0"
+				"map" "ep2_outland_03"
+				"landmark" "landmark_ep2_outland_02-03"
+				"hammerid" "414187"
+
+				"OnChangeLevel" "InitFrom04,Enable,,0,-1"
+			}
+		}
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*51"
+				"spawnflags" "0"
+				"map" "ep2_outland_05"
+				"landmark" "landmark_ep2_outland_04-05"
+				"hammerid" "758487"
+				"OnChangeLevel" "vort_follow,Deactivate,,0,-1"
+				"OnChangeLevel" "alyx_follow,Deactivate,,0,-1"
+				"OnChangeLevel" "alyx,GiveWeapon,weapon_alyxgun,0,-1"
+			}
+
+		}
+		create { classname "trigger_changelevel"
+			values {
+				"model" "*121"
+				"StartDisabled" "1"
+				"spawnflags" "2"
+				"map" "ep2_outland_01a"
+				"landmark" "01a-02_landmark"
+				"hammerid" "1447011"
+			}
+		}
+
+		create { classname "logic_relay"
+			values {
+				"targetname" "InitFrom04"
+				"StartDisabled" "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,PS_TransEle,0,-1"
+			}
+		}
+
+		create { classname "logic_auto"
+			values {
+				"OnMapTransition" "InitFrom04,Trigger,,0,-1"
+			}
+		}
+
+		// -----------------
+		//create { classname "info_player_coop" origin "-3089 -9460 -3110" values { angles "0 -90 0" targetname "PS_TransEle" StartDisabled "1" } }
+		//create {classname "point_teleport" origin "-856 -12781 -1096" values {targetname "syn_g1" target "gman" angles "0 180 0"} }
+
+		create { classname "info_teleport_destination" origin "-3120 -9309 -899" values { angles "0 -50 0" targetname "syn_spawn_player_3_TP" } }
+
+		delete { classname "trigger_once" origin "-3115.5 -9477.5 -3040" }
+		create { classname "trigger_once" origin "-3115.5 -9477.5 -3040"
+			values {
+				"model" "*34"
+				"StartDisabled" "0"
+				"spawnflags" "1"
+				"hammerid" "490879"
+				"OnTrigger" "start_the_elevator_rl,Trigger,,1,-1"
+				"OnTrigger" "turret_buddy_1,Kill,,1.5,-1"
+				"OnTrigger" "turret_buddy_2,Kill,,1.5,-1"
+				"OnTrigger" "vort_ride_elevator_from_04,BeginSequence,,0,-1"
+				"OnTrigger" "gman_template,ForceSpawn,,0.1,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_3,0,-1"
+			//	"OnTrigger" "syn_spawn_manager,MovePlayers,,0.1,-1"
+
+				"OnTrigger" "PlayerCatcher,Enable,,0,-1"
+			}
+		}
+
+		// create trigger to catch players if they get restored after elevator moves up
+		create { classname "trigger_teleport" origin "0 0 32"
+			values {
+				"model" "*19"
+				"targetname" "PlayerCatcher"
+				"spawnflags" "1"
+				"StartDisabled" "1"
+				"target" "syn_spawn_player_3_TP"
+			}
+		}
+		
+		create {classname "trigger_teleport" origin "-3105 -9480 -3275"
+			values
+			{
+				targetname "syn_tptoelevator"
+				edt_mins "-60 -60 -60"
+				edt_maxs "60 60 50"
+				spawnflags "1"
+				target "syn_inelevator_tp"
+			}
+		}
+		create {classname "info_teleport_destination" origin "-3105 -9455 -3100" values {targetname "syn_inelevator_tp" angles "0 0 0" startdisabled "0" parentname "elevator"} }
+
+		// fix the gman scene a bit
+		//			gman_player_slowfield_enabler
+		delete { targetname "gman_start_player_clip" }
+		delete { targetname "teleport_speedmod_1" }
+		delete { targetname "gman_player_slowfield_off" }
+
+		edit { targetname "pvc0" values { spawnflags "141" } } // 13
+		edit { targetname "pvc3" values { spawnflags "140" } } // 12
+		edit { targetname "pvc1" values { spawnflags "140" } }
+		edit { targetname "pvc_black" values { spawnflags "140" } }
+		edit { targetname "pvc5" values { spawnflags "140" } }
+		edit { targetname "pvc2" values { spawnflags "188" } } // 60
+		edit { targetname "pvc4" values { spawnflags "140" } }
+		
+		create {classname "env_zoom" values {targetname "zoomtodefault" Rate "1.0" fov "90" allplayers "1"} }
+
+		// remove this trigger and have it trigger its contents in the player_in_elevator_trigger (see above)
+		delete { classname "trigger_once" origin "-3124 -9469 56.5" }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_02"} }
+	}
+}
