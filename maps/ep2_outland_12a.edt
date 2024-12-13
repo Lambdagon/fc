@@ -1,1 +1,209 @@
-//
+ep2_outland_12a
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "startitems"}
+		edit {classname "func_areaportal" values {targetname "syn_DisabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "syn_DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+				weapon_crowbar		"1"
+				weapon_shotgun		"1"
+					ammo_buckshot	"12"
+				weapon_pistol		"1"
+					ammo_pistol		"54"
+				weapon_frag			"1"
+					ammo_grenade	"1"
+				weapon_357			"1"
+					ammo_357		"6"
+				weapon_smg1			"1"
+					ammo_smg1			"45"
+					ammo_smg1_grenade	"1"
+				weapon_ar2			"1"
+					ammo_ar2		"30"
+					ammo_ar2altfire	"1"
+				weapon_crossbow		"1"
+
+				weapon_slam			"1"
+				//	ammo_slam		""
+				weapon_stunstick	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+//Intro
+		create {classname "info_player_coop" origin "-573.442 -936.58 -1570"
+			values {angles "0 270 0" targetname "syn_spawn_player_1"} }
+		
+// elevator
+		create { classname "info_player_coop" origin "-400 -2205 -1189" 
+			values { angles "0 65 0" targetname "syn_spawn_player_2" StartDisabled "1" } }
+			
+		create {classname "info_teleport_destination"
+			origin "-400 -2178 -1540"
+			values {targetname "syn_spawn_player_2_teleport"
+				angles "0 65 0"} }
+			
+// outro elevator
+		create { classname "info_player_coop" origin "1818 -2506 -1140" 
+			values { angles "0 0 0" targetname "syn_spawn_player_3" StartDisabled "1" } }
+			
+		create {classname "info_teleport_destination"
+			origin "1818 -2506 -1140"
+			values {targetname "syn_spawn_player_3_teleport"
+				angles "0 0 0"} }
+
+		create {classname "info_global_settings"
+			values {targetname "syn_global_settings" IsVehicleMap "0"} }
+
+//--Extra--
+
+//modi - add gman, Half Life Alyx reference
+		create {classname "npc_gman"
+			origin	"2573 -2518 -1176"
+			values {spawnflags "16532"
+				angles "0 180 0"
+				targetname "syn_vint_modi_gman_1"
+				sleepstate "3"} }
+
+		create {classname "scripted_sequence"
+			origin "2573 -2518 -1176"
+			values {spawnflags "96"
+				targetname "syn_vint_modi_ss_gman_1_1"
+				m_iszEntity "syn_vint_modi_gman_1"
+				m_iszPlay "tiefidget"
+				m_iszNextScript "syn_vint_modi_ss_gman_2_2"} }
+
+		create {classname "scripted_sequence"
+			origin "2911 -2340 -1176"
+			values {spawnflags "96"
+				angles "0 0 0"
+				targetname "syn_vint_modi_ss_gman_2_2"
+				m_fMoveTo "1"
+				OnEndSequence "syn_vint_modi_gman_1,Kill,,0,-1"
+				OnEndSequence "syn_vint_modi_ss_gman_1_1,Kill,,0,-1"
+				OnEndSequence "!self,Kill,,0.1,-1"} }
+
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "relay.advisor.scene"
+				OnTrigger "syn_vint_modi_gman_1,Wake,,0.5,-1"
+				OnTrigger "syn_vint_modi_ss_gman_1_1,BeginSequence,,8,-1"} }
+
+//Trav|Edt - moveplayers into elevator
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "trigger_start_lift_1,AddOutput,OnTrigger syn_spawn_manager:SetCheckPoint:syn_spawn_player_3:0:-1,0,-1"
+				OnMapSpawn "trigger_start_lift_1,AddOutput,OnTrigger syn_spawn_manager:TeleportPlayers:syn_spawn_player_3_teleport:0:-1,0,-1"} }
+
+//Trav|Edt - make npc's invencibles from player exploits
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "npc_magnusson,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_kleiner,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_eli,SetDamageFilter,syn_dfilter_null,10,-1"
+				OnMapSpawn "npc_dog,SetDamageFilter,syn_dfilter_null,10,-1"} }
+
+//Trav|Edt - teleport rnd player to rocket
+	//	create {classname "point_teleport"
+	//		origin "-192 64 -1248"
+	//		values {targetname "trav_teleport_rocket"
+	//			angles "0 270 0"
+	//			target "!rndplayer"} }
+
+	//	create {classname "point_teleport"
+	//		origin "-192 -1880 -1168"
+	//		values {targetname "trav_teleport_base"
+	///			angles "0 90 0"
+	//			target "!activator"} }
+
+	//	create {classname "trigger_once"
+	//		origin "-192 96 2030"
+	//		values {model "*80"
+	//			spawnflags "1"
+	//			OnTrigger "trav_teleport_base,Teleport,,4,-1"} }//4.8
+
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnMapSpawn "relay_launch,AddOutput,OnTrigger trav_teleport_rocket:Teleport::10:-1,8,-1"} }
+
+//End of Trav|Edt
+
+		// keep spawn door open
+		delete { classname "trigger_multiple" origin "-380 -1451.97 -1496" }
+		create { classname "trigger_multiple" origin "-380 -1451.97 -1496"
+			values {
+				"model" "*45"
+				"wait" "1"
+				"StartDisabled" "0"
+				"spawnflags" "1"
+				"OnTrigger" "lcs.mag.thanks,Resume,,0,-1"
+			//	"OnTrigger" "door_silo_lab_3,Close,,0,-1"
+			}
+		}
+
+		delete { classname "trigger_once" origin "-372 -2189.01 -1514" }
+		create { classname "trigger_once" origin "-372 -2189.01 -1514"
+			values {
+				"model" "*37"
+				"targetname" "trigger_elevator_go_down"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"OnTrigger" "prop_elevatordoor,SetAnimation,close,0,-1"
+				"OnTrigger" "door_elevator_L,Close,,0,-1"
+				"OnTrigger" "door_elevator_R,Close,,0,-1"
+				"OnTrigger" "lcs.launch,Start,,13,-1"
+				"OnTrigger" "lcs.al.elevator.during,Start,,0.1,-1"
+				"OnTrigger" "lcs.launch.pre,Cancel,,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckPoint,syn_spawn_player_2,0,-1"
+				"OnTrigger" "syn_spawn_manager,TeleportPlayers,syn_spawn_player_2_teleport,0.1,-1"
+			}
+		}
+
+		// keep the launch door open
+		delete { classname "trigger_once" origin "167 -1975 -1128" }
+		create { classname "trigger_once" origin "167 -1975 -1128"
+			values {
+				"model" "*24"
+				"targetname" "trigger.eli.secret"
+				"StartDisabled" "1"
+				"spawnflags" "1"
+				"OnTrigger" "lcs.launch.post,Resume,,0,-1"
+				"OnTrigger" "fx_portal_*,Start,,0,-1"
+			//	"OnTrigger" "door_launchbunker_exit_a,Close,,0,-1"
+			//	"OnTrigger" "brush_launchbunker_exit_a,Enable,,0,-1"
+			}
+		}
+
+		// set this to do a level change at the end
+		delete { targetname "menu" }
+		create { classname "game_end" origin "0 0 0" values { targetname "end_the_game" } }
+
+		create {classname "logic_auto"
+			values
+			{
+				// Comment out this to see the credits all the way through
+				"OnMapSpawn" "lcs_hangar,AddOutput,OnCompletion end_the_game:EndGame:15:-1,0,-1"
+				
+				"OnMapSpawn" "credits,AddOutput,OnCreditsDone end_the_game:EndGame::2:-1,0,-1"
+			}
+		}
+
+		// Deleted credits?
+		//delete { classname "env_credits" origin "230.271 -1967.64 -975.07" }
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_ep2_outland_12a"} }
+	}
+}
