@@ -1,0 +1,392 @@
+d1_trainstation_06
+{
+	entity
+	{
+		// create a co-op spawn
+
+		"create" { "classname" "info_player_coop" "origin" "-9952 -3576 326" "values" { "angles" "0 45 0" } }
+
+		// create spawn equipment
+		"create"
+		{
+			targetname "syn_eqipment_base"
+			"classname" "info_player_equip"
+			"origin" "0 0 0"
+
+			"values"
+			{
+				"item_suit"	"1"
+				//"item_battery"	"2"
+				"item_armor"	"25"
+			}
+		}
+
+//Trav|Edt - Lock transition_door after map transition
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "transition_door,Close,,0,-1"
+				OnMapSpawn "transition_door,Lock,,0.1,-1"
+				OnMapTransition "syn_start_door,Kill,,0,-1"} }
+
+//Add door if newgame
+		create {classname "prop_door_rotating" origin "-9943 -3970 374"
+			values
+			{
+				spawnflags "10240"
+				angles "0 270 0"
+				targetname "syn_start_door"
+				model "models/props_c17/door01_left.mdl"
+				skin "5"
+				hardware "2"
+				DisableShadows "1"
+			}
+		}
+		
+//prevent players rushing without crowbar
+		create {classname "trigger_push"
+			origin "-9836 -3235 497"
+			values {
+				//model "*19"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-6120 -2863 358.5"
+				angles "0 90 0"
+				spawnflags "1"
+				pushdir "0 -90 0"
+				speed "350"} }
+		create {classname "trigger_push"
+			origin "-9465 -3179 541"
+			values {
+				//model "*19"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-6120 -2863 358.5"
+				angles "0 90 0"
+				spawnflags "1"
+				pushdir "0 -90 0"
+				speed "1150"} }
+		create {classname "trigger_push"
+			origin "-9248 -3301 493"
+			values {
+				//model "*19"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-6120 -2863 358.5"
+				spawnflags "1"
+				pushdir "0 -180 0"
+				speed "1150"} }
+
+//Trav|Edt - forcegive players crowbar if they leave barneyarea without one
+		edit {targetname "music_trigger" values {classname "trigger_multiple"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "music_trigger,AddOutput,OnStartTouch edt_crowbar_equip:EquipPlayer::0:-1,0,-1"
+				//OnMapSpawn "music_trigger,AddOutPut,filtername syn_new_weapon_got,0,-1"
+				//OnMapSpawn "music_trigger,AddOutput,OnStartTouch !activator:AddOutPut:targetname syn_d1_trainstation_06_newweapon:0:-1,0,-1"
+				} }
+
+		//create {classname "filter_activator_name"
+		//	values {targetname "syn_new_weapon_got"
+		//		Negated "1"
+		//		filtername "syn_d1_trainstation_06_newweapon"} }
+
+//Trav|Edt Add antrush variant (changed to LD test)
+		create {classname "logic_difficulty"
+			values {spawnflags "1"
+				targetname "syn_vint_ld_1"
+				OnEasy "syn_vint_endcops1,Kill,,0,-1"
+				OnEasy "syn_vint_endcops2,Kill,,0,-1"
+				OnNotHard "syn_vint_endcops3,Kill,,0,-1"} }
+
+		create {classname "npc_metropolice"
+			origin "-8152 -1244 -20"
+			values {spawnflags "8708"
+				targetname "syn_vint_endcops1"
+				angles "0 30 0"
+				sleepstate "3"
+				squadname "squad_trav_cops"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+		create {classname "npc_metropolice"
+			origin "-7840 -1265 -28"
+			values {spawnflags "8708"
+				targetname "syn_vint_endcops2"
+				angles "0 165 0"
+				sleepstate "3"
+				squadname "squad_trav_cops"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+		
+		create {classname "npc_metropolice"
+			origin "-6856 -1456 -28"
+			values {spawnflags "8708"
+				targetname "syn_vint_endcops3"
+				angles "0 165 0"
+				sleepstate "3"
+				squadname "squad_trav_cops"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+		create {classname "npc_bullseye"
+			origin "-8030 -708 -96"
+			values {spawnflags "196608"
+				targetname "syn_vint_endprops_bullseye"
+				parentname "syn_vint_endprops_barrel" } }
+
+		create {classname "ai_relationship"
+			values {spawnflags "1"
+				targetname "syn_vint_endprops_bullseye_ai"
+				subject "syn_vint_endcops*"//do wildcards work here?
+				target "syn_vint_endprops_bullseye"
+				disposition "1"
+				rank "5" } }
+
+		create {classname "trigger_multiple"
+			origin "-8001 -734 -113.5"
+			values {
+				//model "*16"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-8000 -3171 207.5"
+				spawnflags "1"
+				targetname "syn_vint_endtrigger"
+				OnStartTouch "syn_vint_endprops_bullseye_ai,ApplyRelationship,,0,-1"
+				OnEndTouchAll "syn_vint_endprops_bullseye_ai,RevertToDefaultRelationship,,0,-1" } }
+
+//Trav|Edt - prevent funky train door phys (makes harder for players to get through, but whatevs... fornow
+		create {classname "func_clip_vphysics" origin "-8776 -2832 62" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-6168 -2560 -2" filtername "syn_funkydoor_filt" targetname "syn_funkydoor"} }//model "*65"
+		create {classname "func_clip_vphysics" origin "-8656 -2800 62" values {edt_getbspmodelfor_classname "trigger_multiple" edt_getbspmodelfor_origin "-6168 -2560 -2" filtername "syn_funkydoor_filt" targetname "syn_funkydoor"} }
+
+		create {classname "filter_activator_name"
+			values {targetname "syn_funkydoor_filt"
+				//Negated "1"
+				filtername "traincar_door_1_*"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "second_train_path_8,AddOutput,OnPass syn_funkydoor:Disable::0:-1,0,-1"} }
+
+//Trav|Edt recreate trigger too not kill npcs and trigger syn_vint_endcops
+		delete {classname "trigger_once" origin "-7784 -1520 -44" }
+
+		create {classname "trigger_once"
+			origin "-7784 -1520 -44"
+			values {
+				//model "*18"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-7784 -1520 -44"
+				spawnflags "512"
+				OnTrigger "rappeller_cop_2_maker,Spawn,,0,-1"
+				OnTrigger "rappeller_cop_2_maker_2,Spawn,,0.75,-1"
+				OnTrigger "syn_vint_endcops*,Wake,,0,-1" } }
+
+//Trav|Edt Add prop_physics at end, again, for no reason ;)
+		create {classname "prop_physics"
+			origin "-8000 -648 -100"
+			values {spawnflags "512"
+				targetname "syn_vint_endprops"
+				model "models/props_junk/wood_crate001a.mdl" } }
+
+		create {classname "prop_physics"
+			origin "-8000 -644 -56"
+			values {spawnflags "512"
+				targetname "syn_vint_endprops"
+				angles "0 345 0"
+				model "models/props_junk/wood_crate001a.mdl" } }
+
+		create {classname "prop_physics_override"
+			origin "-7999 -673 -55"
+			values {spawnflags "8"
+				targetname "syn_vint_endprops_replaceboards2"
+				angles "0 90 90"
+				model "models/props_debris/wood_board04a.mdl"
+				health "175" } }//80
+
+		create {classname "prop_physics_override"
+			origin "-7999 -673 -70"
+			values {spawnflags "8"
+				targetname "syn_vint_endprops_replaceboards"
+				angles "0 90 75"
+				model "models/props_debris/wood_board02a.mdl"
+				health "125" } }//60
+
+		create {classname "prop_physics_override"
+			origin "-7999 -673 -94"
+			values {spawnflags "8"
+				targetname "syn_vint_endprops_replaceboards"
+				angles "0 90 96"
+				model "models/props_debris/wood_board06a.mdl"
+				health "120" } }
+
+		create {classname "prop_physics"
+			origin "-8036 -692 -102"
+			values {spawnflags "256"
+				targetname "syn_vint_endprops_barrel"
+				model "models/props_c17/oildrum001_explosive.mdl"
+				OnIgnite "syn_vint_endprops_bullseye,Kill,,0,-1" } }
+
+		create {classname "prop_physics"
+			origin "-7919 -684 -38"
+			values {spawnflags "256"
+				targetname "syn_vint_endprops"
+				model "models/props_c17/oildrum001_explosive.mdl" } }
+
+		"delete" { "targetname" "player_spawn_items" }
+		"delete" { "targetname" "player_spawn_items_template" }
+
+//Trav|Edt - autirush
+		create {classname "trigger_coop"
+			origin "-8480 -568 -320.5"//-8387 -418 -190
+			values {
+				//model "*52"//*17
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-6720 -1944 64.5"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,1"
+				OnPlayersIn "syn_antirush_light,Kill,,0,1"
+				//OnPlayersIn "syn_antirush_text_trigger,Disable,,0,-1"
+				OnPlayersIn "syn_antirush_push,Disable,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+		create {classname "prop_dynamic" origin "-8812 -544 -456"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_wall"
+				angles "0 0 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "-8812 -544 -392"
+			values {_light "170 255 170"
+				targetname "syn_antirush_light"
+				brightness "1"
+				distance "128"
+				style "12"} }
+
+		//create {classname "trigger_push"
+		//	origin "-8720 -544 -312"
+		//	values {model "*62"
+		//		spawnflags "1"
+		//		targetname "syn_antirush_push"
+		//		pushdir "0 0 0"
+		//		speed "450"} }
+
+		//create {classname "trigger_multiple"
+		//	origin "-8387 -418 -190"
+		//	values {model "*17"
+		//		spawnflags "1"
+		//		targetname "syn_antirush_text_trigger"
+		//		wait "1.5"
+		//		OnTrigger "syn_antirush_text,Display,,1,-1"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//End of Trav|Edt
+
+		// and turn it into a pusher
+		"create"
+		{
+			"classname" "trigger_push"
+			"origin" "-9920 -4014 384"
+
+			"values"
+			{
+				//"model" "*6"
+				"edt_mins" "-100 -60 -100"
+				"edt_maxs" "70 60 100"
+				"spawnflags" "1"
+				"StartDisabled" "0"
+				"pushdir" "0 90 0"
+				"speed" "750"
+			}
+		}
+
+		// make crowbar available to all players
+
+		//"create"
+		//{
+		//	"classname"	"logic_auto"
+		//	"origin"	"0 0 0"
+
+		//	"values"
+		//	{
+		//		"OnMapSpawn"	"weapon_crowbar,AddOutput,OnPlayerPickup edt_crowbar_spawn:ForceSpawn::0:0,0,0"
+		//		"OnMapSpawn"	"weapon_crowbar,AddOutput,OnPlayerPickup edt_crowbar_equip:Enable::0:0,0,0"
+		//	}
+		//}
+
+		"delete" { "targetname" "crowbar_weapon" }
+
+		"create"
+		{
+			"classname"	"weapon_crowbar"
+			"origin"	"-9618 -3498 601"
+
+			"values"
+			{
+				"targetname"		"crowbar_weapon"
+
+				"OnPlayerPickup"	"edt_crowbar_spawn,ForceSpawn,,0,0"
+				"OnPlayerPickup"	"edt_crowbar_equip,Enable,,0,0"
+			}
+		}
+
+		"create"
+		{
+			"classname"	"point_template"
+			"origin"	"0 0 0"
+
+			"values"
+			{
+				"targetname"	"edt_crowbar_spawn"
+				"Template01"	"edt_crowbar"
+			}
+		}
+
+		"create"
+		{
+			"classname"	"weapon_crowbar"
+			"origin"	"-9731.63 -3425.10 354.04"
+
+			"values"
+			{
+				"targetname"	"edt_crowbar"
+
+				"OnPlayerPickup"	"edt_crowbar_spawn,ForceSpawn,,0,0"
+			}
+		}
+
+		"create"
+		{
+			"classname"	"info_player_equip"
+			"origin"	"0 0 0"
+
+			"values"
+			{
+				"targetname"		"edt_crowbar_equip"
+				"StartDisabled"		"1"
+				"weapon_crowbar"	"1"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_trainstation_06"} }
+	}
+}

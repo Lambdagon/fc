@@ -2,6 +2,169 @@ d1_trainstation_02
 {
 	entity
 	{
-		edit {classname "env_zoom" values {AllPlayers "1"} }
+		//Trav|Edt - disable teleporting knockouts
+		delete {classname "trigger_teleport"}
+		delete {targetname "knockout_fade"}//just incase (no reason rly)
+
+		//disable knockouts (white screen of death)
+		delete {classname "trigger_multiple" origin "-2103.94 -4806.22 37.7"}//
+		delete {classname "trigger_multiple" origin "-3680 -5192 76.69"}//
+		delete {classname "trigger_multiple" origin "-2307.78 -4758.91 37.7"}//
+		delete {classname "trigger_multiple" origin "-3680 -5152 37.39"}//
+		delete {classname "trigger_multiple" origin "-5432 -3824 37.39"}//
+		edit {targetname "monkey" values {spawnflags "0"} }
+		edit {targetname "monkey2" values {spawnflags "0"} }
+//		delete {targetname "cupcop_fail_relay"}
+//		create {classname "logic_relay"
+//			values {spawnflags "1"
+//				targetname "relay_launch"
+//				OnTrigger "cupcop_nag_timer,Kill,,0,-1"
+//				OnTrigger "trashcan_trigger,Kill,,0,-1"
+//				OnTrigger "lcs_CupCop_Fail,Start,,0,-1"
+//				OnTrigger "throwcan_trigger,Kill,,0,-1"
+//				OnTrigger "player_escape_trigger,Kill,,0,-1"
+//				OnTrigger "cupcop_failsafe_timer,Kill,,0,-1"
+//				OnTrigger "cupcop_nag_timer_putin,Kill,,0,-1"
+//				OnTrigger "cupcop_can_pickup,Kill,,0,-1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "-4192 288 -63"
+			values {angles "0 225 0" targetname "syn_spawn_player_1"} }
+
+//diff
+		create {classname "logic_difficulty"
+			values {spawnflags "3"
+				targetname "syn_vint_ld_1"
+				OnNotHigh "syn_vint_diff_cosmetic,Kill,,0,-1"
+				OnNotHard "syn_vint_diff_cosmetic2,Kill,,0,-1"
+				OnNotLow "syn_vint_diff_cosmetic_1_ss,BeginSequence,,0,-1"
+				OnLow "syn_vint_diff_cosmetic_1_ss,Kill,,0,-1"} }
+
+		create {classname "npc_metropolice"
+			origin "-4080 -1536 65"
+			values {spawnflags "8708"//532
+				angles "0 315 0"
+				targetname "syn_vint_diff_cosmetic"
+				additionalequipment "weapon_smg1"} }
+
+		create {classname "npc_metropolice"
+			origin "-992 -1888 -4"
+			values {spawnflags "8708"//532
+				angles "0 180 0"
+				targetname "syn_vint_diff_cosmetic"
+				additionalequipment "weapon_smg1"} }
+
+		create {classname "npc_metropolice"
+			origin "-1936 -608 -4"
+			values {spawnflags "8708"//532
+				angles "0 270 0"
+				targetname "syn_vint_diff_cosmetic"
+				additionalequipment "weapon_smg1"} }
+
+		create {classname "npc_metropolice"
+			origin "-1712 -3344 0"
+			values {spawnflags "8708"//532
+				targetname "syn_vint_diff_cosmetic_1"} }
+
+		create {classname "scripted_sequence"
+			values {targetname "syn_vint_diff_cosmetic_1_ss"
+				spawnflags "256"
+				m_iszEntity "syn_vint_diff_cosmetic_1"
+				m_iszPostIdle "plazalean"} }
+
+		create {classname "npc_metropolice"
+			origin "-2144 -5072 87"
+			values {spawnflags "8708"//532
+				angles "0 120 0"
+				targetname "syn_vint_diff_cosmetic"
+				additionalequipment "weapon_smg1"} }
+
+//Trav|Edt - add synergy logo
+//NO, DISGUSTIN
+//		create {classname "infodecal"
+//			origin "-3198 -2048 640"//-1440 -3196 429
+//			values{texture "vgui/gfx/synergy"} }
+
+//		create {classname "npc_combine_s"
+		create {classname "npc_elitepolice"
+			origin "-2208 -1864 2"
+			values {spawnflags "418324"
+				targetname "syn_vint_diff_cosmetic2"
+				angles "0 180 0"
+//				model "models/combine_super_soldier.mdl"
+//				additionalequipment "weapon_ar2" } }
+				additionalequipment "weapon_shotgun" } }
+
+//		create {classname "npc_combine_s"
+		create {classname "npc_elitepolice"
+			origin "-2208 -1728 2"
+			values {spawnflags "418324"
+				angles "0 180 0"
+				targetname "syn_vint_diff_cosmetic2"
+//				model "models/combine_super_soldier.mdl"
+//				additionalequipment "weapon_ar2" } }
+				additionalequipment "weapon_shotgun" } }
+
+//Trav|Edt - autirush
+		create {classname "trigger_coop"
+			origin "-5200 -4192 64"//-4944 -4128 96
+			values {//model "*61"//*11
+				spawnflags "1"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-2800 -3008 64"
+				//StartDisabled "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,1"
+				OnPlayersIn "syn_antirush_light,Kill,,0,1"
+				//OnPlayersIn "syn_antirush_push,Disable,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+		create {classname "prop_dynamic" origin "-5328 -4472 0"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_wall"
+				angles "0 90 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "-5328 -4480 56"
+			values {_light "170 255 170"
+				targetname "syn_antirush_light"
+				brightness "1"//2
+				distance "128"//1024
+				style "12"} }
+
+		//create {classname "trigger_push"
+		//	origin "-5293.23 -4215.98 62"
+		//	values {model "*85"
+		//		spawnflags "1"
+		//		targetname "syn_antirush_push"
+		//		pushdir "0 0 0"
+		//		speed "450"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_trainstation_02"} }
 	}
 }

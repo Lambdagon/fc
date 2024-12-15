@@ -1,0 +1,434 @@
+d1_trainstation_05
+{
+	entity {
+		// Fix Breen teleport04 and teleport05a scenes
+	//	create {classname "logic_auto"
+	//		values {spawnflags "1"
+	//			OnMapSpawn "teleport_04_scene,AddOutput,OnStart BREEN_idle_prepose_ss_1:CancelSequence::1:-1,0,-1"} }
+
+		//Trav|Edt - fix breakables from breaking, messes with IO
+		edit {targetname "lamarr_break_tech_1" values {spawnflags "519"} }
+		edit {targetname "lamarr_break_grate_1" values {spawnflags "36865"} }
+
+		//Trav|Edt - make viewcontrol_ickycam fo all players
+		edit {targetname "viewcontrol_ickycam" values {edt_spawnflags "164"} }
+
+		//Trav|Edt - prevent end transition door from closing on other players
+		delete {classname "trigger_multiple" origin "-10592 -3868 448"}
+
+		//Suit Manager
+//		create {classname "logic_auto"
+//			values {spawnflags "1"
+//				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch syn_suit_equip:Enable::0:-1,0,-1"
+//				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch syn_suit_template:ForceSpawn::0:-1,0,-1"
+//				OnMapSpawn "item_suit,AddOutput,OnPlayerTouch syn_suit_armor:EquipPlayer::1:-1,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_suit_template"
+				Template01 "syn_suit"} }
+
+		create {classname "item_suit" origin "-6484.32 -1624.57 8.05"
+			values {angles "0 90 0"
+				targetname "syn_suit"
+				OnPlayerTouch "syn_suit_template,ForceSpawn,,0,-1"
+				OnPlayerTouch "syn_suit_armor,EquipPlayer,,1,-1"} }
+//spawn
+		 create {classname "info_player_equip"
+			values {targetname "syn_suit_equip" StartDisabled "1"
+				item_suit "1"
+				item_armor "100"
+				} }
+//obtain
+		 create {classname "info_player_equip"
+			values {targetname "syn_suit_armor" StartDisabled "1"
+				item_armor "95"
+				} }
+
+		 create {classname "info_player_equip"
+			values {targetname "syn_suit_only" StartDisabled "1"
+				item_suit "1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "-5544 -864 64"//-5800 -680 64
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
+//lab
+		create {classname "info_player_coop" origin "-6416 -1128 0"
+			values {angles "0 225 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+//lab2
+		create {classname "info_player_coop" origin "-7152 -1504 0"
+			values {angles "0 90 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+//teleporter TODO: parent to lift?
+		create {classname "info_player_coop" origin "-7188 -1184 96"
+			values {angles "0 270 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
+//outside
+		create {classname "info_player_coop" origin "-10336.3 -4707.12 322"
+			values {angles "0 101 0" targetname "syn_spawn_player_5" StartDisabled "1"} }
+
+		//Trav|Edt - prevent alyx from blocking way
+		edit {targetname "mark_alyx_intro" values {origin "-6432 -880 9"} }
+
+		create {classname "logic_relay"
+			values {targetname "_syn_vint"
+				OnTrigger "mark_alyx_intro,AddOutput,origin -6366.71 -883.04 9,0,-1"} }
+
+//Trav|Edt - gnome :P (ep2)
+	//	create {classname "prop_physics" origin "-6360 -472 1"
+	//		values {model "models/props_junk/gnome.mdl"
+	//			angles "0 135 0"
+	//			targetname "syn_hl2_gnome"} }
+
+		//Trav|Edt - Extra suit chargers
+		create {classname "item_suitcharger"
+			origin "-6624 -1584 48"
+			values {angles "0 180 0"
+				targetname "syn_vint"} }
+
+		create {classname "item_suitcharger"
+			origin "-7152 -1536 48"
+			values {angles "0 90 0"
+				targetname "syn_vint"} }
+
+		// don't let actors die
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "npc_*,AddOutput,invulnerable 1,0,-1"
+			}
+		}
+
+		//Trav|Edt - Add breen Gman
+		create {classname "npc_gman"
+			origin "-13351 48 59"
+			values {spawnflags "25110"
+				angles "0 240 0"
+				targetname "syn_vint_trav_gman"} }
+
+		create {classname "trigger_once"
+			origin "-13386 -156 49"
+			values
+			{
+				edt_getbspmodelfor_targetname "Barney_lab_entry_closedoor_1"
+				spawnflags "1"
+				OnTrigger "syn_vint_trav_gman,Kill,,10,-1"
+			}
+		}
+
+//Trav|Edt - allow vending machine door to close(works fine unless behind player gets in right when barney spawns, just leaves door open)
+		//edit {targetname "soda_door_areaportal_1" values {StartOpen "0"} } //hmm, i didn't think u could edit defaultkey values :O
+		//create {classname "trigger_coop"
+		//	origin "-6768 -1391.98 86"//-6730.5 -1267.54 56
+		//	values {model "*124"//*12
+		//		spawnflags "1"
+		//		StartDisabled "1"
+		//		targetname "trav_coop_vendingdoor"
+		//		CountType "1"
+		//		PlayerValue "100"
+		//		OnPlayersIn "!self,Disable,,0,-1"
+		//		OnPlayersIn "soda_machine_entry_door_1,Close,,0,-1"
+		//		OnPlayersIn "trav_brush_soda_clip_player_2,Enable,,0,1"
+		//		OnPlayersIn "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+		//		OnPlayersIn "Barney_lab_entry_opendoor_1,Enable,,0,-1"
+		//		OnPlayersIn "Barney_lab_entry_closedoor_1,Enable,,0,-1"//delay4
+		//		OnPlayersIn "Barney_lab_entry_closedoor_1,Enable,,0,-1"} }
+//alyx
+		create {classname "trigger_multiple"
+			origin "-6485 -1084 33"
+			values
+			{
+				edt_getbspmodelfor_targetname "Alyx_lab_entry_closedoor_1"
+				spawnflags "2"
+				wait "6"
+				//OnTrigger "Barney_lab_entry_opendoor_1,Enable,,0,-1"
+				//OnTrigger "Barney_lab_entry_closedoor_1,Enable,,4,-1"
+				OnTrigger "!self,Disable,,5,-1"
+				OnTrigger "trav_coop_vendingdoor,Enable,,0,-1"
+			}
+		}
+//barney
+		create {classname "trigger_once"
+			origin "-6485 -1076 33"
+			values
+			{
+				edt_getbspmodelfor_targetname "Barney_lab_entry_closedoor_1"
+				spawnflags "2"
+				StartDisabled "1"
+				targetname "Barney_lab_entry_closedoor_1"
+				filtername "trav_filter_barney"
+				OnTrigger "soda_machine_entry_door_1,Close,,1,-1"
+			}
+		}
+
+		create {classname "filter_activator_name"
+			values {targetname "trav_filter_barney"
+				//Negated "1"
+				filtername "barney"} }
+
+		create {classname "func_brush"//*32 barney close
+			origin "-6485 -1054.5 46"
+			values {
+				edt_getbspmodelfor_targetname "brush_soda_clip_player_2"
+				spawnflags "1"
+				StartDisabled "1"
+				targetname "trav_brush_soda_clip_player_2"} }
+
+//s4
+//TODO fix d3's bug
+//check on voting system
+		create {classname "trigger_once"
+			origin "-6364.96 -1158 53"
+			values
+			{
+				edt_getbspmodelfor_targetname "player_in_teleport"
+				spawnflags "1"
+				targetname "mini_teleport_port_L_1"//syn_vint_//uses IO to enable
+				StartDisabled "1"
+				//target "trav_teleport_waste"
+				OnTrigger "syn_vint_trav_teleport_waste,Teleport,,0,-1"
+			}
+		}
+
+		create {classname "point_teleport"
+			origin "-10240 2768 10820"
+			values {targetname "syn_vint_trav_teleport_waste"
+			angles "0 30 0"
+			target "!activator"} }
+
+		create {classname "point_teleport"
+			origin "-6379 -1160 48"
+			values {targetname "syn_vint_trav_teleport_waste2"
+			angles "0 180 0"
+			target "!activator"} }
+//teleport em back when it breaks (or when players reached teleporter lab - done below)
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "kill_mtport_rl_1"
+				OnTrigger "syn_vint_trav_teleport_waste2_trig,Enable,,0,-1"} }
+
+		create {classname "trigger_once"
+			origin "-7232 4970 10632"
+			values
+			{
+				edt_getbspmodelfor_targetname "2_waste1_teleport_trigger_1"
+				spawnflags "1"
+				StartDisabled "1"
+				targetname "syn_vint_trav_teleport_waste2_trig"
+				OnStartTouch "syn_vint_trav_teleport_waste2,Teleport,,3,-1"
+			}
+		}
+
+		create {classname "prop_physics" origin "-9696 2704 10795"
+			values {spawnflags "8"
+				angles "0 30 0"
+				skin "2"
+				model "models/props_c17/furniturearmchair001a.mdl"} }
+
+		create {classname "prop_physics" origin "-9688 2758 10827"
+			values {spawnflags "0"
+				angles "0 195 0"
+				skin "1"
+				model "models/props_junk/popcan01a.mdl"} }
+//remove
+		//create {classname "prop_physics" origin "-9708 2752 10810"
+		//	values {spawnflags "8"
+		//		angles "78.6316 111.806 68.1937"
+		//		disableshadows "1"
+		//		model "models/weapons/w_shotgun.mdl"} }
+
+		//create {classname "prop_ragdoll" origin "-9679 2750 10828"
+		//	values {spawnflags "0"
+		//		angles "-15 30 0"
+		//		disableshadows "1"
+		//		model "models/humans/corpse1.mdl"} }
+
+//Trav|Edt - allow lab_door to close if all players get in
+		create {classname "trigger_coop"
+			origin "-7220 -1312 56"
+			values
+			{
+				edt_getbspmodelfor_targetname "start_first_teleport_01"
+				spawnflags "1"
+				StartDisabled "1"
+				targetname "trav_coop_labdoor"
+				CountType "1"
+				PlayerValue "100"
+				target "syn_teleport_behind_lab_door"
+				OnPlayersIn "syn_lab_door_clip,Close,,0,1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,1"
+				OnTrigger "trav_teleport_waste2_trig,Enable,,0,1"
+				OnPlayersIn "lab_door,Close,,0,1"
+				OnPlayersIn "!self,Disable,,1,-1"
+			}
+		}
+		create {classname "info_target" origin "-7195 -1395 35" values {targetname "syn_teleport_behind_lab_door" angles "0 90 0"} }
+		create {classname "logic_relay"
+			values
+			{
+				targetname "teleporter_blowfuse_R1"
+				OnTrigger "lab_door,Close,,0,-1"
+				OnTrigger "trav_coop_labdoor,Enable,,0,1"
+				OnTrigger "trav_coop_labdoor,TeleportPlayersNotTouching,,0.1,1"
+			}
+		}
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "lab_door,AddOutput,OnClose lab_door_clip:Close::0.01:-1,0,-1"
+				OnMapSpawn "syn_lab_door_clip,Open,,0,-1"} }
+
+		edit {targetname "lab_door_clip" values {targetname "syn_lab_door_clip"} }
+
+//Trav|Edt - teleport applicable players into lab (to save barney from not spawning when players are over his spawn)
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 trav_teleport_lab:Enable::12:-1,0,-1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 soda_machine_entry_door_1:Close::12:-1,0,-1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 trav_brush_soda_clip_player_2:Enable::12:1,0,-1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 syn_spawn_manager:SetCheckpoint:syn_spawn_player_2:12:-1,0,-1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_opendoor_1:Enable::12:-1,0,-1"
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_closedoor_1:Enable::12:-1,0,-1"//delay4
+				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_closedoor_1:Enable::12:-1,0,-1"} }
+
+		create {classname "trigger_teleport"
+			origin "328 6856 148"
+			values
+			{
+				edt_getbspmodelfor_targetname "2_waste1_teleport_trigger_1"
+				spawnflags "1"
+				targetname "trav_teleport_lab"
+				StartDisabled "1"
+				target "trav_teleport_dest"} }
+
+		create {classname "info_teleport_destination" origin "-6416 -1128 0" values {targetname "trav_teleport_dest" angles "0 225 0"} }
+
+//Trav|Edt - move all players into the teleporter
+		delete {targetname "player_in_teleport"}
+
+		create {classname "trigger_coop"
+			origin "-7186.95 -1166 24"
+			values
+			{
+				edt_getbspmodelfor_targetname "player_in_teleport"
+				spawnflags "1"
+				StartDisabled "1"
+				targetname "player_in_teleport"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"//51
+				OnPlayersIn "trav_teleport_teleporter,Teleport,,0.1,1"
+				OnPlayersIn "kleiner_teleport_player_starter_1,Trigger,,0.1,1"
+				OnPlayersIn "tportnag_speaker,Kill,,0,1"
+				OnPlayersIn "trav_coop_vendingdoor,Disable,,0,1"
+				OnPlayersIn "syn_spawn_manager,SetCheckpoint,syn_spawn_player_4,0,1"//failsafe for players joining during teleport sequence
+				//"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_5,83,1"//using trigger instead
+				//OnPlayersIn "player_in_teleport2,Enable,,0,1"
+				//OnPlayersIn "syn_spawn_manager,MovePlayers,,0,-1"
+				OnPlayersIn "!self,Disable,,1,1"
+				OnPlayersIn "syn_suit_only,EquipAllPlayers,,1,-1"
+			}
+		}
+
+		create {classname "point_teleport"//just use trigger when ur not lazy gaw
+			origin "-7184 -1176 8"
+			values {targetname "trav_teleport_teleporter"
+			angles "0 270 0"
+			target "!player"} }
+
+		//create {classname "trigger_once"
+		//	origin "-7186.95 -1166 24"
+		//	values {model "*55"
+		//		spawnflags "1"
+		//		targetname "player_in_teleport2"
+		//		StartDisabled "1"
+		//		OnTrigger "trav_ps_manager,MovePlayers,,0,-1"} }
+
+//Trav|Edt - set checkpoint right before players teleport outside
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "9_waste2_trigger_teleport,AddOutPut,OnStartTouch syn_spawn_manager:SetCheckpoint:syn_spawn_player_5:0:1,0,-1"} }
+
+
+//End of Trav|Edt
+
+
+		// remove some props in the way for spawn locations
+		//"delete" { "classname" "prop_physics" "origin" "-5964.00 -656.00 64.28" }
+		//"delete" { "classname" "prop_physics" "origin" "-5996.00 -660.00 64.28" }
+		//"delete" { "classname" "prop_physics" "origin" "-5731.85 -721.86 108.59" }
+		//"delete" { "classname" "prop_physics" "origin" "-5731.85 -669.86 108.59" }
+
+		// fix the soda machine door
+//Trav|Edt - no reason to disable this portal (nvm lawlz silly update net_g3 lag0rz spikies :O
+		"edit" { "targetname" "soda_door_areaportal_1" "values" { "targetname" "soda_door_areaportal_1__disabled" } }
+		"delete" { "targetname" "Alyx_lab_entry_closedoor_1" }
+		"delete" { "targetname" "brush_soda_clip_player" }
+		"delete" { "targetname" "brush_soda_clip_player_2" }
+
+		// fix lab door
+//Trav|Edt - allow some of thses to let coop to work
+		"delete" { "targetname" "start_first_teleport_01" }
+		"delete" { "targetname" "teleport_01b_scene" }
+		//"delete" { "targetname" "lab_door_clip" }
+
+		"create"
+		{
+			"origin" "-7220 -1312 56"
+			"classname" "trigger_once"
+
+			"values"
+			{
+				"edt_getbspmodelfor_targetname" "start_first_teleport_01"
+				"targetname" "start_first_teleport_01"
+				"spawnflags" "1"
+				"StartDisabled" "1"
+				"OnTrigger" "sounds_lab_1,StopSound,,0,-1"
+				"OnTrigger" "destination_monitor_static_1,Disable,,14,-1"
+				"OnTrigger" "destination_monitor_static_1,Enable,,12,-1"
+				"OnTrigger" "destination_monitor_static_1,Disable,,6.5,-1"
+				"OnTrigger" "destination_monitor_static_1,Enable,,5,-1"
+				"OnTrigger" "BarneyTPnag_Loop_Barney01_lcs,Kill,,2,-1"
+				"OnTrigger" "KleinerTPnag_Loop_Kleiner01_lcs,Kill,,2,-1"
+			//	"OnTrigger" "lab_door_clip,Close,,0,-1"
+				"OnTrigger" "teleport_01_scene,Start,,2,1"
+				"OnTrigger" "destination_monitor_1,Enable,,6,-1"
+				"OnTrigger" "Surveillance_monitor_1,Disable,,0,-1"
+				"OnTrigger" "portroom_speaker,Kill,,0,-1"
+			//	"OnTrigger" "lab_door,Close,,0,-1"
+				"OnTrigger" "sounds_lab_1,Kill,,0.1,-1"
+//Trav|Edt -enable my coop
+				OnTrigger "trav_coop_labdoor,Enable,,0,-1"
+			}
+		}
+
+		"create"
+		{
+			"classname" "logic_choreographed_scene"
+			"origin" "-7296 -1336 244"
+
+			"values"
+			{
+				"busyactor" "1"
+				"targetname" "teleport_01b_scene"
+				"SceneFile" "scenes/k_lab/teleport01b.vcd"
+				"OnCompletion" "tport_switch_cover_1,Open,,3,-1"
+			//	"OnStart" "lab_door,Close,,0,-1"
+				"OnCompletion" "switchnag_speaker,TurnOn,,1,1"
+				"OnStart" "lab_door_clip,Close,,0,-1"
+			}
+		}
+
+		// remove the props near next level transition for spawn area
+		//"delete" { "classname" "prop_physics" "origin" "-10660.00 -3940.00 363.00" }
+		//"delete" { "classname" "prop_physics" "origin" "-10657.00 -3822.00 349.18" }
+		//"delete" { "classname" "prop_physics" "origin" "-10654.00 -3818.00 325.00" }
+		//"delete" { "classname" "prop_physics" "origin" "-10672.00 -3726.00 355.15" }
+
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_trainstation_05"} }
+	}
+}
