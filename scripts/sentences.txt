@@ -1,4 +1,4 @@
-﻿// HALF-LIFE 2 SPEECH SYSTEM SENTENCES.
+// HALF-LIFE 2 SPEECH SYSTEM SENTENCES.
 // Do not use TABS.  Separate sentence-names from wave definitions with single spaces only.
 // Sounds prefixed by "Q_" will be queued up for a while and played as soon as the NPC is allowed to speak
 
@@ -397,242 +397,6 @@ COMBINE_CHECK0 npc/combine_soldier/vo/(v30) on1 stayalertreportsightlines off3 {
 COMBINE_CHECK1 npc/combine_soldier/vo/(v30) on2 reportallpositionsclear off3 {Len 1.63}
 COMBINE_CHECK2 npc/combine_soldier/vo/(v30) on1 reportallradialsfree off3 {Len 1.63}
 
-
-// Combine Soilder Synth
-
-
-//PAIN
-COMBINE_SYNTH_PAIN0 npc/combine_soldier_synth/pain1 {Len 0.30 closecaption NPC_Combine.Pain}
-COMBINE_SYNTH_PAIN1 npc/combine_soldier_synth/pain2 {Len 0.30 closecaption NPC_Combine.Pain}
-COMBINE_SYNTH_PAIN2 npc/combine_soldier_synth/pain3 {Len 0.26 closecaption NPC_Combine.Pain}
-
-//DIE
-COMBINE_SYNTH_DIE0 npc/combine_soldier_synth/die1 V_IDIEDS {Len 0.62 closecaption NPC_Combine.Death}
-COMBINE_SYNTH_DIE1 npc/combine_soldier_synth/die2 V_IDIEDS {Len 0.92 closecaption NPC_Combine.Death}
-COMBINE_SYNTH_DIE2 npc/combine_soldier_synth/die3 V_IDIEDS {Len 0.80 closecaption NPC_Combine.Death}
-
-
-//KICK
-COMBINE_SYNTH_KICK0 npc/combine_soldier_synth/kick1 {Len 0.26}
-COMBINE_SYNTH_KICK1 npc/combine_soldier_synth/kick2 {Len 0.31}
-
-
-// I am about to start shooting
-// Marc, for any sentences you want to caption, just add the closecaption entry to the {Len} block as below
-// COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption}
-// To use a specified caption string, put it's name in there, too
-// COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption NPCSound.Caption}
-
-COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ANNOUNCE1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS gosharp off2 {Len 1.22 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ANNOUNCE2 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS prosecuting off1 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ANNOUNCE3 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS engaging off1 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ANNOUNCE4 npc/combine_soldier_synth/vo/(v100) on2 cover off1 {Len 1.45 closecaption NPC_Combine.Alert}
-
-// My enemy is close and I can see him
-
-COMBINE_SYNTH_ASSAULT0 npc/combine_soldier_synth/vo/(v100) on1 contact V_G0_PLAYERS off1 {Len 0.87 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ASSAULT1 npc/combine_soldier_synth/vo/(v100) on1 contactconfirmprosecuting off1 {Len 1.23 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ASSAULT2 npc/combine_soldier_synth/vo/(v100) on2 contactconfim off1 {Len 1.08 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ASSAULT3 npc/combine_soldier_synth/vo/(v100) on2 targetmyradial V_DIRS degrees off3 {Len 1.45 closecaption NPC_Combine.Alert}
-
-// I am moving in
-
-COMBINE_SYNTH_FLANK0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS closing off1 {Len 1.36 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK1 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS inbound off1 {Len 1.15 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK2 npc/combine_soldier_synth/vo/(v100) on1 movein off2 {Len 1.15  closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK3 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS sweepingin off1 {Len 1.15 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK4 npc/combine_soldier_synth/vo/(v100) on1 coverme off1 {Len 1.15  closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK5 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitisclosing off1 {Len 1.15 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK6 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitisinbound off1 {Len 1.15 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_FLANK7 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitismovingin off1 {Len 1.15 closecaption NPC_Combine.Coord}
-
-
-// I am still alert and pursuing enemy
-
-COMBINE_SYNTH_GO_ALERT0 npc/combine_soldier_synth/vo/(v100) on1 alert1 off1 {Len 0.77  closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_GO_ALERT1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS executingfullresponse off1 {Len 0.77 closecaption NPC_Combine.Coord}
-
-// UNDONE: Nobody has seen enemy in 10 seconds
-
-COMBINE_SYNTH_LOST_LONG0 npc/combine_soldier_synth/vo/(v100) on1 targetblackout off1 {Len 1.14 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS lostcontact off1 {Len 1.08 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG2 npc/combine_soldier_synth/vo/(v100) on1 motioncheckallradials off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG3 npc/combine_soldier_synth/vo/(v100) on1 stayalertreportsightlines off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG4 npc/combine_soldier_synth/vo/(v100) on1 overwatch, teamdeployedandscanning off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG5 npc/combine_soldier_synth/vo/(v100) on1 overwatch, V_MYNAMES V_MYNUMS engagedincleanup off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_LONG6 npc/combine_soldier_synth/vo/(v100) on1 readyweapons, stayalert off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
-
-// UNDONE: Nobody has seen enemy in 5 seconds
-
-COMBINE_SYNTH_LOST_SHORT0 npc/combine_soldier_synth/vo/(v100) on1 targetisat shaddow4 off1 {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_SHORT1 npc/combine_soldier_synth/vo/(v100) on1 readyextractors off1 {Len 1.19 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_SHORT2 npc/combine_soldier_synth/vo/(v100) on1 readycharges off1 {Len 1.13 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_SHORT3 npc/combine_soldier_synth/vo/(v100) on1 fixsightlinesmovein  off1 {Len 1.13 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_LOST_SHORT4 npc/combine_soldier_synth/vo/(v100) on1 on1 containmentproceeding off1 {Len 0.98 closecaption NPC_Combine.RadioChatter}
-
-// I just saw a friendly die
-
-COMBINE_SYNTH_MAN_DOWN0 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedown onedown off1 {Len 1.28 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MAN_DOWN1 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedutyvacated off1 {Len 1.41 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MAN_DOWN2 npc/combine_soldier_synth/vo/(v100) on2 heavyresistance off3 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MAN_DOWN3 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestreinforcement off3 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MAN_DOWN4 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedown, hardenthatposition off3 {Len 1.45 closecaption NPC_Combine.Alert}
-
-// UNDONE: Just found enemy after lost long
-
-COMBINE_SYNTH_REFIND_ENEMY0 npc/combine_soldier_synth/vo/(v100) on1 target V_G0_PLAYERS, goactiveintercept off1 {Len 0.77 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_REFIND_ENEMY1 npc/combine_soldier_synth/vo/(v100) on2 gosharp range V_DISTS off3 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_REFIND_ENEMY2 npc/combine_soldier_synth/vo/(v100) on2 targetcontactat V_GRIDXS dash V_GRIDYS off3 {Len 1.45 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_REFIND_ENEMY3 npc/combine_soldier_synth/vo/(v100) on2 viscon viscon(p110), range V_DISTS, bearing V_DIRS off3 {Len 1.45 closecaption NPC_Combine.Alert}
-
-// I am throwing a grenade
-
-COMBINE_SYNTH_THROW_GRENADE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractoraway off1 {Len 1.31 closecaption NPC_Combine.Grenade}
-COMBINE_SYNTH_THROW_GRENADE1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractorislive off1 {Len 1.33 closecaption NPC_Combine.Grenade}
-COMBINE_SYNTH_THROW_GRENADE2 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS flush sharpzone off1 {Len 1.24 closecaption NPC_Combine.Grenade}
-COMBINE_SYNTH_THROW_GRENADE3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractoraway sharpzone off1 {Len 1.24 closecaption NPC_Combine.Grenade}
-COMBINE_SYNTH_THROW_GRENADE4 npc/combine_soldier_synth/vo/(v100) on1. six, five, four, three, two, one, flash flash(p105) flash(p110) off1 {Len 1.24 closecaption NPC_Combine.Grenade}
-
-//COMBINE_SYNTH_THROW1 npc/combine_soldier_synth/vo/on1 (t30) take!(e75) this!(e100 t0) off1 {Len 1.03}
-//COMBINE_SYNTH_THROW2 npc/combine_soldier_synth/vo/(v10) on1(p120) (t40) fire!(e90) in!(e90) the!(e60) hole!(e100) off1 {Len 1.37}
-
-// Enemy Grenade lands nearby (one man only)
-
-COMBINE_SYNTH_GREN0 npc/combine_soldier_synth/vo/(v100) on1(p120) bouncerbouncer off1 {Len 1.17 closecaption NPC_Combine.Grenade}
-COMBINE_SYNTH_GREN1 npc/combine_soldier_synth/vo/(v100) on1(p120) flaredown off1 {Len 1.17 closecaption NPC_Combine.Grenade}
- 
-// Something dangerous nearby, need to run
-
-COMBINE_SYNTH_DANGER0 npc/combine_soldier_synth/vo/(v100) on1(p120) displace off1 {Len 1.17}
-COMBINE_SYNTH_DANGER1 npc/combine_soldier_synth/vo/(v100) on1(p120) displace2 off3 {Len 1.17}
-COMBINE_SYNTH_DANGER2 npc/combine_soldier_synth/vo/(v100) on1(p120) ripcordripcord off1 {Len 1.17}
-
-// Player Alert - first contact and I'm the squad leader
-
-COMBINE_SYNTH_ALERT0 npc/combine_soldier_synth/vo/(v100) on2(p110) contactconfim V_G0_PLAYERS, range V_DISTS meters, bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT1 npc/combine_soldier_synth/vo/(v100) on1(p110) gosharpgosharp, V_DISTS meters off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT2 npc/combine_soldier_synth/vo/(v100) on2(p110) callcontacttarget1, grid V_GRIDXS dash V_GRIDYS off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT3 npc/combine_soldier_synth/vo/(v100) on1(p110) targetisat V_DISTS meters bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT4 npc/combine_soldier_synth/vo/(v100) on1(p110) targetmyradial V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT5 npc/combine_soldier_synth/vo/(v100) on2(p110) contact V_G0_PLAYERS off3 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT6 npc/combine_soldier_synth/vo/(v100) on1(p110) targetcontactat V_DISTS meters, bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT7 npc/combine_soldier_synth/vo/(v100) on2(p110) designatetargetas V_G0_PLAYERS off1 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT8 npc/combine_soldier_synth/vo/(v100) on1(p110) contactconfirmprosecuting off2 {Len 1.13 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_ALERT9 npc/combine_soldier_synth/vo/(v100) on1(p110) contactconfim, designatetargetas V_G0_PLAYERS off1 {Len 1.13 closecaption NPC_Combine.Alert}
-
-// last soldier's hit damaged player significantly
-
-COMBINE_SYNTH_PLAYERHIT0 npc/combine_soldier_synth/vo/(v100) targetcompromisedmovein off1 {Len 1.13}
-COMBINE_SYNTH_PLAYERHIT1 npc/combine_soldier_synth/vo/(v100) affirmativewegothimnow off1 {Len 1.13}
-COMBINE_SYNTH_PLAYERHIT2 npc/combine_soldier_synth/vo/(v100) thatsitwrapitup off2 {Len 1.13}
-
-// Monster Alert - first contact and I'm the squad leader
-
-COMBINE_SYNTH_MONST0 npc/combine_soldier_synth/vo/(v100) confirmsectornotsterile off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST1 npc/combine_soldier_synth/vo/(v100) visualonexogens off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST2 npc/combine_soldier_synth/vo/(v100) overwatch sector V_SECTORS infected off1 {Len 1.72 closecaption NPC_Combine.Alert}
-
-// Monster Alert - by type
-
-COMBINE_SYNTH_MONST_BUGS0 npc/combine_soldier_synth/vo/(v100) confirmsectornotsterile off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_BUGS1 npc/combine_soldier_synth/vo/(v100) swarmoutbreakinsector V_SECTORS off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_BUGS2 npc/combine_soldier_synth/vo/(v100) overwatch, weareinaninfestationzone, sector V_SECTORS off2 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_BUGS3 npc/combine_soldier_synth/vo/(v100) overwatch, wehavenontaggedviromes, grid V_GRIDXS dash V_GRIDYS off1 {Len 1.72 closecaption NPC_Combine.Alert}
-
-COMBINE_SYNTH_MONST_CITIZENS0 npc/combine_soldier_synth/vo/(v100) outbreak off1 {Len 1.72 closecaption NPC_Combine.Alert}
-
-COMBINE_SYNTH_MONST_CHARACTER0 npc/combine_soldier_synth/vo/(v100) target, prioritytwoescapee off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_CHARACTER1 npc/combine_soldier_synth/vo/(v100) outbreakstatusiscode hurricane off1 {Len 1.72 closecaption NPC_Combine.Alert}
-
-COMBINE_SYNTH_MONST_ZOMBIES0 npc/combine_soldier_synth/vo/(v100) necrotics off3 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_ZOMBIES1 npc/combine_soldier_synth/vo/(v100) necroticsinbound off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_ZOMBIES2 npc/combine_soldier_synth/vo/(v100) overwatch, weareinaninfestationzone, sector V_SECTORS off2 {Len 1.72 closecaption NPC_Combine.Alert}
-
-COMBINE_SYNTH_MONST_PARASITES0 npc/combine_soldier_synth/vo/(v100) callcontactparasitics off1 {Len 1.72 closecaption NPC_Combine.Alert}
-COMBINE_SYNTH_MONST_PARASITES1 npc/combine_soldier_synth/vo/(v100) overwatch, wehavefreeparasites, sector V_SECTORS off1 {Len 1.72 closecaption NPC_Combine.Alert}
-
-// I killed a monster
-
-COMBINE_SYNTH_KILL_MONST0 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS cleaned off1 {Len 1.72 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_KILL_MONST1 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS sterilized off3 {Len 1.72 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_KILL_MONST2 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS contained off1 {Len 1.72 closecaption NPC_Combine.RadioChatter}
-
-// I was hit and it hurt. I'm taking cover (commented out in code)
-
-COMBINE_SYNTH_COVER0 npc/combine_soldier_synth/vo/(v100) on1 coverhurt off1 {Len 0.95  closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_COVER1 npc/combine_soldier_synth/vo/(v100) on1 displace2 off1 {Len 0.95  closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_COVER2 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS requestmedical off1 {Len 0.95 closecaption NPC_Combine.Coord}
-COMBINE_SYNTH_COVER3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS requeststimdose off1 {Len 0.95 closecaption NPC_Combine.Coord}
-
-
-// I took damage but it didn't hurt much (commented out in code)
-
-COMBINE_SYNTH_TAUNT0 npc/combine_soldier_synth/vo/(v100) on1(p110) targetineffective off1(p120) on1 {Len 1.32}
-COMBINE_SYNTH_TAUNT1 npc/combine_soldier_synth/vo/(v100) on2(p110) bodypackholding off2(p120) on1 {Len 1.32}
-COMBINE_SYNTH_TAUNT2 npc/combine_soldier_synth/vo/(v100) on1(p110) V_MYNAMES V_MYNUMS, fullactive off1(p120) on1 {Len 1.32}
-
-// I'm the last guy in the squad
-
-COMBINE_SYNTH_LAST_OF_SQUAD0 npc/combine_soldier_synth/vo/(v100) on2 overwatchrequestreserveactivation off1 {len 1.5 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD1 npc/combine_soldier_synth/vo/(v100) on1 overwatch, sectorisnotsecure off3 {Len 1.28 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD2 npc/combine_soldier_synth/vo/(v100) on1 sector V_SECTORS, outbreak outbreak(p105) outbreak(p110) off1 {Len 1.28 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS isfinalteamunitbackup off1 {Len 1.28 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD4 npc/combine_soldier_synth/vo/(v100) on1 overwatchteamisdown off1 {Len 1.28 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD5 npc/combine_soldier_synth/vo/(v100) on2 overwatchsectoroverrun off2 {Len 1.28 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD6 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestskyshield off1 {Len 0.95 closecaption NPC_Combine.Last}
-COMBINE_SYNTH_LAST_OF_SQUAD7 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestwinder off1 {Len 0.95 closecaption NPC_Combine.Last}
-
-// player is dead
-
-COMBINE_SYNTH_PLAYER_DEAD0 npc/combine_soldier_synth/vo/(v100) on1 overwatchconfirmhvtcontained off3 {Len 0.82}
-COMBINE_SYNTH_PLAYER_DEAD1 npc/combine_soldier_synth/vo/(v100) on1 overwatchtarget1sterilized off1 {Len 1.87}
-COMBINE_SYNTH_PLAYER_DEAD2 npc/combine_soldier_synth/vo/(v100) on2 overwatchtargetcontained off2 {Len 1.38}
-COMBINE_SYNTH_PLAYER_DEAD3 npc/combine_soldier_synth/vo/(v100) on2 overwatch, stabilizationteamhassector off1 {Len 1.38}
-COMBINE_SYNTH_PLAYER_DEAD4 npc/combine_soldier_synth/vo/(v100) on2 overwatch, V_G0_PLAYERS secure off3 {Len 1.38}
-COMBINE_SYNTH_PLAYER_DEAD5 npc/combine_soldier_synth/vo/(v100) on1 overwatch, V_G0_PLAYERS delivered off1 {Len 1.38}
-COMBINE_SYNTH_PLAYER_DEAD6 npc/combine_soldier_synth/vo/(v100) on1 overwatch, antiseptic administer off1 {Len 1.38}
-
-// Idle statement - my status, no enemy
-
-COMBINE_SYNTH_IDLE0 npc/combine_soldier_synth/vo/(v30) on1 V_RNDNAMES V_RNDCODES V_RNDNUMS dash V_RNDNUMS off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_IDLE1 npc/combine_soldier_synth/vo/(v30) on1 overwatchreportspossiblehostiles off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_IDLE2 npc/combine_soldier_synth/vo/(v30) on1 ovewatchorders3ccstimboost off2 {Len 2.97 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_IDLE3 npc/combine_soldier_synth/vo/(v30) on2 stabilizationteamholding off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_IDLE4 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS standingby] off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-
-// I'm asking a question while idle, which may be answered with affirmative
-
-COMBINE_SYNTH_QUEST0 npc/combine_soldier_synth/vo/(v30) on1 readyweaponshostilesinbound off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_QUEST1 npc/combine_soldier_synth/vo/(v30) on1 prepforcontact off3(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_QUEST2 npc/combine_soldier_synth/vo/(v30) on2 skyshieldreportslostcontact, readyweapons off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_QUEST3 npc/combine_soldier_synth/vo/(v30) on2 stayalert off3(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_QUEST4 npc/combine_soldier_synth/vo/(v30) on2 weaponsoffsafeprepforcontact off2(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-COMBINE_SYNTH_QUEST5 npc/combine_soldier_synth/vo/(v30) on1 overwatch isatcode V_RNDCODES V_RNDNUMS off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
-
-// Answering affirmative
-
-COMBINE_SYNTH_ANSWER0 npc/combine_soldier_synth/vo/(v30) on1 affirmative off1 {Len 1.57}
-COMBINE_SYNTH_ANSWER1 npc/combine_soldier_synth/vo/(v30) on1 copy off1 {Len 1.57}
-COMBINE_SYNTH_ANSWER2 npc/combine_soldier_synth/vo/(v30) on2 copythat off3 {Len 1.57}
-COMBINE_SYNTH_ANSWER3 npc/combine_soldier_synth/vo/(v30) on1 affirmative2 off1 {Len 1.57}
-COMBINE_SYNTH_ANSWER4 npc/combine_soldier_synth/vo/(v30) on1 copythat, V_RNDNAMES V_RNDCODES V_RNDNUMS dash V_RNDNUMS off1 {Len 1.57}
-
-// Answering all clear
-
-COMBINE_SYNTH_CLEAR0 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS hasnegativemovement grid V_GRIDXS dash V_GRIDYS on1 off2(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR1 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS isholdingatcode V_RNDCODES on1 off1(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR2 npc/combine_soldier_synth/vo/(v30) on2 V_MYNAMES V_MYNUMS hasnegativemovement on1 off3(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR3 npc/combine_soldier_synth/vo/(v30) on1 affirmative, noviscon on1 off1(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR4 npc/combine_soldier_synth/vo/(v30) on1 sightlineisclear on1 off1(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR5 npc/combine_soldier_synth/vo/(v30) on2 V_MYNAMES reportingclear on1 off3(p120) {Len 2.30}
-COMBINE_SYNTH_CLEAR6 npc/combine_soldier_synth/vo/(v30) on1 sectorissecurenovison on1 off1(p120) {Len 2.30}
-
-// Questioning if all clear
-
-COMBINE_SYNTH_CHECK0 npc/combine_soldier_synth/vo/(v30) on1 stayalertreportsightlines off3 {Len 1.63}
-COMBINE_SYNTH_CHECK1 npc/combine_soldier_synth/vo/(v30) on2 reportallpositionsclear off3 {Len 1.63}
-COMBINE_SYNTH_CHECK2 npc/combine_soldier_synth/vo/(v30) on1 reportallradialsfree off3 {Len 1.63}
 
 //-----------------------------------------------------------------------------
 // METROPOLICE STARTS HERE
@@ -1463,6 +1227,170 @@ METROPOLICE_HIT_BY_PHYSOBJECT4 on1 malcompliant10107my1020 off1 {Len 1.5}
 // METROPOLICE ENDS HERE
 //-----------------------------------------------------------------------------
 
+
+
+// HEV Suit
+
+// powerup
+
+HEV_AAx hl1/fvox/bell
+
+//HEV_logon, powerarmor_on, atmospherics_on,vitalsigns_on, automedic_on, weaponselect_on, munitionview_on, communications_on, safe_day {Len 41.76}
+
+//HEV_A0 hl1/fvox/bell, HEV_logon {Len 11.07}
+
+//HEV_A1 hl1/fvox/blip blip(p130) powermove_on {Len 3.71}
+//HEV_A2 hl1/fvox/blip blip powerarmor_on {Len 4.42}
+//HEV_A3 hl1/fvox/blip blip(p130) atmospherics_on {Len 4.41}
+//HEV_A4 hl1/fvox/blip blip vitalsigns_on boop, boop, boop {Len 5.28}
+//HEV_A5 hl1/fvox/blip blip(p130) munitionview_on {Len 3.84}
+//HEV_A6 hl1/fvox/blip blip communications_on {Len 3.59}
+//HEV_A7 hl1/fvox/blip blip(p70) weaponselect_on {Len 3.97}
+//HEV_A8 hl1/fvox/blip blip(p70) automedic_on {Len 3.77}
+//HEV_A9 hl1/fvox/fuzz power_level_is onehundred percent {Len 4.14}
+//HEV_A10 hl1/fvox/safe_day, bell {Len 3.66}
+
+// medical
+HEV_DEAD0 hl1/fvox/beep beep, beep beep, beep, beep, flatline {Len 6.29 closecaption HEV.Flatline}
+HEV_DEAD1 hl1/fvox/beep beep, beep beep, beep, flatline {Len 5.82 closecaption HEV.Flatline}
+
+HEV_MED0 hl1/fvox/(p140) boop, boop, boop, (p100) innsuficient_medical {Len 1.41 closecaption HEV.insufficient_medical}
+HEV_MED1 hl1/fvox/(p140) boop, boop, boop, (p100) automedic_on {Len 4.92 closecaption HEV.automedic_on}
+HEV_MED2 hl1/fvox/(p140) boop, boop, boop, (p100) administering_medical {Len 1.41 closecaption HEV.administering_medical}
+
+HEV_HEAL0 hl1/fvox/(p140) boop, boop, boop, (p100) wound_sterilized, blip(p130 v50), blip(p130 v40), hiss, morphine_shot {Len 7.03 closecaption HEV.sterilized_morphine}
+HEV_HEAL1 hl1/fvox/(p140) boop, boop, boop, (p100) torniquette_applied, bleeding_stopped {Len 7.03 closecaption HEV.torni_bleed}
+HEV_HEAL2 hl1/fvox/(p140) boop, boop, boop, (p100) bleeding_stopped {Len 3.66 closecaption HEV.bleeding_stopped}
+HEV_HEAL3 hl1/fvox/(p140) boop, boop, boop, (p100) blood_plasma {Len 4.02 closecaption HEV.blood_plasma}
+HEV_HEAL4 hl1/fvox/(p140) boop, boop, boop, (p100) hiss, antitoxin_shot {Len 4.38 closecaption HEV.antitoxin_shot}
+HEV_HEAL5 hl1/fvox/(p140) boop, boop, boop, (p100) hiss, antidote_shot {Len 4.17 closecaption HEV.antidote_shot}
+HEV_HEAL6 hl1/fvox/(p140) boop, boop, boop, (p100) hiss, wound_sterilized {Len 4.16 closecaption HEV.wound_sterilized}
+HEV_HEAL7 hl1/fvox/(p140) boop, boop, boop, (p100) hiss, morphine_shot {Len 4.16 closecaption HEV.morphine_shot}
+HEV_HEAL8 hl1/fvox/(p140) boop, boop, boop, (p100) medical_repaired {Len 4.17 closecaption HEV.medical_repaired}
+
+HEV_DMG0 hl1/fvox/(p160) boop, boop, boop, (p100) minor_lacerations {Len 4.09 closecaption HEV.minor_lacerations}
+HEV_DMG1 hl1/fvox/(p160) boop, boop, boop, (p100) major_lacerations {Len 4.19 closecaption HEV.major_lacerations}
+HEV_DMG2 hl1/fvox/(p160) boop, boop, boop, (p100) internal_bleeding {Len 3.64 closecaption HEV.internal_bleeding}
+HEV_DMG3 hl1/fvox/(p160) boop, boop, boop, (p100) blood_toxins {Len 5.04 closecaption HEV.blood_toxins}
+HEV_DMG4 hl1/fvox/(p160) boop, boop, boop, (p100) minor_fracture {Len 3.67 closecaption HEV.minor_fracture}
+HEV_DMG5 hl1/fvox/(p160) boop, boop, boop, (p100) major_fracture {Len 3.67 closecaption HEV.major_fracture}
+HEV_DMG6 hl1/fvox/(p160) boop, boop, boop, (p100) blood_loss {Len 3.39 closecaption HEV.blood_loss}
+HEV_DMG7 hl1/fvox/(p140) boop, boop, boop, (p100) seek_medic {Len 3.92 closecaption HEV.seek_medic}
+
+HEV_HLTH0 hl1/fvox/(p120) beep, beep, (p100) health_dropping {Len 4.31 closecaption HEV.health_dropping}
+HEV_HLTH1 hl1/fvox/(p120) beep, beep, (p100) health_dropping2 {Len 3.68 closecaption HEV.health_dropping2}
+HEV_HLTH2 hl1/fvox/(p120) beep, beep, beep, (p100) health_critical {Len 4.32 closecaption HEV.health_critical}
+HEV_HLTH3 hl1/fvox/(p120) beep, beep, beep, (p100) near_death {Len 4.77 closecaption HEV.near_death}
+HEV_HLTH4 hl1/fvox/(p140) beep, beep, (p100) health_dropping2, evacuate_area {Len 5.93 closecaption HEV.health2_evac}
+HEV_HLTH5 hl1/fvox/(p140) beep, beep, beep, (p100) health_critical, evacuate_area {Len 6.52 closecaption HEV.health_crit_evac}
+HEV_HLTH6 hl1/fvox/(p140) beep, beep, beep, (p100) near_death, evacuate_area immediately {Len 8.22 closecaption HEV.near_death_evac}
+
+HEV_SHOCK hl1/fvox/(p120) beep, beep, (p100) warning, shock_damage {Len 4.05 closecaption HEV.shock_damage}
+HEV_FIRE hl1/fvox/(p120) beep, beep, (p100) warning, heat_damage {Len 4.77 closecaption HEV.heat_damage}
+
+// items
+HEV_AIM_ON hl1/fvox/blip targetting_system activated {Len 4.02 closecaption HEV.targetting_system_on}
+HEV_AIM_OFF hl1/fvox/blip targetting_system deactivated {Len 4.27 closecaption HEV.targetting_system_off}
+HEV_BATTERY hl1/fvox/blip get_battery acquired {Len 0.92}
+HEV_MEDKIT hl1/fvox/blip get_medkit(v80) {Len 0.11}
+
+HEV_PISTOL hl1/fvox/blip get_pistol acquired {Len 0.92}
+HEV_SHOTGUN hl1/fvox/blip get_shotgun {Len 0.11}
+HEV_GRENADE hl1/fvox/blip get_grenade acquired {Len 0.92}
+HEV_ASSAULT hl1/fvox/blip get_assault acquired {Len 0.92}
+HEV_44PISTOL hl1/fvox/blip get_44pistol acquired {Len 0.92}
+HEV_RPG hl1/fvox/blip get_rpg acquired {Len 0.92}
+HEV_SATCHEL hl1/fvox/blip get_satchel acquired {Len 0.92}
+HEV_TRIPMINE hl1/fvox/blip get_tripmine acquired {Len 0.92}
+HEV_HORNET hl1/fvox/blip get_alien_wpn {Len 0.11}
+HEV_SQUEEK hl1/fvox/blip get_alien_wpn {Len 0.11}
+HEV_EGON hl1/fvox/blip get_egon acquired {Len 0.92}
+HEV_GAUSS hl1/fvox/blip get_gauss acquired {Len 0.92}
+HEV_XBOW hl1/fvox/blip get_crossbow acquired {Len 0.92}
+
+HEV_9MM hl1/fvox/blip get_9mmclip acquired {Len 0.92}
+HEV_44AMMO hl1/fvox/blip get_44ammo acquired {Len 0.92}
+HEV_BUCKSHOT hl1/fvox/blip get_buckshot acquired {Len 0.92}
+HEV_BOLTS hl1/fvox/blip get_bolts acquired {Len 0.92}
+HEV_RPGAMMO hl1/fvox/blip get_rpgammo acquired {Len 0.92}
+HEV_AGRENADE hl1/fvox/blip get_assaultgren acquired {Len 0.92}
+HEV_EGONPOWER hl1/fvox/blip get_egonpower acquired {Len 0.92}
+
+// time
+
+//HEV_C1t hl1/fvox/bell time_is_now one AM
+//HEV_C13t hl1/fvox/bell time_is_now one PM
+
+// power levels
+
+HEV_D00 hl1/fvox/fuzz fuzz(p130), power_restored {Len 2.12 closecaption HEV.power_restored}
+HEV_D01 hl1/fvox/fuzz fuzz(p80), hev_shutdown {Len 4.99 closecaption HEV.hev_shutdown}
+
+HEV_0P hl1/fvox/fuzz fuzz, power_below five percent {Len 6.35}
+HEV_1P hl1/fvox/fuzz fuzz, power_restored(e30), ten percent {Len 2.75}
+HEV_2P hl1/fvox/fuzz fuzz, power_restored(e30), fifteen percent {Len 3.15}
+HEV_3P hl1/fvox/fuzz fuzz, power_restored(e30), twenty percent {Len 2.99}
+HEV_4P hl1/fvox/fuzz fuzz, power_restored(e30), twenty five percent {Len 3.87}
+HEV_5P hl1/fvox/fuzz fuzz, power_restored(e30), thirty percent {Len 3.04}
+HEV_6P hl1/fvox/fuzz fuzz, power_restored(e30), thirty five percent {Len 3.91}
+HEV_7P hl1/fvox/fuzz fuzz, power_restored(e30), fourty percent {Len 3.07}
+HEV_8P hl1/fvox/fuzz fuzz, power_restored(e30), fourty five percent {Len 3.95}
+HEV_9P hl1/fvox/fuzz fuzz, power_restored(e30), fifty percent {Len 3.17}
+HEV_10P hl1/fvox/fuzz fuzz, power_restored(e30), fifty five percent {Len 4.05}
+HEV_11P hl1/fvox/fuzz fuzz, power_restored(e30), sixty percent {Len 3.16}
+HEV_12P hl1/fvox/fuzz fuzz, power_restored(e30), sixty five percent {Len 4.04}
+HEV_13P hl1/fvox/fuzz fuzz, power_restored(e30), seventy percent {Len 3.12}
+HEV_14P hl1/fvox/fuzz fuzz, power_restored(e30), seventy five percent {Len 4.00}
+HEV_15P hl1/fvox/fuzz fuzz, power_restored(e30), eighty percent {Len 2.88}
+HEV_16P hl1/fvox/fuzz fuzz, power_restored(e30), eighty five percent {Len 3.76}
+HEV_17P hl1/fvox/fuzz fuzz, power_restored(e30), ninety percent {Len 3.12}
+HEV_18P hl1/fvox/fuzz fuzz, power_restored(e30), ninety five percent {Len 4.00}
+HEV_19P hl1/fvox/fuzz fuzz, power_level_is onehundred percent {Len 4.62}
+
+// weapon/ammo
+
+HEV_AMO0 hl1/fvox/blip ammo_depleted {Len 2.16 closecaption HEV.ammo_depleted}
+
+// suit
+
+HEV_V0 hl1/fvox/blip, voice_on {Len 3.17}
+HEV_V1 hl1/fvox/blip, voice_off {Len 3.06}
+
+
+HEV_E0 hl1/fvox/buzz buzz, armor_gone {Len 2.95 closecaption HEV.armor_gone}
+HEV_E1 hl1/fvox/buzz, armor_gone {Len 2.62 closecaption HEV.armor_gone}
+HEV_E2 hl1/fvox/buzz, hev_critical_fail {Len 4.75 closecaption HEV.hev_critical_fail}
+HEV_E3 hl1/fvox/buzz, hev_general_fail {Len 3.22 closecaption HEV.hev_general_fail}
+HEV_E4 hl1/fvox/buzz, hev_damage {Len 3.53 closecaption HEV.hev_damage}
+HEV_E5 hl1/fvox/buzz, powermove_overload {Len 4.98 closecaption HEV.powermove_overload}
+
+// time remaining countdown
+
+//HEV_F10t hl1/fvox/bell time_remaining ten seconds
+//HEV_F15t hl1/fvox/bell time_remaining fifteen seconds
+//HEV_F20t hl1/fvox/bell time_remaining twenty seconds
+//HEV_F30t hl1/fvox/bell time_remaining thirty seconds
+
+// detections
+
+HEV_DET0 hl1/fvox/blip blip blip, biohazard_detected {Len 3.67 closecaption HEV.biohazard_detected}
+HEV_DET1 hl1/fvox/blip blip blip, chemical_detected {Len 4.33 closecaption HEV.chemical_detected}
+HEV_DET2 hl1/fvox/blip blip blip, radiation_detected {Len 5.08 closecaption HEV.radiation_detected}
+HEV_DET3 hl1/fvox/blip blip blip, bio_reading {Len 2.93 closecaption HEV.bio_reading}
+HEV_DET4 hl1/fvox/blip blip blip, antitoxin_shot(e50), onehundred percent {Len 3.67 closecaption HEV.biohazard_detected}
+HEV_DET5 hl1/fvox/blip blip blip, antitoxin_shot(e25) radiation_detected(e50), onehundred percent {Len 5.37 closecaption HEV.radiation_detected}
+
+//HEV_GR0r hl1/fvox/range twenty meters(t60)
+//HEV_GR1r hl1/fvox/range nineteen meters
+//HEV_GR2r hl1/fvox/range eighteen meters
+
+
+
+/////////////////////////////
+// FC Additional Sentences //
+/////////////////////////////
+
+
 // HALF-LIFE SPEECH SYSTEM SENTENCES. DO NOT MODIFY THIS FILE! Max of 1023 sentences.
 
 // HUMAN GRUNTS
@@ -1895,159 +1823,6 @@ TR_A three, two, one, deeoo(p110) {Len 2.81}
 TR_B deeoo(p110) (p102 t20) target system deactivated {Len 2.46}
 
 
-
-// HEV Suit
-
-// powerup
-
-HEV_AAx fvox/bell, HEV_logon, powerarmor_on, atmospherics_on,vitalsigns_on, automedic_on, weaponselect_on, munitionview_on, communications_on, safe_day {Len 41.76}
-HEV_A0 fvox/bell, HEV_logon {Len 11.07}
-
-HEV_A1 fvox/blip blip(p130) powermove_on {Len 3.71}
-HEV_A2 fvox/blip blip powerarmor_on {Len 4.42}
-HEV_A3 fvox/blip blip(p130) atmospherics_on {Len 4.41}
-HEV_A4 fvox/blip blip vitalsigns_on boop, boop, boop {Len 5.28}
-HEV_A5 fvox/blip blip(p130) munitionview_on {Len 3.84}
-HEV_A6 fvox/blip blip communications_on {Len 3.59}
-HEV_A7 fvox/blip blip(p70) weaponselect_on {Len 3.97}
-HEV_A8 fvox/blip blip(p70) automedic_on {Len 3.77}
-HEV_A9 fvox/fuzz power_level_is onehundred percent {Len 4.14}
-HEV_A10 fvox/safe_day, bell {Len 3.66}
-
-// medical
-HEV_DEAD0 fvox/beep beep, beep beep, beep, beep, flatline {Len 6.29}
-HEV_DEAD1 fvox/beep beep, beep beep, beep, flatline {Len 5.82}
-
-HEV_MED0 fvox/(p140) boop, boop, boop, (p100) innsufficient_medical {Len 1.41}
-HEV_MED1 fvox/(p140) boop, boop, boop, (p100) automedic_on {Len 4.92}
-HEV_MED2 fvox/(p140) boop, boop, boop, (p100) administering_medical {Len 4.47}
-
-HEV_HEAL0 fvox/(p140) boop, boop, boop, (p100) wound_sterilized, blip(p130 v50), blip(p130 v40), hiss, morphine_shot {Len 7.03}
-HEV_HEAL1 fvox/(p140) boop, boop, boop, (p100) torniquette_applied, bleeding_stopped {Len 7.03}
-HEV_HEAL2 fvox/(p140) boop, boop, boop, (p100) bleeding_stopped {Len 3.66}
-HEV_HEAL3 fvox/(p140) boop, boop, boop, (p100) blood_plasma {Len 4.02}
-HEV_HEAL4 fvox/(p140) boop, boop, boop, (p100) hiss, antitoxin_shot {Len 4.38}
-HEV_HEAL5 fvox/(p140) boop, boop, boop, (p100) hiss, antidote_shot {Len 4.17}
-HEV_HEAL6 fvox/(p140) boop, boop, boop, (p100) hiss, wound_sterilized {Len 4.16}
-HEV_HEAL7 fvox/(p140) boop, boop, boop, (p100) hiss, morphine_shot {Len 4.16}
-HEV_HEAL8 fvox/(p140) boop, boop, boop, (p100) medical_repaired {Len 4.17}
-
-HEV_DMG0 fvox/(p160) boop, boop, boop, (p100) minor_lacerations {Len 4.09}
-HEV_DMG1 fvox/(p160) boop, boop, boop, (p100) major_lacerations {Len 4.19}
-HEV_DMG2 fvox/(p160) boop, boop, boop, (p100) internal_bleeding {Len 3.64}
-HEV_DMG3 fvox/(p160) boop, boop, boop, (p100) blood_toxins {Len 5.04}
-HEV_DMG4 fvox/(p160) boop, boop, boop, (p100) minor_fracture {Len 3.67}
-HEV_DMG5 fvox/(p160) boop, boop, boop, (p100) major_fracture {Len 3.67}
-HEV_DMG6 fvox/(p160) boop, boop, boop, (p100) blood_loss {Len 3.39}
-HEV_DMG7 fvox/(p140) boop, boop, boop, (p100) seek_medic {Len 3.92}
-
-HEV_HLTH0 fvox/(p120) beep, beep, (p100) health_dropping {Len 4.31}
-HEV_HLTH1 fvox/(p120) beep, beep, (p100) health_dropping2 {Len 3.68}
-HEV_HLTH2 fvox/(p120) beep, beep, beep, (p100) health_critical {Len 4.32}
-HEV_HLTH3 fvox/(p120) beep, beep, beep, (p100) near_death {Len 4.77}
-HEV_HLTH4 fvox/(p140) beep, beep, (p100) health_dropping2, evacuate_area {Len 5.93}
-HEV_HLTH5 fvox/(p140) beep, beep, beep, (p100) health_critical, evacuate_area {Len 6.52}
-HEV_HLTH6 fvox/(p140) beep, beep, beep, (p100) near_death, evacuate_area immediately {Len 8.22}
-
-HEV_SHOCK fvox/(p120) beep, beep, (p100) warning, shock_damage {Len 4.05}
-HEV_FIRE fvox/(p120) beep, beep, (p100) warning, heat_damage {Len 4.77}
-
-// items
-HEV_AIM_ON fvox/blip targetting_system activated {Len 4.02}
-HEV_AIM_OFF fvox/blip targetting_system deactivated {Len 4.27}
-HEV_BATTERY fvox/blip get_battery acquired {Len 3.26}
-HEV_MEDKIT fvox/blip get_medkit(v80) {Len 2.03}
-
-HEV_PISTOL fvox/blip get_pistol acquired {Len 4.45}
-HEV_SHOTGUN fvox/blip get_shotgun {Len 2.26}
-HEV_GRENADE fvox/blip get_grenade acquired {Len 2.88}
-HEV_ASSAULT fvox/blip get_assault acquired {Len 6.42}
-HEV_44PISTOL fvox/blip get_44pistol acquired {Len 3.42}
-HEV_RPG fvox/blip get_rpg acquired {Len 3.56}
-HEV_SATCHEL fvox/blip get_satchel acquired {Len 4.07}
-HEV_TRIPMINE fvox/blip get_tripmine acquired {Len 4.50}
-HEV_HORNET fvox/blip get_alien_wpn {Len 2.88}
-HEV_SQUEEK fvox/blip get_alien_wpn {Len 2.88}
-HEV_EGON fvox/blip get_egon acquired {Len 3.55}
-HEV_GAUSS fvox/blip get_gauss acquired {Len 5.09}
-HEV_XBOW fvox/blip get_crossbow acquired {Len 3.86}
-
-HEV_9MM fvox/blip get_9mmclip acquired {Len 3.08}
-HEV_44AMMO fvox/blip get_44ammo acquired {Len 3.55}
-HEV_BUCKSHOT fvox/blip get_buckshot acquired {Len 3.11}
-HEV_BOLTS fvox/blip get_bolts acquired {Len 4.28}
-HEV_RPGAMMO fvox/blip get_rpgammo acquired {Len 2.76}
-HEV_AGRENADE fvox/blip get_assaultgren acquired {Len 3.02}
-HEV_EGONPOWER fvox/blip get_egonpower acquired {Len 3.11}
-
-// time
-
-//HEV_C1t fvox/bell time_is_now one AM
-//HEV_C13t fvox/bell time_is_now one PM
-
-// power levels
-
-HEV_D00 fvox/fuzz fuzz(p130), power_restored {Len 2.12}
-HEV_D01 fvox/fuzz fuzz(p80), hev_shutdown {Len 4.99}
-
-HEV_0P fvox/fuzz fuzz, power_below five percent {Len 6.35}
-HEV_1P fvox/fuzz fuzz, power_restored(e30), ten percent {Len 2.75}
-HEV_2P fvox/fuzz fuzz, power_restored(e30), fifteen percent {Len 3.15}
-HEV_3P fvox/fuzz fuzz, power_restored(e30), twenty percent {Len 2.99}
-HEV_4P fvox/fuzz fuzz, power_restored(e30), twenty five percent {Len 3.87}
-HEV_5P fvox/fuzz fuzz, power_restored(e30), thirty percent {Len 3.04}
-HEV_6P fvox/fuzz fuzz, power_restored(e30), thirty five percent {Len 3.91}
-HEV_7P fvox/fuzz fuzz, power_restored(e30), fourty percent {Len 3.07}
-HEV_8P fvox/fuzz fuzz, power_restored(e30), fourty five percent {Len 3.95}
-HEV_9P fvox/fuzz fuzz, power_restored(e30), fifty percent {Len 3.17}
-HEV_10P fvox/fuzz fuzz, power_restored(e30), fifty five percent {Len 4.05}
-HEV_11P fvox/fuzz fuzz, power_restored(e30), sixty percent {Len 3.16}
-HEV_12P fvox/fuzz fuzz, power_restored(e30), sixty five percent {Len 4.04}
-HEV_13P fvox/fuzz fuzz, power_restored(e30), seventy percent {Len 3.12}
-HEV_14P fvox/fuzz fuzz, power_restored(e30), seventy five percent {Len 4.00}
-HEV_15P fvox/fuzz fuzz, power_restored(e30), eighty percent {Len 2.88}
-HEV_16P fvox/fuzz fuzz, power_restored(e30), eighty five percent {Len 3.76}
-HEV_17P fvox/fuzz fuzz, power_restored(e30), ninety percent {Len 3.12}
-HEV_18P fvox/fuzz fuzz, power_restored(e30), ninety five percent {Len 4.00}
-HEV_19P fvox/fuzz fuzz, power_level_is onehundred percent {Len 4.62}
-
-// weapon/ammo
-
-HEV_AMO0 fvox/blip ammo_depleted {Len 2.16}
-
-// suit
-
-HEV_V0 fvox/blip, voice_on {Len 3.17}
-HEV_V1 fvox/blip, voice_off {Len 3.06}
-
-HEV_E0 fvox/buzz buzz, armor_gone {Len 2.95}
-HEV_E1 fvox/buzz, armor_gone {Len 2.62}
-HEV_E2 fvox/buzz, hev_critical_fail {Len 4.75}
-HEV_E3 fvox/buzz, hev_general_fail {Len 3.22}
-HEV_E4 fvox/buzz, hev_damage {Len 3.53}
-HEV_E5 fvox/buzz, powermove_overload {Len 4.98}
-
-// time remaining countdown
-
-//HEV_F10t fvox/bell time_remaining ten seconds
-//HEV_F15t fvox/bell time_remaining fifteen seconds
-//HEV_F20t fvox/bell time_remaining twenty seconds
-//HEV_F30t fvox/bell time_remaining thirty seconds
-
-// detections
-
-HEV_DET0 fvox/blip blip blip, biohazard_detected {Len 3.67}
-HEV_DET1 fvox/blip blip blip, chemical_detected {Len 4.33}
-HEV_DET2 fvox/blip blip blip, radiation_detected {Len 5.08}
-HEV_DET3 fvox/blip blip blip, bio_reading {Len 2.93}
-HEV_DET4 fvox/blip blip blip, antitoxin_shot(e50), onehundred percent {Len 3.67}
-HEV_DET5 fvox/blip blip blip, antitoxin_shot(e25) radiation_detected(e50), onehundred percent {Len 5.37}
-
-//HEV_GR0r fvox/range twenty meters(t60)
-//HEV_GR1r fvox/range nineteen meters
-//HEV_GR2r fvox/range eighteen meters
-
-
 // BARNEY
 
 BA_OK0 barney/teamup2 {Len 0.88}
@@ -2343,49 +2118,6 @@ SC_ANSWER26 scientist/noguess {Len 1.61}
 SC_ANSWER27 scientist/stopasking {Len 1.67}
 SC_ANSWER28 scientist/justasked {Len 1.82}
 SC_ANSWER29 scientist/repeat {Len 2.95}
-
-SC_QUESTION0 scientist/everseen {Len 3.04}
-SC_QUESTION1 scientist/needsleep {Len 3.95}
-SC_QUESTION2 scientist/areyouthink {Len 1.64}
-SC_QUESTION3 scientist/evergetout {Len 1.82}
-SC_QUESTION4 scientist/rightwayout {Len 1.67}
-SC_QUESTION5 scientist/cantbeworse {Len 1.75}
-SC_QUESTION6 scientist/rescueus {Len 2.62}
-SC_QUESTION7 scientist/fascinating {Len 2.47}
-SC_QUESTION8 scientist/stimulating {Len 3.30}
-SC_QUESTION9 scientist/luckwillchange {Len 3.43}
-SC_QUESTION10 scientist/hearsomething {Len 2.56}
-SC_QUESTION11 scientist/doyousmell {Len 2.09}
-SC_QUESTION12 scientist/uselessphd {Len 2.71}
-SC_QUESTION13 scientist/waithere {Len 2.87}
-SC_QUESTION14 scientist/survival {Len 3.41}
-SC_QUESTION15 scientist/headcrab {Len 4.61}
-SC_QUESTION16 scientist/goodpaper {Len 3.36}
-SC_QUESTION17 scientist/catchone {Len 1.92}
-SC_QUESTION18 scientist/dinner {Len 5.43}
-SC_QUESTION19 scientist/alientrick {Len 3.33}
-SC_QUESTION20 scientist/alienappeal {Len 2.65}
-SC_QUESTION21 scientist/rumorclean {Len 4.93}
-SC_QUESTION22 scientist/nothostile {Len 5.15}
-SC_QUESTION23 scientist/announcer {Len 2.20}
-SC_QUESTION24 scientist/smellburn {Len 1.57}
-SC_QUESTION25 scientist/noidea {Len 3.50}
-SC_QUESTION26 scientist/whatnext {Len 2.96}
-
-SC_IDLE0 scientist/ipredictedthis {Len 2.74}
-SC_IDLE1 scientist/containfail {Len 3.17}
-SC_IDLE2 scientist/chaostheory {Len 2.41}
-SC_IDLE3 scientist/howinteresting {Len 2.87}
-SC_IDLE4 scientist/neverseen {Len 4.72}
-SC_IDLE5 scientist/peculiarmarks {Len 3.84}
-SC_IDLE6 scientist/whoresponsible {Len 2.77}
-SC_IDLE7 scientist/nogrant {Len 2.14}
-SC_IDLE8 scientist/bloodsample {Len 3.51}
-SC_IDLE9 scientist/administrator {Len 4.43}
-SC_IDLE10 scientist/improbable {Len 3.47}
-SC_IDLE11 scientist/organicmatter {Len 4.58}
-SC_IDLE12 scientist/lambdalab {Len 4.15}
-SC_IDLE13 scientist/ihearsomething {Len 0.76}
 
 SC_NOGO scientist/dontgothere {Len 1.34}
 
@@ -2810,6 +2542,242 @@ GM_WISE gman/gman_wise {Len 5.11}
 GM_REGRET gman/gman_noreg {Len 2.67}
 GM_WONTWORK gman/gman_nowork {Len 3.35}
 
+// Combine Soilder Synth
+
+
+//PAIN
+COMBINE_SYNTH_PAIN0 npc/combine_soldier_synth/pain1 {Len 0.30 closecaption NPC_Combine.Pain}
+COMBINE_SYNTH_PAIN1 npc/combine_soldier_synth/pain2 {Len 0.30 closecaption NPC_Combine.Pain}
+COMBINE_SYNTH_PAIN2 npc/combine_soldier_synth/pain3 {Len 0.26 closecaption NPC_Combine.Pain}
+
+//DIE
+COMBINE_SYNTH_DIE0 npc/combine_soldier_synth/die1 V_IDIEDS {Len 0.62 closecaption NPC_Combine.Death}
+COMBINE_SYNTH_DIE1 npc/combine_soldier_synth/die2 V_IDIEDS {Len 0.92 closecaption NPC_Combine.Death}
+COMBINE_SYNTH_DIE2 npc/combine_soldier_synth/die3 V_IDIEDS {Len 0.80 closecaption NPC_Combine.Death}
+
+
+//KICK
+COMBINE_SYNTH_KICK0 npc/combine_soldier_synth/kick1 {Len 0.26}
+COMBINE_SYNTH_KICK1 npc/combine_soldier_synth/kick2 {Len 0.31}
+
+
+// I am about to start shooting
+// Marc, for any sentences you want to caption, just add the closecaption entry to the {Len} block as below
+// COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption}
+// To use a specified caption string, put it's name in there, too
+// COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption NPCSound.Caption}
+
+COMBINE_SYNTH_ANNOUNCE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS suppressing off1 {Len 0.96 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ANNOUNCE1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS gosharp off2 {Len 1.22 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ANNOUNCE2 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS prosecuting off1 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ANNOUNCE3 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS engaging off1 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ANNOUNCE4 npc/combine_soldier_synth/vo/(v100) on2 cover off1 {Len 1.45 closecaption NPC_Combine.Alert}
+
+// My enemy is close and I can see him
+
+COMBINE_SYNTH_ASSAULT0 npc/combine_soldier_synth/vo/(v100) on1 contact V_G0_PLAYERS off1 {Len 0.87 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ASSAULT1 npc/combine_soldier_synth/vo/(v100) on1 contactconfirmprosecuting off1 {Len 1.23 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ASSAULT2 npc/combine_soldier_synth/vo/(v100) on2 contactconfim off1 {Len 1.08 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ASSAULT3 npc/combine_soldier_synth/vo/(v100) on2 targetmyradial V_DIRS degrees off3 {Len 1.45 closecaption NPC_Combine.Alert}
+
+// I am moving in
+
+COMBINE_SYNTH_FLANK0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS closing off1 {Len 1.36 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK1 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS inbound off1 {Len 1.15 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK2 npc/combine_soldier_synth/vo/(v100) on1 movein off2 {Len 1.15  closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK3 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS sweepingin off1 {Len 1.15 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK4 npc/combine_soldier_synth/vo/(v100) on1 coverme off1 {Len 1.15  closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK5 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitisclosing off1 {Len 1.15 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK6 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitisinbound off1 {Len 1.15 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_FLANK7 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES unitismovingin off1 {Len 1.15 closecaption NPC_Combine.Coord}
+
+
+// I am still alert and pursuing enemy
+
+COMBINE_SYNTH_GO_ALERT0 npc/combine_soldier_synth/vo/(v100) on1 alert1 off1 {Len 0.77  closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_GO_ALERT1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS executingfullresponse off1 {Len 0.77 closecaption NPC_Combine.Coord}
+
+// UNDONE: Nobody has seen enemy in 10 seconds
+
+COMBINE_SYNTH_LOST_LONG0 npc/combine_soldier_synth/vo/(v100) on1 targetblackout off1 {Len 1.14 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS lostcontact off1 {Len 1.08 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG2 npc/combine_soldier_synth/vo/(v100) on1 motioncheckallradials off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG3 npc/combine_soldier_synth/vo/(v100) on1 stayalertreportsightlines off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG4 npc/combine_soldier_synth/vo/(v100) on1 overwatch, teamdeployedandscanning off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG5 npc/combine_soldier_synth/vo/(v100) on1 overwatch, V_MYNAMES V_MYNUMS engagedincleanup off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_LONG6 npc/combine_soldier_synth/vo/(v100) on1 readyweapons, stayalert off1 {Len 1.05 closecaption NPC_Combine.RadioChatter}
+
+// UNDONE: Nobody has seen enemy in 5 seconds
+
+COMBINE_SYNTH_LOST_SHORT0 npc/combine_soldier_synth/vo/(v100) on1 targetisat shaddow4 off1 {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_SHORT1 npc/combine_soldier_synth/vo/(v100) on1 readyextractors off1 {Len 1.19 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_SHORT2 npc/combine_soldier_synth/vo/(v100) on1 readycharges off1 {Len 1.13 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_SHORT3 npc/combine_soldier_synth/vo/(v100) on1 fixsightlinesmovein  off1 {Len 1.13 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_LOST_SHORT4 npc/combine_soldier_synth/vo/(v100) on1 on1 containmentproceeding off1 {Len 0.98 closecaption NPC_Combine.RadioChatter}
+
+// I just saw a friendly die
+
+COMBINE_SYNTH_MAN_DOWN0 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedown onedown off1 {Len 1.28 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MAN_DOWN1 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedutyvacated off1 {Len 1.41 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MAN_DOWN2 npc/combine_soldier_synth/vo/(v100) on2 heavyresistance off3 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MAN_DOWN3 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestreinforcement off3 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MAN_DOWN4 npc/combine_soldier_synth/vo/(v100) on1 V_WHODIEDS onedown, hardenthatposition off3 {Len 1.45 closecaption NPC_Combine.Alert}
+
+// UNDONE: Just found enemy after lost long
+
+COMBINE_SYNTH_REFIND_ENEMY0 npc/combine_soldier_synth/vo/(v100) on1 target V_G0_PLAYERS, goactiveintercept off1 {Len 0.77 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_REFIND_ENEMY1 npc/combine_soldier_synth/vo/(v100) on2 gosharp range V_DISTS off3 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_REFIND_ENEMY2 npc/combine_soldier_synth/vo/(v100) on2 targetcontactat V_GRIDXS dash V_GRIDYS off3 {Len 1.45 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_REFIND_ENEMY3 npc/combine_soldier_synth/vo/(v100) on2 viscon viscon(p110), range V_DISTS, bearing V_DIRS off3 {Len 1.45 closecaption NPC_Combine.Alert}
+
+// I am throwing a grenade
+
+COMBINE_SYNTH_THROW_GRENADE0 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractoraway off1 {Len 1.31 closecaption NPC_Combine.Grenade}
+COMBINE_SYNTH_THROW_GRENADE1 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractorislive off1 {Len 1.33 closecaption NPC_Combine.Grenade}
+COMBINE_SYNTH_THROW_GRENADE2 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS flush sharpzone off1 {Len 1.24 closecaption NPC_Combine.Grenade}
+COMBINE_SYNTH_THROW_GRENADE3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS extractoraway sharpzone off1 {Len 1.24 closecaption NPC_Combine.Grenade}
+COMBINE_SYNTH_THROW_GRENADE4 npc/combine_soldier_synth/vo/(v100) on1. six, five, four, three, two, one, flash flash(p105) flash(p110) off1 {Len 1.24 closecaption NPC_Combine.Grenade}
+
+//COMBINE_SYNTH_THROW1 npc/combine_soldier_synth/vo/on1 (t30) take!(e75) this!(e100 t0) off1 {Len 1.03}
+//COMBINE_SYNTH_THROW2 npc/combine_soldier_synth/vo/(v10) on1(p120) (t40) fire!(e90) in!(e90) the!(e60) hole!(e100) off1 {Len 1.37}
+
+// Enemy Grenade lands nearby (one man only)
+
+COMBINE_SYNTH_GREN0 npc/combine_soldier_synth/vo/(v100) on1(p120) bouncerbouncer off1 {Len 1.17 closecaption NPC_Combine.Grenade}
+COMBINE_SYNTH_GREN1 npc/combine_soldier_synth/vo/(v100) on1(p120) flaredown off1 {Len 1.17 closecaption NPC_Combine.Grenade}
+ 
+// Something dangerous nearby, need to run
+
+COMBINE_SYNTH_DANGER0 npc/combine_soldier_synth/vo/(v100) on1(p120) displace off1 {Len 1.17}
+COMBINE_SYNTH_DANGER1 npc/combine_soldier_synth/vo/(v100) on1(p120) displace2 off3 {Len 1.17}
+COMBINE_SYNTH_DANGER2 npc/combine_soldier_synth/vo/(v100) on1(p120) ripcordripcord off1 {Len 1.17}
+
+// Player Alert - first contact and I'm the squad leader
+
+COMBINE_SYNTH_ALERT0 npc/combine_soldier_synth/vo/(v100) on2(p110) contactconfim V_G0_PLAYERS, range V_DISTS meters, bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT1 npc/combine_soldier_synth/vo/(v100) on1(p110) gosharpgosharp, V_DISTS meters off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT2 npc/combine_soldier_synth/vo/(v100) on2(p110) callcontacttarget1, grid V_GRIDXS dash V_GRIDYS off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT3 npc/combine_soldier_synth/vo/(v100) on1(p110) targetisat V_DISTS meters bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT4 npc/combine_soldier_synth/vo/(v100) on1(p110) targetmyradial V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT5 npc/combine_soldier_synth/vo/(v100) on2(p110) contact V_G0_PLAYERS off3 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT6 npc/combine_soldier_synth/vo/(v100) on1(p110) targetcontactat V_DISTS meters, bearing V_DIRS degrees off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT7 npc/combine_soldier_synth/vo/(v100) on2(p110) designatetargetas V_G0_PLAYERS off1 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT8 npc/combine_soldier_synth/vo/(v100) on1(p110) contactconfirmprosecuting off2 {Len 1.13 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_ALERT9 npc/combine_soldier_synth/vo/(v100) on1(p110) contactconfim, designatetargetas V_G0_PLAYERS off1 {Len 1.13 closecaption NPC_Combine.Alert}
+
+// last soldier's hit damaged player significantly
+
+COMBINE_SYNTH_PLAYERHIT0 npc/combine_soldier_synth/vo/(v100) targetcompromisedmovein off1 {Len 1.13}
+COMBINE_SYNTH_PLAYERHIT1 npc/combine_soldier_synth/vo/(v100) affirmativewegothimnow off1 {Len 1.13}
+COMBINE_SYNTH_PLAYERHIT2 npc/combine_soldier_synth/vo/(v100) thatsitwrapitup off2 {Len 1.13}
+
+// Monster Alert - first contact and I'm the squad leader
+
+COMBINE_SYNTH_MONST0 npc/combine_soldier_synth/vo/(v100) confirmsectornotsterile off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST1 npc/combine_soldier_synth/vo/(v100) visualonexogens off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST2 npc/combine_soldier_synth/vo/(v100) overwatch sector V_SECTORS infected off1 {Len 1.72 closecaption NPC_Combine.Alert}
+
+// Monster Alert - by type
+
+COMBINE_SYNTH_MONST_BUGS0 npc/combine_soldier_synth/vo/(v100) confirmsectornotsterile off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_BUGS1 npc/combine_soldier_synth/vo/(v100) swarmoutbreakinsector V_SECTORS off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_BUGS2 npc/combine_soldier_synth/vo/(v100) overwatch, weareinaninfestationzone, sector V_SECTORS off2 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_BUGS3 npc/combine_soldier_synth/vo/(v100) overwatch, wehavenontaggedviromes, grid V_GRIDXS dash V_GRIDYS off1 {Len 1.72 closecaption NPC_Combine.Alert}
+
+COMBINE_SYNTH_MONST_CITIZENS0 npc/combine_soldier_synth/vo/(v100) outbreak off1 {Len 1.72 closecaption NPC_Combine.Alert}
+
+COMBINE_SYNTH_MONST_CHARACTER0 npc/combine_soldier_synth/vo/(v100) target, prioritytwoescapee off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_CHARACTER1 npc/combine_soldier_synth/vo/(v100) outbreakstatusiscode hurricane off1 {Len 1.72 closecaption NPC_Combine.Alert}
+
+COMBINE_SYNTH_MONST_ZOMBIES0 npc/combine_soldier_synth/vo/(v100) necrotics off3 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_ZOMBIES1 npc/combine_soldier_synth/vo/(v100) necroticsinbound off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_ZOMBIES2 npc/combine_soldier_synth/vo/(v100) overwatch, weareinaninfestationzone, sector V_SECTORS off2 {Len 1.72 closecaption NPC_Combine.Alert}
+
+COMBINE_SYNTH_MONST_PARASITES0 npc/combine_soldier_synth/vo/(v100) callcontactparasitics off1 {Len 1.72 closecaption NPC_Combine.Alert}
+COMBINE_SYNTH_MONST_PARASITES1 npc/combine_soldier_synth/vo/(v100) overwatch, wehavefreeparasites, sector V_SECTORS off1 {Len 1.72 closecaption NPC_Combine.Alert}
+
+// I killed a monster
+
+COMBINE_SYNTH_KILL_MONST0 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS cleaned off1 {Len 1.72 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_KILL_MONST1 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS sterilized off3 {Len 1.72 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_KILL_MONST2 npc/combine_soldier_synth/vo/(v100) V_SEQGLOBNBRS contained off1 {Len 1.72 closecaption NPC_Combine.RadioChatter}
+
+// I was hit and it hurt. I'm taking cover (commented out in code)
+
+COMBINE_SYNTH_COVER0 npc/combine_soldier_synth/vo/(v100) on1 coverhurt off1 {Len 0.95  closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_COVER1 npc/combine_soldier_synth/vo/(v100) on1 displace2 off1 {Len 0.95  closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_COVER2 npc/combine_soldier_synth/vo/(v100) on2 V_MYNAMES V_MYNUMS requestmedical off1 {Len 0.95 closecaption NPC_Combine.Coord}
+COMBINE_SYNTH_COVER3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS requeststimdose off1 {Len 0.95 closecaption NPC_Combine.Coord}
+
+
+// I took damage but it didn't hurt much (commented out in code)
+
+COMBINE_SYNTH_TAUNT0 npc/combine_soldier_synth/vo/(v100) on1(p110) targetineffective off1(p120) on1 {Len 1.32}
+COMBINE_SYNTH_TAUNT1 npc/combine_soldier_synth/vo/(v100) on2(p110) bodypackholding off2(p120) on1 {Len 1.32}
+COMBINE_SYNTH_TAUNT2 npc/combine_soldier_synth/vo/(v100) on1(p110) V_MYNAMES V_MYNUMS, fullactive off1(p120) on1 {Len 1.32}
+
+// I'm the last guy in the squad
+
+COMBINE_SYNTH_LAST_OF_SQUAD0 npc/combine_soldier_synth/vo/(v100) on2 overwatchrequestreserveactivation off1 {len 1.5 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD1 npc/combine_soldier_synth/vo/(v100) on1 overwatch, sectorisnotsecure off3 {Len 1.28 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD2 npc/combine_soldier_synth/vo/(v100) on1 sector V_SECTORS, outbreak outbreak(p105) outbreak(p110) off1 {Len 1.28 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD3 npc/combine_soldier_synth/vo/(v100) on1 V_MYNAMES V_MYNUMS isfinalteamunitbackup off1 {Len 1.28 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD4 npc/combine_soldier_synth/vo/(v100) on1 overwatchteamisdown off1 {Len 1.28 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD5 npc/combine_soldier_synth/vo/(v100) on2 overwatchsectoroverrun off2 {Len 1.28 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD6 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestskyshield off1 {Len 0.95 closecaption NPC_Combine.Last}
+COMBINE_SYNTH_LAST_OF_SQUAD7 npc/combine_soldier_synth/vo/(v100) on1 overwatchrequestwinder off1 {Len 0.95 closecaption NPC_Combine.Last}
+
+// player is dead
+
+COMBINE_SYNTH_PLAYER_DEAD0 npc/combine_soldier_synth/vo/(v100) on1 overwatchconfirmhvtcontained off3 {Len 0.82}
+COMBINE_SYNTH_PLAYER_DEAD1 npc/combine_soldier_synth/vo/(v100) on1 overwatchtarget1sterilized off1 {Len 1.87}
+COMBINE_SYNTH_PLAYER_DEAD2 npc/combine_soldier_synth/vo/(v100) on2 overwatchtargetcontained off2 {Len 1.38}
+COMBINE_SYNTH_PLAYER_DEAD3 npc/combine_soldier_synth/vo/(v100) on2 overwatch, stabilizationteamhassector off1 {Len 1.38}
+COMBINE_SYNTH_PLAYER_DEAD4 npc/combine_soldier_synth/vo/(v100) on2 overwatch, V_G0_PLAYERS secure off3 {Len 1.38}
+COMBINE_SYNTH_PLAYER_DEAD5 npc/combine_soldier_synth/vo/(v100) on1 overwatch, V_G0_PLAYERS delivered off1 {Len 1.38}
+COMBINE_SYNTH_PLAYER_DEAD6 npc/combine_soldier_synth/vo/(v100) on1 overwatch, antiseptic administer off1 {Len 1.38}
+
+// Idle statement - my status, no enemy
+
+COMBINE_SYNTH_IDLE0 npc/combine_soldier_synth/vo/(v30) on1 V_RNDNAMES V_RNDCODES V_RNDNUMS dash V_RNDNUMS off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_IDLE1 npc/combine_soldier_synth/vo/(v30) on1 overwatchreportspossiblehostiles off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_IDLE2 npc/combine_soldier_synth/vo/(v30) on1 ovewatchorders3ccstimboost off2 {Len 2.97 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_IDLE3 npc/combine_soldier_synth/vo/(v30) on2 stabilizationteamholding off1 {Len 2.97 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_IDLE4 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS standingby] off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+
+// I'm asking a question while idle, which may be answered with affirmative
+
+COMBINE_SYNTH_QUEST0 npc/combine_soldier_synth/vo/(v30) on1 readyweaponshostilesinbound off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_QUEST1 npc/combine_soldier_synth/vo/(v30) on1 prepforcontact off3(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_QUEST2 npc/combine_soldier_synth/vo/(v30) on2 skyshieldreportslostcontact, readyweapons off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_QUEST3 npc/combine_soldier_synth/vo/(v30) on2 stayalert off3(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_QUEST4 npc/combine_soldier_synth/vo/(v30) on2 weaponsoffsafeprepforcontact off2(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+COMBINE_SYNTH_QUEST5 npc/combine_soldier_synth/vo/(v30) on1 overwatch isatcode V_RNDCODES V_RNDNUMS off1(p120) {Len 1.56 closecaption NPC_Combine.RadioChatter}
+
+// Answering affirmative
+
+COMBINE_SYNTH_ANSWER0 npc/combine_soldier_synth/vo/(v30) on1 affirmative off1 {Len 1.57}
+COMBINE_SYNTH_ANSWER1 npc/combine_soldier_synth/vo/(v30) on1 copy off1 {Len 1.57}
+COMBINE_SYNTH_ANSWER2 npc/combine_soldier_synth/vo/(v30) on2 copythat off3 {Len 1.57}
+COMBINE_SYNTH_ANSWER3 npc/combine_soldier_synth/vo/(v30) on1 affirmative2 off1 {Len 1.57}
+COMBINE_SYNTH_ANSWER4 npc/combine_soldier_synth/vo/(v30) on1 copythat, V_RNDNAMES V_RNDCODES V_RNDNUMS dash V_RNDNUMS off1 {Len 1.57}
+
+// Answering all clear
+
+COMBINE_SYNTH_CLEAR0 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS hasnegativemovement grid V_GRIDXS dash V_GRIDYS on1 off2(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR1 npc/combine_soldier_synth/vo/(v30) on1 V_MYNAMES V_MYNUMS isholdingatcode V_RNDCODES on1 off1(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR2 npc/combine_soldier_synth/vo/(v30) on2 V_MYNAMES V_MYNUMS hasnegativemovement on1 off3(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR3 npc/combine_soldier_synth/vo/(v30) on1 affirmative, noviscon on1 off1(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR4 npc/combine_soldier_synth/vo/(v30) on1 sightlineisclear on1 off1(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR5 npc/combine_soldier_synth/vo/(v30) on2 V_MYNAMES reportingclear on1 off3(p120) {Len 2.30}
+COMBINE_SYNTH_CLEAR6 npc/combine_soldier_synth/vo/(v30) on1 sectorissecurenovison on1 off1(p120) {Len 2.30}
+
+// Questioning if all clear
+
+COMBINE_SYNTH_CHECK0 npc/combine_soldier_synth/vo/(v30) on1 stayalertreportsightlines off3 {Len 1.63}
+COMBINE_SYNTH_CHECK1 npc/combine_soldier_synth/vo/(v30) on2 reportallpositionsclear off3 {Len 1.63}
+COMBINE_SYNTH_CHECK2 npc/combine_soldier_synth/vo/(v30) on1 reportallradialsfree off3 {Len 1.63}
+
 //CREMATOR
 
 CREM_IDLE0 npc/cremator_orig/amb_loop {Len 1.00}
@@ -2981,3 +2949,21 @@ CONSCRIPT_PAIN3 npc/conscript/pain3 {Len 1.0}
 CONSCRIPT_DIE1 npc/conscript/die1 {Len 1.0}
 CONSCRIPT_DIE2 npc/conscript/die2 {Len 1.0}
 CONSCRIPT_DIE3 npc/conscript/die3 {Len 1.0}
+
+// HEV Suit
+
+// powerup
+
+//HEV_AAx fvox/bell, HEV_logon, powerarmor_on, atmospherics_on,vitalsigns_on, automedic_on, weaponselect_on, munitionview_on, communications_on, safe_day {Len 41.76}
+HEV_A0 fvox/bell, HEV_logon {Len 11.07}
+
+HEV_A1 fvox/blip blip(p130) powermove_on {Len 3.71}
+HEV_A2 fvox/blip blip powerarmor_on {Len 4.42}
+HEV_A3 fvox/blip blip(p130) atmospherics_on {Len 4.41}
+HEV_A4 fvox/blip blip vitalsigns_on boop, boop, boop {Len 5.28}
+HEV_A5 fvox/blip blip(p130) munitionview_on {Len 3.84}
+HEV_A6 fvox/blip blip communications_on {Len 3.59}
+HEV_A7 fvox/blip blip(p70) weaponselect_on {Len 3.97}
+HEV_A8 fvox/blip blip(p70) automedic_on {Len 3.77}
+HEV_A9 fvox/fuzz power_level_is onehundred percent {Len 4.14}
+HEV_A10 fvox/safe_day, bell {Len 3.66}
