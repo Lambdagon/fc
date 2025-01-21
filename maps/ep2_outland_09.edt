@@ -253,16 +253,17 @@ ep2_outland_09
 				speed "750"} }
 
 //and trigger hurt for overjumped players
-		create { classname "trigger_hurt" origin "-1095.83 -6113.99 192"
-			values {
-				edt_getbspmodelfor_classname "trigger_once"
-				edt_getbspmodelfor_origin "-1095.83 -6113.99 192"
-				"spawnflags" "1"
-				"targetname" "syn_antirush_push"
-				"damage" "10000"
-				"damagetype" "0"
-			}
-		}
+//disabled in FC bc this randomly kills you even if you're playing alone
+//		create { classname "trigger_hurt" origin "-1095.83 -6113.99 192"
+//			values {
+//				edt_getbspmodelfor_classname "trigger_once"
+//				edt_getbspmodelfor_origin "-1095.83 -6113.99 192"
+//				"spawnflags" "1"
+//				"targetname" "syn_antirush_push"
+//				"damage" "10000"
+//				"damagetype" "0"
+//			}
+//		}
 
 		create {classname "trigger_once"
 			origin "-2088 -7633.41 160"
