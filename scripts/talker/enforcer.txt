@@ -24,6 +24,7 @@ Response PlayerMedicEnforcer
 {
 	speak "Enforcer.Medic01"
 	speak "Enforcer.Medic02"
+	speak "Enforcer.Medic03"
 }
 Rule PlayerMedicEnforcer
 {
@@ -106,6 +107,7 @@ Response PlayerIncomingEnforcer
 	speak "Enforcer.Incoming01"
 	speak "Enforcer.Incoming02"
 	speak "Enforcer.Incoming03"
+	speak "Enforcer.Incoming04"
 }
 Rule PlayerIncomingEnforcer
 {
@@ -162,6 +164,7 @@ Response PlayerYesEnforcer
 {
 	speak "Enforcer.Yes01"
 	speak "Enforcer.Yes02"
+	speak "Enforcer.Yes03"
 }
 Rule PlayerYesEnforcer
 {
@@ -183,6 +186,7 @@ Rule PlayerThanksEnforcer
 Response PlayerPositiveEnforcer
 {
 	speak "Enforcer.Positive01"
+	speak "Enforcer.Positive02"
 }
 Rule PlayerPositiveEnforcer
 {
@@ -211,7 +215,6 @@ Response PlayerAttackerPainEnforcer
 	speak "Enforcer.Pain01"
 	speak "Enforcer.Pain02"
 	speak "Enforcer.Pain03"
-	speak "Enforcer.Pain04"
 }
 Rule PlayerAttackerPainEnforcer
 {
@@ -224,7 +227,6 @@ Response PlayerPainEnforcer
 	speak "Enforcer.Pain01"
 	speak "Enforcer.Pain02"
 	speak "Enforcer.Pain03"
-	speak "Enforcer.Pain04"
 }
 Rule PlayerPainEnforcer
 {
@@ -256,4 +258,22 @@ Rule PlayerStillOnFireEnforcer
 	criteria ConceptFire IsEnforcer  EnforcerIsStillonFire
 	ApplyContext "EnforcerOnFire:1:7"
 	Response PlayerStillOnFireEnforcer
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// EXTRAS
+//--------------------------------------------------------------------------------------------------------------
+
+// Needs to be implemented so it calls for this response when Enforcer pulls out his grenade
+Response ConceptPlayerPullGrenadeEnforcer
+{
+	speak "Enforcer.PullGrenade01"
+	speak "Enforcer.PullGrenade02"
+	speak "Enforcer.PullGrenade03"
+	speak "Enforcer.PullGrenade04"
+}
+Rule ConceptPlayerPullGrenadeEnforcer
+{
+	criteria ConceptPlayerPullGrenade  IsEnforcer
+	Response ConceptPlayerPullGrenade
 }
