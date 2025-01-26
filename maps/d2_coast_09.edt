@@ -1,17 +1,816 @@
-"d2_coast_09"
+d2_coast_09
 {
-"entity"
+	console
 	{
-		"create" // this entry will create a new entity
-		{
-			"classname" "info_player_teamspawn"
-			"origin" "-779 6196 -750"
-
-			"values"
+		sk_gunship_health_increments "12"
+	}
+	entity
+	{
+		create {classname "info_player_teamspawn" origin "-779 6196 -750" values {teamnum "3"} }
+		
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+		edit {classname "func_areaportalwindow" values {targetname "DisabledPortalWindow" FadeStartDist "1000" FadeDist "1500"} }
+		edit {classname "func_occluder" values {targetname "nooccluder"} }
+		
+		create {classname "logic_auto"
+			values
 			{
-				"teamnum" "3"
+				spawnflags "0"
+				OnMapSpawn "syn_trig1,AddOutput,OnTrigger houseattacknotify:Display::0:1,0,-1"
+				OnMapSpawn "func_occluder,Deactivate,,1,-1"
+			}
+		}
+
+		delete {classname "logic_auto" origin "-14182.2 12524.1 544"}
+		delete {targetname "global_newgame_template_base_items"}
+		delete {targetname "global_newgame_template_local_items"}
+		delete {targetname "global_newgame_template_ammo"}
+		delete {targetname "global_newgame_spawner_suit"}
+		delete {targetname "global_newgame_spawner_ammo"}
+		delete {targetname "global_newgame_spawner_physcannon"}
+		delete {targetname "global_newgame_spawner_crowbar"}
+		delete {targetname "global_newgame_spawner_crossbow"}
+		delete {targetname "global_newgame_spawner_rpg"}
+		delete {targetname "global_newgame_spawner_ar2"}
+		delete {targetname "global_newgame_spawner_smg1"}
+		delete {targetname "global_newgame_spawner_shotgun"}
+		delete {targetname "global_newgame_spawner_357"}
+		delete {targetname "global_newgame_spawner_pistol"}
+		delete {targetname "rollerhouse_outer_spawn"}
+		delete {classname "logic_achievement"}
+		//delete {targetname "house_occluder"}
+		delete {classname "trigger_multiple" origin "1076 -6716 -592"}
+		delete {classname "prop_vehicle_jeep" origin "687.92 -6172.19 -748"}
+		create {classname "ambient_generic" values {message "song_trainstation_yardchase" spawnflags "49" targetname "song"} }
+		create {classname "ambient_generic" values {message "song_trainstation_yardchase" spawnflags "49" targetname "song2"} }
+		edit {classname "trigger_once" origin "-2906 -8368 -888" values {targetname "syn_trig1"} }
+		create {classname "game_text"
+			values {spawnflags "1"
+				targetname "houseattacknotify"
+				message "Event in house on top floor on coast."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "8"
+				fxtime "0.25"} }
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "houseattacktxt"
+				message "Push Button To Start Invasion When You Have Enough Players"
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+		create {classname "trigger_coop" origin "614 -6942 -420"
+			values
+			{
+				edt_mins "-100 -140 -60"
+				edt_maxs "150 150 40"
+				spawnflags "1"
+				angles "0 90 0"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				OnTrigger "houseattacktxt,Display,,1,-1"
+				OnPlayersIn "syn_spawn_manager,SetCheckPoint,syn_spawnpointhouse,0,1"
+				OnPlayersIn "houseattack,Unlock,,0,-1"
+				OnPlayersIn "!self,Disable,,0,-1"
+			}
+		}
+		create {classname "trigger_multiple" origin "614 -6942 -420"
+			values
+			{
+				edt_mins "-100 -140 -60"
+				edt_maxs "150 150 40"
+				spawnflags "1"
+				OnStartTouch "!activator,SetFogController,trav_fog_outside,0,-1"
+			}
+		}
+		create {classname "info_player_coop" origin "690 -7035 -465" values {targetname "syn_spawnpointhouse" startdisabled "1" angles "0 90 0"} }
+		create {classname "func_button" origin "491 -6930 -435"
+			values
+			{
+				spawnflags "1025"
+				sounds "1"
+				wait "-1"
+				DisableShadows "1"
+				targetname "houseattack"
+				OnPressed "drop1t,Enable,,0,1"
+				OnPressed "drop2t,Enable,,0,1"
+				OnPressed "drop3t,Enable,,0,1"
+				OnPressed "drop4t,Enable,,0,1"
+				OnPressed "gun1t,Enable,,0,1"
+				OnPressed "drop1,FlyToSpecificTrackViaPath,drop1path2,2,-1"
+				OnPressed "drop2,FlyToSpecificTrackViaPath,drop2path2,2,-1"
+				OnPressed "drop3,FlyToSpecificTrackViaPath,drop3path2,2,-1"
+				OnPressed "drop4,FlyToSpecificTrackViaPath,drop4path2,2,-1"
+				OnPressed "song,PlaySound,,5,1"
+			}
+		}
+		create {classname "prop_dynamic" origin "492 -6930 -435"
+			values
+			{
+				model "models/props_lab/freightelevatorbutton.mdl"
+				angles "0 0 0"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "drop1res"
+				max "4"
+				min "0"
+				startvalue "0"
+				OnHitMax "drop1t,Enable,,0,-1"
+				OnHitMax "!self,Subtract,4,0.1,-1"
+				OnHitMax "drop1stric,Add,1,0,1"
+				OnHitMax "syn_wonc,Add,1,0,1"
+				OnHitMin "drop1t,Disable,,1,-1"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "drop2res"
+				max "4"
+				min "0"
+				startvalue "0"
+				OnHitMax "drop2t,Enable,,0,-1"
+				OnHitMax "!self,Subtract,4,0.1,-1"
+				OnHitMax "drop1stric,Add,1,0,1"
+				OnHitMax "syn_wonc,Add,1,0,1"
+				OnHitMin "drop2t,Disable,,1,-1"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "drop3res"
+				max "4"
+				min "0"
+				startvalue "0"
+				OnHitMax "drop3t,Enable,,0,-1"
+				OnHitMax "!self,Subtract,4,0.1,-1"
+				OnHitMax "drop1stric,Add,1,0,1"
+				OnHitMax "syn_wonc,Add,1,0,1"
+				OnHitMin "drop3t,Disable,,1,-1"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "drop4res"
+				max "4"
+				min "0"
+				startvalue "0"
+				OnHitMax "drop4t,Enable,,0,-1"
+				OnHitMax "!self,Subtract,4,0.1,-1"
+				OnHitMax "drop1stric,Add,1,0,1"
+				OnHitMax "syn_wonc,Add,1,0,1"
+				OnHitMin "drop4t,Disable,,1,-1"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "drop1stric"
+				max "2"
+				min "0"
+				startvalue "0"
+				OnHitMax "drop1strit,Enable,,0,1"
+				OnHitMax "syn_wonc,Add,1,0,1"
+			}
+		}
+		create {classname "math_counter"
+			values
+			{
+				targetname "syn_wonc"
+				max "7"
+				min "0"
+				startvalue "0"
+				OnHitMax "syn_wonpt,ForceSpawn,,0,1"
+			}
+		}
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop1combinetemplate1" OnDeath "drop1res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop1combinetemplate2" OnDeath "drop1res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop1combinetemplate3" OnDeath "drop1res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_ar2" model "models/combine_super_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop1combinetemplate4" OnDeath "drop1res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop2combinetemplate1" OnDeath "drop2res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop2combinetemplate2" OnDeath "drop2res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop2combinetemplate3" OnDeath "drop2res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_ar2" model "models/combine_super_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop2combinetemplate4" OnDeath "drop2res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop3combinetemplate1" OnDeath "drop3res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop3combinetemplate2" OnDeath "drop3res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop3combinetemplate3" OnDeath "drop3res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_ar2" model "models/combine_super_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop3combinetemplate4" OnDeath "drop3res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop4combinetemplate1" OnDeath "drop4res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop4combinetemplate2" OnDeath "drop4res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop4combinetemplate3" OnDeath "drop4res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_ar2" model "models/combine_super_soldier.mdl" NumGrenades "5" spawnflags "2052" targetname "drop4combinetemplate4" OnDeath "drop4res,Add,1,0,-1"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "2304" tacticalvariant "1" targetname "comgroundt"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_shotgun" model "models/combine_soldier_prisonguard.mdl" NumGrenades "5" spawnflags "10244" tacticalvariant "1" targetname "comground2t"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_smg1" model "models/combine_soldier.mdl" NumGrenades "5" spawnflags "10244" tacticalvariant "1" targetname "comground2st"} }
+		create {classname "npc_combine_s" origin "8400 -8200 10" values {additionalequipment "weapon_ar2" model "models/combine_super_soldier.mdl" NumGrenades "5" spawnflags "10244" tacticalvariant "1" targetname "comground2et"} }
+		create {classname "npc_template_maker" origin "8400 -8230 80"
+			values
+			{
+				targetname "drop1t"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "5"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop1"
+			}
+		}
+		create {classname "npc_template_maker" origin "4450 -13740 80"
+			values
+			{
+				targetname "drop2t"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "5"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop2"
+			}
+		}
+		create {classname "npc_template_maker" origin "-12410 3110 870"
+			values
+			{
+				targetname "drop3t"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "3"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop3"
+			}
+		}
+		create {classname "npc_template_maker" origin "8400 95 300"
+			values
+			{
+				targetname "drop4t"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "5"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop4"
+			}
+		}
+		create {classname "npc_template_maker" origin "-11210 -9495 300"
+			values
+			{
+				targetname "drop1strit"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "1"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop1strid"
+			}
+		}
+		create {classname "npc_template_maker" origin "-11210 -9495 300"
+			values
+			{
+				targetname "drop1strit2"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "1"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "drop2strid"
+			}
+		}
+		create {classname "npc_template_maker" origin "8425 -5060 420"
+			values
+			{
+				targetname "gun1t"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "1"
+				MaxNPCCount "2"
+				radius "256"
+				SpawnFrequency "5"
+				StartDisabled "1"
+				TemplateName "gun1"
+			}
+		}
+		create {classname "npc_template_maker" origin "-185 -8020 -750"
+			values
+			{
+				targetname "comground1"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "20"
+				MaxNPCCount "20"
+				radius "256"
+				angles "0 140 0"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "comgroundt"
+				OnAllSpawnedDead "expl,FireCanister,,0,1"
+			}
+		}
+		create {classname "assault_assaultpoint" origin "1055 -6915 -720"
+			values
+			{
+				targetname "comassaultpoint"
+				assaulttimeout "3"
+				assaulttolerance "120"
+			}
+		}
+		create {classname "assault_rallypoint" origin "10 -7985 -700"
+			values
+			{
+				targetname "comrallypoint"
+				assaultpoint "comassaultpoint"
+				priority "1"
+			}
+		}
+		create {classname "ai_goal_assault"
+			values
+			{
+				targetname "comgo"
+				actor "comgroundt"
+				rallypoint "comrallypoint"
+			}
+		}
+		create {classname "info_node" origin "-3337.77 -8313.18 -950"}
+		create {classname "info_node" origin "-3454.83 -8221.65 -930"}
+		create {classname "info_node" origin "-3539.07 -8108.14 -904"}
+		create {classname "info_node" origin "-3564.82 -7983.91 -870"}
+		create {classname "info_node" origin "-3493.95 -7828.77 -820"}
+		create {classname "info_node" origin "-3413.86 -7716.81 -790"}
+		create {classname "info_node" origin "-3261.52 -7617.61 -775"}
+		create {classname "info_node" origin "-3186.3 -7477.85 -765"}
+		create {classname "info_node" origin "-2957.84 -7406.19 -775"}
+		create {classname "info_node" origin "-2712.56 -7392.05 -775"}
+		create {classname "info_node" origin "-2172.21 -7405.13 -794"}
+		create {classname "info_node" origin "-2447.3 -7393.54 -770"}
+		create {classname "info_node" origin "-2829.92 -7289.34 -795"}
+		create {classname "info_node" origin "-2593.78 -7265.41 -790"}
+		create {classname "info_node" origin "-2296.94 -7274.58 -800"}
+		create {classname "info_node" origin "-1879.5 -7437.85 -810"}
+		create {classname "info_node" origin "-1846.12 -7305.91 -830"}
+		create {classname "info_node" origin "-2009.32 -7318.27 -810"}
+		create {classname "info_node" origin "-1514.73 -7504.13 -840"}
+		create {classname "info_node" origin "-1363.66 -7338.62 -825"}
+		create {classname "info_node" origin "-1106.37 -7550.75 -820"}
+		create {classname "info_node" origin "-988.108 -7774.47 -830"}
+		create {classname "info_node" origin "-969.738 -7409.49 -805"}
+		create {classname "info_node" origin "-507.595 -7351.66 -780"}
+		create {classname "info_node" origin "-280.848 -7482.24 -765"}
+		create {classname "info_node" origin "-112.286 -7371.12 -750"}
+		create {classname "path_track" origin "8400 -8230 80" values {targetname "drop1path1" target "drop1path2" OnPass "drop1,FlyToSpecificTrackViaPath,drop1path2,0,-1" OnPass "drop1t,Disable,,0,-1"} }
+		create {classname "path_track" origin "1815 -6850 -530" values {targetname "drop1path2" target "drop1path3" angles "0 180 0" OnPass "drop1,LandTakeCrate,4,0,-1"} }
+		create {classname "path_track" origin "8400 -8230 200" values {targetname "drop1path3" OnPass "drop1,kill,,0,-1" OnPass "drop1res,Add,1,1,-1"} }
+		create {classname "info_target" origin "1420 -6855 -720" values {targetname "drop1drop" angles "0 180 0"} }
+		create {classname "info_target" origin "1035 -6780 -730" values {targetname "drop1dustoff1"} }
+		create {classname "info_target" origin "1320 -6475 -740" values {targetname "drop1dustoff2"} }
+		create {classname "info_target" origin "1300 -7340 -750" values {targetname "drop1dustoff3"} }
+		create {classname "info_target" origin "830 -7605 -760" values {targetname "drop1dustoff4"} }
+		create {classname "npc_combinedropship" origin "8400 -8230 80"
+			values
+			{
+				targetname "drop1"
+				angles "0 180 0"
+				CrateType "1"
+				Dustoff1 "drop1dustoff1"
+				Dustoff2 "drop1dustoff2"
+				Dustoff3 "drop1dustoff3"
+				Dustoff4 "drop1dustoff4"
+				Invulnerable "1"
+				NPCTemplate "drop1combinetemplate1"
+				NPCTemplate2 "drop1combinetemplate2"
+				NPCTemplate3 "drop1combinetemplate3"
+				NPCTemplate4 "drop1combinetemplate4"
+				target "drop1path1"
+				LandTarget "drop1drop"
+				spawnflags "2304"
+				GunRange "2048"
+				OnFinishedDropoff "drop1,FlyToSpecificTrackViaPath,drop1path3,1,-1"
+				OnFinishedDropOff "drop1antistuck,Enable,,2,-1"
+				OnFinishedDropOff "drop1antistuck,Disable,,4,-1"
+			}
+		}
+		create {classname "path_track" origin "4450 -13740 80" values {targetname "drop2path1" target "drop2path2" OnPass "drop2,FlyToSpecificTrackViaPath,drop2path2,0,-1" OnPass "drop2t,Disable,,0,-1"} }
+		create {classname "path_track" origin "725 -8530 -540" values {targetname "drop2path2" target "drop2path3" angles "0 90 0" OnPass "drop2,LandTakeCrate,4,0,-1"} }
+		create {classname "path_track" origin "4450 -13740 400" values {targetname "drop2path3" OnPass "drop2,kill,,0,-1" OnPass "drop2res,Add,1,1,-1"} }
+		create {classname "info_target" origin "530 -8150 -750" values {targetname "drop2drop" angles "0 90 0"} }
+		create {classname "info_target" origin "590 -7885 -750" values {targetname "drop2dustoff1"} }
+		create {classname "info_target" origin "815 -7585 -755" values {targetname "drop2dustoff2"} }
+		create {classname "info_target" origin "810 -7125 -740" values {targetname "drop2dustoff3"} }
+		create {classname "info_target" origin "540 -6510 -730" values {targetname "drop2dustoff4"} }
+		create {classname "npc_combinedropship" origin "4450 -13740 80"
+			values
+			{
+				targetname "drop2"
+				angles "0 180 0"
+				CrateType "1"
+				Dustoff1 "drop2dustoff1"
+				Dustoff2 "drop2dustoff2"
+				Dustoff3 "drop2dustoff3"
+				Dustoff4 "drop2dustoff4"
+				Invulnerable "1"
+				NPCTemplate "drop2combinetemplate1"
+				NPCTemplate2 "drop2combinetemplate2"
+				NPCTemplate3 "drop2combinetemplate3"
+				NPCTemplate4 "drop2combinetemplate4"
+				target "drop2path1"
+				LandTarget "drop2drop"
+				spawnflags "2304" //260 580 1604
+				GunRange "2048"
+				OnFinishedDropoff "drop2,FlyToSpecificTrackViaPath,drop2path3,1,-1"
+				OnFinishedDropOff "drop2antistuck,Enable,,2,-1"
+				OnFinishedDropOff "drop2antistuck,Disable,,4,-1"
+			}
+		}
+		create {classname "path_track" origin "-12410 3110 870" values {targetname "drop3path1" target "drop3path2" OnPass "drop3,FlyToSpecificTrackViaPath,drop3path2,0,-1" OnPass "drop3t,Disable,,0,-1"} }
+		create {classname "path_track" origin "-7855 -4980 700" values {targetname "drop3path2" target "drop3path3" OnPass "drop3,FlyToSpecificTrackViaPath,drop3path3,0,-1" OnPass "comground1,Enable,,0,-1" OnPass "comgo,Activate,,1,-1" OnPass "comgotimer,Enable,,0,-1"} }
+		create {classname "logic_timer" values {targetname "comgotimer" startdisabled "1" RefireTime "5" OnTimer "comgo,BeginAssault,,0,-1" OnTimer "comgo2,BeginAssault,,0,-1"} }
+		create {classname "path_track" origin "-1010 -6635 -450" values {targetname "drop3path3" target "drop3path4" angles "0 90 0" OnPass "drop3,LandTakeCrate,4,0,-1"} }
+		create {classname "path_track" origin "-12410 3110 2600" values {targetname "drop3path4" OnPass "drop3,kill,,0,-1" OnPass "drop3res,Add,1,1,-1"} }
+		create {classname "info_target" origin "-495 -6545 -740" values {targetname "drop3drop" angles "0 0 0"} }
+		create {classname "info_target" origin "-195 -6585 -750" values {targetname "drop3dustoff1"} }
+		create {classname "info_target" origin "-170 -6255 -760" values {targetname "drop3dustoff2"} }
+		create {classname "info_target" origin "-135 -7275 -720" values {targetname "drop3dustoff3"} }
+		create {classname "info_target" origin "540 -6515 -720" values {targetname "drop3dustoff4"} }
+		create {classname "npc_combinedropship" origin "-12410 3110 870"
+			values
+			{
+				targetname "drop3"
+				angles "0 -60 0"
+				CrateType "1"
+				Dustoff1 "drop3dustoff1"
+				Dustoff2 "drop3dustoff2"
+				Dustoff3 "drop3dustoff3"
+				Dustoff4 "drop3dustoff4"
+				Invulnerable "1"
+				NPCTemplate "drop3combinetemplate1"
+				NPCTemplate2 "drop3combinetemplate2"
+				NPCTemplate3 "drop3combinetemplate3"
+				NPCTemplate4 "drop3combinetemplate4"
+				target "drop3path1"
+				LandTarget "drop3drop"
+				spawnflags "2304"
+				GunRange "2048"
+				OnFinishedDropoff "drop3,FlyToSpecificTrackViaPath,drop3path4,1,-1"
+				OnFinishedDropOff "drop3antistuck,Enable,,2,-1"
+				OnFinishedDropOff "drop3antistuck,Disable,,4,-1"
+			}
+		}
+		create {classname "path_track" origin "8400 95 300" values {targetname "drop4path1" target "drop4path2" OnPass "drop4,FlyToSpecificTrackViaPath,drop4path2,0,-1" OnPass "drop4t,Disable,,0,-1"} }
+		create {classname "path_track" origin "505 -5110 -280" values {targetname "drop4path2" target "drop4path3" angles "0 -90 0" OnPass "drop4,LandTakeCrate,4,0,-1"} }
+		create {classname "path_track" origin "8400 95 500" values {targetname "drop4path3" OnPass "drop4,kill,,0,-1" OnPass "drop4res,Add,1,1,-1"} }
+		create {classname "info_target" origin "600 -5815 -700" values {targetname "drop4drop" angles "0 -90 0"} }
+		create {classname "info_target" origin "930 -6430 -720" values {targetname "drop4dustoff1"} }
+		create {classname "info_target" origin "1070 -6545 -720" values {targetname "drop4dustoff2"} }
+		create {classname "info_target" origin "665 -6410 -720" values {targetname "drop4dustoff3"} }
+		create {classname "info_target" origin "980 -6655 -700" values {targetname "drop4dustoff4"} }
+		create {classname "npc_combinedropship" origin "8400 95 300"
+			values
+			{
+				targetname "drop4"
+				angles "0 180 0"
+				CrateType "1"
+				Dustoff1 "drop4dustoff1"
+				Dustoff2 "drop4dustoff2"
+				Dustoff3 "drop4dustoff3"
+				Dustoff4 "drop4dustoff4"
+				Invulnerable "1"
+				NPCTemplate "drop4combinetemplate1"
+				NPCTemplate2 "drop4combinetemplate2"
+				NPCTemplate3 "drop4combinetemplate3"
+				NPCTemplate4 "drop4combinetemplate4"
+				target "drop4path1"
+				LandTarget "drop4drop"
+				spawnflags "2304"
+				GunRange "2048"
+				OnFinishedDropoff "drop4,FlyToSpecificTrackViaPath,drop4path3,1,-1"
+				OnFinishedDropOff "drop4antistuck,Enable,,2,-1"
+				OnFinishedDropOff "drop4antistuck,Disable,,4,-1"
+			}
+		}
+		create {classname "path_track" origin "-11210 -9495 300" values {targetname "drop1stridpath1" target "drop1stridpath2" OnPass "drop1strid,FlyToSpecificTrackViaPath,drop1stridpath2,0,-1" OnPass "drop2strid,FlyToSpecificTrackViaPath,drop1stridpath2,0,-1" OnPass "drop1strit,Disable,,0,-1"} }
+		create {classname "path_track" origin "-5710 -8635 -705" values {targetname "drop1stridpath2" target "drop1stridpath4" angles "0 0 0" OnPass "drop1strid,FlyToSpecificTrackViaPath,drop1stridpath4,1,-1" OnPass "drop2strid,FlyToSpecificTrackViaPath,drop1stridpath4,1,-1"} }
+		create {classname "path_track" origin "-5310 -8635 -805" values {targetname "drop1stridpath4" target "drop1stridpath3" angles "0 0 0" OnPass "drop1strid,DropAPC,1,0,-1" OnPass "drop2strid,DropAPC,1,0,-1"} }
+		create {classname "path_track" origin "-11210 -9495 500" values {targetname "drop1stridpath3" OnPass "!activator,kill,,0,-1" OnPass "drop1strit2,Enable,,5,1" OnPass "drop1strit2,Disable,,10,1"} }
+		create {classname "info_target" origin "-5710 -8735 -985" values {targetname "drop1striddrop" angles "0 0 0"} }
+		create {classname "info_target" origin "-5085 -8795 -1000" values {targetname "drop1striddustoff1"} }
+		create {classname "npc_combinedropship" origin "-11210 -9495 300"
+			values
+			{
+				targetname "drop1strid"
+				angles "0 180 0"
+				CrateType "-2"
+				APCVehicleName "syn_apc1"
+				Dustoff1 "drop1striddustoff1"
+				Invulnerable "0"
+				//NPCTemplate "drop1stridertemplate1"
+				target "drop1stridpath1"
+				LandTarget "drop1striddrop"
+				spawnflags "2304"
+				GunRange "2048"
+				OnFinishedDropoff "drop1strid,FlyToSpecificTrackViaPath,drop1stridpath3,1,-1"
+				OnFinishedDropoff "syn_apc1driver,StartForward,,2.5,1"
+				OnFinishedDropoff "syn_apc1driver,GotoPathCorner,apc1path2,3,1"
+			}
+		}
+		//npc_vehicledriver
+		create {classname "npc_apcdriver" origin "8810 -13900 -1160"
+			values
+			{
+				targetname "syn_apc1driver"
+				vehicle "syn_apc1"
+				target "apc1path1"
+				spawnflags "65536"
+				drivermaxspeed "1"
+				driverminspeed "0"
+			}
+		}
+		//prop_vehicle_jeep
+		//create {classname "phys_keepupright" origin "8810 -13900 -1170" values {attach1 "syn_apc1" angularlimit "5"} }
+		create {classname "prop_vehicle_apc" origin "8810 -13900 -1190"
+			values
+			{
+				targetname "syn_apc1"
+				angles "0 -90 0"
+				model "models\combine_apc.mdl"
+				vehiclescript "scripts/vehicles/apc_npc.txt"
+				OnDeath "syn_wonc,Add,1,0,1"
 			}
 		}
 		
-}
+		create {classname "npc_combinedropship" origin "-11210 -9495 300"
+			values
+			{
+				targetname "drop2strid"
+				angles "0 180 0"
+				CrateType "-2"
+				APCVehicleName "syn_apc2"
+				Dustoff1 "drop1striddustoff1"
+				Invulnerable "0"
+				//NPCTemplate "drop1stridertemplate1"
+				target "drop1stridpath1"
+				LandTarget "drop1striddrop"
+				spawnflags "2304"
+				GunRange "2048"
+				OnFinishedDropoff "drop2strid,FlyToSpecificTrackViaPath,drop1stridpath3,1,-1"
+				OnFinishedDropoff "syn_apc2driver,StartForward,,2.5,1"
+				OnFinishedDropoff "syn_apc2driver,GotoPathCorner,apc1path2,3,1"
+			}
+		}
+		create {classname "npc_apcdriver" origin "8810 -13900 -1160"
+			values
+			{
+				targetname "syn_apc2driver"
+				vehicle "syn_apc2"
+				target "apc1path1"
+				spawnflags "65536"
+				drivermaxspeed "1"
+				driverminspeed "0"
+			}
+		}
+		//create {classname "phys_keepupright" origin "8810 -13900 -1170" values {attach1 "syn_apc1" angularlimit "5"} }
+		create {classname "prop_vehicle_apc" origin "8810 -13900 -1190"
+			values
+			{
+				targetname "syn_apc2"
+				angles "0 -90 0"
+				model "models\combine_apc.mdl"
+				vehiclescript "scripts/vehicles/apc_npc.txt"
+				OnDeath "syn_wonc,Add,1,0,1"
+			}
+		}
+		create {classname "trigger_push" origin "-4670 -9150 -1200"
+			values
+			{
+				model "*138"
+				spawnflags "14"
+				pushdir "0 90 0"
+				speed "400"
+			}
+		}
+		create {classname "path_corner" origin "-5700 -8745 -1200" values {targetname "apc1path1" target "apc1path2" angles "0 0 0"} }
+		create {classname "path_corner" origin "-3930 -9000 -1165" values {targetname "apc1path2" target "apc1path3" angles "0 2 0" OnPass "syn_apc1driver,StartFiring,,0,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,0,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,0.2,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,0.4,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,0.6,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,0.8,-1" OnPass "syn_apc1,FireMissileAt,!rndplayer,1,-1"} }
+		create {classname "path_corner" origin "-1220 -8960 -1185" values {targetname "apc1path3" target "apc1path4" angles "0 3 0"} }
+		create {classname "path_corner" origin "405 -8960 -1140" values {targetname "apc1path4" target "apc1path5" angles "0 8 0"} }
+		create {classname "path_corner" origin "1620 -8315 -1100" values {targetname "apc1path5" target "apc1path6" angles "0 55 0"} }
+		create {classname "path_corner" origin "1900 -5975 -1150" values {targetname "apc1path6" target "apc1path7" angles "0 100 0"} }
+		create {classname "path_corner" origin "1685 -3795 -1120" values {targetname "apc1path7" target "apc1path8" angles "0 150 0"} }
+		create {classname "path_corner" origin "-565 -3330 -815" values {targetname "apc1path8" target "apc1path9" angles "0 -140 0"} }
+		create {classname "path_corner" origin "-1360 -4105 -740" values {targetname "apc1path9" target "apc1path10" angles "0 -110 0"} }
+		create {classname "path_corner" origin "-1710 -5185 -750" values {targetname "apc1path10" target "apc1path3" angles "0 -90 0"} }
+		//create {classname "filter_activator_class" values {targetname "syn_strifilter" filterclass "npc_strider"} }
+		//create {classname "trigger_once" origin "-5570 -8795 -755" values {startdisabled "0" spawnflags "2" model "*106" angles "0 0 0" filtername "syn_strifilter" OnTrigger "!activator,kill,strider1,2,1" OnTrigger "strider1temp,Enable,,2,1" OnTrigger "stri1ss,StartSchedule,,2.5,-1"} }
+		//create {classname "npc_template_maker" origin "-5595 -8755 -780"
+		//	values
+		//	{
+		//		targetname "strider1temp"
+		//		CriterionDistance "2"
+		//		CriterionVisibility "2"
+		//		MaxLiveChildren "1"
+		//		MaxNPCCount "2"
+		//		radius "256"
+		//		SpawnFrequency "5"
+		//		StartDisabled "1"
+		//		TemplateName "strider1"
+		//	}
+		//}
+		//create {classname "npc_strider" origin "-5595 -8755 -780"
+		//	values
+		//	{
+		//		targetname "strider1"
+		//		angles "0 0 0"
+		//		spawnflags "67584"
+		//		target "strider1path1"
+		//		hintgroup "stridergroup"
+		//	}
+		//}
+		//create {classname "aiscripted_schedule" values {targetname "stri1ss" m_iszEntity "strider1" schedule "1" interruptability "2" goalent "strider1path2"} }
+		//create {classname "path_corner" origin "-5570 -8795 -755" values {targetname "strider1path1" target "strider1path2" angles "0 0 0"} }
+		//create {classname "path_corner" origin "-4475 -8740 -755" values {targetname "strider1path2" target "strider1path3" angles "0 0 0"} }
+		//create {classname "path_corner" origin "-3640 -7565 -350" values {targetname "strider1path3" target "strider1path4" angles "0 15 0"} }
+		//create {classname "path_corner" origin "-605 -7000 -350" values {targetname "strider1path4" angles "0 5 0" OnPass "strider1,SetCannonTarget,!rndplayer,0,-1"} }
+		//create {classname "info_node_air_hint" origin "-5570 -8795 -755" values {Group "stridergroup" hinttype "904" angles "0 0 0"} }
+		//create {classname "info_node_air_hint" origin "-4475 -8740 -755" values {Group "stridergroup" hinttype "904" angles "0 0 0"} }
+		//create {classname "info_node_air_hint" origin "-3640 -7565 -350" values {Group "stridergroup" hinttype "904" angles "0 15 0"} }
+		//create {classname "info_node_air_hint" origin "-605 -7000 -350" values {Group "stridergroup" hinttype "904" angles "0 5 0"} }
+		create {classname "prop_dynamic" origin "-105 -7870 -780" values {angles "0 90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-270 -7870 -780" values {angles "0 90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-270 -7870 -890" values {angles "0 90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-353 -7955 -780" values {angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-353 -7955 -890" values {angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-105 -7870 -670" values {angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-270 -7870 -670" values {angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "npc_combinegunship" origin "8425 -5060 420"
+			values
+			{
+				targetname "gun1"
+				spawnflags "2304"
+				target "gun1path1"
+			}
+		}
+		create {classname "path_track" origin "1690 -7170 -170" values {targetname "gun1path1" target "gun1path2" OnPass "gun1,FlyToSpecificTrackViaPath,gun1path2,0,1"} }
+		create {classname "path_track" origin "1165 -5815 -170" values {targetname "gun1path2" target "gun1path3" OnPass "gun1,FlyToSpecificTrackViaPath,gun1path3,0,1"} }
+		create {classname "path_track" origin "-175 -6370 -170" values {targetname "gun1path3" target "gun1path4" OnPass "gun1,FlyToSpecificTrackViaPath,gun1path4,0,1"} }
+		create {classname "path_track" origin "595 -8195 -170" values {targetname "gun1path4" target "gun1path5" OnPass "gun1,FlyToSpecificTrackViaPath,gun1path5,0,1"} }
+		create {classname "path_track" origin "1585 -7740 -380" values {targetname "gun1path5" target "gun1path1" OnPass "gun1,FlyToSpecificTrackViaPath,gun1path1,0,1"} }
+		//Additional fly areas
+		create {classname "path_track" origin "-305 -6975 -400" values {target "gun1path1"} }
+		create {classname "path_track" origin "365 -7460 -480" values {target "gun1path2"} }
+		create {classname "path_track" origin "1435 -7330 -315" values {target "gun1path3"} }
+		create {classname "path_track" origin "1250 -6135 -360" values {target "gun1path4"} }
+		create {classname "path_track" origin "190 -6060 -225" values {target "gun1path5"} }
+		create {classname "path_track" origin "145 -7165 -130" values {target "gun1path1"} }
+		create {classname "env_headcrabcanister" origin "-230 -7080 -710" values {targetname "expl" angles "-90 0 0" OnImpacted "expl,kill,,0.1,-1" OnImpacted "comground2shack,ForceSpawn,,0.5,1" OnImpacted "comground2,Enable,,1,-1" OnImpacted "comgo2,Activate,,1.1,-1" OnImpacted "comgo2,BeginAssault,,1.2,-1"} }
+		create {classname "env_headcrabcanister" origin "-230 -7080 -710" values {targetname "expl" angles "-90 0 0"} }
+		create {classname "env_headcrabcanister" origin "-230 -7080 -710" values {targetname "expl" angles "-90 0 0"} }
+		create {classname "env_headcrabcanister" origin "-230 -7080 -710" values {targetname "expl" angles "-90 0 0"} }
+		create {classname "env_headcrabcanister" origin "-230 -7080 -710" values {targetname "expl" angles "-90 0 0"} }
+		
+		create {classname "point_template" values {targetname "comground2shack" Template01 "comground2building"} }
+		create {classname "prop_dynamic" origin "-220 -6925 -720" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -6925 -740" values {targetname "comground2building" angles "110 90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-468 -7010 -720" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -6925 -825" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-468 -7010 -825" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -6925 -610" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -6925 -610" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -6988 -610" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -6988 -610" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -6925 -740" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -6925 -740" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -6988 -740" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -6988 -740" values {targetname "comground2building" angles "90 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -7090 -720" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -7090 -720" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-220 -7090 -825" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-380 -7090 -825" values {targetname "comground2building" angles "0 -90 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-140 -7010 -720" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-140 -7010 -825" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-300 -7010 -720" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "prop_dynamic" origin "-300 -7010 -825" values {targetname "comground2building" angles "0 180 0" model "models\props_lab\blastdoor001c.mdl" solid "6"} }
+		create {classname "npc_template_maker" origin "-250 -7960 -780"
+			values
+			{
+				targetname "comground2"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "20"
+				MaxNPCCount "20"
+				radius "256"
+				angles "0 0 0"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "comground2t"
+			}
+		}
+		create {classname "npc_template_maker" origin "-185 -8020 -750"
+			values
+			{
+				targetname "comground2"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "20"
+				MaxNPCCount "20"
+				radius "256"
+				angles "0 140 0"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "comground2st"
+			}
+		}
+		create {classname "npc_template_maker" origin "-360 -7045 -720"
+			values
+			{
+				targetname "comground2"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "20"
+				MaxNPCCount "20"
+				radius "256"
+				angles "0 90 0"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "comground2t"
+			}
+		}
+		create {classname "npc_template_maker" origin "-350 -6985 -720"
+			values
+			{
+				targetname "comground2"
+				CriterionDistance "2"
+				CriterionVisibility "2"
+				MaxLiveChildren "20"
+				MaxNPCCount "20"
+				radius "256"
+				angles "0 90 0"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "comground2st"
+			}
+		}
+		create {classname "assault_assaultpoint" origin "-370 -6690 -730"
+			values
+			{
+				targetname "comassaultpoint2"
+				assaulttimeout "3"
+				assaulttolerance "120"
+			}
+		}
+		create {classname "assault_rallypoint" origin "-385 -6930 -720"
+			values
+			{
+				targetname "comrallypoint2"
+				assaultpoint "comassaultpoint2"
+				priority "1"
+			}
+		}
+		create {classname "ai_goal_assault" values {targetname "comgo2" actor "comground2st" rallypoint "comrallypoint2"} }
+		create {classname "ai_goal_assault" values {targetname "comgo2" actor "comground2t" rallypoint "comrallypoint2"} }
+		//create {classname "filter_activator_class" values {targetname "syn_combfilter" filterclass "npc_combine_s"} }
+		//create {classname "trigger_multiple" origin "1490 -6945 -725" values {targetname "drop1antistuck" startdisabled "1" spawnflags "2" model "*106" angles "0 90 0" filtername "syn_combfilter" OnTrigger "!activator,kill,,0,-1"} }
+		//create {classname "trigger_multiple" origin "530 -8195 -745" values {targetname "drop2antistuck" startdisabled "1" spawnflags "2" model "*106" angles "0 0 0" filtername "syn_combfilter" OnTrigger "!activator,kill,,0,-1"} }
+		//create {classname "trigger_multiple" origin "-600 -6535 -750" values {targetname "drop3antistuck" startdisabled "1" spawnflags "2" model "*106" angles "0 90 0" filtername "syn_combfilter" OnTrigger "!activator,kill,,0,-1"} }
+		//create {classname "trigger_multiple" origin "605 -5720 -735" values {targetname "drop4antistuck" startdisabled "1" spawnflags "2" model "*106" angles "0 0 0" filtername "syn_combfilter" OnTrigger "!activator,kill,,0,-1"} }
+		
+		create {classname "game_weapon_manager" values {weaponname "weapon_ar2" maxpieces "10" ammomod "30"} }
+		create {classname "game_weapon_manager" values {weaponname "weapon_smg1" maxpieces "10" ammomod "30"} }
+		create {classname "game_weapon_manager" values {weaponname "weapon_shotgun" maxpieces "10" ammomod "12"} }
+		create {classname "item_ammo_crate" origin "908 -6812 -463"
+			values
+			{
+				angles "0 90 0"
+				AmmoType "3"
+				fademaxdist "1500"
+				fademindist "1000"
+			}
+		}
+	}
 }
