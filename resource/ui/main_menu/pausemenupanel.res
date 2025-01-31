@@ -854,6 +854,47 @@
 		}		
 	}
 	
+	"FriendsListButton"
+	{
+		"ControlName"			"CTFButton"
+		"fieldName"				"FriendsListButton"
+		"xpos"					"388"
+		"ypos"					"436"
+		"zpos"					"6"
+		"wide"					"30"
+		"tall"					"30"
+		"visible"				"1"
+		"enabled"				"1"
+		"tabPosition"			"0"
+		"labelText"				""
+		"font"					"HudFontSmallBold"
+		"command"				"openfriendslist"
+		"bordervisible"			"1"
+
+		"sound_depressed"		"UI/buttonclick.wav"
+		"sound_released"		"UI/buttonclickrelease.wav"
+
+		"image_drawcolor"		"235 226 202 255"
+
+		"labelText" 			""
+		"xshift" 				"0"
+		"yshift" 				"-1"
+		"tooltip" 				"#TF_TradeStartDialog_SelectFriends"
+		"textAlignment"			"center"
+		"font"					"HudFontSmallBold"
+		"border_default"		"AdvRoundedButtonDefault"
+		"border_armed"			"AdvRoundedButtonArmed"
+		"border_depressed"		"AdvRoundedButtonDepressed"
+		"paintbackground"       "0"
+
+		"SubImage"
+		{
+			"image" 			"glyph_create"
+			"scaleImage"		"1"
+			"imagewidth"		"24"
+		}
+	}
+	
 	"VersionLabelVerText"
 	{
 		"ControlName"		"CExLabel"

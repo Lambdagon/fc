@@ -2555,6 +2555,12 @@
 	
 	npc_drop_currency_chance(float) : "NPC currency drop chance" : 0 : "If set to 0, fc_dropcurrency_ondeath_chance will be used instead." 
 	
+	nomapreload(choices) : "Disable map reload on all players dead" : 0 : "Servers can still disable map reloads with mp_reset." =
+	[
+		0 : "Map Reloads"
+		1 : "No Map Reload"
+	]
+	
 	input SetRedTeamRespawnWaveTime(float) : "Set the RED team's respawn wave time"
 	input SetBlueTeamRespawnWaveTime(float) : "Set the BLU team's respawn wave time"
 	input SetGreenTeamRespawnWaveTime(float) : "Set the Green team's respawn wave time"
