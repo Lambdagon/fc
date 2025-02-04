@@ -10179,7 +10179,7 @@
 	atv16(float) : "Attributes Value 16" : "0" : "Value of The Attribute"
 ]
 
-@PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = lfce_weapon_progress : 
+@PointClass base(Targetname) iconsprite("editor-lfe/lfe_weapon_progress.vmt") = fc_weapon_progress : 
 "'Weapon progression' disables the automatic "+
 "giveaway of weapons on the beginning of a 'round'. "+
 "Players have to earn weapons by picking them up in the map. "+
@@ -10213,6 +10213,14 @@
 	[
 		0 : "Enable progression"
 		1 : "Pause progression"
+	]
+	
+	actionslot(choices) : "Additional ActionSlot" : 0 : "Sets additional action slot item to have." =
+	[
+		0 : "None"
+		1 : "Canteen/PowerupBottle"
+		2 : "SpellBook"
+		3 : "Grappling Hook"
 	]
 	
 	input SetWeaponProgress(integer) : "Sets weapon progress."
