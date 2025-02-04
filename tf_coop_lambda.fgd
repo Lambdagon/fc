@@ -3490,14 +3490,20 @@
 	// Outputs
 	output OnOwnerChangedToTeam1(void) : "Sent when owner is changed to RED."
 	output OnOwnerChangedToTeam2(void) : "Sent when owner is changed to BLUE."
+	output OnOwnerChangedToTeam3(void) : "Sent when owner is changed to GREEN."
+	output OnOwnerChangedToTeam4(void) : "Sent when owner is changed to YELLOW."
 
 	output OnCapReset(void) : "Sent when owner is changed to neutral."
 
 	output OnRoundStartOwnedByTeam1(void) : "Sent when a round is starting and the point is owned by RED."
 	output OnRoundStartOwnedByTeam2(void) : "Sent when a round is starting and the point is owned by BLUE."
+	output OnRoundStartOwnedByTeam3(void) : "Sent when a round is starting and the point is owned by GREEN."
+	output OnRoundStartOwnedByTeam4(void) : "Sent when a round is starting and the point is owned by YELLOW."
 
 	output OnCapTeam1(void) : "Sent when RED capture this point."
 	output OnCapTeam2(void) : "Sent when BLUE capture this point."
+	output OnCapTeam3(void) : "Sent when GREEN capture this point."
+	output OnCapTeam4(void) : "Sent when YELLOW capture this point."
 
 	output OnUnlocked(void) : "Sent when point is unlocked via the SetLocked(0) or SetUnlockTime inputs."
 	
@@ -3619,6 +3625,12 @@
 	team_spawn_3(integer) : "Blue Spawn Adjust" : 0 : "Adjust the minimum respawn time for the blue team by this amount (in seconds) when blue captures this point. If the blue team owns this point when red captures it, this adjustment is reversed."
 
 	area_time_to_cap(integer) : "Time to cap (sec)" : 5
+	
+	spawnflags(flags) = 
+	[
+		1: "Players Only" : 0
+		2: "NPCs Only" : 0
+	]
 
 	// Outputs
 	output OnStartTeam1(void) : "Sent when RED start capture."
