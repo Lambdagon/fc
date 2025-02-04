@@ -4631,6 +4631,8 @@
 	[
 		1 : "RED"
 		2 : "BLU"
+		3 : "GREEN"
+		4 : "YELLOW"
 	]
 
 	link_trigger(string) : "Linked Trigger" : "" : ""
@@ -4638,7 +4640,31 @@
 	input TeleportPlayers(void) : "Teleport the team's players."
 ]
 
-@PointClass base(Targetname) iconsprite("editor-lfe/lfe_logic_coop.vmt") = fc_logic_coop : "Forced Co-Op Logic" []
+@PointClass base(Targetname) iconsprite("editor-lfe/lfe_logic_coop.vmt") = fc_logic_coop : "Forced Co-Op Logic"
+[
+	is_episodic(choices) : "IsEpisodic" : 0 =
+	[
+		0 : "Off"
+		1 : "Force On"
+	]
+	vehicle_spawning_allowed(choices) : "AllowVehicleSpawns" : 0 =
+	[
+		0 : "Disable spawning vehicles"
+		1 : "Allow spawning vehicles"
+	]
+	vehicle_type(choices) : "Vehicle Type" : 0 =
+	[
+		0 : "By detection"
+		1 : "Airboat"
+		2 : "Jeep"
+		3 : "Jalopy"
+	]
+	
+	input EnableVehicles(void) : "Enable spawning vehicles."
+	input DisableVehicles(void) : "Disable spawning vehicles."
+	input ToggleVehicles(void) : "Toggle spawning vehicles."
+	input SetVehicleType(integer) : "Set type of vehicle to spawn, if set to 0 spawning is disabled."
+]
 
 @PointClass base(Targetname) iconsprite("editor-lfe/lfe_logic_coop.vmt") = fc_logic_zombie : "Forced Zombie Co-op Logic" []
 
