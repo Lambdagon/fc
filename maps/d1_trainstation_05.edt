@@ -33,47 +33,14 @@ d1_trainstation_05
 				targetname "syn_suit"
 				OnPlayerTouch "syn_suit_template,ForceSpawn,,0,-1"
 				OnPlayerTouch "syn_suit_armor,EquipPlayer,,1,-1"} }
-//spawn
-		 create {classname "info_player_equip"
-			values {targetname "syn_suit_equip" StartDisabled "1"
-				item_suit "1"
-				item_armor "100"
-				} }
-//obtain
-		 create {classname "info_player_equip"
-			values {targetname "syn_suit_armor" StartDisabled "1"
-				item_armor "95"
-				} }
-
-		 create {classname "info_player_equip"
-			values {targetname "syn_suit_only" StartDisabled "1"
-				item_suit "1"} }
-
-//--Spawns--
-		create {classname "info_spawn_manager"
-			values {targetname "syn_spawn_manager"} }
-
-		create {classname "info_player_coop" origin "-5544 -864 64"//-5800 -680 64
-			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
-//lab
-		create {classname "info_player_coop" origin "-6416 -1128 0"
-			values {angles "0 225 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
-//lab2
-		create {classname "info_player_coop" origin "-7152 -1504 0"
-			values {angles "0 90 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
-//teleporter TODO: parent to lift?
-		create {classname "info_player_coop" origin "-7188 -1184 96"
-			values {angles "0 270 0" targetname "syn_spawn_player_4" StartDisabled "1"} }
-//outside
-		create {classname "info_player_coop" origin "-10336.3 -4707.12 322"
-			values {angles "0 101 0" targetname "syn_spawn_player_5" StartDisabled "1"} }
-
+				
 		//Trav|Edt - prevent alyx from blocking way
 		edit {targetname "mark_alyx_intro" values {origin "-6432 -880 9"} }
 
 		create {classname "logic_relay"
 			values {targetname "_syn_vint"
 				OnTrigger "mark_alyx_intro,AddOutput,origin -6366.71 -883.04 9,0,-1"} }
+
 
 //Trav|Edt - gnome :P (ep2)
 	//	create {classname "prop_physics" origin "-6360 -472 1"
@@ -101,13 +68,6 @@ d1_trainstation_05
 			}
 		}
 
-		//Trav|Edt - Add breen Gman
-		create {classname "npc_gman"
-			origin "-13351 48 59"
-			values {spawnflags "25110"
-				angles "0 240 0"
-				targetname "syn_vint_trav_gman"} }
-
 		create {classname "trigger_once"
 			origin "-13386 -156 49"
 			values
@@ -131,7 +91,6 @@ d1_trainstation_05
 		//		OnPlayersIn "!self,Disable,,0,-1"
 		//		OnPlayersIn "soda_machine_entry_door_1,Close,,0,-1"
 		//		OnPlayersIn "trav_brush_soda_clip_player_2,Enable,,0,1"
-		//		OnPlayersIn "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
 		//		OnPlayersIn "Barney_lab_entry_opendoor_1,Enable,,0,-1"
 		//		OnPlayersIn "Barney_lab_entry_closedoor_1,Enable,,0,-1"//delay4
 		//		OnPlayersIn "Barney_lab_entry_closedoor_1,Enable,,0,-1"} }
@@ -244,36 +203,8 @@ d1_trainstation_05
 		//		angles "-15 30 0"
 		//		disableshadows "1"
 		//		model "models/humans/corpse1.mdl"} }
-
-//Trav|Edt - allow lab_door to close if all players get in
-		create {classname "trigger_coop"
-			origin "-7220 -1312 56"
-			values
-			{
-				edt_getbspmodelfor_targetname "start_first_teleport_01"
-				spawnflags "1"
-				StartDisabled "1"
-				targetname "trav_coop_labdoor"
-				CountType "1"
-				PlayerValue "100"
-				target "syn_teleport_behind_lab_door"
-				OnPlayersIn "syn_lab_door_clip,Close,,0,1"
-				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,1"
-				OnTrigger "trav_teleport_waste2_trig,Enable,,0,1"
-				OnPlayersIn "lab_door,Close,,0,1"
-				OnPlayersIn "!self,Disable,,1,-1"
-			}
-		}
+	
 		create {classname "info_target" origin "-7195 -1395 35" values {targetname "syn_teleport_behind_lab_door" angles "0 90 0"} }
-		create {classname "logic_relay"
-			values
-			{
-				targetname "teleporter_blowfuse_R1"
-				OnTrigger "lab_door,Close,,0,-1"
-				OnTrigger "trav_coop_labdoor,Enable,,0,1"
-				OnTrigger "trav_coop_labdoor,TeleportPlayersNotTouching,,0.1,1"
-			}
-		}
 
 		create {classname "logic_auto"
 			values {spawnflags "1"
@@ -288,7 +219,6 @@ d1_trainstation_05
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 trav_teleport_lab:Enable::12:-1,0,-1"
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 soda_machine_entry_door_1:Close::12:-1,0,-1"
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 trav_brush_soda_clip_player_2:Enable::12:1,0,-1"
-				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 syn_spawn_manager:SetCheckpoint:syn_spawn_player_2:12:-1,0,-1"
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_opendoor_1:Enable::12:-1,0,-1"
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_closedoor_1:Enable::12:-1,0,-1"//delay4
 				OnMapSpawn "lab01_lcs,AddOutput,OnTrigger3 Barney_lab_entry_closedoor_1:Enable::12:-1,0,-1"} }
@@ -304,33 +234,6 @@ d1_trainstation_05
 				target "trav_teleport_dest"} }
 
 		create {classname "info_teleport_destination" origin "-6416 -1128 0" values {targetname "trav_teleport_dest" angles "0 225 0"} }
-
-//Trav|Edt - move all players into the teleporter
-		delete {targetname "player_in_teleport"}
-
-		create {classname "trigger_coop"
-			origin "-7186.95 -1166 24"
-			values
-			{
-				edt_getbspmodelfor_targetname "player_in_teleport"
-				spawnflags "1"
-				StartDisabled "1"
-				targetname "player_in_teleport"
-				CountType "1"
-				UseHUD "1"
-				PlayerValue "50"//51
-				OnPlayersIn "trav_teleport_teleporter,Teleport,,0.1,1"
-				OnPlayersIn "kleiner_teleport_player_starter_1,Trigger,,0.1,1"
-				OnPlayersIn "tportnag_speaker,Kill,,0,1"
-				OnPlayersIn "trav_coop_vendingdoor,Disable,,0,1"
-				OnPlayersIn "syn_spawn_manager,SetCheckpoint,syn_spawn_player_4,0,1"//failsafe for players joining during teleport sequence
-				//"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_5,83,1"//using trigger instead
-				//OnPlayersIn "player_in_teleport2,Enable,,0,1"
-				//OnPlayersIn "syn_spawn_manager,MovePlayers,,0,-1"
-				OnPlayersIn "!self,Disable,,1,1"
-				OnPlayersIn "syn_suit_only,EquipAllPlayers,,1,-1"
-			}
-		}
 
 		create {classname "point_teleport"//just use trigger when ur not lazy gaw
 			origin "-7184 -1176 8"
@@ -349,7 +252,6 @@ d1_trainstation_05
 //Trav|Edt - set checkpoint right before players teleport outside
 		create {classname "logic_auto"
 			values {spawnflags "1"
-				OnMapSpawn "9_waste2_trigger_teleport,AddOutPut,OnStartTouch syn_spawn_manager:SetCheckpoint:syn_spawn_player_5:0:1,0,-1"} }
 
 
 //End of Trav|Edt
@@ -417,7 +319,7 @@ d1_trainstation_05
 				"OnCompletion" "tport_switch_cover_1,Open,,3,-1"
 			//	"OnStart" "lab_door,Close,,0,-1"
 				"OnCompletion" "switchnag_speaker,TurnOn,,1,1"
-				"OnStart" "lab_door_clip,Close,,0,-1"
+			//	"OnStart" "lab_door_clip,Close,,0,-1"
 			}
 		}
 
