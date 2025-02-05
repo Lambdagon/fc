@@ -1,0 +1,691 @@
+d1_canals_01
+{
+	console
+	{
+		sk_max_pistol 54 //lower maxpistol to allow other players to gather some ammo too
+		sv_test_scripted_sequences 1 // hotfix for two cops getting stuck
+	}
+	entity
+	{
+		delete {targetname "start_item"}
+		delete {targetname "start_item_template"}//un-ness
+		edit {classname "func_areaportal" values {targetname "syn_disabled_portal" StartOpen "1" } }
+				
+		// prevent backtracking
+		edit {classname "trigger_changelevel" values {edt_landmark "trainstation_06-canals_01" edt_map "d1_trainstation_06" edt_addspawnflags "2"} }
+		create {classname "prop_dynamic" origin "1496 -8288 224"// 1328 -8287.99 128
+			values {model "models/synergy/tools/syn_transition.mdl"
+				angles "0 180 0"
+				solid "6"
+				DisableShadows "1"
+				fademindist "256"
+			}
+		}
+
+		//create {classname "light_dynamic" origin "1328 -8288 192"
+		//	values {_light "170 255 170"
+		//		brightness "1"
+		//		distance "128"
+		//		style "12"} }
+
+		//fix cops spawning in train
+		//TEST: allow this
+		//delete {classname "trigger_once" origin "400 -2656 636"}
+		// TODO: some cops still spawn in the train for some reason
+
+		//?
+		create {classname "info_target" origin "800 -6412 614" values {targetname "CPSetSoundSrc"} }
+		create {classname "info_target" origin "700 -1275 -64" values {targetname "CPSetSoundSrc"} }
+
+		// Disable Vort's Charge (flips out with multiple players)
+		delete {targetname "LCS_boxcar_sirens"}
+
+		create {classname "logic_choreographed_scene"
+			values {SceneFile "scenes/canals/boxcar_scene.vcd"
+				targetname "LCS_boxcar_sirens"
+				OnTrigger1 "Sprite_labVort_Beam2,Kill,,0,-1"
+				OnTrigger1 "Sprite_labVort_Beam1,Kill,,0,-1"
+				OnTrigger1 "boxcar_vort_watchtv,BeginSequence,,0,-1"
+				OnTrigger1 "beam_boxcartv,Kill,,0,-1"
+				OnTrigger1 "sound_weld_electric_loop_1,StopSound,,0,-1"
+				OnTrigger1 "sound_weld_electric_blast_1,PlaySound,,0,-1"
+				OnTrigger2 "monitor_breen_screen,Disable,,0,-1"
+				OnTrigger2 "Breen,Kill,,0.5,-1"
+				//"OnCompletion" "boxcar_vort,EnableArmorRecharge,,0,-1" //also was disabled
+				//"OnCompletion" "boxcar_vort,ChargeTarget,!rndplayer,0.1,-1"//test random !player
+				OnCompletion "logic_jolt,Trigger,,1,-1"
+
+				// these values are from boxcar_vort
+				OnCompletion "LCS_becareful,Start,,3.5,-1" //also disable theses
+				OnCompletion "logic_jolt,Disable,,1.0,-1" //and this
+			}
+		}
+
+		//Trav|Edt - "_create" invalid?
+		create {classname "trigger_once" origin "684 2908 -36"
+			values {
+				//model "*117"
+				edt_getbspmodelfor_targetname "boxcar_door_close"
+				spawnflags "1"
+				targetname "boxcar_door_close"
+			//	"OnTrigger" "boxcar_closedoor,BeginSequence,,0,-1"
+				OnTrigger "relay_boxcar_nags,Kill,,0,-1"
+				OnTrigger "case_boxcar_nags,Kill,,0,-1"
+				OnTrigger "LCS_boxcar_nag01,Kill,,0,-1"
+				OnTrigger "LCS_boxcar_nag02,Kill,,0,-1"
+				OnTrigger "LCS_boxcar_nag03,Kill,,0,-1"
+				OnTrigger "LCS_boxcar_nag04,Kill,,0,-1"
+				OnTrigger "speaker_boxcar_nag,TurnOff,,0,-1"
+			//	"OnTrigger" "brush_boxcar_door_PClip,Enable,,0,-1"
+			} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				targetname "syn_eqipment_base"
+				item_suit		"1"
+				item_armor		"25"
+				weapon_crowbar	"1"
+			} }
+
+//Trav|Edt - Enable Pistols after checkpoint
+		create {classname "info_player_equip"
+			values {targetname "trav_equip_pistol"
+				StartDisabled "1"
+				weapon_pistol "1"
+				ammo_pistol "36"} }
+
+		create {classname "trigger_once"
+			origin "-152 -6848 640"
+			values {
+				//model "*98"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-152 -6848 640"
+				spawnflags "1"
+				OnTrigger "trav_equip_pistol,Enable,,0,1"
+				OnTrigger "trav_equip_pistol,EquipAllPlayers,,1,1"
+				OnTrigger "syn_vint_ld_2,CheckSkill,,0,1"} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "909 -8289 0"
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} } //30x ??
+
+		create {classname "info_player_coop" origin "800 -6412 550"
+			values {angles "0 -90 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_player_coop" origin "912 -1000 240"
+			values {angles "0 150 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {IsVehicleMap "0" targetname "syn_global_settings"} }
+
+		// New Weapon(s)
+		create {classname "info_player_equip"
+			values {targetname "syn_new_weapon_stunstick"
+				StartDisabled "1"
+				weapon_stunstick "1"
+			} }
+
+		create {classname "trigger_multiple" origin "-320 -7360 -72"
+			values {
+				//model "*118"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-312 -7360 -72"
+				spawnflags "1"
+				filtername "syn_new_weapon_filter"
+				OnTrigger "syn_vint_ld1,CheckSkill,,0,-1"
+				//OnTrigger "syn_vint_diff_1_temp,AddOutput,hintgroup ,0,-1"
+				OnStartTouch "syn_new_weapon_stunstick,Enable,,0,1"
+				OnStartTouch "syn_new_weapon_stunstick,EquipPlayer,,0,-1"
+				OnStartTouch "!activator,AddOutput,targetname syn_d1_canals_01_received_new_weapon,0.1,-1"} }
+
+		create {classname "filter_activator_name"
+			values {targetname "syn_new_weapon_filter"
+				Negated "1"
+				filtername "syn_d1_canals_01_received_new_weapon"} }
+
+//--Checkpoints--
+		create {classname "trigger_once"
+			origin "636 -6520 600"
+			values {
+				//model "*113"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "596 -6520 600"
+				spawnflags "1"
+				targetname "syn_mplrs"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0.1,-1"
+				//OnTrigger "syn_checkpoint1_push,Enable,,0,-1"
+				} }
+//separate for mp_teleport_disable
+		create {classname "trigger_once"
+			origin "636 -6520 600"
+			values {
+				//model "*113"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "596 -6520 600"
+				spawnflags "1"
+				OnTrigger "syn_new_weapon_stunstick,EquipAllPlayers,,0,-1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+				OnTrigger "syn_vint_ld_1,CheckSkill,,0,-1"
+				OnTrigger "syn_vint_diff_npc_1_temp,ForceSpawn,,0,-1"} }
+
+		//create {classname "trigger_push" origin "630 -6520 600"
+		//	values {model "*113"
+		//		spawnflags "1"
+		//		targetname "syn_checkpoint1_push"
+		//		StartDisabled "1"
+		//		speed "500"
+		//		pushdir "0 0 0"} }
+
+		create {classname "trigger_once"
+			origin "640 672 112"
+			values {
+				//model "*25"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "640 672 112"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,-1"} }
+
+//--Extra--
+//Trav|Edt - add 2nd healthcharger
+		//create {classname "item_healthcharger" origin "576 -7832 -74.1"}
+		//create {classname "item_healthcharger" origin "576 -7720 -74.1"}
+		create {classname "item_healthcharger" origin "576 -8176 -74.1"
+			values {targetname "syn_vint_extracharger"} }
+
+//Diff:
+//intro
+		create {classname "logic_difficulty"
+			values {spawnflags "1"
+				targetname "syn_vint_ld1"
+				//TODO: move to later LD
+				OnEasy "syn_vint_diff_extranpc3,Kill,,0,-1"
+				OnNotHard "syn_vint_diff_extranpc4,Kill,,0,-1"
+				//beat_cop1_maker
+				//OnNotLow "beat_cop1_maker,AddMaxChildren,1,-1"
+				//OnHigh "beat_cop1_maker,AddMaxChildren,2,-1"
+				//outside
+				OnEasyLow "syn_vint_diff_1*,Kill,,0,-1"
+				OnMed "syn_vint_diff_1,AddMaxChildren,2,0,-1"
+				OnHigh "syn_vint_diff_1,AddMaxChildren,4,0,-1"
+
+				OnNotEasy "assault2cop_1_maker,AddMaxChildren,1,0,-1"
+				OnHard "assault2cop_1_maker,AddMaxChildren,1,0,-1"} }
+
+//--stairs
+//don't shoot crybabies
+		create {classname "ai_relationship"
+			values {subject "npc_metropolice"
+				target "npc_citizen"
+				disposition "4"//nut
+				StartActive "1"} }
+
+//upstair default cop enabler
+		create {classname "trigger_once" origin "-576 -7360 320"
+			values {
+				//model "*106"
+				edt_mins "-50 -80 -110"
+				edt_maxs "50 60 100"
+				spawnflags "1"
+				OnTrigger "beat_cop1_maker,Enable,,0.1,-1"} }
+
+//outside
+		create {classname "npc_template_maker"
+			origin "-616 -7144 584"
+			values {//spawnflags "128"
+				targetname "syn_vint_diff_1"
+				angles "0 45 0"
+				MaxNPCCount "2"//LD Scaled
+				SpawnFrequency "0.5"
+				StartDisabled "0"
+				TemplateName "syn_vint_diff_1_temp" } }
+
+		create {classname "npc_metropolice"
+			origin "-384 -6960 592"
+			values {spawnflags "134148"
+				targetname "syn_vint_diff_1_temp"
+				//hintgroup "stairscop"
+				squadname "assaultcopsquad"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+//disable cop spawner when able to be seen, failsafe
+		create {classname "trigger_once" origin "-224 -6848 864"
+			values {
+				//model "*28"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-448 -6848 640"
+				spawnflags "1"
+				OnTrigger "syn_vint_diff_1,Kill,,0,-1"} }
+//endlevelish
+		create {classname "npc_metropolice"
+			origin "960 104 416"
+			values {spawnflags "132096"
+				angles "0 180 0"
+				targetname "syn_vint_diff_extranpc3"
+				squadname "assaultcopsquad"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+		create {classname "npc_metropolice"
+			origin "960 256 416"
+			values {spawnflags "132096"
+				angles "0 180 0"
+				targetname "syn_vint_diff_extranpc4"
+				squadname "assaultcopsquad"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+//Diff: supplies
+//corner pre-house
+		create {classname "logic_difficulty" values {spawnflags "1" targetname "syn_vint_ld_1"
+			OnLow "syn_crate_*,Kill,,0,-1"} }
+
+		create {classname "item_item_crate"
+			origin	"592 -6064 528"
+			values{targetname "syn_crate_3"
+				angles "0 35 0"
+				ItemClass "item_dynamic_resupply"
+				ItemCount "5"} }
+
+//corner post-house
+		create {classname "logic_difficulty" values {spawnflags "1" targetname "syn_vint_ld_2"
+			OnLow "syn_crate_3,Kill,,0,-1"
+			OnLow "syn_crate_3,Kill,,0,-1"
+			OnEasy "syn_vint_diff_npc_1_*,Kill,,0,-1"
+			OnNotHard "syn_vint_diff_npc_1_2,Kill,,0,-1"
+			OnNotHard "syn_vint_diff_npc_1_3,Kill,,0,-1"} }
+
+		create {classname "item_item_crate"
+			origin	"1216 -7104 512"
+			values{targetname "syn_crate_1"
+				angles "0 50 0"
+				ItemClass "item_dynamic_resupply"
+				ItemCount "5"} }
+
+		create {classname "item_item_crate"
+			origin	"1216 -7104 544"
+			values{targetname "syn_crate_2"
+				angles "0 14 0"
+				ItemClass "item_dynamic_resupply"
+				ItemCount "5"} }
+
+//Diff: coppers
+//		create {classname "npc_metropolice"
+//			origin "1296 -6528 641"
+//			values {spawnflags "8708"
+//				angles "0 180 0"
+//				targetname "syn_vint_diff_npc_1_1"
+//				additionalequipment "weapon_pistol"} }
+//
+//		create {classname "npc_metropolice"
+//			origin "1296 -6640 641"
+//			values {spawnflags "8708"
+//				angles "0 180 0"
+//				targetname "syn_vint_diff_npc_1_2"
+//				additionalequipment "weapon_pistol"} }
+//
+//		create {classname "npc_metropolice"
+//			origin "1296 -7104 641"
+//			values {spawnflags "8708"
+//				angles "0 180 0"
+//				targetname "syn_vint_diff_npc_1_3"
+//				additionalequipment "weapon_pistol"} }
+//
+//		create {classname "point_template"
+//			values {spawnflags "2"
+//				targetname "syn_vint_diff_npc_1_temp"
+//				Template01 "syn_vint_diff_npc_1_1"
+//				Template02 "syn_vint_diff_npc_1_2"
+//				Template03 "syn_vint_diff_npc_1_3"} }
+
+//Trav|Edt - add vphys clips at airvent
+		create {classname "func_clip_vphysics" origin "608 -5166 552"
+			values
+			{
+				//model "*78"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "608 -5058 552"
+			}
+		}
+
+//remake: don't let this trigger kill half the npc's
+		delete {classname "trigger_once" origin "608 -5058 552"}
+		//HL2U
+		delete {classname "trigger_once" origin "608 -5058 532"}
+		create {classname "trigger_once" origin "608 -5058 552"
+			values {
+				//model "*78"
+				edt_mins "-20 -10 -60"
+				edt_maxs "20 10 30"
+				spawnflags "1"
+				"OnTrigger" "tunnel_barrels_template,ForceSpawn,,0,-1"
+				"OnTrigger" "assault3cop_2_maker,Enable,,0,-1"
+				"OnTrigger" "assault3cop_1_maker,Enable,,0,-1"
+				"OnTrigger" "assault3cop_assault,Deactivate,,0,-1"
+				"OnTrigger" "assault3cop_assault2,Activate,,0.2,-1"} }
+
+//Trav|Edt - Add more cops
+		create {classname "npc_template_maker"
+			origin "416 -992 264" //392 -1736 264
+			values {spawnflags "128"
+				targetname "syn_vint_extracops_temp"
+				angles "0 180 0"
+				MaxNPCCount "2"//LD Scaled
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "syn_vint_extracops_trav" } }
+
+		create {classname "logic_difficulty"
+			values {spawnflags "3"//TODO: checks PC with PCoutput!!! fix this
+				targetname "syn_vint_ld2"
+				OnMed "syn_vint_extracops_temp,SetMaxChildren,3,0,-1"
+				OnHigh "syn_vint_extracops_temp,SetMaxChildren,4,0,-1"
+				OnHardHigh "syn_vint_extracops_temp,SetMaxChildren,6,0,-1"} }
+
+		create {classname "npc_metropolice"
+			origin "392 -1736 264"
+			values {spawnflags "33688076"
+				targetname "syn_vint_extracops_trav"
+				squadname "squad_trav_cops"
+				additionalequipment "weapon_pistol"
+				weapondrawn "1" } }
+
+		create {classname "trigger_once"
+			origin "256 -4064 448"
+			values {
+				//model "*33"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "256 -4064 448"
+				spawnflags "1"
+				OnTrigger "syn_vint_extracops_temp,Enable,,6,-1"
+//Trav|Edt - if barrelpush_cop2 dies b4 he pushes barrel, enable motion on his barrel
+				OnTrigger "barrelpush_cop2,AddOutput,OnDeath barrelpush_barrel:EnableMotion::0:-1,0,-1"
+//Trav|Edt - enable train based off of trigger raither than ai
+				OnTrigger "razortrain_horn_wav,PlaySound,,0,-1"
+				OnTrigger "razortrain_wav,PlaySound,,0,-1"
+				OnTrigger "looping_traincar2,StartForward,,0,-1"
+				OnTrigger "looping_traincar1,StartForward,,0,-1"
+				OnTrigger "trainstopped_wav,StopSound,,0,-1"} }
+
+//Trav|Edt - Stop crap from stopping train (CItem still blocks [does not effected by triggers)
+		create {classname "trigger_remove"
+			origin "2603.48 14864 392"
+			values {
+				//model "*91"
+				edt_mins "-35 -80 -150"
+				edt_maxs "35 80 150"
+				spawnflags "12"
+				parentname "looping_traincar2"
+				filtername "trav_train_filter"} }
+
+		create {classname "filter_multi"
+			values {targetname "trav_train_filter"
+				//Negated "1"
+				Filter01 "trav_train_filter1"
+				Filter02 "trav_train_filter2"} }
+
+		create {classname "filter_activator_class"
+			values {targetname "trav_train_filter1"
+				Negated "1"
+				filterclass "prop_physics"} }
+
+		create {classname "filter_activator_class"
+			values {targetname "trav_train_filter2"
+				Negated "1"
+				filterclass "item_item_crate"} }
+
+		//another way to remove stuff
+		create {
+			classname "trigger_multiple"
+			origin "2603.48 14864 392"
+			values {
+				edt_getbspmodelfor_classname "trigger_hurt"
+				edt_getbspmodelfor_origin "2603.48 14864 392"
+				//wait "1"
+				spawnflags "1032"
+				StartDisabled "0"
+				parentname "looping_traincar2"
+				OnStartTouch "!activator,Break,,0,-1"
+				OnStartTouch "!activator,Kill,,0,-1"
+			}
+		}
+		//from first train too
+		create {
+			classname "trigger_multiple"
+			origin "3171.48 15056 344"
+			values {
+				edt_getbspmodelfor_classname "trigger_hurt"
+				edt_getbspmodelfor_origin "3171.48 15056 344"
+				//wait "1"
+				spawnflags "1032"
+				StartDisabled "0"
+				parentname "looping_traincar1"
+				OnStartTouch "!activator,Break,,0,-1"
+				OnStartTouch "!activator,Kill,,0,-1"
+			}
+		}
+		//failsafe for first train as it have low ladder that can stuck train by props
+		create {
+			classname "trigger_multiple"
+			origin "2770 15056 344"
+			values {
+				edt_getbspmodelfor_classname "trigger_hurt"
+				edt_getbspmodelfor_origin "3171.48 15056 344"
+				//wait "1"
+				spawnflags "1032"
+				StartDisabled "0"
+				parentname "looping_traincar1"
+				OnStartTouch "!activator,Break,,0,-1"
+				OnStartTouch "!activator,Kill,,0,-1"
+			}
+		}
+
+//Trav|Edt - fix train lags
+		edit {targetname "track_4" values {origin "248 -12864 341"} }
+
+//Trav|Edt - Ambush cops
+		create {classname "npc_metropolice"
+			origin "48 -2320 420"
+			values {spawnflags "2564"
+				targetname "syn_vint_extracops_trav2"
+				squadname "squad_trav_ambush"
+				additionalequipment "weapon_stunstick" } }
+
+		create {classname "npc_template_maker"
+			origin "48 -2320 420"
+			values {targetname "syn_vint_extracops_temp2"
+				angles "0 270 0"
+				MaxNPCCount "1"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "syn_vint_extracops_trav2" } }
+
+		create {classname "npc_template_maker"
+			origin "88 -2304 420"
+			values {targetname "syn_vint_extracops_temp2"
+				angles "0 270 0"
+				MaxNPCCount "1"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "syn_vint_extracops_trav2" } }
+				
+		create {classname "npc_template_maker"
+			origin "64 -1696 392"
+			values {targetname "syn_vint_extracops_temp2"
+				angles "0 270 0"
+				MaxNPCCount "1"
+				SpawnFrequency "1"
+				StartDisabled "1"
+				TemplateName "trav_cops" } }
+
+		create {classname "aiscripted_schedule"
+			values {spawnflags "4"
+				targetname "trav_aiscript_sched_ambush"
+				schedule "2"
+				m_iszEntity "syn_vint_extracops_trav2"
+				goalent "!player" } }
+
+		create {classname "trigger_once"
+			origin "-184 -2288 600"
+			values {
+				//model "*86"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-104 -2032 504"
+				spawnflags "1"
+				OnTrigger "syn_vint_extracops_temp2,Spawn,,0,-1"
+				OnTrigger "trav_aiscript_sched_ambush,StartSchedule,,0.1,-1"
+				OnTrigger "syn_vint_ld,CheckSkill,,0,-1"} }
+
+//TODO: move spawn or board
+//Trav|Edt - attempt to slow down rush a little (so train will have time to reset to go again)
+		//create {classname "prop_physics_override" origin "380 -986 320"
+		//	values {spawnflags "8" angles "0 0 -30"
+		//		model "models/props_debris/wood_board05a.mdl"
+		//		PerformanceMode "2"
+		//		health "300"} }
+
+//logic_difficulty test cops
+		create {classname "logic_difficulty"
+			values {spawnflags "1"
+				targetname "syn_vint_ld"
+				OnNotEasy "syn_vint_ld_cops_temp,ForceSpawn,,0,-1"} }
+
+		create {classname "point_template"
+			values {spawnflags "2"
+				targetname "syn_vint_ld_cops_temp"
+				Template01 "syn_vint_ld_cops"} }
+
+		create {classname "npc_metropolice" origin "904 -64 257"
+			values {spawnflags "131844"
+				angles "0 240 0"
+				weapondrawn "1"
+				targetname "syn_vint_ld_cops"
+				additionalequipment "weapon_pistol"} }
+
+		create {classname "npc_metropolice" origin "920 960 256"
+			values {spawnflags "131844"
+				angles "0 240 0"
+				weapondrawn "1"
+				targetname "syn_vint_ld_cops"
+				additionalequipment "weapon_pistol"} }
+
+//Trav|Edt - Add crates near end
+		create {classname"item_item_crate"
+			origin "929 -993 260"
+			values {spawnflags "386"
+				targetname "syn_vint_crates"
+				ItemClass "item_dynamic_resupply"
+				ItemCount "3" } }
+
+		create {classname"item_item_crate"
+			origin "929 -929 260"
+			values {spawnflags "386"
+				targetname "syn_vint_crates"
+				ItemClass "item_dynamic_resupply"
+				ItemCount "4" } }
+
+//Trav|Edt - Add Synergy Logo
+		create {classname "infodecal"
+			origin "960 -504 168"
+			values {texture "vgui/gfx/synergy" } }
+			
+//block skip
+		create {classname "trigger_hurt"
+			origin "256 -628 608"
+			values {
+				//model "*25"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "640 672 112"
+				targetname "push_test"
+				spawnflags "1"
+				damagetype "0"
+				damage "1500"} }
+
+
+//Trav|Edt - Stop train sound at boxcar (only needed when train is enabled, disabled cuz of lag spike (due to ragdoll/npc caught in train?)
+		create {classname "trigger_once"
+			origin "846 2638 87.65"
+			values {
+				//model "*115"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "858 2638 58"
+				spawnflags "1"
+				OnTrigger "train_crossing_bell,StopSound,,1,-1" } }
+
+//Trav|Edt - Auti-rush
+		create {classname "trigger_coop"
+			origin "640 976 -80"
+			values {
+				//model "*25"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "640 672 112"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+					OnTrigger "trav_ladder_end,Disable,,0,1"//mp_antirush_disable check
+				OnPlayersIn "syn_antirush_push,Disable,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"
+				OnPlayersIn "trav_ladder_end,Enable,,1,1"} }
+
+		create {classname "trigger_push"
+			origin "816 2634 208.01"//608 2610 72.01
+			values {
+				//model "*100"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "736 2158 -55.99"
+				spawnflags "1"
+				targetname "syn_antirush_push"
+				pushdir "0 270 0"
+				speed "450"} }
+
+		delete {targetname "ladder2base"}
+		delete {targetname "ladder2top"}
+
+		create {classname "func_useableladder"
+			origin "816 2634 208.01"//not needed? meh
+			values {targetname "trav_ladder_end"
+				point0 "502 2613 79"
+				point1 "502 2613 -68"
+				//StartDisabled "1"
+				} }
+
+		//create {classname "point_template"
+		//	values {spawnflags "2"
+		//		targetname "trav_ladder_template"
+		//		Template01 "ladder2base"
+		//		Template02 "ladder2top"} }
+
+//Trav|Edt - close boxcar door
+		delete {targetname "boxcar_door_close"}
+
+		create {classname "trigger_coop"
+			origin "696 4424 -72"
+			values {
+				//model "*25"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "640 672 112"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "trav_closeboxcardoor_coop"
+				CountType "1"
+				UseHUD "0"
+				PlayerValue "100"
+				OnPlayersIn "boxcar_closedoor,BeginSequence,,0,1"
+				OnPlayersIn "brush_boxcar_door_PClip,Enable,,0,-1"
+				OnPlayersIn "relay_boxcar_nags,Kill,,0,1"
+				OnPlayersIn "case_boxcar_nags,Kill,,0,1"
+				OnPlayersIn "LCS_boxcar_nag0*,Kill,,0,1"
+				OnPlayersIn "speaker_boxcar_nag,TurnOff,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"} }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_canals_01"} }
+	}
+}

@@ -1,0 +1,410 @@
+d1_canals_05
+{
+	entity {
+//--Setup--
+		delete {classname "logic_auto" origin "3499.77 6666.86 -278"}
+		edit {classname "func_areaportal" values {targetname "disabled_portal" StartOpen "1"} }
+
+//Prevent Backtracking
+		create {classname "prop_dynamic" origin "4096 6720 -304"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				angles "0 270 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "3792 6720 -256"
+			values {_light "170 255 170"
+				brightness "1"
+				distance "96"
+				style "12"} }
+
+		//create {classname "trigger_push" origin "0 -64 0"
+		//	values {model "*19"
+		//		spawnflags "1"
+		//		speed "750"
+		//		pushdir "0 -90 0"} }
+
+//Enable AirBoats + checkpoint + Prevent Gate Closing
+		delete {targetname "tigger_closegate"}
+		create {classname "trigger_once" origin "6838.83 1405.96 -408"//6608 -428 -404//6550.03 1362.73 -435
+			values {
+				//model "*89"//*87//*83
+				edt_mins "-20 -150 -100"
+				edt_maxs "20 170 150"
+				spawnflags "64"
+				StartDisabled "1"
+				targetname "tigger_closegate"
+				filtername "filter_airboat"
+				OnTrigger "ss_arlene_postidle,BeginSequence,,0.1,-1"
+				OnTrigger "lcs_arlene_lookatplayer,Cancel,,0,-1"
+				OnTrigger "logic_arlene_getin_nag_use,Disable,,0,-1"
+				OnTrigger "logic_arlene_postidle_nag_use,Enable,,0,-1"
+				OnTrigger "trigger_retrigger_arlene_nags,Disable,,0.3,-1"
+				OnTrigger "speaker_arlene_nags,TurnOff,,0,-1"
+
+				OnTrigger "syn_vehiclespawn_1,Enable,,0,-1"
+				OnTrigger "syn_moreplayers,CheckSkill,,1,1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_3,0,-1"
+				OnTrigger "syn_global_settings,AddOutput,IsVehicleMap 1,0,-1"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				targetname "syn_eqipment_base"
+				item_suit		"1"
+				item_armor		"25"
+				weapon_crowbar	"1"
+				weapon_stunstick "1"
+				weapon_pistol	"1"
+				weapon_smg1		"1"
+				ammo_pistol		"54"
+				ammo_smg1		"45"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "3769.44 6636.51 -303.97"
+			values {angles "0 180 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_player_coop" origin "4182 1474 -426"
+			values {angles "0 -90 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_player_coop" origin "7440 1312 -412"
+			values {angles "0 -90 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {IsVehicleMap "0" targetname "syn_global_settings"} }
+
+		create {classname "info_vehicle_spawn" origin "7352 1402 -478.02"
+			values {targetname	"syn_vehiclespawn_1"
+				angles "0 90 0"
+				StartEnabled "0"//Enabled in --Setup--
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "info_vehicle_spawn" origin "7100 1402 -478.02"
+			values {targetname	"syn_vehiclespawn_1_med"
+				angles "0 90 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+				
+		create {classname "info_vehicle_spawn" origin "6888 1442 -478.02"
+			values {targetname	"syn_vehiclespawn_1_high"
+				angles "0 90 0"
+				StartEnabled "0"
+				RespawnVehicle "1"
+				Ownership "1"
+				VehicleType "2"
+				VehicleSize "164"
+				model "models/airboat.mdl"
+				VehicleScript "scripts/vehicles/airboat.txt"} }
+		
+		create {classname "logic_difficulty"
+			values
+			{
+				targetname "syn_moreplayers"
+				LowerPlayer "10"
+				UpperPlayer "20"
+				OnMed "syn_vehiclespawn_1_med,Enable,,0,-1"
+				OnHigh "syn_vehiclespawn_1_med,Enable,,0,-1"
+				OnHigh "syn_vehiclespawn_1_high,Enable,,0,-1"
+			}
+		}
+
+//--Checkpoints--
+		create {classname "trigger_once"
+			origin "4228 1746 -390.5"
+			values {
+				//model "*33"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "4228 1746 -390.5"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+				OnTrigger "trav_teleport_failsafe,Enable,,4,-1"} }
+
+//--Extra--
+
+	
+//modi: prevent vehicle spawn block				
+		create {classname "filter_activator_class"
+			values {targetname "modi_airboat_filer"
+				filterclass "prop_vehicle_airboat"} }
+				
+		create {classname "trigger_multiple" origin "7352 1402 -478.02"
+			values {
+				//model "*48"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "3532 5484 -264"
+				angles "90 0 0"
+				spawnflags "72"
+				targetname "modi_spawn_antiblock"
+				filtername "modi_airboat_filer"
+				OnStartTouch "modi_player_remover,Disable,,0,-1"
+				OnEndTouch "modi_player_remover,Enable,,0,-1"} }
+
+		create {classname "trigger_hurt"
+			origin "7312 1402 -440"
+			values {
+				//model "*48"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "3532 5484 -264"
+				angles "90 0 0"
+				spawnflags "1"
+				StartDisabled "0"
+				targetname "modi_player_remover"
+				damage "10"
+				damagecap "5"
+				damagetype "262144"} }
+
+		create {classname "trigger_hurt"
+			origin "7422 1402 -440"
+			values {
+				//model "*48"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "3532 5484 -264"
+				angles "90 0 0"
+				spawnflags "1"
+				StartDisabled "0"
+				targetname "modi_player_remover"
+				damage "10"
+				damagecap "5"
+				damagetype "262144"} }
+//modi: end of editions
+
+//allow any airboat
+		delete {targetname "filter_airboat"}
+		create {classname "filter_activator_class"
+			values {targetname "filter_airboat"
+			filterclass "prop_vehicle_airboat"} }
+
+//Trav|Edt - delete occluder stuff
+		delete {classname "trigger_multiple" origin "6608 -460 -404"}
+		delete {classname "trigger_multiple" origin "6608 -428 -404"}
+
+//Trav|Edt - Disable some ents from breaking (bridges)
+		edit {classname "func_breakable" origin "3423 6467.39 -159" values {health "0"} }
+		edit {classname "func_breakable" origin "3417 6509.3 -159" values {health "0"} }
+//physwalker
+		edit {classname "prop_physics" origin "4199 5356 -126" values {classname "prop_physics_override" health "0" spawnflags "8"} }
+		edit {classname "prop_physics" origin "4203 5333 -126" values {classname "prop_physics_override" health "0" spawnflags "8"} }
+		edit {classname "prop_physics" origin "4367 5295 -125" values {classname "prop_physics_override" health "0" spawnflags "8"} }
+		edit {classname "prop_physics" origin "4389 5207 -126" values {classname "prop_physics_override" health "0" spawnflags "8"} }
+		edit {classname "prop_physics" origin "4197 4930 -126" values {classname "prop_physics_override" health "0" spawnflags "8"} }
+		edit {classname "prop_physics" origin "4351 5270 -121" values {spawnflags "8"} }
+		edit {classname "prop_physics" origin "4179 4935 -120" values {spawnflags "8"} }
+//preairboat
+	//	edit {classname "prop_physics" origin "6116 763 -461" values {classname "prop_physics_override" health "0"} }
+	//	edit {classname "prop_physics" origin "6132 762 -462" values {classname "prop_physics_override" health "0"} }
+	//	edit {classname "prop_physics" origin "6222 910 -454" values {classname "prop_physics_override" health "0"} }
+	//	edit {classname "prop_physics" origin "6231 895 -455" values {classname "prop_physics_override" health "0"} }
+
+//Trav|Edt - Add crates
+		create {classname "item_item_crate"
+			origin "3825 4135 -236"
+			values {ItemClass "item_dynamic_resupply"
+				ItemCount "5"} }
+
+		create {classname "item_item_crate"
+			origin "4184 3984 -312"
+			values {ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				angles "0 84 0"} }
+
+//Trav|Edt - don't remove npc's here
+		delete {targetname "relay_kill_npcs"}
+
+//Trav|Edt - add failsafe for teleport (moveplayers doesnt always get everybody (now disabled to avoid teleports)
+		delete {targetname "trigger_rockfall_start"}
+
+		create {classname "trigger_coop"
+			origin "5005 1395 -385"
+			values {
+				//model "*67"
+				//several trigger_hurts at the same origin
+				//this trigger should reach much further anyways
+				edt_mins "-250 -1300 -100"
+				edt_maxs "1800 210 100"
+				spawnflags "1"
+				CountType "1"
+				UseHUD "0"
+				PlayerValue "100"
+				OnPlayersIn "!self,Kill,,1,1"
+				OnPlayersIn "relay_rockfall_docollapse,Trigger,,0,-1"} }
+
+		//delete {targetname "hurt_rockfall"}
+		//create {classname "trigger_multiple"//trigger_teleport
+			//origin "2624 6784 -440"
+			//values {model "*57"
+				//spawnflags "1"
+				//StartDisabled "1"
+				//targetname "trav_teleport_failsafe"
+				//target "trav_teleport_spot"
+				//OnStartTouch "trav_teleport_spot,Teleport,,0,-1"} }
+
+		//create {classname "info_teleport_destination" origin "3984 1448 -464"
+			//values {angles "0 330 0" targetname "trav_teleport_spot"} }
+
+		//create {classname "trigger_multiple"
+		//	origin "4224 2784 -428"
+		//	values {model "*39"
+		//		spawnflags "1"
+		//		StartDisabled "1"
+		//		targetname "trav_teleport_failsafe"
+		//		wait "1"
+		//		OnStartTouch "trav_teleport_teleporter,Teleport,,0,-1"} }
+
+		//create {classname "point_teleport"
+		//	origin "3984 1448 -464"
+		//	values {targetname "trav_teleport_teleporter"
+		//		angles "0 330 0"
+		//		target "!activator"} }
+
+//Trav|Edt - prevent AL from being removed
+		delete {classname "trigger_once" origin "5060 1188 -389"}
+		create {classname "trigger_once"
+			origin "5060 1188 -389"
+			values {
+				//model "*37"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "5060 1188 -389"
+				spawnflags "1"
+				OnTrigger "cannister_shanty_ambient2,FireCanister,,0,-1"} }
+
+//Trav|Edt - make last canister do damage (only if rly close so they wont get stuck)
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "cannister_shanty_8,AddOutput,Damage 200,0,-1"
+				OnMapSpawn "cannister_shanty_8,AddOutput,DamageRadius 64,0,-1"} }
+
+//Trav|Edt - add vclip b4 gate opens
+		create {
+			classname "func_vehicleclip"
+			origin "6591 1424 -408" 
+			values {
+				edt_getbspmodelfor_targetname "trigger_arelenechat" 
+				targetname "trav_boat_gatevclip"
+			}
+		}
+
+		create {classname "logic_relay"
+			values {spawnflags "1"
+				targetname "relay_airboat_gateopen"
+				OnTrigger "trav_boat_gatevclip,Disable,,1,-1"} }
+
+//don't let acidjazz hurt players around airboat spawn (nvm, big trigger)
+		//delete {classname "trigger_hurt" origin "2048 -640 -495"}
+
+//Trav|Edt - add crates by boat
+		create {classname "item_item_crate"
+			origin	"6833 1311 -428"
+			values {ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+		create {classname "item_item_crate"
+			origin	"6833 1311 -396"
+			values {ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+//synvint
+		create {classname "logic_relay"
+			values {spawnflags "1"
+			targetname "_syn_vint"
+				OnTrigger "gate3_wheel,AddOutput,spawnflags 1153,0,-1"
+				OnTrigger "synvint_gatecontroller,CancelPending,,1,-1"} }
+
+//Trav|Edt - prevent greifing with gate
+		edit {targetname "gate3_wheel" values {spawnflags "1185"} }
+
+//synvint
+		create {classname "logic_relay"
+			values {//spawnflags "1"// needs to exist to call CancelPending
+				targetname "synvint_gatecontroller"
+				OnSpawn "gate3_wheel,AddOutput,OnPressed !self:SetPosition:1:0.1:-1,5,-1"
+				OnSpawn "gate3_wheel,AddOutput,OnPressed !self:Lock::0:-1,5,-1"} }
+
+//Trav|Edt - prevent players from blocking gate from opening by standing on it
+		create {classname "func_brush"
+			origin "-218.2 -1181.5 -192"
+			values {
+				//model "*29"
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "4157.8 2282.5 -384"
+				spawnflags "2"} }
+
+		create {classname "func_brush"
+			origin "-218.2 -1381.5 -192"
+			values {
+				//model "*29"
+				edt_getbspmodelfor_classname "func_brush"
+				edt_getbspmodelfor_origin "4157.8 2282.5 -384"
+				spawnflags "2"} }
+
+//Trav|Edt - Auti-rush
+		create {classname "trigger_coop" origin "-3715 -2070 -400"
+			values
+			{
+				edt_mins "-600 -600 -200"
+				edt_maxs "600 600 200"
+				spawnflags "1"
+				targetname "syn_antirush_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,1"
+				OnPlayersIn "syn_antirush_light,Kill,,0,1"
+				OnPlayersIn "syn_antirush_push,Disable,,0,1"
+				OnPlayersIn "!self,Disable,,1,1"
+			}
+		}
+
+		create {classname "prop_dynamic" origin "-4080 -2304 -528"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_wall"
+				angles "0 0 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "-4080 -2304 -432"
+			values {_light "170 255 170"
+				targetname "syn_antirush_light"
+				brightness "1"
+				distance "512"
+				style "12"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//Trav|Edt - stop krazy headcrabness
+		delete {classname "trigger_once" origin "-3264 -1888 -416"}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_canals_05"} }
+	}
+}
