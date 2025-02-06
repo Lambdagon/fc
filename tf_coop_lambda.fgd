@@ -4671,11 +4671,17 @@
 		2 : "Jeep"
 		3 : "Jalopy"
 	]
+	enablegun(choices) : "Vehicles have turrets" : 0 =
+	[
+		0 : "Disabled"
+		1 : "Enabled"
+	]
 	
 	input EnableVehicles(void) : "Enable spawning vehicles."
 	input DisableVehicles(void) : "Disable spawning vehicles."
 	input ToggleVehicles(void) : "Toggle spawning vehicles."
 	input SetVehicleType(integer) : "Set type of vehicle to spawn, if set to 0 spawning is disabled."
+	input SetVehicleEnableGun(integer) : "Turns vehicle turrets on or off."
 ]
 
 @PointClass base(Targetname) iconsprite("editor-lfe/lfe_logic_coop.vmt") = fc_logic_zombie : "Forced Zombie Co-op Logic" []
