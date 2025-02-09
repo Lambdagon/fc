@@ -8609,8 +8609,13 @@
 		
 		"ACHIEVEMENT_EVENT_FC_SAVETUNNELGUY"					: "[FC] Save the massacre tunnel guy."
 	]
+	
+	StartDisabled(boolean) : "Start Disabled" : 0 : "Start disabled."
+	ActivatorOnly(boolean) : "Activator Only" : 0 : "Sets this achievement to only fire for the activator."
 
 	// Inputs
+	input Enable(void) : "Enables achievement."
+	input Disable(void : "Disables achievement."
 	input Toggle(void) : "Toggle the relay between enabled and disabled."
 	input FireEvent(void) : "Tells the achievement system the specifed event has occured."
 	
