@@ -4,9 +4,9 @@
 	{
 		"ControlName"	"CTFCreateMultiplayerGameServerPage"
 		"fieldName"		"ServerPage"
-		"xpos"			"c-250"
+		"xpos"			"c-350"
 		"ypos"			"c-200"
-		"wide"			"500"
+		"wide"			"700"
 		"tall"			"400"
 		"autoResize"	"0"
 		"pinCorner"		"0"
