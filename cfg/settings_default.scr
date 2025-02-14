@@ -77,7 +77,8 @@ DESCRIPTION SERVER_OPTIONS
 		{
 			LIST
 			"#coplay_joinfilter_off"		"-1"
-			"#coplay_joinfilter_inviteonly"	"0"
+			// Only works on lobbies
+			//"#coplay_joinfilter_inviteonly"	"0"
 			"#coplay_joinfilter_friends"	"1"
 			"#coplay_joinfilter_anyone"		"2"
 		}
@@ -155,7 +156,7 @@ DESCRIPTION SERVER_OPTIONS
 	{
 		"#lfce_IdleKickTime"
 		{ NUMBER 0 60 }
-		{ "3" }
+		{ "10" }
 	}
 
 	"tf_weapon_criticals"
@@ -231,7 +232,7 @@ DESCRIPTION SERVER_OPTIONS
 	{
 		"#lfce_HL2Hull"
 		"#Tooltip_lfce_HL2Hull"
-		{ BOOL }
+		{ NUMBER 0 2 }
 		{ "1" }
 	}
 
