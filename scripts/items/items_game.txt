@@ -20192,9 +20192,9 @@
 					"attribute_class"	"max_ammo"
 					"value" "200"
 				}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value" "1"
 				}
 				"crit mod disabled"
@@ -23098,9 +23098,9 @@ Fires....... something"
 					"attribute_class"	"mult_sniper_charge_per_sec"
 					"value"				"1.50"
  				}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value"				"1"
 				}
 				"sniper fires tracer"
@@ -26957,9 +26957,9 @@ Fires....... something"
 				//	"attribute_class"	"mult_player_movespeed"
 				//	"value"				"1.15"
 				//}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value"				"1"
 				}
 				"damage penalty"
@@ -27040,9 +27040,9 @@ Fires....... something"
 					"attribute_class"	"mult_player_movespeed"
 					"value"				"1.15"
 				}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value"				"1"
 				}
 				"damage penalty"
@@ -36478,9 +36478,9 @@ Fires....... something"
 					"attribute_class" 	"mult_spread_scales_consecutive"
 					"value" "1"
 				}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value" "1"
 				}
 				"crit mod disabled"
@@ -37221,9 +37221,9 @@ Fires....... something"
 					"attribute_class"	"max_ammo"
 					"value" "200"
 				}
-				"crits_become_minicrits"
+				"minicrit_headshot"
 				{
-					"attribute_class"	"crits_become_minicrits"
+					"attribute_class"	"minicrit_headshot"
 					"value" "1"
 				}
 				"crit mod disabled"
@@ -51485,6 +51485,16 @@ Fires....... something"
 			"effect_type"	"positive"
 			"armory_desc"	"on_active"
 			"stored_as_integer"	"0"
+		}
+		"10066"
+        {
+            "name"    "minicrit_headshot"
+            "attribute_class"    "minicrit_headshot"
+            "description_string"    "Headshots are Mini-Crits"
+            "description_format"    "value_is_additive"
+            "hidden"    "0"
+            "effect_type"    "negative"
+            "stored_as_integer"    "1"
 		}
 	}
 	"attribute_controlled_attached_particles"
