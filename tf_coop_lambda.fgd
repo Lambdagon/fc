@@ -327,7 +327,7 @@
 		"func_changeclass"
 		"func_door"
 		"func_door_rotating"
-		"func_clip_vphysics"
+		//"func_clip_vphysics"
 		"func_button"
 		"func_flag_alert"
 		"func_guntarget"
@@ -2619,7 +2619,7 @@
 	output OnTruceEnd(void) : "Sent when a truce ends."
 ]
 
-@PointClass base(Targetname, PlayerClass, Angles) studio("models/player/spy.mdl") = info_player_coop : "This entity indicates the position and facing direction at which the player will spawn in co-op modes." []
+@PointClass base(Targetname, Parentname, PlayerClass, Angles) studio("models/player/spy.mdl") = info_player_coop : "This entity indicates the position and facing direction at which the player will spawn in co-op modes." []
 
 @PointClass base(Targetname, Parentname, TeamNum, EnableDisable, Angles) studio("models/player/heavy.mdl") = info_player_teamspawn :
 	"This entity marks the spawn point for Team Fortress players."
@@ -7596,6 +7596,20 @@
 	input Disable( void ) : "Disable collisions with vehicles"
 ]
 
+@SolidClass base(Parentname, Targetname, Global) = func_clip_vphysics: "VPhysics Clip" 
+[
+	StartDisabled(choices) : "Start Disabled" : 1 =
+	[
+		1 : "Yes"
+	]
+	
+	filtername(filterclass) : "Filter Name" : : "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
+
+	input Kill( void ) : "Removes this entity from the world"
+	input Enable( void ) : "Enable collisions with physics"
+	input Disable( void ) : "Disable collisions with physics"
+]
+
 @SolidClass base(func_movelinear) = func_lookdoor : "A door that moves either when looked by a targeted object or when " +
 	"a target object comes near the door.  Behavior can be either based on viewing direction or proximity " +
 	"alone, or on a combination of both.  If inverted the doors behavior will be the opposite." 
@@ -8608,6 +8622,7 @@
 		"ACHIEVEMENT_EVENT_PORTAL_BEAT_GAME"					: "[PORTAL] Complete Portal."
 		
 		"ACHIEVEMENT_EVENT_FC_SAVETUNNELGUY"					: "[FC] Save the massacre tunnel guy."
+		"ACHIEVEMENT_EVENT_FC_TOLIVEFOR"					: "[FC] Jump out of a window and die."
 	]
 	
 	StartDisabled(boolean) : "Start Disabled" : 0 : "Start disabled."
