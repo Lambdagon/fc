@@ -7596,12 +7596,8 @@
 	input Disable( void ) : "Disable collisions with vehicles"
 ]
 
-@SolidClass base(Parentname, Targetname, Global) = func_clip_vphysics: "VPhysics Clip" 
+@SolidClass base(Targetname, Parentname, EnableDisable, Global) = func_clip_vphysics: "VPhysics Clip" 
 [
-	StartDisabled(choices) : "Start Disabled" : 1 =
-	[
-		1 : "Yes"
-	]
 	
 	filtername(filterclass) : "Filter Name" : : "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
 
