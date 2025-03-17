@@ -18,19 +18,6 @@ d1_canals_03
 		//edit {targetname "fence_door_4" values {spawnflags "256" wait "-1"} }
 		//edit {targetname "fence_door_6" values {spawnflags "256" wait "-1"} }
 
-//Prevent Backtracking
-		create {classname "prop_dynamic" origin "784 3416.01 -848"
-			values {model "models/synergy/tools/syn_transition.mdl"
-				targetname "hl2deftrig"
-				angles "0 225 0"
-				solid "6"
-				DisableShadows "1"} }
-		create {classname "prop_dynamic" origin "1725 2697 -910"
-			values {model "models/synergy/tools/syn_transition.mdl"
-				targetname "hl2utrig"
-				angles "0 225 0"
-				solid "6"
-				DisableShadows "1"} }
 		edit {classname "trigger_changelevel" values {edt_map "d1_canals_02" edt_landmark "canals_trans_0203" spawnflags "6"} }
 
 		create {classname "light_dynamic" origin "784 3416 -800"
