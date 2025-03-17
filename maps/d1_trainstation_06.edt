@@ -332,60 +332,6 @@ d1_trainstation_06
 		//	}
 		//}
 
-		"delete" { "targetname" "crowbar_weapon" }
-
-		"create"
-		{
-			"classname"	"weapon_crowbar"
-			"origin"	"-9618 -3498 601"
-
-			"values"
-			{
-				"targetname"		"crowbar_weapon"
-
-				"OnPlayerPickup"	"edt_crowbar_spawn,ForceSpawn,,0,0"
-				"OnPlayerPickup"	"edt_crowbar_equip,Enable,,0,0"
-			}
-		}
-
-		"create"
-		{
-			"classname"	"point_template"
-			"origin"	"0 0 0"
-
-			"values"
-			{
-				"targetname"	"edt_crowbar_spawn"
-				"Template01"	"edt_crowbar"
-			}
-		}
-
-		"create"
-		{
-			"classname"	"weapon_crowbar"
-			"origin"	"-9731.63 -3425.10 354.04"
-
-			"values"
-			{
-				"targetname"	"edt_crowbar"
-
-				"OnPlayerPickup"	"edt_crowbar_spawn,ForceSpawn,,0,0"
-			}
-		}
-
-		"create"
-		{
-			"classname"	"info_player_equip"
-			"origin"	"0 0 0"
-
-			"values"
-			{
-				"targetname"		"edt_crowbar_equip"
-				"StartDisabled"		"1"
-				"weapon_crowbar"	"1"
-			}
-		}
-
 //Trav|Edt - Functionality check
 		create {classname "logic_relay" values {targetname "trav_functionality_d1_trainstation_06"} }
 	}
