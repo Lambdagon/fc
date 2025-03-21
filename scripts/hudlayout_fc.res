@@ -126,4 +126,14 @@
 		"BaseBackgroundColor"	"32 32 32 255"		[$X360]
 		"LocalBackgroundColor"	"0 0 0 255"		[$X360]
 	}
+	overview
+	{
+		"fieldname"				"overview"
+		"visible"				"1"
+		"enabled"				"1"
+		"xpos"					"0"
+		"ypos"					"480"
+		"wide"					"128"
+		"tall"					"128"
+	}
 }
