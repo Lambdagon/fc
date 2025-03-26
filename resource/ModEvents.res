@@ -26,6 +26,62 @@
 //   eventid	: holds the event ID
 "ModEvents"
 {
+	"bomb_beep"
+	{
+		"entindex"	"long"		// c4 entity
+	}
+	"bomb_beginplant"
+	{
+		"userid"	"short"		// player who is planting the bomb
+		"site"		"short"		// bombsite index
+	}
+
+	"bomb_abortplant"
+	{
+		"userid"	"short"		// player who is planting the bomb
+		"site"		"short"		// bombsite index
+	}
+
+	"bomb_planted"
+	{
+		"userid"	"short"		// player who planted the bomb
+		"site"		"short"		// bombsite index
+		"posx"		"short"		// position x
+		"posy"		"short"		// position y
+	}
+	
+	"bomb_defused"
+	{
+		"userid"	"short"		// player who defused the bomb
+		"site"		"short"		// bombsite index
+	}
+	
+	"bomb_exploded"
+	{
+		"userid"	"short"		// player who planted the bomb
+		"site"		"short"		// bombsite index
+	}
+	
+	"bomb_dropped"
+	{
+		"userid"	"short"		// player who dropped the bomb
+	}
+	
+	"bomb_pickup"
+	{
+		"userid"	"short"		// player who picked up the bomb
+	}
+
+	"bomb_begindefuse"
+	{
+		"userid"	"short"		// player who is defusing
+		"haskit"	"bool"
+	}
+
+	"bomb_abortdefuse"
+	{
+		"userid"	"short"		// player who was defusing
+	}
 	"intro_finish"
 	{
 		"player"	"short"		// entindex of the player
