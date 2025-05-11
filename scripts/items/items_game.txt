@@ -20940,7 +20940,7 @@
 			"item_quality"		"unique"
 			"item_type_name"	"#TF_Wearable_Apparel"
 			"equip_region"		"hat"
-			"image_inventory"		""
+			"image_inventory"	"backpack/workshop/player/items/all_class/soldiershelmet/soldiershelmet"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -21092,10 +21092,10 @@
 					"attribute_class"	"mult_player_movespeed"
 					"value"	"0.75"
 				}
-            }
+			}
 			"mouse_pressed_sound"	"vo/npc/male01/evenodds.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
-			}	
+		}	
 		"9404"  
 		{
 			"name"	"John AR2"
@@ -21157,9 +21157,9 @@
 			{
 				"special1"		"Weapon_CombineGuard.Special1"
 				"empty"			"Weapon_IRifle.Empty"
-				"double_shot"	"Weapon_IRifle.Single"
+				"double_shot"		"Weapon_IRifle.Single"
 				"reload"		"Weapon_AR2.Reload"
-				"single_shot"	"Weapon_AR2.Single"
+				"single_shot"		"Weapon_AR2.Single"
 					
 				"animation_replacement"
 				{
@@ -21183,9 +21183,9 @@
 					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_AR2"
 				}
 			}
-		}	
-		"9406"
-        {
+	}	
+	"9406"
+	{
             "name"    "John 357"
             "item_class"    "tf_weapon_revolver_slot2"
             "baseitem" "0"
@@ -21357,7 +21357,7 @@
 			"mouse_pressed_sound"	"items/kleiner_select.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 		}			
-		"9408" // Disabled
+		"9408"
 		{
 			"name"	"OOOOH FUCK YEAH AHAHAAHHA"
 			"first_sale_date"	"2012/12/20"
@@ -21375,7 +21375,7 @@
 			}
 			"loadondemand" "1"
 			"propername" "1"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#FC_Weapon_Crack_Type"
 			"item_name"			"#FC_Weapon_Crack"
 			"item_description"	"#FC_Weapon_Crack_Desc"	
@@ -21494,7 +21494,7 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}	
-		"9410" // Disabled
+		"9410"
 		{
 			"name"	"Spy Shotgun"
 			"item_class"	"tf_weapon_shotgun_primary"
@@ -21518,7 +21518,7 @@
 			"item_slot"	"secondary"
 			"anim_slot"	"primary"
 			"item_quality"	"normal"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"propername"	"0"
 			"item_logname"	"shotgun"
 			"item_iconname"	"shotgun"
@@ -22818,7 +22818,7 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_rubber_pickup.wav"
 			"drop_sound"		"ui/item_pack_drop.wav"
 		}
-		"9704" // Disabled
+		"9704"
 		// SPY CABER
 		{
 			"name"	"The Ullapool Caber"
@@ -22836,7 +22836,7 @@ Fires....... something"
 				"can_deal_gib_damage"	"1"
 				"can_be_equipped_by_soldier_or_demo"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_StickBomb"
 			"item_name"	"#TF_UllapoolCaber"
 			"item_description"	"#TF_UllapoolCaber_Desc"
@@ -22879,12 +22879,27 @@ Fires....... something"
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"2.0"
+					"value"	"3.0"
 				}
-				"crit mod disabled"
+				"melee range multiplier"
 				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
+					"attribute_class"	"melee_range_multiplier"
+					"value"				"2"
+				}
+				"comical smoke"
+				{
+					"attribute_class"	"use_large_smoke_explosion"
+					"value"				"1"
+				}
+				"dmg taken from blast decreased"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"			"0.25"
+				}
+				"Blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"3"
 				}
 			}
 		}
@@ -22960,7 +22975,7 @@ Fires....... something"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"xifier_class_remap"		"flamethrower"
 		}
-		"9707" // Disabled
+		"9707"
 		{
 			"name"	"The Russian Repeater"
 			"prefab"	"weapon_smg"
@@ -22978,7 +22993,7 @@ Fires....... something"
 			"item_class"	"tf_weapon_smg"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#FC_Weapon_PPSH"
 			"item_name"	"#FC_Weapon_Repeater"
 			"item_description"	"#FC_Weapon_Repeater_Desc"
@@ -25149,7 +25164,7 @@ Fires....... something"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"9750" // Disabled
+		"9750"
 		// Spy Deagle
 		{
 			"craft_class"	""
@@ -25165,11 +25180,12 @@ Fires....... something"
 			{
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
+				"can_headshot"				"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"The Genuine Deagle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"Desert Eagle"
 			"item_description"	"Model by The_Fanciest_Of_Pants"
 			"item_name"	"The Deagle"
@@ -25907,7 +25923,7 @@ Fires....... something"
 		"9562"
 		{
 			"name"						"Fortunate Son"
-			"show_in_armory"			"0"
+			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_smg"
 			"item_slot"					"secondary"
 			"item_quality"				"rarity2"
@@ -26349,11 +26365,11 @@ Fires....... something"
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
-		"9568"	//Disabled 													
+		"9568"
 		{
 			"name"						"TF_WEAPON_MACHINEGUN"
-			"item_class"					"tf_weapon_minigun"
-			"show_in_armory"			"0"
+			"item_class"				"tf_weapon_minigun"
+			"show_in_armory"			"1"
 			"anim_slot"					"primary"			
 			"item_slot"					"primary"				
 			"propername"				"1"
@@ -26417,7 +26433,7 @@ Fires....... something"
 		{
 //WAS STG 44
 		}
-		"9570" // Disabled
+		"9570"
 		{
 			// one shot thing wonder
 			"name"	"oneshit"
@@ -26438,7 +26454,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_gib_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_SniperRifle"
 			"item_name"		"#FC_Weapon_Onehit"	
 			"item_slot"	"primary"
@@ -26876,7 +26892,7 @@ Fires....... something"
 				}
 			}
 		}
-		"9776" // Disabled
+		"9776"
 		{
 			"enabled"	"1"
 			"item_class"	"tf_weapon_sword"
@@ -26902,7 +26918,7 @@ Fires....... something"
 			"image_inventory"	"backpack/weapons/c_models/c_highlander"
 			"model_player"	"models/weapons/v_models/v_highlander.mdl"
 			"model_world"	"models/weapons/w_models/w_highlander.mdl"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"attach_to_hands"	"2"
 			"anim_slot"	"melee"
 			"used_by_classes"
@@ -27063,11 +27079,11 @@ Fires....... something"
 				"min_viewmodel_offset"		"10 0 -7"
 			}
 		}
-		"9782" // Disabled
+		"9782"
 		{
 			"name"						"M1 GARAND SNIPER"
 			"prefab"					"weapon_sniperrifle"
-			"show_in_armory"			"0"
+			"show_in_armory"			"1"
 			"item_class"				"tf_weapon_revolver_slot1"
 			"item_quality"		"unique"
 			"anim_slot" 		"primary"
@@ -27646,7 +27662,6 @@ Fires....... something"
 				}
 			}
 		}
-		
 		"9801"
 		{
 			"name"	"Minecraft Weapon"
@@ -28491,6 +28506,7 @@ Fires....... something"
 			}
 			//"base_item_name"	"TF_WEAPON_SMG_PRIMARY"
 			"show_in_armory"	"0"
+			"disabled"		"1"
 			"dev_only"			"1"
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_name"	"TEST SMG "
@@ -30839,33 +30855,33 @@ Fires....... something"
 			}
 			
 		}
-		"9864" // Disabled
-		 {
-            "name"    "TF_WEAPON_SHOTGUN_SNIPER_SECONDARY"
-            "first_sale_date"    "2010/09/29"
-            "prefab"    "weapon_shotgun"
+		"9864" 		 
+		{
+			"name"    "TF_WEAPON_SHOTGUN_SNIPER_SECONDARY"
+			"first_sale_date"    "2010/09/29"
+			"prefab"    "weapon_shotgun"
 			"item_class" "tf_weapon_shotgun_hwg"
-            "baseitem"    "0"
+			"baseitem"    "0"
 			"item_name"		"Shotgun"
-            "item_slot"    "primary"
+			"item_slot"    "primary"
 			"show_in_armory"	"0"
-            "model_player"    "models/weapons/v_models/v_shotgun_sniper.mdl"
-            "model_world"    "models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"model_player"    "models/weapons/v_models/v_shotgun_sniper.mdl"
+    		        "model_world"    "models/weapons/c_models/c_shotgun/c_shotgun.mdl"
 			"anim_slot"		 "primary"
-            "attach_to_hands"    "2"
-            "used_by_classes"
-            {
-				"sniper"	 "secondary"
-            }
-			"attributes"
-			{
-				"hidden secondary max ammo penalty"
+			"attach_to_hands"    "2"
+			"used_by_classes"
 				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "0.32"
+					"sniper"	 "secondary"
 				}
-			}
-        }
+			"attributes"
+				{
+					"hidden secondary max ammo penalty"
+					{
+						"attribute_class"	"mult_maxammo_secondary"
+						"value" "0.32"
+					}
+				}
+		}
 		"9865"
 		{
 			"name"						"TF_WEAPON_NAILGUN"
@@ -30905,7 +30921,7 @@ Fires....... something"
 				"sound_burst"			"Weapon_1911.SingleCrit"
 			}
         }
-		"9868" //Disabled
+		"9868"
         {
             "name"    "TF_WEAPON_1911_SOLDIER"
             "first_sale_date"    "2010/09/29"
@@ -30925,7 +30941,7 @@ Fires....... something"
 				"can_deal_long_distance_damage"	"1"
 			}
 			"base_item_name"	"TF_WEAPON_PISTOL"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Pistol"
 			"item_description"	"#FC_Weapon_1911_Desc"
 			"item_name"	"#FC_Weapon_1911"
@@ -37941,7 +37957,7 @@ Fires....... something"
 			}
 			"vision_filter_flags"		"4"
 		}
-		"30162" // Disabled
+		"30162"
 		{
             "name"    "TF_WEAPON_SHOTGUN_MEDIC"
             "first_sale_date"    "1969/12/08"
@@ -37953,7 +37969,7 @@ Fires....... something"
             "item_slot"    "Secondary"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/weapons/w_models/w_shotgun"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
             "model_player"    "models/weapons/v_models/v_shotgun_medic.mdl"
             "model_world"    "models/weapons/w_models/w_shotgun_multiclass.mdl"
 			"anim_slot"		 "primary"
@@ -39007,15 +39023,15 @@ Fires....... something"
 				}
 			}
 		}
-		"30528" // Disabled
+		"30528"
 		{
 			"name"	"SMLE"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_sniperrifle"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"dev_only"			"1"
 			"attach_to_hands"	"1"
-			"item_name"			"Test SMLE"
+			"item_name"			"SMLE"
 			"dev_only"			"1"
 			"model_player"	"models/weapons/c_models/c_smle/c_smle.mdl"
 			"attributes"
