@@ -24437,29 +24437,46 @@ Fires....... something"
 		{
 			"name"						"TF_WEAPON_CHAINGUN"
 			"item_class"				"tf_weapon_minigun"
-			"show_in_armory"			"1"	
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
 			"item_slot"					"primary"
-			"propername"				"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"			"1"
 			"item_name"					"Chaingun"
 			"item_type_name"			"#TF_Weapon_Minigun"
 			"item_quality"				"unique"
 			"item_logname" 				"minigun"
 			"item_iconname" 			"minigun"
 			"image_inventory"			"backpack/weapons/w_models/bucket_chaingun"
-			//wrong bucket icon
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"				"models/weapons/v_models/v_minigun_dm.mdl"	
 			//vmodel does not work
-			"model_world"				"models/weapons/w_models/w_minigun_dm.mdl"	
-			"attach_to_hands"			"2"
-			"static_attrs"
-			{
-							"min_viewmodel_offset"		"10 0 -9"		
-			}
+			"model_world"				"models/weapons/w_models/w_minigun_dm.mdl"
+			"inspect_panel_dist" "88"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			
 			"used_by_classes"
 			{
 				"mercenary"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
 			}
 			"attributes"
 			{	
@@ -24534,8 +24551,8 @@ Fires....... something"
 					"sound_special3"		"Weapon_Chaingun.Spin"
 					"sound_burst"			"Weapon_Chaingun.FireCrit"
 			}
-			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
-			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"9739"
 		{
