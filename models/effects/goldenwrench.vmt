@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
-	"$basetexture"	"models/player/medic/medic_blue_invun"
+	"$basetexture"	"effects/yellow"
 	<dx90
 	{
 		 	"$bumpmap" "water/dx80_tfwater001_normal"
 	}
 	"$bumpmap" "water/tfwater001_normal"
-	"$envmap" "effects/cubemapper"
+//	"$envmap" "effects/invun_red"
 	"$surfaceprop" "metal"
 	"$halflambert" "1"
 
@@ -16,7 +16,7 @@
 
 	"$invulnlevel" "0"
 	"$invulnexponent" "1"
-	"$invulnfmax" "18"
+	"$invulnfmax" "5"
 	"$invulnscale" "0"
 	"$invulnphong" "1"
 
@@ -35,7 +35,7 @@
 	"$invulnfmaxoutput" "1"
 
 	"$phong" "1"
-	"$phongexponent"  "35"
+	"$phongexponent"  "15"
 	"$phongboost" "1"	
 	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
 	"$phongfresnelranges"	"[11 1 8]"
@@ -81,27 +81,7 @@
 			"greaterVar"	"$invulnexponentfull"
 			"resultVar"	"$invulnexponentoutput"
 		}
-		"Sine"
-		{
-			"resultVar" "$invulnfmax"
-			"sineperiod" ".3"
-			"sinemin" "$invulnfmaxoutput"
-			"sinemax" "18"
-		}
-		"Sine"
-		{
-			"resultVar" "$invulnphong"
-			"sineperiod" ".3"
-			"sinemin" "$invulnphongoutput"
-			"sinemax" "1"
-		}
-		"Sine"
-		{
-			"resultVar" "$invulnexponent"
-			"sineperiod" ".3"
-			"sinemin" "$invulnexponentoutput"
-			"sinemax" "13"
-		}
+
 
 		"Equals"
 		{

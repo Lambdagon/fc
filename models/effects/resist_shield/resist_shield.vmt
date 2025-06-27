@@ -1,0 +1,43 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\effects\resist_shield\resist_shield_blue.vtf"
+	"$translucent" "1"
+	"$additive" "1"
+	//"$bumpmap" "models/effects/flat_normal"
+
+
+	"$phong" "1"
+	"$phongexponent" "4"
+	"$phongboost" "0.5"	
+	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.3 .5 .6]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "4"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "7"										// Boost for ambient cube component of rim lighting
+	"$selfillumfresnel" "3"
+
+	"$selfillumfresnelminmaxexp" "[0 1 1]"
+	"$selfillum" "1"
+
+	
+	"$selfillumtint" "[-0.3 -0.3 -0.3]"
+	"$selfillumtint_base" "[0.3 0.3 0.3]"
+	"$shield_falloff" 0.0
+
+	"Proxies"
+	{
+		"ShieldFalloff"
+		{
+			"resultVar"	"$shield_falloff"
+		}
+		"Multiply"
+		{
+			"srcVar1"	"$shield_falloff"
+			"srcVar2"	"$selfillumtint_base"
+			"resultVar"	"$selfillumtint"
+		}
+	}
+}

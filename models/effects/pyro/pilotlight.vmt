@@ -1,0 +1,65 @@
+"UnlitTwoTexture"
+{
+	"$basetexture"	"models/effects/pyro/pilotlight"
+	"$texture2" "models/effects/pyro/pilotlight_motion"
+	"$surfaceprop"	"default"
+	"$additive"	1
+	"$model" 1
+	"$nodecal" "1"
+		
+	 "$temp" "[0 0]"
+	 "$pilot" 0.0
+	 "$pilot2" 0.0
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"Proxies"
+	{
+
+		"Sine"
+		{
+			"sineperiod" ".1"
+			"sinemin" -0.02
+			"sinemax" 0.02
+			"resultVar" "$pilot"
+		}
+		"Sine"
+		{
+			"sineperiod" "7"
+			"sinemin" 0.005
+			"sinemax" -0.005
+			"resultVar" "$pilot2"
+		}
+
+		"Equals"
+		{
+			"srcVar1" "$pilot2"
+			"resultVar" "$temp[0]"
+		}
+		"Equals"
+		{
+			"srcVar1" "$pilot"
+			"resultVar" "$temp[1]"
+		}
+
+ 
+		"TextureTransform"
+		{
+			"translateVar" "$temp"
+			"resultVar" "$basetexturetransform"
+		}  
+	 
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" 3
+			"texturescrollangle" 87
+		}
+
+
+		"weapon_invis"
+		{
+		}
+	}
+}

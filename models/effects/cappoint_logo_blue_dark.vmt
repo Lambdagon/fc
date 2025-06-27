@@ -1,0 +1,25 @@
+"Modulate"
+{
+	"$basetexture"	"models/effects/cappoint_logo_blue"
+//	"$additive" "1"
+	"$alpha" "1"
+	"$modblend" ".63"
+	"$model" "1"
+	"$mod2x" "1"
+//	"$nocull" "1"
+	"Proxies"
+	{
+//		"Equals"
+//		{
+//			"srcvar1" "$modblend" 
+//			"resultvar"  "$alpha"
+//		}
+		"Sine"
+		{
+			"Sineperiod" ".3"
+			"SineMax" ".7"
+			"SineMin" ".6"
+			"resultVar" "$alpha"
+		}
+	}
+}
