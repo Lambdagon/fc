@@ -1,0 +1,257 @@
+d1_town_04
+{
+	entity
+	{
+//--Setup--
+		delete {classname "logic_auto" origin "570 -1165 -3591"}
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+
+//Prevent Backtracking
+		create {classname "prop_dynamic" origin "1343.99 -960 -3648"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				angles "0 270 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "1024.01 -944 -3576"
+			values {_light "170 255 170"
+				brightness "0.5"
+				distance "256"
+				style "12"} }
+
+	//	create {classname "trigger_push" origin "0 -64 0"
+	//		values {model "*1"
+	//			spawnflags "1"
+	//			speed "750"
+	//			pushdir "0 270 0"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				targetname "syn_eqipment_base"
+				item_suit			"1"
+				item_armor			"25"
+				weapon_crowbar		"1"
+				weapon_pistol		"1"
+				weapon_smg1			"1"
+				weapon_frag			"1"
+				weapon_357			"1"
+				weapon_physcannon	"1"
+				weapon_shotgun		"1"
+				ammo_pistol			"54"//72
+				ammo_smg1			"45"
+				//ammo_grenade		"1"
+				//ammo_smg1_grenade	"1"
+				ammo_357			"3"//6
+				ammo_buckshot		"6"//12
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "1024 -976 -3596"
+			values {angles "0 270 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_player_coop" origin "1920 -64 -5052"
+			values {angles "0 90 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_player_coop" origin "1280 1152 -5879"
+			values {angles "0 174 0" targetname "syn_spawn_player_3" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {IsVehicleMap "0" targetname "syn_global_settings"} }
+
+//--Checkpoints--
+		create {classname "trigger_once"
+			origin "1915 130 -5296"
+			values {
+				//model "*17"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "603 -1357.5 -4264"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+//Trav|Edt - Disable moving players
+				//"OnTrigger"		"syn_spawn_manager,MovePlayers,,.2,0"
+			}
+		}
+
+//--Extra--
+
+		// add an intermission and its target
+		"create"
+		{
+			"origin"	"640 -1008 -5103"
+			"classname"	"info_target"
+			"values" { "targetname" "edt_camtarg" }
+		}
+
+		"create"
+		{
+			"origin"	"384 -1584 -4640"
+			"classname"	"info_intermission"
+			"values" { "target" "edt_camtarg" }
+		}
+
+//If dog's ball is carried over, keep invuln
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+
+//Trav|Edt - Doors: Open Only
+		//edit {classname "prop_door_rotating" values {spawnflags "0"} }
+//keep this
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "prop_door_rotating,AddOutput,opendir 2,0,-1"} }
+
+//Trav|Edt - TEST using prop_phys_multplayer (works but may want to add additional ents to list (override props etc)
+		//edit {classname "prop_physics" values {classname "prop_physics_multiplayer"} }
+
+//remade autosave to prevent crash, possibly caused by saving during someone is falling down. due to a lot players have much skills to complete map we need only one autosave here
+		delete {classname "trigger_autosave"}
+
+		create {
+			classname "logic_autosave"
+            values {
+				targetname "cust_save"
+            }
+		}
+
+//autosave before minecar
+		create {
+			classname "logic_auto"
+            values {
+				spawnflags "1"
+                OnMapSpawn "caver_lift_lowerlever_lever,AddOutput,OnOpen cust_save:save::1:-1,0,-1"
+            }
+		}
+
+//Trav|Edt - add gman
+		create {classname "npc_gman"
+			origin	"1920 320 -5077"
+			values {spawnflags "17028"
+				angles "0 270 0"
+				targetname "syn_vint_trav_gman" } }
+
+		create {classname "scripted_sequence"
+			origin	"1920 320 -5120"
+			values {spawnflags	"96"
+				targetname "syn_vint_trav_ss_gman1"
+				m_iszEntity	"syn_vint_trav_gman"
+				m_iszPlay	"tiefidget"
+				m_iszNextScript	"syn_vint_trav_ss_gman2"} }
+
+		create {classname "scripted_sequence"
+			origin	"2176 320 -5076"
+			values {spawnflags	"96"
+				//angles "0 0 0"
+				targetname	"syn_vint_trav_ss_gman2"
+				m_fMoveTo	"1"
+				OnEndSequence "syn_vint_trav_gman,Kill,,0,-1"
+				OnEndSequence "syn_vint_trav_gman_pusher,Disable,,0,-1"} }
+
+		create {classname "trigger_once"
+			origin "1920 -260 -5035.5"
+			values {
+				//model "*32"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-8 -1688 -5028.73"
+				spawnflags "1"
+				OnTrigger "syn_vint_trav_ss_gman1,BeginSequence,-1,0,-1"} }
+
+		create {classname "trigger_push"
+			origin "1920 508 -5035.5"
+			values {
+				//model "*32"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-8 -1688 -5028.73"
+				spawnflags "1"
+				targetname "syn_vint_trav_gman_pusher"
+				pushdir "0 270 0"
+				speed "275"} }
+
+//random pzombie (vint)
+		create {classname "npc_poisonzombie" origin "1328 1072 -5872"
+			values {spawnflags "516"
+				targetname "syn_vint"} }
+
+//Trav|Edt - dont let players past trap b4 it's on
+		create {classname "trigger_push" origin "998 1152 -5783.15"
+			values {
+				//model "*11"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "858 1152 -5756.69"
+				spawnflags "1"
+				targetname "syn_vint_syn_caver_blocker"
+				speed "450"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "caver_lift_lowerlever_lever,AddOutput,OnOpen syn_vint_syn_caver_blocker:Disable::0:-1,0,-1"
+				OnMapSpawn "caver_lift_lowerlever_lever,AddOutput,OnOpen syn_spawn_manager:SetCheckpoint:syn_spawn_player_3:0:-1,0,-1"
+				OnMapSpawn "caver_lift_lowerlever_lever,AddOutput,OnOpen syn_global_settings:AddOutPut:IsVehicleMap 1:0:-1,0,-1"} }
+
+//Trav|Edt add antirush at endlevel
+		create {classname "trigger_coop"
+			origin "-2528 1148 -4779.5"//-2280 1140 -4771.5
+			values {
+				//model "*32"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-8 -1688 -5028.73"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_trav_town04_end_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				OnPlayersIn "syn_antirush_trav_town04_end_push,Disable,,0,1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,1"
+				OnPlayersIn "syn_antirush_light,Kill,,0,1"
+				OnPlayersIn "!self,Disable,,1,-1"} }
+
+		create {classname "prop_dynamic" origin "-2768 1152 -4872"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				targetname "syn_antirush_wall"
+				//angles "0 90 0"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "-2776 1152 -4800"
+			values {_light "170 255 170"
+				targetname "syn_antirush_light"
+				brightness "1"
+				distance "256"
+				style "12"} }
+
+	//	create {classname "trigger_push"
+	//		origin "-2622 1152 -4767.22"
+	//		values {model "*14"
+	//			spawnflags "1"
+	//			targetname "syn_antirush_trav_town04_end_push"
+	//			pushdir "0 0 0"
+	//			speed "450"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//End of Trav|Edt
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_town_04"} }
+	}
+}

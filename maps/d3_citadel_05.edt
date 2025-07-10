@@ -1,0 +1,263 @@
+d3_citadel_05
+{
+	console
+	{
+		//physcannon_mega_enabled "1"
+	}
+	entity
+	{
+//--Setup--
+		delete {classname "logic_auto" origin "-995.693 695.87 -3044"}
+		edit {classname "func_areaportal" values {targetname "syn_disabledPortal" StartOpen "1"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				item_suit			"1"
+				item_armor			"60"
+				weapon_physcannon	"1"
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "-1026.11 714.971 -3072"
+			values {angles "0 270 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_global_settings"
+			values {IsVehicleMap "0" targetname "syn_global_settings"} }
+
+//--Extra--
+
+//End of Trav|Edt
+
+		// TEMP
+		"delete" { "classname" "env_fade" }
+
+		// remove trigger that removes pods
+		"delete" { "classname" "trigger_multiple" "origin" "1464 -1064 -2832" }
+
+		// have them cycle back through to the start
+		// instead of being removed
+		"delete" { "targetname" "path_pod_ok_3" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "1444 -577 -2812"
+			"values"
+			{
+				"orientationtype" "1"
+				"angles" "0 0 0"
+				"target" "path_pod_ok_4"
+				"targetname" "path_pod_ok_3"
+
+				"OnPass" "!activator,Stop,,0,-1"
+				"OnPass" "pod_ready_counter,Add,1,0.1,-1"
+			}
+		}
+
+		"delete" { "targetname" "path_pod_ok_4" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "1444 -1063 -2812"
+			"values"
+			{
+				"orientationtype" "1"
+				"angles" "0 0 0"
+				"targetname" "path_pod_ok_4"
+			//	"OnPass" "counter_pod_alive,Subtract,1,0,-1"
+			//	"OnPass" "!activator,KillHierarchy,,0,-1"
+
+				"target" "pod_bay_track1"
+			}
+		}
+
+		"create"
+		{
+			"classname" "logic_relay"
+			"origin" "0 0 0"
+			"values"
+			{
+				"targetname" "movePodsForward"
+
+				"OnTrigger" "playerpod5_train,Resume,,0,-1"
+				"OnTrigger" "playerpod3_train,Resume,,0,-1"
+				"OnTrigger" "playerpod2_train,Resume,,0,-1"
+				"OnTrigger" "playerpod1_train,Resume,,0,-1"
+				"OnTrigger" "playerpod4_train,Resume,,0,-1"
+				"OnTrigger" "playerpod6_train,Resume,,0,-1"
+				"OnTrigger" "playerpod7_train,Resume,,0,-1"
+			}
+		}
+		
+
+		// create {classname "logic_auto"
+			// values {
+				// spawnflags "1"
+				// OnMapSpawn "playerpod1_trigger,AddOutput,OnStartTouch playerpod1_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod1_trigger,AddOutput,OnStartTouch playerpod1_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod2_trigger,AddOutput,OnStartTouch playerpod2_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod2_trigger,AddOutput,OnStartTouch playerpod2_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod3_trigger,AddOutput,OnStartTouch playerpod3_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod3_trigger,AddOutput,OnStartTouch playerpod3_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod4_trigger,AddOutput,OnStartTouch playerpod4_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod4_trigger,AddOutput,OnStartTouch playerpod4_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod5_trigger,AddOutput,OnStartTouch playerpod5_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod5_trigger,AddOutput,OnStartTouch playerpod5_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod6_trigger,AddOutput,OnStartTouch playerpod6_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod6_trigger,AddOutput,OnStartTouch playerpod6_vehicle:Lock::0:0,0,-1"
+				// OnMapSpawn "playerpod7_trigger,AddOutput,OnStartTouch playerpod7_vehicle:EnterVehicleImmediate::1:-1,0,-1"
+				// OnMapSpawn "playerpod7_trigger,AddOutput,OnStartTouch playerpod7_vehicle:Lock::0:0,0,-1"
+			// } 
+		// }
+
+		// edit {targetname "playerpod1_trigger" values {model "*14"}}
+		// edit {targetname "playerpod2_trigger" values {model "*14"}}
+		// edit {targetname "playerpod3_trigger" values {model "*14"}}
+		// edit {targetname "playerpod4_trigger" values {model "*14"}}
+		// edit {targetname "playerpod5_trigger" values {model "*14"}}
+		// edit {targetname "playerpod6_trigger" values {model "*14"}}
+		// edit {targetname "playerpod7_trigger" values {model "*14"}}
+
+		
+		// let the pods return from tne end of the map to the start again
+		"delete" { "targetname" "pod_player56" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "14336 -9920 6300"
+			"values"
+			{
+				"orientationtype" "2"
+				"angles" "0 140 0"
+				"speed" "500"
+				"target" "pod_player47"
+				"spawnflags" "0"
+				"radius" "0"
+				"targetname" "pod_player56"
+			}
+		}
+
+		"delete" { "targetname" "pod_player47" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "14336 -9920 10304"
+			"values"
+			{
+				"orientationtype" "2"
+				"angles" "0 110 0"
+				"spawnflags" "0"
+				"radius" "0"
+				"targetname" "pod_player47"
+				"speed" "100"
+
+				"target" "pod_bay_track1"
+
+				// since we will stop when get back down, start me up again
+			//	"OnPass" "relay_playerpod_resume,Trigger,,8.2,-1"
+				"OnPass" "movePodsForward,Trigger,,0.2,-1"
+			}
+		}
+
+		// do not let the pods stop moving on
+		"delete" { "targetname" "pod_02_track0" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "1016 -447 -2812"
+			"values"
+			{
+				"speed" "0"
+				"orientationtype" "1"
+				"angles" "0 0 0"
+				"spawnflags" "0"
+				"target" "pod_02_track3"
+				"targetname" "pod_02_track0"
+
+			//	"OnPass" "relay_playerpod_resume,Kill,,0,-1"
+			}
+		}
+
+		// fix fading
+	//	"edit" { "classname" "env_fade" "values" { "spawnflags" "0" } }
+
+		// dont spawn millions of NPCs YEAURGH
+		"delete" { "targetname" "pod_player31" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "8400 -5232 3152"
+			"values"
+			{
+				"speed" "400"
+				"spawnflags" "0"
+				"orientationtype" "2"
+				"angles" "0 0 0"
+				"target" "pod_player32"
+				"radius" "0"
+				"targetname" "pod_player31"
+				"OnPass" "template_gunshipbay_stalkers,ForceSpawn,,0,1"	// -1
+			}
+		}
+
+		"delete" { "targetname" "pod_player32" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "8400 -5232 3788"
+			"values"
+			{
+				"speed" "200"
+				"spawnflags" "0"
+				"orientationtype" "2"
+				"angles" "0 49 0"
+				"target" "pod_player52"
+				"radius" "0"
+				"targetname" "pod_player32"
+				"OnPass" "logic_SynthSequence,Trigger,,1.5,1"	// -1
+			}
+		}
+
+		"delete" { "targetname" "pod_player35" }
+		"create"
+		{
+			"classname" "path_track"
+			"origin" "8576 -4784 4336"
+			"values"
+			{
+				"spawnflags" "0"
+				"orientationtype" "2"
+				"angles" "0 85 0"
+				"target" "pod_player36"
+				"radius" "0"
+				"targetname" "pod_player35"
+				"OnPass" "logic_start_gunship,Trigger,,2.5,1"			// -1
+				"OnPass" "template_gunshipbay_scanner,ForceSpawn,,0,1"	// -1
+			}
+		}
+
+
+		// once someone touches the top of the trigger
+		// move everyone to the point to transition
+		create { classname "info_teleport_destination" origin "14330 -9882 10300" values { targetname "PSTP_EndUp" } }
+
+		edit { targetname "cit05_to_breen01_changelevel" values { spawnflags "1" } }
+
+		create { classname "trigger_once" origin "14335 -9855 10310"
+			values {
+				//"model" "*22"
+				"edt_mins" "-300 -300 -100"
+				"edt_maxs" "300 300 100"
+				"spawnflags" "1"
+				"OnTrigger" "PS_Manager,TeleportPlayers,PSTP_EndUp,0,-1"
+				"OnTrigger" "cit05_to_breen01_changelevel,ChangeLevel,,0.1,-1"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d3_citadel_05"} }
+	}
+}

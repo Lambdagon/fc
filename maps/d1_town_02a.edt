@@ -1,0 +1,286 @@
+d1_town_02a
+{
+	entity
+	{
+//--Setup--
+		delete {targetname "startobjects"}
+		edit {classname "func_areaportal" values {targetname "disabledPortal" StartOpen "1"} }
+
+//--Starting Items--
+		create {classname "info_player_equip"
+			values {
+				targetname "syn_eqipment_base"
+				item_suit			"1"
+				item_armor			"25"
+				weapon_crowbar		"1"
+				weapon_pistol		"1"
+				weapon_smg1			"1"
+				weapon_frag			"1"
+				weapon_357			"1"
+				weapon_physcannon	"1"
+				weapon_shotgun		"1"
+				ammo_pistol			"54"//72
+				ammo_smg1			"45"
+				//ammo_grenade		"1"//
+				//ammo_smg1_grenade	"1"//
+				ammo_357			"3"//6
+				ammo_buckshot		"6"//12
+			} }
+
+//--Spawns--
+		create {classname "info_spawn_manager"
+			values {targetname "syn_spawn_manager"} }
+
+		create {classname "info_player_coop" origin "-5264 1664 -3232"
+			values {angles "0 90 0" targetname "syn_spawn_player_1"} }
+
+		create {classname "info_player_coop" origin "-7424 -256 -3356"
+			values {angles "0 270 0" targetname "syn_spawn_player_2" StartDisabled "1"} }
+
+		create {classname "info_global_settings"
+			values {IsVehicleMap "0" targetname "syn_global_settings"} }
+
+//--Checkpoints--
+		create {classname "trigger_once" origin "-7504 -304 -3344"
+			values {
+				//model "*27"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-7504 -304 -3344"
+				spawnflags "1"
+				targetname "syn_checkpoint_5"
+				OnTrigger "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0,-1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,.1,-1"} }
+
+//Trav|Edt - Add more zombies
+//synvint
+		create {classname "logic_relay"
+			values {spawnflags "1"
+			targetname "_syn_vint"
+				OnTrigger "vint_counter,CancelPending,,4,1"} }
+//CancelPending
+		create {classname "logic_relay"
+			values {//spawnflags "1"
+			targetname "vint_counter"
+				OnSpawn "graveyard_crypt_zombie_maker,AddOutput,spawnflags 176,5,1"
+				OnSpawn "graveyard_crypt_zombie_maker,AddOutput,MaxLiveChildren 4,5,1"
+				OnSpawn "graveyard_crypt_zombie_maker,AddOutput,StartDisabled 0,5,1"
+				OnSpawn "graveyard_zombie_maker,AddOutput,MaxLiveChildren 14,5,1"//modi - more zombies
+				OnSpawn "graveyard_fz_counter_1,AddOutput,max 10,5,1"//modi - adding more fast zombies
+				OnSpawn "graveyard_fz_1_maker,AddOutput,MaxLiveChildren 5,5,1"
+				OnSpawn "graveyard_fz_1_maker,AddOutput,MaxNPCCount 5,5,1"
+				OnSpawn "graveyard_fz_2_maker,AddOutput,MaxLiveChildren 5,5,1"
+				OnSpawn "graveyard_fz_2_maker,AddOutput,MaxNPCCount 5,5,1"
+				OnSpawn "graveyard_fz_3_maker,AddOutput,spawnflags 176,5,1"
+				OnSpawn "graveyard_fz_3_maker,AddOutput,MaxLiveChildren 4,5,1"
+				OnSpawn "graveyard_fz_3_maker,AddOutput,MaxNPCCount 14,5,1"
+				OnSpawn "graveyard_fz_4_maker,AddOutput,spawnflags 176,5,1"
+				OnSpawn "graveyard_fz_4_maker,AddOutput,MaxLiveChildren 4,5,1"
+				OnSpawn "graveyard_fz_4_maker,AddOutput,MaxNPCCount 14,5,1"
+				OnSpawn "graveyard_fz_5_maker,AddOutput,MaxLiveChildren 4,5,1"
+				OnSpawn "graveyard_fz_5_maker,AddOutput,MaxNPCCount 5,5,1"
+				OnSpawn "graveyard_crab_maker,AddOutput,MaxNPCCount 10,5,1"//modi - adding more headcrabs
+				OnSpawn "graveyard_crab_maker,AddOutput,MaxLiveChildren 4,5,1"
+				} }
+
+		//edit {targetname "graveyard_crypt_zombie_maker" values {spawnflags "176" MaxLiveChildren "4" StartDisabled "0"} }//vint
+		//edit {targetname "graveyard_crypt_zombie_sched" values {targetname "syn_graveyard_crypt_zombie_sched"} }
+
+		create {classname "trigger_once"
+			origin "-7560 400 -3336"
+			values {
+				//model "*29"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-7576 784 -3320"
+				spawnflags "1"
+				targetname "syn_vint"
+				OnTrigger "graveyard_crypt_zombie_maker,Disable,,0,-1"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				//OnMapSpawn "graveyard_monk_scene_b2,AddOutput,OnTrigger1 syn_graveyard_crypt_zombie_sched:AddOutput:targetname graveyard_crypt_zombie_sched:0:-1,0,-1"
+				OnMapSpawn "graveyard_monk_scene_b2,AddOutput,OnTrigger1 graveyard_crypt_zombie_maker:Disable::16:-1,0,-1"
+				OnMapSpawn "graveyard_crypt_zombie,AddOutput,squadname syn_squad_zombie,0,-1"} }
+
+//--Extra--
+
+		// add an intermission and its target
+		"create"
+		{
+			"classname"	"info_target"
+			"origin"	"-7700 280 -3362"
+			"values" { "targetname" "edt_camtarg" }
+		}
+
+		"create"
+		{
+			"classname"	"info_intermission"
+			"origin"	"-7060 1780 -2670"
+			"values" { "target" "edt_camtarg" }
+		}
+
+//If dog's ball is carried over, keep invuln
+		create {classname "filter_activator_name"
+			values {targetname "syn_dfilter_null"
+				filtername "null"} }
+
+//Trav|Edt - Doors: Open Only
+		//edit {targetname "exit_building_door1" values {spawnflags "0"} }
+
+//Trav|Edt - block worldwalk path
+		create {classname "trigger_push"
+			origin "-7796 1376.01 -3256"
+			values {
+				//model "*48"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-6268 2144 -3264"
+				spawnflags "1"
+				//pushdir "0 270 0"
+				speed "450"} }
+				
+
+//modi - block skipping
+		create {classname "trigger_push"
+			origin "-6768.48 1375.84 -3198.01"
+			values {
+				//model "*48"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-6268 2144 -3264"
+				spawnflags "1"
+				pushdir "0 180 0"
+				speed "950"} }
+				
+		create {classname "trigger_hurt"
+			origin "-6550 1000 -2965"
+			values {
+				//model "*30"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-7924 -128 -3320"
+				spawnflags "1"
+				damage "950"} }
+
+//Trav|Edt - add crates in secreat area
+		create {classname "item_item_crate"
+			origin	"-6752 744 -3256"
+			values{ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+		create {classname "item_item_crate"
+			origin	"-6752 744 -3224"
+			values{ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+		create {classname "item_item_crate"
+			origin	"-6752 744 -3192"
+			values{ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+		create {classname "item_item_crate"
+			origin	"-6800 744 -3256"
+			values{ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+		create {classname "item_item_crate"
+			origin	"-6800 744 -3224"
+			values{ItemClass "item_dynamic_resupply"
+				ItemCount "5"
+				targetname "syn_vint"} }
+
+//make Monk avoid players on his way at the end
+		edit {
+			targetname "monk_assault_4_ap1"
+			values {
+				strict "1"
+				urgent "1"
+			}
+		}
+		edit {
+			targetname "monk_assault_4_rp1"
+			values {
+				urgent "1"
+			}
+		}
+
+//Trav|Edt add antirush at endlevel
+		create {classname "trigger_coop"
+			origin "-6584 -578 -3216.14"
+			values {
+				//model "*47"
+				edt_getbspmodelfor_classname "trigger_multiple"
+				edt_getbspmodelfor_origin "-8128 688 -3359.87"
+				spawnflags "1"
+				//StartDisabled "1"
+				targetname "syn_antirush_trav_town02a_end_coop"
+				CountType "1"
+				UseHUD "1"
+				PlayerValue "50"
+				wait "1.5"
+				OnTrigger "syn_antirush_text,Display,,1,-1"
+				//OnPlayersIn "syn_antirush_trav_town02a_end_push,Disable,,0,1"
+				OnPlayersIn "syn_antirush_wall,Kill,,0,1"
+				OnPlayersIn "syn_antirush_light,Kill,,0,1"
+				OnPlayersIn "!self,Disable,,1,-1"} }
+
+		create {classname "prop_dynamic" origin "-6272 -704 -3264"
+			values {model "models/synergy/tools/syn_transition.mdl"
+				angles "0 90 0"
+				targetname "syn_antirush_wall"
+				solid "6"
+				DisableShadows "1"} }
+
+		create {classname "light_dynamic" origin "-6584 -712 -3184"
+			values {_light "170 255 170"
+				targetname "syn_antirush_light"
+				brightness "0.5"
+				distance "256"
+				style "12"} }
+
+	//	create {classname "trigger_push"
+	//		origin "-6592 -656 -3192"
+	//		values {model "*29"
+	//			spawnflags "1"
+	//			targetname "syn_antirush_trav_town02a_end_push"
+	//			pushdir "0 90 0"
+	//			speed "450"} }
+
+		create {classname "game_text"
+			values {spawnflags "0"
+				targetname "syn_antirush_text"
+				message "Need More Players to Continue. . ."
+				channel "0"
+				effect "2"
+				x "-1"
+				y "0.85"
+				color "100 100 100"
+				color2 "240 110 0"
+				fadein "0.03"
+				fadeout "1.25"
+				holdtime "2"
+				fxtime "0.25"} }
+
+//End of Trav|Edt
+
+		// prevent player from using switch at end (player using switch can cause bug)
+		"edit"
+		{
+			"targetname"	"graveyard_exit_momentary_wheel"
+			"values" { "spawnflags" "65" }
+		}
+		
+		edit {classname "npc_monk" values {enemyfilter "notball"} }
+		create {classname "filter_activator_name"
+			values
+			{
+				targetname "notball"
+				Negated "1"
+				filtername "ball"
+			}
+		}
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d1_town_02a"} }
+	}
+}

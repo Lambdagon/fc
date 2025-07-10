@@ -1,8 +1,309 @@
+//TODO: fix weird blinkyness intro, only happens to players in pod until they exit first room. -krazy
 d3_breen_01
 {
+	console
+	{
+		//physcannon_mega_enabled "1"
+	}
 	entity
 	{
-		edit {classname "env_zoom" values {AllPlayers "1"} }
+
+//--Extra--
+
+		// create intermission
+		"create" { "classname" "info_intermission" "origin" "759.806091 -227.057999 458.113525" "values" { "angles" "-32 160 0" } }
+
+		create { classname "info_teleport_destination" origin "-2436.75 -1405.8 -1463" values { targetname "MPVS_SPAWN_TP" } }
+
+//fix players GUI breaking
+		delete {classname "trigger_multiple" origin "256 0 -1920"}
+
+//Trav|Edt - lower ragdoll count
+		edit {classname "game_ragdoll_manager" values {MaxRagdollCount "2"} }//4
+
+//Trav|Edt - make sure slow loaders dont keep gg
+		create {classname "trigger_weapon_strip" origin "-2008 656 648"
+			values {edt_getbspmodelfor_classname "trigger_teleport" edt_getbspmodelfor_origin "-2008 656 648" spawnflags "1" KillWeapons "1"} }//model "*91"
+
+//delete this, testing only
+		//edit {targetname "trigger_sceneStart" values {spawnflags "0"} }
+
+//Trav|Edt - teleport players when someone reachs the top
+//Trav|Edt wtf no ps_manager??? nammed syn_spawn_manager instead...
+		//create {classname "info_spawn_manager" values {targetname "PS_Manager"} }
+
+		create {classname "trigger_once"
+			origin "-640 -464 1424"//-640 -368 1424 not in same spot origin //-640 -472 1424 nvm use reg
+			values {
+				//model "*45"
+				edt_getbspmodelfor_classname "trigger_once"
+				edt_getbspmodelfor_origin "-640 -464 1424"
+				spawnflags "1"
+				OnTrigger "syn_spawn_manager,MovePlayers,,0,-1"} }
+
+//Trav|Edt - failsafe for relay_physgunpickup if all players have one
+	//	delete {targetname "w_physgun"}
+
+	//	create {classname "trigger_once" origin "-1156 -42.66 1428"
+	//		values {model "*165"
+	//			spawnflags "1"
+	//			OnTrigger "relay_physgunpickup,Trigger,,2,-1"} }
+
+//Trav|Edt remove kill trigger at end
+		delete {targetname "trigger_gameover_toplevelfallhurt"}
+
+//Trav|Edt - test makeing peeps look at player's face instead of his bawlsdue to no proper vehicle placement [maybe fixed in v27?]
+		//create {classname "info_target"
+		//	origin "-2435 -1386 162"
+		//	values {targetname "!player"
+		//		parentname "pod"} }
+
+//Trav|Edt - fix logic_ending_credits not triggering sometimes [when player blocks door from closing]
+		edit {targetname "logic_ending_credits" values {spawnflags "1"} }
+
+		create {classname "logic_auto"
+			values {spawnflags "1"
+				OnMapSpawn "Thedoor,AddOutput,OnOpen logic_ending_credits:Trigger::8.5:-1,8,-1"} }
+
+//End of Trav|Edt
+
+		// fix relay
+		"delete" { "classname" "logic_auto" "origin" "-2354 -1180 729" }
+		"create"
+		{
+			"classname" "logic_auto"
+			"origin" "-2354 -1180 729"
+			"values"
+			{
+				"spawnflags" "1"
+				"OnMapSpawn" "EMPtool_Alyx,SetParentAttachment,anim_attachment_RH,0,-1"
+				"OnMapSpawn" "Zoomer75,Zoom,,0,-1"
+				"OnMapSpawn" "steam_alyxSpit,SetParentAttachment,mouth,0,-1"
+				"OnMapSpawn" "spark_mossyZapPlayerPod,SetParentAttachment,beamFX_attachment,0,-1"
+				"OnMapSpawn" "target_mossy_ZapPlayerPod1,SetParentAttachment,beamFX_attachment,0,-1"
+				"OnMapSpawn" "Eli,StartScripting,,0.5,-1"
+				"OnMapSpawn" "Mossman,StartScripting,,0.5,-1"
+				"OnMapSpawn" "Breen,StartScripting,,0.5,-1"
+				"OnMapSpawn" "alyx,StartScripting,,0.5,-1"
+			//	"OnMapSpawn" "suitHack,Command,give item_suit,0,-1"
+				"OnMapSpawn" "strip_start,Trigger,,5,-1"
+				"OnMapSpawn" "pod,Lock,,0.1,-1"
+				"OnMapSpawn" "breen_fade,Fade,,0,-1"
+				"OnMapSpawn" "logic_pods_init,Trigger,,0,-1"
+			//	"OnMapSpawn" "pod,EnterVehicleImmediate,,0,-1"
+				"OnMapSpawn" "weaponstrip_end_game,Strip,,2,-1"
+				"OnMapSpawn" "tesla_end_explosion,TurnOff,,0,-1"
+				"OnMapSpawn" "ss_soldier_standingUnarmed,BeginSequence,,0.5,-1"
+
+				// make this happen so players dont get left out
+				"OnMapSpawn" "PS_Manager,SetCheckpoint,MPVS_SPAWN,0,-1"
+				"OnMapSpawn" "PS_Manager,TeleportPlayers,MPVS_SPAWN_TP,1,-1"
+			}
+		}
+
+		create { classname "trigger_teleport" origin "-2436 -1405 -1463"
+			values {
+				//"model" "*100"
+				"edt_getbspmodelfor_classname" "trigger_weapon_strip"
+				"edt_getbspmodelfor_origin" "-2459 -1408 -40"
+				"spawnflags" "1"
+				"wait" "1"
+				"target" "InBlackExit"
+				"StartDisabled" "1"
+				"targetname" "TeleportInBlack"
+			}
+		}
+		
+		//balimbanana fix
+		create {classname "func_tracktrain" origin "-2436 -1406 159" values {targetname "syn_podtrain" target "syn_podpath1" angles "90 -90 0" speed "70" orientationtype "1"} }
+		edit {targetname "pod" values {DisableShadows "1" parentname "syn_podtrain"} }
+		create {classname "path_track" origin "-2430 -1386 110" values {targetname "syn_podpath1" angles "0 0 0" target "syn_podpath2"} }
+		create {classname "path_track" origin "-2430 -1386 667" values {targetname "syn_podpath2" angles "0 0 0" target "syn_podpath3" OnPass "pod,SetParent,Breen_arm_player,1,-1" OnPass "pod,SetParentAttachment,eli_pod_inner_attachment,1.1,-1"} }
+
+
+		// do not do the getup scene
+		"delete" { "targetname" "logic_fade_view" }
+
+		// create a special checkpoint when we exit the vehicle
+		"delete" { "targetname" "logic_playerExitPod" }
+		"create"
+		{
+			"classname" "logic_relay"
+			"origin" "-2424 632 710"
+			"values"
+			{
+				"spawnflags" "0"
+				"StartDisabled" "0"
+				"targetname" "logic_playerExitPod"
+				"OnTrigger" "pod,Unlock,,0.65,-1"
+				"OnTrigger" "pod,Open,,0,-1"
+				"OnTrigger" "pod,ExitVehicle,,0.75,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_2,0.5,-1"
+				"OnTrigger" "syn_spawn_manager,TeleportPlayers,syn_spawn_player_2TP,3,-1"
+				"OnTrigger" "MPVS_SPAWN,Kill,,0.48,-1"
+			}
+		}
+
+		// create two checkpoints, each one after the elevators
+
+//Trav|Edt - make moveplayers instant delay was 8
+				"OnTrigger" "syn_spawn_manager,MovePlayers,,0,-1" // 4
+				//OnTrigger "syn_get_physcannon,Enable,,0,-1"//give physcannon
+				//OnTrigger "syn_get_physcannon,EquipAllPlayers,,1,-1"
+			}
+		}
+		"create"
+		{
+			"classname" "trigger_once"
+			"origin" "-896 0 -192"
+			"values"
+			{
+				//"model" "*28"
+				"edt_getbspmodelfor_classname" "trigger_once"
+				"edt_getbspmodelfor_origin" "-896 0 -192"
+				"spawnflags" "1"
+				"OnTrigger" "syn_spawn_manager,SetCheckpoint,syn_spawn_player_4,0,-1"
+				"OnTrigger" "syn_spawn_manager,TeleportPlayers,syn_spawn_player_4TP,0,-1"
+			}
+		}
+
+//Trav|Edt - disable static spawning
+		create {classname "logic_relay"
+			values {targetname "logic_breenblast_2"
+				OnTrigger "syn_global_settings,AddOutput,IsVehicleMap 0,0,-1"} }
+
+		// activate checkpoint after been elevator 2
+		"delete" { "targetname" "Trigger_lift_control" }
+		"create"
+		{
+			"classname" "trigger_once"
+			"origin" "-1056 504 1536"
+			"values"
+			{
+				//"model" "*123"
+				"edt_getbspmodelfor_classname" "trigger_once"
+				"edt_getbspmodelfor_origin" "-1056 504 1536"
+				"targetname" "Trigger_lift_control"
+				"spawnflags" "1"
+				"StartDisabled" "1"
+				"OnTrigger" "logic_InElevatorNag,CancelPending,,0,-1"
+				"OnTrigger" "speaker_InElevatorNag,TurnOff,,0,-1"
+				"OnTrigger" "speaker_InElevatorNag,Kill,,0.2,-1"
+				"OnTrigger" "Teleport_lift_doors,Close,,0.2,-1"
+				"OnTrigger" "lcs_al_doworst,Start,,0.2,-1"
+				"OnTrigger" "pClip_follow_breenlift_down_1,Enable,,0,-1"
+
+				"OnTrigger" "syn_spawn_manager,SetCheckpoint,edt_spawn4,0,-1"
+			//	"OnTrigger" "equip,Enable,,0,-1"
+				"OnTrigger" "syn_spawn_manager,MovePlayers,edt_spawn4,8,-1" // 4
+			}
+		}
+
+		// no need to teleport all those players to one spot after the breen blast
+		"delete" { "targetname" "teleport_breen_blast_1" }
+
+		// remove the combine wall that activates when you step out
+		"delete" { "classname" "trigger_once" "origin" "-672 0 -128" }
+
+		// remove the player_loadsaved from the bottom of pit
+		"delete" { "targetname" "trigger_gameover_toplevelfallmessage" }
+
+			// model 48
+		"delete" { "classname" "trigger_multiple" "origin" "256 0 -576" }
+
+		// dont delete stuff
+		"delete" { "targetname" "trigger_killme" }
+		"delete" { "targetname" "trigger_killme_2" }
+
+		// BUG here - dont know if this was done intentionally or not
+		// but the ".vcd" is missing from the value
+		"edit"
+		{
+			"targetname" "citadel_scene_br_start"
+			"values"
+			{
+				"SceneFile" "scenes/citadel/br_synapse.vcd"
+			}
+		}
+
+		// end the game so we can go to the next level
+		"create"
+		{
+			"classname" "game_end"
+			"origin" "0 0 0"
+			"values"
+			{
+				"targetname" "gameControl"
+			}
+		}
+
+		delete {classname "point_clientcommand"}
+		create {classname "point_servercommand" values {targetname "PSCTest"} }
+
+		create {classname "logic_auto"
+			values
+			{
+				spawnflags "1"
+				OnMapSpawn "lcs_al_end,AddOutput,OnTrigger2 syn_gman_viewcontrol:Enable::0:-1,0,-1"
+				OnMapSpawn "lcs_al_end,AddOutput,OnTrigger2 player_weaponstrip:StripWeaponsAndSuit::0:-1,0,-1"
+				OnMapSpawn "lcs_gman_out,AddOutput,OnTrigger4 syn_gman_viewcontrol:Disable::13:-1,0,-1"
+				OnMapSpawn "env_zoom,AddOutput,allplayers 1,-1,0,-1"
+				OnMapSpawn "teleport_player_gman_1,AddOutput,origin -800 -66 1282:Enable::0:-1,0,-1"// push this back a bit (-728)
+				
+				// Comment out these to see the credits all the way through
+				OnMapSpawn "logic_ending_credits,AddOutput,OnTrigger PSCTest:Command:changelevel ep1 ep1_citadel_00:30:-1,0,-1"
+				OnMapSpawn "logic_ending_credits,AddOutput,OnTrigger gameControl:EndGame::31:-1,0,-1"
+				
+				OnMapSpawn "SS_lamarr,AddOutput,OnBeginSequence PSCTest:Command:changelevel ep1 ep1_citadel_00:6:-1,0,-1"
+				OnMapSpawn "SS_lamarr,AddOutput,OnBeginSequence gameControl:EndGame::6.5:-1,0,-1"
+				
+				//OnMapSpawn "logic_ending_credits,AddOutput,OnTrigger trav_gtext_ep1:Display::0:-1,0,-1"
+			}
+		}
+
+		// Gman intro cam
+		create {classname "point_viewcontrol" origin "-728 -66 1346"//-728 -66 1282 (1354)
+			values {spawnflags "172" angles "0 12 0"
+				targetname "syn_gman_viewcontrol"} }
+		// Additional view controls should also have all players, such as the Lamarr ending sequence if not changing to Ep1 immediately
 		edit {classname "point_viewcontrol" values {edt_addspawnflags "128"} }
+
+		//"All Players" flag
+		edit {targetname "blackout_viewcontroller" values {spawnflags "188"} }
+		edit {targetname "view_gman_end_1" values {spawnflags "188"} }
+		edit {targetname "viewcontrol_lamarr" values {spawnflags "140"} }
+
+		// 12-11-07
+		// do not stop the elevator lifts and do not activate the trigger_remove ents
+		"delete" { "targetname" "relay_riftcleanup" }
+		"delete" { "classname" "trigger_remove" }
+
+		// when we grab the physcannon, give it to all players
+		delete { targetname "relay_physgunpickup" }
+		create { classname "logic_relay" origin "-985.434 -35.2141 1353"
+			values {spawnflags "1"//trav|onlyonce
+				"targetname" "relay_physgunpickup"
+				"OnTrigger" "logic_al_controlroom01_b,Disable,,0,-1"
+				"OnTrigger" "logic_al_controlroom01_x,Enable,,0.1,-1"
+				"OnTrigger" "logic_al_controlroom01_x,Trigger,,0,-1"
+				"OnTrigger" "speaker_GetGravNag,TurnOff,,0,-1"
+				"OnTrigger" "logic_al_controlroom01,Enable,,0,-1"
+				"OnTrigger" "logic_GetGravGunNag,Disable,,0,-1"
+
+				"OnTrigger" "syn_get_physcannon,Enable,,0,-1"
+				"OnTrigger" "syn_get_physcannon,EquipAllPlayers,,0.1,-1"
+			}
+		}
+		
+		
+//Balim - fix logic_measure_movement issues by making targets send to clients
+		edit {targetname "target_measure_player" values {spawnflags "1"} }
+		edit {targetname "target_follow_camera" values {spawnflags "1"} }
+		edit {targetname "target_measure_player_2" values {spawnflags "1"} }
+		edit {targetname "target_follow_camera_2" values {spawnflags "1"} }
+
+//Trav|Edt - Functionality check
+		create {classname "logic_relay" values {targetname "trav_functionality_d3_breen_01"} }
 	}
 }
