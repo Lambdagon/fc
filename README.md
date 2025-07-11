@@ -1,4 +1,6 @@
-# MAIN IS UNSUPPORTED, USE DEV BRANCH INSTEAD, I AM BEGGING YOU
+# This is the "Main" build from October of 2023. 
+
+It is kept here for preservation purposes. 
 
 # Fortress Connected
 
