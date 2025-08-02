@@ -1,3 +1,9 @@
+# See here for the latest update!
+
+https://github.com/Lambdagon/fc/releases/tag/fc
+
+---
+
 # This is the "Main" build from October of 2023. 
 
 It is kept here for preservation purposes. 
