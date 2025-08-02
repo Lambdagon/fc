@@ -1,4 +1,23 @@
-# Fortress Connected
+# Fortress Connected (old SDK) 
+
+This github repository is for the old version of Fortress Connected. See information at the following link for the last major update:
+
+
+
+Make sure to wishlist the new version of Fortress Connected on Steam! To apply to be a playtester or developer, please see our Discord for more information!
+
+Steam:
+https://store.steampowered.com/app/3561600/Fortress_Connected/
+
+Website:
+https://www.fortressconnected.com/
+
+Discord:
+https://discord.com/invite/FT2GthBwZv
+
+Original readme below:
+
+---
 
 Fortress Connected is a TF2 Sourcemod that provides new weapons, custom classes, grenades, 4 team mode, and more!
 
